@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
@@ -20,7 +21,7 @@ const TITLE = "Cheapest GLP-1 2026: Prices From 9 Providers ($49-$299)";
 const DESCRIPTION =
   "Cheapest GLP-1 options in 2026 ranked by verified price: compounded semaglutide from $49/month and tirzepatide from $89/month, with every plan condition shown.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/cheapest-glp1", {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     url: CANONICAL,
     type: "article",
   },
-};
+});
 
 const faqs: { question: string; answer: string }[] = [
   {

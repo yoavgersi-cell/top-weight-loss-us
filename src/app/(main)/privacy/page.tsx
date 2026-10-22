@@ -1,15 +1,16 @@
+import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 const CANONICAL = "https://www.topweightloss.us/privacy";
 const UPDATED = "2026-10-04";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/privacy", {
   title: "Privacy Policy",
   description:
     "Top Weight Loss has no accounts or sign-up forms. See what analytics collect, what we never collect, what happens when you click a provider link, and your choices.",
   alternates: { canonical: CANONICAL },
-};
+});
 
 const ext = "font-semibold text-[#0C4B75] hover:underline";
 

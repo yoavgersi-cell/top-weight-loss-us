@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const TITLE = "Ozempic Alternatives 2026: Wegovy & Mounjaro Options";
 const DESCRIPTION =
   "Ozempic, Wegovy and Mounjaro alternatives with the same active ingredients: compounded semaglutide and tirzepatide from $49/month through licensed online providers.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/ozempic-alternatives", {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     url: CANONICAL,
     type: "article",
   },
-};
+});
 
 // Brand drug → active ingredient → the telehealth alternative that uses it.
 const brandRows: [string, string, string][] = [

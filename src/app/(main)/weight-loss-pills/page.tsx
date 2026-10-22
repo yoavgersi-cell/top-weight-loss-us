@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
@@ -41,7 +42,7 @@ const PAGE_UPDATED = "2026-10-22";
 const HERO_COLOR = "#EEF4F1";
 const READ_TIME = "17 min read";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/weight-loss-pills", {
   title: "Weight Loss Pills 2026: Wegovy Pill, Foundayo & Others Compared",
   description:
     "Weight loss pills compared: the Wegovy pill (13.6% average loss), Foundayo (11.2%), Rybelsus, Qsymia, Contrave, phentermine and orlistat, with prices from $149.",
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     url: CANONICAL,
     type: "article",
   },
-};
+});
 
 const fmt = (iso: string) =>
   new Date(iso + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });

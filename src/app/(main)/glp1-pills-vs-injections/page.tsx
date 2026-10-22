@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
@@ -35,7 +36,7 @@ const PAGE_UPDATED = "2026-10-22";
 const HERO_COLOR = "#EDF2F8";
 const READ_TIME = "16 min read";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/glp1-pills-vs-injections", {
   title: "GLP-1 Pills vs Injections 2026: Weight Loss, Price, Routine",
   description:
     "GLP-1 pills vs injections: the Wegovy pill (13.6%) and Foundayo (11.2%) against Wegovy (14.9%) and Zepbound (20.9%) on results, price by route and daily routine.",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     url: CANONICAL,
     type: "article",
   },
-};
+});
 
 const fmt = (iso: string) =>
   new Date(iso + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });

@@ -29,9 +29,11 @@ export function WinnerTugMeter({
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
-      setPct(advantage);
-      setRevealed(true);
-      return;
+      const id = window.requestAnimationFrame(() => {
+        setPct(advantage);
+        setRevealed(true);
+      });
+      return () => window.cancelAnimationFrame(id);
     }
 
     const startDelay = window.setTimeout(() => {

@@ -1,6 +1,7 @@
+import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/find-your-match", {
   title: "GLP-1 Provider Match Quiz: Find Your Best Fit (Free)",
   description:
     "Five short questions on your goal, budget, priorities and state, then a matched GLP-1 provider with verified prices. Free, no email needed.",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
       "Answer five short questions and see which online GLP-1 provider fits your goal, budget and state.",
     url: "https://www.topweightloss.us/find-your-match",
   },
-};
+});
 
 export default function QuizLayout({ children }: { children: React.ReactNode }) {
   return (

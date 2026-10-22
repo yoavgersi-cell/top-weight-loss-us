@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -13,7 +14,7 @@ const TITLE = "GLP-1 Prices & Weight Loss Statistics: October 2026 Index";
 const DESCRIPTION =
   "Compounded semaglutide and tirzepatide prices at 9 US telehealth providers, verified and dated with a public change log, plus STEP, SURMOUNT and SCALE trial results.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/glp1-weight-loss-statistics", {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     type: "article",
     modifiedTime: PRICE_INDEX_VERIFIED,
   },
-};
+});
 
 const longDate = (iso: string) =>
   new Date(iso).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });

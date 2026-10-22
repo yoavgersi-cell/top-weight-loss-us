@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
@@ -14,7 +15,7 @@ export const revalidate = 60;
 
 const CANONICAL = "https://www.topweightloss.us/retatrutide-weight-loss";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/retatrutide-weight-loss", {
   title: "Retatrutide Weight Loss 2026: Trial Results & FDA Status",
   description:
     "Retatrutide, a triple GLP-1, GIP and glucagon agonist, produced about 24% weight loss in a Phase 2 trial. See how it compares and whether you can get it yet.",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     url: CANONICAL,
     type: "article",
   },
-};
+});
 
 const compareRows: [string, string, string][] = [
   ["How it works", "Triple agonist: GLP-1, GIP and glucagon receptors", "See below"],

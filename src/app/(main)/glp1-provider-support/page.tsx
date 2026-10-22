@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, MessageSquareQuote, ShieldCheck } from "lucide-react";
@@ -104,7 +105,7 @@ function buildRows(providers: Provider[]): Row[] {
     });
 }
 
-export async function generateMetadata(): Promise<Metadata> {
+async function baseMetadata(): Promise<Metadata> {
   const config = await getConfig();
   const rows = buildRows(config.providers);
   const total = rows.reduce((s, r) => s + r.n, 0);
@@ -361,4 +362,10 @@ export default async function ProviderSupportPage() {
       </div>
     </div>
   );
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function generateMetadata(): Promise<Metadata> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return withSeo("/glp1-provider-support", await baseMetadata());
 }
