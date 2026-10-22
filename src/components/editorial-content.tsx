@@ -1,19 +1,19 @@
 import Link from "next/link";
 
 const tirzVsSemaRows: [string, string, string][] = [
-  ["Average Weight Loss in Trials", "~15.0%-20.9% average loss at 72 weeks (SURMOUNT)", "~14.9% mean loss at 68 weeks (STEP)"],
-  ["FDA Approval Status", "FDA-approved for chronic weight management (Zepbound®); also approved for type 2 diabetes as Mounjaro®", "FDA-approved for chronic weight management (Wegovy®); also approved for type 2 diabetes as Ozempic®"],
-  ["Dosing Schedule", "Weekly injection", "Weekly injection"],
-  ["Best For", "Patients seeking greater average weight loss observed in clinical trials, when appropriate", "Patients seeking an FDA-approved GLP-1 therapy with extensive long-term safety and outcomes data"],
-  ["Insurance Coverage", "May not always be covered by insurance yet", "Coverage varies; may be available on more formularies depending on insurer"],
+  ["Average weight loss in trials", "About 15.0%-20.9% average loss at 72 weeks (SURMOUNT)", "About 14.9% mean loss at 68 weeks (STEP)"],
+  ["FDA approval", "FDA-approved for chronic weight management as Zepbound® and for type 2 diabetes as Mounjaro®", "FDA-approved for chronic weight management as Wegovy® and for type 2 diabetes as Ozempic®"],
+  ["Dosing", "Once-weekly injection", "Once-weekly injection"],
+  ["Best suited to", "People aiming for the larger average weight loss seen in clinical trials, when clinically appropriate", "People who want an FDA-approved GLP-1 backed by extensive long-term safety and outcomes data"],
+  ["Insurance coverage", "Not always covered by insurance yet", "Varies by insurer; may be listed on more formularies"],
 ];
 
 const wegovyVsOzempicRows: [string, string, string][] = [
-  ["Average Weight Loss in Trials", "~14.9% mean weight loss at 68 weeks in obesity-specific trials (STEP-1)", "5-10% weight loss observed in type 2 diabetes trials, depending on dose"],
-  ["FDA Approval Status", "Yes, FDA-approved specifically for weight management", "FDA-approved for type 2 diabetes; weight loss use is off-label"],
-  ["Dosing Schedule", "Weekly injection", "Weekly injection"],
-  ["Best For", "Patients seeking an FDA-approved medication for long-term weight management", "Patients with diabetes who may also benefit from weight loss"],
-  ["Insurance Coverage", "Coverage varies; often limited for obesity medications", "May have broader insurance coverage when prescribed for diabetes"],
+  ["Average weight loss in trials", "About 14.9% mean weight loss at 68 weeks in obesity trials (STEP-1)", "5-10% weight loss seen in type 2 diabetes trials, depending on dose"],
+  ["FDA approval", "Yes, FDA-approved specifically for weight management", "FDA-approved for type 2 diabetes; use for weight loss is off-label"],
+  ["Dosing", "Once-weekly injection", "Once-weekly injection"],
+  ["Best suited to", "People who want an FDA-approved medication for long-term weight management", "People with diabetes who may also benefit from losing weight"],
+  ["Insurance coverage", "Varies, and coverage for obesity medications is often limited", "Coverage may be broader when prescribed for diabetes"],
 ];
 
 function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; rows: [string, string, string][] }) {
@@ -22,7 +22,7 @@ function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; row
       <table className="w-full min-w-[600px] text-left text-[14px]">
         <thead>
           <tr className="border-b border-gray-200 bg-gray-50">
-            <th className="px-4 py-3 font-bold text-[#191919]">Key Consideration</th>
+            <th className="px-4 py-3 font-bold text-[#191919]">Factor</th>
             <th className="px-4 py-3 font-bold text-[#191919]">{colA}</th>
             <th className="px-4 py-3 font-bold text-[#191919]">{colB}</th>
           </tr>
@@ -45,46 +45,47 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
   return (
     <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-800">
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
-        The Best Weight Loss Injections and Programs, Compared
+        Best GLP-1 Weight Loss Programs Online, Compared
       </h2>
       <p className="mb-4">
-        To find the best weight loss injections and programs, we compare leading GLP-1 providers on the factors that actually matter. Choosing the right weight loss provider involves more than selecting a medication - pricing, clinical support, treatment plans, eligibility requirements, and long-term value can vary significantly between providers. Not sure where to start? Try our{" "}
+        The best online weight loss program is the one whose price, prescriber support and plan terms fit your situation; the medication is only one part of the choice. Top Weight Loss compares GLP-1 providers on monthly cost, clinical support, treatment plans, eligibility rules and long-term value, because these differ widely from one provider to the next. For a quick starting point, our{" "}
         <Link href="/find-your-match" className="font-semibold text-[#0C4B75] hover:underline">
           provider matching quiz
         </Link>{" "}
-        for a personalized recommendation.
+        recommends a program based on your answers.
       </p>
       <p className="mb-4">
-        To help simplify the decision, we reviewed leading weight loss programs and compared them based on medication access, affordability, provider support, customer experience, and overall value. Read our{" "}
+        Each program in our ranking is assessed on medication access, affordability, prescriber support, customer experience and overall value. Our{" "}
         <Link href="/reviews" className="font-semibold text-[#0C4B75] hover:underline">
-          in-depth provider reviews
+          full provider reviews
         </Link>{" "}
-        for detailed breakdowns, or jump straight to a head-to-head like{" "}
+        cover each program in detail, and head-to-heads such as{" "}
         <Link href="/altrx-vs-embody" className="font-semibold text-[#0C4B75] hover:underline">
           altRx vs embody
-        </Link>. Prefer an evidence-led view without scores? Our{" "}
+        </Link>{" "}show two programs side by side. Want the evidence without scores? The{" "}
         <Link href="/glp1-provider-comparison" className="font-semibold text-[#0C4B75] hover:underline">
           GLP-1 provider comparison
         </Link>{" "}
-        sets eight providers side by side on verified prices, Trustpilot patterns, Reddit experiences and cancellation terms, and the{" "}
+        lines up eight providers on verified prices, Trustpilot patterns, Reddit experiences and cancellation terms, and the{" "}
         <Link href="/glp1-weight-loss-statistics" className="font-semibold text-[#0C4B75] hover:underline">
           GLP-1 price index
         </Link>{" "}
-        holds every verified price with a public log of each change.
+        keeps every verified price together with a public record of each change.
       </p>
       <p className="mb-8">
-        Our goal is to help you identify the provider that best aligns with your health goals, budget, and treatment preferences.
+        The aim is simple: help you find the provider that matches your health goals, your budget and the way you want to be treated.
       </p>
 
       <hr className="mb-8 border-gray-200" />
 
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
-        What Do the Best Online Weight Loss Programs Cost in 2026?
+        How Much Do Online GLP-1 Weight Loss Programs Cost in 2026?
       </h2>
       <p className="mb-4">
-        These are the published monthly prices at every provider in our ranking - checked against
-        each provider&apos;s own site, not estimated. Most plans are all-inclusive: prescription
-        medication, medical consultations, ongoing support, and home delivery in one monthly fee.
+        Monthly prices in our ranking start at $49 for semaglutide and $89 for tirzepatide, both at
+        welludr on its 12-month plan. Each figure below is the price published on the provider&apos;s
+        own site, not an estimate. Most plans bundle the prescription, clinician consultations,
+        ongoing support and home delivery into a single monthly fee.
       </p>
       <div className="mb-4 overflow-x-auto rounded-xl border border-gray-200">
         <table className="w-full min-w-[600px] text-left text-[14px]">
@@ -98,15 +99,15 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
           </thead>
           <tbody className="divide-y divide-gray-100">
             {[
-              ["welludr", "$49/mo", "$89/mo", "12-month plan for best rate"],
-              ["embody", "$69/mo", "$119/mo", "Flat monthly, no commitment"],
-              ["altRx", "$89/mo", "$149/mo", "Flat at every dose, BNPL"],
-              ["Medvi", "$99/mo promo (reg. $199)", "$166/mo promo (reg. $299)", "All-inclusive + dietician"],
-              ["HealthRx", "$99/mo", "from $179/mo", "12-month prepaid"],
-              ["DirectMeds", "$147/mo", "$147/mo", "Flat, needle-free option"],
-              ["Sprout", "$149/mo", "$199/mo", "Also stocks brand Wegovy"],
-              ["trimrx", "$149/mo, same at every dose", "$259/mo", "No contract"],
-              ["SHED", "$199/mo", "$299/mo", "Money-back results guarantee"],
+              ["welludr", "$49/mo", "$89/mo", "Best rate requires a 12-month plan"],
+              ["embody", "$69/mo", "$119/mo", "Flat monthly price, no commitment"],
+              ["altRx", "$89/mo", "$149/mo", "Same price at every dose, buy now pay later"],
+              ["Medvi", "$99/mo promo (reg. $199)", "$166/mo promo (reg. $299)", "All-inclusive, with a dietitian"],
+              ["HealthRx", "$99/mo", "from $179/mo", "Prepaid for 12 months"],
+              ["DirectMeds", "$147/mo", "$147/mo", "Flat price, needle-free option"],
+              ["Sprout", "$149/mo", "$199/mo", "Brand-name Wegovy also available"],
+              ["TrimRx", "$149/mo at every dose", "$259/mo", "No contract"],
+              ["SHED", "$199/mo", "$299/mo", "Results guarantee with money back"],
             ].map(([name, sema, tirz, model], i) => (
               <tr key={name} className={i % 2 === 1 ? "bg-gray-50/50" : ""}>
                 <td className="px-4 py-3 align-top font-medium text-[#191919]">{name}</td>
@@ -119,8 +120,8 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         </table>
       </div>
       <p className="mb-8 text-[13.5px] text-gray-500">
-        Prices as published in August 2026 - confirm current pricing on each provider&apos;s site.
-        For annual math and the budget tier in depth, see the{" "}
+        Prices as published in August 2026. Check current pricing on each provider&apos;s site before
+        you sign up. For yearly totals and a closer look at the budget options, see the{" "}
         <Link href="/cheapest-glp1" className="font-semibold text-[#0C4B75] hover:underline">
           cheapest verified GLP-1 comparison
         </Link>
@@ -130,33 +131,33 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <hr className="mb-8 border-gray-200" />
 
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
-        How to Choose a GLP-1 Telehealth Provider
+        How Do You Choose a GLP-1 Telehealth Provider?
       </h2>
       <p className="mb-3">
-        Every legitimate online weight loss clinic shares the same backbone - a licensed clinician
-        reviews your health intake before anything is prescribed. Beyond that, five checks separate
-        the best telehealth weight loss providers from the rest:
+        Start with the one thing every legitimate online weight loss clinic has in common: a licensed
+        clinician reviews your health intake before anything is prescribed. After that, five checks
+        set the strongest telehealth weight loss providers apart:
       </p>
       <ul className="mb-4 list-disc space-y-1 pl-6">
         <li>
-          <strong>Published, all-inclusive pricing</strong> - a real monthly number on the site, not
-          &quot;from&quot; teasers that grow at checkout
+          <strong>An all-inclusive price, published up front:</strong> a real monthly figure on the
+          site, not a &quot;from&quot; price that climbs at checkout
         </li>
         <li>
-          <strong>Licensed prescriber review</strong> - and a provider willing to decline treatment
-          when it isn&apos;t appropriate
+          <strong>Genuine prescriber review:</strong> a licensed clinician, and a provider prepared
+          to turn down treatment when it is not appropriate
         </li>
         <li>
-          <strong>Pharmacy transparency</strong> - US-licensed 503A compounding pharmacies, named or
-          verifiable
+          <strong>Clear pharmacy sourcing:</strong> US-licensed 503A compounding pharmacies that are
+          named or can be verified
         </li>
         <li>
-          <strong>Support you&apos;ll actually use</strong> - dose adjustments, side-effect guidance,
-          a human to reach
+          <strong>Support you can reach:</strong> help with dose changes and side effects, and a
+          real person to contact
         </li>
         <li>
-          <strong>Shipping that fits the medication</strong> - tracked, insured, cold-chain where
-          needed
+          <strong>Shipping suited to the medication:</strong> tracked, insured and kept cold where
+          required
         </li>
       </ul>
       <p className="mb-8">
@@ -164,15 +165,15 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         <Link href="/how-we-rank" className="font-semibold text-[#0C4B75] hover:underline">
           full ranking methodology
         </Link>{" "}
-        explains how we score each of these. Prefer a shortcut? The{" "}
+        shows how each check is scored. Short on time? The{" "}
         <Link href="/find-your-match" className="font-semibold text-[#0C4B75] hover:underline">
           60-second matching quiz
         </Link>{" "}
-        weighs your budget and priorities, or read our step-by-step{" "}
+        factors in your budget and priorities, and our step-by-step{" "}
         <Link href="/articles/choosing-telehealth-weight-loss-provider" className="font-semibold text-[#0C4B75] hover:underline">
           guide to choosing a telehealth weight loss provider
-        </Link>
-        .
+        </Link>{" "}
+        walks through the whole decision.
       </p>
 
       {/* Editorial callout */}
@@ -180,23 +181,23 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         <div className="flex flex-col sm:flex-row">
           <div className="flex-1 py-6 pr-6 sm:py-8 sm:pr-8">
             <h3 className="mb-3 text-[18px] font-bold leading-tight text-[#0C4B75] sm:text-[20px]">
-              What To Know Before Starting GLP-1 Treatment
+              What Should You Know Before Starting a GLP-1?
             </h3>
             <p className="mb-3 text-[16px] leading-[1.75] text-gray-600">
-              Before starting GLP-1 treatment, it&apos;s important to understand a few key things. These medications require a prescription from a licensed clinician and aren&apos;t suitable for everyone. Some people may experience side effects, especially during the first few weeks as the body adjusts.
+              GLP-1 medications need a prescription from a licensed clinician, and they are not right for everyone. Side effects can occur, most often during the first few weeks while the body adjusts.
             </p>
             <p className="mb-3 text-[16px] leading-[1.75] text-gray-600">
-              GLP-1s also tend to work best when combined with basic lifestyle habits like balanced nutrition and regular physical activity.
+              These medications generally work best alongside everyday habits such as balanced eating and regular physical activity.
             </p>
             <p className="text-[16px] leading-[1.75] text-gray-600">
-              That&apos;s why choosing a provider that offers proper medical screening and ongoing follow-up support is essential for both safety and long-term success.
+              For both safety and lasting results, choose a provider that screens you properly before prescribing and follows up with you throughout treatment.
             </p>
           </div>
           <div className="flex items-center justify-center sm:w-[260px] sm:shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/editorial-injection.png"
-              alt="Woman preparing GLP-1 weight loss injection"
+              alt="A woman getting a GLP-1 weight loss injection ready"
               className="h-[200px] w-full object-cover sm:h-full sm:rounded-r-xl"
               loading="lazy"
             />
@@ -207,48 +208,48 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <hr className="mb-8 border-gray-200" />
 
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
-        What to Consider Before Starting Treatment
+        What Should You Weigh Before Picking a Program?
       </h2>
       <p className="mb-3">
-        Before choosing a weight loss provider, it&apos;s important to evaluate several key factors. Our guide on{" "}
+        Six factors deserve a look before you commit to any weight loss provider. Our guide to{" "}
         <Link href="/articles/first-month-weight-loss-medication" className="font-semibold text-[#0C4B75] hover:underline">
-          what to expect your first month on medication
+          your first month on weight loss medication
         </Link>{" "}
-        can help you prepare:
+        explains what to expect once you start:
       </p>
       <ul className="mb-8 list-disc space-y-1 pl-6">
-        <li>Available medication options</li>
-        <li>Medical eligibility requirements</li>
-        <li>Potential side effects</li>
-        <li>Level of provider support</li>
-        <li>Program flexibility</li>
-        <li>Overall treatment costs</li>
+        <li>Which medications are offered</li>
+        <li>Who qualifies medically</li>
+        <li>Possible side effects</li>
+        <li>How much support the provider gives</li>
+        <li>How flexible the plan is</li>
+        <li>The total cost of treatment</li>
       </ul>
       <p className="mb-8">
-        Comparing providers side-by-side - like{" "}
+        Side-by-side comparisons such as{" "}
         <Link href="/altrx-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
-          altRx vs Ro
+          altRx vs ro
         </Link>,{" "}
         <Link href="/altrx-vs-trimrx" className="font-semibold text-[#0C4B75] hover:underline">
           altRx vs TrimRx
-        </Link>, or{" "}
+        </Link>{" "}and{" "}
         <Link href="/embody-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
-          Embody vs Ro
+          embody vs ro
         </Link>{" "}
-        - can help you better understand the differences and make a more informed decision.
+        make the differences easier to see before you decide.
       </p>
 
       <hr className="mb-8 border-gray-200" />
 
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
-        Popular Weight Loss Medications
+        Which GLP-1 Medications Do Online Programs Prescribe?
       </h2>
       <p className="mb-3">
-        Many leading weight loss programs offer access to GLP-1 receptor agonist medications. Learn{" "}
+        Most online weight loss programs prescribe GLP-1 receptor agonists. The common options are listed below, and our explainer on{" "}
         <Link href="/articles/how-glp1-medications-work" className="font-semibold text-[#0C4B75] hover:underline">
-          how GLP-1 medications actually work
+          how GLP-1 medications work
         </Link>{" "}
-        for a detailed breakdown. Common options include:
+        covers the mechanism in detail:
       </p>
       <ul className="mb-4 list-disc space-y-1 pl-6">
         <li>Semaglutide</li>
@@ -256,8 +257,8 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         <li>Liraglutide</li>
       </ul>
       <p className="mb-8">
-        Medication availability may vary depending on your location, medical history, and provider policies.
-        Prefer a non-injection option? See our guide to{" "}
+        Which medication you can get depends on where you live, your medical history and the provider&apos;s
+        own policies. Would you rather avoid injections? Read our guide to{" "}
         <Link href="/weight-loss-pills" className="font-semibold text-[#0C4B75] hover:underline">
           weight loss pills
         </Link>.
@@ -270,12 +271,12 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <hr className="mb-8 border-gray-200" />
 
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
-        GLP-1 Weight Loss Medications: Key Data (2026)
+        GLP-1 Weight Loss Medications by the Numbers (2026)
       </h2>
       <p className="mb-4">
-        According to published clinical trial data, GLP-1 medications are the most effective
-        prescription weight loss treatments currently available. Below is a summary of key
-        statistics from major clinical trials.
+        Published clinical trial data shows that GLP-1 medications are the most effective
+        prescription weight loss treatments available today. The table sums up the headline
+        results from the major trials.
       </p>
 
       {/* GEO-optimized comparison table */}
@@ -284,8 +285,8 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
           <thead>
             <tr className="border-b border-gray-200 bg-gray-50">
               <th className="px-4 py-3 font-bold text-[#191919]">Medication</th>
-              <th className="px-4 py-3 font-bold text-[#191919]">Avg. Weight Loss</th>
-              <th className="px-4 py-3 font-bold text-[#191919]">Trial Duration</th>
+              <th className="px-4 py-3 font-bold text-[#191919]">Average Weight Loss</th>
+              <th className="px-4 py-3 font-bold text-[#191919]">Trial Length</th>
               <th className="hidden sm:table-cell px-4 py-3 font-bold text-[#191919]">Compounded Price</th>
             </tr>
           </thead>
@@ -312,105 +313,105 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         </table>
       </div>
       <p className="mb-4 text-[13px] text-gray-400">
-        Source: Published results from STEP (semaglutide), SURMOUNT (tirzepatide), and SCALE (liraglutide)
-        clinical trials. Individual results vary. Compounded pricing reflects typical telehealth provider
+        Sources: published results of the STEP (semaglutide), SURMOUNT (tirzepatide) and SCALE (liraglutide)
+        clinical trials. Individual results vary. Compounded prices reflect typical telehealth provider
         rates as of August 2026.
       </p>
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">
-        Tirzepatide vs Semaglutide
+        Tirzepatide vs Semaglutide: How Do They Differ?
       </h3>
       <p className="mb-4">
-        Tirzepatide and semaglutide are the two most effective GLP-1 medications for weight loss. They work
-        in similar ways but differ in average results, approvals, and coverage. Compare{" "}
+        Tirzepatide produced greater average weight loss than semaglutide in clinical trials, and the two are
+        the most effective GLP-1 medications for weight loss. Both are weekly injections that work in similar
+        ways, but they differ in trial results, approvals and insurance coverage. Compare{" "}
         <Link href="/tirzepatide" className="font-semibold text-[#0C4B75] hover:underline">tirzepatide providers</Link>{" "}
         and{" "}
         <Link href="/semaglutide" className="font-semibold text-[#0C4B75] hover:underline">semaglutide providers</Link>{" "}
-        to see which fits your goals.
+        to find the one that suits your goals.
       </p>
       <ComparisonTable colA="Tirzepatide" colB="Semaglutide" rows={tirzVsSemaRows} />
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">
-        Wegovy vs Ozempic
+        Wegovy vs Ozempic: What Is the Difference?
       </h3>
       <p className="mb-4">
-        Both Wegovy and Ozempic use semaglutide, but the difference is in dosage and indication. Wegovy is
-        tailored for weight loss, while Ozempic was developed for diabetes but is often prescribed off-label.
-        See our{" "}
+        Wegovy and Ozempic contain the same drug, semaglutide; they differ in dose and approved use. Wegovy
+        is made for weight management, while Ozempic was developed for type 2 diabetes and is often
+        prescribed off-label for weight loss. Our{" "}
         <Link href="/wegovy-providers" className="font-semibold text-[#0C4B75] hover:underline">Wegovy providers</Link>{" "}
         and{" "}
         <Link href="/ozempic-for-weight-loss" className="font-semibold text-[#0C4B75] hover:underline">Ozempic for weight loss</Link>{" "}
-        guides for details.
+        guides cover each one in more depth.
       </p>
       <ComparisonTable colA="Wegovy" colB="Ozempic" rows={wegovyVsOzempicRows} />
       <p className="mb-8 text-[13px] text-gray-400">
-        Source: STEP-1 (semaglutide) and SURMOUNT (tirzepatide) clinical trial data. Brand names Zepbound®,
-        Mounjaro®, Wegovy®, and Ozempic® are trademarks of their respective manufacturers. Individual results
-        vary; medications require a prescription from a licensed clinician.
+        Sources: STEP-1 (semaglutide) and SURMOUNT (tirzepatide) clinical trial data. Zepbound®, Mounjaro®,
+        Wegovy® and Ozempic® are trademarks of their respective manufacturers. Individual results vary, and
+        each of these medications requires a prescription from a licensed clinician.
       </p>
 
       <h3 className="mb-3 mt-6 text-[18px] font-bold text-[#191919]">
         How Much Does GLP-1 Weight Loss Medication Cost?
       </h3>
       <p className="mb-3">
-        Brand-name GLP-1 medications cost $900-$1,400 per month at retail price without insurance.
-        Compounded versions of semaglutide and tirzepatide are available through licensed telehealth
-        providers at significantly lower prices - typically $199-$500 per month including physician
-        consultations, medication, and home delivery. Learn more in our{" "}
+        Without insurance, brand-name GLP-1 medications cost $900-$1,400 a month at retail. Licensed
+        telehealth providers offer compounded semaglutide and tirzepatide for much less, typically
+        $199-$500 a month with physician consultations, medication and home delivery included. Our{" "}
         <Link href="/articles/weight-loss-medication-cost-guide" className="font-semibold text-[#0C4B75] hover:underline">
-          complete cost guide
-        </Link>.
+          GLP-1 cost guide
+        </Link>{" "}breaks the numbers down.
       </p>
 
       <h3 className="mb-3 mt-6 text-[18px] font-bold text-[#191919]">
-        How Long Does It Take for GLP-1 Medication to Work?
+        How Long Does GLP-1 Medication Take to Work?
       </h3>
       <p className="mb-3">
-        Most patients notice reduced appetite within the first 1-2 weeks of starting GLP-1 medication.
-        Visible weight loss typically begins around weeks 4-8. Clinical trial results show maximum
-        weight loss at 68-72 weeks of treatment. Read our{" "}
+        Most people notice a smaller appetite within the first 1-2 weeks on a GLP-1 medication.
+        Visible weight loss usually starts around weeks 4-8, and clinical trials recorded peak
+        weight loss at 68-72 weeks of treatment. See our{" "}
         <Link href="/articles/how-long-for-semaglutide-to-work" className="font-semibold text-[#0C4B75] hover:underline">
-          detailed semaglutide timeline
-        </Link>.
+          semaglutide timeline guide
+        </Link>{" "}for more detail.
       </p>
 
       <h3 className="mb-3 mt-6 text-[18px] font-bold text-[#191919]">
         Can You Get GLP-1 Medication Online?
       </h3>
       <p className="mb-8">
-        Yes. Licensed telehealth providers can prescribe GLP-1 medications through fully online
-        medical evaluations. The process typically takes 1-5 days from sign-up to medication delivery.
-        All providers featured on our platform use licensed physicians for prescribing and include
-        ongoing medical oversight. Read our{" "}
+        Yes. Licensed telehealth providers can prescribe GLP-1 medications after a fully online
+        medical evaluation, and it typically takes 1-5 days from sign-up to delivery. Every provider
+        featured on Top Weight Loss uses licensed physicians to prescribe and includes ongoing medical
+        oversight. Our{" "}
         <Link href="/articles/how-to-get-ozempic-online" className="font-semibold text-[#0C4B75] hover:underline">
           guide to getting GLP-1 medication online
-        </Link>.
+        </Link>{" "}explains each step.
       </p>
 
       <hr className="mb-8 border-gray-200" />
 
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
-        How We Evaluated Providers
+        How Did We Evaluate These Providers?
       </h2>
-      <p className="mb-3">Our rankings are based on a combination of factors including:</p>
+      <p className="mb-3">Each provider&apos;s place in the ranking reflects six factors:</p>
       <ul className="mb-4 list-disc space-y-1 pl-6">
-        <li>Pricing transparency</li>
-        <li>Medication availability</li>
-        <li>Clinical oversight</li>
+        <li>How transparent the pricing is</li>
+        <li>Which medications are available</li>
+        <li>The level of clinical oversight</li>
         <li>Customer experience</li>
-        <li>Program flexibility</li>
+        <li>Plan flexibility</li>
         <li>Overall value</li>
       </ul>
       <p>
-        We continuously review and update our recommendations to help consumers{" "}
+        Recommendations are reviewed and updated on an ongoing basis so you can{" "}
         <Link href="/reviews" className="font-semibold text-[#0C4B75] hover:underline">
-          compare leading weight loss solutions
+          compare weight loss providers
         </Link>{" "}
-        with confidence. Browse all{" "}
+        with confidence. For more research, browse all of our{" "}
         <Link href="/articles" className="font-semibold text-[#0C4B75] hover:underline">
-          weight loss articles
-        </Link>{" "}
-        for more research and guides.
+          weight loss guides and articles
+        </Link>
+        .
       </p>
     </div>
   );
