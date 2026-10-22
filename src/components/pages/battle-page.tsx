@@ -260,20 +260,8 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   },
 };
 
-// Category word used in the uniform battle SERP title, per vertical. Verticals
-// not listed fall back to a category-free title.
-// Oct 22, 2026: Nutrafol (hair-loss) is an over-the-counter supplement, the one
-// provider we compare that is not prescribed - no "licensed telehealth" badge
-// and a "not required" prescription row.
-const OTC_PROVIDERS = new Set(["nutrafol"]);
-
-const BATTLE_CATEGORY_BY_VERTICAL: Record<string, string> = {
-  "weight-loss": "GLP-1",
-  trt: "TRT",
-  "hair-loss": "Hair Loss",
-  hrt: "HRT",
-  ed: "ED Treatment",
-};
+// Category word used in the uniform battle SERP title.
+const BATTLE_CATEGORY = "GLP-1";
 
 // Title-case a "{a} vs {b}" matchup so no SERP title starts lowercase, while
 // preserving any internal brand capitals (altRx -> AltRx, TrimRX -> TrimRX).
@@ -298,26 +286,26 @@ function titleCaseOverrideTitle(title: string): string {
 // audit). Titles stay whatever the CMS stores - descriptions only.
 const LANDING_META_DESCRIPTION: Record<string, string> = {
   semaglutide:
-    "Compare the best semaglutide (GLP-1) providers of 2026 - verified prices from $49/month, licensed online prescribing, and honest reviews of every program.",
+    "Best semaglutide (GLP-1) providers for 2026, compared on checked prices from $49/month, licensed online prescribing and the trade-offs of each program.",
   tirzepatide:
-    "The best tirzepatide providers of 2026 compared - verified GLP-1 prices from $89/month compounded, licensed online prescribing, honest pros and cons.",
+    "Best tirzepatide providers for 2026: compounded GLP-1 prices from $89/month that we checked, licensed online prescribing, and the pros and cons of each.",
   "ozempic-for-weight-loss":
-    "Ozempic for weight loss in 2026: how the GLP-1 works, who prescribes it online, and verified alternatives from $49/month compared honestly.",
+    "Ozempic for weight loss in 2026: how this GLP-1 works, which online providers prescribe it, and checked alternatives that start at $49/month.",
   "wegovy-providers":
-    "Where to get Wegovy online in 2026 - providers compared, plus verified GLP-1 alternatives from $49/month when brand-name pricing doesn't fit.",
+    "Wegovy online in 2026: the providers that prescribe it, compared, plus checked GLP-1 alternatives from $49/month if brand-name prices are out of reach.",
   "ozempic-alternatives":
-    "Ozempic, Wegovy & Mounjaro alternatives for 2026 - verified GLP-1 options from $49/month, compared honestly on price, terms and support.",
+    "Alternatives to Ozempic, Wegovy and Mounjaro in 2026: GLP-1 options from $49/month, compared on checked prices, plan terms and patient support.",
   "switch-from-ozempic":
-    "Switching from Ozempic to compounded semaglutide - how the GLP-1 switch works, verified prices from $49/month, and what to ask your prescriber.",
+    "Moving from Ozempic to compounded semaglutide: how the GLP-1 switch works, checked prices from $49/month and the questions to ask your prescriber.",
   "retatrutide-weight-loss":
-    "Retatrutide in 2026: where the next-generation GLP-1-class candidate stands, what its trials report, and the approved options available now.",
+    "Retatrutide in 2026: where this next-generation GLP-1-class drug stands, what its clinical trials found, and the approved options you can use today.",
 };
 
 // Metadata for a landing page or head-to-head battle at /<slug> (root) or
 // /<vertical>/<slug> (hub). Returns { title: "Not Found" } for an unknown slug.
 export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
   // Curated 3-way comparisons (/{a}-vs-{b}-vs-{c}) resolve before 2-way battles.
-  const trio = ctx.vertical === "weight-loss" ? threeWayBySlug.get(slug) : undefined;
+  const trio = threeWayBySlug.get(slug);
   if (trio) return threeWayMetadata(trio, ctx);
 
   const config = await getConfig(ctx.vertical);
@@ -327,7 +315,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   if (landing) {
     const url = canonicalUrl(ctx, `/${landing.slug}`);
     const landingDesc =
-      (ctx.vertical === "weight-loss" && LANDING_META_DESCRIPTION[landing.slug]) ||
+      LANDING_META_DESCRIPTION[landing.slug] ||
       landing.seoDescription;
     return {
       title: landing.seoTitle,
@@ -369,17 +357,17 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   // an override fall back to the uniform, competitor-style neutral pattern
   // "{A} vs {B} (2026): {Category} Cost, Plans & Meds Compared". DESCRIPTIONS
   // are always the bespoke override (real prices) when present.
-  const override = ctx.vertical === "weight-loss" ? BATTLE_SEO_OVERRIDES[slug] : undefined;
+  const override = BATTLE_SEO_OVERRIDES[slug];
   const baseLabel = (battle.matchupLabel ?? battle.title.split(":")[0]).trim();
-  const battleCategory = BATTLE_CATEGORY_BY_VERTICAL[ctx.vertical];
+  const battleCategory = BATTLE_CATEGORY;
   const metaTitle = override?.title
     ? titleCaseOverrideTitle(override.title)
-    : `${titleCaseMatchup(baseLabel)} (2026): ${battleCategory && !baseLabel.toLowerCase().includes(battleCategory.toLowerCase()) ? `${battleCategory} ` : ""}Cost, Plans & Meds Compared`;
+    : `${titleCaseMatchup(baseLabel)} (2026): ${battleCategory && !baseLabel.toLowerCase().includes(battleCategory.toLowerCase()) ? `${battleCategory} ` : ""}Prices, Plans & Medications`;
   const metaDescription = override?.description ?? battle.description;
 
   // Thin, low-demand matchups (Tier-2-brand pairs) are noindex,follow so crawl
   // budget concentrates on the money battles - see NOINDEX_WL_BATTLE_SLUGS.
-  const isThinNoindex = ctx.vertical === "weight-loss" && NOINDEX_WL_BATTLE_SLUGS.has(slug);
+  const isThinNoindex = NOINDEX_WL_BATTLE_SLUGS.has(slug);
 
   return {
     title: metaTitle,
@@ -431,7 +419,7 @@ function ReadMoreProse({ text, label, visibleSentences = 2 }: { text: string; la
 
 export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteContext }) {
   // Curated 3-way comparisons render their own template.
-  const trio = ctx.vertical === "weight-loss" ? threeWayBySlug.get(slug) : undefined;
+  const trio = threeWayBySlug.get(slug);
   if (trio) return ThreeWayPageView({ trio, ctx });
 
   const config = await getConfig(ctx.vertical);
@@ -451,7 +439,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     const baseOrder = landing.providerOrder.length > 0 ? landing.providerOrder : config.ranking.providerOrder;
     // Page-specific card facts (verified molecule/brand price per provider) and,
     // on molecule pages, only the providers that publish that molecule.
-    const focus = ctx.vertical === "weight-loss" ? landingFocusFor(landing.slug, baseOrder) : null;
+    const focus = landingFocusFor(landing.slug, baseOrder);
     const providerOrder = focus ? focus.providerIds : baseOrder;
 
     const schemaData = {
@@ -518,11 +506,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           ) : (
             <EditorialContent />
           )}
-          {ctx.vertical === "weight-loss" && (
-            <div className="mx-auto max-w-[1200px] px-4 pb-12">
-              <GuideCluster currentSlug={landing.slug} prefix={ctx.prefix} />
-            </div>
-          )}
+          <div className="mx-auto max-w-[1200px] px-4 pb-12">
+            <GuideCluster currentSlug={landing.slug} prefix={ctx.prefix} />
+          </div>
         </ComparisonLayout>
       </>
     );
@@ -612,15 +598,15 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // feature data so every value is real. The prescription row is a market
   // constant - every provider we compare requires a licensed-provider review.
   const findFeature = (re: RegExp) => (battle.features ?? []).find((f) => re.test(f.feature));
-  const rxRow = (id: string) => (OTC_PROVIDERS.has(id) ? "Not required - over-the-counter supplement" : "Required - online provider review");
+  const rxValue = "Yes - a licensed clinician reviews your intake online";
   const priceRow = findFeature(/price|cost/i);
   const shippingRow = findFeature(/shipping|delivery|speed/i);
   const medsRow = findFeature(/medication|treatment/i);
   const quickRows = [
-    priceRow && { label: "Starting price", v1: priceRow.provider1Value, v2: priceRow.provider2Value },
-    medsRow && { label: "Medications", v1: medsRow.provider1Value, v2: medsRow.provider2Value },
-    { label: "Prescription", v1: rxRow(p1.id), v2: rxRow(p2.id) },
-    shippingRow && { label: "Delivery", v1: shippingRow.provider1Value, v2: shippingRow.provider2Value },
+    priceRow && { label: "Price from", v1: priceRow.provider1Value, v2: priceRow.provider2Value },
+    medsRow && { label: "Medications offered", v1: medsRow.provider1Value, v2: medsRow.provider2Value },
+    { label: "Prescription needed?", v1: rxValue, v2: rxValue },
+    shippingRow && { label: "Shipping", v1: shippingRow.provider1Value, v2: shippingRow.provider2Value },
   ].filter(Boolean) as { label: string; v1: string; v2: string }[];
 
   // Related comparisons - other battles featuring either provider (internal links).
@@ -650,38 +636,35 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // only internal path into the trio pages, so every trio gets inbound links
   // from its three constituent head-to-heads. Weight-loss only (the registry
   // is a WL registry).
-  const relatedTrios =
-    ctx.vertical === "weight-loss"
-      ? THREE_WAY_COMPARISONS.filter(
-          (t) => t.providerIds.includes(p1.id) && t.providerIds.includes(p2.id)
-        ).map((t) => ({
-          slug: t.slug,
-          names: t.providerIds.map(
-            (id) => config.providers.find((p) => p.id === id)?.name ?? id
-          ),
-        }))
-      : [];
+  const relatedTrios = THREE_WAY_COMPARISONS.filter(
+    (t) => t.providerIds.includes(p1.id) && t.providerIds.includes(p2.id)
+  ).map((t) => ({
+    slug: t.slug,
+    names: t.providerIds.map(
+      (id) => config.providers.find((p) => p.id === id)?.name ?? id
+    ),
+  }));
 
   // FAQ - real, query-shaped questions answered from grounded battle content.
   // Expands the queries the page can rank for (long-tail + People Also Ask) and
   // powers both the visible FAQ section and the FAQPage schema.
   const catToQuestion = (name: string) => {
     const n = name.toLowerCase();
-    if (n.includes("pric") || n.includes("value")) return `Is ${p1.name} cheaper than ${p2.name}?`;
-    if (n.includes("ship") || n.includes("speed")) return `Which is faster, ${p1.name} or ${p2.name}?`;
-    if (n.includes("medication")) return `Which has more medication options, ${p1.name} or ${p2.name}?`;
-    if (n.includes("medical") || n.includes("care") || n.includes("support") || n.includes("monitor")) return `Which has better medical support, ${p1.name} or ${p2.name}?`;
-    if (n.includes("customer") || n.includes("experience") || n.includes("service") || n.includes("personal")) return `Which has better customer reviews, ${p1.name} or ${p2.name}?`;
-    if (n.includes("flexib")) return `Which offers more flexible plans, ${p1.name} or ${p2.name}?`;
-    if (n.includes("focus") || n.includes("simplic")) return `Which is more focused on weight loss, ${p1.name} or ${p2.name}?`;
-    if (n.includes("range") || n.includes("beyond")) return `Does ${p2.name} offer more than weight loss compared to ${p1.name}?`;
-    if (n.includes("brand") || n.includes("track") || n.includes("pharmacy")) return `Which is the more established brand, ${p1.name} or ${p2.name}?`;
-    if (n.includes("transparen") || n.includes("certif")) return `Which is more transparent about pricing, ${p1.name} or ${p2.name}?`;
-    return `${name}: ${p1.name} or ${p2.name}?`;
+    if (n.includes("pric") || n.includes("value")) return `Does ${p1.name} cost less than ${p2.name}?`;
+    if (n.includes("ship") || n.includes("speed")) return `Does ${p1.name} or ${p2.name} deliver medication faster?`;
+    if (n.includes("medication")) return `Does ${p1.name} or ${p2.name} offer more GLP-1 medications?`;
+    if (n.includes("medical") || n.includes("care") || n.includes("support") || n.includes("monitor")) return `Does ${p1.name} or ${p2.name} give you more clinical support?`;
+    if (n.includes("customer") || n.includes("experience") || n.includes("service") || n.includes("personal")) return `Do customers rate ${p1.name} or ${p2.name} higher?`;
+    if (n.includes("flexib")) return `Are ${p1.name} or ${p2.name} plans easier to change or cancel?`;
+    if (n.includes("focus") || n.includes("simplic")) return `Is ${p1.name} or ${p2.name} more dedicated to weight loss?`;
+    if (n.includes("range") || n.includes("beyond")) return `Does ${p2.name} treat more than weight loss, unlike ${p1.name}?`;
+    if (n.includes("brand") || n.includes("track") || n.includes("pharmacy")) return `Is ${p1.name} or ${p2.name} the longer-established company?`;
+    if (n.includes("transparen") || n.includes("certif")) return `Is ${p1.name} or ${p2.name} clearer about what you will pay?`;
+    return `${p1.name} or ${p2.name}: which wins on ${name.toLowerCase()}?`;
   };
 
   const battleFaqs = [
-    { question: `Which is better, ${matchupLabel}?`, answer: battle.verdict },
+    { question: `${matchupLabel}: which GLP-1 provider is better?`, answer: battle.verdict },
     ...battle.categories.map((cat) => ({ question: catToQuestion(cat.name), answer: cat.explanation })),
   ].filter((f, i, arr) => !!f.answer && arr.findIndex((x) => x.question === f.question) === i);
 
@@ -774,7 +757,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               {config.experts && config.experts.length > 0 && (
                 <>
                   <span>
-                    By{" "}
+                    Written by{" "}
                     <Link href={hubLink(ctx, "/about")} className="font-medium text-gray-600 underline-offset-2 hover:text-[#0C4B75] hover:underline">
                       The {ctx.brandTeam.replace(/\s+Team$/i, "")} Research Team
                     </Link>
@@ -802,7 +785,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <div className="mb-8 max-w-[820px] overflow-hidden rounded-2xl border border-[#0C4B75]/20 bg-white shadow-sm">
               <div className="flex items-center justify-between gap-3 border-b border-gray-100 bg-[#F3F9FD] px-5 py-3 sm:px-6">
                 <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#0C4B75]">
-                  Our top choice
+                  Our recommendation
                 </p>
                 {showShortAnswerScores && (
                   <span className="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-2.5 py-1 text-[11.5px] font-bold text-[#0C4B75] shadow-sm ring-1 ring-[#0C4B75]/15">
@@ -821,31 +804,28 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   />
                 </div>
                 <p className="text-[15.5px] leading-[1.8] text-gray-800 sm:text-[16px]">
-                  <span className="font-bold text-[#191919]">{verdictWinner.name}</span> is our top
-                  choice for most people: <BoldKeyFacts text={shortAnswerReason.replace(/\.$/, "")} />.{" "}
-                  Full reasoning, pricing and the cases where {verdictRunnerUp.name} wins are below.
+                  <span className="font-bold text-[#191919]">{verdictWinner.name}</span> is the provider we
+                  recommend to most readers. The main reason: <BoldKeyFacts text={shortAnswerReason.replace(/\.$/, "")} />.{" "}
+                  Scroll down for the full reasoning, the prices, and the situations where {verdictRunnerUp.name} is the better pick.
                 </p>
               </div>
             </div>
           )}
 
           {/* ───── REDDIT COMMUNITY CAROUSEL (verified threads only) ───── */}
-          {ctx.vertical === "weight-loss" && (
-            <RedditThreadCarousel
-              providers={[p1, p2]}
-              reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
-            />
-          )}
+          <RedditThreadCarousel
+            providers={[p1, p2]}
+            reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
+          />
 
           {/* ───── EVIDENCE -> CONCLUSION SYNTHESIS ─────
               Reads the threads shown directly above and says what keeps coming
               up - one written summary per provider, from the same registry as
               the threads themselves, so it only renders on verified material. */}
-          {ctx.vertical === "weight-loss" &&
-            [p1, p2].some((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes) && (
+          {[p1, p2].some((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes) && (
               <div className="mb-14 max-w-[820px] rounded-2xl border border-gray-200 bg-gray-50/60 p-5 sm:p-6">
                 <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-                  What we found
+                  What Reddit users keep saying
                 </p>
                 <div className="space-y-3 text-[14px] leading-[1.7] text-gray-600">
                   {[p1, p2].map((p) =>
@@ -869,7 +849,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <thead>
                   <tr className="border-b-2 border-gray-200 bg-gray-50/80">
                     <th className="w-[26%] py-3 pl-4 pr-2 text-[11px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:w-[22%] sm:py-3.5 sm:text-[12px]">
-                      At a glance
+                      Key facts
                     </th>
                     <th className="py-3 px-2 text-[13px] font-bold text-[#191919] sm:py-3.5 sm:px-3 sm:text-[15px]">{p1.name}</th>
                     <th className="py-3 px-2 pr-4 text-[13px] font-bold text-[#191919] sm:py-3.5 sm:px-3 sm:text-[15px]">{p2.name}</th>
@@ -892,10 +872,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               {/* Freshness line - SERP winners date-stamp their prices; ours
                   are verified against published rates on every content pass. */}
               <p className="border-t border-gray-100 px-4 py-2.5 text-[11.5px] text-gray-400">
-                Prices are the providers&rsquo; published rates at our last verification - confirm the
-                final figure at checkout, as offers change.{" "}
+                These are the published prices from our most recent check. Offers change, so confirm the
+                final amount at checkout.{" "}
                 <Link href={"/how-we-rank"} className="font-medium text-gray-500 underline underline-offset-2 hover:text-[#0C4B75]">
-                  How we verify prices
+                  Our price-checking method
                 </Link>
               </p>
             </div>
@@ -937,7 +917,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       starSize={16}
                     />
                   )}
-                  {ctx.vertical !== "hearing-aids" && !OTC_PROVIDERS.has(provider.id) && <LicensedTelehealthBadge />}
+                  <LicensedTelehealthBadge />
                 </div>
 
                 <p className="mb-4 text-[14px] leading-relaxed text-gray-500">
@@ -974,18 +954,16 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <div className="mb-14">
             <div className="mb-8 max-w-[760px]">
               <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-                The full breakdown
+                Provider profiles
               </p>
               <h2 className="text-[24px] font-bold text-[#191919]">
-                {p1.name} vs {p2.name}: a closer look at each
+                What do {p1.name} and {p2.name} each offer?
               </h2>
               <p className="mt-3 text-[15px] leading-[1.8] text-gray-600">
-                {ctx.vertical === "weight-loss"
-                  ? "Both are solid GLP-1 weight loss providers, and honestly you can’t go too wrong either way."
-                  : "Both are credible providers in this category, and the right pick comes down to fit."}{" "}
-                So instead of crowning a &ldquo;winner,&rdquo; here&rsquo;s the
-                real rundown on each - what you get, what it actually costs, and what
-                real customers are saying - so you can pick the one that fits <em>you</em>.
+                {p1.name} and {p2.name} are both reputable GLP-1 weight loss providers, so
+                neither is a bad choice. Below, each one gets its own profile: what is included,
+                the real monthly cost and what paying customers report, so you can match the
+                provider to <em>your</em> priorities.
               </p>
             </div>
 
@@ -1025,11 +1003,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                               />
                             </div>
                           )}
-                          {ctx.vertical !== "hearing-aids" && !OTC_PROVIDERS.has(provider.id) && (
-                            <div className="border-l border-gray-200 pl-4">
-                              <LicensedTelehealthBadge />
-                            </div>
-                          )}
+                          <div className="border-l border-gray-200 pl-4">
+                            <LicensedTelehealthBadge />
+                          </div>
                         </div>
                         <ProviderCta
                           href={provider.affiliateUrl}
@@ -1046,9 +1022,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
                       {/* Intro */}
                       <h3 className="mb-2.5 text-[20px] font-bold text-[#191919]">
-                        What is {provider.name}?
+                        How does {provider.name} work?
                       </h3>
-                      <ReadMoreProse text={lead} label={`Read the full ${provider.name} breakdown`} />
+                      <ReadMoreProse text={lead} label={`More about ${provider.name}`} />
 
                       {/* Trust badges */}
                       {badges.length > 0 && (
@@ -1070,7 +1046,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         <div>
                           <h4 className="mb-3 flex items-center gap-2 text-[15px] font-bold text-[#191919]">
                             <Check className="h-4 w-4 text-emerald-500" strokeWidth={2.5} />
-                            What you get with {provider.name}
+                            Included with {provider.name}
                           </h4>
                           <ul className="space-y-2">
                             {features.map((f, i) => (
@@ -1085,7 +1061,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                           <div>
                             <h4 className="mb-3 flex items-center gap-2 text-[15px] font-bold text-[#191919]">
                               <Sparkles className="h-4 w-4 text-[#0C4B75]" strokeWidth={2} />
-                              Who {provider.name} is best for
+                              {provider.name} suits you if
                             </h4>
                             <ul className="space-y-2">
                               {bestFor.map((f, i) => (
@@ -1109,7 +1085,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                             <div className="mb-4 [&>div]:mb-0 [&_p]:text-[14px] [&_p]:leading-[1.7] [&_p]:text-gray-500">
                               <ReadMoreProse
                                 text={review.pricingSummary}
-                                label="Full pricing details"
+                                label="See all pricing details"
                                 visibleSentences={1}
                               />
                             </div>
@@ -1162,7 +1138,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                           {pros.length > 0 && (
                             <div className="rounded-xl border border-emerald-100 bg-emerald-50/40 p-5">
                               <p className="mb-3 text-[14px] font-bold text-emerald-800">
-                                What we like about {provider.name}
+                                {provider.name} strengths
                               </p>
                               <ul className="space-y-2">
                                 {pros.map((pt, i) => (
@@ -1177,7 +1153,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                           {cons.length > 0 && (
                             <div className="rounded-xl border border-gray-200 bg-gray-50/60 p-5">
                               <p className="mb-3 text-[14px] font-bold text-gray-800">
-                                Worth keeping in mind
+                                Possible drawbacks
                               </p>
                               <ul className="space-y-2">
                                 {cons.map((c, i) => (
@@ -1196,7 +1172,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       {reviewCount > 0 && (
                         <div className="mb-8">
                           <h4 className="mb-4 text-[17px] font-bold text-[#191919]">
-                            What real {provider.name} customers are saying
+                            {provider.name} reviews from Trustpilot customers
                           </h4>
                           <TrustpilotCarousel
                             providerName={provider.name}
@@ -1217,7 +1193,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         sourceFlow="battle_page"
                         className="flex h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61]"
                       >
-                        Get started with {provider.name}
+                        Start your {provider.name} assessment
                         <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
                       </ProviderCta>
                     </div>
@@ -1230,14 +1206,14 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {/* ───── 12-MONTH COST MATH ─────
               What a realistic course of treatment costs at each provider -
               the number searchers actually decide on, not the headline rate. */}
-          {ctx.vertical === "weight-loss" && BATTLE_COST_MATH[slug] && (
+          {BATTLE_COST_MATH[slug] && (
             <div className="mb-12">
               <h2 className="mb-1.5 text-[22px] font-bold text-[#191919]">
-                What you actually pay over 12 months
+                How much does {p1.name} vs {p2.name} cost over a year?
               </h2>
               <p className="mb-4 max-w-[680px] text-[14px] text-gray-500">
-                Headline prices are the least useful number in a comparison - this is the real math
-                over a course of treatment, promo conditions applied exactly as published.
+                The advertised monthly price only tells part of the story. These totals add up a full
+                course of treatment, with every promo condition applied as the provider publishes it.
               </p>
               <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
                 <table className="w-full min-w-[520px] border-collapse text-left">
@@ -1267,28 +1243,26 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               Shopping-style product cards for THIS matchup's two providers
               only - a battle page sells the contenders, not the whole market.
               Weight-loss only (the catalog is a WL registry). */}
-          {ctx.vertical === "weight-loss" && (
-            <div className="mb-12">
-              <ProductCarousel
-                providers={config.providers}
-                title={`Shop ${p1.name} and ${p2.name} plans`}
-                subtitle="Both contenders' published plans, cheapest first - conditions under every price."
-                onlyProviderIds={[p1.id, p2.id]}
-                pageType="battle"
-                withSchema
-                pageUrl={canonicalUrl(ctx, `/${slug}`)}
-              />
-            </div>
-          )}
+          <div className="mb-12">
+            <ProductCarousel
+              providers={config.providers}
+              title={`${p1.name} and ${p2.name} plans and prices`}
+              subtitle="Every published plan from both providers, lowest price first, with the terms listed under each price."
+              onlyProviderIds={[p1.id, p2.id]}
+              pageType="battle"
+              withSchema
+              pageUrl={canonicalUrl(ctx, `/${slug}`)}
+            />
+          </div>
 
           {/* ───── FEATURE COMPARISON TABLE ───── */}
           {battle.features && battle.features.length > 0 && (
             <div className="mb-14">
               <h2 className="text-[22px] font-bold leading-tight text-[#191919] sm:text-[24px]">
-                {p1.name} vs. {p2.name}: What&rsquo;s the Difference?
+                How are {p1.name} and {p2.name} different?
               </h2>
               <p className="mt-2 mb-5 max-w-[640px] text-[15px] leading-relaxed text-gray-500">
-                The key differences to consider when comparing the two providers.
+                A feature-by-feature table. Rows where the two providers match are grayed out, so the real differences stand out.
               </p>
 
               <table className="w-full table-fixed border-collapse text-left">
@@ -1340,10 +1314,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {verdictWinner && verdictRunnerUp && (winnerPts.length > 0 || runnerUpPts.length > 0) && (
             <div className="mb-14 max-w-[820px]">
               <h2 className="mb-1.5 text-[22px] font-bold text-[#191919]">
-                So which one should you pick?
+                {p1.name} or {p2.name}: which fits you?
               </h2>
               <p className="mb-4 text-[14px] text-gray-500">
-                Find the line that sounds like you - that&rsquo;s your answer.
+                Pick the statement that matches your situation, and the provider beside it is your best fit.
               </p>
               <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
                 {[
@@ -1367,7 +1341,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {/* ───── EXPERT INTRO ───── */}
           <div className="mb-8 max-w-[760px]">
             <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-              Here&rsquo;s the short version
+              Overview
             </p>
             <ReadableProse text={battle.intro} paragraphClassName="text-[16px] leading-[1.85] text-gray-600" />
           </div>
@@ -1379,11 +1353,11 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {battle.winnerId && verdictWinner && verdictRunnerUp && winnerPts.length > 0 && runnerUpPts.length > 0 && (
             <div className="mb-12 max-w-[820px] rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
               <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-                The quick answer
+                Summary by priority
               </p>
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
-                  <p className="mb-2 text-[14px] font-bold text-[#191919]">Go with {verdictWinner.name} if you want</p>
+                  <p className="mb-2 text-[14px] font-bold text-[#191919]">Pick {verdictWinner.name} for</p>
                   <ul className="space-y-2">
                     {winnerPts.slice(0, 3).map((pt, i) => (
                       <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.65] text-gray-600">
@@ -1394,7 +1368,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </ul>
                 </div>
                 <div>
-                  <p className="mb-2 text-[14px] font-bold text-[#191919]">{verdictRunnerUp.name} makes more sense if you want</p>
+                  <p className="mb-2 text-[14px] font-bold text-[#191919]">Pick {verdictRunnerUp.name} for</p>
                   <ul className="space-y-2">
                     {runnerUpPts.slice(0, 3).map((pt, i) => (
                       <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.65] text-gray-600">
@@ -1407,10 +1381,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </div>
               <p className="mt-4 border-t border-gray-100 pt-3.5 text-[14px] text-gray-800">
                 <span className="font-bold text-[#191919]">
-                  Had to pick one for most people? {verdictWinner.name}.
+                  Our overall pick for most people: {verdictWinner.name}.
                 </span>{" "}
                 <span className="text-gray-500">
-                  The numbers and customer feedback below are why - and where {verdictRunnerUp.name} wins instead.
+                  The prices and customer feedback on this page explain why, and when {verdictRunnerUp.name} comes out ahead.
                 </span>
               </p>
             </div>
@@ -1440,7 +1414,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   />
                 </div>
                 <span className={`flex items-center gap-1 text-[13px] font-bold ${textColor} group-hover:underline`}>
-                  Visit Site
+                  Go to Site
                   <ArrowRight className="h-3 w-3" strokeWidth={2.5} />
                 </span>
               </ProviderCta>
@@ -1451,7 +1425,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {battleFaqs.length > 0 && (
             <div className="mb-14">
               <h2 className="mb-6 text-[24px] font-bold text-[#191919]">
-                {matchupLabel}: FAQs
+                {matchupLabel}: questions people ask
               </h2>
               <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
                 {battleFaqs.map((f, i) => (
@@ -1469,37 +1443,35 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               money pages it has been slow to index on the new domain (Oct 2026
               URL Inspection: altRx review and the tirzepatide guide "unknown to
               Google" while this template's pages are indexed). */}
-          {ctx.vertical === "weight-loss" && (
-            <div className="mb-10">
-              <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">Keep researching</h2>
-              <p className="mb-4 text-[14px] text-gray-500">The pages readers of this comparison open next.</p>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {[
-                  { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight verified compounded prices from $89, plus every brand-name Zepbound route." },
-                  { href: "/reviews/altrx", title: "altRx review", blurb: "$89 semaglutide, $149 tirzepatide, and the only brand-name shelf next to compounded plans." },
-                  { href: "/glp1-provider-support", title: "Provider customer support, compared", blurb: "What captured Trustpilot reviews say about support, shipping and billing, by provider." },
-                  { href: "/articles/zepbound-price-online", title: "Zepbound price online", blurb: "Brand Zepbound at $1,249 to $1,599 cash, the Ro pen route, and the compounded ladder." },
-                ].map((g) => (
-                  <Link
-                    key={g.href}
-                    href={hubLink(ctx, g.href)}
-                    className="group rounded-xl border border-gray-200 bg-white p-4 transition-shadow hover:shadow-md"
-                  >
-                    <p className="flex items-center justify-between text-[15px] font-bold text-[#191919] group-hover:text-[#0C4B75]">
-                      {g.title}
-                      <ArrowRight className="h-4 w-4 shrink-0 text-gray-400 group-hover:text-[#0C4B75]" strokeWidth={2.5} />
-                    </p>
-                    <p className="mt-1 text-[13px] leading-snug text-gray-500">{g.blurb}</p>
-                  </Link>
-                ))}
-              </div>
+          <div className="mb-10">
+            <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">Read next</h2>
+            <p className="mb-4 text-[14px] text-gray-500">Where readers of this comparison usually go after this page.</p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {[
+                { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight checked compounded tirzepatide prices starting at $89, plus each brand-name Zepbound option." },
+                { href: "/reviews/altrx", title: "altRx review", blurb: "Semaglutide at $89, tirzepatide at $149, and brand-name drugs sold alongside compounded plans." },
+                { href: "/glp1-provider-support", title: "GLP-1 provider support compared", blurb: "How each provider handles support, shipping and billing, based on saved Trustpilot reviews." },
+                { href: "/articles/zepbound-price-online", title: "Zepbound price online", blurb: "Cash prices of $1,249 to $1,599 for brand Zepbound, the ro pen option and cheaper compounded tiers." },
+              ].map((g) => (
+                <Link
+                  key={g.href}
+                  href={hubLink(ctx, g.href)}
+                  className="group rounded-xl border border-gray-200 bg-white p-4 transition-shadow hover:shadow-md"
+                >
+                  <p className="flex items-center justify-between text-[15px] font-bold text-[#191919] group-hover:text-[#0C4B75]">
+                    {g.title}
+                    <ArrowRight className="h-4 w-4 shrink-0 text-gray-400 group-hover:text-[#0C4B75]" strokeWidth={2.5} />
+                  </p>
+                  <p className="mt-1 text-[13px] leading-snug text-gray-500">{g.blurb}</p>
+                </Link>
+              ))}
             </div>
-          )}
+          </div>
 
           {/* ───── RELATED COMPARISONS ───── */}
           {(relatedBattles.length > 0 || relatedTrios.length > 0) && (
             <div className="mb-10">
-              <h2 className="mb-5 text-[20px] font-bold text-[#191919]">Related Comparisons</h2>
+              <h2 className="mb-5 text-[20px] font-bold text-[#191919]">More Provider Matchups</h2>
               {/* 3-way comparisons featuring this exact matchup lead the list -
                   the reader already cares about both providers, so "add a third
                   option" is the highest-intent next click. */}
@@ -1520,7 +1492,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         ))}
                       </div>
                       <span className="ml-auto inline-flex shrink-0 items-center gap-1 text-[13px] font-semibold text-[#0C4B75] group-hover:underline">
-                        Compare all three
+                        See all three
                         <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                       </span>
                     </Link>
@@ -1540,7 +1512,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       <span>{bp2.name}</span>
                     </div>
                     <span className="ml-auto inline-flex items-center gap-1 text-[13px] font-semibold text-[#0C4B75] group-hover:underline">
-                      Compare
+                      See matchup
                       <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                     </span>
                   </Link>
@@ -1552,15 +1524,15 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {/* Related links */}
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 py-4 text-[13px]">
             <Link href={hubLink(ctx, `/reviews/${p1.id}`)} className="font-semibold text-[#0C4B75] hover:underline">
-              {p1.name} Review
+              Our {p1.name} Review
             </Link>
             <span className="text-gray-400">|</span>
             <Link href={hubLink(ctx, `/reviews/${p2.id}`)} className="font-semibold text-[#0C4B75] hover:underline">
-              {p2.name} Review
+              Our {p2.name} Review
             </Link>
             <span className="text-gray-400">|</span>
             <Link href={hubLink(ctx, "/")} className="font-semibold text-[#0C4B75] hover:underline">
-              Compare All Providers
+              Full Provider Ranking
             </Link>
           </div>
 
