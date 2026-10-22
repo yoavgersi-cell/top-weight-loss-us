@@ -486,7 +486,7 @@ export const articlesPart3: Article[] = [
     author: "TopWeightLoss Team",
     keyTakeaways: [
       "The figure that matters is the ongoing price, not the first-month price. Most providers we track charge one flat price at every dose; three show a promotional price next to a higher regular price, and one discounts the first month by 20%.",
-      "At prices verified in our index, a year of compounded semaglutide ranges from $588 (welludr's 12-month plan) to roughly $1,800-$2,400 at month-to-month providers. Tirzepatide costs about $500-$1,200 more per year.",
+      "At prices verified in our index, a year of compounded semaglutide ranges from $588 (welludr's 12-month plan) to $828-$2,348 at month-to-month providers. Tirzepatide costs about $480-$1,320 more per year.",
       "The month-2 price jump that shows up in reviews comes from three pricing structures: an introductory price that expires, a membership billed alongside the drug, and a prepaid bundle that renews. All three can be spotted before you pay.",
       "Every figure here comes from our verified price index and is dated. Prices change monthly; the index and its change log are the live record.",
     ],
@@ -603,7 +603,7 @@ export const articlesPart3: Article[] = [
       {
         heading: "How are GLP-1 providers grouped into budget tiers here?",
         body:
-          "Each provider is placed by its ongoing price, meaning the maintenance price at the dose you stay on rather than the first-month price, calculated the same way as our <a href=\"/articles/glp1-true-cost-month-1-vs-year-one\">month 1 vs year one</a> page using the <a href=\"/glp1-weight-loss-statistics\">price index</a>.<ul><li>Promotional prices are labelled, with the regular price shown alongside.</li><li>Prepaid plans appear as a monthly average with the checkout total.</li><li>Semaglutide and tirzepatide are listed separately, because one provider usually charges $30-$150 more for tirzepatide.</li></ul>Every option in the tiers is a compounded product: made by a licensed pharmacy from the same active ingredient as the brand drug, but not FDA-approved itself. <a href=\"/articles/compounded-semaglutide-vs-brand-name\">Compounded vs brand-name</a> explains the difference.",
+          "Each provider is placed by its ongoing price, meaning the maintenance price at the dose you stay on rather than the first-month price, calculated the same way as our <a href=\"/articles/glp1-true-cost-month-1-vs-year-one\">month 1 vs year one</a> page using the <a href=\"/glp1-weight-loss-statistics\">price index</a>.<ul><li>Promotional prices are labelled, with the regular price shown alongside.</li><li>Prepaid plans appear as a monthly average with the checkout total.</li><li>Semaglutide and tirzepatide are listed separately, because one provider usually charges $30-$110 more for tirzepatide.</li></ul>Every option in the tiers is a compounded product: made by a licensed pharmacy from the same active ingredient as the brand drug, but not FDA-approved itself. <a href=\"/articles/compounded-semaglutide-vs-brand-name\">Compounded vs brand-name</a> explains the difference.",
       },
       {
         heading: "Which compounded semaglutide plans fit a $100-$200 monthly budget?",

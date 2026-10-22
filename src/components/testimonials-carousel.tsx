@@ -70,7 +70,7 @@ export function TestimonialsCarousel({ testimonials }: { testimonials: Testimoni
 
   return (
     <div className="mb-6">
-      <h3 className="mb-4 text-[17px] font-bold text-[#191919]">In Patients' Own Words</h3>
+      <h3 className="mb-4 text-[17px] font-bold text-[#191919]">In Patients&rsquo; Own Words</h3>
 
       {/* Desktop: 4 cards in a row */}
       <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">

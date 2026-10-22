@@ -341,7 +341,7 @@ SHED averages 4.6 from 1,134 Trustpilot reviews, and recent reviews focus on the
       "Fully online visit and checkout, shipped to your home"
     ],
     cons: [
-      "Highest compounded prices we rank: $199/mo semaglutide vs $49-$147 at other providers",
+      "Highest compounded prices we rank: $199/mo semaglutide vs $49-$149 at other providers",
       "The guarantee has conditions (5% in 120 days), so read the current terms",
       "Fewer Trustpilot reviews (1,134) than rivals with five-figure totals",
       "Compounded only: no brand-name Ozempic, Wegovy or Zepbound"
@@ -351,7 +351,7 @@ SHED averages 4.6 from 1,134 Trustpilot reviews, and recent reviews focus on the
       "Anyone who wants a money-back guarantee behind the program",
       "People planning to pay with HSA or FSA funds"
     ],
-    finalVerdict: "Among our affiliate providers, SHED is the best fit for coaching and accountability. Its 4.6 average from 1,134 Trustpilot reviews includes many detailed, named mentions of onboarding and coaching staff, which suggests the support is real rather than a marketing line. The guarantee (lose 5% in 120 days or get your money back) is the most concrete promise we have found and lowers your risk. The catch is cost: $199-$299/month is two to three times the entry price at welludr or embody, and if you would not use the coaching, that extra money buys little. Choose SHED for medication plus genuine support with a safety net. If you only want the lowest-cost GLP-1, start with cheaper providers.",
+    finalVerdict: "Among our affiliate providers, SHED is the best fit for coaching and accountability. Its 4.6 average from 1,134 Trustpilot reviews includes many detailed, named mentions of onboarding and coaching staff, which suggests the support is real rather than a marketing line. The guarantee (lose 5% in 120 days or get your money back) is the most concrete promise we have found and lowers your risk. The catch is cost: $199-$299/month is two to four times the entry price at welludr or embody, and if you would not use the coaching, that extra money buys little. Choose SHED for medication plus genuine support with a safety net. If you only want the lowest-cost GLP-1, start with cheaper providers.",
     trustBadges: [
       "Lose 5% in 120 days or money back",
       "Fully online visit and checkout",

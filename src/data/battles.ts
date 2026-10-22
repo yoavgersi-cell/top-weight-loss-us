@@ -390,7 +390,7 @@ const medviTrimrxBattle: BattleData = {
   subtitle: "Medvi and TrimRx compared on personal support, follow-up care, cost and the compounded medications each prescribes.",
   description: "Medvi vs TrimRx: Medvi wins on attentive support and all-inclusive pricing; TrimRx competes on low prices, multi-month discounts and no long-term commitment.",
   intro: "Medvi is the stronger choice if the care experience matters to you: reviewers praise its attentive providers, and its all-inclusive monthly plans cover medication, consultations and monitoring. TrimRx is designed around affordable GLP-1 access, with competitive pricing and discounts for multi-month plans. Both are online GLP-1 providers that keep costs down and do not depend on insurance. The breakdown below covers support, monitoring, onboarding, price and medications.",
-  verdict: "Medvi wins on experience. Medvi and TrimRx are both reliable, budget-conscious online GLP-1 providers, but Medvi customers consistently praise its personal, attentive service, and its plans include medication, provider consultations and ongoing monitoring with no surprise charges. TrimRx is the better pick if the lowest headline price is your top priority, thanks to its competitive pricing and multi-month discounts.",
+  verdict: "Medvi wins on experience. Medvi and TrimRx are both reliable, budget-conscious online GLP-1 providers, but Medvi customers consistently praise its personal, attentive service, and its plans include medication, provider consultations and ongoing monitoring with no surprise charges. TrimRx is the better pick if the lowest long-run price is your top priority: its $149 semaglutide and $259 tirzepatide sit below Medvi's $199/$299 regular rates, although Medvi's current $99/$166 promo is lower.",
   verdictWinnerPoints: [
     "Personal, attentive service that reviewers single out",
     "Regular check-ins and monitoring from providers",
@@ -439,7 +439,7 @@ const medviTrimrxBattle: BattleData = {
     {
       name: "Price and Value",
       winner: "provider2",
-      explanation: "TrimRx wins on headline price, with competitive monthly rates and discounts for multi-month plans. Medvi's plans are transparent and all-inclusive, covering medication, consultations and support with no surprise charges.",
+      explanation: "TrimRx wins on long-run price: $149/$259 a month against Medvi's $199/$299 regular rates, with discounts for multi-month plans. Medvi's current $99/$166 promo is lower while it lasts. Medvi's plans are transparent and all-inclusive, covering medication, consultations and support with no surprise charges.",
       supportingPoints: [
         "TrimRx: value-focused, multi-month discounts",
         "Medvi: all-inclusive, no surprise charges",

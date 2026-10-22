@@ -158,7 +158,7 @@ export const brandClusterPart2: Article[] = [
       },
       {
         heading: "Where does DirectMeds lose on price?",
-        body: `<p>DirectMeds is a bargain for one medication and average for the other:</p><ul><li><strong>Tirzepatide:</strong> $147 is among the best prices anywhere. Only welludr ($89) and embody ($119) charge less, and neither offers drops.</li><li><strong>Semaglutide:</strong> $147 is mid-range. <a href="/reviews/wellmedr">welludr ($49)</a>, <a href="/reviews/embody">embody ($69)</a>, <a href="/reviews/altrx">altRx ($89)</a> and <a href="/reviews/healthrx">HealthRx ($99, prepaid)</a> all cost less.</li></ul><p>DirectMeds also keeps its model lean on purpose: no coaching, no dietician, no brand-name medications. It wins specific comparisons, not every one.</p>`,
+        body: `<p>DirectMeds is a bargain for one medication and average for the other:</p><ul><li><strong>Tirzepatide:</strong> $147 is among the best prices anywhere. Only welludr ($89) and embody ($119) charge less, and neither offers drops.</li><li><strong>Semaglutide:</strong> $147 is mid-range. <a href="/reviews/wellmedr">welludr ($49)</a>, <a href="/reviews/embody">embody ($69)</a>, <a href="/reviews/altrx">altRx ($89)</a>, <a href="/reviews/medvi">Medvi ($99 promo)</a> and <a href="/reviews/healthrx">HealthRx ($99, prepaid)</a> all cost less.</li></ul><p>DirectMeds also keeps its model lean on purpose: no coaching, no dietician, no brand-name medications. It wins specific comparisons, not every one.</p>`,
       },
       {
         heading: "Who is DirectMeds the right choice for?",
@@ -180,7 +180,7 @@ export const brandClusterPart2: Article[] = [
     keyTakeaways: [
       "DirectMeds charges a flat $147/month for semaglutide or tirzepatide, as injections or sublingual drops, at any dose. The doctor review, medication and free 1-2 day shipping are included, and you can cancel anytime.",
       "For tirzepatide, $147 is the third-lowest price in our ranking: $112/month below TrimRx and $152 below SHED. Only welludr ($89, 12-month plan) and embody ($119) are cheaper, and neither offers drops.",
-      "For semaglutide, four providers cost less: welludr $49, embody $69, altRx $89 and HealthRx $99 prepaid, a difference of $576-$1,176 a year.",
+      "For semaglutide, five providers cost less: welludr $49, embody $69, altRx $89, Medvi $99 promo and HealthRx $99 prepaid, a difference of $576-$1,176 a year.",
       "Flat pricing removes two costs that appear later in treatment: your price never rises as your dose increases, and a clinician-directed switch between medications does not change your bill.",
     ],
     sections: [
@@ -190,7 +190,7 @@ export const brandClusterPart2: Article[] = [
       },
       {
         heading: "Is $147 a good price for tirzepatide and semaglutide?",
-        body: `<p>It depends entirely on which medication you take.</p><p><strong>Tirzepatide: a strong deal.</strong> $147 is the third-lowest tirzepatide price in our ranking. It is $112/month below TrimRx ($259), $152 below SHED ($299), and $19 below Medvi's $166 promotional rate. Against the expensive tier, that adds up to $1,344-$1,824 a year. Only welludr ($89, 12-month plan) and embody ($119) charge less, and neither sells a needle-free format.</p><p><strong>Semaglutide: beatable.</strong> Four providers charge less for semaglutide: welludr $49, embody $69, altRx $89 and HealthRx $99 (prepaid), a gap of $576-$1,176 a year. Unless you specifically want drops or the simplicity of a single flat price, the budget tier is the better fit for semaglutide-only patients.</p><table><tr><th>Provider</th><th>Semaglutide</th><th>Tirzepatide</th></tr><tr><td>welludr</td><td>$49/mo</td><td>$89/mo</td></tr><tr><td>embody</td><td>$69/mo</td><td>$119/mo</td></tr><tr><td>altRx</td><td>$89/mo</td><td>$149/mo</td></tr><tr><td>HealthRx</td><td>$99/mo*</td><td>from $179/mo</td></tr><tr><td><strong>DirectMeds</strong></td><td><strong>$147/mo</strong></td><td><strong>$147/mo</strong></td></tr><tr><td>Medvi</td><td>$99/mo promo (reg. $199)</td><td>$166/mo promo (reg. $299)</td></tr><tr><td>SHED</td><td>$199/mo</td><td>$299/mo</td></tr></table><p>*On a 12-month prepaid plan. Still deciding between the two medications? Read <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide</a>.</p>`,
+        body: `<p>It depends entirely on which medication you take.</p><p><strong>Tirzepatide: a strong deal.</strong> $147 is the third-lowest tirzepatide price in our ranking. It is $112/month below TrimRx ($259), $152 below SHED ($299), and $19 below Medvi's $166 promotional rate. Against the expensive tier, that adds up to $1,344-$1,824 a year. Only welludr ($89, 12-month plan) and embody ($119) charge less, and neither sells a needle-free format.</p><p><strong>Semaglutide: beatable.</strong> Five providers charge less for semaglutide: welludr $49, embody $69, altRx $89, Medvi $99 (promo) and HealthRx $99 (prepaid), a gap of $576-$1,176 a year. Unless you specifically want drops or the simplicity of a single flat price, the budget tier is the better fit for semaglutide-only patients.</p><table><tr><th>Provider</th><th>Semaglutide</th><th>Tirzepatide</th></tr><tr><td>welludr</td><td>$49/mo</td><td>$89/mo</td></tr><tr><td>embody</td><td>$69/mo</td><td>$119/mo</td></tr><tr><td>altRx</td><td>$89/mo</td><td>$149/mo</td></tr><tr><td>HealthRx</td><td>$99/mo*</td><td>from $179/mo</td></tr><tr><td><strong>DirectMeds</strong></td><td><strong>$147/mo</strong></td><td><strong>$147/mo</strong></td></tr><tr><td>Medvi</td><td>$99/mo promo (reg. $199)</td><td>$166/mo promo (reg. $299)</td></tr><tr><td>SHED</td><td>$199/mo</td><td>$299/mo</td></tr></table><p>*On a 12-month prepaid plan. Still deciding between the two medications? Read <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide</a>.</p>`,
       },
       {
         heading: "How does DirectMeds' flat price protect you later in treatment?",
@@ -206,7 +206,7 @@ export const brandClusterPart2: Article[] = [
     slug: "directmeds-alternatives",
     title: "DirectMeds Alternatives 2026: Best Picks by Medication",
     description:
-      "DirectMeds alternatives depend on your GLP-1: four providers beat $147 on semaglutide, two on tirzepatide, and none sell drops. Here is who to pick.",
+      "DirectMeds alternatives depend on your GLP-1: five providers beat $147 on semaglutide, two on tirzepatide, and none sell drops. Here is who to pick.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-18",
@@ -214,19 +214,19 @@ export const brandClusterPart2: Article[] = [
     heroColor: "#FBEEF4",
     author: "Top Weight Loss Staff",
     keyTakeaways: [
-      "Your best DirectMeds alternative depends on your medication: semaglutide patients have four cheaper options, tirzepatide patients have two, and drops patients have none.",
-      "Semaglutide: welludr $49 (12-month plan), embody $69 flat with no commitment, altRx $89 with BNPL and brand-name medications, or HealthRx $99 prepaid. That saves $576-$1,176 a year, but none of them offer a needle-free format.",
+      "Your best DirectMeds alternative depends on your medication: semaglutide patients have five cheaper options, tirzepatide patients have two, and drops patients have none.",
+      "Semaglutide: welludr $49 (12-month plan), embody $69 flat with no commitment, altRx $89 with BNPL and brand-name medications, Medvi $99 promo, or HealthRx $99 prepaid. That saves $576-$1,176 a year, but none of them offer a needle-free format.",
       "Tirzepatide: only welludr ($89, 12-month plan) and embody ($119 flat) undercut $147. Every other provider charges more, from altRx at $149 up to SHED at $299.",
       "Don't spend weeks chasing a $28-$98/month saving while not on treatment. Pick the provider that fits your main constraint, start, and reassess in month three with real results.",
     ],
     sections: [
       {
         heading: "Which DirectMeds alternative is right for you?",
-        body: `<p><strong>It depends on which medication and format you use.</strong> DirectMeds' flat $147 is a high price for some patients and a low one for others, so a single list of alternatives does not help. Instead, here are three separate answers:</p><ul><li><strong>Semaglutide patients</strong> are overpaying and have four cheaper options.</li><li><strong>Tirzepatide patients</strong> are already getting a good price and have only two cheaper options.</li><li><strong>Drops patients</strong> have no direct alternative, so staying makes sense, with conditions.</li></ul>`,
+        body: `<p><strong>It depends on which medication and format you use.</strong> DirectMeds' flat $147 is a high price for some patients and a low one for others, so a single list of alternatives does not help. Instead, here are three separate answers:</p><ul><li><strong>Semaglutide patients</strong> are overpaying and have five cheaper options.</li><li><strong>Tirzepatide patients</strong> are already getting a good price and have only two cheaper options.</li><li><strong>Drops patients</strong> have no direct alternative, so staying makes sense, with conditions.</li></ul>`,
       },
       {
         heading: "Where can you get semaglutide cheaper than DirectMeds?",
-        body: `<p>At $147, you are paying more than four rivals charge for the same active ingredient:</p><ul><li><a href="/reviews/wellmedr">welludr</a>: <strong>$49</strong> on a 12-month plan, with a coach and warranty included.</li><li><a href="/reviews/embody">embody</a>: <strong>$69 flat</strong>, no commitment, 1-2 day shipping and a refund if you are not approved. The closest match to DirectMeds' simple, no-fuss approach.</li><li><a href="/reviews/altrx">altRx</a>: <strong>$89</strong>, flat at every dose, with BNPL and a brand-name shelf.</li><li><a href="/reviews/healthrx">HealthRx</a>: <strong>$99</strong> on a 12-month prepaid plan, with overnight cold-chain shipping.</li></ul><p>Yearly savings range from $576 to $1,056. The trade-off with every one: no needle-free format.</p>`,
+        body: `<p>At $147, you are paying more than five rivals charge for the same active ingredient:</p><ul><li><a href="/reviews/wellmedr">welludr</a>: <strong>$49</strong> on a 12-month plan, with a coach and warranty included.</li><li><a href="/reviews/embody">embody</a>: <strong>$69 flat</strong>, no commitment, 1-2 day shipping and a refund if you are not approved. The closest match to DirectMeds' simple, no-fuss approach.</li><li><a href="/reviews/altrx">altRx</a>: <strong>$89</strong>, flat at every dose, with BNPL and a brand-name shelf.</li><li><a href="/reviews/medvi">Medvi</a>: <strong>$99</strong> promo (reg. $199), all-inclusive with a dietician and coaching.</li><li><a href="/reviews/healthrx">HealthRx</a>: <strong>$99</strong> on a 12-month prepaid plan, with overnight cold-chain shipping.</li></ul><p>Yearly savings range from $576 to $1,176. The trade-off with every one: no needle-free format.</p>`,
       },
       {
         heading: "Where can you get tirzepatide cheaper than DirectMeds?",
