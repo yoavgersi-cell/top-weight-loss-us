@@ -172,7 +172,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
         topic: "Follow-up after the first dose",
         body: [
           "“Nurse called me today asking have I taken the shot and if yes have I experienced any symptoms.”",
-          "Ordered on 8/6, medication delivered 8/14 - with a clinical follow-up call after the first dose.",
+          "Timeline from the post: the order went in on 8/6, the medication arrived on 8/14, and a clinician followed up by phone after the first injection.",
         ],
       },
       {
@@ -196,15 +196,15 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
         topic: "Shipping wait and price",
         body: [
           "“Arrived the next day from the pharmacy. Packaged nicely with ice packs.”",
-          "Three vials at $129 each; the honest catch: about two weeks between approval and the medication actually shipping - transit itself was next-day.",
+          "The poster paid $129 per vial for three vials. The downside they flagged: roughly two weeks passed between approval and shipment, although delivery itself took one day.",
         ],
       },
       {
         author: "TheseFrosting6548",
         topic: "Pharmacy delay and billing",
         body: [
-          "Order sat at the pharmacy for a couple of days - then, after a comment on embody's Facebook post: “they contacted me right away... rushed my order. I had it next day.”",
-          "“They just billed for the 2nd month - the amount is correct.” Gripes: the pharmacy premixed an anti-nausea ingredient without asking, and the 50-unit doses were larger than expected.",
+          "The poster says the order waited at the pharmacy for a couple of days. After they commented on embody's Facebook page: “they contacted me right away... rushed my order. I had it next day.”",
+          "On billing: “They just billed for the 2nd month - the amount is correct.” Their two complaints were an anti-nausea ingredient premixed by the pharmacy without asking, and 50-unit doses that were bigger than they expected.",
         ],
       },
       {
@@ -337,7 +337,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
         upvotes: 1,
         body: [
           "“I love Wellmedr personally. Amazing results, paying $129 month to month been using them since April. Have tried a few others but always go back personally”",
-          "Asked by a reply whether “the $129 the only thing you pay?”: “Yes”. Asked which pharmacy fills the orders: “Logos (503a)”.",
+          "In the replies, someone asked whether “the $129 the only thing you pay?” The answer was “Yes”, and the pharmacy named for filling orders was “Logos (503a)”.",
         ],
       },
       {
@@ -365,7 +365,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
         upvotes: 1,
         body: [
           "“I received it right away. They kept me on the 15mg of Tirz I was already on. Very responsive customer service.”",
-          "The honest catch, after leaving a previous provider (RemedyMeds) over refill delays: “I've been in it for 8 weeks and I'm only down 1 pound... I ordered a 6 month supply for $1143 from WellMedr trying to avoid the shipping delays of monthly refills but I'm currently looking for another company because I'm not wasting my time for no results.”",
+          "The same poster had left RemedyMeds over refill delays, and reported slow progress since switching: “I've been in it for 8 weeks and I'm only down 1 pound... I ordered a 6 month supply for $1143 from WellMedr trying to avoid the shipping delays of monthly refills but I'm currently looking for another company because I'm not wasting my time for no results.”",
         ],
       },
       {
