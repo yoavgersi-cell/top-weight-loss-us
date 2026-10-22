@@ -115,8 +115,8 @@ export default function MedicalReviewPolicyPage() {
             </li>
           </ul>
           <p className="mt-3">
-            The review log started empty when Top Weight Loss launched in October 2026, so pages move to the dated state
-            only as each one is reviewed and logged. A reviewed page is checked again when its medical content changes in a
+            Our medical reviewer checked the launch content of Top Weight Loss in October 2026, and every page she reviewed
+            carries that date. Pages added later move to the dated state only once each one is reviewed and logged. A reviewed page is checked again when its medical content changes in a
             meaningful way or when the guidance behind it changes. Updates to prices or rankings do not lead to a medical
             re-review and leave the review date unchanged.
           </p>

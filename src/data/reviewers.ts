@@ -14,6 +14,12 @@
 //     reviewed by a doctor": our reviewer is a medical laboratory scientist
 //     with an MPH, and the wording must not imply a prescribing clinician.
 
+import { reviews as launchReviews } from "./reviews";
+import { battles as launchBattles } from "./battles";
+import { landingPages as launchLandingPages } from "./landing-pages";
+import { articles as launchArticles } from "./articles";
+import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
+
 export const HUB_ORIGIN = "https://www.topweightloss.us";
 
 export interface ReviewerCredential {
@@ -187,10 +193,45 @@ export interface PageReview {
   reviewedAt: string; // YYYY-MM-DD
 }
 
-// topweightloss.us launched Oct 22, 2026 with newly written copy, so no page
-// has been reviewed yet. Add an entry per page only when the reviewer actually
-// signs it off; until then pages name her as staff, never as having reviewed.
-export const REVIEW_LOG: Record<string, PageReview> = {};
+// Oct 22, 2026: Francheska Capistrano reviewed the medical and scientific
+// statements across the launch content of topweightloss.us (operator-confirmed).
+// The log covers every content page that exists in code at launch: the home
+// ranking, provider reviews, comparisons, keyword landing pages, articles and
+// the standalone guides. A page added later gets its own entry only when she
+// signs it off; dates are never backfilled.
+const LAUNCH_REVIEW_DATE = "2026-10-22";
+
+const LAUNCH_STATIC_PATHS = [
+  "/",
+  "/reviews",
+  "/articles",
+  "/glp1-provider-support",
+  "/glp1-shipping-times",
+  "/glp1-price-changes",
+  "/glp1-provider-comparison",
+  "/weight-loss-pills",
+  "/glp1-pills-vs-injections",
+  "/retatrutide-weight-loss",
+  "/ozempic-alternatives",
+  "/cheapest-glp1",
+  "/switch-from-ozempic",
+  "/glp1-weight-loss-statistics",
+  "/how-to-choose-a-glp1-provider",
+  "/how-we-rank",
+];
+
+const LAUNCH_REVIEWED_PATHS = [
+  ...LAUNCH_STATIC_PATHS,
+  ...launchReviews.map((r) => `/reviews/${r.slug}`),
+  ...launchBattles.map((b) => `/${b.slug}`),
+  ...launchLandingPages.map((l) => `/${l.slug}`),
+  ...THREE_WAY_COMPARISONS.map((t) => `/${t.slug}`),
+  ...launchArticles.map((a) => `/articles/${a.slug}`),
+];
+
+export const REVIEW_LOG: Record<string, PageReview> = Object.fromEntries(
+  LAUNCH_REVIEWED_PATHS.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: LAUNCH_REVIEW_DATE }]),
+);
 
 export function getReviewer(slug: string = SITE_REVIEWER_SLUG): Reviewer | undefined {
   return REVIEWERS.find((r) => r.slug === slug);
