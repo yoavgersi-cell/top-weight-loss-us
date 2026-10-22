@@ -61,7 +61,7 @@ export default function DisclaimerPage() {
           trademark of Reddit, Inc.; neither company is affiliated with Top Weight Loss.
         </p>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Prices and provider information</h2>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Prices and provider details</h2>
         <p>
           Prices, plans, shipping terms and program details come from each provider&rsquo;s own published materials
           as of our most recent verification, and that date is shown on the page. Providers can change prices and
@@ -76,7 +76,7 @@ export default function DisclaimerPage() {
           services being compared. Their use does not imply endorsement, partnership or sponsorship unless we say so.
         </p>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Accuracy and corrections</h2>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Accuracy and reporting errors</h2>
         <p>
           We work to keep each page accurate and up to date, and we log price changes as we find them. We cannot
           guarantee that every provider, price or offer is complete or current when you read it. To report an error,

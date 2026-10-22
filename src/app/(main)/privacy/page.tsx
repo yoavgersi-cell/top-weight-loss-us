@@ -72,10 +72,10 @@ export default function PrivacyPage() {
           <li>If you live in a US state with a consumer privacy law, you can ask to access or delete your personal information. We hold no information that identifies you, so there is usually nothing to provide or erase, but you can still send a request to <a href="mailto:contact@topweightloss.us" className={ext}>contact@topweightloss.us</a>.</li>
         </ul>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Children</h2>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Children&rsquo;s privacy</h2>
         <p>Top Weight Loss is meant for adults and is not aimed at children under 18. We do not knowingly collect information from children.</p>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Changes</h2>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Changes to this policy</h2>
         <p>Before any change to what we collect takes effect, this page is updated and the date at the top changes.</p>
 
         <p className="pt-4 text-[14px]">

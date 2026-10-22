@@ -37,7 +37,7 @@ export default function TermsPage() {
           with the provider before you pay.
         </p>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">3. Third-party providers and links</h2>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">3. Independent providers and outbound links</h2>
         <p>
           Every provider listed on the site is an independent company. Top Weight Loss does not provide, prescribe,
           dispense or ship any treatment and is not a party to any transaction between you and a provider. Provider
@@ -46,7 +46,7 @@ export default function TermsPage() {
           for any provider&rsquo;s services, pricing, availability, medical care or conduct.
         </p>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">4. Reviews and quoted content</h2>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">4. Quoted reviews and our opinions</h2>
         <p>
           Customer reviews and forum posts quoted on the site express the views of the people who wrote them. They
           are reproduced from public sources with attribution and are not our statements. Individual results
@@ -63,7 +63,7 @@ export default function TermsPage() {
           to the amount the law permits.
         </p>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">6. Our content</h2>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">6. Ownership of site content</h2>
         <p>
           Unless stated otherwise, the site&rsquo;s text, tables, verified price registry and design belong to us. You
           are free to read pages and share links to them. Copying substantial parts of the site, or reproducing the
@@ -74,7 +74,7 @@ export default function TermsPage() {
         <h2 className="pt-4 text-xl font-semibold text-[#191919]">7. Acceptable use</h2>
         <p>You may not scrape the site in bulk, disrupt how it runs, or use it for any unlawful purpose.</p>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">8. Changes</h2>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">8. Changes to these terms</h2>
         <p>These terms may be updated from time to time, and the date at the top marks the current version. If you keep using the site after an update, you accept the updated terms.</p>
 
         <p className="pt-4 text-[14px]">

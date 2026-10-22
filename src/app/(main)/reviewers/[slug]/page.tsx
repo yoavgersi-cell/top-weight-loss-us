@@ -101,7 +101,7 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
             <div className="min-w-0">
               <p className="mb-1 flex items-center gap-1.5 text-[12px] font-semibold uppercase tracking-[0.06em] text-emerald-700">
                 <ShieldCheck className="h-4 w-4" strokeWidth={2.25} />
-                Medical reviewer
+                Medical content reviewer
               </p>
               <h1 className="text-[28px] font-extrabold leading-[1.15] text-[#191919] sm:text-[34px]">
                 {r.name}
@@ -131,7 +131,7 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
                   className="mt-4 inline-flex h-[40px] items-center gap-2 rounded-lg bg-[#0A66C2] px-4 text-[13.5px] font-bold text-white hover:opacity-90"
                 >
                   <LinkedInMark className="h-4 w-4" />
-                  LinkedIn profile
+                  View LinkedIn profile
                 </a>
               )}
             </div>
@@ -142,18 +142,19 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
       <div className="mx-auto max-w-[900px] px-4 py-10 text-[16px] leading-[1.75] text-gray-800 sm:px-6">
         {/* Scope */}
         <section className="mb-10 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
-          <h2 className="mb-2 text-[18px] font-bold text-[#191919]">What {r.name.split(" ")[0]} reviews on this site</h2>
+          <h2 className="mb-2 text-[18px] font-bold text-[#191919]">What does {r.name.split(" ")[0]} review on Top Weight Loss?</h2>
           <p className="text-[15px] leading-[1.75] text-gray-600">{r.scope}</p>
           <p className="mt-2 text-[14px] text-gray-500">
-            Pages she has reviewed carry a dated &ldquo;Reviewed for medical accuracy&rdquo; line; pages she has not yet
-            reviewed name her as the site&rsquo;s medical reviewer without a review date. The full policy is in{" "}
-            <Link href="/medical-review-policy" className={ext}>how we review</Link>.
+            A page shows a dated &ldquo;Reviewed for medical accuracy&rdquo; line only after she has reviewed it and it is
+            entered in our review log. Pages not yet in the log name her as the site&rsquo;s medical reviewer with no review
+            date. Read the complete{" "}
+            <Link href="/medical-review-policy" className={ext}>medical review policy</Link>.
           </p>
         </section>
 
         {/* Bio */}
         <section className="mb-10">
-          <h2 className="mb-3 text-[24px] font-bold text-[#191919]">Background</h2>
+          <h2 className="mb-3 text-[24px] font-bold text-[#191919]">Professional background</h2>
           {r.longBio.map((p) => (
             <p key={p.slice(0, 40)} className="mb-4">{p}</p>
           ))}
@@ -161,7 +162,7 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
 
         {/* Credentials and education */}
         <section className="mb-10">
-          <h2 className="mb-4 text-[24px] font-bold text-[#191919]">Credentials and education</h2>
+          <h2 className="mb-4 text-[24px] font-bold text-[#191919]">Licensure and education</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {r.licensure.map((c) => (
               <div key={c.title} className="rounded-xl border border-gray-200 bg-white p-4">
@@ -191,7 +192,7 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
 
         {/* Experience */}
         <section className="mb-10">
-          <h2 className="mb-4 text-[24px] font-bold text-[#191919]">Experience</h2>
+          <h2 className="mb-4 text-[24px] font-bold text-[#191919]">Work experience</h2>
           <div className="space-y-3">
             {r.experience.map((g) => (
               <div key={g.area} className="rounded-xl border border-gray-200 bg-white p-4">
@@ -216,9 +217,9 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
             reviewer record so they can come back without re-sourcing. */}
 
         <p className="text-[13px] leading-relaxed text-gray-400">
-          Reviewers assess medical and scientific statements. They do not choose providers, set prices or rankings, or
-          take part in commercial partnerships. Nothing on this site is medical advice; talk to a licensed clinician
-          about your own situation.
+          Reviewers check medical and scientific statements only. They have no role in choosing providers, setting prices
+          or rankings, or any commercial partnership. Top Weight Loss does not give medical advice; speak with a licensed
+          clinician about your own situation.
         </p>
       </div>
     </div>
