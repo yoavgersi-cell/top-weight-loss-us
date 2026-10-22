@@ -11,7 +11,7 @@ function initials(name: string) {
 // `label` sets the framing: "Analysis by", "Reviewed by", "Written by".
 export function ExpertByline({
   expert,
-  label = "Analysis by",
+  label = "Analyzed by",
   href = "/about",
   showRole = true,
   compact = false,

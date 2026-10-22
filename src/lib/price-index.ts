@@ -27,7 +27,7 @@ export type PriceIndexRow = {
 export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "wellmedr",
-    edge: "Lowest ongoing price on the market - same price at every dose",
+    edge: "Lowest ongoing price in this index, with one price at every dose",
     semaglutide: { price: "$49", note: "12-month plan; locked for life" },
     tirzepatide: { price: "$89", note: "shipped every 4 weeks" },
     shipping: "Ships in 3-5 business days",
@@ -36,7 +36,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "embody",
-    edge: "Cheapest with no commitment - month to month, ships in 1-2 days",
+    edge: "Lowest price without a contract: month-to-month billing and 1-2 day shipping",
     semaglutide: { price: "$69", note: "reg. $79; month-to-month" },
     tirzepatide: { price: "$119", note: "reg. $129; month-to-month" },
     shipping: "Ships in 1-2 days, cold-chain",
@@ -45,7 +45,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "altrx",
-    edge: "Flat pricing at every dose, plus a real brand-name shelf",
+    edge: "One price at every dose, and brand-name medications sold alongside compounded",
     semaglutide: { price: "$89", note: "reg. $199; flat at every dose" },
     tirzepatide: { price: "$149", note: "reg. $299; flat at every dose" },
     shipping: "Free shipping in 5-7 days",
@@ -54,7 +54,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "medvi",
-    edge: "All-inclusive care: visits, dietician and coaching in the price",
+    edge: "Visits, a dietician and coaching are all included in the monthly price",
     semaglutide: { price: "$99", note: "promo; reg. $199 - all-inclusive" },
     tirzepatide: { price: "$166", note: "promo; reg. $299" },
     shipping: "Free shipping",
@@ -63,7 +63,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "healthrx",
-    edge: "All-in prepaid year with overnight cold-chain delivery",
+    edge: "A full year paid up front, delivered overnight in cold-chain packaging",
     semaglutide: { price: "$99", note: "12-mo prepaid - $1,188 at checkout" },
     tirzepatide: { price: "from $179", note: "per month" },
     shipping: "Overnight cold-chain shipping",
@@ -72,7 +72,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "directmeds",
-    edge: "One flat price for both medications - injections or drops",
+    edge: "Semaglutide and tirzepatide cost the same, as injections or oral drops",
     semaglutide: { price: "$147", note: "flat at every dose" },
     tirzepatide: { price: "$147", note: "flat at every dose" },
     shipping: "Free 1-2 day shipping",
@@ -81,7 +81,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "sprout",
-    edge: "Compounded plans plus a brand-name Wegovy option",
+    edge: "Compounded GLP-1 plans, with brand-name Wegovy also available",
     semaglutide: { price: "$149", note: "starting price" },
     tirzepatide: { price: "$199", note: "starting price" },
     shipping: "Prescription shipped within 2 days",
@@ -90,7 +90,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "trimrx",
-    edge: "Custom dosing with unlimited provider check-ins",
+    edge: "Dosing tailored to you, plus unlimited check-ins with a provider",
     semaglutide: { price: "$149", note: "same price at every dose; $140 discount applied" },
     tirzepatide: { price: "$259", note: "per month" },
     shipping: "Free tracked delivery, often next-day",
@@ -99,7 +99,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "shed",
-    edge: "Coaching included and a 5%-in-120-days money-back guarantee",
+    edge: "Coaching built in, backed by a money-back guarantee if you lose under 5% in 120 days",
     semaglutide: { price: "$199", note: "20% off month one" },
     tirzepatide: { price: "$299", note: "20% off month one" },
     shipping: "Home delivery included",
@@ -122,25 +122,25 @@ export const PRICE_CHANGELOG: { date: string; providerId: string; change: string
     date: "2026-09-21",
     providerId: "altrx",
     change:
-      "Promotional $89/month semaglutide and $149/month tirzepatide rates extended: provider now lists the sale as ending September 25 (previously September 20). Prices unchanged.",
+      "altRx extended its sale on compounded semaglutide ($89/month) and tirzepatide ($149/month). The listed end date moved from September 20 to September 25; the prices themselves did not change.",
   },
   {
     date: "2026-09-15",
     providerId: "trimrx",
     change:
-      "Compounded semaglutide now listed at $149/month, the same price at every dose ($140 discount applied). Previously listed as $179 for the first month and $299 regular thereafter. Tirzepatide unchanged at $259/month.",
+      "TrimRx compounded semaglutide moved to $149/month at every dose, with a $140 discount applied. Our earlier listing showed $179 for month one and $299 a month after that. Tirzepatide stayed at $259/month.",
   },
   {
     date: "2026-09-14",
     providerId: "altrx",
     change:
-      "Promotional $89/month semaglutide and $149/month tirzepatide rates confirmed; provider lists the sale as ending September 20. Regular rates remain $199 and $299.",
+      "We confirmed altRx's sale prices of $89/month for semaglutide and $149/month for tirzepatide, with a listed end date of September 20. The regular prices are still $199 and $299.",
   },
   {
     date: "2026-09-14",
     providerId: "wellmedr",
     change:
-      "Compounded semaglutide now listed at $49/month on the 12-month plan (previously listed $59) and tirzepatide at $89/month (previously $99). Same price at every dose.",
+      "welludr lowered compounded semaglutide to $49/month on the 12-month plan (down from $59) and tirzepatide to $89/month (down from $99). Each price applies at every dose.",
   },
 ];
 

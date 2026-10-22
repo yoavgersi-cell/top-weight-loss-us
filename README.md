@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Top Weight Loss
 
-## Getting Started
+Source for [topweightloss.us](https://www.topweightloss.us): an independent comparison site for online GLP-1 weight loss providers in the US (compounded and brand-name semaglutide and tirzepatide).
 
-First, run the development server:
+Built on the same Next.js codebase and UI as treatmentshub.com/weight-loss (provider cards, CTAs, fonts, colors, hero and sidebar layout), as a single-topic site served at the domain root. All copy was written fresh for this domain; facts, prices, affiliate links, Trustpilot reviews and Reddit threads were carried over from the source data.
+
+## Where things live
+
+| What | File |
+| --- | --- |
+| Providers, affiliate links, card taglines | `src/data/products.json` |
+| Ranking order and scores | `src/lib/config-store.ts` (`RANKING_ORDER`) |
+| Provider reviews | `src/data/reviews.ts` |
+| Head-to-head comparisons | `src/data/battles.ts`, `src/data/battles-2.ts` |
+| Three-way comparisons | `src/lib/three-way.ts` |
+| Articles | `src/data/articles/part-*.ts`, `src/data/brand-cluster-articles*.ts`, `src/data/pillar-glp1-online.ts` |
+| Keyword landing pages (/semaglutide, /tirzepatide, ...) | `src/data/landing-pages.ts` |
+| Trustpilot reviews (verbatim) | `src/data/trustpilot.ts` |
+| Reddit threads (verbatim) | `src/components/reddit-community.tsx` |
+| Homepage FAQ | `src/data/faqs.json` |
+| Quiz (/find-your-match) | `src/data/quiz.ts` |
+| Medical reviewer + review log | `src/data/reviewers.ts` |
+
+Everything ships from code: there is no CMS or blob storage.
+
+## SEO / GEO
+
+- Canonical host `https://www.topweightloss.us`; the apex and other subdomains 301 to www, preview hosts are served `noindex` (`src/proxy.ts`).
+- `/sitemap.xml`, `/robots.txt` (with a Content-Signal line), `/llms.txt` for AI answer engines, and `/feed.xml`.
+- JSON-LD on every template: Organization, WebSite, WebPage + ItemList (home), Review/Product (reviews), Article, FAQPage, BreadcrumbList.
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment variables (Vercel)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `NEXT_PUBLIC_GA_ID`: Google Analytics 4 measurement ID (optional)
+- `NEXT_PUBLIC_TABOOLA_PIXEL_ID`: Taboola pixel ID (optional; no default)

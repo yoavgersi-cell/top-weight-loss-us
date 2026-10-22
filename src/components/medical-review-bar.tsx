@@ -66,7 +66,7 @@ export function MedicalReviewBar({
   );
   const policy = (
     <Link href="/medical-review-policy" className="font-medium text-[#0C4B75] hover:underline">
-      How we review
+      Our review process
     </Link>
   );
 
@@ -92,7 +92,7 @@ export function MedicalReviewBar({
               instead of three. Desktop keeps the full sentence. */}
           <span className={compact ? "" : "inline"}>
             <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
-            <span className={compact ? "" : "hidden sm:inline"}>{review ? "Reviewed for medical accuracy by " : "Medical reviewer: "}</span>
+            <span className={compact ? "" : "hidden sm:inline"}>{review ? "Medically reviewed by " : "Clinical reviewer: "}</span>
           </span>
           {nameLink}
           {!compact && <span className="hidden text-gray-500 sm:inline"> · {reviewer.jobTitle}</span>}
@@ -114,19 +114,19 @@ export function MedicalReviewBar({
           <p className="mt-0.5 text-[12.5px] text-gray-500">
             {review ? (
               <>
-                <span className="sm:hidden">Medically reviewed </span>
-                <span className="hidden sm:inline">Reviewed </span>
+                <span className="sm:hidden">Clinically checked </span>
+                <span className="hidden sm:inline">Checked </span>
                 <time dateTime={review.reviewedAt}>{formatDate(review.reviewedAt)}</time>
                 {" · "}
               </>
             ) : (
               <>
-                <span className="sm:hidden">Medical reviewer · </span>
-                <span className="hidden sm:inline">Reviews this site&rsquo;s health content for scientific accuracy · </span>
+                <span className="sm:hidden">Clinical reviewer · </span>
+                <span className="hidden sm:inline">Checks the health information on Top Weight Loss for scientific accuracy · </span>
               </>
             )}
             <span className="hidden sm:inline">
-              Written by {writer}
+              Author: {writer}
               {" · "}
             </span>
             {policy}

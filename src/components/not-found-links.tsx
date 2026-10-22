@@ -28,20 +28,20 @@ export function NotFoundLinks({
           className="inline-flex h-[46px] items-center justify-center gap-2 rounded-xl bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
         >
           <Home className="h-4 w-4" strokeWidth={2} />
-          Compare all providers
+          See the full ranking
         </Link>
         <Link
           href={href("/find-your-match")}
           className="inline-flex h-[46px] items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-6 text-[14px] font-bold text-[#191919] transition-colors hover:bg-gray-50"
         >
           <Search className="h-4 w-4" strokeWidth={2} />
-          Find your match
+          Get matched
         </Link>
       </div>
 
       {topProviders.length > 0 && (
         <div className="mt-12">
-          <h2 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">Top providers</h2>
+          <h2 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">Highest-rated providers</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {topProviders.map((p) => (
               <Link
@@ -53,7 +53,7 @@ export function NotFoundLinks({
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" />
                 </div>
-                <span className="ml-auto text-[13px] font-semibold text-[#0C4B75] group-hover:underline">Read review</span>
+                <span className="ml-auto text-[13px] font-semibold text-[#0C4B75] group-hover:underline">See review</span>
               </Link>
             ))}
           </div>
@@ -62,7 +62,7 @@ export function NotFoundLinks({
 
       {comparisons.length > 0 && (
         <div className="mt-8">
-          <h2 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">Popular comparisons</h2>
+          <h2 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">Most-read comparisons</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {comparisons.map((c) => (
               <Link

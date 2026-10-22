@@ -52,27 +52,27 @@ export function SourcesMethodology({
         <div className="flex items-center gap-2.5">
           <ClipboardCheck className="h-[18px] w-[18px] text-[#0C4B75]" strokeWidth={2} />
           <h2 className="text-[15px] font-bold uppercase tracking-[0.05em] text-[#191919]">
-            Sources &amp; methodology
+            How we researched this
           </h2>
         </div>
       </div>
 
       <div className="px-6 py-6 sm:px-7">
         <p className="mb-6 max-w-[760px] text-[14px] leading-relaxed text-gray-700">
-          We built this {kind} of {headingLabel}{" "}from{" "}
-          {kind === "review" ? "the provider's" : "each provider's"} own published pricing, plans
-          and policies, cross-checked against regulatory and peer-reviewed medical references, and
-          read alongside real customer feedback. Prices and plan details were verified against the
-          provider&apos;s published information; we do not take providers&apos; word for their own
-          claims without checking.
+          This {kind} of {headingLabel}{" "}starts with{" "}
+          {kind === "review" ? "the provider's" : "each provider's"} published prices, plans and
+          policies. We then compare those details with regulatory and peer-reviewed medical
+          references and weigh them against what real customers report. Every price and plan detail
+          was checked on the provider&apos;s own published information, because a provider&apos;s
+          claims about itself are not accepted until we confirm them.
         </p>
 
         <div className="grid gap-x-10 gap-y-7 sm:grid-cols-2">
           {/* Provider-published data - links to our own detailed breakdowns */}
           <div>
-            <GroupLabel icon={FileText}>Provider information</GroupLabel>
+            <GroupLabel icon={FileText}>Provider data</GroupLabel>
             <p className="mb-2.5 text-[13px] leading-relaxed text-gray-500">
-              Pricing, plans, shipping and policies, checked against each provider&apos;s own site.
+              Prices, plan terms, shipping and policies, confirmed on each provider&apos;s website.
             </p>
             <ul className="space-y-1.5">
               {providers.map((p) => (
@@ -82,7 +82,7 @@ export function SourcesMethodology({
                       <span className="font-semibold text-[#191919]">{p.name}</span>
                       <span className="text-gray-400">
                         {" "}
-                        - pricing, plans &amp; policies as published on its own site
+                        - prices, plans &amp; policies from its official website
                       </span>
                     </>
                   ) : (
@@ -93,7 +93,7 @@ export function SourcesMethodology({
                       >
                         {p.name}
                       </a>
-                      <span className="text-gray-400"> - full pricing &amp; plan breakdown</span>
+                      <span className="text-gray-400"> - complete price &amp; plan review</span>
                     </>
                   )}
                 </li>
@@ -101,17 +101,17 @@ export function SourcesMethodology({
             </ul>
             <p className="mt-3 inline-flex items-center gap-1.5 rounded-md bg-gray-50 px-2.5 py-1 text-[12px] font-semibold text-gray-500">
               <ClipboardCheck className="h-3.5 w-3.5 text-[#0C4B75]" strokeWidth={2} />
-              Provider data checked {PROVIDER_DATA_CHECKED}
+              Provider details confirmed {PROVIDER_DATA_CHECKED}
             </p>
           </div>
 
           {/* Customer & community feedback - the social-proof layer, named */}
           <div>
-            <GroupLabel icon={MessagesSquare}>Customer &amp; community feedback</GroupLabel>
+            <GroupLabel icon={MessagesSquare}>What customers and communities say</GroupLabel>
             <p className="text-[13px] leading-relaxed text-gray-500">
-              Third-party signals shown on this page and in our full reviews: verified Trustpilot
-              ratings, public Reddit discussions, and independent YouTube reviews. We report what
-              these sources say - we never fold their ratings into our own scores.
+              Outside sources cited here and in our reviews include verified Trustpilot ratings,
+              public Reddit threads and independent YouTube reviews. We quote and summarize them,
+              but their ratings are kept separate from our own scores.
             </p>
           </div>
 
@@ -119,7 +119,7 @@ export function SourcesMethodology({
               exists for the vertical; never fabricated. */}
           {medicalSources.length > 0 && (
             <div className="sm:col-span-2">
-              <GroupLabel icon={Stethoscope}>Medical &amp; regulatory references</GroupLabel>
+              <GroupLabel icon={Stethoscope}>Clinical &amp; regulatory sources</GroupLabel>
               <ol className="grid gap-x-8 gap-y-2 sm:grid-cols-2">
                 {medicalSources.map((s, i) => (
                   <li key={i} className="flex gap-2 text-[13px] leading-relaxed">
@@ -144,9 +144,9 @@ export function SourcesMethodology({
         </div>
 
         <p className="mt-7 border-t border-gray-100 pt-4 text-[12.5px] leading-relaxed text-gray-400">
-          Last reviewed {PROVIDER_DATA_CHECKED}. We revisit comparisons when providers change their
-          pricing or policies. This page is information only and is not medical advice - always
-          consult a licensed clinician before starting treatment.
+          Last reviewed {PROVIDER_DATA_CHECKED}. When a provider changes its prices or policies, we
+          update this comparison. The content here is for general information, not medical advice:
+          talk to a licensed clinician before you begin any treatment.
         </p>
       </div>
     </section>

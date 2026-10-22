@@ -17,8 +17,8 @@ export interface ProviderAuditEntry {
   rows: { label: string; value: string }[];
 }
 
-// Keyed "<vertical>:<providerId>" so a provider that exists in two verticals
-// (e.g. maximus in hair-loss and trt) can carry a separate audit per vertical.
+// Keyed "<vertical>:<providerId>"; the site covers weight loss only, so every
+// key carries the "weight-loss:" prefix the review page passes in.
 export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   // ── Weight loss ────────────────────────────────────────────────────────────
   "weight-loss:embody": {
@@ -117,42 +117,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Membership", value: "$39 first month, then $74-149/month ($74 on a 12-month prepaid plan)" },
       { label: "Medication cost", value: "Priced separately from membership - e.g. Wegovy pill $149 first month (then $299); Zepbound KwikPen from $299 first month" },
       { label: "Trustpilot record", value: "3.9 across 7,105 reviews" },
-    ],
-  },
-
-  // ── Hair loss ──────────────────────────────────────────────────────────────
-  "hair-loss:maximus": {
-    rows: [
-      { label: "Oral minoxidil", value: "$24.99 / 90-day supply" },
-      { label: "Finasteride", value: "$34.99 / 90-day supply (dutasteride $34.99)" },
-      { label: "Combination plans", value: "Oral combo $59.99; topical gels from $44.99 (all 90-day)" },
-      { label: "Trustpilot record", value: "4.4 across 1,050 reviews" },
-    ],
-  },
-  "hair-loss:happyhead": {
-    rows: [
-      { label: "First order", value: "$49 (reg. $89) - custom topical or SuperCapsule" },
-      { label: "Dual Action set", value: "$98 (reg. $178)" },
-      { label: "Subscription discount", value: "20% off subscriptions" },
-      { label: "Guarantee", value: "6-month guarantee, per its published terms" },
-      { label: "Trustpilot record", value: "4.5 across 1,803 reviews" },
-    ],
-  },
-  "hair-loss:petermd": {
-    rows: [
-      { label: "Finasteride", value: "$60 / 30 tablets (reg. $74); $90 / 60 tablets (reg. $110)" },
-      { label: "Follicure RX", value: "$70 / 50mL (reg. $80) - minoxidil + finasteride + ketoconazole" },
-      { label: "ReGenX", value: "$130 (reg. $160)" },
-    ],
-  },
-
-  // ── TRT ────────────────────────────────────────────────────────────────────
-  "trt:dudemeds": {
-    rows: [
-      { label: "TRT (bring your own labs)", value: "From $77/month" },
-      { label: "TRT with labs included", value: "$98/month" },
-      { label: "Enclomiphene", value: "$125/month" },
-      { label: "TRT MAX", value: "$222 quarterly" },
     ],
   },
 };

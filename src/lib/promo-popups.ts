@@ -38,9 +38,9 @@ export interface PromoPopupSpec {
 export const PROMO_POPUPS: PromoPopupSpec[] = [
   {
     providerId: "embody",
-    providerName: "Embody",
+    providerName: "embody",
     image: "/embodypopup.webp",
-    alt: "Embody - GLP-1 from $69/mo. Start now and save.",
+    alt: "embody promotion: GLP-1 treatment from $69/mo, start now and save",
     priority: 2,
     timer: {
       startSeconds: 5 * 86400 + 21 * 3600 + 52 * 60 + 30,
@@ -67,7 +67,7 @@ export const PROMO_POPUPS: PromoPopupSpec[] = [
     providerId: "trimrx",
     providerName: "TrimRx",
     image: "/trimrxpopup.webp",
-    alt: "TrimRx - $140 off all weight loss plans, GLP-1 plans starting at $149. Start now and save.",
+    alt: "TrimRx promotion: $140 off every weight loss plan, with GLP-1 plans from $149, start now and save",
     priority: 1,
   },
 ];

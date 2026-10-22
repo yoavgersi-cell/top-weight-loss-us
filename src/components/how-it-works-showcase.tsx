@@ -35,19 +35,19 @@ export const HOW_IT_WORKS_SHOWCASE: Record<string, HowItWorksShowcaseSpec> = {
     steps: [
       {
         image: "/how-it-works/altrx-step-1.webp",
-        imageAlt: "A woman completing the altRx assessment on her phone",
+        imageAlt: "Woman filling out the altRx online health assessment on a smartphone",
         title: ["Start Your ", "Free 2-Minute Assessment"],
         body: "Complete our quick assessment to see if you qualify for prescription weight loss medication - no cost, no obligation.",
       },
       {
         image: "/how-it-works/altrx-step-2.webp",
-        imageAlt: "The altRx app open on a phone",
+        imageAlt: "Smartphone showing the altRx app and treatment plan screen",
         title: ["Get Your ", "Treatment Plan"],
         body: "If your provider determines that treatment is appropriate, you will receive a personalized care plan. Your provider may prescribe GLP-1 (Compounded Semaglutide) or GLP-1/GIP (Compounded Tirzepatide) as part of your plan based on your individual health profile.",
       },
       {
         image: "/how-it-works/altrx-step-3.webp",
-        imageAlt: "A woman receiving an altRx delivery box at her door",
+        imageAlt: "Woman at her front door accepting an altRx medication package",
         title: ["", "Receive", " Your Medication"],
         body: "If prescribed, your medication ships directly to your door from a licensed pharmacy. Your care team provides ongoing support throughout your membership.",
       },
@@ -72,7 +72,7 @@ export function HowItWorksShowcase({
       {/* Heading row: title left, the provider's own framing right */}
       <div className="flex flex-col gap-3 border-b border-gray-100 px-5 pb-5 pt-6 sm:flex-row sm:items-end sm:justify-between sm:gap-8 sm:px-7">
         <h2 className="text-[24px] font-extrabold leading-tight text-[#0C4B75] sm:text-[30px]">
-          How {providerName} works
+          Getting started with {providerName}
         </h2>
         <p className="max-w-[460px] text-[14px] leading-[1.6] text-gray-600 sm:text-right sm:text-[14.5px]">
           {spec.intro}
@@ -83,7 +83,7 @@ export function HowItWorksShowcase({
       <div className="px-5 pt-5 sm:px-7">
         <ol
           className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 [&::-webkit-scrollbar]:hidden"
-          aria-label={`How ${providerName} works, in ${spec.steps.length} steps`}
+          aria-label={`Getting started with ${providerName}: ${spec.steps.length} steps`}
         >
           {spec.steps.map((step, i) => (
             <li
@@ -140,7 +140,7 @@ export function HowItWorksShowcase({
           <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
         </ProviderCta>
         <p className="mt-2.5 text-center text-[12px] text-gray-400">
-          Free assessment. A licensed provider decides whether treatment is appropriate.
+          The assessment costs nothing. Whether you get a prescription is up to a licensed clinician.
         </p>
       </div>
     </section>

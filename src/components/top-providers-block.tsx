@@ -55,7 +55,7 @@ export function TopProvidersBlock({
   config,
   linkPrefix = "",
   limit = 3,
-  title = "Our top-rated providers",
+  title = "Highest-rated GLP-1 providers",
   subtitle,
   providerIds,
   order = "ranking",
@@ -154,8 +154,8 @@ export function TopTwoPicks({ config, linkPrefix = "" }: { config: SiteConfig; l
       providerIds={[...TOP_TWO_PICK_IDS]}
       order="given"
       introMode="short"
-      title="Our top 2 picks"
-      subtitle="Our two recommended GLP-1 providers, shown with the same verified pricing and ratings as our full comparison."
+      title="Our 2 favorite GLP-1 providers"
+      subtitle="The two providers our editors recommend first, with the same checked prices and scores used in our full ranking."
     />
   );
 }
