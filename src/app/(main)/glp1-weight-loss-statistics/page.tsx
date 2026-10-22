@@ -247,7 +247,7 @@ export default async function StatisticsPage() {
           </div>
         </section>
 
-        <TopTwoPicks config={config} linkPrefix="/" />
+        <TopTwoPicks config={config} linkPrefix="" />
 
         {/* Weight Loss Results */}
         <section className="mb-10">

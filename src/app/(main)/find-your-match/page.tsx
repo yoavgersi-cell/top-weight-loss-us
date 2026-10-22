@@ -254,9 +254,9 @@ export default function FindYourMatchPage() {
       <HideChrome />
       <div className={`bg-[#F7F8FA] px-5 py-10 sm:py-20 transition-all duration-[280ms] ease-out ${phaseTransitioning ? "opacity-0 scale-[0.97]" : "opacity-100 scale-100"}`}>
         <div className="mx-auto w-full max-w-[540px] text-center">
-          <h1 className="text-[28px] font-extrabold text-[#191919] leading-[1.15] sm:text-[46px]">
+          <h2 className="text-[28px] font-extrabold text-[#191919] leading-[1.15] sm:text-[46px]">
             Which GLP-1 Provider Fits You Best?
-          </h1>
+          </h2>
           <p className="mx-auto mt-3 max-w-[360px] text-[15px] font-[450] leading-[1.55] text-gray-500 sm:mt-5 sm:max-w-[460px] sm:text-[20px]">
             Answer a few short questions and get a GLP-1 provider recommendation matched to your answers.
           </p>
@@ -402,7 +402,7 @@ export default function FindYourMatchPage() {
         <div className="mx-auto max-w-[800px] px-4 overflow-hidden">
           {/* Results title */}
           <div className="mb-6 text-center sm:mb-8">
-            <h1 className="text-[26px] font-extrabold text-[#191919] sm:text-[34px]">{quiz.resultsTitle}</h1>
+            <h2 className="text-[26px] font-extrabold text-[#191919] sm:text-[34px]">{quiz.resultsTitle}</h2>
             <p className="mt-2 text-[14px] text-gray-500 sm:text-[16px]">{quiz.resultsSubtitle}</p>
           </div>
 

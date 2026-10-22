@@ -164,7 +164,7 @@ export default async function CheapestGlp1Page() {
         </p>
         <PriceIndex providers={providers} />
 
-        <TopTwoPicks config={config} linkPrefix="/" />
+        <TopTwoPicks config={config} linkPrefix="" />
 
         {/* What a year actually costs - promo math done honestly, per provider */}
         <section className="mt-12">

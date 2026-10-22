@@ -82,9 +82,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "TrimRx (Trim Rx) reviews: {prices}, month-to-month with no long-term contract and clinical support built in. Is TrimRx legit? Costs, pros and cons.",
   },
   shed: {
-    title: "Shed Reviews 2026: Legit? Pricing, Results & Guarantee",
+    title: "SHED Reviews 2026: Legit? Pricing, Results & Guarantee",
     description:
-      "Shed reviews: {prices}, health coaching on every plan and a lose-5%-or-your-money-back guarantee. Is Shed legit and worth the price? Pros and cons.",
+      "SHED reviews: {prices}, health coaching on every plan and a lose-5%-or-your-money-back guarantee. Is SHED legit and worth the price? Pros and cons.",
   },
   directmeds: {
     title: "DirectMeds Reviews 2026: Legit? Flat Pricing & Verdict",

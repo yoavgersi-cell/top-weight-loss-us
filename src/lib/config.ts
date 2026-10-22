@@ -324,7 +324,7 @@ export const latestUpdate = (updatedAt?: string) => updatedAt || CONTENT_LAST_UP
 // "Sources & methodology" block ("Checked August 2026"). Bump this only when
 // the data behind the comparisons is actually re-verified - it is a claim, not
 // a render timestamp.
-export const PROVIDER_DATA_CHECKED = "September 2026";
+export const PROVIDER_DATA_CHECKED = "October 2026";
 
 // ── Vertical ─────────────────────────────────────────────────────────────────
 // topweightloss.us covers one topic. The vertical scaffolding is kept so the

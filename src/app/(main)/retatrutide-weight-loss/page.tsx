@@ -112,7 +112,7 @@ export default async function RetatrutidePage() {
           </div>
         </div>
 
-        <TopTwoPicks config={config} linkPrefix="/" />
+        <TopTwoPicks config={config} linkPrefix="" />
 
         {/* What it is */}
         <section className="mb-12">

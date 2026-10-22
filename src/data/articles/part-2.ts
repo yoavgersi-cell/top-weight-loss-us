@@ -129,7 +129,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "How much do Zepbound and Wegovy cost per month?",
-        body: `Verified published prices:<ul><li><a href="/reviews/altrx">altRx</a>: Zepbound $1,249/month, Wegovy $1,579/month.</li><li><a href="/reviews/sprout">Sprout</a>: Wegovy $1,799/month.</li><li><a href="/reviews/ro">ro</a>: Zepbound KwikPens from $299 for the first month, then $399-449, plus a separate membership.</li></ul>Insurance rarely covers either drug. Compounded versions of the same active ingredients, prescribed by licensed telehealth providers, are much cheaper: semaglutide from a verified <strong>$49/month</strong> at <a href="/reviews/wellmedr">welludr</a> and tirzepatide from <strong>$89/month</strong>. Prices were published in August 2026. The <a href="/cheapest-glp1">cheapest verified GLP-1 comparison</a> has the full table.`,
+        body: `Verified published prices:<ul><li><a href="/reviews/altrx">altRx</a>: Zepbound $1,249/month, Wegovy $1,579/month.</li><li><a href="/reviews/sprout">Sprout</a>: Wegovy $1,799/month.</li><li><a href="/reviews/ro">ro</a>: Zepbound KwikPens from $299 for the first month, then $399-449, plus a separate membership.</li></ul>Insurance rarely covers either drug. Compounded versions of the same active ingredients, prescribed by licensed telehealth providers, are much cheaper: semaglutide from a verified <strong>$49/month</strong> at <a href="/reviews/wellmedr">welludr</a> and tirzepatide from <strong>$89/month</strong>. Prices were published in October 2026. The <a href="/cheapest-glp1">cheapest verified GLP-1 comparison</a> has the full table.`,
       },
       {
         heading: "Should you choose Zepbound or Wegovy?",
@@ -189,7 +189,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "Is Noom a good alternative to ro?",
-        body: `Only if you want a behavior-change program rather than a medication-first service. <a href="/reviews/noom">Noom</a> is built on psychology-based coaching and daily lessons, and it offers GLP-1 access through Noom Med (from $199/month). It fits people who want structure and habit-building alongside treatment. It is a poor fit if all you want is medication at the lowest price.`,
+        body: `Only if you want a behavior-change program rather than a medication-first service. Noom is built on psychology-based coaching and daily lessons, and it offers GLP-1 access through Noom Med (from $199/month). It fits people who want structure and habit-building alongside treatment. It is a poor fit if all you want is medication at the lowest price.`,
       },
       {
         heading: "Is TrimRx a good ro alternative?",
@@ -197,7 +197,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "Which ro alternative should you pick?",
-        body: `Start with the one thing you would change about ro:<table><tr><th>If you want...</th><th>Go to</th><th>Semaglutide</th></tr><tr><td>Compounded and brand-name, with BNPL</td><td><a href="/reviews/altrx">altRx</a></td><td>$89/mo</td></tr><tr><td>The lowest price</td><td><a href="/reviews/wellmedr">welludr</a></td><td>$49/mo (12-month plan)</td></tr><tr><td>No commitment</td><td><a href="/reviews/embody">embody</a></td><td>$69/mo flat</td></tr><tr><td>Video visits and a dietician</td><td><a href="/reviews/medvi">Medvi</a></td><td>$99/mo promo</td></tr><tr><td>Coaching with a results guarantee</td><td><a href="/reviews/shed">SHED</a></td><td>$199/mo</td></tr><tr><td>A behavior-change program</td><td><a href="/reviews/noom">Noom</a></td><td>Noom Med from $199/mo</td></tr><tr><td>No contract, mid-priced</td><td><a href="/reviews/trimrx">TrimRx</a></td><td>$149/mo</td></tr></table>Still undecided? The <a href="/find-your-match">matching quiz</a> gives a personal recommendation, or you can <a href="/">compare every provider</a> side by side. Prices are as listed when this was written, so check each provider's site for current pricing.`,
+        body: `Start with the one thing you would change about ro:<table><tr><th>If you want...</th><th>Go to</th><th>Semaglutide</th></tr><tr><td>Compounded and brand-name, with BNPL</td><td><a href="/reviews/altrx">altRx</a></td><td>$89/mo</td></tr><tr><td>The lowest price</td><td><a href="/reviews/wellmedr">welludr</a></td><td>$49/mo (12-month plan)</td></tr><tr><td>No commitment</td><td><a href="/reviews/embody">embody</a></td><td>$69/mo flat</td></tr><tr><td>Video visits and a dietician</td><td><a href="/reviews/medvi">Medvi</a></td><td>$99/mo promo</td></tr><tr><td>Coaching with a results guarantee</td><td><a href="/reviews/shed">SHED</a></td><td>$199/mo</td></tr><tr><td>A behavior-change program</td><td>Noom</td><td>Noom Med from $199/mo</td></tr><tr><td>No contract, mid-priced</td><td><a href="/reviews/trimrx">TrimRx</a></td><td>$149/mo</td></tr></table>Still undecided? The <a href="/find-your-match">matching quiz</a> gives a personal recommendation, or you can <a href="/">compare every provider</a> side by side. Prices are as listed when this was written, so check each provider's site for current pricing.`,
       },
     ],
   },
@@ -451,7 +451,7 @@ export const articlesPart2: Article[] = [
     sections: [
       {
         heading: "What is Noom and how is it different?",
-        body: `Noom is a weight loss platform that pairs cognitive behavioral therapy (CBT) coaching with optional GLP-1 medication. It started as a coaching-only app and later added <a href="/reviews/noom">Noom Med</a>, a medical program that gives access to <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">GLP-1 medications such as semaglutide</a>. That mix of behavioral coaching and medical treatment is what sets Noom apart from most weight loss providers.`,
+        body: `Noom is a weight loss platform that pairs cognitive behavioral therapy (CBT) coaching with optional GLP-1 medication. It started as a coaching-only app and later added Noom Med, a medical program that gives access to <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">GLP-1 medications such as semaglutide</a>. That mix of behavioral coaching and medical treatment is what sets Noom apart from most weight loss providers.`,
       },
       {
         heading: "How does the Noom program work day to day?",
@@ -463,7 +463,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "How much does Noom cost per month in 2026?",
-        body: `Noom's 2026 prices by plan:<ul><li><strong>Noom Weight</strong> (app only, no medication): $17.42/month on a 12-month plan, with psychology-based lessons, food tracking and coaching.</li><li><strong>Noom Med, compounded GLP-1</strong>: $79 for the first 3-week subscription plus 4 weeks of medication, then $199/month with medication included.</li><li><strong>Full-dose GLP-1</strong>: $129 to start, then $279/month.</li><li><strong>Telehealth for branded drugs</strong> (Ozempic, Wegovy, Zepbound): from $69/month, with the medication billed separately.</li></ul>Every compounded plan includes the medication in the monthly price. Our <a href="/articles/weight-loss-medication-cost-guide">full cost comparison</a> puts these numbers in context, and our <a href="/articles/noom-subscription-cost">Noom subscription cost guide</a> covers each plan in detail.`,
+        body: `Noom's 2026 prices by plan:<ul><li><strong>Noom Weight</strong> (app only, no medication): $17.42/month on a 12-month plan, with psychology-based lessons, food tracking and coaching.</li><li><strong>Noom Med, compounded GLP-1</strong>: $79 for the first 3-week subscription plus 4 weeks of medication, then $199/month with medication included.</li><li><strong>Full-dose GLP-1</strong>: $129 to start, then $279/month.</li><li><strong>Telehealth for branded drugs</strong> (Ozempic, Wegovy, Zepbound): from $69/month, with the medication billed separately.</li></ul>Every compounded plan includes the medication in the monthly price. Our <a href="/articles/weight-loss-medication-cost-guide">full cost comparison</a> puts these numbers in context, and our <a href="/articles/best-noom-alternatives">Noom subscription cost guide</a> covers each plan in detail.`,
       },
       {
         heading: "What is the difference between Noom Med and Noom coaching?",
@@ -531,7 +531,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "How should women choose a GLP-1 provider?",
-        body: `Choose based on your goals, your budget and how much support you want. Some women prefer a full program with coaching, such as <a href="/reviews/noom">Noom</a>; others want simple medication access from a provider like <a href="/reviews/altrx">altRx</a> or <a href="/reviews/ro">ro</a>. The <a href="/find-your-match">matching quiz</a> gives a personal recommendation, or you can <a href="/">compare all providers</a> side by side.`,
+        body: `Choose based on your goals, your budget and how much support you want. Some women prefer a full program with coaching, such as Noom; others want simple medication access from a provider like <a href="/reviews/altrx">altRx</a> or <a href="/reviews/ro">ro</a>. The <a href="/find-your-match">matching quiz</a> gives a personal recommendation, or you can <a href="/">compare all providers</a> side by side.`,
       },
     ],
   },
@@ -603,7 +603,7 @@ export const articlesPart2: Article[] = [
     sections: [
       {
         heading: "Why do people switch away from Noom?",
-        body: `People leave <a href="/reviews/noom">Noom</a> for three main reasons:<ul><li>The daily lessons take too much time.</li><li>Coaching plus medication costs too much: the app starts at $17/month, but Noom Med with medication runs from $199/month.</li><li>They want a direct path to GLP-1 treatment without the behavioral program.</li></ul>Noom is one of the best-known names in weight loss, combining psychology-based coaching and daily lessons with GLP-1 access through Noom Med. If those trade-offs bother you, the providers below take a different approach, and every one requires a licensed provider to review your case before prescribing.`,
+        body: `People leave Noom for three main reasons:<ul><li>The daily lessons take too much time.</li><li>Coaching plus medication costs too much: the app starts at $17/month, but Noom Med with medication runs from $199/month.</li><li>They want a direct path to GLP-1 treatment without the behavioral program.</li></ul>Noom is one of the best-known names in weight loss, combining psychology-based coaching and daily lessons with GLP-1 access through Noom Med. If those trade-offs bother you, the providers below take a different approach, and every one requires a licensed provider to review your case before prescribing.`,
       },
       {
         heading: "Which Noom alternative is best for medication only?",
@@ -751,7 +751,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "How much does compounded tirzepatide cost at each provider?",
-        body: `Here is the published tirzepatide price at every provider in our ranking, taken from each provider's own site rather than estimated:<table><tr><th>Provider</th><th>Compounded tirzepatide</th><th>Good to know</th></tr><tr><td><a href="/reviews/wellmedr">welludr</a></td><td><strong>$89/mo</strong></td><td>Lowest verified price; best rate on a 12-month plan</td></tr><tr><td><a href="/reviews/embody">embody</a></td><td>$119/mo (reg. $129)</td><td>No commitment, free 1-2 day shipping</td></tr><tr><td><a href="/reviews/directmeds">DirectMeds</a></td><td>$147/mo</td><td>Flat price, needle-free drops available</td></tr><tr><td><a href="/reviews/altrx">altRx</a></td><td>$149/mo</td><td>Also sells brand Zepbound ($1,249)</td></tr><tr><td><a href="/reviews/medvi">Medvi</a></td><td>$166/mo promo (reg. $299)</td><td>All-inclusive, with video visits and a dietician</td></tr><tr><td><a href="/reviews/healthrx">HealthRx</a></td><td>From $179/mo</td><td>Overnight cold-chain shipping</td></tr><tr><td><a href="/reviews/sprout">Sprout</a></td><td>$199/mo</td><td>Also sells brand Wegovy</td></tr><tr><td><a href="/reviews/trimrx">TrimRx</a></td><td>$259/mo</td><td>No contract</td></tr><tr><td><a href="/reviews/shed">SHED</a></td><td>$299/mo</td><td>Money-back results guarantee</td></tr></table>Prices were published in August 2026, so confirm current pricing on each provider's site. For the wider market, see our <a href="/">ranking of the best GLP-1 weight loss providers</a>.`,
+        body: `Here is the published tirzepatide price at every provider in our ranking, taken from each provider's own site rather than estimated:<table><tr><th>Provider</th><th>Compounded tirzepatide</th><th>Good to know</th></tr><tr><td><a href="/reviews/wellmedr">welludr</a></td><td><strong>$89/mo</strong></td><td>Lowest verified price; best rate on a 12-month plan</td></tr><tr><td><a href="/reviews/embody">embody</a></td><td>$119/mo (reg. $129)</td><td>No commitment, free 1-2 day shipping</td></tr><tr><td><a href="/reviews/directmeds">DirectMeds</a></td><td>$147/mo</td><td>Flat price, needle-free drops available</td></tr><tr><td><a href="/reviews/altrx">altRx</a></td><td>$149/mo</td><td>Also sells brand Zepbound ($1,249)</td></tr><tr><td><a href="/reviews/medvi">Medvi</a></td><td>$166/mo promo (reg. $299)</td><td>All-inclusive, with video visits and a dietician</td></tr><tr><td><a href="/reviews/healthrx">HealthRx</a></td><td>From $179/mo</td><td>Overnight cold-chain shipping</td></tr><tr><td><a href="/reviews/sprout">Sprout</a></td><td>$199/mo</td><td>Also sells brand Wegovy</td></tr><tr><td><a href="/reviews/trimrx">TrimRx</a></td><td>$259/mo</td><td>No contract</td></tr><tr><td><a href="/reviews/shed">SHED</a></td><td>$299/mo</td><td>Money-back results guarantee</td></tr></table>Prices were published in October 2026, so confirm current pricing on each provider's site. For the wider market, see our <a href="/">ranking of the best GLP-1 weight loss providers</a>.`,
       },
       {
         heading: "Is there a cheaper alternative to Mounjaro?",

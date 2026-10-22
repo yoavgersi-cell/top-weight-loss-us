@@ -16,5 +16,10 @@ export const metadata: Metadata = {
 };
 
 export default function QuizLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <h1 className="sr-only">GLP-1 Provider Match Quiz</h1>
+      {children}
+    </>
+  );
 }

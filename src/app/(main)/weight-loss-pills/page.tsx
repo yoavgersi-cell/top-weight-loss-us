@@ -461,7 +461,7 @@ export default async function WeightLossPillsPage() {
                     compounded-oral provider cards follow their own section. */}
                 {i === 1 && (
                   <div className="mt-8">
-                    <TopTwoPicks config={config} linkPrefix="/" />
+                    <TopTwoPicks config={config} linkPrefix="" />
                   </div>
                 )}
                 {i === 5 && providerCards}

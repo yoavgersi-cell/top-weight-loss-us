@@ -120,7 +120,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         </table>
       </div>
       <p className="mb-8 text-[13.5px] text-gray-500">
-        Prices as published in August 2026. Check current pricing on each provider&apos;s site before
+        Prices as published and verified on October 16, 2026. Check current pricing on each provider&apos;s site before
         you sign up. For yearly totals and a closer look at the budget options, see the{" "}
         <Link href="/cheapest-glp1" className="font-semibold text-[#0C4B75] hover:underline">
           cheapest verified GLP-1 comparison
@@ -295,13 +295,13 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
               <td className="px-4 py-3 font-medium">Semaglutide (Wegovy)</td>
               <td className="px-4 py-3">~15% of body weight</td>
               <td className="px-4 py-3">68 weeks (STEP trials)</td>
-              <td className="hidden sm:table-cell px-4 py-3">From $199/month</td>
+              <td className="hidden sm:table-cell px-4 py-3">From $49/month</td>
             </tr>
             <tr className="bg-gray-50/50">
               <td className="px-4 py-3 font-medium">Tirzepatide (Zepbound)</td>
-              <td className="px-4 py-3">Up to 22.5% of body weight</td>
+              <td className="px-4 py-3">Up to 20.9% average (22.5% on treatment)</td>
               <td className="px-4 py-3">72 weeks (SURMOUNT trials)</td>
-              <td className="hidden sm:table-cell px-4 py-3">From $300/month</td>
+              <td className="hidden sm:table-cell px-4 py-3">From $89/month</td>
             </tr>
             <tr>
               <td className="px-4 py-3 font-medium">Liraglutide (Saxenda)</td>
@@ -315,7 +315,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <p className="mb-4 text-[13px] text-gray-400">
         Sources: published results of the STEP (semaglutide), SURMOUNT (tirzepatide) and SCALE (liraglutide)
         clinical trials. Individual results vary. Compounded prices reflect typical telehealth provider
-        rates as of August 2026.
+        rates as of October 2026.
       </p>
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">
@@ -357,7 +357,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <p className="mb-3">
         Without insurance, brand-name GLP-1 medications cost $900-$1,400 a month at retail. Licensed
         telehealth providers offer compounded semaglutide and tirzepatide for much less, typically
-        $199-$500 a month with physician consultations, medication and home delivery included. Our{" "}
+        $49-$299 a month with physician consultations, medication and home delivery included. Our{" "}
         <Link href="/articles/weight-loss-medication-cost-guide" className="font-semibold text-[#0C4B75] hover:underline">
           GLP-1 cost guide
         </Link>{" "}breaks the numbers down.

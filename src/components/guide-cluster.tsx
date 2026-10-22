@@ -105,7 +105,7 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
 
 export function GuideCluster({
   currentSlug,
-  prefix = "/",
+  prefix = "",
   className = "",
 }: {
   /** Slug of the page rendering the block - excluded from the list. */

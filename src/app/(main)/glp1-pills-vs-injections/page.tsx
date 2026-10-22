@@ -415,7 +415,7 @@ export default async function Glp1PillsVsInjectionsPage() {
                     reader has just seen the prices those cards carry. */}
                 {i === 4 && (
                   <div className="mt-8">
-                    <TopTwoPicks config={config} linkPrefix="/" />
+                    <TopTwoPicks config={config} linkPrefix="" />
                   </div>
                 )}
               </div>

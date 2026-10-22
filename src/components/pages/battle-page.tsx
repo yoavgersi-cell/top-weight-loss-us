@@ -1,4 +1,5 @@
 import { pageReviewSchema } from "@/data/reviewers";
+import { fixBrandCase } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
@@ -127,13 +128,11 @@ const BATTLE_COST_MATH: Record<
   // provider1 = embody, provider2 = Sprout
   "embody-vs-sprout": {
     rows: [
-      ["Month 1, semaglutide", "$69", "$149, with the $200 discount applied"],
-      ["Six months, total", "$414", "$694"],
-      ["Full year, total", "$828", "$1,588"],
+      ["Semaglutide per month", "$69 (reg. $79)", "$149"],
       ["Tirzepatide per month", "$119 (reg. $129)", "$199"],
-      ["Fine print", "$69 promo price (reg. $79)", "Starts at $149; $200 off the first month"],
+      ["Fine print", "$69 promo price (reg. $79)", "Starts at $149; first-month offer advertised, check terms on Sprout's site"],
     ],
-    note: "Semaglutide at published prices. embody: $69/mo promo (regular $79), month to month. Sprout: from $149/mo, with its standing $200 first-month discount included in the totals. Check Sprout's site for its current plan terms.",
+    note: "Semaglutide at published prices. embody: $69/mo promo (regular $79), month to month. Sprout: from $149/mo. Sprout also advertises $200 off the first month, which is more than its $149 starting price, so we do not compute six-month or yearly totals for it. Check Sprout's site for its current plan terms.",
   },
 };
 
@@ -269,6 +268,7 @@ function titleCaseMatchup(label: string): string {
   return label
     .split(/\s+vs\s+/i)
     .map((side) => (side ? side.charAt(0).toUpperCase() + side.slice(1) : side))
+    .map(fixBrandCase)
     .join(" vs ");
 }
 
@@ -277,7 +277,7 @@ function titleCaseMatchup(label: string): string {
 // tail verbatim while never starting lowercase - matching the uniform titles.
 function titleCaseOverrideTitle(title: string): string {
   const idx = title.indexOf(":");
-  if (idx === -1) return title.charAt(0).toUpperCase() + title.slice(1);
+  if (idx === -1) return fixBrandCase(title.charAt(0).toUpperCase() + title.slice(1));
   return `${titleCaseMatchup(title.slice(0, idx))}${title.slice(idx)}`;
 }
 
@@ -449,6 +449,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       description: landing.seoDescription,
       url: canonicalUrl(ctx, `/${landing.slug}`),
       dateModified: landing.updatedAt || CONTENT_LAST_UPDATED,
+      ...pageReviewSchema(`${ctx.prefix}/${landing.slug}`),
       publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
     };
 
@@ -495,6 +496,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           cardIntroMode={focus ? "short" : "full"}
           priceNotes={focus?.priceNotes}
           onlyProviderIds={focus ? focus.providerIds : undefined}
+          byline={<MedicalReviewBar path={`${ctx.prefix}/${landing.slug}`} className="max-w-[760px]" />}
           heroOverrides={{
             h1: landing.h1,
             h2: landing.h2,

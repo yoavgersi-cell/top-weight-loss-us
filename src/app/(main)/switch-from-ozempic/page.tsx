@@ -204,7 +204,7 @@ export default async function SwitchFromOzempicPage() {
           </p>
         </section>
 
-        <TopTwoPicks config={config} linkPrefix="/" />
+        <TopTwoPicks config={config} linkPrefix="" />
 
         {/* How the switch works */}
         <section className="mb-12">

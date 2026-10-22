@@ -146,7 +146,7 @@ export default async function OzempicAlternativesPage() {
           </div>
         </div>
 
-        <TopTwoPicks config={config} linkPrefix="/" />
+        <TopTwoPicks config={config} linkPrefix="" />
 
         {/* Brand → alternative table */}
         <section className="mb-12">
