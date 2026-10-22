@@ -247,7 +247,7 @@ export default function FindYourMatchPage() {
   if (phase === "welcome") {
     const trustIcons = [Clock, Shield, Check];
     const badgeIcons = [Lock, ShieldCheck, Timer];
-    const badgeLabels = ["Personalized Match", "Trusted Providers", "Takes 1 Minute"];
+    const badgeLabels = ["Matched to You", "Vetted Providers", "About 1 Minute"];
 
     return (
       <>
@@ -255,10 +255,10 @@ export default function FindYourMatchPage() {
       <div className={`bg-[#F7F8FA] px-5 py-10 sm:py-20 transition-all duration-[280ms] ease-out ${phaseTransitioning ? "opacity-0 scale-[0.97]" : "opacity-100 scale-100"}`}>
         <div className="mx-auto w-full max-w-[540px] text-center">
           <h1 className="text-[28px] font-extrabold text-[#191919] leading-[1.15] sm:text-[46px]">
-            Find Your Best Weight Loss Provider
+            Which GLP-1 Provider Fits You Best?
           </h1>
           <p className="mx-auto mt-3 max-w-[360px] text-[15px] font-[450] leading-[1.55] text-gray-500 sm:mt-5 sm:max-w-[460px] sm:text-[20px]">
-            Answer a few questions to receive your personalized provider recommendation.
+            Answer a few short questions and get a GLP-1 provider recommendation matched to your answers.
           </p>
 
           <button
@@ -273,7 +273,7 @@ export default function FindYourMatchPage() {
             }}
             className="mt-8 inline-flex h-[46px] w-full max-w-[280px] items-center justify-center rounded-xl bg-[#0C4B75] text-[15px] font-bold text-white shadow-lg transition-all hover:bg-[#093d61] hover:shadow-xl sm:mt-10 sm:h-[50px] sm:w-auto sm:px-14 sm:text-[18px]"
           >
-            {quiz.welcomeCta || "Find My Match"}
+            {quiz.welcomeCta || "Start My Match"}
           </button>
 
           {/* Trust badges */}
@@ -292,7 +292,7 @@ export default function FindYourMatchPage() {
           {/* Provider logos as social proof */}
           <div className="mt-14 sm:mt-20">
             <p className="mb-4 text-[13px] font-medium text-gray-400 sm:text-[14px]">
-              Comparing trusted providers including
+              Providers we compare include
             </p>
             <div className="flex items-center justify-center gap-5 sm:gap-7">
               {(config.ranking.providerOrder
@@ -359,7 +359,7 @@ export default function FindYourMatchPage() {
       <><HideChrome /><div className={`flex min-h-[60vh] flex-col items-center pt-20 sm:pt-28 px-6 bg-white transition-all duration-[280ms] ease-out ${phaseTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}>
         <div className="flex flex-col items-center">
           <h2 className="mb-6 text-[20px] font-bold text-[#191919] sm:text-[24px]">
-            {ls?.headline ?? "Finding your best match"}
+            {ls?.headline ?? "Matching you with a provider"}
           </h2>
 
           <div className="relative mb-6 flex h-[44px] w-[160px] items-center justify-center">
@@ -374,7 +374,7 @@ export default function FindYourMatchPage() {
           </div>
 
           <p className="mb-1.5 text-[14px] font-medium text-gray-500 sm:text-[15px]">
-            Comparing top weight loss providers...
+            Checking GLP-1 providers against your answers...
           </p>
           <p
             key={`text-${loadingIdx}`}
@@ -384,8 +384,8 @@ export default function FindYourMatchPage() {
           </p>
 
           <div className="mt-12 flex flex-col items-center gap-1">
-            <p className="text-[22px] font-extrabold text-[#191919] sm:text-[26px]">18,400+</p>
-            <p className="text-[12px] text-gray-400 sm:text-[13px]">people found their weight loss program with us</p>
+            <p className="text-[22px] font-extrabold text-[#191919] sm:text-[26px]">Free</p>
+            <p className="text-[12px] text-gray-400 sm:text-[13px]">no email or sign-up needed to see your matches</p>
           </div>
         </div>
       </div></>
@@ -413,7 +413,7 @@ export default function FindYourMatchPage() {
                 {featured.matchPct}% Match
               </span>
               <span className="rounded-full bg-amber-50 px-3 py-1 text-[11px] font-semibold text-amber-700 sm:text-[12px]">
-                Top Recommendation
+                Best Match
               </span>
             </div>
             <div className="rounded-xl shadow-md">
@@ -495,7 +495,7 @@ export default function FindYourMatchPage() {
             />
           </div>
           <span className="shrink-0 text-[11px] font-medium text-gray-400 sm:text-[12px]">
-            Question {step + 1} of {totalSteps}
+            Step {step + 1} of {totalSteps}
           </span>
         </div>
 
@@ -562,7 +562,7 @@ export default function FindYourMatchPage() {
                   disabled={!answers[currentQ?.id || ""]}
                   className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] py-3.5 text-[16px] font-bold text-white transition-all hover:bg-[#093d61] disabled:opacity-40 sm:mt-5 sm:py-4 sm:text-[18px]"
                 >
-                  Get My Results
+                  See My Matches
                   <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
                 </button>
               </>
@@ -601,7 +601,7 @@ function StatePickerInline({
         <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" strokeWidth={1.5} />
         <input
           type="text"
-          placeholder={selected ? selectedLabel : "Search your state..."}
+          placeholder={selected ? selectedLabel : "Type your state..."}
           value={search}
           onChange={(e) => { setSearch(e.target.value); setIsOpen(true); }}
           onFocus={() => setIsOpen(true)}
@@ -632,7 +632,7 @@ function StatePickerInline({
           );
         })}
         {filtered.length === 0 && (
-          <p className="px-4 py-6 text-center text-[13px] text-gray-400">No states found</p>
+          <p className="px-4 py-6 text-center text-[13px] text-gray-400">No matching state</p>
         )}
       </div>
       )}

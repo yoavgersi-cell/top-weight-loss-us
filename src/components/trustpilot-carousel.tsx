@@ -92,7 +92,7 @@ function ReviewCard({ r, provider }: { r: TrustpilotReview; provider?: ReviewCar
         <p className="mt-3 flex items-center justify-between gap-2 border-t border-gray-100 pt-2.5 text-[11.5px]">
           <span className="font-bold text-[#191919]">{provider.name}</span>
           <a href={provider.href} className="font-semibold text-[#0C4B75] hover:underline">
-            All {provider.total} captured
+            See all {provider.total}
           </a>
         </p>
       )}
@@ -234,7 +234,7 @@ export function MixedTrustpilotCarousel({ items, title, subtitle }: { items: Mix
       <ReviewPager
         cards={items.map((it, i) => ({ key: `${it.provider.name}-${i}`, node: <ReviewCard r={it.review} provider={it.provider} /> }))}
       />
-      <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Reviews are individual experiences quoted verbatim from public Trustpilot profiles, names shortened; any weight-loss result mentioned is one person&rsquo;s and is not typical - results vary. Trustpilot is a trademark of Trustpilot A/S and is not affiliated with this site.</p>
+      <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Each review is quoted word for word from a public Trustpilot page, with the reviewer&rsquo;s name shortened. It reflects one customer&rsquo;s experience: a weight-loss result someone mentions is personal, not typical, and your results may differ. Trustpilot is a trademark of Trustpilot A/S, which has no affiliation with Top Weight Loss.</p>
     </div>
   );
 }
@@ -275,7 +275,7 @@ export function TrustpilotCarousel({
             </div>
           )}
           <h3 className="text-[16px] font-bold text-[#191919]">
-            {providerName} <span className="font-medium text-gray-400">reviews on</span>
+            {providerName} <span className="font-medium text-gray-400">customer reviews on</span>
           </h3>
           <TrustpilotWordmark />
         </div>
@@ -293,7 +293,7 @@ export function TrustpilotCarousel({
 
       <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
         <p className="text-[12.5px] text-gray-500">
-          All {total} reviews we captured, including every {lowest}-star one.
+          Showing all {total} reviews we saved, every {lowest}-star review included.
         </p>
         <div className="flex items-center gap-1.5" role="group" aria-label="Sort reviews">
           <span className="text-[11.5px] font-semibold uppercase tracking-wide text-gray-400">Sort</span>
@@ -316,7 +316,7 @@ export function TrustpilotCarousel({
       </div>
 
       <ReviewPager key={sort} cards={sorted.map((r, i) => ({ key: `${sort}-${i}`, node: <ReviewCard r={r} /> }))} />
-      <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Reviews are individual experiences quoted verbatim from public Trustpilot profiles, names shortened; any weight-loss result mentioned is one person&rsquo;s and is not typical - results vary. Trustpilot is a trademark of Trustpilot A/S and is not affiliated with this site.</p>
+      <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Each review is quoted word for word from a public Trustpilot page, with the reviewer&rsquo;s name shortened. It reflects one customer&rsquo;s experience: a weight-loss result someone mentions is personal, not typical, and your results may differ. Trustpilot is a trademark of Trustpilot A/S, which has no affiliation with Top Weight Loss.</p>
     </div>
   );
 }

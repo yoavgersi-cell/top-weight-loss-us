@@ -35,9 +35,9 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
 > = {
   altrx: {
     themes:
-      "Two first-order threads tell the same story: an asynchronous sign-up with no video visit, approval within hours to a day, a nurse practitioner's message spelling out the approved doses, and cooler-shipped vials on UPS Next Day Air - a 10/10 from one poster and 'probably the best deal I've seen' from the other, who paid $780 for six months through AfterPay. The honest counterweights: one customer found the compounded additive blend (glycine/B12) caused dehydration and arthritis-type pains that faded as levels dropped, a fresh signup was still waiting on a script a day in, one cooler arrived with its ice packs melted, and the second poster notes that the main concern she sees from others is protecting your payment method.",
+      "Both r/tirzdeals threads describe the same altRx process: an asynchronous sign-up with no video visit, approval in about 4 hours to one day, a nurse practitioner's portal message listing the approved doses, and vials shipped in a cooler by UPS Next Day Air. One poster rated altRx 10/10; the other, who paid $780 for six months through AfterPay, called it 'probably the best deal I've seen.' The downsides come from the same threads: one customer had dehydration and arthritis-type pain from the compounded glycine/B12 blend that faded as levels dropped, a new signup still had no prescription a day after ordering, one cooler arrived with melted ice packs, and the six-month poster says the concern she sees most from others is protecting your payment method.",
     intro:
-      "AltRX comes up in GLP-1 forums mostly around its first-month tirzepatide offers and the pharmacies that fill them - here's how real users describe the sign-up, the approval, the shipping and the first shots, praise and caveats alike.",
+      "What do altRx customers say on Reddit? Most altRx discussion in GLP-1 forums centers on its first-month tirzepatide offers and the compounding pharmacies that fill them. Below, real users describe sign-up, approval, shipping and their first injections, including the problems they ran into.",
     threads: [
       // Operator-supplied screenshots, Oct 22, 2026 (r/tirzdeals, "3mo ago" as
       // displayed). Post and replies transcribed verbatim; the post's upvote
@@ -45,7 +45,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       {
         subreddit: "r/tirzdeals",
         author: "nurse-emc4527",
-        topic: "First order / approval / shipping",
+        topic: "Sign-up, approval and delivery",
         age: "3mo ago",
         title: "AltRx Experience :)",
         body: [
@@ -72,7 +72,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Any_Style_4939",
-        topic: "Fulfillment / pricing",
+        topic: "Delivery speed and first-month price",
         age: "3mo ago",
         title: "MY ALTRX EXPERIENCE!!",
         body: [
@@ -99,19 +99,19 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The recurring theme is fast, careful fulfillment: sign-up to prescription in hours or by the next day, a clinician's message laying out the approved doses, cold-chain shipping (a cooler with ice packs on UPS Next Day Air) and strong first impressions - a 10/10 from one poster, 'probably the best deal I've seen' from another who chose a six-month plan on AfterPay. The honest caveats: the compounded additive blend didn't sit well with one user (dehydration, joint pains that eased as levels dropped), intake timing can vary (a new signup was still waiting on a script a day in), one cooler's ice packs had melted by delivery, and the forum's recurring worry is protecting your payment method. Real, checkable experiences on both sides.",
+      "Reddit users mostly credit altRx with fast, careful fulfillment. Prescriptions arrived within hours or by the next day, a clinician's message spelled out the approved doses, and medication came cold-packed in a cooler with ice packs via UPS Next Day Air. One poster gave altRx a 10/10, and another, on a six-month AfterPay plan, called it 'probably the best deal I've seen.' The caveats are equally specific. One user reacted badly to the compounded additive blend (dehydration and joint pain that eased as levels dropped). One new signup was still waiting on a prescription a day after ordering. One cooler arrived with its ice packs melted. And protecting your payment method is the worry commenters raise most often. These are real, checkable accounts on both sides.",
   },
   embody: {
     themes:
-      "Two things repeat across the threads above: speed - same-day approval, a vial within a week, a switcher whose order was approved the next day and shipped two days later at their previous dose - and a self-serve model users describe as 'autopilot' that keeps the price low but means little human contact. The gripes are specific: a refill flow one user couldn't find in the dashboard, support replies another called AI-generated, and the wait between approval and the first shipment. The $129 figure users quote matches embody's regular tirzepatide price.",
+      "Speed is the first pattern in these embody threads: same-day approval, a vial within one week, and a switcher whose order was approved the next day, shipped two days later and matched their previous dose. The second pattern is a self-serve model one user called 'autopilot,' which keeps the price low but leaves little human contact. The complaints are concrete: one user could not find the refill option in the dashboard, another said support replies read as AI-generated, and some waited between approval and the first shipment. The $129 price users cite is embody's regular tirzepatide price.",
     intro:
-      "Beyond Trustpilot, recent Reddit comments about embody paint a consistent - and usefully unvarnished - picture. These are excerpts from real public comments:",
+      "What do embody users say on Reddit? Recent Reddit comments back up embody's Trustpilot record and add blunt detail on approval speed, dosing and support. Every excerpt below comes from a real public comment:",
     threads: [
       {
         subreddit: "r/compoundedtirzepatide",
         url: "https://www.reddit.com/r/compoundedtirzepatide/comments/1utd6g7/has_anyone_tried_em_ie_embody_the_price_is_good/",
         author: "thegoldstandard55",
-        topic: "Dose changes / clinician access",
+        topic: "Dose increases and clinician contact",
         age: "13d ago",
         upvotes: 4,
         body: [
@@ -123,7 +123,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
         subreddit: "r/compoundedtirzepatide",
         url: "https://www.reddit.com/r/compoundedtirzepatide/comments/1utd6g7/has_anyone_tried_em_ie_embody_the_price_is_good/",
         author: "MsButterflyStarr",
-        topic: "Switching providers / fulfillment",
+        topic: "Switching to embody and delivery",
         age: "6d ago",
         upvotes: 2,
         body: [
@@ -142,7 +142,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Comfortable_Whole343",
-        topic: "Pricing / refills / support",
+        topic: "Price, refills and support",
         age: "2mo ago",
         upvotes: 5,
         body: [
@@ -169,7 +169,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "SaltAvocado9500",
-        topic: "Clinical follow-up",
+        topic: "Follow-up after the first dose",
         body: [
           "“Nurse called me today asking have I taken the shot and if yes have I experienced any symptoms.”",
           "Ordered on 8/6, medication delivered 8/14 - with a clinical follow-up call after the first dose.",
@@ -177,7 +177,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Next_Sector_7726",
-        topic: "Fulfillment",
+        topic: "Delivery time",
         age: "6d ago",
         upvotes: 1,
         body: [
@@ -186,14 +186,14 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Comfortable_Whole343",
-        topic: "Pricing / dose changes",
+        topic: "Flat price across doses",
         body: [
           "“$129 for all levels of tri and no contract - I already moved up my dosages with no issues or kick back.”",
         ],
       },
       {
         author: "LondyRocks",
-        topic: "Fulfillment / pricing",
+        topic: "Shipping wait and price",
         body: [
           "“Arrived the next day from the pharmacy. Packaged nicely with ice packs.”",
           "Three vials at $129 each; the honest catch: about two weeks between approval and the medication actually shipping - transit itself was next-day.",
@@ -201,7 +201,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "TheseFrosting6548",
-        topic: "Fulfillment / billing",
+        topic: "Pharmacy delay and billing",
         body: [
           "Order sat at the pharmacy for a couple of days - then, after a comment on embody's Facebook post: “they contacted me right away... rushed my order. I had it next day.”",
           "“They just billed for the 2nd month - the amount is correct.” Gripes: the pharmacy premixed an anti-nausea ingredient without asking, and the 50-unit doses were larger than expected.",
@@ -209,23 +209,23 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Maybee77",
-        topic: "Overall experience",
+        topic: "Overall verdict",
         body: ["“No complaints.”"],
       },
     ],
     takeaway:
-      "The community picture matches the Trustpilot one: delivery is fast once medication ships, dose changes go through without pushback, and the model is deliberately self-serve - 'everything is on autopilot, that's how they keep costs low', as one user put it. The honest watch-outs are the flip side of that: little human contact, a refill process one user had to ask Reddit about, and pipeline time between approval and shipment - if timing matters, order before your current supply runs low. The $129 figures Reddit users mention line up with embody's regular tirzepatide price ($119 promotional / $129 regular).",
+      "Reddit and Trustpilot agree on embody: medication arrives quickly once it ships, dose increases go through without pushback, and the service is self-serve by design. As one user put it, 'everything is on autopilot, that's how they keep costs low'. The trade-offs follow from that model: little human contact, a refill process one user had to ask Reddit about, and a gap between approval and shipment. If timing matters, reorder well before your current supply runs out. The $129 figure Reddit users quote matches embody's regular tirzepatide price ($119 promotional / $129 regular).",
   },
   medvi: {
     themes:
-      "The posts above are full-year stories, not first impressions: steady results (just under 15% body weight, 40 pounds), dose adjustments when progress stalled, and support that answered. The caveat users raise themselves is the ongoing monthly cost.",
+      "These Medvi threads are full-year accounts rather than first impressions: steady results (just under 15% of body weight in one case, 40 pounds in another), a dose adjustment when progress stalled, and support that responded. The drawback the posters name themselves is the ongoing monthly cost.",
     intro:
-      "Beyond its 14,987-review Trustpilot record, the most-upvoted recent Reddit threads about Medvi are full-year write-ups rather than first-week impressions. Excerpts from the real posts:",
+      "What do Medvi patients say on Reddit after a full year? Alongside Medvi's 14,987 Trustpilot reviews, its most-upvoted recent Reddit threads are year-long write-ups, not first-week reactions. Excerpts from the actual posts:",
     threads: [
       {
         subreddit: "r/telehealth",
         author: "marlsygarlsy",
-        topic: "Results / clinician access / cost",
+        topic: "Results, provider messaging and cost",
         age: "6mo ago",
         title: "Medvi GLP-1 telehealth experience breakdown",
         upvotes: 55,
@@ -246,7 +246,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       {
         subreddit: "r/productreview",
         author: "External-Neck-7278",
-        topic: "Results over a full year",
+        topic: "One-year results",
         age: "6mo ago",
         title: "My 2026 MEDVI review after using it for a full year",
         upvotes: 55,
@@ -269,17 +269,17 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The Reddit picture matches the Trustpilot one from a different angle: the ongoing monthly cost is the caveat users themselves raise - though Medvi's current $99/month promotion (regularly $199) blunts it considerably - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt “sustainable, which is something I had not experienced before.”",
+      "Reddit tells the same story about Medvi as Trustpilot, from a longer view. The caveat the posters raise is the ongoing monthly cost, which Medvi's current $99/month semaglutide promotion (regularly $199) softens considerably. In exchange, the year-long accounts describe medical oversight, dose adjustments when progress stalled, and weight loss in the 10-15% range over a year that one poster called “sustainable, which is something I had not experienced before.” Individual results vary.",
   },
   ro: {
     themes:
-      "Real results show up in the threads above - 22 to 60 pounds - and getting started draws consistent praise. The friction that keeps repeating is cost: the most upvoted commenter left over price after an otherwise great experience, and another found the cost breakdown confusing.",
+      "Weight-loss numbers run through these ro threads, from 22 to 60 pounds, and starting treatment gets consistent praise. Cost is the recurring friction: the most-upvoted commenter left ro over price despite a great experience, another found the cost breakdown confusing, and a Zepbound user reported losing 1 pound in two months and called it expensive.",
     intro:
-      "Reddit's recent Ro threads are unusually rich in real numbers - starting weights, pounds lost, and what people actually pay. Excerpts from the real public comments:",
+      "What do ro patients say on Reddit? Recent ro threads are full of concrete numbers: starting weights, pounds lost and what people actually pay. Excerpts from the real public comments:",
     threads: [
       {
         author: "Opposite_You3133",
-        topic: "Results / pricing",
+        topic: "Results and price",
         age: "5mo ago",
         upvotes: 11,
         body: [
@@ -289,7 +289,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Upstairs_Procedure33",
-        topic: "Results / brand-name via insurance",
+        topic: "Results with Wegovy through insurance",
         age: "5mo ago",
         upvotes: 1,
         body: [
@@ -298,13 +298,13 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Thick_Ad_2011",
-        topic: "Results",
+        topic: "Three-month results",
         age: "5mo ago",
         body: ["“I've been on Ro for 3 months and have lost 22 pounds! Extremely happy!”"],
       },
       {
         author: "PrestigiousRest7476",
-        topic: "Results / cost",
+        topic: "Slow start and cost",
         age: "5mo ago",
         upvotes: 1,
         body: [
@@ -313,7 +313,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "KitchenYam8596",
-        topic: "Pricing clarity",
+        topic: "Understanding the cost",
         age: "4mo ago",
         upvotes: 1,
         body: [
@@ -322,17 +322,17 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The results stories are real and substantial - 22 to 60 pounds across the positive accounts - and the service itself draws little criticism. The recurring friction is exactly what Ro's own pricing pages show: the membership-plus-medication cost structure. One highly upvoted commenter left specifically over price after a great experience, and another calls the cost breakdown \"somewhat confusing.\" If brand-name medication through insurance works for you, Ro's model shines; paying cash, the math deserves a hard look first.",
+      "ro's Reddit results are real and sizable, 22 to 60 pounds across the positive accounts, and the service itself draws little criticism. The friction is the same thing ro's own pricing pages show: a membership fee plus a separate medication cost. One highly upvoted commenter left over price after a great experience, and another called the cost breakdown \"somewhat confusing.\" ro works best for patients getting brand-name medication through insurance; if you are paying cash, run the numbers carefully first.",
   },
   wellmedr: {
     themes:
-      "Most comments above are short and positive - \"legit,\" a named pharmacy, annual plans at $88-$99/month that match the published rates, and one long-term user paying $129 month to month. The honest exception: one detailed account got fast shipping and good service but saw little progress after 8 weeks.",
+      "Most welludr comments here are short and positive: \"legit,\" a named pharmacy, annual plans at $88-$99/month in line with the published rates, and one long-term user paying $129 month to month. The exception is one detailed account of fast shipping and good service but almost no weight loss after 8 weeks.",
     intro:
-      "welludr's Reddit footprint is comment-level rather than long write-ups: short, recent verdicts, mostly from people who paid for annual plans. Excerpts from the real public comments:",
+      "What do welludr customers say on Reddit? welludr shows up in short, recent comments rather than long write-ups, mostly from people who bought annual plans. Excerpts from the real public comments:",
     threads: [
       {
         author: "GiraffeNo9896",
-        topic: "Month-to-month pricing / pharmacy",
+        topic: "Month-to-month price and pharmacy",
         age: "16d ago",
         upvotes: 1,
         body: [
@@ -342,7 +342,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Fun-Violinist-6449",
-        topic: "Pharmacy / pricing",
+        topic: "Pharmacy and annual price",
         age: "2mo ago",
         upvotes: 2,
         body: [
@@ -351,7 +351,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Ok_Rub4064",
-        topic: "Pricing",
+        topic: "Annual plan price",
         age: "11d ago",
         upvotes: 1,
         body: [
@@ -360,7 +360,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Useful-Commercial-49",
-        topic: "Switching providers / results",
+        topic: "Switching providers and slow results",
         age: "4mo ago",
         upvotes: 1,
         body: [
@@ -370,7 +370,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Fun-Violinist-6449",
-        topic: "Overall experience",
+        topic: "Two months in",
         age: "2mo ago",
         upvotes: 2,
         body: [
@@ -379,21 +379,21 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "GlippyApp",
-        topic: "Overall experience",
+        topic: "Feedback from other members",
         age: "16d ago",
         upvotes: 2,
         body: ["“We have some members using them and they like them.”"],
       },
       {
         author: "Professional_Tree843",
-        topic: "Legitimacy",
+        topic: "Is welludr legit?",
         age: "1mo ago",
         upvotes: 1,
         body: ["“They are legit”"],
       },
     ],
     takeaway:
-      "The comment-level picture is mostly positive: “legit,” a named pharmacy (one commenter says Florida, another names Logos, a 503A compounder), fast delivery, responsive service, and the prices commenters actually paid on annual plans ($88-$99/month) sit right in the range of welludr's published 12-month rates ($49/month semaglutide, $89/month tirzepatide). One long-term user reports paying $129 month to month and that it is the only charge - which is what the 12-month pricing structure implies for anyone who skips the annual plan. The honest counterweight is one detailed account of being down only 1 pound after 8 weeks on tirzepatide despite good service - a fair reminder that response to GLP-1 medication varies by person, and no provider's service quality can guarantee results.",
+      "Reddit comments on welludr are mostly positive: users call it “legit,” name the pharmacy (one says Florida, another names Logos, a 503A compounder), and describe fast delivery and responsive service. The $88-$99/month that commenters paid on annual plans lines up with welludr's published pricing ($49/month semaglutide on the 12-month plan, $89/month tirzepatide). One long-term user pays $129 month to month and says that is the only charge. The counterpoint is a detailed account of losing just 1 pound in 8 weeks on tirzepatide despite good service. Response to GLP-1 medication varies from person to person, and no provider can guarantee results.",
   },
 };
 
@@ -503,7 +503,7 @@ function ThreadCard({
             </a>
           )}
           <Link href={reviewHref} className="font-semibold text-[#0C4B75] hover:underline">
-            Full thread in review
+            All threads in our review
           </Link>
         </span>
       </div>
@@ -542,16 +542,16 @@ export function RedditThreadCarousel({
     <div className="mb-14">
       <div className="mb-2 flex items-center gap-2.5">
         <RedditMark className="h-7 w-7 shrink-0" />
-        <h2 className="text-[20px] font-bold text-[#191919]">{title ?? `What Reddit says about ${names}`}</h2>
+        <h2 className="text-[20px] font-bold text-[#191919]">{title ?? `What do Reddit users say about ${names}?`}</h2>
       </div>
       {intro ? (
         <div className="mb-5 max-w-[720px] text-[14.5px] leading-relaxed text-gray-700">{intro}</div>
       ) : (
         <p className="mb-5 max-w-[640px] text-[14.5px] leading-relaxed text-gray-700">
-          Excerpts from real public Reddit posts and comments - the strengths and the caveats, in
-          users&rsquo; own words.
+          Real public Reddit posts and comments, quoted in each user&rsquo;s own words, covering
+          what went well and what did not.
           {withData.length < providers.length &&
-            " We only show providers with verified Reddit material, so not every contender appears here."}
+            " Only providers with verified Reddit material are included, so some contenders do not appear."}
         </p>
       )}
 
@@ -567,10 +567,10 @@ export function RedditThreadCarousel({
       </div>
 
       <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">
-        Excerpts from public Reddit posts, lightly trimmed; vote and comment counts shown as
-        captured at the time of review. Posts are individual experiences, and any weight-loss result
-        mentioned is one person&rsquo;s and is not typical - results vary. Reddit is a trademark of
-        Reddit, Inc. and is not affiliated with this site.
+        Excerpts come from public Reddit posts and are trimmed for length; vote and comment counts
+        are as they stood when we reviewed each thread. Every post is one person&rsquo;s experience,
+        so any weight-loss result mentioned is individual, not typical, and yours may differ. Reddit
+        is a trademark of Reddit, Inc., which has no affiliation with Top Weight Loss.
       </p>
     </div>
   );

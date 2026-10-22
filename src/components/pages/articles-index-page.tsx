@@ -14,11 +14,8 @@ function verticalName(id: string): string {
 export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata> {
   const url = canonicalUrl(ctx, "/articles");
   const vName = verticalName(ctx.vertical);
-  const title = `${vName} Guides & Articles (2026)`;
-  const description =
-    ctx.vertical === "weight-loss"
-      ? `Evidence-based weight loss guides for 2026 - GLP-1 treatment options, verified costs, what to expect, and how to choose the right online provider.`
-      : `Evidence-based ${verticalNameInProse(vName)} guides for 2026 - treatment options, verified costs, what to expect, and how to choose the right online provider.`;
+  const title = `${vName} Articles & GLP-1 Guides (2026)`;
+  const description = `Research-backed 2026 guides to GLP-1 weight loss: semaglutide and tirzepatide options, checked monthly costs, side effects and picking an online provider.`;
   return {
     title,
     description,
@@ -46,19 +43,15 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
   const articles = config.articles ?? [];
   const vName = verticalName(ctx.vertical);
 
-  // Standalone in-depth guide pages (custom weight-loss landing pages, not CMS
-  // articles). These only exist for weight-loss, so other verticals show none.
-  const guides =
-    ctx.vertical === "weight-loss"
-      ? [
-          { title: "Weight Loss Pills", href: "/weight-loss-pills", category: "Guide", description: "Oral GLP-1s and FDA-approved prescription pills - and how they compare to injections." },
-          { title: "How to Choose a GLP-1 Provider", href: "/how-to-choose-a-glp1-provider", category: "Guide", description: "12 things to check before you sign up, and how to tell which providers have real doctors involved." },
-          { title: "GLP-1 Pills vs Injections", href: "/glp1-pills-vs-injections", category: "Guide", description: "Results, cost, and convenience compared - which is right for you?" },
-          { title: "Ozempic, Wegovy & Mounjaro Alternatives", href: "/ozempic-alternatives", category: "Guide", description: "The same active ingredients as the big brands - as affordable compounded options through telehealth." },
-          { title: "Retatrutide for Weight Loss", href: "/retatrutide-weight-loss", category: "Science", description: "The triple-agonist drug that hit ~24% in trials - and whether you can get it yet." },
-          { title: "GLP-1 Weight Loss Statistics", href: "/glp1-weight-loss-statistics", category: "Science", description: "Key clinical trial data on how much weight GLP-1 medications produce." },
-        ]
-      : [];
+  // Standalone in-depth guide pages (custom landing pages, not CMS articles).
+  const guides = [
+    { title: "Weight Loss Pills", href: "/weight-loss-pills", category: "Guide", description: "Prescription weight loss pills, including oral GLP-1s and FDA-approved tablets, measured against weekly injections." },
+    { title: "How to Choose a GLP-1 Provider", href: "/how-to-choose-a-glp1-provider", category: "Guide", description: "A 12-point checklist to run before signing up, including how to spot providers with genuine physician oversight." },
+    { title: "GLP-1 Pills vs Injections", href: "/glp1-pills-vs-injections", category: "Guide", description: "Tablets or weekly shots? A side-by-side look at results, price and day-to-day convenience." },
+    { title: "Ozempic, Wegovy & Mounjaro Alternatives", href: "/ozempic-alternatives", category: "Guide", description: "Lower-cost compounded versions of the same active ingredients, prescribed through telehealth providers." },
+    { title: "Retatrutide for Weight Loss", href: "/retatrutide-weight-loss", category: "Science", description: "This triple-agonist reached about 24% weight loss in trials. Here is where access stands today." },
+    { title: "GLP-1 Weight Loss Statistics", href: "/glp1-weight-loss-statistics", category: "Science", description: "The headline clinical trial numbers for how much weight people lose on GLP-1 medications." },
+  ];
 
   // Head-to-head comparison (battle) pages, with both providers resolved
   const comparisons = (config.battles ?? [])
@@ -75,8 +68,8 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
     return (
       <div className="min-h-screen bg-gray-50">
         <div className="mx-auto max-w-[1100px] px-4 py-12 sm:px-6">
-          <h1 className="text-[28px] font-bold text-[#191919]">Articles</h1>
-          <p className="mt-4 text-gray-500">No articles yet. Check back soon.</p>
+          <h1 className="text-[28px] font-bold text-[#191919]">Weight Loss Articles</h1>
+          <p className="mt-4 text-gray-500">New articles are on the way. Please check back shortly.</p>
         </div>
       </div>
     );
@@ -86,8 +79,8 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     ...pageReviewSchema(`${ctx.prefix}/articles`),
-    name: `${vName} Articles - Research, Guides & Expert Insights`,
-    description: `Evidence-based ${verticalNameInProse(vName)} guides and research - treatment options, what to expect, and choosing the right online provider.`,
+    name: `${vName} Articles, GLP-1 Guides & Provider Comparisons`,
+    description: `Research-backed ${verticalNameInProse(vName)} articles covering GLP-1 medications, real costs, what treatment involves and how to pick an online provider.`,
     url: canonicalUrl(ctx, "/articles"),
     mainEntity: {
       "@type": "ItemList",
@@ -122,11 +115,11 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
         {/* Page header */}
         <div className="mb-10">
           <h1 className="text-[28px] font-bold text-[#191919] sm:text-[36px]">
-            Articles
+            {vName} Articles &amp; Guides
           </h1>
           <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
-            Evidence-based {verticalNameInProse(vName)} guides - treatment options, what
-            to expect, and making informed decisions about your health.
+            Clear, research-backed answers about {verticalNameInProse(vName)} medication: which
+            treatments exist, what they cost, what to expect and how to choose with confidence.
           </p>
           <MedicalReviewBar path={`${ctx.prefix}/articles`} className="mt-4 max-w-[760px]" compact />
         </div>
@@ -175,7 +168,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                 {articles[0].description}
               </p>
               <span className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#0C4B75]">
-                Read article
+                Read more
                 <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} />
               </span>
             </div>
@@ -228,7 +221,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                   {article.description}
                 </p>
                 <span className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#0C4B75]">
-                  Read article
+                  Read more
                   <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} />
                 </span>
               </div>
@@ -241,10 +234,10 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
           <div className="mt-14">
             <div className="mb-8">
               <h2 className="text-[22px] font-bold text-[#191919] sm:text-[26px]">
-                In-Depth Guides
+                GLP-1 Deep Dives
               </h2>
               <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
-                Deeper explainers on medications and options - with side-by-side data.
+                Longer explainers on specific medications and choices, built around comparison tables.
               </p>
             </div>
 
@@ -267,7 +260,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                     {g.description}
                   </p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#0C4B75]">
-                    Read guide
+                    Open guide
                     <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} />
                   </span>
                 </Link>
@@ -281,11 +274,11 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
           <div id="comparisons" className="mt-14 scroll-mt-24">
             <div className="mb-8">
               <h2 className="text-[22px] font-bold text-[#191919] sm:text-[26px]">
-                Head-to-Head Comparisons
+                Provider vs Provider Comparisons
               </h2>
               <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
-                Can&apos;t decide between two providers? See how they stack up
-                side by side on pricing, medications, and support - and which one we&apos;d pick.
+                Torn between two providers? Each matchup compares price, medications and
+                support, then names the one our editors would choose.
               </p>
             </div>
 
@@ -331,15 +324,15 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                     {winner ? (
                       <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-bold text-emerald-700">
                         <Trophy className="h-3 w-3" strokeWidth={2.5} />
-                        Winner: {winner.name}
+                        Our pick: {winner.name}
                       </span>
                     ) : (
                       <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[11px] font-semibold text-gray-500">
-                        Close call
+                        Too close to call
                       </span>
                     )}
                     <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#0C4B75]">
-                      Compare
+                      See comparison
                       <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} />
                     </span>
                   </div>

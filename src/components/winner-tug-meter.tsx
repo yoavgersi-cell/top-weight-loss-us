@@ -64,7 +64,7 @@ export function WinnerTugMeter({
             transition: "background 90ms linear",
           }}
           role="img"
-          aria-label={`${winnerName} wins with ${advantage}% of the head-to-head score`}
+          aria-label={`${winnerName} takes ${advantage}% of the head-to-head score`}
         >
           <div className="absolute inset-[11px] rounded-full bg-white" />
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
@@ -80,7 +80,7 @@ export function WinnerTugMeter({
         {/* Verdict + CTA */}
         <div className="min-w-0 flex-1">
           <p className="text-[11.5px] font-bold uppercase tracking-[0.09em] text-gray-400">
-            Who we&rsquo;d pick
+            Our pick
           </p>
 
           <div
@@ -99,7 +99,7 @@ export function WinnerTugMeter({
               revealed ? "opacity-100" : "opacity-0"
             }`}
           >
-            After comparing both, we&rsquo;d go with {winnerName} - it came out ahead of {loserName} on most of what matters.
+            {winnerName} beat {loserName} on most of the categories we compared, so {winnerName} is the one we recommend.
           </p>
 
           <div
@@ -133,7 +133,7 @@ export function WinnerTugMeter({
               Trustpilot reviews
             </span>
             <span className="text-gray-400">·</span>
-            <span>Our own research</span>
+            <span>Top Weight Loss research</span>
           </div>
         </div>
       </div>

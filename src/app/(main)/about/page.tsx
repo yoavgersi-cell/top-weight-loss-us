@@ -23,14 +23,14 @@ export const revalidate = 60;
 const CANONICAL = "https://www.topweightloss.us/about";
 
 export const metadata: Metadata = {
-  title: "About Top Weight Loss - Who We Are & How We Verify What We Publish",
+  title: "About Top Weight Loss: How We Verify GLP-1 Prices",
   description:
-    "Who runs Top Weight Loss, how we verify every GLP-1 price against the provider's own site, who checks the medical statements, how affiliate revenue is handled, and how rankings are produced.",
+    "Top Weight Loss compares US GLP-1 weight loss providers using prices checked on each provider's own site, verbatim customer reviews and a named medical reviewer.",
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "About Top Weight Loss - Who We Are & How We Verify What We Publish",
+    title: "About Top Weight Loss: How We Verify GLP-1 Prices",
     description:
-      "How we verify every GLP-1 price, who reviews the medical statements, how affiliate revenue is handled, and how our rankings and reviews are produced.",
+      "How Top Weight Loss checks every GLP-1 price, quotes customer reviews word for word, handles affiliate revenue and scores every provider with one rubric.",
     url: CANONICAL,
     type: "website",
   },
@@ -52,17 +52,17 @@ const longDate = (iso: string) =>
 // verification looks like"; captions state only what each crop shows.
 const CAPTURES_DATE = "2026-10-05";
 const CAPTURES = [
-  { provider: "embody", image: "/verification/tirzepatide-embody.webp", width: 900, height: 368, shows: "$69/mo semaglutide and $119/mo tirzepatide, flat pricing" },
-  { provider: "altRx", image: "/verification/tirzepatide-altrx.webp", width: 900, height: 638, shows: "tirzepatide from $149 and semaglutide from $89" },
-  { provider: "welludr", image: "/verification/tirzepatide-wellmedr.webp", width: 900, height: 325, shows: "tirzepatide from $89 and semaglutide from $49 a month" },
+  { provider: "embody", image: "/verification/tirzepatide-embody.webp", width: 900, height: 368, shows: "flat pricing of $69/mo for semaglutide and $119/mo for tirzepatide" },
+  { provider: "altRx", image: "/verification/tirzepatide-altrx.webp", width: 900, height: 638, shows: "semaglutide from $89 and tirzepatide from $149" },
+  { provider: "welludr", image: "/verification/tirzepatide-wellmedr.webp", width: 900, height: 325, shows: "semaglutide from $49 a month and tirzepatide from $89" },
 ];
 
 const VERTICAL_LINKS = [
-  { name: "Best GLP-1 providers", href: "/", note: "Our ranked list, with verified prices" },
-  { name: "Provider reviews", href: "/reviews", note: "In-depth reviews of every program" },
-  { name: "Comparisons", href: "/glp1-provider-comparison", note: "Head-to-head and side-by-side" },
-  { name: "Cheapest GLP-1", href: "/cheapest-glp1", note: "Lowest verified monthly prices" },
-  { name: "Guides", href: "/articles", note: "Medication, cost and safety guides" },
+  { name: "Best GLP-1 providers", href: "/", note: "The ranked list, with verified prices" },
+  { name: "Provider reviews", href: "/reviews", note: "A full review of each program" },
+  { name: "Comparisons", href: "/glp1-provider-comparison", note: "Head-to-heads and side-by-side tables" },
+  { name: "Cheapest GLP-1", href: "/cheapest-glp1", note: "Programs sorted by lowest verified monthly price" },
+  { name: "Guides", href: "/articles", note: "Explainers on medications, cost and safety" },
 ];
 
 export default async function AboutPage() {
@@ -91,46 +91,46 @@ export default async function AboutPage() {
       url: "https://www.topweightloss.us",
       logo: "https://www.topweightloss.us/treatmentshub.png",
       description:
-        "Independent comparisons of online treatment providers. Every GLP-1 price is verified against the provider's own published rate and logged on change; medical statements are checked by a named reviewer.",
+        "Independent comparisons of US GLP-1 and medical weight loss providers. Each GLP-1 price is checked against the provider's own published rate and every change is logged; medical statements go to a named reviewer.",
       areaServed: { "@type": "Country", name: "United States" },
       email: "contact@topweightloss.us",
       contactPoint: { "@type": "ContactPoint", email: "contact@topweightloss.us", contactType: "customer support", availableLanguage: "English" },
       sameAs: ["https://www.linkedin.com/company/treatments-hub"],
       foundingDate: "2026",
-      knowsAbout: ["GLP-1 weight-loss treatment", "Telehealth providers", "Compounded semaglutide", "Compounded tirzepatide", "Hair loss treatment", "Testosterone replacement therapy", "Hormone replacement therapy", "Online therapy"],
+      knowsAbout: ["GLP-1 weight-loss treatment", "Telehealth weight loss providers", "Compounded semaglutide", "Compounded tirzepatide"],
       employee: REVIEWERS.map(reviewerPersonSchema),
     },
   };
 
   const stats = [
-    { n: rankedProviders, label: "providers ranked" },
-    { n: publishedReviews, label: "in-depth reviews" },
-    { n: comparisons, label: "head-to-head comparisons" },
-    { n: publishedGuides, label: "guides and articles" },
-    { n: trustpilotCaptured, label: "Trustpilot reviews captured verbatim" },
-    { n: redditCaptured, label: "Reddit posts captured verbatim" },
+    { n: rankedProviders, label: "providers in the ranking" },
+    { n: publishedReviews, label: "full provider reviews" },
+    { n: comparisons, label: "head-to-head matchups" },
+    { n: publishedGuides, label: "published guides" },
+    { n: trustpilotCaptured, label: "Trustpilot reviews quoted word for word" },
+    { n: redditCaptured, label: "Reddit posts quoted word for word" },
   ];
 
   const steps = [
     {
       icon: Search,
-      title: "Read the price on the provider's own page",
-      desc: `We walk each provider's enrollment flow and record the number it publishes, the regular rate behind any promotion, and the condition attached - plan length, prepaid term, first-month rate. ${indexedProviders} providers sit in one verified index; every review, comparison and cost table renders from it.`,
+      title: "Check the price where the provider publishes it",
+      desc: `We go through each provider's sign-up flow and record three things: the advertised price, the standard rate that applies once any promotion ends, and the condition tied to the price (plan length, prepaid term or first-month rate). All ${indexedProviders} providers sit in a single price index, and every review, comparison and cost table on the site is generated from it.`,
     },
     {
       icon: MessageSquareQuote,
-      title: "Capture what customers say, word for word",
-      desc: "Trustpilot reviews and Reddit posts are quoted verbatim with their dates, names shortened, negative reviews included. Where a provider has no public rating, the page says so. We never write, paraphrase or invent a review.",
+      title: "Quote customers exactly as they wrote it",
+      desc: "Trustpilot reviews and Reddit posts appear verbatim, with their dates and shortened names, and critical reviews sit alongside positive ones. If a provider has no public rating, the page states that. Top Weight Loss does not write, reword or invent reviews.",
     },
     {
       icon: ListOrdered,
-      title: "Score every provider with the same rubric",
-      desc: "Rankings follow a published scoring method, applied the same way to every provider. Compensation can affect which providers we feature and where listings sit; it does not change a score, a price or a quoted review.",
+      title: "Apply one scoring rubric to every provider",
+      desc: "Every provider is scored with the same published method. Affiliate compensation may influence which providers are featured and where listings appear; it does not alter a score, a price or a quoted review.",
     },
     {
       icon: Stethoscope,
-      title: "Have a named reviewer check the medicine",
-      desc: `Clinical statements - how a medication works, trial figures, side effects, regulatory status - are checked by our medical reviewer, who is named on every page she has read, with the review date. ${pagesReviewed} pages are in the review log today.`,
+      title: "Send the medical claims to a named reviewer",
+      desc: `Clinical statements, such as how a medication works, trial results, side effects and regulatory status, go to our medical reviewer. A page shows her name with a review date only after she has reviewed it and it is entered in the review log. Pages in the review log right now: ${pagesReviewed}.`,
     },
   ];
 
@@ -143,19 +143,19 @@ export default async function AboutPage() {
         <div className="mx-auto max-w-[1000px] px-4 pb-10 pt-12 sm:px-6 sm:pb-14 sm:pt-16">
           <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#0C4B75]">About Top Weight Loss</p>
           <h1 className="mt-3 max-w-[820px] text-[30px] font-extrabold leading-[1.15] tracking-[-0.02em] text-[#111] sm:text-[44px]">
-            Provider comparisons built on numbers you can check yourself
+            GLP-1 provider comparisons you can check for yourself
           </h1>
           <p className="mt-4 max-w-[700px] text-[16px] leading-relaxed text-gray-700 sm:text-[18px]">
-            We compare online treatment providers on the price they actually publish, the condition attached to it,
-            who prescribes, and what real customers report - and we show our evidence. Weight loss is where we started;
-            hair loss, TRT, HRT, online therapy and ED follow the same rules.
+            Top Weight Loss is an independent comparison site for GLP-1 and medical weight loss programs in the US,
+            launched in October 2026. We compare providers on the price they publish, the condition tied to that price,
+            who prescribes, and what customers report, and we show the evidence behind each number.
           </p>
 
           <ul className="mt-6 flex flex-wrap gap-2.5 text-[13px] font-semibold text-[#191919]">
             {[
-              `Prices verified on each provider's own site - last check ${longDate(PRICE_INDEX_VERIFIED)}`,
-              `${trustpilotCaptured} customer reviews quoted verbatim, dated`,
-              `Medical statements reviewed by ${reviewerDisplayName(reviewer)}`,
+              `Prices checked on each provider's own site, most recently ${longDate(PRICE_INDEX_VERIFIED)}`,
+              `${trustpilotCaptured} dated customer reviews quoted word for word`,
+              `Medical reviewer: ${reviewerDisplayName(reviewer)}`,
             ].map((t) => (
               <li key={t} className="inline-flex items-center gap-2 rounded-full border border-[#0C4B75]/15 bg-white px-3.5 py-1.5 shadow-[0_1px_2px_rgba(16,42,67,0.05)]">
                 <Check className="h-3.5 w-3.5 shrink-0 text-emerald-600" strokeWidth={3} />
@@ -169,14 +169,14 @@ export default async function AboutPage() {
               href="/"
               className="inline-flex h-[46px] items-center justify-center gap-1.5 rounded-xl bg-[#0C4B75] px-6 text-[14.5px] font-bold text-white transition-colors hover:bg-[#093d61]"
             >
-              Compare weight-loss providers
+              Compare GLP-1 providers
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <Link
               href="/how-we-rank"
               className="inline-flex h-[46px] items-center justify-center rounded-xl border border-gray-200 bg-white px-6 text-[14.5px] font-semibold text-[#191919] transition-colors hover:bg-gray-50"
             >
-              Read the scoring method
+              See how we score providers
             </Link>
           </div>
         </div>
@@ -194,25 +194,26 @@ export default async function AboutPage() {
             ))}
           </div>
           <p className="mt-3 text-[12.5px] text-gray-400">
-            Counts are computed from the live site at render time, so they cannot drift from what is actually published.
+            These figures are recalculated from the live site whenever this page is rendered, so they always match what is published.
           </p>
         </section>
 
         {/* ───── Why ───── */}
         <section className="mb-14 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-12">
           <h2 className="text-[26px] font-extrabold leading-tight tracking-[-0.01em] text-[#191919] sm:text-[30px]">
-            Why this site exists
+            Why does Top Weight Loss exist?
           </h2>
           <div className="space-y-4 text-[16px] leading-[1.75] text-gray-600">
             <p>
-              Dozens of telehealth companies now sell GLP-1 weight-loss treatment online, and most comparison sites
-              describe their prices with vague ranges, teaser rates, or numbers copied from one another. Choosing a
-              provider on that basis is a coin flip, with your health and several hundred dollars a month on the table.
+              GLP-1 programs sold online are hard to compare. Many telehealth companies sell semaglutide and tirzepatide
+              treatment, and comparison pages often quote loose price ranges, introductory rates without the regular
+              price, or figures repeated from other sites. With your health and several hundred dollars a month at
+              stake, that is not a sound basis for a decision.
             </p>
             <p>
-              Top Weight Loss was founded in 2026 to publish the number the provider itself publishes, with the
-              condition that goes with it, quote customers in their own words, and say plainly when something cannot
-              be verified. If we cannot check it, it does not appear on the site.
+              Top Weight Loss launched in 2026 with a short set of rules: publish the price the provider itself
+              publishes, together with its condition; quote customers in their own words; and state clearly when
+              something could not be verified. Anything we cannot check stays off the site.
             </p>
           </div>
         </section>
@@ -221,9 +222,9 @@ export default async function AboutPage() {
         <section className="mb-14">
           <div className="mb-6">
             <h2 className="text-[26px] font-extrabold leading-tight tracking-[-0.01em] text-[#191919] sm:text-[30px]">
-              What happens before anything is published
+              What do we check before a page goes live?
             </h2>
-            <p className="mt-2 max-w-[640px] text-[15px] text-gray-500">Four checks, in this order, on every provider page.</p>
+            <p className="mt-2 max-w-[640px] text-[15px] text-gray-500">Every provider page goes through these four checks, in this order.</p>
           </div>
           <ol className="grid gap-4 sm:grid-cols-2">
             {steps.map(({ icon: Icon, title, desc }, i) => (
@@ -240,9 +241,9 @@ export default async function AboutPage() {
             ))}
           </ol>
           <p className="mt-4 text-[14px] text-gray-600">
-            The full rubric is on{" "}
+            The complete scoring rubric is on{" "}
             <Link href="/how-we-rank" className="font-semibold text-[#0C4B75] hover:underline">how we rank</Link>;
-            the review policy is at{" "}
+            the medical review process is described in our{" "}
             <Link href="/medical-review-policy" className="font-semibold text-[#0C4B75] hover:underline">medical review policy</Link>.
           </p>
         </section>
@@ -252,28 +253,28 @@ export default async function AboutPage() {
           <div className="flex items-start gap-3">
             <BadgeDollarSign className="mt-0.5 h-6 w-6 shrink-0 text-[#0C4B75]" strokeWidth={2} />
             <div>
-              <h2 className="text-[22px] font-bold leading-tight text-[#191919] sm:text-[24px]">What verification looks like</h2>
+              <h2 className="text-[22px] font-bold leading-tight text-[#191919] sm:text-[24px]">What does a verified price look like?</h2>
               <p className="mt-1.5 max-w-[680px] text-[14.5px] leading-relaxed text-gray-600">
-                When we say a price is verified, this is what we mean: a dated capture of the provider&rsquo;s own pricing
-                page. These three were taken on {longDate(CAPTURES_DATE)} and sit under the price table on our{" "}
+                A verified price on Top Weight Loss is backed by a dated capture of the provider&rsquo;s own pricing page.
+                The three captures below were taken on {longDate(CAPTURES_DATE)} and appear under the price table in our{" "}
                 <Link href="/articles/best-tirzepatide-online" className="font-semibold text-[#0C4B75] hover:underline">
-                  tirzepatide guide
-                </Link>. Every change to a listed price is recorded in a public{" "}
+                  tirzepatide buying guide
+                </Link>. Each change to a listed price goes into a public{" "}
                 <Link href="/glp1-weight-loss-statistics" className="font-semibold text-[#0C4B75] hover:underline">
-                  change log
+                  price change log
                 </Link>{" "}
-                with the date, the old figure and the new one - {PRICE_CHANGELOG.length} entries so far.
+                with the date, the previous figure and the new figure. The log holds {PRICE_CHANGELOG.length} entries so far.
               </p>
             </div>
           </div>
           <div className="mt-5 grid gap-4 sm:grid-cols-3">
             {CAPTURES.map((c) => (
               <figure key={c.provider} className="overflow-hidden rounded-xl border border-gray-200 bg-[#F7F8FA]">
-                <a href={c.image} target="_blank" rel="noopener noreferrer" className="flex h-[150px] items-center justify-center bg-white p-2" title="Open the full-size capture">
+                <a href={c.image} target="_blank" rel="noopener noreferrer" className="flex h-[150px] items-center justify-center bg-white p-2" title="View the full-size capture">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={c.image}
-                    alt={`${c.provider} pricing page, captured ${longDate(CAPTURES_DATE)}: ${c.shows}`}
+                    alt={`${c.provider} pricing page captured on ${longDate(CAPTURES_DATE)}, showing ${c.shows}`}
                     width={c.width}
                     height={c.height}
                     loading="lazy"
@@ -282,7 +283,7 @@ export default async function AboutPage() {
                 </a>
                 <figcaption className="border-t border-gray-200 px-3.5 py-3">
                   <p className="text-[13px] font-bold text-[#191919]">{c.provider}</p>
-                  <p className="mt-0.5 text-[12px] leading-snug text-gray-500">Showed {c.shows}.</p>
+                  <p className="mt-0.5 text-[12px] leading-snug text-gray-500">The page showed {c.shows}.</p>
                 </figcaption>
               </figure>
             ))}
@@ -292,11 +293,11 @@ export default async function AboutPage() {
         {/* ───── Medical reviewer ───── */}
         <section className="mb-14">
           <h2 className="text-[26px] font-extrabold leading-tight tracking-[-0.01em] text-[#191919] sm:text-[30px]">
-            Who checks the medicine
+            Who reviews the medical content?
           </h2>
           <p className="mt-2 max-w-[640px] text-[15px] text-gray-500">
-            A reviewer credit appears on a page only when the named reviewer has actually read it. We do not put
-            clinician names on content they have not reviewed.
+            A reviewer&rsquo;s name appears on a page only after that reviewer has actually reviewed it. We never attach
+            a reviewer&rsquo;s name to content she or he has not read.
           </p>
           <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200 bg-white">
             <div className="flex flex-col gap-5 p-5 sm:flex-row sm:items-start sm:gap-7 sm:p-7">
@@ -314,13 +315,13 @@ export default async function AboutPage() {
                 <p className="mt-1 text-[14px] text-gray-500">{reviewer.headline}</p>
                 <p className="mt-3 text-[15px] leading-[1.7] text-gray-600">{reviewer.shortBio}</p>
                 <p className="mt-3 text-[14px] leading-relaxed text-gray-600">
-                  <strong className="text-[#191919]">What she reviews:</strong> {reviewer.scope}
+                  <strong className="text-[#191919]">Review scope:</strong> {reviewer.scope}
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13.5px] font-semibold">
                   <Link href={reviewerPath(reviewer)} className="inline-flex items-center gap-1 text-[#0C4B75] hover:underline">
-                    Full profile <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+                    View full profile <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </Link>
-                  <Link href="/medical-review-policy" className="text-[#0C4B75] hover:underline">How we review</Link>
+                  <Link href="/medical-review-policy" className="text-[#0C4B75] hover:underline">Our review process</Link>
                   {reviewer.linkedin && (
                     <a href={reviewer.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#0C4B75] hover:underline">
                       <LinkedInMark className="h-4 w-4" /> LinkedIn
@@ -330,7 +331,7 @@ export default async function AboutPage() {
               </div>
             </div>
             <div className="border-t border-gray-100 bg-[#F7F8FA] px-5 py-3 text-[13px] text-gray-600 sm:px-7">
-              {pagesReviewed} pages carry her name and a review date. Clinical statements she flags are corrected before the page is republished.
+              Pages currently showing her name with a review date: {pagesReviewed}. Any clinical statement she flags is corrected before the page goes back up.
             </div>
           </div>
         </section>
@@ -338,18 +339,18 @@ export default async function AboutPage() {
         {/* ───── Who writes ───── */}
         <section className="mb-14 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-12">
           <h2 className="text-[26px] font-extrabold leading-tight tracking-[-0.01em] text-[#191919] sm:text-[30px]">
-            Who researches and writes
+            Who researches and writes the content?
           </h2>
           <div className="space-y-4 text-[16px] leading-[1.75] text-gray-600">
             <p>
-              Top Weight Loss is researched and written by a small independent editorial team. Nobody on the research
-              team is a clinician, which is why clinical statements go to the medical reviewer above rather than being
-              published on the team&rsquo;s authority. Pages are credited to the research team unless a named person
-              wrote them.
+              Research and writing at Top Weight Loss are done by an independent editorial team. No one on the research
+              team is a clinician, so clinical statements are sent to the medical reviewer above instead of being
+              published on the team&rsquo;s own authority. A page is credited to the research team unless a named
+              author wrote it.
             </p>
             <p>
-              We do not publish provider-written copy. If a provider disputes a figure, we re-check it against its own
-              site and log the outcome.
+              We never publish copy supplied by a provider. When a provider disputes a figure, we check it again
+              against that provider&rsquo;s own site and record the result.
             </p>
           </div>
         </section>
@@ -357,18 +358,18 @@ export default async function AboutPage() {
         {/* ───── Money ───── */}
         <section className="mb-14">
           <h2 className="text-[26px] font-extrabold leading-tight tracking-[-0.01em] text-[#191919] sm:text-[30px]">
-            How we make money
+            How does Top Weight Loss make money?
           </h2>
           <p className="mt-3 max-w-[760px] text-[16px] leading-[1.75] text-gray-600">
-            Some providers pay us a commission when you click through from our site and sign up. That is how the site is
-            funded, and every page that contains those links says so above the first one. Not every provider in a
-            market is included on this site.
+            Top Weight Loss is funded by affiliate commissions: some providers pay us when a visitor clicks through from
+            this site and signs up. Every page with those links discloses this before the first link appears. The site
+            does not cover every provider in the market.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6">
-              <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-gray-400">Compensation can affect</p>
+              <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-gray-400">Commissions can influence</p>
               <ul className="mt-3 space-y-2 text-[15px] text-gray-700">
-                {["Which providers we cover in depth", "The order and placement of listings, cards and links"].map((t) => (
+                {["Which providers get in-depth coverage", "Where listings, cards and links are placed, and in what order"].map((t) => (
                   <li key={t} className="flex items-start gap-2.5">
                     <Check className="mt-1 h-4 w-4 shrink-0 text-amber-500" strokeWidth={2.5} />
                     <span>{t}</span>
@@ -377,13 +378,13 @@ export default async function AboutPage() {
               </ul>
             </div>
             <div className="rounded-2xl border border-emerald-200 bg-emerald-50/40 p-5 sm:p-6">
-              <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-emerald-700">It never affects</p>
+              <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-emerald-700">Commissions never change</p>
               <ul className="mt-3 space-y-2 text-[15px] text-gray-800">
                 {[
-                  "The prices we publish - each one is the provider's own rate, verified on a stated date",
-                  "The Trustpilot figures and reviews we quote, or the Reddit posts",
-                  "Medical statements and their review",
-                  "What our written reviews and comparisons say",
+                  "Published prices: each one is the provider's own rate, verified on a stated date",
+                  "Quoted Trustpilot ratings and reviews, or quoted Reddit posts",
+                  "Medical statements or how they are reviewed",
+                  "The verdicts in our reviews and comparisons",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2.5">
                     <X className="mt-1 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.75} />
@@ -394,7 +395,7 @@ export default async function AboutPage() {
             </div>
           </div>
           <p className="mt-4 text-[14px] text-gray-600">
-            Full policy in our{" "}
+            The complete policy is in our{" "}
             <Link href="/disclaimer" className="font-semibold text-[#0C4B75] hover:underline">disclaimer</Link>.
           </p>
         </section>
@@ -402,7 +403,7 @@ export default async function AboutPage() {
         {/* ───── Verticals ───── */}
         <section className="mb-14">
           <h2 className="text-[26px] font-extrabold leading-tight tracking-[-0.01em] text-[#191919] sm:text-[30px]">
-            The same rules, across the site
+            Where to start on Top Weight Loss
           </h2>
           <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {VERTICAL_LINKS.map((v) => (
@@ -426,19 +427,19 @@ export default async function AboutPage() {
           {([
             {
               icon: RefreshCw,
-              title: "Keeping it current",
-              body: "When a provider changes its published rates, the index is updated once, every affected page re-renders, the change is logged, and the page's last-updated date moves with it.",
+              title: "How are prices kept current?",
+              body: "When a provider changes its published rates, the price index is updated in one place, every page that draws on it re-renders, the change is logged, and each affected page's last-updated date changes with it.",
             },
             {
               icon: Shield,
-              title: "Corrections",
-              body: "If a price or claim here does not match what a provider currently publishes, email contact@topweightloss.us. We verify against the provider's own site, correct the page, and log the change like any other.",
+              title: "How do I report an error?",
+              body: "If a price or claim on Top Weight Loss does not match what the provider currently publishes, email contact@topweightloss.us. We check it against the provider's own site, correct the page and log the change the same way as any other update.",
               link: { label: "contact@topweightloss.us", href: "mailto:contact@topweightloss.us" },
             },
             {
               icon: Stethoscope,
-              title: "Not medical advice",
-              body: "Top Weight Loss is not a medical provider and does not prescribe. GLP-1 medications are prescription drugs that need evaluation by a licensed clinician. Individual results vary.",
+              title: "Is this medical advice?",
+              body: "No. Top Weight Loss is not a medical provider and does not prescribe. GLP-1 medications are prescription drugs that require an evaluation by a licensed clinician, and individual results vary.",
             },
           ] as { icon: typeof RefreshCw; title: string; body: string; link?: { label: string; href: string } }[]).map(({ icon: Icon, title, body, link }) => (
             <div key={title} className="rounded-2xl border border-gray-200 bg-white p-5">
@@ -456,22 +457,22 @@ export default async function AboutPage() {
 
         {/* ───── CTA ───── */}
         <section className="rounded-2xl bg-[#0C4B75] px-6 py-8 text-center text-white sm:px-10 sm:py-10">
-          <p className="text-[22px] font-extrabold leading-tight sm:text-[26px]">See the comparisons the method produces</p>
+          <p className="text-[22px] font-extrabold leading-tight sm:text-[26px]">See the rankings this method produces</p>
           <p className="mx-auto mt-2 max-w-[520px] text-[14.5px] text-white/80">
-            {rankedProviders} weight-loss providers ranked on verified prices and {trustpilotCaptured} captured reviews.
+            {rankedProviders} GLP-1 weight loss providers, ranked on verified prices and {trustpilotCaptured} quoted customer reviews.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
               href="/"
               className="inline-flex h-[46px] items-center justify-center rounded-xl bg-white px-6 text-[14.5px] font-bold text-[#0C4B75] transition-colors hover:bg-gray-100"
             >
-              Compare providers
+              View the rankings
             </Link>
             <Link
               href="/reviews"
               className="inline-flex h-[46px] items-center justify-center rounded-xl border border-white/30 px-6 text-[14.5px] font-semibold text-white transition-colors hover:bg-white/10"
             >
-              Read the reviews
+              Browse provider reviews
             </Link>
           </div>
         </section>

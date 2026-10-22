@@ -115,8 +115,8 @@ function ProductCard({
 
 export function ProductCarousel({
   providers,
-  title = "Shop GLP-1 treatment plans",
-  subtitle = "Real published prices from licensed telehealth providers - conditions shown under every price.",
+  title = "Compare GLP-1 treatment plans and prices",
+  subtitle = "Monthly prices as each licensed telehealth provider publishes them, with the plan terms printed under every figure.",
   highlightProviderIds = [],
   onlyProviderIds,
   onlyMedication,
@@ -210,7 +210,7 @@ export function ProductCarousel({
               item: {
                 "@type": "Product",
                 name: `${provider.name} ${p.name}`,
-                description: `${p.name} from ${provider.name} - $${productPriceValue(p)}/month (${p.priceNote}). ${p.shipping}.`,
+                description: `${provider.name} ${p.name}: $${productPriceValue(p)} per month (${p.priceNote}). ${p.shipping}.`,
                 ...(p.image ? { image: `https://www.topweightloss.us${p.image}` } : {}),
                 brand: { "@type": "Brand", name: provider.name },
                 ...(hasAggregate && {

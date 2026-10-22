@@ -14,56 +14,56 @@ export const revalidate = 60;
 const CANONICAL = "https://www.topweightloss.us/how-we-rank";
 
 export const metadata: Metadata = {
-  title: "How We Rank & Review Weight Loss Providers - Our Methodology",
+  title: "How We Rank GLP-1 Weight Loss Providers: Methodology",
   description:
-    "Our methodology for ranking GLP-1 weight loss providers: the factors we score, where data comes from, how we verify it, and how we pick head-to-head winners.",
+    "How Top Weight Loss scores GLP-1 weight loss providers: 6 weighted factors, prices verified on each provider's site, and how head-to-head winners are picked.",
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "How We Rank & Review Weight Loss Providers - Our Methodology",
+    title: "How We Rank GLP-1 Weight Loss Providers: Methodology",
     description:
-      "The factors we score, where our data comes from, how we verify accuracy, and how we pick winners in our weight loss provider comparisons.",
+      "The six weighted factors behind every Top Weight Loss score, where the data comes from, how prices are verified, and how comparison winners are chosen.",
     url: CANONICAL,
     type: "article",
   },
 };
 
 const FACTORS = [
-  { category: "Medical Credibility", weight: "25%", desc: "Licensed provider oversight, quality of the medical evaluation, ongoing monitoring, pharmacy standards, and any third-party certifications (e.g. LegitScript)." },
-  { category: "Medication Access", weight: "20%", desc: "Range of GLP-1 options offered (semaglutide, tirzepatide, brand-name), formulations, and dosing flexibility." },
-  { category: "Pricing & Value", weight: "20%", desc: "Total monthly cost including medication, consultations, and delivery - plus pricing transparency and the absence of hidden fees." },
-  { category: "Patient Experience", weight: "15%", desc: "Enrollment speed, interface quality, support responsiveness, delivery reliability, and recent verified customer feedback." },
-  { category: "Clinical Support", weight: "10%", desc: "Follow-up consultations, dose adjustments, side-effect management, and ongoing guidance through treatment." },
-  { category: "Flexibility", weight: "10%", desc: "Contract terms, cancellation and pause policies, ability to switch medications, and payment options." },
+  { category: "Medical Credibility", weight: "25%", desc: "Oversight by licensed prescribers, how thorough the medical evaluation is, ongoing monitoring, pharmacy standards, and third-party certifications such as LegitScript." },
+  { category: "Medication Access", weight: "20%", desc: "Which GLP-1 options are available (semaglutide, tirzepatide, brand-name), the formulations offered, and how flexible dosing is." },
+  { category: "Pricing & Value", weight: "20%", desc: "The full monthly cost of medication, consultations and delivery, how openly that price is published, and whether any hidden fees apply." },
+  { category: "Patient Experience", weight: "15%", desc: "How fast enrollment is, how well the platform works, how quickly support responds, how reliable delivery is, and what recent verified customer feedback says." },
+  { category: "Clinical Support", weight: "10%", desc: "Follow-up visits, dose changes, help managing side effects, and guidance for the length of treatment." },
+  { category: "Flexibility", weight: "10%", desc: "Contract length, cancellation and pause rules, the option to switch medications, and available payment methods." },
 ];
 
 const METHOD_FAQS = [
   {
-    question: "How often are prices updated?",
+    question: "How often does Top Weight Loss update GLP-1 prices?",
     answer:
-      "Whenever a provider changes its published rates. All prices live in one verified registry, so a single update re-renders every affected page - reviews, comparisons, cost tables and product cards - and each page displays its last-updated date.",
+      "Prices are updated whenever a provider changes its published rates. Every price on the site comes from one verified registry, so a single update flows through to every affected review, comparison, cost table and product card. Each page shows the date it was last updated.",
   },
   {
-    question: "Does affiliate status affect scores or rankings?",
+    question: "Do affiliate partnerships change provider scores or rankings?",
     answer:
-      "No. Partnerships can affect how providers are displayed, but never scores, review content, or head-to-head winners. Our verdicts regularly favor the cheaper or better-documented provider in a matchup, and our reviews cite real Trustpilot records - including mixed ones - for partners and non-partners alike.",
+      "No. A partnership can affect how a provider is displayed, but it does not change scores, review content or head-to-head winners. Matchup verdicts regularly go to the cheaper or better-documented provider, and reviews cite the real Trustpilot record, mixed ones included, whether or not the provider is a partner.",
   },
   {
-    question: "Why do some providers show no Trustpilot rating on your pages?",
+    question: "Why do some GLP-1 providers have no Trustpilot rating on Top Weight Loss?",
     answer:
-      "Because they don't publish one, and we never invent or estimate a score. Where no aggregate exists, our pages say so explicitly and rely on the individual reviews we can verify plus the provider's published terms.",
+      "Those providers do not have a published Trustpilot aggregate, and Top Weight Loss never estimates or invents a score. When no aggregate exists, the page says so directly. The review then relies on individual reviews we can verify and on the provider's published terms.",
   },
   {
-    question: "How do you calculate the 12-month cost tables?",
+    question: "How are the 12-month GLP-1 cost tables calculated?",
     answer:
-      "From each provider's published rates with promo conditions applied exactly as published: first-month rates roll to the regular price from month two, plan-locked rates are labeled with their commitment, and prepaid plans show the checkout amount. The assumptions are printed under every table.",
+      "Each 12-month total starts from the provider's published rates and applies promotional conditions exactly as the provider states them. A first-month rate switches to the regular price from month two, a plan-locked rate is labeled with its commitment, and a prepaid plan shows the amount charged at checkout. The assumptions are printed under every table.",
   },
 ];
 
 const SOURCES = [
-  { icon: Database, title: "The providers' own materials", desc: "We pull pricing, medications, shipping, and the medical model directly from each provider's official website and landing pages - so what you read here matches what you'll see when you enroll." },
-  { icon: ClipboardCheck, title: "Recent verified customer reviews", desc: "We read current Trustpilot reviews to gauge real-world customer experience - communication, delivery, and support - not just marketing claims." },
-  { icon: Scale, title: "In-house research", desc: "Our editors independently walk enrollment flows, compare pricing side by side, and track how each provider's offering changes over time." },
-  { icon: ShieldCheck, title: "Clinical literature", desc: "Medical claims reference published trial data (such as STEP and SURMOUNT) and FDA information - not opinion." },
+  { icon: Database, title: "Each provider's own website", desc: "Prices, medications, shipping terms and the medical model are taken straight from each provider's official site and landing pages, so the details here match what you see when you enroll." },
+  { icon: ClipboardCheck, title: "Recent verified customer reviews", desc: "Current Trustpilot reviews show how communication, delivery and support work for real customers, beyond what the marketing says." },
+  { icon: Scale, title: "Our own research", desc: "Our editors go through enrollment flows themselves, line up prices side by side, and follow how each provider's offer changes over time." },
+  { icon: ShieldCheck, title: "Clinical literature", desc: "Medical claims are based on published trial data, such as the STEP and SURMOUNT trials, and on FDA information rather than opinion." },
 ];
 
 export default async function HowWeRankPage() {
@@ -73,9 +73,9 @@ export default async function HowWeRankPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "How We Rank & Review Weight Loss Providers - Our Methodology",
+    name: "How We Rank GLP-1 Weight Loss Providers: Methodology",
     description:
-      "Our methodology for ranking GLP-1 weight loss providers: the factors we score, where data comes from, how we verify it, and how we pick head-to-head winners.",
+      "How Top Weight Loss scores GLP-1 weight loss providers: 6 weighted factors, prices verified on each provider's site, and how head-to-head winners are picked.",
     url: CANONICAL,
     publisher: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
   };
@@ -110,12 +110,13 @@ export default async function HowWeRankPage() {
         <div className="mx-auto max-w-[900px] px-4 py-12 sm:px-6 sm:py-16">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "How We Rank" }]} />
           <h1 className="text-[28px] font-extrabold text-[#191919] sm:text-[36px]">
-            How We Rank &amp; Review Providers
+            How We Rank GLP-1 Weight Loss Providers
           </h1>
           <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-gray-500">
-            Every review and head-to-head comparison on this site is built on the same
-            repeatable, evidence-first process. Here&rsquo;s exactly how we evaluate each
-            weight loss provider, where our information comes from, and how we keep it accurate.
+            Top Weight Loss scores every GLP-1 provider on six weighted factors, using prices
+            verified on the provider&rsquo;s own site. Every review and head-to-head comparison
+            follows this same process. Below: what we score, where the data comes from, and
+            how it stays accurate.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
           <MedicalReviewBar path="/how-we-rank" className="mt-4 max-w-[760px]" />
@@ -125,11 +126,11 @@ export default async function HowWeRankPage() {
       <div className="mx-auto max-w-[900px] px-4 py-10 sm:px-6">
         {/* Factors */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">The 6 factors we score</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">What six factors decide a provider&rsquo;s score?</h2>
           <p className="mb-6 text-[16px] leading-[1.75] text-gray-600">
-            We rate every provider on a weighted evaluation across six core categories. The
-            weighting reflects what matters most for a safe, affordable, and effective GLP-1
-            weight loss program.
+            Each provider is rated across six categories, and each category carries a fixed
+            weight. Medical credibility counts most, at 25%. The weights are set by what matters
+            most in a GLP-1 program that is safe, affordable and effective.
           </p>
           <div className="space-y-4">
             {FACTORS.map(({ category, weight, desc }) => (
@@ -150,14 +151,14 @@ export default async function HowWeRankPage() {
         <section className="mb-12">
           <div className="mb-4 flex items-center gap-2">
             <BadgeDollarSign className="h-6 w-6 text-[#0C4B75]" strokeWidth={2} />
-            <h2 className="text-[22px] font-bold text-[#191919]">How we verify prices</h2>
+            <h2 className="text-[22px] font-bold text-[#191919]">How are GLP-1 prices verified?</h2>
           </div>
           <p className="mb-4 text-[16px] leading-[1.75] text-gray-600">
-            Every price on this site comes from one verified registry, and every entry records four
-            things: the headline rate, the regular rate behind any promotion, the condition attached
-            (plan length, first-month rate, prepaid term), and the shipping terms. A number is never
-            published without its condition. The rows below are pulled live from that registry - the
-            same data our reviews, comparisons and cost tables render from:
+            All prices on Top Weight Loss come from a single verified registry. Each entry holds four
+            fields: the headline rate, the regular rate that sits behind any promotion, the condition
+            tied to the price (plan length, first-month rate or prepaid term), and the shipping terms.
+            No price is shown without its condition. The rows below load live from that registry,
+            which is the same source our reviews, comparisons and cost tables use:
           </p>
           <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
             <table className="w-full min-w-[640px] border-collapse text-left">
@@ -182,7 +183,7 @@ export default async function HowWeRankPage() {
                       <td className="px-4 py-3.5 text-gray-600">
                         {row.trustpilot
                           ? `Trustpilot ${row.trustpilot.rating} across ${row.trustpilot.count} reviews`
-                          : "No published aggregate - we say so rather than invent one"}
+                          : "No published aggregate, so we state that instead of inventing one"}
                       </td>
                     </tr>
                   );
@@ -191,47 +192,47 @@ export default async function HowWeRankPage() {
             </table>
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
-            When a provider changes its published pricing, the registry is updated once and every
-            affected page - reviews, head-to-heads, cost tables, product cards - re-renders from it.
-            The full ranking is on our{" "}
+            A change to a provider&rsquo;s published pricing is entered in the registry once, and
+            every page that uses it (reviews, head-to-heads, cost tables and product cards) re-renders.
+            See the full price ranking in our{" "}
             <Link href="/cheapest-glp1" className="font-medium text-[#0C4B75] hover:underline">
-              cheapest-GLP-1 index
+              cheapest GLP-1 index
             </Link>.
           </p>
         </section>
 
         {/* What moves a score - the published rubric */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">What earns points - and what costs them</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">What raises or lowers a provider&rsquo;s score?</h2>
           <p className="mb-4 text-[16px] leading-[1.75] text-gray-600">
-            Within the six weighted factors, these are the specific signals that consistently move a
-            provider up or down in our evaluations:
+            Inside the six weighted factors, these specific signals reliably push a provider&rsquo;s
+            score up or down:
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-emerald-200 bg-emerald-50/40 p-5">
               <p className="mb-3 flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.06em] text-emerald-700">
-                <Check className="h-4 w-4" strokeWidth={2.5} /> Earns points
+                <Check className="h-4 w-4" strokeWidth={2.5} /> Adds points
               </p>
               <ul className="space-y-2 text-[14px] leading-relaxed text-gray-800">
-                <li>Flat pricing that holds at every dose - no titration increases</li>
-                <li>A large, public customer record (Trustpilot volume + score)</li>
-                <li>Third-party certification (LegitScript) and named, state-licensed 503A pharmacies</li>
-                <li>Real guarantees in writing - refunds, warranties, results promises</li>
-                <li>Fast, temperature-controlled shipping for injectables</li>
-                <li>Clean exit terms: month-to-month, pause or cancel anytime</li>
+                <li>One flat price at every dose, with no increase as the dose is titrated up</li>
+                <li>A large public customer record, measured by Trustpilot review volume and score</li>
+                <li>LegitScript certification and named, state-licensed 503A pharmacies</li>
+                <li>Written guarantees, such as refunds, warranties or results promises</li>
+                <li>Quick, temperature-controlled shipping for injectable medication</li>
+                <li>Easy exit terms: month-to-month billing, with pause or cancel at any time</li>
               </ul>
             </div>
             <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-5">
               <p className="mb-3 flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.06em] text-amber-700">
-                <X className="h-4 w-4" strokeWidth={2.5} /> Costs points
+                <X className="h-4 w-4" strokeWidth={2.5} /> Loses points
               </p>
               <ul className="space-y-2 text-[14px] leading-relaxed text-gray-800">
-                <li>Teaser rates that jump after month one - we publish the regular rate next to every promo</li>
-                <li>No published review aggregate - noted plainly in the review</li>
-                <li>Prepaid commitments a shopper could miss at checkout</li>
-                <li>Undisclosed membership fees stacked on medication costs</li>
-                <li>Thin public detail on plan terms, cancellation or pharmacy standards</li>
-                <li>A weak or mixed published review record - we cite the real number even for partners</li>
+                <li>Introductory rates that rise after the first month (the regular rate is always shown next to the promo)</li>
+                <li>No published review aggregate, which the review states plainly</li>
+                <li>Prepaid commitments that are easy to miss at checkout</li>
+                <li>Membership fees added on top of medication costs without clear disclosure</li>
+                <li>Little public detail on plan terms, cancellation or pharmacy standards</li>
+                <li>A weak or mixed public review record, cited at its real number even for partners</li>
               </ul>
             </div>
           </div>
@@ -239,24 +240,24 @@ export default async function HowWeRankPage() {
 
         {/* Integrity rules - the house rules the content actually runs on */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Our review-integrity rules</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Which integrity rules does every review follow?</h2>
           <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
             <div className="divide-y divide-gray-100 text-[14.5px] leading-[1.75] text-gray-600">
-              <p className="p-5"><strong className="text-[#191919]">No invented ratings, ever.</strong> If a provider has no published Trustpilot aggregate, our pages say exactly that - we never estimate or fabricate a score. Partner status doesn&rsquo;t change this: our top-rated partner&rsquo;s review openly discusses its 3.7 average.</p>
-              <p className="p-5"><strong className="text-[#191919]">Every promo carries its regular rate.</strong> Promotional prices are always published alongside the regular rate and the condition (&ldquo;first month only&rdquo;, &ldquo;12-month plan&rdquo;, &ldquo;prepaid at checkout&rdquo;), and our 12-month cost tables apply those conditions exactly as published.</p>
-              <p className="p-5"><strong className="text-[#191919]">Community feedback is verified, not scraped.</strong> The &ldquo;What Reddit says&rdquo; sections on our reviews are built only from real public threads we&rsquo;ve independently verified - quotes lightly trimmed, vote counts shown only as captured, gripes included alongside praise.</p>
-              <p className="p-5"><strong className="text-[#191919]">Medical claims cite primary sources.</strong> Clinical figures reference the published STEP and SURMOUNT trials (NEJM) and FDA prescribing information, cited at the bottom of every medical page - never blog folklore.</p>
-              <p className="p-5"><strong className="text-[#191919]">We don&rsquo;t republish what we can&rsquo;t verify.</strong> Claims circulating about providers - regulatory actions, corporate relationships - appear on our pages only after independent verification, no matter who they help or hurt.</p>
+              <p className="p-5"><strong className="text-[#191919]">Ratings are never invented.</strong> When a provider has no published Trustpilot aggregate, the page says so, and no score is estimated or made up. Being a partner makes no difference: the review of our top-rated partner discusses its 3.7 average openly.</p>
+              <p className="p-5"><strong className="text-[#191919]">A promo price always comes with its regular rate.</strong> Each promotional price is shown next to the regular rate and its condition (&ldquo;first month only&rdquo;, &ldquo;12-month plan&rdquo;, &ldquo;prepaid at checkout&rdquo;), and the 12-month cost tables apply those conditions exactly as the provider publishes them.</p>
+              <p className="p-5"><strong className="text-[#191919]">Reddit feedback is verified by hand, not scraped.</strong> Each &ldquo;What Reddit says&rdquo; section uses only real public threads that we have checked ourselves. Quotes are lightly trimmed, vote counts appear only as captured, and complaints are included next to praise.</p>
+              <p className="p-5"><strong className="text-[#191919]">Medical claims point to primary sources.</strong> Clinical figures come from the published STEP and SURMOUNT trials (NEJM) and FDA prescribing information, listed at the bottom of every medical page, not from blogs or hearsay.</p>
+              <p className="p-5"><strong className="text-[#191919]">Unverified claims stay off the site.</strong> Claims that circulate about providers, such as regulatory actions or corporate relationships, are published only after we verify them independently, regardless of which provider they help or hurt.</p>
             </div>
           </div>
         </section>
 
         {/* Data sources */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Where our data comes from</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Where does the ranking data come from?</h2>
           <p className="mb-6 text-[16px] leading-[1.75] text-gray-600">
-            Our evaluations only carry weight if the underlying information is real. We draw
-            on four sources for every provider:
+            Every provider evaluation draws on the same four sources. A score is only as good
+            as the information behind it:
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {SOURCES.map(({ icon: Icon, title, desc }) => (
@@ -273,24 +274,25 @@ export default async function HowWeRankPage() {
 
         {/* Accuracy commitment */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">How we keep it accurate</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">How does Top Weight Loss keep provider data accurate?</h2>
           <div className="rounded-xl border border-gray-200 bg-white p-6">
             <div className="space-y-4 text-[15px] leading-[1.75] text-gray-600">
               <p>
-                <strong className="text-[#191919]">We don&rsquo;t make things up.</strong> Prices,
-                medications, shipping times, and medical details are taken from each provider&rsquo;s
-                own official sources. We don&rsquo;t invent figures, name medications a provider
-                doesn&rsquo;t offer, or attach clinical claims that aren&rsquo;t supported.
+                <strong className="text-[#191919]">Everything traces to a source.</strong> Prices,
+                medications, shipping times and medical details come from each provider&rsquo;s own
+                official materials. We do not invent figures, list medications a provider does not
+                offer, or add clinical claims without support.
               </p>
               <p>
-                <strong className="text-[#191919]">We update when providers change.</strong> Pricing
-                and offerings in this space move quickly. When a provider changes its plans, we revise
-                the affected reviews and comparisons and refresh their &ldquo;last updated&rdquo; date.
+                <strong className="text-[#191919]">Pages change when providers do.</strong> GLP-1
+                pricing and plans shift often. When a provider changes its plans, the affected reviews
+                and comparisons are revised and their &ldquo;last updated&rdquo; date is refreshed.
               </p>
               <p>
-                <strong className="text-[#191919]">We separate fact from experience.</strong> Objective
-                details (price, delivery, medications) are reported as fact; customer sentiment is
-                clearly attributed to reviews; and our own take is presented as editorial analysis.
+                <strong className="text-[#191919]">Facts, experiences and opinions are kept apart.</strong>{" "}
+                Objective details such as price, delivery and medications are reported as fact; customer
+                sentiment is attributed to the reviews it comes from; and our own view is labeled as
+                editorial analysis.
               </p>
             </div>
           </div>
@@ -298,15 +300,14 @@ export default async function HowWeRankPage() {
 
         {/* Scoring */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">How scoring works</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">How is the 10-point score calculated?</h2>
           <p className="text-[16px] leading-[1.75] text-gray-600">
-            Each provider earns an overall score on a 10-point scale, translated into a plain-English
-            label - from <strong className="text-[#191919]">Exceptional</strong> at the top through{" "}
-            <strong className="text-[#191919]">Excellent</strong> and{" "}
-            <strong className="text-[#191919]">Very Good</strong>. A score reflects the weighted result
-            across the six factors above. Strong transparent pricing, credible medical oversight, and
-            consistently positive recent customer feedback move a score up; hidden fees, thin medical
-            support, or recurring complaints move it down.
+            Every provider receives an overall score out of 10, which is the weighted result of the six
+            factors above. The score is shown with a plain-English label: <strong className="text-[#191919]">Exceptional</strong>{" "}
+            at the top, followed by <strong className="text-[#191919]">Excellent</strong> and{" "}
+            <strong className="text-[#191919]">Very Good</strong>. Clear pricing, credible medical
+            oversight and steady positive recent feedback raise a score; hidden fees, limited medical
+            support or repeated complaints lower it.
           </p>
         </section>
 
@@ -315,13 +316,13 @@ export default async function HowWeRankPage() {
           <div className="flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-6">
             <Trophy className="mt-0.5 h-6 w-6 shrink-0 text-amber-500" strokeWidth={2} />
             <div>
-              <h2 className="mb-2 text-[22px] font-bold text-[#191919]">How we pick a winner</h2>
+              <h2 className="mb-2 text-[22px] font-bold text-[#191919]">How is a head-to-head winner chosen?</h2>
               <p className="text-[15px] leading-[1.75] text-gray-600">
-                In a head-to-head comparison we score the two providers category by category -
-                pricing, medical support, medication options, speed, and customer experience. The
-                provider that wins the majority of categories takes the matchup, and the advantage
-                meter reflects how decisive that edge is. We always name the runner-up&rsquo;s genuine
-                strengths, because the &ldquo;better&rdquo; provider still depends on what you value most.
+                The provider that wins more categories wins the matchup. Each head-to-head compares two
+                providers one category at a time: pricing, medical support, medication options, speed
+                and customer experience. The advantage meter shows how wide the margin is, and the
+                runner-up&rsquo;s real strengths are always listed, since the &ldquo;better&rdquo;
+                choice still depends on what matters most to you.
               </p>
             </div>
           </div>
@@ -332,11 +333,11 @@ export default async function HowWeRankPage() {
           <div className="flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-6">
             <RefreshCw className="mt-0.5 h-6 w-6 shrink-0 text-[#0C4B75]" strokeWidth={2} />
             <div>
-              <h2 className="mb-2 text-[22px] font-bold text-[#191919]">Keeping reviews current</h2>
+              <h2 className="mb-2 text-[22px] font-bold text-[#191919]">How are reviews kept up to date?</h2>
               <p className="text-[15px] leading-[1.75] text-gray-600">
-                We continuously monitor provider pricing and offerings, new clinical data, and recent
-                customer reviews, and revise our rankings, reviews, and comparisons as things change.
-                Each review and comparison shows when it was last updated.
+                Rankings, reviews and comparisons are revised as provider prices and offers, clinical
+                data and recent customer reviews change. Every review and comparison displays its
+                last-updated date.
               </p>
             </div>
           </div>
@@ -344,18 +345,17 @@ export default async function HowWeRankPage() {
 
         {/* Independence */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Editorial independence</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Are the rankings independent of affiliate deals?</h2>
           <div className="space-y-4 text-[16px] leading-[1.75] text-gray-600">
             <p>
-              <strong className="text-[#191919]">Independent rankings.</strong> Our rankings and
-              reviews are determined by the evaluation criteria on this page - not by commercial
-              relationships.
+              <strong className="text-[#191919]">Rankings follow the criteria.</strong> The criteria
+              on this page decide our rankings and reviews; commercial relationships do not.
             </p>
             <p>
-              <strong className="text-[#191919]">Transparent about affiliates.</strong> Some providers
-              compensate us through affiliate partnerships when you click through and sign up. This may
-              affect how providers are displayed, but it does not influence our scores or the content of
-              our reviews. See our{" "}
+              <strong className="text-[#191919]">Affiliate links are disclosed.</strong> Some providers
+              pay us through affiliate partnerships when a visitor clicks through and signs up. That can
+              affect how providers are displayed, but it has no influence on scores or on what our
+              reviews say. Read the{" "}
               <Link href="/disclaimer" className="font-semibold text-[#0C4B75] hover:underline">full disclaimer</Link>.
             </p>
           </div>
@@ -366,21 +366,21 @@ export default async function HowWeRankPage() {
 
         {/* Medical disclaimer */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Medical disclaimer</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Is this ranking medical advice?</h2>
           <div className="rounded-xl border border-gray-200 bg-white p-6">
             <p className="text-[15px] leading-[1.75] text-gray-600">
-              topweightloss.us is not a medical provider and does not prescribe medications. The
-              information on this site is for educational and comparison purposes only and should not
-              replace professional medical advice. GLP-1 medications are prescription drugs that require
-              evaluation and supervision by a licensed healthcare provider. Always consult a qualified
-              physician before starting any weight loss medication. Individual results vary.
+              No. topweightloss.us is not a medical provider and does not prescribe medication. Content on
+              this site is for education and comparison only and is not a substitute for professional
+              medical advice. GLP-1 medications are prescription drugs that need evaluation and
+              supervision by a licensed healthcare provider. Talk to a qualified physician before you
+              start any weight loss medication. Individual results vary.
             </p>
           </div>
         </section>
 
         {/* FAQs */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Methodology FAQs</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Questions about our ranking method</h2>
           <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
             {METHOD_FAQS.map((f, i) => (
               <div key={i} className="p-6">
@@ -393,19 +393,19 @@ export default async function HowWeRankPage() {
 
         {/* CTA */}
         <section className="text-center">
-          <p className="mb-4 text-[16px] font-bold text-[#191919]">See the rankings in action</p>
+          <p className="mb-4 text-[16px] font-bold text-[#191919]">See the method applied to real providers</p>
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
               href="/"
               className="inline-flex h-[44px] items-center justify-center rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
             >
-              Compare Providers
+              View the Rankings
             </Link>
             <Link
               href="/reviews"
               className="inline-flex h-[44px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50"
             >
-              Read Our Reviews
+              Browse Provider Reviews
             </Link>
           </div>
         </section>
