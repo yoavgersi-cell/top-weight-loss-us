@@ -462,9 +462,11 @@ export const defaultConfig: SiteConfig = {
     ...WEIGHT_LOSS_HERO_TEXT,
   },
   sidebar: {
-    socialProofNumber: "13",
+    // Operator-set visitor figure (same value as treatmentshub.com/weight-loss).
+    // Update it from analytics as topweightloss.us builds its own traffic.
+    socialProofNumber: "18,400+",
     socialProofText:
-      "licensed online GLP-1 providers ranked, with prices checked at the source.",
+      "people compared GLP-1 weight loss providers on our site this month.",
     secureTitle: "Private & Secure",
     secureText:
       "Every provider we list runs its intake on secure, private systems built to protect health information.",
