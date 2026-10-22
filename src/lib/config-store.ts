@@ -162,14 +162,14 @@ const defaultExperts: Expert[] = [
     id: "research-team",
     name: "The Top Weight Loss Research Team",
     role: "Editorial & Research",
-    bio: "Our independent research team compares weight-loss providers across pricing, medications, medical oversight, and real customer experience. We update our analysis regularly and rank providers on the evidence - not on who pays us.",
+    bio: "We compare online GLP-1 providers on what they charge, which medications they prescribe, how clinicians oversee care and what customers report. Rankings follow that evidence, and we revisit them whenever prices or plans change.",
     specialties: ["Provider comparison", "GLP-1 treatment", "Pricing analysis"],
   },
   {
     id: "content-reviewer",
     name: "Editorial Review Desk",
     role: "Clinical Content Reviewer",
-    bio: "Every provider review and comparison is checked for accuracy and clarity before it publishes, and revisited as programs, pricing, and medications change.",
+    bio: "Each review and comparison is checked for accuracy and readability before publishing, then rechecked when a provider changes its plans, prices or medications.",
     specialties: ["Accuracy review", "Editorial standards"],
   },
 ];

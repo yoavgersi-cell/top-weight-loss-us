@@ -18,7 +18,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.topweightloss.us/switch-from-ozempic";
 const TITLE = "Switch From Ozempic to Compounded Semaglutide";
 const DESCRIPTION =
-  "Spending $1,000+/month on Ozempic or Wegovy? Compounded semaglutide, the same GLP-1 molecule, costs $49-$299/month online. Here is how the switch works in 2026.";
+  "Spending $1,000+/month on Ozempic or Wegovy? Compounded semaglutide, the same GLP-1 molecule, costs $49-$199/month online. Here is how the switch works in 2026.";
 
 export const metadata: Metadata = {
   title: { absolute: `${TITLE} | Top Weight Loss` },

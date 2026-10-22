@@ -16,7 +16,7 @@ import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 export const revalidate = 60;
 
 const CANONICAL = "https://www.topweightloss.us/cheapest-glp1";
-const TITLE = "Cheapest GLP-1 2026: Prices From 8 Providers ($49-$299)";
+const TITLE = "Cheapest GLP-1 2026: Prices From 9 Providers ($49-$299)";
 const DESCRIPTION =
   "Cheapest GLP-1 options in 2026 ranked by verified price: compounded semaglutide from $49/month and tirzepatide from $89/month, with every plan condition shown.";
 
@@ -106,7 +106,7 @@ export default async function CheapestGlp1Page() {
         <div className="mx-auto max-w-[1000px] px-4 pb-10 pt-10 sm:px-6 sm:pb-12 sm:pt-12">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Cheapest GLP-1" }]} />
           <h1 className="max-w-[760px] text-[27px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">
-            Cheapest GLP-1 in 2026: Verified Prices From 8 Providers, Ranked
+            Cheapest GLP-1 in 2026: Verified Prices From 9 Providers, Ranked
           </h1>
           <p className="mt-3 max-w-[680px] text-[15.5px] leading-relaxed text-gray-500">
             Each price on this page comes from the provider&rsquo;s own published rates, and any
@@ -155,10 +155,10 @@ export default async function CheapestGlp1Page() {
         {/* The index itself */}
         <div className="mb-3 flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5 text-[#0C4B75]" strokeWidth={2} />
-          <h2 className="text-[22px] font-bold text-[#191919]">How do GLP-1 prices compare across 8 providers?</h2>
+          <h2 className="text-[22px] font-bold text-[#191919]">How do GLP-1 prices compare across 9 providers?</h2>
         </div>
         <p className="mb-5 max-w-[680px] text-[14px] text-gray-500">
-          The 2026 GLP-1 price index ranks eight providers by published semaglutide price. Every
+          The 2026 GLP-1 price index ranks nine providers by published semaglutide price. Every
           Trustpilot figure shown is genuine, and when a provider has no public rating we note that
           rather than fill the gap.
         </p>
@@ -196,6 +196,7 @@ export default async function CheapestGlp1Page() {
                   ["Medvi", "12 months at the $99 promo (regular $199), all-inclusive", "$1,188", "$12,600"],
                   ["HealthRx", "$1,188 paid up front at checkout (works out to $99/mo)", "$1,188", "$12,600"],
                   ["DirectMeds", "12 months at $147, same at every dose", "$1,764", "$12,024"],
+                  ["Sprout", "12 months at the $149 starting price (first-month offer not applied)", "$1,788", "$12,000"],
                   ["TrimRx", "12 months at $149, one price for every dose", "$1,788", "$12,000"],
                   ["SHED", "$159 for month one (20% off), then 11 months at $199", "$2,348", "$11,440"],
                 ].map(([name, math, total, saved], i) => (

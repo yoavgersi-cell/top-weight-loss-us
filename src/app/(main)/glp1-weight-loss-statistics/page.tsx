@@ -9,7 +9,7 @@ import { PRICE_INDEX, BRAND_SHELF, PRICE_INDEX_VERIFIED, PRICE_CHANGELOG } from 
 export const revalidate = 60;
 
 const CANONICAL = "https://www.topweightloss.us/glp1-weight-loss-statistics";
-const TITLE = "GLP-1 Prices & Weight Loss Statistics: September 2026 Index";
+const TITLE = "GLP-1 Prices & Weight Loss Statistics: October 2026 Index";
 const DESCRIPTION =
   "Compounded semaglutide and tirzepatide prices at 9 US telehealth providers, verified and dated with a public change log, plus STEP, SURMOUNT and SCALE trial results.";
 
@@ -101,7 +101,7 @@ export default async function StatisticsPage() {
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[900px] px-4 py-10 sm:px-6 sm:py-14">
           <h1 className="text-[26px] font-extrabold text-[#191919] sm:text-[34px]">
-            GLP-1 Prices &amp; Weight Loss Statistics: September 2026 Index
+            GLP-1 Prices &amp; Weight Loss Statistics: October 2026 Index
           </h1>
           <p className="mt-3 max-w-[640px] text-[15px] leading-relaxed text-gray-500">
             How much compounded semaglutide and tirzepatide cost at {PROVIDER_COUNT} US telehealth
@@ -129,7 +129,7 @@ export default async function StatisticsPage() {
             How much does compounded GLP-1 cost per month? {PROVIDER_COUNT} providers surveyed
           </h2>
           <p className="mb-5 max-w-[680px] text-[15px] leading-[1.7] text-gray-600">
-            As of September 2026, <strong className="text-[#191919]">compounded semaglutide costs
+            As of October 2026, <strong className="text-[#191919]">compounded semaglutide costs
             {" "}{usd(SEMA_MIN)} to {usd(SEMA_MAX)} a month</strong> and{" "}
             <strong className="text-[#191919]">compounded tirzepatide costs {usd(TIRZ_MIN)} to{" "}
             {usd(TIRZ_MAX)} a month</strong> across the {PROVIDER_COUNT} US telehealth providers we
@@ -167,7 +167,7 @@ export default async function StatisticsPage() {
           </div>
           <p className="mt-2 text-[12px] text-gray-400">
             Source: Top Weight Loss GLP-1 price index covering {PROVIDER_COUNT} providers, published
-            prices verified as of September 2026. Brand prices are manufacturer or pharmacy list
+            prices verified as of October 2026. Brand prices are manufacturer or pharmacy list
             prices, which insurance and manufacturer coupons can reduce. For a provider-by-provider
             breakdown, see our{" "}
             <Link href="/cheapest-glp1" className="font-semibold text-[#0C4B75] hover:underline">

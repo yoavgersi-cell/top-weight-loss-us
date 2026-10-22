@@ -893,7 +893,7 @@ export default async function Glp1ProviderComparisonPage() {
             <li className="list-disc"><strong className="text-[#191919]">Cancellation rules.</strong> ro requires 48 hours&rsquo; notice; embody, altRx and Medvi require 72 hours; and prepaid plans at altRx and TrimRx are non-refundable.</li>
           </ul>
           <p className="mb-3 text-[15px] font-semibold text-[#191919]">What do three months of GLP-1 treatment cost? An example with verified prices</p>
-          <p className="mb-3 text-[14px] text-gray-500">Based on the September 2026 index and ro&rsquo;s August 2026 pricing; cash pay, semaglutide, no insurance, for a hypothetical patient who continues treatment.</p>
+          <p className="mb-3 text-[14px] text-gray-500">Based on the October 2026 index and ro&rsquo;s August 2026 pricing; cash pay, semaglutide, no insurance, for a hypothetical patient who continues treatment.</p>
           <div className="mb-4 overflow-x-auto rounded-xl border border-gray-200 bg-white">
             <table className="w-full min-w-[640px] text-left text-[14px]">
               <caption className="sr-only">Example three-month cost for three GLP-1 routes using verified prices</caption>

@@ -442,35 +442,32 @@ export interface SiteConfig {
   experts?: Expert[];
 }
 
-// Code-authoritative hero text for the weight-loss homepage. Lives here (not
-// only in the blob) because the h1 doubles as the page's meta title - it is
-// the main lever for the "best telehealth weight loss / online GLP-1
-// providers" query cluster, which GSC shows getting zero impressions on this
-// page. The blob merge in config-store applies this over any CMS-saved hero.
+// Homepage hero text. The h1 doubles as the homepage meta title, so it leads
+// with the "best GLP-1 weight loss providers" query.
 export const WEIGHT_LOSS_HERO_TEXT = {
   updatedLabel: "Last Updated: October 2026",
   h1: "Best GLP-1 Weight Loss Providers of 2026",
-  h2: "The top online GLP-1 weight loss programs, ranked and verified",
+  h2: "13 online programs, compared on real prices",
   description:
-    "Licensed GLP-1 clinics ranked by verified price - from $49/mo semaglutide and $89/mo tirzepatide.",
+    "Compounded semaglutide starts at $49/mo and tirzepatide at $89/mo. Every price below was checked on the provider's own site.",
 };
 
 export const defaultConfig: SiteConfig = {
   siteName: "Top Weight Loss",
   disclosureText:
-    "Some providers featured on this site may compensate us. This may affect the order and placement of listings but does not influence our editorial ratings or reviews.",
+    "We may earn a commission from providers listed here, which can affect where they appear but never our ratings or reviews.",
   hero: {
     backgroundImageUrl: "/hero.png",
-    imageAlt: "Weight loss medications",
+    imageAlt: "GLP-1 weight loss injection pen",
     ...WEIGHT_LOSS_HERO_TEXT,
   },
   sidebar: {
     socialProofNumber: "13",
     socialProofText:
       "licensed online GLP-1 providers ranked, with prices checked at the source.",
-    secureTitle: "Secure & Confidential",
+    secureTitle: "Private & Secure",
     secureText:
-      "All providers featured on our platform use secure systems to protect your personal information.",
+      "Every provider we list runs its intake on secure, private systems built to protect health information.",
     featuredImageUrl: "/sidebar-featured.webp",
     featuredImageAlt:
       "altRx - physician-guided GLP-1 weight loss treatment",

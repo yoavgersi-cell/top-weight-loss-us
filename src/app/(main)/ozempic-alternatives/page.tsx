@@ -53,7 +53,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What is a cheaper alternative to Mounjaro?",
     answer:
-      "The most common cheaper alternative to Mounjaro is compounded tirzepatide prescribed online by a telehealth provider. It is the same dual GLP-1/GIP molecule that Mounjaro contains, usually priced well under the brand list price. Without insurance, brand Mounjaro and Zepbound can cost more than $1,000 a month, while telehealth providers often advertise compounded tirzepatide from around $150-$300 a month, depending on provider and dose.",
+      "The most common cheaper alternative to Mounjaro is compounded tirzepatide prescribed online by a telehealth provider. It is the same dual GLP-1/GIP molecule that Mounjaro contains, usually priced well under the brand list price. Without insurance, brand Mounjaro and Zepbound can cost more than $1,000 a month, while telehealth providers often advertise compounded tirzepatide for $89-$299 a month, depending on provider and dose.",
   },
   {
     question: "Can I get an Ozempic alternative without insurance?",
@@ -188,7 +188,7 @@ export default async function OzempicAlternativesPage() {
           </div>
           <p className="mb-4">
             Compounded versions typically cost{" "}
-            <strong className="text-[#191919]">around $99-$300 a month</strong>, compared with{" "}
+            <strong className="text-[#191919]">around $49-$299 a month</strong>, compared with{" "}
             <strong className="text-[#191919]">more than $1,000 a month at list price</strong> for
             brand-name Ozempic, Wegovy, Mounjaro or Zepbound without insurance. Insurance coverage for
             weight loss is patchy. Licensed telehealth providers partner with compounding pharmacies to
