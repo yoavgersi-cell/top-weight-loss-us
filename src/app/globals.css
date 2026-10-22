@@ -1,0 +1,246 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8F8F8;
+  --foreground: #191919;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  /* Tailwind's gray-400 (#9ca3af) is 2.5:1 on white and failed the WCAG AA
+     contrast audit on every page (dates, captions, labels, breadcrumbs). It
+     is the site's "muted text" colour, so it is darkened once here to
+     #626c7c (5.3:1 on white, 4.8:1 on the article hero tints) rather than touched in
+     hundreds of class lists. Oct 9, 2026. */
+  --color-gray-400: #626c7c;
+  /* gray-500 sat at 4.4:1 on the site's tinted panels (bg-[#0C4B75]/[0.03]);
+     one step darker clears AA everywhere it is used. */
+  --color-gray-500: #57606f;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Hub vs legacy brand swap. The TopWeightLoss brand is the DEFAULT in the
+   server-rendered HTML - topweightloss.us is the primary domain post-migration,
+   so crawlers and no-JS clients see the right brand without waiting for a
+   script. `data-legacy` is set (pre-paint) on <html> by an inline script only
+   when served from the legacy topweightloss.io host (which now 301s to the hub
+   anyway), swapping the TopWeightLoss brand in there. Same cached HTML serves
+   both domains. */
+.hub-brand {
+  display: inline-flex !important;
+}
+.hub-name {
+  display: inline !important;
+}
+.legacy-brand,
+.legacy-name {
+  display: none !important;
+}
+html[data-legacy] .hub-brand,
+html[data-legacy] .hub-name {
+  display: none !important;
+}
+html[data-legacy] .legacy-brand {
+  display: flex !important;
+}
+html[data-legacy] .legacy-name {
+  display: inline !important;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes logoFade {
+  0% { opacity: 0; }
+  15% { opacity: 0.5; }
+  75% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+@keyframes socialProofPop {
+  0% { opacity: 0; transform: translateY(10px) scale(0.9); }
+  60% { opacity: 1; transform: translateY(-2px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes socialProofReveal {
+  0% { opacity: 0; max-height: 0; transform: translateY(-8px); }
+  100% { opacity: 1; max-height: 72px; transform: translateY(0); }
+}
+
+@keyframes tugSweep {
+  0% { transform: translateX(-160%); }
+  100% { transform: translateX(320%); }
+}
+
+/* ───── Logo marquee (single-row, infinite, CSS-only) ─────
+   The track holds the logo set twice back-to-back; translating it exactly
+   -50% lands the second copy where the first began, so the loop is seamless
+   with no JS. Uniform right-margins (not flex gap) keep the spacing even
+   across the seam. Pauses on hover and honors reduced-motion. */
+@keyframes logoMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.logo-marquee-track {
+  animation: logoMarquee 45s linear infinite;
+  width: max-content;
+}
+
+.logo-marquee:hover .logo-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee-track {
+    animation: none;
+  }
+}
+
+/* ───── Rich article typography (.article-body) ─────
+   Article section bodies are author-written HTML (from code seeds or the CMS).
+   These rules give plain semantic markup - p, ul, ol, table, strong - an
+   editorial, readable rhythm, plus two purpose classes:
+   .qa       an "at a glance" callout box (quick answer / snippet bait)
+   .cta-row  an inline text-link call-to-action row                       */
+
+.article-body > p + p,
+.article-body p + p {
+  margin-top: 0.9em;
+}
+.article-body strong {
+  color: #191919;
+  font-weight: 600;
+}
+.article-body h3 {
+  margin: 1.5em 0 0.45em;
+  font-size: 17.5px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #191919;
+}
+.article-body blockquote {
+  margin: 0.9em 0;
+  padding-left: 1em;
+  border-left: 3px solid #0c4b75;
+  color: #374151;
+}
+.article-body ul,
+.article-body ol {
+  margin: 0.9em 0;
+  padding-left: 1.35em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45em;
+}
+.article-body ul li {
+  list-style: none;
+  position: relative;
+}
+.article-body ul li::before {
+  content: "";
+  position: absolute;
+  left: -1.05em;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #0c4b75;
+}
+.article-body ol li {
+  list-style: decimal;
+}
+.article-body table {
+  width: 100%;
+  margin: 1.15em 0;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  line-height: 1.5;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.article-body table th {
+  text-align: left;
+  font-weight: 700;
+  color: #191919;
+  background: #f8fafc;
+  padding: 10px 14px;
+  border-bottom: 2px solid #e5e7eb;
+}
+.article-body table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #4b5563;
+  vertical-align: top;
+}
+.article-body table tr:last-child td {
+  border-bottom: none;
+}
+.article-body table td:first-child {
+  font-weight: 600;
+  color: #191919;
+}
+@media (max-width: 640px) {
+  .article-body table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+.article-body .qa {
+  margin: 0 0 1.1em;
+  padding: 14px 18px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-left: 3px solid #0c4b75;
+  border-radius: 12px;
+  color: #374151;
+}
+.article-body .qa strong:first-child {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #0c4b75;
+}
+.article-body .cta-row {
+  margin: 1em 0;
+}
+.article-body .cta-row a {
+  font-weight: 700;
+  color: #0c4b75;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(12, 75, 117, 0.25);
+  padding-bottom: 1px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.article-body .cta-row a:hover {
+  color: #093d61;
+  border-bottom-color: #093d61;
+}

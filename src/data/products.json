@@ -1,0 +1,364 @@
+[
+  {
+    "id": "altrx",
+    "rank": 2,
+    "name": "altRx",
+    "slug": "altrx",
+    "tagline": "The #1 most affordable GLP-1 program, from $89/month",
+    "logo": "/logos/altrx.svg",
+    "rating": 9.7,
+    "ratingLabel": "Exceptional",
+    "reviewCount": 14200,
+    "highlights": [
+      "Compounded GLP-1 from $89/mo, GLP-1 + GIP from $149/mo",
+      "Brand-name options too - Zepbound and Wegovy",
+      "No insurance required; Buy Now, Pay Later available"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://altrx.com/glp1/offer-v9?sub1=1952&utm_source=partners&utm_campaign=id_21&utm_affiliate=21&uid=95&oid=108&affid=21&pub=1952&oid2=5043&affid2=1952",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "eden",
+    "rank": 3,
+    "name": "Eden",
+    "slug": "eden",
+    "tagline": "Compounded GLP-1 at one flat price - $99 semaglutide, $129 tirzepatide, every month",
+    "logo": "/logos/eden.png",
+    "rating": 9.6,
+    "ratingLabel": "Excellent",
+    "reviewCount": 4917,
+    "highlights": [
+      "Semaglutide $99/mo, tirzepatide $129/mo - the same price at every dose",
+      "Doctor-guided care with 24/7 human support, no insurance needed",
+      "No annual or long-term plans required"
+    ],
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1435&aff_id=12904",
+    "ctaText": "View Plan",
+    "description": "",
+    "specialOffer": null
+  },
+  {
+    "id": "ro",
+    "rank": 1,
+    "name": "Ro",
+    "slug": "ro",
+    "tagline": "Simple Online Weight Loss Care",
+    "logo": "/logos/ro.svg",
+    "rating": 9.8,
+    "ratingLabel": "Exceptional",
+    "reviewCount": 8430,
+    "highlights": [
+      "Licensed providers review every treatment plan",
+      "Medication options tailored to your goals",
+      "Convenient online follow-ups and support"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1662&aff_id=12904",
+    "ctaText": "Visit Site",
+    "description": ""
+  },
+  {
+    "id": "trimrx",
+    "rank": 5,
+    "name": "TrimRx",
+    "slug": "trimrx",
+    "tagline": "Affordable Access To GLP-1 Programs",
+    "logo": "/logos/trimrx.svg",
+    "rating": 9.4,
+    "ratingLabel": "Excellent",
+    "reviewCount": 5840,
+    "highlights": [
+      "Competitive monthly pricing",
+      "Flexible treatment plans available",
+      "Ongoing clinical guidance included"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://trimrx.com/glp1/offer-v4-meta?catalog=winter&discount=winter140&offer_url_id=29&oid=1&affid=40&oid2=4461&affid2=1952",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "shed",
+    "rank": 6,
+    "name": "SHED",
+    "slug": "shed",
+    "tagline": "Get 30% off your first month",
+    "logo": "/logos/shed.svg",
+    "rating": 9.3,
+    "ratingLabel": "Excellent",
+    "reviewCount": 4120,
+    "highlights": [
+      "Lose up to 20% of body weight",
+      "Science-backed GLP-1 medications",
+      "Multiple treatment options available"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1516&aff_id=12904",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "embody",
+    "rank": 7,
+    "name": "embody",
+    "slug": "embody",
+    "tagline": "Compounded GLP-1 from $69/month, shipped in 1-2 days",
+    "logo": "/logos/embody.svg",
+    "rating": 9.1,
+    "ratingLabel": "Excellent",
+    "reviewCount": 3650,
+    "highlights": [
+      "Semaglutide $69/mo, tirzepatide $119/mo - flat pricing",
+      "Free 1-2 day shipping, no insurance required",
+      "Licensed doctors, LegitScript-certified, 503A pharmacies"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1548&aff_id=12904",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "wellmedr",
+    "rank": 8,
+    "name": "wellmedr",
+    "slug": "wellmedr",
+    "tagline": "AI-driven telehealth: compounded GLP-1/GIP + longevity care",
+    "logo": "/logos/wellmedr.svg",
+    "rating": 8.9,
+    "ratingLabel": "Very Good",
+    "reviewCount": 2980,
+    "highlights": [
+      "Compounded GLP-1/GIP (tirzepatide) - 50% off first month",
+      "GLP-1 + NAD+/B12 microdose; board-certified specialists",
+      "Broader platform: TRT, NAD+, hair & sexual health"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1593&aff_id=12905",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "medvi",
+    "rank": 10,
+    "name": "Medvi",
+    "slug": "medvi",
+    "tagline": "Medical Weight Loss Made Simple",
+    "logo": "/logos/medvi.svg",
+    "rating": 8.5,
+    "ratingLabel": "Very Good",
+    "reviewCount": 2310,
+    "highlights": [
+      "Prescription-based treatment options",
+      "Provider support available throughout the program",
+      "Straightforward online enrollment process"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1265&aff_id=12904",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "sprout",
+    "rank": 11,
+    "name": "Sprout",
+    "slug": "sprout",
+    "tagline": "Save $200 on your first month",
+    "logo": "/logos/sprout.svg",
+    "rating": 8.4,
+    "ratingLabel": "Very Good",
+    "reviewCount": 1890,
+    "highlights": [
+      "Personalized GLP-1 treatment plans",
+      "Prescription shipped within 2 days",
+      "Designed around your health goals"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1286&aff_id=12905",
+    "ctaText": "Get Started",
+    "description": ""
+  },
+  {
+    "id": "wellorithm",
+    "rank": 12,
+    "name": "Wellorithm",
+    "slug": "wellorithm",
+    "tagline": "Start today for just $147",
+    "logo": "/logos/wellorithm.svg",
+    "rating": 8.2,
+    "ratingLabel": "Very Good",
+    "reviewCount": 1450,
+    "highlights": [
+      "No membership or hidden fees",
+      "Free shipping included nationwide",
+      "HSA/FSA eligible treatment plans"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1565&aff_id=12904",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "directmeds",
+    "rank": 13,
+    "name": "DirectMeds",
+    "slug": "directmeds",
+    "tagline": "Plans starting at just $147",
+    "logo": "/logos/directmeds.svg",
+    "rating": 8.0,
+    "ratingLabel": "Good",
+    "reviewCount": 980,
+    "highlights": [
+      "Free shipping in 1-2 days",
+      "No insurance required to qualify",
+      "Online medical visit included"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1304&aff_id=12904",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "found",
+    "rank": 14,
+    "name": "found",
+    "slug": "found",
+    "tagline": "Up to $100 off your membership plan",
+    "logo": "/logos/found.svg",
+    "rating": 8.0,
+    "ratingLabel": "Good",
+    "reviewCount": 3200,
+    "highlights": [
+      "Lose up to 20% of body weight",
+      "Affordable GLP-1 delivered fast",
+      "Covered by major insurance plans"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://joinfound.com/",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "yucca",
+    "rank": 15,
+    "name": "Yucca",
+    "slug": "yucca",
+    "tagline": "Weight loss plans from $146",
+    "logo": "/logos/yucca.svg",
+    "rating": 8.0,
+    "ratingLabel": "Good",
+    "reviewCount": 1100,
+    "highlights": [
+      "Licensed providers in all 50 states",
+      "Free expedited prescription shipping",
+      "Trusted by over 20,000 patients"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://tryyucca.com/",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "skinnyrx",
+    "rank": 19,
+    "name": "skinnyRx",
+    "slug": "skinnyrx",
+    "tagline": "Physician-Prescribed GLP-1 Weight Loss",
+    "logo": "/logos/skinnyrx.svg",
+    "rating": 8.0,
+    "ratingLabel": "Good",
+    "reviewCount": 2100,
+    "highlights": [
+      "Physician-prescribed GLP-1 medications",
+      "Compounded semaglutide and tirzepatide",
+      "Fast home delivery nationwide"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://skinnyrx.com/",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "healthrx",
+    "rank": 20,
+    "name": "HealthRx",
+    "slug": "healthrx",
+    "tagline": "GLP-1 program from $99/month - clinician consult to overnight delivery",
+    "logo": "/logos/healthrx.svg",
+    "rating": 0,
+    "ratingLabel": "",
+    "reviewCount": 0,
+    "highlights": [
+      "Semaglutide from $99/mo on a 12-month prepaid plan",
+      "Free overnight cold-chain shipping on every plan",
+      "LegitScript-certified; licensed 503A pharmacies"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1630&aff_id=12905&url_id=12442",
+    "ctaText": "Check Eligibility",
+    "description": ""
+  },
+  {
+    "id": "calibrate",
+    "rank": 21,
+    "name": "Calibrate",
+    "slug": "calibrate",
+    "tagline": "One-year metabolic reset program with 1:1 coaching and insurance-covered GLP-1 medication",
+    "logo": "/logos/calibrate.svg",
+    "rating": 0,
+    "ratingLabel": "",
+    "reviewCount": 0,
+    "highlights": [
+      "Structured one-year metabolic reset program",
+      "1:1 video coaching alongside medication",
+      "Works through your insurance for GLP-1 coverage"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://www.joincalibrate.com/",
+    "ctaText": "Visit Site",
+    "description": ""
+  },
+  {
+    "id": "sequence",
+    "rank": 22,
+    "name": "Sequence",
+    "slug": "sequence",
+    "tagline": "WeightWatchers' clinician-led GLP-1 program with insurance coordination",
+    "logo": "/logos/sequence.svg",
+    "rating": 0,
+    "ratingLabel": "",
+    "reviewCount": 0,
+    "highlights": [
+      "Clinician-led GLP-1 telehealth from WeightWatchers",
+      "Insurance coordination and prior-auth support",
+      "Integrated WeightWatchers behavioral program"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://www.weightwatchers.com/us/clinic",
+    "ctaText": "Visit Site",
+    "description": ""
+  },
+  {
+    "id": "bmimd",
+    "rank": 23,
+    "name": "bmiMD",
+    "slug": "bmimd",
+    "tagline": "Compounded GLP-1 weight-loss care, prescribed online and shipped cold-chain",
+    "logo": "/logos/bmimdlogo.webp",
+    "smallLogo": "/logos/bmimdlogo.webp",
+    "rating": 8.7,
+    "ratingLabel": "Very Good",
+    "reviewCount": 870,
+    "highlights": [
+      "Compounded semaglutide & tirzepatide, plus microdose options",
+      "Cold-chain shipping to your door",
+      "4.4 on Trustpilot across 870 reviews",
+      "Licensed provider reviews every intake; money-back if not approved"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1332&aff_id=12904",
+    "ctaText": "View Plan",
+    "description": ""
+  }
+]
