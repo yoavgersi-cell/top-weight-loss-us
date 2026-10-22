@@ -666,7 +666,7 @@ export const seedTrustpilot: Record<string, { rating?: string; reviewCount?: str
     // Aggregate re-verified Oct 12, 2026 from TrimRx's claimed Trustpilot
     // profile (operator-supplied screenshot): 3.8 across 5,392 reviews (was 3.7 / 5,670 on Sep 24),
     // Weight Loss Service category, claimed Aug 2024. (Was 3.6 / 5,497.)
-    rating: "3.7",
+    rating: "3.8",
     reviewCount: "5,392",
     reviews: [
       // Sep 24, 2026 batch (operator-supplied screenshots of the profile's

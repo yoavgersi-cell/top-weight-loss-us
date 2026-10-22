@@ -166,7 +166,7 @@ const ROWS: Row[] = [
     pharmacy: "Compounded medication only; pharmacy not identified in our research",
     dosePricing: "One price at every dose; no long-term contract; optional discounts for multi-month plans",
     likes: "TrimRx's 5-star Trustpilot reviews from the same week praise careful screening, an easy intake, transparent pricing, quick support responses and clearly stated 2-3 day shipping.",
-    complaints: "TrimRx's 2-star reviews from the same week concern fulfillment and billing rather than the clinical side: a box that arrived three days late with warm cold packs; a prepaid 6-month plan whose second shipment was 30 days overdue while chat and phone went unanswered; a cancelled prescription that Affirm continued trying to bill; and a first order that showed another person's prescription in the portal. At 3.7 from 5,392 reviews, TrimRx has the lowest aggregate in our table. Its $149 is above the budget tier for the same molecule and comes with no guarantee.",
+    complaints: "TrimRx's 2-star reviews from the same week concern fulfillment and billing rather than the clinical side: a box that arrived three days late with warm cold packs; a prepaid 6-month plan whose second shipment was 30 days overdue while chat and phone went unanswered; a cancelled prescription that Affirm continued trying to bill; and a first order that showed another person's prescription in the portal. At 3.8 from 5,392 reviews, TrimRx has the lowest aggregate in our table. Its $149 is above the budget tier for the same molecule and comes with no guarantee.",
   },
   {
     id: "shed",
@@ -244,7 +244,7 @@ const PATTERNS: { title: string; body: string }[] = [
   },
   {
     title: "A large review count steadies a score but does not make experiences uniform",
-    body: "Medvi's 4.3 from 14,987 reviews coexists with serious 1-star accounts about renewals and refunds. DirectMeds, welludr and SHED all average 4.6, from 16,390, 2,188 and 1,134 reviews respectively. Sprout's 4.1 rests on 188 reviews, while TrimRx (3.7) and embody (3.8) have large, mixed records. For every provider, the repeated complaints are operational (shipping, billing, reaching support) rather than about the clinical review.",
+    body: "Medvi's 4.3 from 14,987 reviews coexists with serious 1-star accounts about renewals and refunds. DirectMeds, welludr and SHED all average 4.6, from 16,390, 2,188 and 1,134 reviews respectively. Sprout's 4.1 rests on 188 reviews, while TrimRx and embody (both 3.8) have large, mixed records. For every provider, the repeated complaints are operational (shipping, billing, reaching support) rather than about the clinical review.",
   },
 ];
 

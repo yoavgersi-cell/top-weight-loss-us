@@ -465,15 +465,15 @@ export const defaultConfig: SiteConfig = {
     ...WEIGHT_LOSS_HERO_TEXT,
   },
   sidebar: {
-    socialProofNumber: "18,400+",
+    socialProofNumber: "13",
     socialProofText:
-      "people compared weight loss programs on our platform this month.",
+      "licensed online GLP-1 providers ranked, with prices checked at the source.",
     secureTitle: "Secure & Confidential",
     secureText:
       "All providers featured on our platform use secure systems to protect your personal information.",
     featuredImageUrl: "/sidebar-featured.webp",
     featuredImageAlt:
-      "ALT RX - Physician-guided GLP-1 weight loss treatment",
+      "altRx - physician-guided GLP-1 weight loss treatment",
     featuredImageLink: "#",
   },
   ranking: {

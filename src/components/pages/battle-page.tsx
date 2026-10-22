@@ -697,7 +697,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       "@type": "Organization",
       name: ctx.brandName,
       url: ctx.origin,
-      logo: { "@type": "ImageObject", url: `${ctx.origin}/treatmentshub.png` },
+      logo: { "@type": "ImageObject", url: `${ctx.origin}/logo.png` },
     },
     mainEntityOfPage: canonicalUrl(ctx, `/${battle.slug}`),
   };
