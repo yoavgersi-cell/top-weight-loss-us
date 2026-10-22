@@ -663,7 +663,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "Which telehealth providers offer Ozempic alternatives?",
-        body: `Telehealth providers that sell compounded semaglutide or tirzepatide are the most affordable route:<ul><li><a href="/reviews/altrx">altRx</a>: both medications with clear pricing.</li><li><a href="/reviews/trimrx">TrimRx</a>: some of the lowest pricing.</li><li><a href="/reviews/shed">SHED</a>: personalized treatment plans.</li></ul>All of them include physician oversight, consultations and home delivery.`,
+        body: `Telehealth providers that sell compounded semaglutide or tirzepatide are the most affordable route:<ul><li><a href="/reviews/altrx">altRx</a>: both medications with clear pricing.</li><li><a href="/reviews/trimrx">TrimRx</a>: mid-market pricing, with one semaglutide price at every dose.</li><li><a href="/reviews/shed">SHED</a>: personalized treatment plans.</li></ul>All of them include physician oversight, consultations and home delivery.`,
       },
       {
         heading: "How much do Ozempic alternatives cost?",
@@ -711,7 +711,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "Which providers offer the cheapest Wegovy alternatives?",
-        body: `Many telehealth providers sell compounded semaglutide for a fraction of Wegovy's price:<ul><li><a href="/reviews/trimrx">TrimRx</a> and <a href="/reviews/directmeds">DirectMeds</a>: the lowest pricing.</li><li><a href="/reviews/altrx">altRx</a>: the widest range of medications.</li></ul>All include physician oversight and home delivery. See the full list of <a href="/cheapest-glp1">cheapest options</a>.`,
+        body: `Many telehealth providers sell compounded semaglutide for a fraction of Wegovy's price:<ul><li><a href="/reviews/trimrx">TrimRx</a> and <a href="/reviews/directmeds">DirectMeds</a>: one flat semaglutide price at every dose ($149 and $147).</li><li><a href="/reviews/altrx">altRx</a>: the widest range of medications.</li></ul>All include physician oversight and home delivery. See the full list of <a href="/cheapest-glp1">cheapest options</a>.`,
       },
       {
         heading: "Which Wegovy alternative should you choose?",
