@@ -1,25 +1,20 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Find Your Best Weight Loss Provider Match - Free Quiz",
+  title: "GLP-1 Provider Match Quiz: Find Your Best Fit (Free)",
   description:
-    "Answer a few quick questions and get a personalized weight loss provider recommendation. Compare GLP-1 programs based on your goals, budget, and location.",
+    "Five short questions on your goal, budget, priorities and state, then a matched GLP-1 provider with verified prices. Free, no email needed.",
   alternates: {
     canonical: "https://www.topweightloss.us/find-your-match",
   },
   openGraph: {
-    title: "Find Your Best Weight Loss Provider Match",
+    title: "GLP-1 Provider Match Quiz",
     description:
-      "Take our free quiz and get matched with the best weight loss provider for your goals and budget.",
+      "Answer five short questions and see which online GLP-1 provider fits your goal, budget and state.",
     url: "https://www.topweightloss.us/find-your-match",
   },
 };
 
 export default function QuizLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <h1 className="sr-only">Find Your Best Weight Loss Provider Match</h1>
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }
