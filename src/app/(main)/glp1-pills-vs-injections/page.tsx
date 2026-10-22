@@ -36,14 +36,14 @@ const HERO_COLOR = "#EDF2F8";
 const READ_TIME = "16 min read";
 
 export const metadata: Metadata = {
-  title: "GLP-1 Pills vs Injections (2026): Results, Cost & Routine",
+  title: "GLP-1 Pills vs Injections 2026: Weight Loss, Price, Routine",
   description:
-    "GLP-1 pills vs injections in 2026: the Wegovy pill and Foundayo against Wegovy and Zepbound on trial results, price by route, side effects and daily routine.",
+    "GLP-1 pills vs injections: the Wegovy pill (13.6%) and Foundayo (11.2%) against Wegovy (14.9%) and Zepbound (20.9%) on results, price by route and daily routine.",
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "GLP-1 Pills vs Injections (2026): Results, Cost & Routine",
+    title: "GLP-1 Pills vs Injections 2026: Weight Loss, Price, Routine",
     description:
-      "The two FDA-approved GLP-1 pills against the weekly injections: trial results, verified prices, side effects and how to choose.",
+      "How the FDA-approved Wegovy pill and Foundayo stack up against weekly Wegovy and Zepbound pens: trial results, verified prices, shared side effects and which to pick.",
     url: CANONICAL,
     type: "article",
   },
@@ -82,55 +82,55 @@ const SRC = {
 };
 
 const QUICK_ANSWER =
-  "Injections still produce the largest average weight loss: tirzepatide (Zepbound) reached 20.9% at the top dose in SURMOUNT-1 and semaglutide (Wegovy) 14.9% in STEP 1. The two FDA-approved pills are close behind on semaglutide's side of that gap: the Wegovy pill produced 13.6% in OASIS 4, which its authors describe as similar to the weekly injection, and Foundayo 11.2% in ATTAIN-1. Pills win on routine - no needle, and Foundayo has no food or water rules - but at cash prices the brand pills ($149-$349 a month) and brand pens ($1,149 and up) both sit far above compounded injections ($49-$299). With commercial coverage either pill can be $25 a month, and on Medicare's pilot both are $50.";
+  "GLP-1 injections still deliver the most weight loss on average, but the best pill is now close. Injectable tirzepatide (Zepbound) averaged 20.9% at its top dose in SURMOUNT-1 and injectable semaglutide (Wegovy) 14.9% in STEP 1. Of the two FDA-approved pills, the Wegovy pill averaged 13.6% in OASIS 4, which its authors call similar to the weekly injection, and Foundayo averaged 11.2% in ATTAIN-1. Pills are easier for people who avoid needles, and Foundayo has no food or water rules. Paying cash, both brand pills ($149-$349 a month) and brand pens ($1,149 and up) cost far more than compounded injections ($49-$299). With commercial coverage either pill can drop to $25 a month, and Medicare's pilot charges $50 for both.";
 
 const KEY_TAKEAWAYS = [
-  "Four products, two categories. Injections: Wegovy (semaglutide) and Zepbound (tirzepatide), weekly pens approved in 2021 and 2023. Pills: the Wegovy pill (oral semaglutide 25 mg, approved December 2025) and Foundayo (orforglipron, approved April 1, 2026), both daily tablets.",
-  "On the published trial results, injectable tirzepatide leads (up to 20.9% mean weight loss), the Wegovy pill and injectable semaglutide are close to each other (13.6% and 14.9%), and Foundayo trails (11.2%). The trials are separate, not head to head.",
-  "The daily routine is the practical difference: the Wegovy pill needs an empty stomach, a sip of water and a 30-minute wait; Foundayo can be taken any time; the injections are once a week.",
-  "Price depends on the route more than the format. Verified: the Wegovy pill at Ro is $149 the first month then $299 plus membership; compounded injections run $49-$299 a month. Reported: Foundayo $149-$349 self-pay, $25 with commercial coverage for either pill, $50 on Medicare's GLP-1 Bridge.",
+  "The comparison involves four approved products. The weekly injections are Wegovy (semaglutide, approved 2021) and Zepbound (tirzepatide, approved 2023). The daily pills are the Wegovy pill (oral semaglutide 25 mg, approved December 2025) and Foundayo (orforglipron, approved April 1, 2026).",
+  "In published trials, injectable tirzepatide ranks first (up to 20.9% average weight loss), injectable semaglutide and the Wegovy pill are close together (14.9% and 13.6%), and Foundayo comes last (11.2%). Each was tested in its own trial; none was compared head to head.",
+  "Daily routine is the difference you notice. The Wegovy pill requires an empty stomach, a sip of water and a 30-minute wait; Foundayo can be taken whenever you like; the injections are once a week.",
+  "How you buy matters more than the format. Verified: Ro sells the Wegovy pill at $149 for month one, then $299 plus membership, and compounded injections cost $49-$299 a month. Reported: Foundayo at $149-$349 self-pay, $25 for either pill with commercial coverage, and $50 on Medicare's GLP-1 Bridge.",
 ];
 
 const FAQS: { question: string; answer: string }[] = [
   {
     question: "Are GLP-1 pills as effective as injections?",
     answer:
-      "It depends which pill and which injection. The Wegovy pill produced 13.6% mean weight loss at 64 weeks in OASIS 4 (16.6% among people who stayed on treatment), which its authors describe as similar to the weekly semaglutide injection's 14.9% in STEP 1. Foundayo reached 11.2% at its top dose in ATTAIN-1. Injectable tirzepatide (Zepbound) remains the strongest average performer, at 20.9% at 15 mg in SURMOUNT-1 (22.5% in the analysis that assumes everyone stayed on treatment). None of these trials compared a pill with an injection directly.",
+      "The Wegovy pill comes close to the semaglutide injection, but no pill matches injectable tirzepatide. The Wegovy pill averaged 13.6% weight loss at 64 weeks in OASIS 4 (16.6% among people who stayed on treatment), which its authors describe as similar to the 14.9% the weekly semaglutide injection reached in STEP 1. Foundayo averaged 11.2% at its top dose in ATTAIN-1, while injectable tirzepatide (Zepbound) averaged 20.9% at 15 mg in SURMOUNT-1 (22.5% assuming everyone stayed on treatment). No trial has compared a pill directly against an injection.",
   },
   {
     question: "Which is cheaper, GLP-1 pills or injections?",
     answer:
-      "At cash prices, compounded injections are cheapest by a wide margin: verified prices run $49-$199 a month for compounded semaglutide and $89-$299 for compounded tirzepatide. The brand pills sit in the middle: the Wegovy pill is $149 the first month then $299 plus membership at Ro (verified), and Foundayo lists $149-$349 a month self-pay (reported). Brand injections bought for cash are the most expensive, from $1,149 a month at the providers we track. With commercial insurance that covers the drug, either pill is reported at $25 a month, and both pills and both injections are in Medicare's $50 GLP-1 Bridge pilot through December 2027.",
+      "Compounded injections are the cheapest cash option by far, at verified prices of $49-$199 a month for semaglutide and $89-$299 for tirzepatide. Brand pills fall in the middle: Ro charges $149 for the first Wegovy pill month, then $299 plus membership (verified), and Foundayo is listed at $149-$349 a month self-pay (reported). Brand injections paid in cash cost the most, starting at $1,149 a month at the providers we track. With commercial coverage either pill is reported at $25 a month, and Medicare's GLP-1 Bridge pilot covers both pills and both pens at $50 through December 2027.",
   },
   {
     question: "Do GLP-1 pills have fewer side effects than injections?",
     answer:
-      "No. They are the same drug class, and the side-effect profile is the same family: mostly gastrointestinal, mostly early, mostly during dose increases. In OASIS 4, 74% of people on the Wegovy pill reported a gastrointestinal adverse event against 42% on placebo; in ATTAIN-1 gastrointestinal events were also the most frequent with Foundayo. The labels for the injections list the same leading effects. How gradually you step up the dose matters more than whether it is a tablet or a pen.",
+      "No. Pills and injections belong to the same drug class and cause the same kind of side effects, mainly digestive ones that appear early and during dose increases. In OASIS 4, 74% of people on the Wegovy pill reported a gastrointestinal adverse event compared with 42% on placebo, and gastrointestinal events were also the most common with Foundayo in ATTAIN-1. The injection labels list the same leading effects, so how slowly the dose is raised matters more than the format.",
   },
   {
     question: "Why does the Wegovy pill contain 25 mg when the injection is 2.4 mg?",
     answer:
-      "Because semaglutide is a peptide, and peptides are poorly absorbed from the gut. The tablet carries a much larger dose so that enough reaches the bloodstream, and it must be taken on an empty stomach with a small sip of water, followed by a 30-minute wait before food, drink or other medicines; miss the timing and absorption drops. Foundayo is a small molecule rather than a peptide, which is why it can be taken any time of day with no food or water restrictions.",
+      "Semaglutide is a peptide, and the gut absorbs peptides poorly, so the tablet needs a much larger dose for enough to reach the bloodstream. The Wegovy pill must be taken on an empty stomach with a small sip of water, then 30 minutes before any food, drink or other medicine, or less of it is absorbed. Foundayo is a small molecule rather than a peptide, so it can be taken at any time without food or water rules.",
   },
   {
     question: "Can you switch from injections to pills, or vice versa?",
     answer:
-      "Often, under medical supervision. People move between formulations for tolerance, convenience, coverage or availability. There is no do-it-yourself dose conversion between a weekly pen and a daily tablet; the prescribing clinician decides the medication, the starting dose and the titration when you switch. Both routes are long-term treatments: in the STEP 1 extension, people who stopped semaglutide regained about two-thirds of the lost weight within a year.",
+      "Usually yes, with your prescriber managing the change. People switch for tolerability, convenience, coverage or supply, but there is no self-calculated dose conversion between a weekly pen and a daily tablet; the clinician chooses the medicine, starting dose and titration. Both formats are long-term treatments: in the STEP 1 extension, people who stopped semaglutide regained about two-thirds of the weight they had lost within a year.",
   },
   {
     question: "Are the compounded 'pills' and 'drops' some telehealth programs sell the same as the Wegovy pill?",
     answer:
-      "No. The Wegovy pill and Foundayo are FDA-approved finished drugs with their own trials. Compounded oral semaglutide or tirzepatide, sold as tablets, sublingual drops or troches, is prepared by a licensed 503A pharmacy for an individual prescription. That is a legal, regulated channel, but the products are not FDA-approved, have no trials of their own, and an oral compounded peptide is absorbed differently from the approved 25 mg tablet. They are cheaper for that reason.",
+      "No. The Wegovy pill and Foundayo are FDA-approved finished medicines with their own trials. Compounded oral semaglutide or tirzepatide, sold as tablets, under-the-tongue drops or troches, is made by a licensed 503A pharmacy for an individual prescription; that is legal and regulated, but the product is not FDA-approved and has no trials of its own. An oral compounded peptide is also absorbed differently from the approved 25 mg tablet, which is part of why it costs less.",
   },
   {
     question: "Is there a GLP-1 pill approved specifically for weight loss?",
     answer:
-      "Yes, two. The FDA approved the Wegovy pill (oral semaglutide 25 mg) in December 2025, the first oral GLP-1 for chronic weight management, and Foundayo (orforglipron, Eli Lilly) on April 1, 2026, the first that can be taken with no food or water restrictions. Rybelsus, a lower-dose oral semaglutide, is approved for type 2 diabetes rather than weight management.",
+      "Yes, there are two. The FDA approved the Wegovy pill (oral semaglutide 25 mg) in December 2025 as the first oral GLP-1 for chronic weight management, and approved Foundayo (orforglipron, Eli Lilly) on April 1, 2026 as the first one with no food or water restrictions. Rybelsus, a lower-dose oral semaglutide, is approved for type 2 diabetes, not weight management.",
   },
   {
     question: "Do I need a prescription for either one?",
     answer:
-      "Yes. Every GLP-1 on this page, brand or compounded, pill or injection, is prescription-only in the United States. A licensed clinician reviews your health history and decides whether the medication is appropriate; any website offering a GLP-1 without that step is selling something you should not take.",
+      "Yes. In the United States every GLP-1 on this page, whether brand or compounded, pill or injection, requires a prescription. A licensed clinician reviews your health history and decides whether it is appropriate, and any website selling a GLP-1 without that review is offering something you should not take.",
   },
 ];
 
@@ -140,18 +140,26 @@ const PRICE_DATE = fmt(PRICE_INDEX_VERIFIED);
 
 const SECTIONS: Section[] = [
   {
-    heading: "What counts as a GLP-1 pill, and what counts as an injection",
-    body: `<p>"Pills versus injections" sounds like one comparison. It is really four products in two categories, and the one you are offered online may be none of them, so the first job is to name them.</p>
-<h3>The injections: Wegovy and Zepbound</h3>
-<p><strong>Wegovy</strong> is semaglutide, approved by the FDA for chronic weight management on ${ext(SRC.wegovyApproval, "June 4, 2021")}. <strong>Zepbound</strong> is tirzepatide, approved on ${ext(SRC.zepboundApproval, "November 8, 2023")}. Both are once-weekly injections under the skin from a pre-filled pen, started at a low dose and stepped up over months. Semaglutide acts on the GLP-1 receptor; tirzepatide acts on two receptors, GLP-1 and GIP, which is the usual explanation for its larger trial result. The same two molecules are also sold as <strong>compounded injections</strong> by state-licensed pharmacies through telehealth providers, at a fraction of the brand price and without FDA approval of the product. That is the route most of the providers on this site use, and most of the "injection" prices quoted online refer to it.</p>
-<h3>The pills: the Wegovy pill and Foundayo</h3>
-<p><strong>The Wegovy pill</strong> is semaglutide in a 25 mg once-daily tablet, approved in ${ext(SRC.wegovyPillApproval, "December 2025")} as the first oral GLP-1 for chronic weight management. <strong>Foundayo</strong> is orforglipron, a small-molecule GLP-1 receptor agonist from Eli Lilly, approved on ${ext(SRC.foundayoApproval, "April 1, 2026")}. Both are brand-name, prescription-only and FDA-approved; neither is compounded. A third tablet, <strong>Rybelsus</strong>, is lower-dose oral semaglutide approved for type 2 diabetes, not for weight management, and produces less weight loss at its diabetes doses.</p>
-<h3>And a category that is neither</h3>
-<p>Some telehealth programs sell <strong>compounded oral semaglutide or tirzepatide</strong> as tablets, sublingual drops or troches. These are not the Wegovy pill. They are compounded preparations with no trial data of their own, and a peptide taken by mouth is poorly absorbed without the formulation work the approved tablet went through. They belong in this guide only as a warning: if a program's "pill" is compounded, you are buying an unstudied product, not a cheaper Wegovy pill. The rest of this page compares the four approved products, plus the compounded injections, because those are the things with evidence and published prices behind them.</p>`,
+    heading: "Which GLP-1 pills and injections are FDA-approved?",
+    body: `<p><strong>Four GLP-1 products are FDA-approved for chronic weight management: two weekly injections (Wegovy and Zepbound) and two daily pills (the Wegovy pill and Foundayo).</strong> Many products sold online are none of these four, so it helps to know exactly what each name refers to before comparing.</p>
+<h3>Weekly injections: Wegovy and Zepbound</h3>
+<ul>
+<li><strong>Wegovy</strong> (semaglutide) received FDA approval for chronic weight management on ${ext(SRC.wegovyApproval, "June 4, 2021")}. It acts on the GLP-1 receptor.</li>
+<li><strong>Zepbound</strong> (tirzepatide) was approved on ${ext(SRC.zepboundApproval, "November 8, 2023")}. It acts on two receptors, GLP-1 and GIP, which is the usual explanation for its bigger trial result.</li>
+</ul>
+<p>Both are injected under the skin once a week from a pre-filled pen, starting low and increasing over several months. Telehealth providers also sell the same two molecules as <strong>compounded injections</strong> made by state-licensed pharmacies, for a fraction of the brand price and without FDA approval of the product. Most providers on this site use that route, and most "injection" prices you see online refer to it.</p>
+<h3>Daily pills: the Wegovy pill and Foundayo</h3>
+<ul>
+<li><strong>The Wegovy pill</strong> is a 25 mg once-daily semaglutide tablet, approved in ${ext(SRC.wegovyPillApproval, "December 2025")} as the first oral GLP-1 for chronic weight management.</li>
+<li><strong>Foundayo</strong> is orforglipron, a small-molecule GLP-1 receptor agonist from Eli Lilly, approved on ${ext(SRC.foundayoApproval, "April 1, 2026")}.</li>
+</ul>
+<p>Both pills are brand-name, prescription-only and FDA-approved, and neither is compounded. A third tablet, <strong>Rybelsus</strong>, is lower-dose oral semaglutide approved for type 2 diabetes rather than weight management, and it produces less weight loss at diabetes doses.</p>
+<h3>What about compounded GLP-1 tablets and drops?</h3>
+<p>Some telehealth programs sell <strong>compounded oral semaglutide or tirzepatide</strong> as tablets, under-the-tongue drops or troches. These are not the Wegovy pill. They have no trial data of their own, and a peptide swallowed without the formulation work the approved tablet received is poorly absorbed. They appear here only as a caution: a compounded "pill" is an unstudied product, not a discount Wegovy pill. The rest of this guide compares the four approved products and the compounded injections, since those have evidence and published prices behind them.</p>`,
   },
   {
-    heading: "Results: what the trials actually showed",
-    body: `<p>Every serious claim about these drugs traces back to four randomized, placebo-controlled trials, each run by the manufacturer on top of lifestyle advice. They were separate trials with different lengths and populations. Nobody has run a pill against an injection head to head, so the honest comparison is "each against its own placebo", not "pill versus shot".</p>
+    heading: "How much weight do people lose on GLP-1 pills vs injections?",
+    body: `<p><strong>In their main trials, Zepbound averaged 20.9% weight loss, Wegovy injections 14.9%, the Wegovy pill 13.6% and Foundayo 11.2%.</strong> Each figure comes from a separate randomized, placebo-controlled, manufacturer-run trial that added lifestyle advice, with different lengths and populations. No trial has tested a pill against an injection directly, so each result should be read against its own placebo group rather than as a head-to-head contest.</p>
 <table><thead><tr><th>Product</th><th>Trial</th><th>Length</th><th>Mean weight change</th><th>Placebo</th></tr></thead><tbody>
 <tr><td>Zepbound (tirzepatide 15 mg weekly injection)</td><td>${ext(SRC.surmount1, "SURMOUNT-1")}, NEJM, July 21, 2022</td><td>72 weeks</td><td><strong>-20.9%</strong></td><td>-3.1%</td></tr>
 <tr><td>Zepbound (tirzepatide 5 mg weekly injection)</td><td>SURMOUNT-1</td><td>72 weeks</td><td>-15.0%</td><td>-3.1%</td></tr>
@@ -159,82 +167,110 @@ const SECTIONS: Section[] = [
 <tr><td>Wegovy pill (oral semaglutide 25 mg daily)</td><td>${ext(SRC.oasis4, "OASIS 4")}, NEJM, September 2025</td><td>64 weeks</td><td><strong>-13.6%</strong></td><td>-2.2%</td></tr>
 <tr><td>Foundayo (orforglipron 36 mg daily)</td><td>${ext(SRC.attain1, "ATTAIN-1")}, NEJM, September 2025</td><td>72 weeks</td><td><strong>-11.2%</strong></td><td>-2.1%</td></tr>
 </tbody></table>
-<p>Two sets of numbers circulate for each of these trials, and both are real. The figures above count everyone who was randomized, whether or not they stayed on the drug (the treatment-policy or treatment-regimen analysis). Each manufacturer also publishes an on-treatment figure describing people who took the drug as directed to the end: 22.5% for tirzepatide at 15 mg, 16.6% for the Wegovy pill and 12.4% for Foundayo. Marketing tends to quote the second set; this guide uses the first, because it is closer to what a population of real patients experiences. They are not contradictory, just answers to different questions.</p>
-<h3>How to read the gap</h3>
-<p>Three conclusions survive the caveats. First, <strong>tirzepatide injection is still the strongest average performer</strong> of any GLP-1, pill or pen, by about six percentage points over semaglutide at the top dose, and in SURMOUNT-1 a substantially larger share of participants lost 20% or more. Second, <strong>the Wegovy pill and the Wegovy injection are close</strong>: 13.6% against 14.9% in their own trials, and the OASIS 4 authors describe the pill's effect as similar to the weekly injection. Third, <strong>Foundayo trails on the published number</strong> but still produced more weight loss than any non-GLP-1 pill ever approved; in ATTAIN-1, 19% of participants on the top dose lost 20% or more of their body weight, against 3% on placebo.</p>
-<p>What the numbers do not say is also worth stating. They are averages measured at the full maintenance dose after a long titration, so they describe month fifteen, not month two. In STEP 1, about a third of participants lost 20% or more and some lost very little, and nothing on an intake form predicts which group you will be in. And every trial included lifestyle counselling that most telehealth programs do not provide. Treat the trial figures as a ceiling that a well-run, fully-dosed course can approach, not a promise for either format.</p>`,
+<h3>Why you see two different numbers for each drug</h3>
+<p>Every trial reports two valid figures. The table uses the treatment-policy (or treatment-regimen) result, which counts everyone randomized whether or not they stayed on the drug. Manufacturers also publish an on-treatment result for people who took the drug as directed until the end: 22.5% for tirzepatide 15 mg, 16.6% for the Wegovy pill and 12.4% for Foundayo. Marketing usually quotes the on-treatment figure. We use the treatment-policy figure because it better reflects what happens across a real group of patients. The two answer different questions and do not contradict each other.</p>
+<h3>What the results mean for pills vs injections</h3>
+<ul>
+<li><strong>Injectable tirzepatide is still the strongest GLP-1 on average</strong>, pill or pen, about six percentage points ahead of semaglutide at the top dose, and a substantially larger share of SURMOUNT-1 participants lost 20% or more.</li>
+<li><strong>The Wegovy pill and the Wegovy injection are close</strong>: 13.6% vs 14.9% in their own trials, and the OASIS 4 authors describe the pill's effect as similar to the weekly injection.</li>
+<li><strong>Foundayo has the lowest published figure</strong> of the four, yet it still beat every non-GLP-1 pill ever approved. In ATTAIN-1, 19% of people on the top dose lost 20% or more of their body weight, compared with 3% on placebo.</li>
+</ul>
+<h3>What the averages do not tell you</h3>
+<p>These are averages at the full maintenance dose after a long dose escalation, so they describe roughly month fifteen, not month two. In STEP 1, about a third of participants lost 20% or more while some lost very little, and nothing on an intake form predicts which group you will land in. Every trial also included lifestyle counseling that most telehealth programs do not offer. Read the trial results as the upper range a well-managed, fully dosed course can approach, not as a promise for either format.</p>`,
   },
   {
-    heading: "Why a pill needs a bigger dose than a pen",
-    body: `<p>The Wegovy injection delivers 2.4 mg of semaglutide once a week. The Wegovy pill contains 25 mg, taken every day, for a drug that produces a similar result. The difference is absorption. Semaglutide is a peptide, and peptides are broken down in the gut; only a small fraction of a swallowed dose reaches the bloodstream, so the tablet carries far more and has to be taken under conditions that protect what little is absorbed. That is the reason for the empty-stomach rule described in the next section, and it is why compounded "oral semaglutide" without that formulation work is a different and unstudied thing.</p>
-<p>Foundayo takes the other path. Orforglipron is not a peptide but a small molecule designed to be absorbed through the gut the way most ordinary tablets are, which is why it can be taken at any time of day with or without food. Its trade-off, on the published numbers, is a smaller average weight loss than semaglutide in either form. The injections sidestep absorption entirely: the drug goes under the skin and into circulation, which is why a weekly dose measured in milligrams works.</p>`,
+    heading: "Why does a GLP-1 pill need a higher dose than an injection?",
+    body: `<p><strong>Because swallowed semaglutide is mostly broken down in the gut, the Wegovy pill needs 25 mg a day to match what a 2.4 mg weekly injection achieves.</strong> Semaglutide is a peptide, and only a small fraction of a swallowed peptide reaches the bloodstream. The tablet therefore carries far more drug and must be taken under conditions that protect the little that gets absorbed, which is where the empty-stomach rule in the next section comes from. It is also why compounded "oral semaglutide" made without that formulation work is a different, unstudied product.</p>
+<p>Foundayo solves the problem differently. Orforglipron is a small molecule built to be absorbed through the gut like most everyday tablets, so it can be taken at any time, with or without food. On the published numbers, its trade-off is less average weight loss than semaglutide in either form. Injections avoid the absorption problem altogether: the drug goes under the skin and straight into circulation, which is why a weekly dose of a few milligrams is enough.</p>`,
   },
   {
-    heading: "The routine: empty stomach, any time, or once a week",
-    body: `<p>For most people this is the difference they will feel every day, and it is where the "pills are more convenient" assumption needs unpacking.</p>
+    heading: "How do you take GLP-1 pills compared with weekly shots?",
+    body: `<p><strong>The Wegovy pill is taken daily on an empty stomach with a 30-minute wait, Foundayo is taken daily at any time, and the pens are used once a week.</strong> For most people this is the difference they feel day to day, and it shows that "pills are easier" is not always true.</p>
 <table><thead><tr><th>Product</th><th>How often</th><th>The rules</th></tr></thead><tbody>
-<tr><td>Wegovy pill</td><td>Once a day</td><td>On an empty stomach, with a small sip of water, then a 30-minute wait before food, drink or other medicines. Dose stepped up from 1.5 mg to 25 mg over the first months.</td></tr>
-<tr><td>Foundayo</td><td>Once a day</td><td>Any time of day, with or without food or water. Stepped up across 6, 12 and 36 mg tablets.</td></tr>
-<tr><td>Wegovy or Zepbound pen</td><td>Once a week</td><td>A self-injection under the skin from a pre-filled, factory-sealed pen. No daily routine; dose stepped up every few weeks.</td></tr>
+<tr><td>Wegovy pill</td><td>Once a day</td><td>Taken on an empty stomach with a small sip of water, then 30 minutes before any food, drink or other medicine. The dose rises from 1.5 mg to 25 mg over the first months.</td></tr>
+<tr><td>Foundayo</td><td>Once a day</td><td>Any time of day, with or without food or water. Increased through 6, 12 and 36 mg tablets.</td></tr>
+<tr><td>Wegovy or Zepbound pen</td><td>Once a week</td><td>Injected under the skin from a pre-filled, factory-sealed pen. Nothing to do on other days; the dose rises every few weeks.</td></tr>
 <tr><td>Compounded injection</td><td>Once a week</td><td>Drawn from a multi-dose vial into a syringe. You measure the dose in units yourself, which is where the FDA has recorded dosing errors.</td></tr>
 </tbody></table>
-<p><strong>The Wegovy pill is the most demanding routine on the table.</strong> A 30-minute wait every morning before coffee, breakfast or other medication is manageable for many people and a deal-breaker for some; miss the timing and absorption drops, so the rule is not optional. <strong>Foundayo is the simplest.</strong> No timing, no food rule, no needle: for someone who takes morning medication or does not want a timed routine, that is its main argument. <strong>The weekly pen is a different kind of simple.</strong> Fifty-two small, sealed, pre-measured doses a year and nothing to think about in between; the needle is fine and short, and most people who were anxious about it report that the first injection settles the question. <strong>The compounded vial is the least convenient and the most error-prone</strong>, because the patient measures the dose. The FDA's ${ext(SRC.fdaConcerns, "statement on unapproved GLP-1 drugs")} records adverse-event reports that trace to dosing mistakes with vials, and our guide to <a href="/articles/503a-vs-503b-pharmacy-28-day-rule">reading a compounded prescription</a> explains the units.</p>`,
+<ul>
+<li><strong>The Wegovy pill has the strictest routine.</strong> Waiting 30 minutes every morning before coffee, breakfast or other medicines is easy for some people and a deal-breaker for others. Absorption falls if you skip the wait, so the rule is not optional.</li>
+<li><strong>Foundayo has the easiest routine.</strong> No timing, no food rule and no needle, which is its main appeal for people who take morning medicines or dislike timed routines.</li>
+<li><strong>The weekly pen is easy in a different way.</strong> It means 52 small, sealed, pre-measured doses a year with nothing to remember in between. The needle is short and thin, and most people who were nervous about it say the first injection settled their worries.</li>
+<li><strong>The compounded vial is the least convenient and the most prone to mistakes</strong>, because you measure the dose yourself. The FDA's ${ext(SRC.fdaConcerns, "statement on unapproved GLP-1 drugs")} records adverse-event reports caused by vial dosing errors, and our guide to <a href="/articles/503a-vs-503b-pharmacy-28-day-rule">reading a compounded prescription</a> explains how units work.</li>
+</ul>`,
   },
   {
-    heading: "Cost: every verified price, by route",
-    body: `<p>Format decides far less than route. Two facts organise the whole table: the brand products, pill or pen, cost brand prices for cash, and the compounded injections cost a fraction of that because the product is not FDA-approved. Everything below is either a provider's own published price as we verified it (the compounded and Ro figures, checked on each provider's site on ${PRICE_DATE} for the price index and in August 2026 for Ro's brand products) or a manufacturer price as reported by the dated source linked, which we have not verified ourselves.</p>
+    heading: "How much do GLP-1 pills and injections cost?",
+    body: `<p><strong>Compounded injections cost $49-$299 a month, brand pills $149-$349 self-pay, and brand pens paid in cash cost the most; coverage can bring a pill to $25 or $50.</strong> Where you buy matters far more than whether it is a pill or a pen. Two facts drive the whole table: brand products, pill or pen, carry brand prices for cash buyers, and compounded injections cost a fraction of that because the product is not FDA-approved. Every figure below is either a provider's own published price that we verified (compounded and Ro prices, checked on each provider's site on ${PRICE_DATE} for the price index and in August 2026 for Ro's brand products) or a manufacturer price as reported by the dated source linked, which we have not verified.</p>
 <table><thead><tr><th>Route</th><th>Monthly price</th><th>The condition</th></tr></thead><tbody>
-<tr><td>Compounded semaglutide injection (verified)</td><td><strong>$49-$199</strong></td><td>$49 at <a href="/reviews/wellmedr">welludr</a> on a 12-month plan; $69 month to month at <a href="/reviews/embody">embody</a>; $89 flat at every dose at <a href="/reviews/altrx">altRx</a>; $99 promotional, all-inclusive, at <a href="/reviews/medvi">Medvi</a></td></tr>
-<tr><td>Compounded tirzepatide injection (verified)</td><td><strong>$89-$299</strong></td><td>$89 at welludr on a 12-month plan; $119 month to month at embody; $149 flat at altRx; $166 promotional at Medvi</td></tr>
-<tr><td>Wegovy pill at <a href="/reviews/ro">Ro</a> (verified)</td><td><strong>$149</strong> first month, then <strong>$299</strong></td><td>Plus Ro's membership: $39 the first month, then $74-$149 a month. The pill is billed separately, so insurance can apply where your plan covers Wegovy</td></tr>
-<tr><td>Wegovy pill, NovoCare direct self-pay (reported)</td><td><strong>$149-$299</strong> by dose</td><td>Per ${ext(SRC.noom, "third-party trackers")}: $149 at the starting dose rising to $299 at the 25 mg maintenance dose. Not verified by us</td></tr>
-<tr><td>Foundayo, LillyDirect self-pay (reported)</td><td><strong>$149-$349</strong> by dose</td><td>As reported by ${ext(SRC.sciam, "Scientific American")} from Lilly material. No telehealth provider we track has published a Foundayo price we could verify</td></tr>
-<tr><td>Either pill with commercial insurance that covers it (reported)</td><td><strong>$25</strong></td><td>Lilly's savings card per its ${ext(SRC.lillyRelease, "April 9, 2026 release")}; Novo Nordisk's offer reported at as low as $25, capped at $100 of savings per 30-day supply. Not available on government plans</td></tr>
-<tr><td>Medicare GLP-1 Bridge: both pills, both pens</td><td><strong>$50</strong> flat copay</td><td>CMS pilot, ${ext(SRC.bridge, "July 1, 2026 through December 31, 2027")}; eligibility and approval through your Part D plan. The $50 does not rise with the dose</td></tr>
-<tr><td>Brand Zepbound pen, cash (verified)</td><td><strong>$1,249-$1,599</strong></td><td>$1,249 at altRx, $1,599 at welludr; Ro sells Zepbound KwikPens from $299 the first month, then $399-$449, plus membership</td></tr>
+<tr><td>Compounded semaglutide injection (verified)</td><td><strong>$49-$199</strong></td><td>$49 at <a href="/reviews/wellmedr">welludr</a> with a 12-month plan; $69 month to month at <a href="/reviews/embody">embody</a>; $89 at every dose at <a href="/reviews/altrx">altRx</a>; $99 promotional, all-inclusive, at <a href="/reviews/medvi">Medvi</a></td></tr>
+<tr><td>Compounded tirzepatide injection (verified)</td><td><strong>$89-$299</strong></td><td>$89 at welludr with a 12-month plan; $119 month to month at embody; $149 flat at altRx; $166 promotional at Medvi</td></tr>
+<tr><td>Wegovy pill at <a href="/reviews/ro">Ro</a> (verified)</td><td><strong>$149</strong> for month one, then <strong>$299</strong></td><td>Plus Ro's membership: $39 for the first month, then $74-$149 a month. The pill is billed separately, so insurance can apply if your plan covers Wegovy</td></tr>
+<tr><td>Wegovy pill, NovoCare direct self-pay (reported)</td><td><strong>$149-$299</strong> depending on dose</td><td>According to ${ext(SRC.noom, "third-party trackers")}: $149 at the starting dose up to $299 at the 25 mg maintenance dose. Not verified by us</td></tr>
+<tr><td>Foundayo, LillyDirect self-pay (reported)</td><td><strong>$149-$349</strong> depending on dose</td><td>As reported by ${ext(SRC.sciam, "Scientific American")} from Lilly material. None of the telehealth providers we track has published a Foundayo price we could verify</td></tr>
+<tr><td>Either pill with commercial insurance that covers it (reported)</td><td><strong>$25</strong></td><td>Lilly's savings card according to its ${ext(SRC.lillyRelease, "April 9, 2026 release")}; Novo Nordisk's offer reported at as low as $25, limited to $100 of savings per 30-day supply. Not available on government plans</td></tr>
+<tr><td>Medicare GLP-1 Bridge: both pills, both pens</td><td><strong>$50</strong> flat copay</td><td>A CMS pilot running ${ext(SRC.bridge, "July 1, 2026 through December 31, 2027")}; eligibility and approval through your Part D plan. The $50 stays the same at every dose</td></tr>
+<tr><td>Brand Zepbound pen, cash (verified)</td><td><strong>$1,249-$1,599</strong></td><td>$1,249 at altRx, $1,599 at welludr; Ro sells Zepbound KwikPens from $299 for the first month, then $399-$449, plus membership</td></tr>
 <tr><td>Brand Wegovy pen at Ro (verified)</td><td>from <strong>$199</strong> introductory, then <strong>$299-$399</strong></td><td>Plus the same membership; billed separately so insurance can apply</td></tr>
 </tbody></table>
-<h3>The year-one arithmetic</h3>
-<p>Month-one prices mislead in both directions. Put together at Ro's cash prices, a first year on the Wegovy pill comes to roughly $4,300-$5,100: $3,438 of medication plus $853-$1,678 of membership depending on the tier. A year of compounded semaglutide runs from $588 on welludr's 12-month plan to roughly $1,800-$2,400 at month-to-month providers, and compounded tirzepatide about $500-$1,200 more. A year of brand Zepbound for cash is five figures. The only routes that undercut compounded are the $25 commercial savings cards and Medicare's $50 pilot, which is why coverage is the first question, not the format. Our <a href="/articles/glp1-true-cost-month-1-vs-year-one">month 1 vs year one</a> guide does this arithmetic for every provider we track, and <a href="/articles/wegovy-pill-price-online">Wegovy pill price online</a> walks the semaglutide pill's routes in full.</p>`,
+<h3>What does a full first year cost?</h3>
+<p>First-month prices can mislead in either direction, so add up twelve months. At Ro's cash prices, a year on the Wegovy pill totals roughly $4,300-$5,100: $3,438 for the medicine plus $853-$1,678 in membership, depending on tier. A year of compounded semaglutide ranges from $588 on welludr's 12-month plan to roughly $1,800-$2,400 at month-to-month providers, and compounded tirzepatide adds about $500-$1,200. A year of brand Zepbound paid in cash reaches five figures. Only the $25 commercial savings cards and Medicare's $50 pilot come in below compounded prices, so check your coverage before you think about format. Our <a href="/articles/glp1-true-cost-month-1-vs-year-one">month 1 vs year one</a> guide runs these totals for every provider we track, and <a href="/articles/wegovy-pill-price-online">Wegovy pill price online</a> covers every route to the semaglutide pill.</p>`,
   },
   {
-    heading: "Side effects: same class, same profile",
-    body: `<p>A pill is not a gentler GLP-1. All four products act on the same receptor family and share the same side-effect profile: mostly gastrointestinal, mostly in the first weeks, mostly around dose increases. In OASIS 4, gastrointestinal adverse events occurred in 74% of people on the Wegovy pill against 42% on placebo, led by nausea and diarrhoea. In ATTAIN-1, gastrointestinal events were also the most frequent with Foundayo and were typically mild to moderate. The injection labels, summarised on MedlinePlus for ${ext(SRC.medlineSema, "semaglutide")} and ${ext(SRC.medlineTirz, "tirzepatide")}, list the same leading effects: nausea, diarrhoea, vomiting, constipation, abdominal pain and reduced appetite.</p>
-<p>The serious warnings are shared too. Every product here carries the class boxed warning about thyroid C-cell tumours observed in rodents and is contraindicated for people with a personal or family history of medullary thyroid carcinoma or Multiple Endocrine Neoplasia syndrome type 2; the labels also warn about pancreatitis and gallbladder disease. Tirzepatide's label adds that it can reduce the effectiveness of oral contraceptives for four weeks after starting and after each dose increase. Neither pill trial reported a safety signal outside the known class profile.</p>
-<p>What actually changes tolerability is the titration: how low you start and how slowly you step up. A clinician who manages that, and who slows the schedule when side effects persist, matters more than whether the drug is a tablet or a pen. Our <a href="/articles/semaglutide-side-effects-guide">semaglutide side-effects guide</a> covers what helps in the first weeks on either format.</p>`,
+    heading: "Do GLP-1 pills cause fewer side effects than injections?",
+    body: `<p><strong>No. GLP-1 pills and injections share the same side-effect profile: mostly digestive, mostly in the first weeks and mostly around dose increases.</strong> All four products act on the same receptor family. In OASIS 4, 74% of people taking the Wegovy pill had a gastrointestinal adverse event compared with 42% on placebo, led by nausea and diarrhea. In ATTAIN-1, gastrointestinal events were also the most common with Foundayo and were usually mild to moderate. The injection labels, summarized on MedlinePlus for ${ext(SRC.medlineSema, "semaglutide")} and ${ext(SRC.medlineTirz, "tirzepatide")}, list the same top effects: nausea, diarrhea, vomiting, constipation, stomach pain and reduced appetite.</p>
+<p>The serious warnings are the same as well:</p>
+<ul>
+<li>Every product here carries the class boxed warning about thyroid C-cell tumors seen in rodents, and none should be used by people with a personal or family history of medullary thyroid carcinoma or Multiple Endocrine Neoplasia syndrome type 2.</li>
+<li>The labels also warn about pancreatitis and gallbladder disease.</li>
+<li>Tirzepatide's label adds that it can make oral contraceptives less effective for four weeks after starting and after each dose increase.</li>
+</ul>
+<p>Neither pill trial found a safety signal beyond the known class profile. What really changes how well you tolerate a GLP-1 is the titration: how low you start and how slowly you increase. A clinician who manages that carefully, and slows the schedule if side effects linger, matters more than whether you take a tablet or use a pen. Our <a href="/articles/semaglutide-side-effects-guide">semaglutide side-effects guide</a> explains what helps during the first weeks on either format.</p>`,
   },
   {
-    heading: "Insurance and Medicare: where the pills pull ahead",
-    body: `<p>This is the one area where the format genuinely changes the answer, because the brand pills launched inside programmes the compounded injections can never join.</p>
-<p><strong>Commercial insurance.</strong> If your plan covers the drug for weight management, each manufacturer offers a savings card: Lilly's brings Foundayo to $25 a month, and Novo Nordisk's is reported to bring the Wegovy pill to as low as $25, capped at $100 of savings per 30-day supply. Neither card works on Medicare, Medicaid or other government plans. Coverage itself is the gate; many plans still exclude weight-management GLP-1s or require prior authorisation, and <a href="/articles/glp1-with-insurance">our insurance guide</a> explains how to check your formulary before choosing. Where a plan covers the brand injection instead, the same logic applies to Wegovy and Zepbound pens, and a telehealth prescriber such as Ro can run the prior authorisation and bill the medication as its own line item.</p>
-<p><strong>Medicare.</strong> Since July 1, 2026, the Medicare GLP-1 Bridge pilot charges eligible beneficiaries a flat $50 copay a month for the Wegovy pill and injection, the Zepbound KwikPen and Foundayo, through December 31, 2027. The $50 does not rise with the dose, and it applies to both formats equally, so a Medicare patient chooses on routine and results, not price. Medicare never covers compounded GLP-1s. <a href="/articles/glp1-after-65-medicare">GLP-1s after 65</a> covers what to ask your Part D plan.</p>
-<p><strong>Paying cash.</strong> Then the compounded injections are the cheapest route by thousands of dollars a year, the brand pills are the cheapest FDA-approved route, and the brand pens are the most expensive option on the page.</p>`,
+    heading: "Does insurance or Medicare cover GLP-1 pills and injections?",
+    body: `<p><strong>Brand pills and pens can be covered by commercial insurance or Medicare's GLP-1 Bridge; compounded injections never qualify.</strong> This is where format does change the answer, because the brand pills launched inside programs compounded products cannot join.</p>
+<p><strong>Commercial insurance.</strong> If your plan covers the drug for weight management, each manufacturer has a savings card. Lilly's brings Foundayo to $25 a month, and Novo Nordisk's is reported to bring the Wegovy pill as low as $25, limited to $100 of savings per 30-day supply. Neither card works with Medicare, Medicaid or other government plans. Coverage itself is the hurdle: many plans still exclude weight-management GLP-1s or require prior authorization, and <a href="/articles/glp1-with-insurance">our insurance guide</a> shows how to check your formulary. If your plan covers a brand injection instead, the same applies to Wegovy and Zepbound pens, and a telehealth prescriber such as Ro can handle the prior authorization and bill the medicine as a separate line item.</p>
+<p><strong>Medicare.</strong> From July 1, 2026 through December 31, 2027, the Medicare GLP-1 Bridge pilot gives eligible beneficiaries a flat $50 monthly copay for the Wegovy pill and injection, the Zepbound KwikPen and Foundayo. The $50 is the same at every dose and for both formats, so Medicare patients can choose on routine and results alone. Medicare does not cover compounded GLP-1s. See <a href="/articles/glp1-after-65-medicare">GLP-1s after 65</a> for what to ask your Part D plan.</p>
+<p><strong>Paying cash.</strong> Without coverage, compounded injections are the cheapest route by thousands of dollars a year, the brand pills are the cheapest FDA-approved route, and the brand pens cost the most of anything on this page.</p>`,
   },
   {
-    heading: "Compounded versions: legal under conditions, not FDA-approved",
-    body: `<p>Because most of the "injection" prices in this guide are compounded prices, it is worth being precise about what that means. Compounding is a licensed pharmacist preparing a medication for an individual patient under a prescription, allowed under two federal frameworks described on the FDA's ${ext(SRC.fdaCompounding, "human drug compounding")} page: section 503A, state-licensed pharmacies compounding for a specific patient, which is the route almost every telehealth GLP-1 program uses; and section 503B, registered outsourcing facilities producing larger batches under tighter oversight.</p>
-<p>Compounded GLP-1s grew when semaglutide and tirzepatide were on the FDA's shortage list, which allows compounding with fewer restrictions. That window closed: the FDA declared the tirzepatide shortage resolved on December 19, 2024 and the semaglutide shortage on February 21, 2025. What remains legal is a patient-specific prescription where the prescriber documents a clinical need the approved product does not meet. The FDA's own ${ext(SRC.fdaConcerns, "summary of its concerns")} is the thing to read before buying: compounded products are not reviewed for safety, effectiveness or quality before sale; the agency has received adverse-event reports including dosing errors from vials; some products have been found to contain salt forms of semaglutide that are not the approved active ingredient; and products sold without a prescription may be counterfeit.</p>
-<p>None of that makes compounded injections a scam. It means the quality lives in the pharmacy rather than in a brand, and that you are trusting the telehealth provider's choice of pharmacy. The providers on this site name theirs, and that is the first thing we check. Note that there is no compounded equivalent of Foundayo at all, and no compounded oral product that has the Wegovy pill's evidence behind it: if you want a pill, the two approved pills are the pills. Our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name</a> guide and the <a href="/articles/503a-vs-503b-pharmacy-28-day-rule">503A vs 503B explainer</a> go deeper.</p>`,
+    heading: "Are compounded GLP-1 injections FDA-approved?",
+    body: `<p><strong>No. Compounded GLP-1 injections are legal under specific conditions, but the products are not FDA-approved.</strong> Since most "injection" prices in this guide are compounded prices, it is worth being exact. Compounding means a licensed pharmacist prepares a medicine for an individual patient under a prescription. The FDA's ${ext(SRC.fdaCompounding, "human drug compounding")} page describes two federal frameworks:</p>
+<ul>
+<li><strong>Section 503A:</strong> state-licensed pharmacies compounding for a specific patient. Nearly every telehealth GLP-1 program uses this route.</li>
+<li><strong>Section 503B:</strong> registered outsourcing facilities producing larger batches under stricter oversight.</li>
+</ul>
+<p>Compounded GLP-1s expanded while semaglutide and tirzepatide were on the FDA shortage list, which loosens compounding limits. That period has ended: the FDA declared the tirzepatide shortage resolved on December 19, 2024 and the semaglutide shortage on February 21, 2025. What remains legal is a patient-specific prescription in which the prescriber documents a clinical need the approved product does not meet.</p>
+<p>Read the FDA's ${ext(SRC.fdaConcerns, "summary of its concerns")} before you buy. Compounded products are not reviewed for safety, effectiveness or quality before sale; the agency has received adverse-event reports that include vial dosing errors; some products contained salt forms of semaglutide that are not the approved active ingredient; and products sold without a prescription may be counterfeit.</p>
+<p>None of this makes compounded injections a scam. It means quality depends on the pharmacy rather than a brand, and you are relying on the telehealth provider's choice of pharmacy. The providers on this site name their pharmacies, and that is the first thing we check. There is no compounded version of Foundayo, and no compounded oral product has evidence comparable to the Wegovy pill's, so if you want a pill, choose one of the two approved ones. Our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name</a> guide and the <a href="/articles/503a-vs-503b-pharmacy-28-day-rule">503A vs 503B explainer</a> go into more detail.</p>`,
   },
   {
-    heading: "Switching, stopping and the long term",
-    body: `<p>People move between formats more often than the marketing suggests: a pill to an injection after plateauing, an injection to a pill when insurance changes, a brand pen to a compounded vial when a savings card expires. All of it goes through the prescriber. There is no do-it-yourself conversion between a weekly 2.4 mg pen and a daily 25 mg tablet, or between semaglutide and orforglipron, and a clinician will usually restart a titration rather than jump to the equivalent dose.</p>
-<p>Whichever format you choose, it is a maintenance medication in the way blood-pressure medication is. In the STEP 1 extension, participants who stopped semaglutide and the lifestyle program regained about two-thirds of the weight they had lost within a year (Wilding et al., ${ext(SRC.step1ext, "Diabetes, Obesity and Metabolism")}, April 19, 2022). That is the number to budget around, and it is the strongest argument for choosing the route whose year-two price you can sustain rather than the one with the cheapest first month. Our guide to <a href="/articles/stopping-glp1-medication-what-happens">what happens when you stop</a> covers the tapering and maintenance strategies clinicians use.</p>`,
+    heading: "Can you switch between GLP-1 pills and injections, and what happens if you stop?",
+    body: `<p><strong>You can switch between formats with your prescriber's help, but stopping a GLP-1 usually means regaining much of the weight.</strong> Switching is more common than marketing suggests: from a pill to an injection after a plateau, from an injection to a pill when insurance changes, or from a brand pen to a compounded vial when a savings card ends. Every switch goes through the prescriber. There is no do-it-yourself conversion between a weekly 2.4 mg pen and a daily 25 mg tablet, or between semaglutide and orforglipron, and clinicians usually restart the dose escalation instead of jumping to an equivalent dose.</p>
+<p>Whichever format you use, treat it as a long-term medicine, much like blood-pressure medication. In the STEP 1 extension, people who stopped semaglutide and the lifestyle program regained about two-thirds of the weight they had lost within a year (Wilding et al., ${ext(SRC.step1ext, "Diabetes, Obesity and Metabolism")}, April 19, 2022). Plan your budget around that finding: pick the route whose second-year price you can keep paying, not the one with the cheapest first month. Our guide to <a href="/articles/stopping-glp1-medication-what-happens">what happens when you stop</a> covers the tapering and maintenance approaches clinicians use.</p>`,
   },
   {
-    heading: "Which should you choose? Five readers, five answers",
-    body: `<p>There is no universal right answer, but most people fit one of these.</p>
-<p><strong>Your insurance covers a GLP-1 for weight management.</strong> Take the covered product. At $25 a month either pill, or a covered pen, beats every cash route on this page, and the gap between the pills is a rounding error at that price. Check the formulary first; it decides more than anything else here.</p>
-<p><strong>You are on Medicare.</strong> Ask your Part D plan about the GLP-1 Bridge before pricing anything. At a flat $50 for all four brand products, choose on routine and results: the injection for the larger trial result, Foundayo for the simplest routine.</p>
-<p><strong>You are paying cash and the result is what matters most.</strong> The published evidence points to tirzepatide, and the compounded injection is the only affordable way to it: $89 a month on a 12-month plan, $119 with no commitment. Read <a href="/articles/best-tirzepatide-online">best tirzepatide online</a> for every verified price, and go in understanding that it is not an FDA-approved product.</p>
-<p><strong>You are paying cash and you will not inject.</strong> The Wegovy pill through Ro is the one verified telehealth route to an approved pill today, at $149 then $299 plus membership; Foundayo's reference price is LillyDirect's reported $149-$349. Between the two, the Wegovy pill has the larger trial result and Foundayo has no timing rules; <a href="/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a> compares them line by line. Do not accept a compounded "pill" as a substitute.</p>
-<p><strong>You are paying cash and price decides.</strong> Compounded semaglutide injection from $49-$99 a month is the floor of the whole market, and the needle is a weekly thirty seconds that most people stop noticing by the second month. <a href="/articles/what-100-to-200-a-month-gets-you-glp1">What $100-$200 a month gets you</a> lays out what each price band buys.</p>
-<p>Whatever you pick, a licensed clinician decides on your history, not on a table, and can decline to prescribe any of them.</p>`,
+    heading: "Should you choose a GLP-1 pill or an injection?",
+    body: `<p><strong>Choose based on coverage first, then on whether you prioritize results, price or avoiding needles.</strong> Most readers fit one of these five situations:</p>
+<p><strong>1. Your insurance covers a GLP-1 for weight management.</strong> Use the covered product. At $25 a month, either pill or a covered pen beats every cash route here, and the price difference between the pills becomes negligible. Check your formulary first, because it outweighs every other factor on this page.</p>
+<p><strong>2. You have Medicare.</strong> Ask your Part D plan about the GLP-1 Bridge before comparing prices. With all four brand products at a flat $50, decide on routine and results: an injection for the bigger trial result, or Foundayo for the simplest routine.</p>
+<p><strong>3. You are paying cash and results matter most.</strong> The evidence favors tirzepatide, and a compounded injection is the only affordable way to get it: $89 a month on a 12-month plan or $119 with no commitment. See <a href="/articles/best-tirzepatide-online">best tirzepatide online</a> for every verified price, and remember it is not an FDA-approved product.</p>
+<p><strong>4. You are paying cash and will not inject.</strong> Ro offers the only verified telehealth route to an approved pill today, the Wegovy pill at $149 and then $299 plus membership. Foundayo's reference price is LillyDirect's reported $149-$349. The Wegovy pill has the larger trial result and Foundayo has no timing rules; <a href="/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a> compares them in detail. Do not accept a compounded "pill" as a replacement.</p>
+<p><strong>5. You are paying cash and price decides.</strong> Compounded semaglutide injections from $49-$99 a month are the lowest prices in the market, and the weekly shot takes about thirty seconds that most people stop noticing by month two. <a href="/articles/what-100-to-200-a-month-gets-you-glp1">What $100-$200 a month gets you</a> shows what each price range buys.</p>
+<p>In every case a licensed clinician decides based on your history rather than a table, and may decline to prescribe any of them.</p>`,
   },
   {
-    heading: "How to get either one online",
-    body: `<p>The process is the same for a pill or an injection, and it is the only legal process: an online intake covering your weight, health history, medications and goals; a review by a licensed clinician, by questionnaire, message or video; a prescription if appropriate, filled either by the provider's partner pharmacy and shipped to you, or sent to a pharmacy of your choice where insurance applies; and follow-up as the dose steps up. For the brand pill, <a href="/reviews/ro">Ro</a> is the provider we have verified. For compounded injections, the providers ranked on our <a href="/">weight-loss comparison</a> all run that review before prescribing, and the <a href="/articles/glp1-weight-loss-online-complete-guide">complete guide to GLP-1 weight loss online</a> walks every step from intake to first dose, including what to check about the pharmacy, the refund terms if you are not approved, and the questions to ask before prepaying.</p>
-<p><em>This guide is general information, not medical advice. GLP-1 medications require evaluation and supervision by a licensed healthcare provider, who decides whether any of them is appropriate for you.</em></p>`,
+    heading: "How do you get a GLP-1 pill or injection online?",
+    body: `<p><strong>Through a licensed telehealth provider: an online intake, a clinician review and, if appropriate, a prescription shipped to you or sent to your pharmacy.</strong> The process is the same for pills and injections, and it is the only legal way to get either:</p>
+<ol>
+<li>Complete an online intake covering your weight, health history, medicines and goals.</li>
+<li>A licensed clinician reviews it by questionnaire, message or video.</li>
+<li>If appropriate, you get a prescription, filled by the provider's partner pharmacy and shipped to you, or sent to a pharmacy of your choice when insurance applies.</li>
+<li>Follow-up continues as the dose increases.</li>
+</ol>
+<p>For the brand pill, <a href="/reviews/ro">Ro</a> is the provider we have verified. For compounded injections, every provider ranked in our <a href="/">weight-loss comparison</a> completes that review before prescribing. The <a href="/articles/glp1-weight-loss-online-complete-guide">complete guide to GLP-1 weight loss online</a> covers each step from intake to first dose, including how to check the pharmacy, refund terms if you are not approved, and what to ask before paying upfront.</p>
+<p><em>This guide offers general information and is not medical advice. GLP-1 medicines require assessment and supervision by a licensed healthcare provider, who decides whether any of them suits you.</em></p>`,
   },
 ];
 
@@ -244,7 +280,7 @@ export default async function Glp1PillsVsInjectionsPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "GLP-1 Pills vs Injections (2026): Results, Cost & Routine",
+    headline: "GLP-1 Pills vs Injections in 2026: Weight Loss Results, Price by Route and Daily Routine Compared",
     description: metadata.description,
     datePublished: PAGE_PUBLISHED,
     dateModified: PAGE_UPDATED,
@@ -310,12 +346,12 @@ export default async function Glp1PillsVsInjectionsPage() {
               </span>
             </div>
             <h1 className="text-[22px] font-bold leading-[1.2] tracking-[-0.01em] text-[#191919] sm:max-w-[640px] sm:text-[32px] sm:leading-tight sm:tracking-normal">
-              GLP-1 Pills vs Injections (2026): Results, Cost and Routine
+              GLP-1 Pills vs Injections in 2026: Which Works Better for You?
             </h1>
             <p className="mt-2 max-w-[640px] text-[14px] leading-[1.45] text-gray-600 sm:text-[16px] sm:leading-[1.55]">
-              The two FDA-approved GLP-1 pills against the weekly injections: what the trials showed,
-              what each route costs at verified prices, the side effects they share, and the daily
-              routine that decides it for most people.
+              The Wegovy pill and Foundayo measured against weekly Wegovy and Zepbound: trial results,
+              verified prices for every route, the side effects all four share, and the daily routine
+              that tips the decision for most people.
             </p>
             <p className="mt-2 text-[12px] text-gray-400">Updated {fmt(PAGE_UPDATED)}</p>
             <MedicalReviewBar path="/glp1-pills-vs-injections" className="mt-3 max-w-[760px]" />
@@ -328,19 +364,19 @@ export default async function Glp1PillsVsInjectionsPage() {
               box rather than a "winner" verdict: this is a guide, not a battle. */}
           <div className="article-body mb-8 text-[16px] leading-[1.75] text-gray-800">
             <div className="qa">
-              <strong>The quick answer</strong>
+              <strong>Short answer</strong>
               {QUICK_ANSWER}
               <span className="mt-2 block text-[13px] text-gray-500">
-                Trial figures are the published treatment-policy results linked below. Compounded and Ro
-                prices verified on each provider&rsquo;s site ({PRICE_DATE}{" "}for the price index, August 2026
-                for Ro&rsquo;s brand products); manufacturer prices are as reported by dated sources and not
-                verified by us.
+                Trial numbers are the published treatment-policy results linked in the guide. Compounded and
+                Ro prices were verified on each provider&rsquo;s site ({PRICE_DATE}{" "}for the price index,
+                August 2026 for Ro&rsquo;s brand products); manufacturer prices come from dated reports and have
+                not been verified by us.
               </span>
             </div>
           </div>
 
           <div className="mb-8 rounded-xl border border-[#0C4B75]/15 bg-[#F4F8FB] p-5 sm:p-6">
-            <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">Key takeaways</p>
+            <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">What to know first</p>
             <ul className="space-y-2">
               {KEY_TAKEAWAYS.map((t) => (
                 <li key={t} className="flex items-start gap-2.5 text-[15px] leading-relaxed text-gray-800">
@@ -352,7 +388,7 @@ export default async function Glp1PillsVsInjectionsPage() {
           </div>
 
           <nav aria-label="Table of contents" className="mb-8 rounded-xl border border-gray-200 bg-white p-5">
-            <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-gray-400">In this article</p>
+            <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-gray-400">On this page</p>
             <ol className="space-y-1.5">
               {SECTIONS.map((s, i) => (
                 <li key={s.heading} className="flex gap-2 text-[14px] leading-snug">
@@ -388,7 +424,7 @@ export default async function Glp1PillsVsInjectionsPage() {
 
           {/* FAQ */}
           <section className="mt-12 mb-12">
-            <h2 className="mb-6 text-[24px] font-bold text-[#191919]">GLP-1 pills vs injections: FAQ</h2>
+            <h2 className="mb-6 text-[24px] font-bold text-[#191919]">GLP-1 pills vs injections: common questions</h2>
             <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
               {FAQS.map((f) => (
                 <div key={f.question} className="p-6">
@@ -400,23 +436,23 @@ export default async function Glp1PillsVsInjectionsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="mb-4 text-[24px] font-bold text-[#191919]">Compare providers</h2>
+            <h2 className="mb-4 text-[24px] font-bold text-[#191919]">Compare GLP-1 providers</h2>
             <p className="mb-6 text-[16px] leading-[1.75] text-gray-800">
-              Whether you lean toward a pill or an injection, the licensed telehealth providers we track are
-              compared on verified pricing, medical support and value.
+              Pill or injection, every licensed telehealth provider we track is ranked side by side on
+              verified prices, clinical support and overall value.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/"
                 className="inline-flex h-[46px] items-center justify-center rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
               >
-                Compare top providers
+                See the provider rankings
               </Link>
               <Link
                 href="/weight-loss-pills"
                 className="inline-flex h-[46px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50"
               >
-                Weight loss pills guide
+                Read the weight loss pills guide
               </Link>
             </div>
           </section>
@@ -428,21 +464,21 @@ export default async function Glp1PillsVsInjectionsPage() {
           {/* Sources + disclaimer */}
           <section className="mt-10">
             <p className="mb-3 text-[13px] leading-relaxed text-gray-400">
-              Sources: trial results as published in the New England Journal of Medicine - STEP 1 (March 18,
-              2021), SURMOUNT-1 (July 21, 2022), and OASIS 4 and ATTAIN-1 (September 2025, summarised by the
-              American College of Cardiology on September 24, 2025) - and the STEP 1 extension in Diabetes,
-              Obesity and Metabolism (April 19, 2022), each linked where cited. FDA approvals: Wegovy (June 4,
-              2021), Zepbound (November 8, 2023), the Wegovy pill (December 2025) and Foundayo (April 1,
-              2026). Prices: the providers&rsquo; own published figures, verified {PRICE_DATE} for the price
-              index and August 2026 for Ro&rsquo;s brand products; Foundayo and NovoCare prices and savings
-              cards as reported by Scientific American, Lilly&rsquo;s April 9, 2026 release and third-party
-              trackers, not verified by us. Weight-loss figures are trial averages; individual results vary.
-              Brand names are trademarks of their manufacturers.
+              Sources: New England Journal of Medicine trial publications for STEP 1 (March 18, 2021),
+              SURMOUNT-1 (July 21, 2022), and OASIS 4 and ATTAIN-1 (September 2025, summarized by the American
+              College of Cardiology on September 24, 2025), plus the STEP 1 extension in Diabetes, Obesity and
+              Metabolism (April 19, 2022), each linked where cited. FDA approvals: Wegovy (June 4, 2021),
+              Zepbound (November 8, 2023), the Wegovy pill (December 2025) and Foundayo (April 1, 2026).
+              Prices: providers&rsquo; own published figures, verified {PRICE_DATE} for the price index and
+              August 2026 for Ro&rsquo;s brand products; Foundayo and NovoCare prices and savings cards as
+              reported by Scientific American, Lilly&rsquo;s April 9, 2026 release and third-party trackers,
+              not verified by us. Weight-loss figures are trial averages and individual results differ. Brand
+              names are trademarks of their owners.
             </p>
             <p className="text-[13px] leading-relaxed text-gray-400">
-              topweightloss.us is not a medical provider and does not prescribe medications. This page is
-              for educational and comparison purposes only and is not medical advice. GLP-1 medications
-              require evaluation and supervision by a licensed healthcare provider.
+              Top Weight Loss (topweightloss.us) is not a medical provider and does not prescribe. This page
+              compares options for educational purposes and is not medical advice. GLP-1 medicines require
+              assessment and ongoing supervision by a licensed healthcare provider.
             </p>
           </section>
         </div>
