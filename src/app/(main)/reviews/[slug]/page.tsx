@@ -1,3 +1,4 @@
+import { clampMetadata } from "@/lib/utils";
 import type { Metadata } from "next";
 import { ReviewPageView, reviewMetadata } from "@/components/pages/review-page";
 import { ROOT_CONTEXT } from "@/lib/site-context";
@@ -10,7 +11,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  return reviewMetadata(slug, ROOT_CONTEXT);
+  return clampMetadata(await reviewMetadata(slug, ROOT_CONTEXT));
 }
 
 export default async function ReviewPage({

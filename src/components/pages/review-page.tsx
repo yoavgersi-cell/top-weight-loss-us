@@ -39,100 +39,69 @@ import { catalogPriceSnippet } from "@/lib/product-catalog";
 // price that can go stale. Providers without a catalog entry get the token
 // removed cleanly.
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
-  // HRT vertical (ported from hrtwomen.com, Oct 22, 2026). Titles shaped by
-  // that site's Search Console queries: "winona hrt reviews", "how much does
-  // winona cost", "does winona take insurance", "is midi health legit".
-  winona: {
-    title: "Winona HRT Reviews 2026: Cost, Insurance & Is It Legit?",
-    description:
-      "Honest Winona HRT review: what it costs per month, whether it takes insurance, which estrogen and progesterone products it prescribes, and whether it's legit.",
-  },
-  gala: {
-    title: "Gala HRT Reviews 2026: Cost, Hormone Therapy & Is It Legit?",
-    description:
-      "Gala hormone therapy reviewed: flat monthly pricing, estradiol and progesterone options, what's included and whether Gala is a legit option for menopause HRT.",
-  },
-  midi: {
-    title: "Midi Health Reviews 2026: Cost, Insurance & Is It Worth It?",
-    description:
-      "Midi Health review: insurance-covered video visits with menopause clinicians, self-pay cost, what it treats, where it's available and whether it's worth it.",
-  },
-  // ED vertical (ported from edtreatmenthub.com, Oct 21, 2026)
-  quad: {
-    title: "Quad by MEDVi Review 2026: Cost, Ingredients & Is It Legit?",
-    description:
-      "Independent review of Quad by MEDVi, the compounded 4-in-1 dissolvable ED medication: what is in it, monthly cost, who it suits, and whether it is legit.",
-  },
   embody: {
-    // Oct 2026, Bing 30-day export: "embody reviews" 411 impressions at
-    // position ~6 with ZERO clicks, and the page's CTR is 0.43% on 1.6K
-    // impressions - the worst of the three top review pages. Bing weights the
-    // exact phrase, so the title now opens with "embody Reviews" (the welludr
-    // and altRx titles that open with "<brand> Reviews" earn 1.1% and 0.8%).
-    // "Weight Loss" stays in the title for Google, where "embody weight loss
-    // reviews" is the page's main query, and "Legit" covers the legit/scam
-    // long-tails that convert at 50-100% on Bing.
-    title: "embody Reviews 2026: Weight Loss Cost, Real Results & Is It Legit?",
+    // Bing weights the exact phrase "embody reviews", so the title opens with
+    // it; "Weight Loss" stays for Google, where "embody weight loss reviews" is
+    // the main query, and "Legit" covers the legit/scam long-tails.
+    title: "embody Reviews 2026: Weight Loss Pricing, Results & Legitimacy",
     description:
-      "embody reviews: {prices}, 1-2 day shipping, LegitScript-certified 503A pharmacies, refund if not approved. Real customer results, and is embody legit?",
+      "embody reviews: {prices}, free 1-2 day shipping, LegitScript-certified with 503A pharmacies, and a full refund if you're not approved. Is embody legit?",
   },
   medvi: {
-    // Decoupled from the "is medvi legit" query (Sep 2026): that phrase lived in
-    // BOTH this title and the is-medvi-legit article title, splitting the signal.
-    // The review now owns "medvi reviews / cost / verdict"; the article owns the
-    // legitimacy query. Revert if the split doesn't resolve post-migration-swap.
-    title: "Medvi GLP-1 Reviews 2026: Cost, Support & Verdict",
+    // The review owns "medvi reviews / cost / verdict"; the is-medvi-legit
+    // article owns the legitimacy query, so "legit" stays out of this title.
+    title: "Medvi GLP-1 Reviews 2026: Price, Care Team & Our Verdict",
     description:
-      "Medvi reviews: {prices}, all-inclusive with video visits and personal support. Cost, pros, cons and our verdict.",
+      "Medvi reviews: {prices}, one all-inclusive monthly price with video visits, a dietician and care coaching. What it costs, pros, cons and our verdict.",
   },
   sprout: {
-    title: "Sprout Reviews 2026: Is It Legit? GLP-1 Cost & Verdict",
+    title: "Sprout Reviews 2026: GLP-1 Pricing, Wegovy & Is It Legit?",
     description:
-      "Sprout reviews: {prices}, brand-name Wegovy available. Is Sprout legit? Pricing, pros & cons.",
+      "Sprout reviews: {prices}, plus brand-name Wegovy on the menu and 2-day fulfillment. Is Sprout legit? Monthly cost, pros, cons and who it suits.",
   },
   altrx: {
-    title: "altRx Reviews 2026: Is It Legit? Cost, Complaints & Verdict",
+    title: "altRx Reviews 2026: Legit? Pricing, Complaints & Verdict",
     description:
-      "altRx reviews: {prices}, plus brand-name Zepbound & Wegovy and Buy Now, Pay Later. Is altRx legit? Pros & cons.",
+      "altRx reviews: {prices}, a brand-name Zepbound and Wegovy shelf, and Buy Now, Pay Later. Is altRx legit? Real costs, pros, cons and our verdict.",
   },
   ro: {
     // Title matches the generated shared-provider title byte-for-byte - this
     // entry exists only to put "GLP-1" in the description (desc-only pass).
-    title: "ro Weight Loss Review 2026: Cost, Results & Is It Worth It?",
+    title: "ro Weight Loss Review 2026: Cost, Pros, Cons & Our Verdict",
     description:
-      "ro weight loss review: membership from $39 first month plus brand-name GLP-1s (Wegovy, Zepbound) billed separately - insurance can apply. Verified pricing, pros & cons.",
+      "ro weight loss review: a membership from $39 the first month, with brand-name Wegovy or Zepbound billed separately and insurance accepted. Verified costs, pros and cons.",
   },
   eden: {
-    title: "Eden Reviews 2026: Is It Legit? $99 Flat GLP-1 Pricing & Verdict",
+    title: "Eden Reviews 2026: $99 Flat GLP-1 Pricing & Is It Legit?",
     description:
-      "Eden reviews: {prices}, flat every month and every dose, no membership, 24/7 human support. Is Eden legit? Trustpilot record, pros & cons.",
+      "Eden reviews: {prices}, the same price every month at every dose, no membership fee and 24/7 human support. Is Eden legit? Trustpilot record and verdict.",
   },
   trimrx: {
-    title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost & Verdict",
+    title: "TrimRx Reviews 2026 (Trim Rx): Legit? Pricing & Verdict",
     description:
-      "TrimRx (Trim Rx) reviews: {prices}, no long-term contract, clinical support included. Is TrimRx legit? Cost, pros & cons.",
+      "TrimRx (Trim Rx) reviews: {prices}, month-to-month with no long-term contract and clinical support built in. Is TrimRx legit? Costs, pros and cons.",
   },
   shed: {
-    title: "Shed Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
+    title: "SHED Reviews 2026: Legit? Pricing, Results & Guarantee",
     description:
-      "Shed reviews: {prices}, with health coaching and a money-back guarantee. Is Shed legit and worth it? Pros & cons.",
+      "SHED reviews: {prices}, health coaching on every plan and a lose-5%-or-your-money-back guarantee. Is SHED legit and worth the price? Pros and cons.",
   },
   directmeds: {
-    title: "DirectMeds Reviews 2026: Is It Legit? Cost, Results & Verdict",
+    title: "DirectMeds Reviews 2026: Legit? Flat Pricing & Verdict",
     description:
-      "DirectMeds reviews: {prices} flat at every dose, injections or drops, free 1-2 day shipping. Is it legit?",
+      "DirectMeds reviews: {prices} at every dose, as injections or needle-free drops, with free 1-2 day shipping. Is DirectMeds legit? Costs and verdict.",
   },
   wellmedr: {
     // Rebranded Oct 2026; the old name stays in the title so searches for
     // "wellmedr reviews" still match this page.
-    title: "welludr (formerly wellmedr) Reviews 2026: Legit? Cost & Verdict",
+    title: "welludr (formerly wellmedr) Reviews 2026: Legit? Price & Verdict",
     description:
-      "welludr (formerly wellmedr) reviews: {prices}, used by 1M+ patients, weight-loss warranty. Is welludr legit? Cost, pros & cons.",
+      "welludr (formerly wellmedr) reviews: {prices}, 1M+ patients served and a weight-loss warranty. Is welludr legit? Real costs, pros, cons and our verdict.",
   },
   healthrx: {
-    title: "HealthRx Reviews 2026: Is It Legit? $99/mo GLP-1 Examined",
+    title: "HealthRx Reviews 2026: Legit? The $99/mo GLP-1 Plan Explained",
     description:
-      "HealthRx reviews: {prices} (semaglutide 12-month prepaid), overnight cold shipping, LegitScript-certified. Is it legit?",
+      "HealthRx reviews: {prices} (semaglutide on a 12-month prepaid plan), overnight cold-chain shipping and LegitScript certification. Is HealthRx legit?",
   },
 };
 
@@ -141,87 +110,70 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
 // Only defined for providers where the legitimacy signals are genuinely verifiable;
 // each signal is grounded in that provider's real credentials/practices.
 const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
-  // HRT vertical (ported from hrtwomen.com, Oct 22, 2026); facts as verified
-  // in src/lib/seeds/hrt.ts.
-  winona: {
-    verdict:
-      "Yes - Winona is a legitimate US telehealth company. Treatment is prescribed by board-certified physicians after an online medical questionnaire, and ongoing care runs through secure doctor messaging. As with any HRT, whether it's appropriate for you is a medical decision, so answer the intake honestly.",
-    signals: ["Board-certified physicians", "Prescription-only, after a medical review", "Secure doctor messaging and follow-ups"],
-  },
-  gala: {
-    verdict:
-      "Yes - Gala is a legitimate telehealth service. US-licensed clinicians review your health history before prescribing, and its HRT plan uses estradiol and progesterone with check-ins and dose adjustments included. Confirm current pricing and availability on Gala's own site.",
-    signals: ["US-licensed clinicians", "Estradiol and progesterone", "Check-ins and dose adjustments included"],
-  },
-  midi: {
-    verdict:
-      "Yes - Midi Health is a legitimate virtual menopause clinic. Care is delivered over video by women's-health nurse practitioners and certified nurse midwives, it is in-network with most major commercial insurance plans, and prescriptions go to the pharmacy you choose.",
-    signals: ["Video visits with menopause-trained clinicians", "In-network with most major commercial insurance", "Prescriptions sent to your own pharmacy"],
-  },
   embody: {
     verdict:
-      "Yes - embody is a legitimate, US-based telehealth weight-loss provider. It's LegitScript-certified, works with US-based state-licensed 503A compounding pharmacies, and connects you with state-licensed doctors overseen by its own medical director.",
+      "Yes. embody is a real, US-based telehealth weight-loss company with LegitScript certification. State-licensed doctors, supervised by embody's own medical director, write the prescriptions, and US-based, state-licensed 503A compounding pharmacies fill them.",
     signals: [
-      "LegitScript-certified telehealth provider",
-      "US-based, state-licensed 503A compounding pharmacies",
-      "State-licensed doctors, a medical director, and a nursing team",
-      "Transparent flat pricing - $69/mo semaglutide, $119 tirzepatide",
-      "Full refund if you're not approved",
+      "Certified by LegitScript",
+      "Medication filled by US-based, state-licensed 503A compounding pharmacies",
+      "State-licensed doctors backed by a medical director and nursing team",
+      "Published flat prices: $69/mo semaglutide, $119/mo tirzepatide",
+      "Money back in full if a provider doesn't approve you",
     ],
   },
   altrx: {
     verdict:
-      "Yes - altRx is a legitimate self-pay telehealth service. A licensed provider (physician, PA, or nurse practitioner) reviews your assessment before any prescription is issued, and medication is filled by a licensed pharmacy.",
+      "Yes. altRx is a genuine self-pay telehealth service: a licensed physician, PA or nurse practitioner reviews your assessment before any prescription is written, and a licensed pharmacy fills the order.",
     signals: [
-      "Licensed providers review every assessment (physician, PA, or NP)",
-      "Prescriptions filled by licensed pharmacies",
-      "Transparent, flat pricing - no hidden fees, no insurance required",
-      "No long-term contract; pause or cancel anytime",
-      "Buy Now, Pay Later available",
+      "Every assessment reviewed by a licensed physician, PA or NP",
+      "Orders filled by licensed pharmacies",
+      "Flat published pricing with no hidden fees and no insurance needed",
+      "Pause or cancel anytime, no long-term contract",
+      "Buy Now, Pay Later at checkout",
     ],
   },
   trimrx: {
     verdict:
-      "Yes - TrimRx is a legitimate telehealth GLP-1 provider. Licensed clinicians guide treatment, medications are compounded semaglutide and tirzepatide prescribed after a medical review, and pricing is transparent with no long-term contract.",
+      "Yes. TrimRx is a genuine telehealth GLP-1 provider. Compounded semaglutide and tirzepatide are prescribed only after a medical review, licensed clinicians guide you through treatment, and prices are published up front with no long-term contract.",
     signals: [
-      "Licensed clinical guidance throughout treatment",
-      "Compounded semaglutide & tirzepatide, prescribed after review",
-      "Transparent, competitive pricing with multi-month discounts",
-      "No long-term contract required",
-      "100% online - no clinic visit needed",
+      "Licensed clinicians guide you from start to finish",
+      "Compounded semaglutide and tirzepatide, prescribed after a medical review",
+      "Published, competitive prices with discounts on multi-month plans",
+      "No long-term contract",
+      "Fully online, no clinic visit required",
     ],
   },
   medvi: {
     verdict:
-      "Yes - Medvi is a legitimate medical weight-loss platform. Prescriptions are overseen by licensed providers with regular monitoring, and its pricing is transparent and all-inclusive with no surprise charges.",
+      "Yes. Medvi is a real medical weight-loss platform. Licensed providers oversee every prescription and monitor you on a regular schedule, and one all-inclusive price covers the program with no surprise charges.",
     signals: [
-      "Prescription treatment overseen by licensed providers",
-      "Regular monitoring and provider check-ins",
-      "Transparent, all-inclusive pricing - no surprise charges",
-      "Highly rated, personal service on Trustpilot",
-      "100% online - no clinic visit required",
+      "Licensed providers oversee every prescription",
+      "Scheduled monitoring and provider check-ins",
+      "One all-inclusive price, no surprise charges",
+      "Strong ratings for personal service on Trustpilot",
+      "Fully online, no clinic visit needed",
     ],
   },
   wellmedr: {
     verdict:
-      "Yes - welludr is a legitimate telehealth platform. Board-certified specialists tailor your plan, and medications are made in US state-licensed pharmacies following FDA compounding standards after a medical review.",
+      "Yes. welludr is a genuine telehealth platform. After a medical review, board-certified specialists build your plan, and US state-licensed pharmacies prepare the medication under FDA compounding standards.",
     signals: [
-      "Board-certified specialists tailor your treatment plan",
-      "US state-licensed pharmacies following FDA compounding standards",
-      "Real medical intake reviewed before prescribing",
-      "100% online - message your provider anytime",
-      "Discreet, unbranded packaging",
+      "Plans tailored by board-certified specialists",
+      "Medication from US state-licensed pharmacies under FDA compounding standards",
+      "Full medical intake reviewed before anything is prescribed",
+      "Fully online, with provider messaging anytime",
+      "Plain, unbranded packaging",
     ],
   },
   healthrx: {
     verdict:
-      "Yes - HealthRx is a legitimate GLP-1 telehealth program. It's LegitScript-certified (cert. 50087439), an independent US-licensed clinician reviews every request before treatment proceeds, and medication is prepared by licensed 503A pharmacies and shipped overnight in temperature-controlled, lot-tracked packaging.",
+      "Yes. HealthRx is a real GLP-1 telehealth program with LegitScript certification (cert. 50087439). An independent US-licensed clinician reviews each request before treatment goes ahead, licensed 503A pharmacies prepare the medication, and orders ship overnight in temperature-controlled, lot-tracked packaging.",
     signals: [
-      "LegitScript certified - cert. 50087439",
-      "Independent US-licensed clinician reviews every request; approval is never automatic",
-      "Licensed 503A pharmacy fulfillment",
-      "Overnight cold-chain shipping, lot-tracked through delivery",
-      "Transparent prepaid pricing - $99/mo semaglutide ($1,188 at checkout), no hidden fees",
+      "LegitScript certification number 50087439",
+      "Each request reviewed by an independent US-licensed clinician; approval is never automatic",
+      "Filled by licensed 503A pharmacies",
+      "Overnight cold-chain delivery, lot-tracked to your door",
+      "Prepaid pricing shown up front: $99/mo semaglutide ($1,188 at checkout), no hidden fees",
     ],
   },
 };
@@ -229,328 +181,168 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
 // Extra code-controlled FAQs appended to specific reviews (and their FAQPage
 // schema) - high-intent questions grounded in each provider's real published
 // terms. Side-effect answers stay at medication level and link the full guide.
-// TRT vertical (ported from toptrt.io, Oct 22, 2026). Kept in its own map and
-// read only on /trt: dudemeds is also reviewed on /ed, and a TRT verdict must
-// not surface there.
-const REVIEW_LEGIT_TRT: Record<string, { verdict: string; signals: string[] }> = {
-  hone: {
-    verdict:
-      "Yes - Hone Health is a legitimate, established telehealth provider. It doesn't sell testosterone off a shelf: treatment starts with real lab testing to confirm low testosterone and a licensed clinician's review, then continues with ongoing monitoring. That testing-first, clinician-directed model is exactly what a responsible TRT service should look like.",
-    signals: [
-      "Requires bloodwork confirming low testosterone before any prescription",
-      "Licensed clinicians review your results and direct treatment",
-      "Ongoing monitoring with follow-up labs and dose adjustments",
-      "Established, recognizable men's-health brand",
-    ],
-  },
-  tmates: {
-    verdict:
-      "Yes - TMates is a legitimate TRT-focused telehealth membership. It's built around the responsible path: lab testing to establish your levels, a licensed clinician's review, and ongoing monitoring over time rather than a one-off prescription.",
-    signals: [
-      "Lab testing before any prescription",
-      "Licensed clinicians involved throughout",
-      "Membership built around ongoing monitoring",
-      "Dedicated, TRT-first program",
-    ],
-  },
-  maleexcel: {
-    verdict:
-      "Yes - Male Excel is a legitimate, established men's-health telehealth brand with a strong track record, rated 4.5 on Trustpilot across thousands of reviews. It runs comprehensive at-home labs and a licensed-clinician review before prescribing, with unlimited provider follow-ups.",
-    signals: [
-      "Rated 4.5 on Trustpilot from thousands of reviews",
-      "Comprehensive at-home lab testing before any prescription",
-      "Licensed clinicians review your results",
-      "Unlimited provider follow-ups",
-    ],
-  },
-  taurus: {
-    verdict:
-      "Yes - Taurus Meds is a legitimate men's-health telehealth service. TRT is prescribed only after lab-based diagnosis and a licensed clinician's review, the same medical safeguards any responsible provider follows. Confirm its current treatment lineup and pricing on its own site.",
-    signals: [
-      "Lab-based diagnosis before any prescription",
-      "Licensed clinicians review your results",
-      "Fully online men's-health service",
-      "Discreet, direct-to-door delivery",
-    ],
-  },
-  dudemeds: {
-    verdict:
-      "Yes - DudeMeds is a legitimate, value-minded men's telehealth service. Even at its lower price point it still runs the required lab testing and a licensed-clinician review before prescribing TRT - 'cheaper' means fewer frills, not fewer safeguards.",
-    signals: [
-      "Required lab testing before any prescription",
-      "Licensed-clinician review",
-      "Fully online and discreet",
-      "Value-minded pricing without skipping oversight",
-    ],
-  },
-  fridays: {
-    verdict:
-      "Yes - Fridays is a legitimate men's-health telehealth brand. TRT is offered only after lab-based diagnosis and a licensed clinician's review. Confirm its current TRT lineup, monitoring and pricing on its own site.",
-    signals: [
-      "Lab-based diagnosis before any prescription",
-      "Licensed clinicians review your results",
-      "Fully online men's-health platform",
-      "Discreet, direct-to-door delivery",
-    ],
-  },
-};
-
 const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> = {
-  // HRT vertical (ported from hrtwomen.com, Oct 22, 2026). Figures are the
-  // provider-published prices verified there on Oct 6, 2026 and match the
-  // pricing plans in src/lib/seeds/hrt.ts; each answer says to confirm at checkout.
-  winona: [
-    {
-      question: "Does Winona take insurance?",
-      answer:
-        "No. Winona does not bill insurance directly - treatment is a monthly self-pay subscription. Its HRT prescriptions are generally HSA/FSA eligible, and some patients submit receipts to their insurer for possible reimbursement, but that depends entirely on your plan.",
-    },
-    {
-      question: "How much does Winona cost per month?",
-      answer:
-        "Listed starting prices are about $39/month for progesterone capsules, $54/month for estradiol tablets, $89/month for the estrogen body cream (with or without progesterone) or vaginal estrogen cream, and $149/month for the estrogen patch; combining products costs more. The subscription includes the physician review, unlimited messaging and follow-ups, and free shipping. Prices change, so confirm at checkout.",
-    },
-    {
-      question: "What products does Winona prescribe?",
-      answer:
-        "Winona's HRT options include estradiol as a pill, patch or cream, estriol, progesterone pills, and vaginal estrogen cream for dryness and urinary symptoms. It also offers non-HRT add-ons such as an arousal cream and hair and skin products. It does not prescribe testosterone.",
-    },
-    {
-      question: "Is Winona safe?",
-      answer:
-        "Winona prescribes hormone therapy only after a physician reviews your medical history, which is the key safety step. HRT itself carries real risks - including blood clots, stroke and breast-cancer considerations - and is not right for everyone, so answer the intake completely and ask your doctor about side effects such as breast tenderness, bloating, spotting or (with progesterone) drowsiness.",
-    },
-  ],
-  gala: [
-    {
-      question: "Does Gala take insurance?",
-      answer:
-        "No. Gala charges a single flat monthly price for its HRT plan rather than billing insurance. That price includes the clinician, check-ins, dose adjustments and medication shipping. Confirm the current price on Gala's site.",
-    },
-    {
-      question: "What hormone therapy does Gala offer?",
-      answer:
-        "Gala prescribes estradiol as a pill or patch, oral or vaginal progesterone, and vaginal estradiol, after a review by a US-licensed clinician. Its site carries a compounded-medication disclaimer, so ask whether your product is FDA-approved or compounded.",
-    },
-  ],
-  midi: [
-    {
-      question: "Does Midi Health take insurance?",
-      answer:
-        "Yes. Midi is in-network with most major commercial and PPO insurance plans, so visits usually cost your normal specialist copay, coinsurance or deductible. Midi does not bill Medicare, and some services (such as testosterone) are out of pocket. Check your coverage when you register.",
-    },
-    {
-      question: "How much does Midi Health cost without insurance?",
-      answer:
-        "Self-pay visits have been listed at roughly $250 for the first visit and $150 for follow-ups. Medication is billed separately through your pharmacy. Confirm current prices when you book.",
-    },
-    {
-      question: "Is Midi Health available in Canada?",
-      answer:
-        "No. Midi Health serves patients in the United States; it is not a telehealth option for people living in Canada.",
-    },
-  ],
-  // ED vertical (ported from edtreatmenthub.com, Oct 21, 2026). Specifics are
-  // deliberately hedged: Quad is a compounded product whose formula, dose and
-  // price are set at prescribing, so we point to MEDVi rather than assert them.
-  quad: [
-    {
-      question: "What is in Quad by MEDVi?",
-      answer:
-        "Quad by MEDVi is a compounded, multi-ingredient (\"4-in-1\") ED medication - it blends several active ingredients into a single dose rather than relying on one. Because it is compounded and prescription-only, the exact actives and strengths are determined by the prescribing clinician for your intake; confirm the specific formulation with MEDVi before starting.",
-    },
-    {
-      question: "What is the Quad by MEDVi dosage?",
-      answer:
-        "There is no one-size-fits-all dose. As a compounded medication, Quad's strength and how often you take it are set by the licensed clinician who reviews your health questionnaire, and can be adjusted over time. Follow the dosing on your prescription and the guidance from MEDVi's providers rather than a generic dosage chart.",
-    },
-    {
-      question: "How much does Quad by MEDVi cost per month?",
-      answer:
-        "Quad is billed as a monthly telehealth plan rather than a per-pill price, and compounded multi-ingredient programs typically cost more than a plain generic pill. Promotions and plan tiers change often, so treat any figure you see as approximate and confirm the current monthly cost on MEDVi's own site before subscribing.",
-    },
-    {
-      question: "Is Quad by MEDVi a liquid, drops or dissolvable?",
-      answer:
-        "Quad is delivered in a fast-dissolving format rather than a traditional pill you swallow - which is why it is sometimes searched for as \"quad drops\" or \"quad liquid.\" The dissolvable format is a convenience for men who dislike swallowing tablets; the medication inside is still a prescription compound.",
-    },
-    {
-      question: "Does Quad by MEDVi work?",
-      answer:
-        "For appropriate candidates, the active ingredients in compounded ED medications like Quad work the same way proven ED medicines do - by improving blood flow - and the multi-ingredient approach is aimed at men for whom a single standard pill underperformed. Individual results vary, and whether it is right for you is a licensed clinician's decision based on your health.",
-    },
-    {
-      question: "Is Quad by MEDVi safe?",
-      answer:
-        "Compounded ED medications are used routinely for appropriate candidates when prescribed and monitored by a licensed clinician - but \"safe\" depends on that screening. Quad should never be combined with nitrate medications, and certain heart conditions and other drugs matter, which is exactly what MEDVi's provider review is for. Compounded products are not FDA-approved the way brand and generic pills are, so the clinician's sign-off is the key safeguard.",
-    },
-    {
-      question: "Is Quad by MEDVi FDA-approved?",
-      answer:
-        "No. Quad is a compounded medication prepared by a compounding pharmacy, so it does not go through the FDA approval process that covers brand-name and generic drugs. That is not unusual or illegal - compounding is long-established - but it is why a licensed clinician deciding whether it is appropriate for you does real safety work.",
-    },
-  ],
   embody: [
-    {
-      question: "How fast does embody ship?",
-      answer:
-        "embody ships free in 1-2 days in temperature-controlled, tracked and insured packaging, with same-day dispatch on orders placed before 2pm CT. The doctor review itself usually happens within 24 hours of completing the ~5-minute intake.",
-    },
-    {
-      question: "Can you cancel embody anytime?",
-      answer:
-        "Yes - embody has no long-term contract and no membership fee; plans are month-to-month and you can cancel anytime. If a provider doesn't approve your prescription in the first place, embody issues a full refund.",
-    },
-    {
-      question: "What are the side effects of embody's medications?",
-      answer:
-        "embody prescribes compounded semaglutide and tirzepatide, so the side effects are those of GLP-1 medications generally - most commonly digestive (nausea, constipation, diarrhea), especially during the first weeks as your dose increases, and usually easing as your body adjusts. Your prescribing provider reviews your history for contraindications, and embody's nursing team is available during treatment. See our full semaglutide side-effects guide for what to expect and when to seek care.",
-    },
     {
       question: "How much does embody cost per month?",
       answer:
-        "embody uses flat monthly pricing: $69/month for compounded semaglutide and $119/month for compounded tirzepatide (regularly $79 and $129). The price includes the medication, the doctor review, supplies and free 1-2 day shipping - there's no membership fee and no hidden costs. If a provider doesn't approve your prescription, embody issues a full refund.",
+        "embody charges a flat $69/month for compounded semaglutide and $119/month for compounded tirzepatide (regular prices $79 and $129). That price covers the medication, the doctor review, supplies and free 1-2 day shipping, with no membership fee or hidden costs. If a provider doesn't approve your prescription, embody refunds you in full.",
     },
     {
-      question: "Is embody FDA-approved?",
+      question: "How long does embody take to ship?",
       answer:
-        "embody's medications are compounded semaglutide and tirzepatide, which are not FDA-approved brand-name drugs. They're prepared by US-based, state-licensed 503A compounding pharmacies using the same active ingredients as the FDA-approved brands (semaglutide in Ozempic and Wegovy; tirzepatide in Mounjaro and Zepbound). Compounded medications are legal and prescribed by a licensed provider, but they don't carry FDA brand-drug approval - a distinction worth understanding before starting. embody itself is LegitScript-certified.",
+        "embody ships free in 1-2 days in temperature-controlled packaging that is tracked and insured, and orders placed before 2pm CT go out the same day. The intake takes about 5 minutes, and a doctor usually reviews it within 24 hours.",
+    },
+    {
+      question: "Can I cancel embody at any time?",
+      answer:
+        "Yes. embody plans are month-to-month with no long-term contract and no membership fee, so you can cancel whenever you choose. If a provider declines your prescription at the start, embody issues a full refund.",
+    },
+    {
+      question: "Are embody's medications FDA-approved?",
+      answer:
+        "No. embody prescribes compounded semaglutide and tirzepatide, which are not FDA-approved brand-name drugs. US-based, state-licensed 503A compounding pharmacies prepare them with the same active ingredients found in the approved brands (semaglutide in Ozempic and Wegovy, tirzepatide in Mounjaro and Zepbound). Compounded medication is legal when a licensed provider prescribes it, and embody itself is LegitScript-certified.",
+    },
+    {
+      question: "What side effects can embody's GLP-1 medications cause?",
+      answer:
+        "embody's compounded semaglutide and tirzepatide carry the usual GLP-1 side effects, mostly digestive: nausea, constipation and diarrhea. These tend to show up in the first weeks and as the dose goes up, and they usually ease as your body adjusts. Your prescriber screens your history for contraindications, embody's nursing team is on hand during treatment, and our semaglutide side-effects guide covers when to seek care.",
     },
   ],
   altrx: [
     {
-      question: "How fast does altRx ship?",
+      question: "How long does altRx shipping take?",
       answer:
-        "Shipping is free and takes about 5-7 days. That's the main trade-off against the 1-2 day providers like embody and DirectMeds - altRx compensates on price ($89/month semaglutide, $149/month tirzepatide) and its brand-name shelf.",
+        "altRx shipping is free and takes about 5-7 days. That is slower than 1-2 day providers such as embody and DirectMeds; altRx makes up for it with lower prices ($89/month semaglutide, $149/month tirzepatide) and a brand-name shelf.",
     },
     {
-      question: "Can you pause or cancel altRx?",
+      question: "Does altRx sell brand-name GLP-1 medication?",
       answer:
-        "Yes - altRx is self-pay with no long-term contract, and you can pause or cancel anytime. Buy Now, Pay Later options are also available if you'd rather split the monthly cost.",
+        "Yes. Next to compounded semaglutide ($89/month) and tirzepatide ($149/month), altRx publishes monthly prices for brand-name Ozempic ($1,149), Zepbound ($1,249) and Wegovy ($1,579). Few providers in our ranking offer a real brand-name shelf.",
     },
     {
-      question: "Does altRx offer brand-name medication?",
+      question: "Can I pause or cancel altRx?",
       answer:
-        "Yes - alongside compounded semaglutide ($89/month) and tirzepatide ($149/month), altRx lists brand-name Ozempic at $1,149, Zepbound at $1,249 and Wegovy at $1,579 per month, making it one of the few providers in our ranking with a genuine brand-name shelf.",
+        "Yes. altRx is self-pay with no long-term contract, so you can pause or cancel whenever you like. Buy Now, Pay Later is also available if you prefer to split the monthly cost.",
     },
   ],
   trimrx: [
     {
-      question: "How fast does TrimRx ship?",
+      question: "Does TrimRx lock you into a contract?",
       answer:
-        "Delivery is free and tracked, often arriving as soon as the next day after your prescription is issued. The process starts with a free 2-minute online assessment, and the consultation itself costs nothing.",
+        "No. TrimRx plans run month to month with no long-term commitment. Semaglutide costs $149 at every dose and compounded tirzepatide costs $259/month, and both include custom dosing and unlimited provider check-ins.",
     },
     {
-      question: "Is TrimRx a subscription with a contract?",
+      question: "Which medications does TrimRx prescribe?",
       answer:
-        "No long-term commitment - plans run month to month. The $149 semaglutide price is the same at every dose; compounded tirzepatide runs $259/month, with custom dosing and unlimited provider check-ins included.",
+        "TrimRx prescribes compounded semaglutide (a GLP-1) and compounded tirzepatide (a GLP-1 plus GIP), both as weekly injections dosed by your provider. It has no brand-name or oral option; for those, look at altRx (brand-name shelf) or Medvi (dissolving tablets).",
     },
     {
-      question: "What medications does TrimRx offer?",
+      question: "How quickly does TrimRx deliver?",
       answer:
-        "Compounded semaglutide (GLP-1) and compounded tirzepatide (GLP-1 + GIP), both weekly injections with dosing customized by your provider. There's no brand-name or oral option - if you want those, compare altRx (brand-name shelf) or Medvi (dissolving tablets).",
+        "TrimRx delivery is free and tracked, and it often arrives the day after your prescription is issued. You start with a free 2-minute online assessment, and the consultation is free too.",
     },
   ],
   shed: [
     {
-      question: "What is SHED's money-back guarantee?",
+      question: "How does SHED's money-back guarantee work?",
       answer:
-        "SHED promises that if you lose less than 5% of your body weight in 120 days on the program, you get your money back - the most concrete guarantee among the providers we rank. Check SHED's site for the current terms and conditions.",
+        "SHED says that if you lose less than 5% of your body weight in 120 days on its program, you get your money back. It is the most concrete guarantee among the providers we rank. Read SHED's site for the current terms and conditions.",
     },
     {
-      question: "Does SHED include coaching?",
+      question: "Is coaching included with SHED?",
       answer:
-        "Yes - health coaching is included in every plan rather than sold as an add-on, alongside the provider visit and home delivery. Reviewers on Trustpilot (4.6 across 1,134 reviews) most often single out the coaching and onboarding staff by name.",
+        "Yes. Every SHED plan includes health coaching, along with the provider visit and home delivery, rather than charging for it as an add-on. On Trustpilot (4.6 across 1,134 reviews), reviewers most often name the coaches and onboarding staff.",
     },
     {
-      question: "Can I pay for SHED with HSA/FSA funds?",
+      question: "Can I use HSA or FSA funds for SHED?",
       answer:
-        "Yes - SHED plans are HSA/FSA approved. Compounded semaglutide starts at $199/month and tirzepatide at $299/month, with 20% off your first month.",
+        "Yes. SHED plans are HSA/FSA approved. Compounded semaglutide starts at $199/month and tirzepatide at $299/month, and the first month is 20% off.",
     },
   ],
   wellmedr: [
     {
-      question: "How fast does welludr ship?",
+      question: "Does welludr charge more at higher doses?",
       answer:
-        "Standard delivery takes about 3-5 business days, with refills shipped every 4 weeks. That's slower than the 1-2 day providers like embody and DirectMeds - the trade-off for the lowest compounded prices in our ranking.",
+        "No. welludr keeps the same price at every dose: compounded semaglutide from $49/month and tirzepatide from $89/month. The $49 rate requires a 12-month plan.",
     },
     {
-      question: "Does welludr's price go up as your dose increases?",
+      question: "How long does welludr shipping take?",
       answer:
-        "No - welludr charges the same price regardless of dosage: compounded semaglutide from $49/month and tirzepatide from $89/month. The lowest $49 rate is tied to a 12-month plan.",
+        "welludr's standard delivery takes about 3-5 business days, and refills ship every 4 weeks. That is slower than 1-2 day providers like embody and DirectMeds, which is the trade-off for the lowest compounded prices in our ranking.",
     },
     {
-      question: "Can you cancel welludr anytime?",
+      question: "Can I cancel welludr whenever I want?",
       answer:
-        "Yes - you can cancel or change your plan anytime. Keep in mind the headline $49/month rate is locked in via a 12-month plan, and the program is backed by welludr's weight-loss warranty.",
+        "Yes. You can cancel or change your welludr plan at any time. The headline $49/month price is locked through a 12-month plan, and the program comes with welludr's weight-loss warranty.",
     },
   ],
   medvi: [
     {
-      question: "What does Medvi's monthly price actually include?",
+      question: "What is included in Medvi's monthly price?",
       answer:
-        "Everything: the provider visits, the GLP-1 medication, free shipping, and free dietician and care coaching. There's no membership fee and no hidden charges, and plans are HSA/FSA approved.",
+        "Medvi's single price covers provider visits, the GLP-1 medication, free shipping, and free dietician and care coaching. There is no membership fee and no hidden charge, and plans are HSA/FSA approved.",
     },
     {
-      question: "Does Medvi have a needle-free option?",
+      question: "Is there a needle-free Medvi option?",
       answer:
-        "Yes - Medvi offers a daily oral dissolving GLP-1 tablet at $249/month, one of the few needle-free GLP-1 formats among the providers we rank. Weekly semaglutide injections currently start at $99/month (regularly $199).",
+        "Yes. Medvi sells a daily oral dissolving GLP-1 tablet for $249/month, one of the few needle-free GLP-1 formats among the providers we rank. Weekly semaglutide injections currently start at $99/month (regular price $199).",
     },
     {
-      question: "Do I need insurance for Medvi?",
+      question: "Does Medvi require insurance?",
       answer:
-        "No - Medvi is a cash-pay program with one flat all-inclusive price, no insurance and no prior authorization required. Plans are HSA/FSA approved if you want to pay with pre-tax health funds.",
+        "No. Medvi is cash-pay at one flat, all-inclusive price, with no insurance or prior authorization needed. You can pay with pre-tax HSA/FSA funds because plans are HSA/FSA approved.",
     },
   ],
   directmeds: [
     {
-      question: "How fast does DirectMeds ship?",
+      question: "Is DirectMeds a membership program?",
       answer:
-        "Shipping is free and arrives in 1-2 days once your prescription is issued - among the fastest delivery in our ranking, on par with embody.",
+        "No. DirectMeds has no monthly membership and no hidden fees. You pay a flat $147/month at every dose, the telemedicine visit and prescription are included, and you can cancel at any time.",
     },
     {
-      question: "What are DirectMeds' sublingual drops?",
+      question: "How do DirectMeds' sublingual drops work?",
       answer:
-        "A needle-free format: compounded semaglutide or tirzepatide taken as daily liquid drops under the tongue instead of a weekly injection - at the same $147/month flat price as the injectable version.",
+        "The drops are DirectMeds' needle-free option: compounded semaglutide or tirzepatide taken daily as liquid drops under the tongue instead of a weekly shot. They cost the same flat $147/month as the injections.",
     },
     {
-      question: "Is DirectMeds a membership?",
+      question: "How long does DirectMeds take to ship?",
       answer:
-        "No - there's no monthly membership and no hidden fees. You pay $147/month flat (the same at every dose), the telemedicine visit and prescription are included, and you can cancel anytime.",
+        "DirectMeds ships free and delivers in 1-2 days after your prescription is issued, which matches embody for the fastest delivery in our ranking.",
     },
   ],
   sprout: [
     {
-      question: "How fast does Sprout ship?",
+      question: "What does Sprout cost each month?",
       answer:
-        "Sprout ships prescriptions within 2 days of approval - among the faster fulfillment windows in our ranking. The process starts with an online intake reviewed by a licensed provider.",
+        "Sprout's compounded semaglutide starts at $149/month and compounded tirzepatide at $199/month, with a standing $200 off the first month. Brand-name Wegovy starts at $1,799/month. Check Sprout's site for current plan terms and the first-month offer.",
     },
     {
-      question: "Does Sprout offer brand-name medication?",
+      question: "Can I get brand-name Wegovy through Sprout?",
       answer:
-        "Yes - alongside compounded semaglutide (from $149/month) and compounded tirzepatide (from $199/month), Sprout lists brand-name Wegovy from $1,799/month, making it one of the few mid-tier providers with a branded option on the shelf.",
+        "Yes. Besides compounded semaglutide (from $149/month) and compounded tirzepatide (from $199/month), Sprout lists brand-name Wegovy from $1,799/month. Few mid-priced providers keep a branded option on the menu.",
     },
     {
-      question: "How much does Sprout cost per month?",
+      question: "How fast does Sprout fill prescriptions?",
       answer:
-        "Compounded semaglutide starts at $149/month and compounded tirzepatide at $199/month, with a standing $200 discount on the first month. Brand-name Wegovy starts at $1,799/month. Confirm current plan terms and the first-month offer on Sprout's site.",
+        "Sprout ships prescriptions within 2 days of approval, one of the quicker fulfillment windows in our ranking. Everything starts with an online intake that a licensed provider reviews.",
     },
   ],
   healthrx: [
     {
-      question: "Do I have to pay for HealthRx's full year upfront?",
+      question: "Is HealthRx paid for a year in advance?",
       answer:
-        "The headline $99/month semaglutide price is a 12-month prepaid plan - $1,188 due at checkout - with tirzepatide plans from $179/month. The initial 60-second assessment is free with no payment to start, and approval is never automatic.",
+        "Yes, for the headline price. HealthRx's $99/month semaglutide rate is a 12-month prepaid plan with $1,188 due at checkout, and tirzepatide plans start at $179/month. The 60-second assessment is free with nothing to pay up front, and approval is never automatic.",
     },
     {
-      question: "How fast does HealthRx ship?",
+      question: "Does the HealthRx price rise as the dose goes up?",
       answer:
-        "Overnight - every plan includes free overnight cold-chain shipping in temperature-controlled, lot-tracked packaging from a licensed 503A pharmacy.",
+        "No. HealthRx's all-in price covers dose adjustments, so the monthly cost stays the same as your dose is titrated up. It also includes the clinician consult, shipping and regular care-team check-ins.",
     },
     {
-      question: "Does HealthRx raise the price when your dose increases?",
+      question: "How does HealthRx ship medication?",
       answer:
-        "No - the all-in price covers dose adjustments, so your monthly cost doesn't change as your protocol is titrated up. The price also includes the clinician consult, shipping, and ongoing care-team check-ins.",
+        "HealthRx ships overnight on every plan at no charge, in temperature-controlled, lot-tracked cold-chain packaging sent from a licensed 503A pharmacy.",
     },
   ],
 };
@@ -560,11 +352,11 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
 const REVIEW_PROMOS: Record<string, { segments: { text: string; bold?: boolean }[] }> = {
   wellmedr: {
     segments: [
-      { text: "Lock in " },
+      { text: "Get " },
       { text: "$200 off", bold: true },
-      { text: " every month, or " },
+      { text: " every month or " },
       { text: "$49/mo", bold: true },
-      { text: " on 12-month plans — for life." },
+      { text: " on a 12-month plan, locked in for life." },
     ],
   },
 };
@@ -573,10 +365,10 @@ const REVIEW_PROMOS: Record<string, { segments: { text: string; bold?: boolean }
 // provider's review page. Operator-supplied brand claims - keyed by provider.
 const REVIEW_TRUST_STRIP: Record<string, { icon: LucideIcon; label: string }[]> = {
   altrx: [
-    { icon: ShieldCheck, label: "State-Licensed 503A Pharmacies" },
-    { icon: UserRound, label: "Personalized Treatment" },
-    { icon: Users, label: "Trusted by 125k+ Americans" },
-    { icon: Stethoscope, label: "1:1 Medical Support" },
+    { icon: ShieldCheck, label: "State-licensed 503A pharmacies" },
+    { icon: UserRound, label: "Treatment tailored to you" },
+    { icon: Users, label: "125k+ Americans served" },
+    { icon: Stethoscope, label: "One-on-one medical support" },
   ],
 };
 
@@ -602,31 +394,16 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   const provider = config.providers.find((p) => p.id === review.providerId);
   if (!provider) return { title: "Review Not Found" };
 
-  // Overrides are written against weight-loss offers (GLP-1 pricing etc.), so
-  // a shared provider id on another vertical (directmeds on HRT) falls back to
-  // the generic template instead of inheriting weight-loss claims.
-  // Oct 21, 2026: ED overrides (quad) joined the map; quad exists only on /ed.
-  // The weight-loss maps share slugs with ED (shed, directmeds), so ED may
-  // only read its own keys.
-  const ED_OVERRIDE_SLUGS = new Set(["quad"]);
-  // Oct 22, 2026: HRT's three providers (winona, gala, midi) exist only on /hrt.
-  const HRT_OVERRIDE_SLUGS = new Set(["winona", "gala", "midi"]);
-  const override =
-    ctx.vertical === "weight-loss" ||
-    (ctx.vertical === "ed" && ED_OVERRIDE_SLUGS.has(slug)) ||
-    (ctx.vertical === "hrt" && HRT_OVERRIDE_SLUGS.has(slug))
-      ? REVIEW_SEO_OVERRIDES[slug]
-      : undefined;
-  // Providers reviewed in more than one vertical (Ro, Maximus, PeterMD, Hims)
-  // would otherwise emit identical <title>s on two URLs - a duplicate-title
-  // signal. Their titles carry the vertical name to differentiate.
-  // Oct 21, 2026: dudemeds (TRT + ED), shed and directmeds (weight-loss + ED) joined.
-  const SHARED_REVIEW_PROVIDER_IDS = ["ro", "maximus", "petermd", "hims", "dudemeds", "shed", "directmeds"];
+  // Overrides are written against weight-loss offers (GLP-1 pricing etc.).
+  const override = ctx.vertical === "weight-loss" ? REVIEW_SEO_OVERRIDES[slug] : undefined;
+  // These providers keep "Weight Loss" in their generated title (ro's override
+  // matches it byte-for-byte), so their titles stay as they were.
+  const SHARED_REVIEW_PROVIDER_IDS = ["ro", "shed", "directmeds"];
   const verticalQualifier = SHARED_REVIEW_PROVIDER_IDS.includes(provider.id)
     ? ` ${VERTICALS.find((v) => v.id === ctx.vertical)?.name ?? ""}`.trimEnd() + " "
     : " ";
   const pageTitle =
-    override?.title ?? `${provider.name}${verticalQualifier}Review 2026: Cost, Results & Is It Worth It?`;
+    override?.title ?? `${provider.name}${verticalQualifier}Review 2026: Cost, Pros, Cons & Our Verdict`;
   const prices = ctx.vertical === "weight-loss" ? catalogPriceSnippet(provider.id) : "";
   const pageDescription = fillPrices(override?.description ?? review.shortSummary, prices);
 
@@ -667,7 +444,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const provider = config.providers.find((p) => p.id === review.providerId);
   if (!provider) return notFound();
 
-  const legit = ctx.vertical === "trt" ? REVIEW_LEGIT_TRT[slug] : REVIEW_LEGIT[slug];
+  const legit = REVIEW_LEGIT[slug];
 
   // Site's own editorial rating for this provider (same scoring shown on the
   // homepage), keyed off its ranking position. Surfaced visibly on the page.
@@ -716,7 +493,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const reviewArticleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${provider.name} Review 2026: Cost, Results & Is It Worth It?`,
+    headline: `${provider.name} Review 2026: Cost, Pros, Cons & Our Verdict`,
     description: review.shortSummary,
     dateModified: reviewUpdatedAt,
     ...pageReviewSchema(`${ctx.prefix}/reviews/${slug}`),
@@ -730,7 +507,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       "@type": "Organization",
       name: ctx.brandName,
       url: ctx.origin,
-      logo: { "@type": "ImageObject", url: `${ctx.origin}/treatmentshub.png` },
+      logo: { "@type": "ImageObject", url: `${ctx.origin}/logo.png` },
     },
     about: {
       "@type": "Organization",
@@ -754,23 +531,17 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // own researched content (pricing, treatments, best-for, verdict). Powers
   // both the visible FAQ section and the FAQPage schema (rich results / PAA).
   const reviewFaqs = [
-    { question: `Is ${provider.name} legit?`, answer: legit?.verdict ?? review.reviewIntro },
-    { question: `How much does ${provider.name} cost?`, answer: review.pricingSummary },
+    { question: `Is ${provider.name} a legitimate company?`, answer: legit?.verdict ?? review.reviewIntro },
+    { question: `What does ${provider.name} cost?`, answer: review.pricingSummary },
     review.treatmentOptions?.length
-      ? { question: `What treatments does ${provider.name} offer?`, answer: `${provider.name} offers ${review.treatmentOptions.join(", ")}.` }
+      ? { question: `Which weight-loss treatments can you get from ${provider.name}?`, answer: `${provider.name} currently offers: ${review.treatmentOptions.join(", ")}.` }
       : null,
     review.bestFor?.length
-      ? { question: `Who is ${provider.name} best for?`, answer: `${provider.name} is best for ${review.bestFor.join("; ")}.` }
+      ? { question: `Who should choose ${provider.name}?`, answer: `${provider.name} is a strong fit for: ${review.bestFor.join("; ")}.` }
       : null,
-    { question: `Is ${provider.name} worth it?`, answer: review.finalVerdict },
-    // Extra FAQs are all researched against weight-loss offers, so they only
-    // apply there - a provider id shared across verticals (e.g. directmeds on
-    // HRT) must not inherit another vertical's prices and shipping claims.
-    ...(ctx.vertical === "weight-loss" ||
-    (ctx.vertical === "ed" && slug === "quad") ||
-    (ctx.vertical === "hrt" && ["winona", "gala", "midi"].includes(slug))
-      ? REVIEW_EXTRA_FAQS[slug] ?? []
-      : []),
+    { question: `Is ${provider.name} worth the money?`, answer: review.finalVerdict },
+    // Extra FAQs are all researched against weight-loss offers.
+    ...(ctx.vertical === "weight-loss" ? REVIEW_EXTRA_FAQS[slug] ?? [] : []),
   ].filter((f): f is { question: string; answer: string } => !!f && !!f.answer);
 
   const faqSchema = {
@@ -806,9 +577,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // - the highest-intent internal links a review can carry. Rendered only for
   // cluster articles that actually exist in the config.
   const clusterSlugs = [
-    { slug: `is-${provider.id}-legit`, label: `Is ${provider.name} legit?` },
-    { slug: `${provider.id}-cost`, label: `How much does ${provider.name} cost?` },
-    { slug: `${provider.id}-alternatives`, label: `Best ${provider.name} alternatives` },
+    { slug: `is-${provider.id}-legit`, label: `Is ${provider.name} legit? Full check` },
+    { slug: `${provider.id}-cost`, label: `${provider.name} cost breakdown` },
+    { slug: `${provider.id}-alternatives`, label: `Top alternatives to ${provider.name}` },
   ].filter((c) => (config.articles ?? []).some((a) => a.slug === c.slug));
 
   // Related articles: actually related, not just the first three in the array.
@@ -860,7 +631,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   {provider.name} Reviews
                 </h1>
                 {FORMER_NAMES[provider.id] && (
-                  <p className="mt-0.5 text-[13px] text-gray-500">Formerly {FORMER_NAMES[provider.id]}</p>
+                  <p className="mt-0.5 text-[13px] text-gray-500">Previously known as {FORMER_NAMES[provider.id]}</p>
                 )}
                 <p className="mt-0.5 text-[14px] text-gray-700">
                   {provider.tagline}
@@ -888,7 +659,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       {editorial.score}/10
                     </span>
                     <span className="text-[13px] text-gray-500">
-                      {editorial.label} - our rating
+                      {editorial.label} - Top Weight Loss score
                     </span>
                   </div>
                 )}
@@ -910,7 +681,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               sourceFlow="provider_review"
               className="flex h-[44px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61] sm:shrink-0"
             >
-              Visit {provider.name}
+              See {provider.name} plans
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </ProviderCta>
           </div>
@@ -955,7 +726,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             it" doesn't hide at the bottom of the page. */}
         {review.finalVerdict && (
           <div className="mb-8 rounded-2xl border border-[#0C4B75]/20 bg-white p-5 shadow-sm sm:p-6">
-            <p className="mb-2 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">The bottom line</p>
+            <p className="mb-2 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">Our verdict in brief</p>
             <ReadableProse text={review.finalVerdict} paragraphClassName="text-[15px] leading-[1.8] text-gray-800" />
           </div>
         )}
@@ -965,8 +736,8 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <div className="mb-8">
             <ProductCarousel
               providers={config.providers}
-              title={`${provider.name} products & prices`}
-              subtitle="Published prices with their conditions - the whole card links to the provider."
+              title={`${provider.name} plans and current prices`}
+              subtitle="Each card shows a published price with its conditions and links straight to the provider."
               onlyProviderIds={[provider.id]}
               pageType="review"
               pageUrl={canonicalUrl(ctx, `/reviews/${slug}`)}
@@ -985,7 +756,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <div className="flex items-center gap-2 border-b border-gray-100 bg-emerald-50/50 px-6 py-4">
               <Shield className="h-5 w-5 text-emerald-600" strokeWidth={2} />
               <h2 className="text-[18px] font-bold text-[#191919]">
-                Is {provider.name} legit?
+                Is {provider.name} legit? What we checked
               </h2>
             </div>
             <div className="p-6">
@@ -1002,14 +773,15 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 {provider.trustpilotRating && provider.trustpilotReviewCount && (
                   <li className="flex items-start gap-2.5 text-[14px] text-gray-800">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2} />
-                    Rated {provider.trustpilotRating}/5 across {provider.trustpilotReviewCount} Trustpilot reviews
+                    {provider.trustpilotRating}/5 average from {provider.trustpilotReviewCount} Trustpilot reviews
                   </li>
                 )}
               </ul>
               <p className="mt-4 text-[12px] leading-relaxed text-gray-400">
-                &ldquo;Legitimate&rdquo; here means a real, licensed telehealth operation - not a
-                guarantee of results. Compounded medications are not FDA-approved brand drugs. Always
-                confirm current details and eligibility with the provider.
+                By &ldquo;legitimate&rdquo; we mean a real telehealth business working with licensed
+                clinicians and pharmacies. It says nothing about the results you will get. Compounded
+                medications are not FDA-approved brand-name drugs. Check eligibility and current terms
+                with the provider before you start.
               </p>
             </div>
           </div>
@@ -1052,7 +824,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
         {/* Key Features + Pricing side by side on desktop */}
         <div className="mb-6 grid gap-6 sm:grid-cols-2">
-          <Section title="Key Features">
+          <Section title={`What ${provider.name} includes`}>
             <ul className="space-y-2.5">
               {review.keyFeatures.map((feature) => (
                 <li key={feature} className="flex items-start gap-2.5 text-[14px] text-gray-800">
@@ -1063,7 +835,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </ul>
           </Section>
 
-          <Section title="Treatment Options">
+          <Section title={`${provider.name} treatment options`}>
             <ul className="space-y-2.5">
               {review.treatmentOptions.map((option) => (
                 <li key={option} className="flex items-start gap-2.5 text-[14px] text-gray-800">
@@ -1076,7 +848,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         </div>
 
         {/* Pricing */}
-        <Section title="Pricing">
+        <Section title={`How much does ${provider.name} cost?`}>
           {review.pricingPlans && review.pricingPlans.length > 0 && (
             <div className="mb-5 grid gap-4 sm:grid-cols-2">
               {review.pricingPlans.map((plan) => (
@@ -1099,7 +871,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </div>
                   {plan.regularPrice && (
                     <span className="mt-2 inline-block rounded-full bg-emerald-50 px-2.5 py-0.5 text-[11px] font-bold text-emerald-700">
-                      {plan.saleEnds ? `Sale ends ${plan.saleEnds}` : "Sale price"}
+                      {plan.saleEnds ? `Offer ends ${plan.saleEnds}` : "Discounted price"}
                     </span>
                   )}
                   {plan.highlights && plan.highlights.length > 0 && (
@@ -1135,7 +907,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           />
         )}
         {!showcase && review.howItWorks && review.howItWorks.length > 0 && (
-          <Section title={`How ${provider.name} Works`}>
+          <Section title={`How does ${provider.name} work?`}>
             <ol className="space-y-4">
               {review.howItWorks.map((step, i) => (
                 <li key={i} className="flex gap-4">
@@ -1167,7 +939,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <div className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100">
                   <Check className="h-3.5 w-3.5 text-emerald-600" strokeWidth={2.5} />
                 </div>
-                Pros
+                What we like
               </h3>
               <ul className="space-y-2.5">
                 {review.pros.map((pro) => (
@@ -1183,7 +955,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <div className="flex h-6 w-6 items-center justify-center rounded-full bg-red-100">
                   <X className="h-3.5 w-3.5 text-red-500" strokeWidth={2.5} />
                 </div>
-                Cons
+                What to watch for
               </h3>
               <ul className="space-y-2.5">
                 {review.cons.map((con) => (
@@ -1200,10 +972,10 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {/* Mid-page CTA */}
         <div className="mb-6 rounded-xl border border-[#0C4B75]/10 bg-[#0C4B75]/[0.03] p-5 text-center sm:p-6">
           <p className="mb-3 text-[16px] font-bold text-[#191919]">
-            Interested in {provider.name}?
+            Thinking about {provider.name}?
           </p>
           <p className="mb-4 text-[13px] text-gray-500">
-            Visit their site to check eligibility and current pricing.
+            See whether you qualify and check today&rsquo;s prices on the {provider.name} site.
           </p>
           <ProviderCta
             href={provider.affiliateUrl}
@@ -1213,13 +985,13 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             sourceFlow="provider_review"
             className="inline-flex h-[44px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-8 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
           >
-            Visit {provider.name}
+            Check my eligibility
             <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
           </ProviderCta>
         </div>
 
         {/* Best For */}
-        <Section title="Who It's Best For">
+        <Section title={`Who is ${provider.name} best for?`}>
           <ul className="space-y-2.5">
             {review.bestFor.map((item) => (
               <li key={item} className="flex items-start gap-2.5 text-[14px] text-gray-800">
@@ -1240,7 +1012,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <div className="mb-2 flex items-center gap-2.5">
               <RedditMark className="h-7 w-7 shrink-0" />
               <h2 className="text-[20px] font-bold text-[#191919]">
-                What Reddit says about {provider.name}
+                What do Reddit users say about {provider.name}?
               </h2>
             </div>
             <p className="mb-5 text-[14.5px] leading-relaxed text-gray-700">
@@ -1277,7 +1049,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         rel="nofollow noopener"
                         className="ml-auto font-semibold text-[#0C4B75] hover:underline"
                       >
-                        View on Reddit
+                        Read the thread
                       </a>
                     )}
                   </div>
@@ -1334,14 +1106,14 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </div>
 
             <p className="mt-5 border-t border-gray-100 pt-4 text-[14px] leading-relaxed text-gray-700">
-              <span className="font-semibold text-[#191919]">The takeaway: </span>
+              <span className="font-semibold text-[#191919]">What the threads add up to: </span>
               {REVIEW_COMMUNITY_FEEDBACK[slug].takeaway}
             </p>
             <p className="mt-2 text-[11.5px] leading-relaxed text-gray-400">
-              Excerpts from public Reddit posts, lightly trimmed; vote and comment counts shown as
-              captured at the time of review. Reddit is a trademark of Reddit, Inc. and is not
-              affiliated with this site.
-             Posts are individual experiences, and any weight-loss result mentioned is one person&rsquo;s and is not typical - results vary.</p>
+              Quoted from public Reddit posts with light trimming. Vote and comment counts are as
+              they stood when we captured them. Reddit is a trademark of Reddit, Inc., which has no
+              connection to this site.
+             Each post describes one person&rsquo;s experience. Any weight loss mentioned is individual, not typical, and your results may differ.</p>
           </div>
         )}
 
@@ -1353,7 +1125,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {/* Final Verdict */}
         <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
           <div className="border-b border-gray-100 bg-gray-50/70 px-6 py-4">
-            <h3 className="text-[18px] font-bold text-[#191919]">Final Verdict</h3>
+            <h3 className="text-[18px] font-bold text-[#191919]">Our final verdict on {provider.name}</h3>
           </div>
           <div className="p-6">
             <ReadableProse text={review.finalVerdict} paragraphClassName="text-[15px] leading-[1.75] text-gray-600" />
@@ -1365,7 +1137,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               sourceFlow="provider_review"
               className="mt-5 flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto sm:px-8"
             >
-              Visit {provider.name}
+              Get started with {provider.name}
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </ProviderCta>
           </div>
@@ -1376,7 +1148,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
             <div className="border-b border-gray-100 bg-gray-50/70 px-6 py-4">
               <h2 className="text-[18px] font-bold text-[#191919]">
-                {provider.name} Review: FAQs
+                {provider.name} questions, answered
               </h2>
             </div>
             <div className="divide-y divide-gray-100">
@@ -1392,13 +1164,13 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
         {/* Not sure? Quiz CTA */}
         <div className="mb-8 rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm">
-          <p className="mb-1 text-[15px] font-bold text-[#191919]">Not sure if {provider.name} is right for you?</p>
-          <p className="mb-4 text-[13px] text-gray-500">Take our free quiz and get a personalized provider recommendation.</p>
+          <p className="mb-1 text-[15px] font-bold text-[#191919]">Still deciding whether {provider.name} fits you?</p>
+          <p className="mb-4 text-[13px] text-gray-500">Answer a few quick questions and we&rsquo;ll match you with a provider for free.</p>
           <Link
             href={"/find-your-match"}
             className="inline-flex h-[42px] items-center justify-center gap-2 rounded-lg border border-[#0C4B75] px-6 text-[14px] font-bold text-[#0C4B75] transition-colors hover:bg-[#0C4B75]/5"
           >
-            Find Your Match
+            Take the free quiz
             <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
           </Link>
         </div>
@@ -1406,10 +1178,10 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {/* Related content */}
         {(relatedBattles.length > 0 || relatedArticles.length > 0 || showComparisonLink) && (
           <div className="mb-6">
-            <h3 className="mb-4 text-[18px] font-bold text-[#191919]">Related</h3>
+            <h3 className="mb-4 text-[18px] font-bold text-[#191919]">Keep comparing</h3>
             {relatedBattles.length > 0 && (
               <>
-                <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-gray-400">Head-to-head</p>
+                <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-gray-400">Side-by-side matchups</p>
                 <div className="mb-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                   {relatedBattles.map((battle) => {
                     const otherProvider = config.providers.find(
@@ -1431,14 +1203,14 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             )}
             {(relatedArticles.length > 0 || showComparisonLink) && (
               <>
-                <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-gray-400">Guides</p>
+                <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-gray-400">Guides and comparisons</p>
                 <div className="space-y-2">
                   {showComparisonLink && (
                     <Link
                       href="/glp1-provider-comparison"
                       className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
                     >
-                      <span className="truncate">GLP-1 Telehealth Providers Compared: {provider.name} and seven others on verified prices, Trustpilot and Reddit</span>
+                      <span className="truncate">How {provider.name} stacks up against seven other GLP-1 telehealth providers on price, Trustpilot and Reddit</span>
                       <span className="ml-auto shrink-0 text-[12px] text-gray-400">Comparison</span>
                     </Link>
                   )}
@@ -1462,10 +1234,10 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {clusterSlugs.length > 0 && (
           <div className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7">
             <h2 className="mb-1 text-[17px] font-bold text-[#191919]">
-              More on {provider.name}
+              Common questions about {provider.name}
             </h2>
             <p className="mb-4 text-[13.5px] text-gray-500">
-              The questions people ask before signing up - answered in depth.
+              In-depth answers to what people check before they sign up.
             </p>
             <div className="grid gap-2.5 sm:grid-cols-3">
               {clusterSlugs.map((c) => (

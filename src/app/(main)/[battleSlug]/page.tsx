@@ -1,3 +1,4 @@
+import { clampMetadata } from "@/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ROOT_CONTEXT } from "@/lib/site-context";
@@ -16,7 +17,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { battleSlug } = await params;
   if (RESERVED_SLUGS.includes(battleSlug)) return {};
-  return battleMetadata(battleSlug, ROOT_CONTEXT);
+  return clampMetadata(await battleMetadata(battleSlug, ROOT_CONTEXT));
 }
 
 export default async function BattlePage({

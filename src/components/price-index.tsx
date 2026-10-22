@@ -15,7 +15,7 @@ function Price({ cell }: { cell: PriceCell }) {
     return (
       <div>
         <span className="text-[15px] font-semibold text-gray-400">-</span>
-        <p className="mt-0.5 text-[11.5px] leading-snug text-gray-400">not offered</p>
+        <p className="mt-0.5 text-[11.5px] leading-snug text-gray-400">not available</p>
       </div>
     );
   }
@@ -73,7 +73,7 @@ export function PriceIndex({
                 </Link>
                 {i === 0 && (
                   <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10.5px] font-bold uppercase tracking-wide text-emerald-700">
-                    Lowest price
+                    Cheapest
                   </span>
                 )}
               </div>
@@ -82,8 +82,8 @@ export function PriceIndex({
                 {row.shipping}
                 {" · "}
                 {row.trustpilot
-                  ? `Trustpilot ${row.trustpilot.rating} across ${row.trustpilot.count} reviews`
-                  : "No published Trustpilot rating"}
+                  ? `${row.trustpilot.rating} on Trustpilot (${row.trustpilot.count} reviews)`
+                  : "No Trustpilot rating listed"}
               </p>
             </div>
 
@@ -118,7 +118,7 @@ export function PriceIndex({
                 <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
               </ProviderCta>
               <Link href={review} className="text-[12.5px] font-medium text-gray-400 hover:text-gray-600 hover:underline">
-                Read our review
+                Full review
               </Link>
             </div>
           </div>

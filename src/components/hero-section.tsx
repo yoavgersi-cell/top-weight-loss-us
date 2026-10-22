@@ -81,9 +81,9 @@ export function HeroSection({
 
           <div className="mt-3.5 sm:mt-4 flex items-center gap-3 sm:gap-5">
             {[
-              { label: "Licensed Providers", icon: Stethoscope },
-              { label: "Top-Rated Options", icon: Star },
-              { label: "Fast Online Process", icon: Zap },
+              { label: "Licensed Clinicians", icon: Stethoscope },
+              { label: "Highly Rated Picks", icon: Star },
+              { label: "Quick Online Intake", icon: Zap },
             ].map(({ label, icon: Icon }) => (
               <span key={label} className="flex items-center gap-1 text-[11px] sm:text-[13px] font-medium text-gray-500 whitespace-nowrap">
                 <Icon className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0 text-[#0C4B75]" strokeWidth={1.5} />

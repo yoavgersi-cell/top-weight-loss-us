@@ -16,9 +16,9 @@ import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 export const revalidate = 60;
 
 const CANONICAL = "https://www.topweightloss.us/cheapest-glp1";
-const TITLE = "Cheapest GLP-1 in 2026: Real Prices From 8 Providers ($49-$299)";
+const TITLE = "Cheapest GLP-1 2026: Prices From 9 Providers ($49-$299)";
 const DESCRIPTION =
-  "The cheapest GLP-1 programs of 2026, ranked by verified prices: compounded semaglutide from $49/month, tirzepatide from $89/month - conditions disclosed.";
+  "Cheapest GLP-1 options in 2026 ranked by verified price: compounded semaglutide from $49/month and tirzepatide from $89/month, with every plan condition shown.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -34,34 +34,34 @@ export const metadata: Metadata = {
 
 const faqs: { question: string; answer: string }[] = [
   {
-    question: "What is the cheapest GLP-1 medication in 2026?",
+    question: "What is the cheapest GLP-1 in 2026?",
     answer:
-      "The cheapest GLP-1 program among the providers we track is welludr, at $49/month for compounded semaglutide on a 12-month plan - the same price at every dose. The cheapest with no commitment is embody at $69/month, month to month. All prices on this page are the providers' real published rates, with their conditions disclosed.",
+      "welludr is the cheapest GLP-1 program we track, charging $49/month for compounded semaglutide on a 12-month plan, with the same price at every dose. embody is the cheapest option without a commitment, at $69/month billed month to month. Every price on this page is the provider's own published rate, shown with its conditions.",
   },
   {
-    question: "What is the cheapest tirzepatide?",
+    question: "Where can I get the cheapest tirzepatide?",
     answer:
-      "welludr lists compounded tirzepatide from $89/month, the lowest published tirzepatide price we track. embody is the cheapest month-to-month option at $119/month ($129 regular), and DirectMeds charges a flat $147/month for either medication - including a needle-free sublingual drops format at the same price.",
+      "welludr has the lowest published tirzepatide price we track, with compounded tirzepatide from $89/month. For month-to-month billing, embody is cheapest at $119/month ($129 regular). DirectMeds charges a flat $147/month for semaglutide or tirzepatide, and that price also covers its needle-free sublingual drops.",
   },
   {
-    question: "Why are these so much cheaper than Ozempic?",
+    question: "Why do these GLP-1 programs cost so much less than Ozempic?",
     answer:
-      "Brand-name Ozempic, Wegovy and Zepbound list for roughly $1,149-$1,599/month on our providers' own brand shelves. The programs on this page prescribe compounded semaglutide or tirzepatide instead - the same active ingredients, prepared by state-licensed compounding pharmacies and sold cash-pay at a flat monthly rate. Compounded medications are not FDA-approved brand drugs, which is why the provider's pharmacy standards (LegitScript certification, licensed 503A pharmacies) matter more than the price alone.",
+      "Brand-name Ozempic, Wegovy and Zepbound are listed at roughly $1,149-$1,599/month on our providers' own brand menus. The programs ranked here prescribe compounded semaglutide or tirzepatide, which use the same active ingredients, are made by state-licensed compounding pharmacies and are sold for a flat cash price each month. Compounded medications are not FDA-approved, so the provider's pharmacy standards, such as LegitScript certification and licensed 503A pharmacies, matter as much as the price.",
   },
   {
-    question: "Do I need insurance for any of these?",
+    question: "Do I need insurance to get a cheap GLP-1?",
     answer:
-      "No - every program on this page is cash-pay, with the consultation and prescription included in the monthly price. No insurance and no prior authorization is required. Several (Medvi, SHED) are HSA/FSA approved, so you can pay with pre-tax health funds.",
+      "No. Every program on this page is cash-pay, and the monthly price already includes the consultation and the prescription. You do not need insurance or prior authorization. Some providers, including Medvi and SHED, are HSA/FSA approved, so you can use pre-tax health funds.",
   },
   {
-    question: "What's the catch with the lowest prices?",
+    question: "What is the catch with the lowest GLP-1 prices?",
     answer:
-      "Commitment and speed. The $49/month headline at welludr is tied to a 12-month plan, and HealthRx's $99/month is a 12-month prepaid plan with $1,188 due at checkout. Month-to-month flexibility costs slightly more (embody at $69/$119). Slower shipping is the other trade: altRx at $89 ships in about 5-7 days versus 1-2 days at embody and DirectMeds. Every condition is listed under each price above - there are no unlisted catches we're aware of.",
+      "The trade-offs are commitment and shipping speed. welludr's $49/month rate requires a 12-month plan, and HealthRx's $99/month is a 12-month prepaid plan that charges $1,188 at checkout. Paying month to month costs a little more (embody at $69/$119), and altRx at $89 ships in about 5-7 days compared with 1-2 days at embody and DirectMeds. We list every known condition under each price above.",
   },
   {
     question: "Are cheap compounded GLP-1s safe?",
     answer:
-      "Price doesn't determine safety - the pharmacy and the clinical process do. Every provider in this index requires a medical intake reviewed by a licensed clinician, and the ones we rank highest work with state-licensed 503A compounding pharmacies (embody and HealthRx are LegitScript-certified). Compounded medications are not FDA-approved brand drugs, so avoid any site that skips the medical review or won't name its pharmacy standards. Always consult a licensed clinician about whether GLP-1 treatment is appropriate for you.",
+      "Safety depends on the pharmacy and the clinical process, not on the price. Every provider in this index requires a medical intake that a licensed clinician reviews, and our top-ranked providers use state-licensed 503A compounding pharmacies (embody and HealthRx are LegitScript-certified). Compounded medications are not FDA-approved, so steer clear of any site that skips the medical review or will not say which pharmacy standards it follows. Ask a licensed clinician whether GLP-1 treatment is right for you.",
   },
 ];
 
@@ -106,12 +106,12 @@ export default async function CheapestGlp1Page() {
         <div className="mx-auto max-w-[1000px] px-4 pb-10 pt-10 sm:px-6 sm:pb-12 sm:pt-12">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Cheapest GLP-1" }]} />
           <h1 className="max-w-[760px] text-[27px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">
-            The Cheapest GLP-1 in 2026: Real Prices, Ranked
+            Cheapest GLP-1 in 2026: Verified Prices From 9 Providers, Ranked
           </h1>
           <p className="mt-3 max-w-[680px] text-[15.5px] leading-relaxed text-gray-500">
-            Every price below is a provider&rsquo;s real published rate, with its honest condition -
-            promo pricing, prepaid plans, first-month rates - printed right under the number. Sorted
-            cheapest first.
+            Each price on this page comes from the provider&rsquo;s own published rates, and any
+            condition attached to it, such as a promotion, a prepaid plan or a first-month discount, is
+            shown directly beneath it. Providers are listed from lowest price to highest.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
           <MedicalReviewBar path="/cheapest-glp1" className="mt-4 max-w-[760px]" />
@@ -123,22 +123,21 @@ export default async function CheapestGlp1Page() {
         {/* Direct answer - the to-the-point block the query deserves */}
         <div className="mb-10 rounded-2xl border border-[#0C4B75]/20 bg-white p-6 shadow-sm sm:p-7">
           <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-            The short answer
+            What is the cheapest GLP-1?
           </p>
           <p className="text-[15.5px] leading-[1.85] text-gray-800">
-            The cheapest GLP-1 we track is{" "}
             <Link href="/reviews/wellmedr" className="font-semibold text-[#0C4B75] hover:underline">welludr</Link>{" "}
-            - compounded semaglutide at <strong className="text-[#191919]">$49/month</strong> on a
-            12-month plan, and the cheapest tirzepatide at{" "}
-            <strong className="text-[#191919]">$89/month</strong>. If you don&rsquo;t want a
-            commitment,{" "}
+            is the cheapest GLP-1 provider we track, with compounded semaglutide at{" "}
+            <strong className="text-[#191919]">$49/month</strong> on a 12-month plan and the lowest
+            tirzepatide price at <strong className="text-[#191919]">$89/month</strong>. Without a
+            commitment, the cheapest choice is{" "}
             <Link href="/reviews/embody" className="font-semibold text-[#0C4B75] hover:underline">embody</Link>{" "}
-            is the cheapest month-to-month at <strong className="text-[#191919]">$69/$119</strong>{" "}
-            with 1-2 day shipping. For one flat price covering either medication - as injections or
-            needle-free drops -{" "}
+            at <strong className="text-[#191919]">$69/$119</strong> month to month, shipped in 1-2
+            days.{" "}
             <Link href="/reviews/directmeds" className="font-semibold text-[#0C4B75] hover:underline">DirectMeds</Link>{" "}
-            charges <strong className="text-[#191919]">$147/month</strong> at every dose. Brand-name
-            Ozempic and Zepbound list at $1,149-$1,599/month by comparison.
+            charges one flat <strong className="text-[#191919]">$147/month</strong> at every dose for
+            either drug, as injections or needle-free drops. For comparison, brand-name Ozempic and
+            Zepbound are listed at $1,149-$1,599/month.
           </p>
         </div>
 
@@ -146,8 +145,8 @@ export default async function CheapestGlp1Page() {
         <div className="mb-10">
           <ProductCarousel
             providers={providers}
-            title="Shop the cheapest GLP-1 plans"
-            subtitle="Product-by-product, cheapest first - promo conditions printed under every price."
+            title="Browse the lowest-priced GLP-1 plans"
+            subtitle="Each plan from lowest price to highest, with any promotion terms shown under the price."
             withSchema
             pageUrl={CANONICAL}
           />
@@ -156,47 +155,50 @@ export default async function CheapestGlp1Page() {
         {/* The index itself */}
         <div className="mb-3 flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5 text-[#0C4B75]" strokeWidth={2} />
-          <h2 className="text-[22px] font-bold text-[#191919]">The 2026 GLP-1 price index</h2>
+          <h2 className="text-[22px] font-bold text-[#191919]">How do GLP-1 prices compare across 9 providers?</h2>
         </div>
         <p className="mb-5 max-w-[680px] text-[14px] text-gray-500">
-          Eight providers, ranked by their published semaglutide price. Trustpilot records shown are
-          real; where a provider has no published rating, we say so instead of inventing one.
+          The 2026 GLP-1 price index ranks nine providers by published semaglutide price. Every
+          Trustpilot figure shown is genuine, and when a provider has no public rating we note that
+          rather than fill the gap.
         </p>
         <PriceIndex providers={providers} />
 
-        <TopTwoPicks config={config} linkPrefix="/" />
+        <TopTwoPicks config={config} linkPrefix="" />
 
         {/* What a year actually costs - promo math done honestly, per provider */}
         <section className="mt-12">
           <div className="mb-3 flex items-center gap-2">
             <ScanSearch className="h-5 w-5 text-[#0C4B75]" strokeWidth={2} />
-            <h2 className="text-[22px] font-bold text-[#191919]">What a year of semaglutide actually costs</h2>
+            <h2 className="text-[22px] font-bold text-[#191919]">How much does a full year of semaglutide cost?</h2>
           </div>
           <p className="mb-5 max-w-[680px] text-[14px] text-gray-500">
-            Headline prices hide the arithmetic - first-month promos expire and prepaid plans front-load
-            the cost. This is the real 12-month math per provider, promo conditions applied exactly as
-            published, next to the cheapest brand-name year (Ozempic at altRx&rsquo;s $1,149/month = $13,788).
+            A year of compounded semaglutide costs between $588 and $2,348 across these providers,
+            compared with $13,788 for a year of brand-name Ozempic at altRx&rsquo;s $1,149/month. The
+            monthly headline can mislead, because first-month promotions end and prepaid plans charge up
+            front, so the table applies each published condition exactly.
           </p>
           <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
             <table className="w-full min-w-[640px] border-collapse text-left">
               <thead>
                 <tr className="border-b-2 border-gray-200 bg-gray-50/80">
                   <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Provider</th>
-                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">The 12-month math</th>
-                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">First-year total</th>
-                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Saved vs brand Ozempic</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">How the year adds up</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">12-month total</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Savings vs brand Ozempic</th>
                 </tr>
               </thead>
               <tbody className="text-[13.5px]">
                 {[
-                  ["welludr", "$49 x 12 (12-month plan rate)", "$588", "$13,200"],
-                  ["embody", "$69 x 12 (promo; $948 at the $79 regular rate)", "$828", "$12,960"],
-                  ["altRx", "$89 x 12, flat at every dose", "$1,068", "$12,720"],
-                  ["Medvi", "$99 x 12 (promo; reg. $199) - all-inclusive", "$1,188", "$12,600"],
-                  ["HealthRx", "$1,188 prepaid at checkout ($99/mo effective)", "$1,188", "$12,600"],
-                  ["DirectMeds", "$147 x 12, flat at every dose", "$1,764", "$12,024"],
-                  ["trimrx", "$149 x 12, same price at every dose", "$1,788", "$12,000"],
-                  ["SHED", "$159 first month (20% off) + $199 x 11", "$2,348", "$11,440"],
+                  ["welludr", "12 months at the $49 plan rate", "$588", "$13,200"],
+                  ["embody", "12 months at the $69 promo ($948 at the $79 regular price)", "$828", "$12,960"],
+                  ["altRx", "12 months at $89, same at every dose", "$1,068", "$12,720"],
+                  ["Medvi", "12 months at the $99 promo (regular $199), all-inclusive", "$1,188", "$12,600"],
+                  ["HealthRx", "$1,188 paid up front at checkout (works out to $99/mo)", "$1,188", "$12,600"],
+                  ["DirectMeds", "12 months at $147, same at every dose", "$1,764", "$12,024"],
+                  ["Sprout", "12 months at the $149 starting price (first-month offer not applied)", "$1,788", "$12,000"],
+                  ["TrimRx", "12 months at $149, one price for every dose", "$1,788", "$12,000"],
+                  ["SHED", "$159 for month one (20% off), then 11 months at $199", "$2,348", "$11,440"],
                 ].map(([name, math, total, saved], i) => (
                   <tr key={i} className="border-b border-gray-100 last:border-0">
                     <td className="px-4 py-3.5 font-bold text-[#191919]">{name}</td>
@@ -209,13 +211,13 @@ export default async function CheapestGlp1Page() {
             </table>
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
-            Assumes published prices hold for 12 months and promo conditions apply exactly as listed
-            (SHED&rsquo;s 20% off is a month-one rate; embody&rsquo;s $69 is
-            promotional against $79 regular). Savings compare against Ozempic&rsquo;s lowest listed
-            brand price on our providers&rsquo; shelves ($1,149/month at altRx; welludr lists it at
-            $1,399). What&rsquo;s bundled differs - Medvi and SHED include coaching layers others
-            don&rsquo;t - so the cheapest row isn&rsquo;t automatically the best fit. The dated,
-            citable version of this data, with its change log, is our{" "}
+            These totals assume today&rsquo;s published prices stay the same for 12 months and that
+            promotions apply exactly as stated (SHED&rsquo;s 20% discount covers month one only, and
+            embody&rsquo;s $69 is a promotional price against a $79 regular rate). Savings are measured
+            against the lowest brand Ozempic price our providers list ($1,149/month at altRx; welludr
+            lists it at $1,399). Plans include different extras, for example Medvi and SHED add
+            coaching that others do not, so the lowest total is not always the best match. For a dated,
+            citable version of these numbers with a full change log, see our{" "}
             <Link href="/glp1-weight-loss-statistics" className="font-medium text-[#0C4B75] hover:underline">
               GLP-1 price index
             </Link>.
@@ -225,11 +227,12 @@ export default async function CheapestGlp1Page() {
         {/* Semaglutide vs tirzepatide - the clinical decision behind the price */}
         <section className="mt-12">
           <h2 className="mb-3 text-[22px] font-bold text-[#191919]">
-            Semaglutide vs tirzepatide: what the price difference buys
+            Is tirzepatide worth paying more for than semaglutide?
           </h2>
           <p className="mb-5 max-w-[680px] text-[14px] text-gray-500">
-            Tirzepatide costs $40-$110/month more at most providers. Whether it&rsquo;s worth it is a
-            clinical question - here&rsquo;s the published evidence side by side.
+            At most providers, tirzepatide runs $40-$110/month above semaglutide. Whether the extra
+            cost makes sense is a medical decision, so the published trial evidence and prices are laid
+            out below for comparison.
           </p>
           <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
             <table className="w-full min-w-[640px] border-collapse text-left">
@@ -242,17 +245,17 @@ export default async function CheapestGlp1Page() {
               </thead>
               <tbody className="text-[13.5px]">
                 {[
-                  ["Mechanism", "GLP-1 receptor agonist", "Dual GIP + GLP-1 receptor agonist"],
-                  ["Brand names", "Ozempic, Wegovy (injection); Rybelsus (oral)", "Mounjaro, Zepbound"],
+                  ["How it works", "Activates the GLP-1 receptor", "Activates both the GIP and GLP-1 receptors"],
+                  ["Brand versions", "Ozempic and Wegovy (injections), Rybelsus (pill)", "Mounjaro, Zepbound"],
                   [
-                    "Pivotal trial result",
-                    "~15% average body-weight loss at 68 weeks (STEP 1, 2.4 mg)",
-                    "~21% average body-weight loss at 72 weeks (SURMOUNT-1, 15 mg)",
+                    "Main trial result",
+                    "~15% average body weight loss after 68 weeks (STEP 1, 2.4 mg)",
+                    "~21% average body weight loss after 72 weeks (SURMOUNT-1, 15 mg)",
                   ],
-                  ["Dosing", "One injection per week", "One injection per week"],
-                  ["Cheapest compounded price", "$49/mo (welludr, 12-month plan)", "$89/mo (welludr)"],
-                  ["Cheapest month-to-month", "$69/mo (embody)", "$119/mo (embody)"],
-                  ["Same price for both", "$147/mo flat (DirectMeds - injections or drops)", "$147/mo flat (DirectMeds)"],
+                  ["How often", "Weekly injection", "Weekly injection"],
+                  ["Lowest compounded price", "$49/mo (welludr, 12-month plan)", "$89/mo (welludr)"],
+                  ["Lowest month-to-month price", "$69/mo (embody)", "$119/mo (embody)"],
+                  ["One price for either drug", "$147/mo flat (DirectMeds, injections or drops)", "$147/mo flat (DirectMeds)"],
                 ].map(([label, sema, tirz], i) => (
                   <tr key={i} className="border-b border-gray-100 align-top last:border-0">
                     <td className="px-4 py-3.5 text-[12.5px] font-semibold text-gray-500">{label}</td>
@@ -264,10 +267,9 @@ export default async function CheapestGlp1Page() {
             </table>
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
-            Trial figures are from the published STEP 1 (NEJM, 2021) and SURMOUNT-1 (NEJM, 2022)
-            studies, cited in the sources below; results are trial averages at the highest studied
-            doses, not guarantees. Which medication is appropriate for you is your prescribing
-            clinician&rsquo;s decision.
+            Trial results come from the STEP 1 (NEJM, 2021) and SURMOUNT-1 (NEJM, 2022) studies listed in
+            the sources below. They are averages at the highest doses tested and do not promise any
+            individual result. Your prescribing clinician decides which medication suits you.
           </p>
         </section>
 
@@ -277,26 +279,26 @@ export default async function CheapestGlp1Page() {
             <Repeat className="h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
             <div className="flex-1">
               <h2 className="mb-1 text-[17px] font-bold text-[#191919]">
-                Already on Ozempic, Wegovy or Zepbound?
+                Taking brand-name Ozempic, Wegovy or Zepbound now?
               </h2>
               <p className="text-[14px] leading-relaxed text-gray-600">
-                If you&rsquo;re paying brand prices today, switching to the compounded version of the
-                same active ingredient is usually a $1,000+/month difference. We wrote a dedicated
-                guide to how the switch actually works - and what to check first.
+                Moving from a brand-name GLP-1 to a compounded version of the same active ingredient
+                usually saves $1,000+ a month. Our step-by-step guide explains how switching works and
+                what to confirm before you change.
               </p>
             </div>
             <Link
               href="/switch-from-ozempic"
               className="shrink-0 text-[14px] font-bold text-emerald-700 hover:underline"
             >
-              Read the switching guide
+              How to switch from Ozempic
             </Link>
           </div>
         </section>
 
         {/* FAQs */}
         <section className="mt-12">
-          <h2 className="mb-5 text-[22px] font-bold text-[#191919]">Cheapest GLP-1: FAQs</h2>
+          <h2 className="mb-5 text-[22px] font-bold text-[#191919]">Questions about the cheapest GLP-1 options</h2>
           <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
             {faqs.map((f, i) => (
               <div key={i} className="p-6">
@@ -310,13 +312,13 @@ export default async function CheapestGlp1Page() {
         {/* Related */}
         <section className="mt-10">
           <p className="text-[14px] text-gray-500">
-            Keep comparing:{" "}
+            More comparisons:{" "}
             <Link href="/ozempic-alternatives" className="font-semibold text-[#0C4B75] hover:underline">
               Ozempic alternatives
             </Link>
             {" · "}
             <Link href="/glp1-pills-vs-injections" className="font-semibold text-[#0C4B75] hover:underline">
-              pills vs injections
+              GLP-1 pills vs injections
             </Link>
             {" · "}
             <Link href="/embody-vs-wellmedr" className="font-semibold text-[#0C4B75] hover:underline">
@@ -324,7 +326,7 @@ export default async function CheapestGlp1Page() {
             </Link>
             {" · "}
             <Link href="/reviews" className="font-semibold text-[#0C4B75] hover:underline">
-              all reviews
+              every provider review
             </Link>
           </p>
         </section>
@@ -334,10 +336,10 @@ export default async function CheapestGlp1Page() {
         <MedicalSources vertical="weight-loss" />
 
         <p className="mt-6 text-[13px] leading-relaxed text-gray-400">
-          Prices are the providers&rsquo; published cash-pay rates at the time of the last update and
-          can change; confirm current pricing on the provider&rsquo;s site. Compounded medications are
-          not FDA-approved brand drugs. topweightloss.us is not a medical provider - this page is for
-          information only and is not medical advice.
+          Prices reflect each provider&rsquo;s published cash rates as of our last update and may
+          change, so check the provider&rsquo;s website for current pricing. Compounded medications
+          are not FDA-approved. topweightloss.us does not provide medical care, and this page is
+          informational only, not medical advice.
         </p>
       </div>
     </div>

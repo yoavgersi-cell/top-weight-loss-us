@@ -23,12 +23,11 @@ export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> 
     .filter(Boolean) as string[];
   const title =
     topNames.length === 2
-      ? `${vName} Reviews 2026: ${topNames[0]}, ${topNames[1]} & More`
-      : `${vName} Reviews 2026 - Every Provider Tested`;
-  // Weight-loss names the category searchers actually use (GLP-1); other
-  // verticals keep the vertical name.
-  const categoryLabel = ctx.vertical === "weight-loss" ? "GLP-1 weight loss" : verticalNameInProse(vName);
-  const description = `Independent 2026 reviews of ${config.reviews?.length ?? "the top"} online ${categoryLabel} providers${topNames.length ? ` - ${topNames.join(", ")} and more` : ""} - with verified ratings, pricing, pros and cons.`;
+      ? `${vName} Provider Reviews 2026: ${topNames[0]}, ${topNames[1]} + More`
+      : `${vName} Provider Reviews 2026: Every Provider Rated`;
+  // Name the category searchers actually use (GLP-1).
+  const categoryLabel = "GLP-1 weight loss";
+  const description = `We reviewed ${config.reviews?.length ?? "the leading"} online ${categoryLabel} providers for 2026${topNames.length ? `, including ${topNames.join(" and ")}` : ""}. Each review covers checked prices, ratings, pros and cons.`;
   return {
     title,
     description,
@@ -73,12 +72,12 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: `${vName} Provider Reviews`,
-    description: `Expert reviews of top online ${verticalNameInProse(vName)} providers.`,
+    description: `Independent, editor-written reviews of online ${verticalNameInProse(vName)} and GLP-1 providers, ordered by our ranking.`,
     numberOfItems: items.length,
     itemListElement: items.map(({ review, provider }, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      name: `${provider.name} Review`,
+      name: `${provider.name} Review: Prices, Pros & Cons`,
       url: canonicalUrl(ctx, `/reviews/${review.slug}`),
     })),
   };
@@ -97,7 +96,7 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
     "@type": "CollectionPage",
     "@id": canonicalUrl(ctx, "/reviews"),
     url: canonicalUrl(ctx, "/reviews"),
-    name: `${vName} Provider Reviews`,
+    name: `Online ${vName} Provider Reviews`,
     ...pageReviewSchema(`${ctx.prefix}/reviews`),
   };
 
@@ -109,12 +108,12 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <div className="mb-10 text-center">
           <h1 className="text-3xl font-bold text-[#191919] sm:text-4xl">
-            {vName} Provider Reviews
+            Online {vName} Provider Reviews
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base text-gray-600">
-            In-depth reviews of the top online {verticalNameInProse(vName)} providers.
-            Read our expert analysis of each to find the best fit for your goals,
-            budget, and lifestyle.
+            Every online {verticalNameInProse(vName)} provider we cover, reviewed on price,
+            medication options, support and customer feedback. Providers in our ranking
+            are listed first, in rank order, so you can compare the leaders at a glance.
           </p>
           <div className="mx-auto mt-5 max-w-[640px] text-left">
             <MedicalReviewBar path={`${ctx.prefix}/reviews`} compact />
@@ -150,11 +149,11 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
                   <RatingBadge rating={rating} label={ratingLabel} />
                 ) : (
                   <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[11px] font-semibold text-gray-500">
-                    Expert Review
+                    Editor Review
                   </span>
                 )}
                 <span className="text-sm font-semibold text-[#0C4B75] group-hover:underline">
-                  Read Review
+                  See full review
                 </span>
               </div>
             </Link>

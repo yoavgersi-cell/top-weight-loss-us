@@ -16,13 +16,13 @@ import { TRIO_FACTS, type ThreeWayComparison } from "@/lib/three-way";
 
 // Matrix rows rendered for every trio - one place to add a row site-wide.
 const MATRIX_ROWS: { label: string; key: keyof typeof TRIO_FACTS[string] }[] = [
-  { label: "Semaglutide", key: "semaglutide" },
-  { label: "Tirzepatide", key: "tirzepatide" },
-  { label: "Billing & commitment", key: "billing" },
-  { label: "Shipping", key: "shipping" },
-  { label: "Support", key: "support" },
-  { label: "Guarantee / refund", key: "guarantee" },
-  { label: "Standout", key: "standout" },
+  { label: "Semaglutide price", key: "semaglutide" },
+  { label: "Tirzepatide price", key: "tirzepatide" },
+  { label: "Billing & contract", key: "billing" },
+  { label: "Delivery", key: "shipping" },
+  { label: "Care & support", key: "support" },
+  { label: "Refund or guarantee", key: "guarantee" },
+  { label: "Stands out for", key: "standout" },
 ];
 
 export function threeWayMetadata(trio: ThreeWayComparison, ctx: SiteContext): Metadata {
@@ -121,7 +121,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
         {/* Intro */}
         <div className="mb-10 max-w-[780px]">
           <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-            Here&rsquo;s the short version
+            Quick answer
           </p>
           <p className="text-[16px] leading-[1.85] text-gray-600">{trio.intro}</p>
         </div>
@@ -149,7 +149,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
                 sourceFlow="battle_page"
                 className="flex h-[42px] items-center justify-center gap-1.5 rounded-xl bg-[#0C4B75] text-[13.5px] font-bold text-white transition-colors hover:bg-[#093d61]"
               >
-                Visit {p.name}
+                Go to {p.name}
                 <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
               </ProviderCta>
             </div>
@@ -159,10 +159,10 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
         {/* 3-column matrix */}
         <div className="mb-12">
           <h2 className="mb-1.5 text-[22px] font-bold text-[#191919]">
-            {providers.map((p) => p.name).join(" vs ")}: side by side
+            How do {providers.map((p) => p.name).join(", ")} compare?
           </h2>
           <p className="mb-5 max-w-[640px] text-[14px] text-gray-500">
-            Real published prices and terms - the differences that actually decide this matchup.
+            Published prices and plan terms for all three providers, row by row, so the real differences are easy to spot.
           </p>
           <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
             <table className="w-full min-w-[640px] table-fixed border-collapse text-left">
@@ -196,13 +196,13 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
 
         {/* Verdict */}
         <div className="mb-12 rounded-2xl border border-[#0C4B75]/20 bg-white p-6 shadow-sm sm:p-8">
-          <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">Our verdict</p>
+          <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">Which one we recommend</p>
           <p className="text-[16px] leading-[1.85] text-gray-800">{trio.verdict}</p>
         </div>
 
         {/* FAQs (visible twin of the FAQPage schema) */}
         <div className="mb-12">
-          <h2 className="mb-5 text-[22px] font-bold text-[#191919]">{trio.title.split(":")[0]}: FAQs</h2>
+          <h2 className="mb-5 text-[22px] font-bold text-[#191919]">{trio.title.split(":")[0]}: common questions</h2>
           <div className="space-y-4">
             {trio.faqs.map((f, i) => (
               <div key={i} className="rounded-xl border border-gray-200 bg-white p-5">
@@ -219,8 +219,8 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
         {/* Head-to-heads within the trio */}
         {relatedBattles.length > 0 && (
           <div className="mb-4">
-            <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">Break it down two at a time</h2>
-            <p className="mb-4 text-[14px] text-gray-500">The head-to-head comparisons between these providers.</p>
+            <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">Compare them in pairs</h2>
+            <p className="mb-4 text-[14px] text-gray-500">One-on-one matchups between each pair of these three providers.</p>
             <div className="grid gap-2.5 sm:grid-cols-3">
               {relatedBattles.map((b) => (
                 <Link

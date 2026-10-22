@@ -32,7 +32,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
               return (
                 <div key={i} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
                   <h3 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">
-                    Top Providers
+                    Leading Providers
                   </h3>
                   <div className="space-y-4">
                     {selectedProviders.map((provider, pi) => (
@@ -88,7 +88,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
               return (
                 <div key={i} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
                   <h3 className="mb-3 text-[13px] font-bold uppercase tracking-wider text-gray-400">
-                    Related Articles
+                    Keep Reading
                   </h3>
                   <div className="space-y-3">
                     {selectedArticles.map((article) => (
@@ -143,7 +143,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
           if (block.type === "providers" && selectedProviders.length > 0) {
             return (
               <div key={i} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-                <h3 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">Top Providers</h3>
+                <h3 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">Leading Providers</h3>
                 <div className="space-y-3">
                   {selectedProviders.map((provider, pi) => (
                     <div key={provider.id} className="flex items-center gap-3">

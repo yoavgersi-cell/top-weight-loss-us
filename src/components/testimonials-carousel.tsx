@@ -70,7 +70,7 @@ export function TestimonialsCarousel({ testimonials }: { testimonials: Testimoni
 
   return (
     <div className="mb-6">
-      <h3 className="mb-4 text-[17px] font-bold text-[#191919]">What Patients Say</h3>
+      <h3 className="mb-4 text-[17px] font-bold text-[#191919]">In Patients&rsquo; Own Words</h3>
 
       {/* Desktop: 4 cards in a row */}
       <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -101,7 +101,7 @@ export function TestimonialsCarousel({ testimonials }: { testimonials: Testimoni
               <button
                 key={i}
                 onClick={() => setCurrent(i)}
-                aria-label={`Go to testimonial ${i + 1}`}
+                aria-label={`Show testimonial ${i + 1}`}
                 className="flex h-6 w-6 items-center justify-center"
               >
                 <span
@@ -115,12 +115,14 @@ export function TestimonialsCarousel({ testimonials }: { testimonials: Testimoni
           <div className="flex gap-1.5">
             <button
               onClick={() => setCurrent((current - 1 + total) % total)}
+              aria-label="Previous testimonial"
               className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-400 active:bg-gray-50"
             >
               <ChevronLeft className="h-4 w-4" strokeWidth={2} />
             </button>
             <button
               onClick={() => setCurrent((current + 1) % total)}
+              aria-label="Next testimonial"
               className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-400 active:bg-gray-50"
             >
               <ChevronRight className="h-4 w-4" strokeWidth={2} />

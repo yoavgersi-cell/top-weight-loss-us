@@ -65,7 +65,7 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
               {webp && <source srcSet={webp} type="image/webp" />}
               <img
                 src={imgSrc}
-                alt={featured ? `${featured.name} - Editor's Featured Provider` : config.featuredImageAlt}
+                alt={featured ? `${featured.name} - Our Featured Pick` : config.featuredImageAlt}
                 {...(dims && { width: dims.width, height: dims.height })}
                 className="w-full h-auto"
                 loading="lazy"
@@ -79,7 +79,7 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
       case "editorialReviews":
         return (
           <SidebarCard key="editorialReviews" className="!bg-[#fafafa]">
-            <h3 className="mb-6 text-[20px] font-bold text-[#191919]">Editorial Reviews</h3>
+            <h3 className="mb-6 text-[20px] font-bold text-[#191919]">Provider Reviews</h3>
             <div className="space-y-5">
               {topProviders.map((p) => (
                 <Link key={p.id} href={`${linkPrefix}/reviews/${p.id}`} className="flex items-center gap-4 group">
@@ -89,13 +89,13 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
                   </div>
                   <div>
                     <p className="text-[15px] font-bold text-[#191919] group-hover:text-[#0B5E9E] transition-colors">{p.name}</p>
-                    <p className="text-[13px] text-gray-500">Read Review</p>
+                    <p className="text-[13px] text-gray-500">See the review</p>
                   </div>
                 </Link>
               ))}
             </div>
             <Link href={`${linkPrefix}/reviews`} className="mt-8 block text-[14px] font-semibold text-[#0B5E9E] hover:underline">
-              Read All Reviews
+              Browse every review
             </Link>
           </SidebarCard>
         );
@@ -108,15 +108,15 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
                 <Award className="h-5 w-5 text-amber-500" strokeWidth={1.5} />
               </div>
               <div>
-                <p className="text-[15px] font-bold text-[#191919]">Our Ranking Methodology</p>
-                <p className="mt-0.5 text-[13px] text-gray-400">Provider scores are based on:</p>
+                <p className="text-[15px] font-bold text-[#191919]">How We Score Providers</p>
+                <p className="mt-0.5 text-[13px] text-gray-400">Each rating weighs three factors:</p>
               </div>
             </div>
             <div className="space-y-3">
               {[
-                { label: "Medical credibility", pct: 92 },
-                { label: "Customer satisfaction", pct: 85 },
-                { label: "Pricing & value", pct: 78 },
+                { label: "Clinical standards", pct: 92 },
+                { label: "Patient feedback", pct: 85 },
+                { label: "Cost & value", pct: 78 },
               ].map(({ label, pct }) => (
                 <div key={label} className="flex items-center justify-between">
                   <span className="text-[13px] font-semibold text-[#191919]">{label}</span>
@@ -126,7 +126,7 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-[11px] text-gray-400">Scores are updated regularly by our editorial team.</p>
+            <p className="mt-4 text-[11px] text-gray-400">Our editors recheck these scores on a regular schedule.</p>
           </SidebarCard>
         );
 
@@ -136,7 +136,7 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
             <div className="flex items-start gap-2">
               <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-400" strokeWidth={1.5} />
               <p className="text-xs leading-relaxed text-gray-400">
-                We may earn compensation from some providers featured on this page. Rankings and reviews are determined independently by our editorial team.
+                Some providers listed here pay us a commission when you sign up. That never decides the order: our editors set rankings and write reviews independently.
               </p>
             </div>
           </SidebarCard>

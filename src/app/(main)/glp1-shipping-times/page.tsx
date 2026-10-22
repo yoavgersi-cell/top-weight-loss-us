@@ -88,8 +88,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = await getConfig();
   const rows = buildRows(config.providers);
   const total = rows.reduce((s, r) => s + r.mentions.length, 0);
-  const title = `GLP-1 Shipping Times by Provider: Promise vs Reviews (2026)`;
-  const description = `How fast online GLP-1 providers say they ship (1-2 days, overnight, 3-5 days) against what 52 Trustpilot reviewers who mention delivery report.`;
+  const title = `GLP-1 Shipping Times 2026: Provider Promises vs Reviews`;
+  const description = `Online GLP-1 providers promise overnight, 1-2 day or 3-5 day shipping. Compare those stated windows with what 52 Trustpilot reviewers say about delivery.`;
   return { title, description, alternates: { canonical: CANONICAL }, openGraph: { title, description, url: CANONICAL, type: "article" } };
 }
 
@@ -108,7 +108,7 @@ export default async function ShippingTimesPage() {
   const fastest = promises.filter((r) => /overnight|1-2 day|next-day/i.test(r.shipping)).map((r) => nameOf(r.providerId));
   const slower = promises.filter((r) => /\d-\d (business )?days/i.test(r.shipping) && !/1-2 day/i.test(r.shipping)).map((r) => `${nameOf(r.providerId)} (${r.shipping.replace(/^(free )?(shipping in |ships in |ships )?/i, "").toLowerCase()})`);
   const noWindow = promises.filter((r) => !/\d/.test(r.shipping) && !/overnight|next-day/i.test(r.shipping)).map((r) => nameOf(r.providerId));
-  const title = `GLP-1 Shipping Times by Provider: Published Promise vs What ${totalMentions} Reviewers Report`;
+  const title = `GLP-1 Shipping Times by Provider: Stated Delivery Windows vs ${totalMentions} Customer Reports`;
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -143,10 +143,10 @@ export default async function ShippingTimesPage() {
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Shipping Times by Provider" }]} />
           <h1 className="max-w-[820px] text-[27px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">{title}</h1>
           <p className="mt-3 max-w-[720px] text-[16px] leading-relaxed text-gray-500">
-            Delivery is the most common complaint in GLP-1 telehealth reviews, and the one thing every provider makes a
-            promise about. This page keeps the two apart: the shipping terms each provider publishes, from our verified
-            price index, next to what reviewers who mention delivery actually report - every stated day count quoted as
-            written.
+            Shipping is the top complaint in GLP-1 telehealth reviews, and every provider makes a claim about it. Here we
+            show the two side by side without blending them: each provider&rsquo;s stated shipping terms, taken from our
+            verified price index, and what customers who wrote about delivery actually experienced. Any day count a
+            reviewer gives is quoted exactly.
           </p>
           <LastUpdated date={UPDATED} className="mt-4" />
           <MedicalReviewBar path="/glp1-shipping-times" className="mt-4 max-w-[760px]" />
@@ -158,20 +158,20 @@ export default async function ShippingTimesPage() {
         <div className="mb-10 flex items-start gap-4 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
           <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
           <div className="text-[15px] leading-[1.75] text-gray-600">
-            <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
+            <h2 className="mb-2 text-[18px] font-bold text-[#191919]">Which GLP-1 provider ships fastest?</h2>
             <p className="mb-2">
               {fastest.length > 0 && (
-                <>The fastest published promises are {fastest.join(", ")}: overnight or 1-2 day delivery. </>
+                <>{fastest.join(", ")} make the fastest stated promise, with overnight or 1-2 day delivery. </>
               )}
-              {slower.length > 0 && <>Slower published windows: {slower.join("; ")}. </>}
-              {noWindow.length > 0 && <>{noWindow.join(", ")} publish{noWindow.length === 1 ? "es" : ""} free delivery without a stated window. </>}
-              Across {totalReviews} captured reviews, <strong className="text-[#191919]">{totalMentions} mention delivery</strong>, and{" "}
-              {pct(totalNeg, totalMentions)}% of those rate the provider 3 stars or lower.
+              {slower.length > 0 && <>Longer stated windows: {slower.join("; ")}. </>}
+              {noWindow.length > 0 && <>{noWindow.join(", ")} offer{noWindow.length === 1 ? "s" : ""} free delivery but give{noWindow.length === 1 ? "s" : ""} no time frame. </>}
+              Of {totalReviews} reviews we captured, <strong className="text-[#191919]">{totalMentions} talk about delivery</strong>, and{" "}
+              {pct(totalNeg, totalMentions)}% of those give the provider 3 stars or fewer.
             </p>
             <p>
-              The pattern in the quotes below is consistent: when delivery goes wrong, it is a first order or a refill that
-              ships days after the promised window, sometimes after the reviewer&rsquo;s injection day. Promises are
-              published; outcomes are individual reports.
+              The quotes below tell a consistent story. When shipping fails, a first order or a refill leaves days later
+              than promised, occasionally arriving after the customer&rsquo;s scheduled injection day. Keep in mind that
+              the promises are official statements, while the outcomes are single customer accounts.
             </p>
           </div>
         </div>
@@ -179,12 +179,12 @@ export default async function ShippingTimesPage() {
         <section className="mb-12">
           <div className="mb-2 flex items-center gap-2">
             <Truck className="h-6 w-6 text-[#0C4B75]" strokeWidth={2} />
-            <h2 className="text-[22px] font-bold text-[#191919]">Published promise vs reviewer reports</h2>
+            <h2 className="text-[22px] font-bold text-[#191919]">How does each provider&rsquo;s shipping promise compare with reviews?</h2>
           </div>
           <p className="mb-4 text-[15px] text-gray-500">
-            &ldquo;Published&rdquo; is the provider&rsquo;s own shipping statement as recorded in our price index (verified{" "}
-            {longDate(PRICE_INDEX_VERIFIED)}). &ldquo;Mention delivery&rdquo; counts captured reviews whose title or text matches the
-            delivery keyword rule; &ldquo;4-5★&rdquo; is the share of those rating the provider 4 or 5 stars.
+            &ldquo;Published shipping&rdquo; is the provider&rsquo;s own delivery statement as stored in our price index (checked{" "}
+            {longDate(PRICE_INDEX_VERIFIED)}). &ldquo;Mention delivery&rdquo; is the number of captured reviews whose title or text
+            hits our delivery keyword rule. &ldquo;4-5★&rdquo; is the percentage of those reviews that give 4 or 5 stars.
           </p>
           <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
             <table className="w-full min-w-[820px] border-collapse text-[13.5px]">
@@ -192,7 +192,7 @@ export default async function ShippingTimesPage() {
                 <tr className="border-b border-gray-200 bg-[#F7F8FA] text-left text-[12px] font-bold uppercase tracking-wide text-gray-500">
                   <th className={cell}>Provider</th>
                   <th className={cell}>Published shipping</th>
-                  <th className={cell}>Captured</th>
+                  <th className={cell}>Reviews captured</th>
                   <th className={cell}>Mention delivery</th>
                   <th className={cell}>4-5★</th>
                   <th className={cell}>1-2★</th>
@@ -205,9 +205,9 @@ export default async function ShippingTimesPage() {
                   <tr key={r.provider.id} className="border-b border-gray-200 last:border-b-0">
                     <td className={cell}>
                       <Link href={`/reviews/${r.provider.id}`} className="font-bold text-[#191919] hover:text-[#0C4B75] hover:underline">{r.provider.name}</Link>
-                      {r.mentions.length < SMALL_SAMPLE && <p className="text-[11.5px] text-amber-600">Small sample</p>}
+                      {r.mentions.length < SMALL_SAMPLE && <p className="text-[11.5px] text-amber-600">Few reviews</p>}
                     </td>
-                    <td className={`${cell} text-gray-700`}>{r.promise ?? <span className="text-gray-400">Not stated in our index</span>}</td>
+                    <td className={`${cell} text-gray-700`}>{r.promise ?? <span className="text-gray-400">No window in our index</span>}</td>
                     <td className={cell}>{r.n}</td>
                     <td className={cell}>{r.mentions.length}</td>
                     <td className={`${cell} font-bold text-[#191919]`}>{pct(r.pos, r.mentions.length)}%</td>
@@ -220,12 +220,12 @@ export default async function ShippingTimesPage() {
                           {r.provider.trustpilotReviewCount && <span className="text-gray-400">({r.provider.trustpilotReviewCount})</span>}
                         </span>
                       ) : (
-                        <span className="text-gray-400">Not published</span>
+                        <span className="text-gray-400">No public rating</span>
                       )}
                     </td>
                     <td className={cell}>
                       <ProviderCta href={r.provider.affiliateUrl} providerName={r.provider.name} providerSlug={r.provider.id} pageType="listing" sourceFlow="main_comparison" className="inline-flex items-center gap-1 whitespace-nowrap text-[12.5px] font-semibold text-[#0C4B75] hover:underline">
-                        Visit site <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+                        Go to site <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                       </ProviderCta>
                     </td>
                   </tr>
@@ -234,7 +234,7 @@ export default async function ShippingTimesPage() {
             </table>
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-gray-500">
-            Public Trustpilot figures are each provider&rsquo;s profile aggregate on the date we captured it. Source:{" "}
+            Public Trustpilot numbers show each provider&rsquo;s overall profile score on the day we recorded it. Source:{" "}
             <TrustpilotWordmark starClass="h-3.5 w-3.5" textClass="text-[12.5px]" />
           </p>
         </section>
@@ -242,11 +242,11 @@ export default async function ShippingTimesPage() {
         <section className="mb-12">
           <div className="mb-2 flex items-center gap-2">
             <MessageSquareQuote className="h-6 w-6 text-[#0C4B75]" strokeWidth={2} />
-            <h2 className="text-[22px] font-bold text-[#191919]">What reviewers report, in days</h2>
+            <h2 className="text-[22px] font-bold text-[#191919]">How many days did GLP-1 deliveries take, according to customers?</h2>
           </div>
           <p className="mb-5 text-[15px] text-gray-500">
-            Every delivery-related sentence that states a day count or a span, quoted as written, newest first, up to three
-            per provider. Individual reports, not measurements.
+            These are delivery sentences from reviews that name a number of days or a time span, quoted exactly, most recent
+            first and capped at three per provider. Each one is a single customer&rsquo;s account, not a measured average.
           </p>
           <div className="space-y-4">
             {rows.filter((r) => r.quotes.length > 0).map((r) => (
@@ -254,7 +254,7 @@ export default async function ShippingTimesPage() {
                 <p className="mb-1 text-[15px] font-bold text-[#191919]">
                   <Link href={`/reviews/${r.provider.id}`} className="hover:text-[#0C4B75] hover:underline">{r.provider.name}</Link>
                 </p>
-                {r.promise && <p className="mb-3 text-[12.5px] text-gray-500">Published: {r.promise}</p>}
+                {r.promise && <p className="mb-3 text-[12.5px] text-gray-500">Stated shipping: {r.promise}</p>}
                 <ul className="space-y-2.5">
                   {r.quotes.map(({ review, sentence }, i) => (
                     <li key={i} className="flex items-start gap-3 text-[14px] leading-relaxed text-gray-700">
@@ -272,12 +272,12 @@ export default async function ShippingTimesPage() {
         </section>
 
         <section className="mb-12 rounded-2xl border border-gray-200 bg-white p-6">
-          <h2 className="mb-3 text-[20px] font-bold text-[#191919]">Methodology and limits</h2>
+          <h2 className="mb-3 text-[20px] font-bold text-[#191919]">How we built this comparison, and its limits</h2>
           <ul className="list-disc space-y-2 pl-5 text-[15px] leading-[1.7] text-gray-600">
-            <li><strong className="text-[#191919]">Published promise.</strong> The shipping statement in each provider&rsquo;s own materials, as recorded in our verified price index on {longDate(PRICE_INDEX_VERIFIED)}. Where a provider publishes no delivery window, the table says so.</li>
-            <li><strong className="text-[#191919]">Reviewer reports.</strong> Trustpilot reviews captured verbatim from each provider&rsquo;s public profile, names shortened. A review counts as mentioning delivery if its title or text contains ship, deliver, arrive, tracking, FedEx, package or refill. The same rule applies to every provider.</li>
-            <li><strong className="text-[#191919]">Day counts.</strong> Sentences that both concern delivery and state a span (&ldquo;2 days&rdquo;, &ldquo;overnight&rdquo;, &ldquo;three days late&rdquo;), quoted as written. They are what one customer reported about one order.</li>
-            <li><strong className="text-[#191919]">Limits.</strong> Samples are small and uneven, people with a problem review more often, and a first order (which includes the provider review) is not the same as a refill. Read the table as a map of what customers talk about. Prices and plan details are on the{" "}<Link href="/cheapest-glp1" className={ext}>cheapest GLP-1 comparison</Link>; support and billing on{" "}<Link href="/glp1-provider-support" className={ext}>provider support compared</Link>.</li>
+            <li><strong className="text-[#191919]">Stated shipping.</strong> Taken from each provider&rsquo;s own materials and stored in our verified price index on {longDate(PRICE_INDEX_VERIFIED)}. If a provider gives no delivery time frame, the table shows that.</li>
+            <li><strong className="text-[#191919]">Customer reports.</strong> Trustpilot reviews copied word for word from each provider&rsquo;s public profile, with reviewer names shortened. We count a review as a delivery mention when its title or text includes ship, deliver, arrive, tracking, FedEx, package or refill. Every provider is scored with that same rule.</li>
+            <li><strong className="text-[#191919]">Day counts.</strong> Quoted sentences that are about delivery and also give a time span, such as &ldquo;2 days&rdquo;, &ldquo;overnight&rdquo; or &ldquo;three days late&rdquo;. Each describes one customer&rsquo;s experience with one order.</li>
+            <li><strong className="text-[#191919]">Limits.</strong> Sample sizes are small and vary by provider, unhappy customers tend to post more, and a first order (which includes the clinician review) behaves differently from a refill. Use the table to see what customers discuss, not as a delivery guarantee. For prices and plan terms, see the{" "}<Link href="/cheapest-glp1" className={ext}>cheapest GLP-1 comparison</Link>. For customer service and billing, see{" "}<Link href="/glp1-provider-support" className={ext}>GLP-1 provider support compared</Link>.</li>
           </ul>
         </section>
 

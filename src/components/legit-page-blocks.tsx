@@ -25,15 +25,15 @@ export const LEGIT_PAGES: Record<string, LegitPageData> = {
   "is-wellmedr-legit": {
     providerId: "wellmedr",
     checklist: [
-      { ok: true, text: "A licensed provider reviews your medical intake before prescribing; approval is not automatic" },
-      { ok: true, text: "Prescription required - there is no no-prescription route" },
-      { ok: true, text: "Dispensed through a regulated US pharmacy (Reddit commenters independently name its Florida pharmacy)" },
-      { ok: true, text: "Trustpilot 4.6 across 2,188 reviews, re-verified October 5, 2026" },
-      { ok: true, text: "Weight-loss warranty, with its terms published on the provider's site" },
-      { ok: false, text: "The $49 / $89 rates are tied to a 12-month plan, billed monthly; standard delivery is 3-5 business days" },
+      { ok: true, text: "Every medical intake goes to a licensed provider before anything is prescribed, so approval is never automatic" },
+      { ok: true, text: "A valid prescription is mandatory: welludr offers no way to buy medication without one" },
+      { ok: true, text: "Medication comes from a regulated US pharmacy (separate Reddit users identify it as a Florida pharmacy)" },
+      { ok: true, text: "Rated 4.6 on Trustpilot from 2,188 reviews, checked again on October 5, 2026" },
+      { ok: true, text: "Offers a weight loss warranty, and the conditions are posted on welludr's website" },
+      { ok: false, text: "The $49 and $89 prices require a 12-month plan billed month by month, and standard shipping takes 3-5 business days" },
     ],
-    priceLine: "$49/mo compounded semaglutide · $89/mo tirzepatide, the same price at every dose",
-    alternative: { text: "Not sure about a 12-month plan? Compare the month-to-month alternative in embody vs welludr", href: "/embody-vs-wellmedr" },
+    priceLine: "Compounded semaglutide $49/mo · tirzepatide $89/mo, with no price change as the dose goes up",
+    alternative: { text: "Prefer not to commit for 12 months? See the month-to-month option in embody vs welludr", href: "/embody-vs-wellmedr" },
     capture: {
       image: "/verification/wellmedr-pricing-2026-10-05.webp",
       width: 900,
@@ -54,8 +54,8 @@ const ctaClass =
 export function LegitChecklist({ data, provider, linkPrefix = "" }: { data: LegitPageData; provider: Provider; linkPrefix?: string }) {
   return (
     <div className="mb-8 rounded-xl border border-gray-200 bg-white p-5 sm:p-6">
-      <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Legitimacy checklist</p>
-      <p className="mt-1 text-[14px] text-gray-600">What we could verify about {provider.name}, and the one thing to understand before you buy.</p>
+      <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Is it legit? The checklist</p>
+      <p className="mt-1 text-[14px] text-gray-600">Everything we confirmed about {provider.name}, plus the one condition to know before signing up.</p>
       <ul className="mt-4 space-y-2.5">
         {data.checklist.map((item) => (
           <li key={item.text} className="flex items-start gap-2.5 text-[15px] leading-relaxed text-gray-800">
@@ -72,7 +72,7 @@ export function LegitChecklist({ data, provider, linkPrefix = "" }: { data: Legi
         <p className="text-[13.5px] text-gray-600">{data.priceLine}</p>
         <div className="flex items-center gap-4">
           <Link href={`${linkPrefix}/reviews/${provider.id}`} className="text-[13px] font-semibold text-[#0C4B75] hover:underline">
-            Full review
+            Read the review
           </Link>
           <ProviderCta
             href={provider.affiliateUrl}
@@ -83,7 +83,7 @@ export function LegitChecklist({ data, provider, linkPrefix = "" }: { data: Legi
             sourceFlow="main_comparison"
             className={`${ctaClass} h-[42px] px-5 text-[13.5px]`}
           >
-            Check eligibility at {provider.name}
+            See if you qualify at {provider.name}
             <ArrowUpRight className="h-4 w-4" strokeWidth={2.5} />
           </ProviderCta>
         </div>
@@ -96,7 +96,7 @@ export function LegitVerdictCta({ data, provider, linkPrefix = "" }: { data: Leg
   return (
     <div className="my-8 rounded-xl border border-[#0C4B75]/15 bg-[#F4F8FB] p-5 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:p-6">
       <div>
-        <p className="text-[15px] font-bold text-[#191919]">Our verdict: {provider.name} is legit by every marker we can check</p>
+        <p className="text-[15px] font-bold text-[#191919]">Bottom line: {provider.name} passes every legitimacy check we ran</p>
         <p className="mt-1 text-[13.5px] leading-relaxed text-gray-600">
           {data.priceLine}.
           {data.alternative && (
@@ -118,7 +118,7 @@ export function LegitVerdictCta({ data, provider, linkPrefix = "" }: { data: Leg
         sourceFlow="main_comparison"
         className={`${ctaClass} mt-4 w-full shrink-0 sm:mt-0 sm:w-auto`}
       >
-        Check eligibility at {provider.name}
+        See if you qualify at {provider.name}
         <ArrowUpRight className="h-4 w-4" strokeWidth={2.5} />
       </ProviderCta>
     </div>
@@ -132,23 +132,23 @@ export function PricingCapture({ data, provider }: { data: LegitPageData; provid
   return (
     <figure className="my-8 overflow-hidden rounded-xl border border-gray-200 bg-white">
       <div className="border-b border-gray-200 px-5 py-3">
-        <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Price verified {when}</p>
+        <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Price checked {when}</p>
         <p className="mt-0.5 text-[13.5px] text-gray-600">
-          A crop of {provider.name}&rsquo;s own pricing page as it read that day. Prices and promotions change; the provider&rsquo;s site is the final word.
+          Cropped screenshot of {provider.name}&rsquo;s pricing page on that date. Offers and prices can change, so confirm the current figures on the provider&rsquo;s site.
         </p>
       </div>
-      <a href={c.image} target="_blank" rel="noopener noreferrer" title="Open the full-size capture" className="block bg-[#F7F8FA] p-3">
+      <a href={c.image} target="_blank" rel="noopener noreferrer" title="View the full-size screenshot" className="block bg-[#F7F8FA] p-3">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={c.image}
-          alt={`${provider.name} pricing page, captured ${when}: ${c.shows}`}
+          alt={`Screenshot of the ${provider.name} pricing page taken ${when}, showing ${c.shows}`}
           width={c.width}
           height={c.height}
           loading="lazy"
           className="mx-auto max-h-[360px] w-auto max-w-full rounded-lg border border-gray-200 bg-white object-contain"
         />
       </a>
-      <figcaption className="px-5 py-3 text-[12.5px] leading-snug text-gray-500">Pricing page showed {c.shows}.</figcaption>
+      <figcaption className="px-5 py-3 text-[12.5px] leading-snug text-gray-500">On that date the pricing page listed {c.shows}.</figcaption>
     </figure>
   );
 }

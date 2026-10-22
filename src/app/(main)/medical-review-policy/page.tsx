@@ -5,9 +5,9 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { HUB_ORIGIN, REVIEWERS, reviewerDisplayName, reviewerPath, reviewerPersonSchema } from "@/data/reviewers";
 
 const CANONICAL = `${HUB_ORIGIN}/medical-review-policy`;
-const TITLE = "Medical Review Policy: How Top Weight Loss Checks Health Content";
+const TITLE = "Medical Review Policy: How We Check GLP-1 Content";
 const DESCRIPTION =
-  "Who reviews the medical statements on Top Weight Loss, what they check, what they do not, how review dates work, and how to report an error.";
+  "Who checks the medical claims on Top Weight Loss, what the review covers and excludes, when a page is marked reviewed with a date, and how to report an error.";
 const UPDATED = "2026-10-04";
 
 export const metadata: Metadata = {
@@ -37,11 +37,11 @@ export default function MedicalReviewPolicyPage() {
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[900px] px-4 py-12 sm:px-6 sm:py-16">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Medical review policy" }]} />
-          <h1 className="text-[28px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">How we review health content</h1>
+          <h1 className="text-[28px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">How Top Weight Loss reviews medical content</h1>
           <p className="mt-3 max-w-[720px] text-[16px] leading-relaxed text-gray-500">
-            Top Weight Loss compares online treatment providers. The medical and scientific statements in that content are
-            checked by a named reviewer with the training to check them. This page says exactly what that means, and what it
-            does not.
+            A page on Top Weight Loss is marked as reviewed for medical accuracy only after a named reviewer has checked it
+            and the page is entered in our review log. We compare GLP-1 and medical weight loss providers, and this page
+            explains what the medical review covers, what it leaves out, and how review dates are shown.
           </p>
           <p className="mt-3 text-[13px] text-gray-400">Last updated {UPDATED}</p>
         </div>
@@ -49,7 +49,7 @@ export default function MedicalReviewPolicyPage() {
 
       <div className="mx-auto max-w-[900px] px-4 py-10 text-[16px] leading-[1.75] text-gray-800 sm:px-6">
         <section className="mb-10">
-          <h2 className="mb-3 text-[24px] font-bold text-[#191919]">Who reviews</h2>
+          <h2 className="mb-3 text-[24px] font-bold text-[#191919]">Who reviews the medical statements?</h2>
           <div className="space-y-3">
             {REVIEWERS.map((r) => (
               <Link key={r.slug} href={reviewerPath(r)} className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-4 transition-colors hover:border-[#0C4B75]/40">
@@ -63,73 +63,80 @@ export default function MedicalReviewPolicyPage() {
             ))}
           </div>
           <p className="mt-3 text-[14px] text-gray-500">
-            Our reviewer is a licensed medical laboratory scientist with a Master of Public Health degree and clinical-trial
-            experience, not a prescribing physician. We say &ldquo;reviewed for medical accuracy&rdquo; rather than
-            &ldquo;medically reviewed by a doctor&rdquo; for that reason.
+            Our reviewer is a licensed medical laboratory scientist who holds a Master of Public Health degree and has
+            clinical-trial experience. She is not a prescribing physician, which is why our pages use the phrase
+            &ldquo;reviewed for medical accuracy&rdquo; and never &ldquo;medically reviewed by a doctor&rdquo;.
           </p>
         </section>
 
         <section className="mb-10">
-          <h2 className="mb-3 text-[24px] font-bold text-[#191919]">What is reviewed</h2>
+          <h2 className="mb-3 text-[24px] font-bold text-[#191919]">What does the medical review check?</h2>
           <ul className="list-disc space-y-1.5 pl-5">
-            <li>How a medication or treatment works, and the terminology used to describe it.</li>
-            <li>Clinical-trial figures and what the cited study actually measured.</li>
-            <li>Regulatory status: FDA approval, compounding rules, what &ldquo;compounded&rdquo; means and does not mean.</li>
-            <li>Contraindications, side effects and safety statements, against the label and regulator guidance.</li>
-            <li>Whether a claim is supported by the source it cites, and whether the source is current.</li>
+            <li>The mechanism of a medication or treatment, and the terms used to explain it.</li>
+            <li>Clinical-trial figures, checked against what the cited study really measured.</li>
+            <li>Regulatory status, including FDA approval, compounding rules, and what &ldquo;compounded&rdquo; does and does not mean.</li>
+            <li>Safety statements, side effects and contraindications, checked against the drug label and regulator guidance.</li>
+            <li>Whether each claim is backed by the source it cites, and whether that source is still current.</li>
           </ul>
         </section>
 
         <section className="mb-10">
-          <h2 className="mb-3 text-[24px] font-bold text-[#191919]">What is not reviewed</h2>
+          <h2 className="mb-3 text-[24px] font-bold text-[#191919]">What is outside the medical review?</h2>
           <p className="mb-3">
-            Prices, provider rankings, partner selection, provider descriptions and &ldquo;best for&rdquo; verdicts are editorial.
-            They are produced by the Top Weight Loss research team under the method on{" "}
-            <Link href="/how-we-rank" className={ext}>how we rank</Link>, and the reviewer has no role in them.
-            Trustpilot figures and Reddit excerpts are quoted as captured and are not medical evidence.
+            Editorial content is not part of the medical review. That covers prices, provider rankings, which partners are
+            included, provider descriptions and &ldquo;best for&rdquo; verdicts. The Top Weight Loss research team produces
+            them using the method on <Link href="/how-we-rank" className={ext}>how we rank</Link>, and the reviewer plays no
+            part in them. Trustpilot figures and Reddit excerpts are quoted exactly as captured and are not treated as
+            medical evidence.
           </p>
           <p>
-            Reviewers do not choose providers, set prices or rankings, or take part in commercial partnerships. We may earn
-            a commission from provider links; that never changes a medical statement or a review date.
+            Reviewers have no say in which providers appear, what prices or rankings are shown, or any commercial
+            partnership. Provider links may earn us a commission, and that commission never alters a medical statement or a
+            review date.
           </p>
         </section>
 
         <section className="mb-10">
-          <h2 className="mb-3 text-[24px] font-bold text-[#191919]">How review dates work</h2>
+          <h2 className="mb-3 text-[24px] font-bold text-[#191919]">When is a page marked as reviewed?</h2>
           <p className="mb-3">
-            Every content page carries a review bar under its title. It has two states:
+            A page is marked as reviewed only when it has an entry in our review log. Each content page shows a review bar
+            below its title, in one of two states:
           </p>
           <ul className="list-disc space-y-1.5 pl-5">
             <li>
-              <strong className="text-[#191919]">&ldquo;Reviewed for medical accuracy by&rdquo; with a date.</strong> The named
-              reviewer went through that page on that date. The same date is published in the page&rsquo;s structured data
-              and listed on the reviewer&rsquo;s profile.
+              <strong className="text-[#191919]">&ldquo;Reviewed for medical accuracy by&rdquo; with a date.</strong> The page
+              is in the review log: the named reviewer checked it on the date shown, and that date also appears in the
+              page&rsquo;s structured data.
             </li>
             <li>
-              <strong className="text-[#191919]">&ldquo;Medical reviewer&rdquo; with no date.</strong> The page names the site&rsquo;s
-              reviewer but has not yet been reviewed. We do not backfill dates.
+              <strong className="text-[#191919]">&ldquo;Medical reviewer&rdquo; with no date.</strong> The page is not in the
+              review log yet. It names the site&rsquo;s reviewer as staff, but it has not been reviewed, and it does not claim
+              to have been. Review dates are never backfilled.
             </li>
           </ul>
           <p className="mt-3">
-            A page is re-reviewed when its medical content changes materially or when the underlying guidance changes.
-            Price and ranking updates do not trigger a medical re-review and do not change the review date.
+            Our medical reviewer checked the launch content of Top Weight Loss in October 2026, and every page she reviewed
+            carries that date. Pages added later move to the dated state only once each one is reviewed and logged. A reviewed page is checked again when its medical content changes in a
+            meaningful way or when the guidance behind it changes. Updates to prices or rankings do not lead to a medical
+            re-review and leave the review date unchanged.
           </p>
         </section>
 
         <section className="mb-10 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
           <h2 className="mb-2 flex items-center gap-2 text-[18px] font-bold text-[#191919]">
             <ShieldCheck className="h-5 w-5 text-emerald-600" strokeWidth={2} />
-            Found an error?
+            How do I report a medical error?
           </h2>
           <p className="text-[15px] leading-[1.75] text-gray-600">
-            Tell us through the contact details on our <Link href="/about" className={ext}>about page</Link>, with the
-            page address and the statement in question. Confirmed medical errors are corrected and the page is re-reviewed.
+            Use the contact details on our <Link href="/about" className={ext}>about page</Link> and include the page
+            address and the statement you believe is wrong. When a medical error is confirmed, we correct it and the page is
+            reviewed again.
           </p>
         </section>
 
         <p className="text-[13px] leading-relaxed text-gray-400">
-          Nothing on this site is medical advice. Compounded medications are not FDA-approved products. Talk to a licensed
-          clinician about your own situation before starting or changing any treatment.
+          Top Weight Loss does not give medical advice. Compounded medications are not FDA-approved. Before you start or
+          change any treatment, speak with a licensed clinician about your own circumstances.
         </p>
       </div>
     </div>

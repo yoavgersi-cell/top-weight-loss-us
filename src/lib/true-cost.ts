@@ -80,11 +80,11 @@ export function trueCostRow(providerId: string, cell: PriceCell | null | undefin
 
   const name = PROVIDER_NAMES[providerId] ?? providerId;
   let reading: string;
-  if (prepaidTotal !== null) reading = `${name} charges ${money(prepaidTotal)} up front for the year - ${money(listed)} a month averaged, nothing more to pay, nothing back if you stop.`;
-  else if (entryOnly) reading = `${name} publishes ${cell.price} as an entry price; the price at the dose you stay on isn't published, so ask before you sign up.`;
-  else if (monthOneDiscount) reading = `${name} takes 20% off month one (${money(month1)}), then ${money(listed)} every month after.`;
-  else if (promo && regular !== null) reading = `${name} lists ${money(listed)} as a promotional price against a regular ${money(regular)}; the page we verified doesn't say when the promotion ends, so year one lands between ${money(listed * 12)} and ${money(regular * 12)}.`;
-  else reading = `${name} is one price every month - ${money(listed)} - at every dose (${commitment.toLowerCase()}).`;
+  if (prepaidTotal !== null) reading = `${name} bills the full year at checkout: ${money(prepaidTotal)} paid once, which works out to ${money(listed)} per month. No further charges follow, and stopping early does not return any of it.`;
+  else if (entryOnly) reading = `${name} lists ${cell.price} as its starting price only. The monthly cost at your ongoing dose is not published, so confirm it with ${name} before you enroll.`;
+  else if (monthOneDiscount) reading = `${name} discounts the first month by 20% to ${money(month1)}; from month two on you pay ${money(listed)} a month.`;
+  else if (promo && regular !== null) reading = `${name} shows ${money(listed)} as a promotional rate, with ${money(regular)} as the regular price. The pricing page we checked gives no end date for the promotion, so a first year costs somewhere from ${money(listed * 12)} to ${money(regular * 12)}.`;
+  else reading = `${name} charges a flat ${money(listed)} a month, the same at every dose (${commitment.toLowerCase()}).`;
 
   return { providerId, name, month1, maintenance, regular, entryOnly, prepaidTotal, commitment, yearAtCurrent, yearAtRegular, reading };
 }
@@ -100,23 +100,23 @@ export function trueCostTable(drug: "semaglutide" | "tirzepatide"): string {
   const rows = trueCostRows(drug)
     .map((r) => {
       const keep = r.prepaidTotal !== null
-        ? `${money(r.month1 / 12)} averaged (prepaid)`
+        ? `${money(r.month1 / 12)} per month averaged (prepaid)`
         : r.maintenance === null
-          ? "not published"
+          ? "Not published"
           : r.regular !== null
-            ? `${money(r.maintenance)} while the promo holds; ${money(r.regular)} regular`
+            ? `${money(r.maintenance)} during the promotion; ${money(r.regular)} at the regular price`
             : money(r.maintenance);
       const year = r.yearAtCurrent === null
         ? "-"
         : r.yearAtRegular !== null && r.yearAtRegular !== r.yearAtCurrent
           ? `${money(r.yearAtCurrent)} - ${money(r.yearAtRegular)}`
           : money(r.yearAtCurrent);
-      const m1 = r.prepaidTotal !== null ? `${money(r.month1)} up front` : money(r.month1);
+      const m1 = r.prepaidTotal !== null ? `${money(r.month1)} paid up front` : money(r.month1);
       return `<tr><td><a href="/reviews/${r.providerId}">${r.name}</a></td><td>${m1}</td><td>${keep}</td><td>${year}</td><td>${r.commitment}</td></tr>`;
     })
     .join("");
   const label = drug === "semaglutide" ? "Compounded semaglutide" : "Compounded tirzepatide";
-  return `<table><thead><tr><th>Provider</th><th>Month 1</th><th>What you keep paying</th><th>Year one</th><th>Commitment</th></tr></thead><tbody>${rows}</tbody></table><p><em>${label}, providers' own published prices as verified on ${new Date(PRICE_INDEX_VERIFIED + "T00:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}. Year one is a range where a promotional price has no published end date: the low end assumes it holds all year, the high end is the regular price.</em></p>`;
+  return `<table><thead><tr><th>Provider</th><th>Month 1</th><th>Ongoing monthly price</th><th>First-year total</th><th>Commitment</th></tr></thead><tbody>${rows}</tbody></table><p><em>${label}, taken from each provider's published pricing and checked on ${new Date(PRICE_INDEX_VERIFIED + "T00:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}. When a promotional price has no stated end date, year one appears as a range: the lower figure assumes the promotion lasts all twelve months, the higher figure uses the regular price.</em></p>`;
 }
 
 /** Rows bucketed by what you keep paying, for the "$100-$200" article. */
@@ -138,8 +138,8 @@ export function budgetList(drug: "semaglutide" | "tirzepatide"): string {
       (b) =>
         `<h4>${b.label}</h4><ul>${b.rows
           .map((r) => {
-            const p = r.prepaidTotal !== null ? `${money(r.month1 / 12)} averaged, ${money(r.prepaidTotal)} prepaid` : money(r.maintenance ?? r.month1);
-            const tag = r.entryOnly ? " (entry price; maintenance not published)" : r.regular !== null ? ` (promo; regular ${money(r.regular)})` : "";
+            const p = r.prepaidTotal !== null ? `${money(r.month1 / 12)} per month averaged, ${money(r.prepaidTotal)} paid up front` : money(r.maintenance ?? r.month1);
+            const tag = r.entryOnly ? " (starting price; ongoing price not published)" : r.regular !== null ? ` (promotional; regular ${money(r.regular)})` : "";
             return `<li><a href="/reviews/${r.providerId}">${r.name}</a> - ${p}${tag}; ${r.commitment.toLowerCase()}</li>`;
           })
           .join("")}</ul>`,

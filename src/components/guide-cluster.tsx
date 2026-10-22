@@ -24,88 +24,88 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
   {
     slug: "how-to-choose-a-glp1-provider",
     title: "How to Choose a GLP-1 Provider",
-    blurb: "12 checks, ten providers, verified prices and Trustpilot records.",
+    blurb: "A 12-point checklist applied to ten providers, with checked prices and Trustpilot history.",
   },
   {
     slug: "cheapest-glp1",
     title: "Cheapest GLP-1 Online",
-    blurb: "Every provider's verified monthly price, lowest first.",
+    blurb: "Monthly prices we confirmed for each provider, sorted from cheapest up.",
   },
   {
     slug: "glp1-provider-comparison",
     title: "GLP-1 Providers Compared",
-    blurb: "Eight providers on verified prices, Trustpilot patterns, Reddit and refund terms.",
+    blurb: "Eight providers side by side: checked prices, review trends, Reddit threads and refund rules.",
   },
   {
     slug: "glp1-provider-support",
     title: "Provider Customer Support Compared",
-    blurb: "What captured Trustpilot reviews say about support, shipping and billing, by provider.",
+    blurb: "How each provider handles support, shipping and billing, based on saved Trustpilot reviews.",
   },
   {
     slug: "glp1-shipping-times",
     title: "Shipping Times by Provider",
-    blurb: "Each provider's published delivery promise next to what reviewers report, in days.",
+    blurb: "Promised delivery windows versus the days customers actually report waiting.",
   },
   {
     slug: "glp1-price-changes",
     title: "GLP-1 Price Changes",
-    blurb: "Every verified change to online GLP-1 prices, dated, with before and after.",
+    blurb: "A dated log of confirmed online GLP-1 price moves, showing old and new prices.",
   },
   {
     slug: "glp1-weight-loss-statistics",
     title: "GLP-1 Price Index & Statistics",
-    blurb: "The dated price index, change log, and clinical-trial results.",
+    blurb: "Our dated price index and change log alongside the key clinical-trial numbers.",
   },
   {
     slug: "semaglutide",
     title: "Best Semaglutide Providers",
-    blurb: "Who prescribes semaglutide online and what each one charges.",
+    blurb: "Online clinics that prescribe semaglutide, and the price each one charges.",
   },
   {
     slug: "tirzepatide",
     title: "Best Tirzepatide Providers",
-    blurb: "Compounded tirzepatide, Zepbound and Mounjaro - ranked.",
+    blurb: "Ranked options for compounded tirzepatide, Zepbound and Mounjaro.",
   },
   {
     slug: "glp1-pills-vs-injections",
     title: "GLP-1 Pills vs Injections",
-    blurb: "Oral GLP-1s against weekly injections: results, cost, convenience.",
+    blurb: "Daily GLP-1 tablets versus weekly shots, compared on results, price and ease of use.",
   },
   {
     slug: "weight-loss-pills",
     title: "Prescription Weight Loss Pills",
-    blurb: "Which oral options are prescription-strength and how they compare.",
+    blurb: "The prescription-strength oral options and how they stack up.",
   },
   {
     slug: "retatrutide-weight-loss",
     title: "Retatrutide for Weight Loss",
-    blurb: "The triple-agonist in trials: what the data shows and whether you can get it.",
+    blurb: "What trials show for this triple-agonist drug, and whether it is available yet.",
   },
   {
     slug: "ozempic-alternatives",
     title: "Ozempic, Wegovy & Mounjaro Alternatives",
-    blurb: "Compounded and brand-name options when the brand drug is out of reach.",
+    blurb: "Compounded and brand-name routes to try when the brand drug is not an option.",
   },
   {
     slug: "switch-from-ozempic",
     title: "Switching From Ozempic",
-    blurb: "How to move providers or medications without a gap in treatment.",
+    blurb: "Changing providers or medications without missing doses along the way.",
   },
   {
     slug: "wegovy-providers",
     title: "Best Wegovy Providers & Alternatives",
-    blurb: "Where to get Wegovy online and what to consider instead.",
+    blurb: "Online sources for Wegovy, plus alternatives worth a look.",
   },
   {
     slug: "ozempic-for-weight-loss",
     title: "Ozempic for Weight Loss",
-    blurb: "Providers, pricing and alternatives for off-label Ozempic.",
+    blurb: "Off-label Ozempic: which providers offer it, what it costs and what else to consider.",
   },
 ];
 
 export function GuideCluster({
   currentSlug,
-  prefix = "/",
+  prefix = "",
   className = "",
 }: {
   /** Slug of the page rendering the block - excluded from the list. */
@@ -119,10 +119,10 @@ export function GuideCluster({
   return (
     <section className={`mt-10 ${className}`} aria-labelledby="guide-cluster-heading">
       <h2 id="guide-cluster-heading" className="mb-1 text-[20px] font-bold text-[#191919]">
-        More GLP-1 guides
+        Related GLP-1 guides
       </h2>
       <p className="mb-4 text-[14px] text-gray-500">
-        The rest of our weight-loss medication guides, kept to the same verified-price standard.
+        Every other weight loss medication guide on Top Weight Loss, each built on prices we have checked ourselves.
       </p>
       <ul className="grid gap-2.5 sm:grid-cols-2">
         {guides.map((g) => (

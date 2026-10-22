@@ -15,34 +15,34 @@ export const revalidate = 60;
 const CANONICAL = "https://www.topweightloss.us/retatrutide-weight-loss";
 
 export const metadata: Metadata = {
-  title: "Retatrutide for Weight Loss (2026): Results & Status",
+  title: "Retatrutide Weight Loss 2026: Trial Results & FDA Status",
   description:
-    "Retatrutide ('reta') is the next-generation triple agonist (GLP-1, GIP, glucagon) that hit ~24% weight loss in trials. How it compares and if you can get it.",
+    "Retatrutide, a triple GLP-1, GIP and glucagon agonist, produced about 24% weight loss in a Phase 2 trial. See how it compares and whether you can get it yet.",
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Retatrutide for Weight Loss (2026): Results & Status",
+    title: "Retatrutide Weight Loss 2026: Trial Results & FDA Status",
     description:
-      "The triple-agonist weight loss drug that reached ~24% in trials - explained, with an honest look at availability.",
+      "About 24% weight loss in a Phase 2 trial, but not FDA-approved. What retatrutide is, how it compares and when it may be available.",
     url: CANONICAL,
     type: "article",
   },
 };
 
 const compareRows: [string, string, string][] = [
-  ["Drug class", "Triple agonist - GLP-1 + GIP + glucagon", "See below"],
-  ["Average weight loss (trials)", "Up to ~24% at 48 weeks (Phase 2)", "Tirzepatide ~20%+ · Semaglutide ~15%"],
-  ["Format", "Once-weekly injection", "Once-weekly injection (both)"],
-  ["FDA status", "Investigational - not yet approved", "Tirzepatide & semaglutide are FDA-approved"],
-  ["Availability", "Not available to prescribe yet", "Available now via licensed providers"],
+  ["How it works", "Triple agonist: GLP-1, GIP and glucagon receptors", "See below"],
+  ["Average weight loss in trials", "Up to ~24% at 48 weeks (Phase 2)", "Tirzepatide ~20%+ · Semaglutide ~15%"],
+  ["How it is taken", "Injection once a week", "Injection once a week (both drugs)"],
+  ["FDA approval", "Investigational, not approved yet", "Tirzepatide and semaglutide are both FDA-approved"],
+  ["Can you get it?", "Cannot be prescribed yet", "Prescribed today by licensed providers"],
 ];
 
 const faqs: { question: string; answer: string }[] = [
-  { question: "What is retatrutide?", answer: "Retatrutide (sometimes called “reta” or a “triple agonist”) is an investigational once-weekly injection from Eli Lilly. Unlike semaglutide (a GLP-1) or tirzepatide (a dual GLP-1/GIP), retatrutide targets three receptors at once - GLP-1, GIP, and glucagon - which is why it has produced the largest weight loss of any drug in trials so far." },
-  { question: "How much weight loss does retatrutide cause?", answer: "In a Phase 2 trial, participants on the highest dose lost about 24% of their body weight over 48 weeks - more than tirzepatide (~20%) or semaglutide (~15%) in their trials. These are early results; larger Phase 3 trials are underway to confirm them." },
-  { question: "Is retatrutide FDA approved?", answer: "No. As of 2026, retatrutide is investigational and has not been approved by the FDA for weight loss or any other use. It is being studied in late-stage (Phase 3) clinical trials." },
-  { question: "When will retatrutide be available?", answer: "It depends on the outcome of its Phase 3 program and FDA review. Industry expectations point to a potential approval in the 2026-2027 window, but timelines can shift. Until it's approved, it cannot be legitimately prescribed for weight loss." },
-  { question: "Retatrutide vs tirzepatide - which is more effective?", answer: "In their respective trials, retatrutide produced more weight loss (~24%) than tirzepatide (~20%+). But tirzepatide is FDA-approved and available today, while retatrutide is still investigational. For most people the practical comparison is between the approved options - with retatrutide as a promising future addition." },
-  { question: "Can you buy retatrutide now?", answer: "No. Because it isn't FDA-approved, retatrutide is not legitimately available to purchase or be prescribed for weight loss. Be cautious of any site claiming to sell “retatrutide” - sourcing an unapproved drug carries real safety and legal risks. Stick to approved medications prescribed by a licensed clinician." },
+  { question: "What is retatrutide?", answer: "Retatrutide is an investigational weight loss injection from Eli Lilly that is taken once a week. It is often shortened to “reta” or described as a “triple agonist” because it acts on three receptors: GLP-1, GIP and glucagon. Semaglutide acts on GLP-1 only and tirzepatide acts on GLP-1 and GIP, and retatrutide has produced the largest trial weight loss of any drug so far." },
+  { question: "How much weight can you lose on retatrutide?", answer: "In a Phase 2 trial, people on the highest retatrutide dose lost about 24% of their body weight in 48 weeks. That is more than tirzepatide (~20%) or semaglutide (~15%) achieved in their own trials. These are early figures, and larger Phase 3 trials are underway to confirm them." },
+  { question: "Is retatrutide FDA-approved?", answer: "No. As of 2026, retatrutide is still investigational and the FDA has not approved it for weight loss or any other use. Eli Lilly is testing it in late-stage Phase 3 clinical trials." },
+  { question: "When will retatrutide be available?", answer: "Retatrutide's availability depends on its Phase 3 results and on FDA review. Industry expectations put a possible approval somewhere in 2026-2027, although that timeline could move. Until the FDA approves it, retatrutide cannot be legitimately prescribed for weight loss." },
+  { question: "Is retatrutide more effective than tirzepatide?", answer: "In trials, retatrutide produced more weight loss (~24%) than tirzepatide (~20%+). The difference is that tirzepatide is FDA-approved and can be prescribed now, while retatrutide is still investigational. For anyone starting treatment today, the real choice is between approved drugs, with retatrutide a possible option later." },
+  { question: "Can I buy retatrutide online?", answer: "No. Retatrutide is not FDA-approved, so it cannot be legitimately bought or prescribed for weight loss. Treat any website offering “retatrutide” with caution, because an unapproved drug from an unknown source carries real safety and legal risks. Use an approved medication prescribed by a licensed clinician instead." },
 ];
 
 export default async function RetatrutidePage() {
@@ -50,7 +50,7 @@ export default async function RetatrutidePage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Retatrutide for Weight Loss (2026): Results & Status",
+    headline: "Retatrutide Weight Loss 2026: Trial Results & FDA Status",
     description: metadata.description,
     datePublished: "2026-08-09",
     dateModified: "2026-08-09",
@@ -84,12 +84,12 @@ export default async function RetatrutidePage() {
         <div className="mx-auto max-w-[900px] px-4 py-12 sm:px-6 sm:py-16">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Retatrutide" }]} />
           <h1 className="text-[28px] font-extrabold text-[#191919] sm:text-[36px]">
-            Retatrutide for Weight Loss: The Next-Gen Drug, Explained
+            Retatrutide for Weight Loss: Trial Results, FDA Status and What to Use Now
           </h1>
           <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-gray-500">
-            Retatrutide (&ldquo;reta&rdquo;) reached roughly 24% weight loss in trials - the most of
-            any weight loss drug so far. Here&rsquo;s what it is, how it stacks up against tirzepatide
-            and semaglutide, and an honest answer on whether you can actually get it.
+            Retatrutide (&ldquo;reta&rdquo;) produced about 24% weight loss in a Phase 2 trial, the
+            highest result of any weight loss drug to date. This guide covers how retatrutide works, how it
+            compares with tirzepatide and semaglutide, and whether you can get it yet.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
           <MedicalReviewBar path="/retatrutide-weight-loss" className="mt-4 max-w-[760px]" />
@@ -101,18 +101,18 @@ export default async function RetatrutidePage() {
         <div className="mb-10 flex items-start gap-4 rounded-2xl border border-amber-200 bg-amber-50/60 p-6">
           <TriangleAlert className="mt-0.5 h-6 w-6 shrink-0 text-amber-500" strokeWidth={2} />
           <div>
-            <h2 className="mb-2 text-[18px] font-bold text-[#191919]">First, the honest part</h2>
+            <h2 className="mb-2 text-[18px] font-bold text-[#191919]">Can you get retatrutide today?</h2>
             <p className="text-[15px] leading-[1.75] text-gray-600">
-              Retatrutide is <strong className="text-[#191919]">not yet FDA-approved</strong> and
-              can&rsquo;t be legitimately prescribed or purchased for weight loss. It&rsquo;s in
-              late-stage trials, with a possible approval in the 2026-2027 window. This page
-              explains the science and how it compares - and points you to the approved options you
-              can use today.
+              No. Retatrutide is <strong className="text-[#191919]">not FDA-approved yet</strong>, so
+              no one can legitimately prescribe or sell it for weight loss. It is in late-stage trials,
+              and approval may come in 2026-2027. Below you will find how the drug works, how it
+              measures up against approved options, and which approved treatments you can start
+              now.
             </p>
           </div>
         </div>
 
-        <TopTwoPicks config={config} linkPrefix="/" />
+        <TopTwoPicks config={config} linkPrefix="" />
 
         {/* What it is */}
         <section className="mb-12">
@@ -121,22 +121,23 @@ export default async function RetatrutidePage() {
             <h2 className="text-[24px] font-bold text-[#191919]">What is retatrutide?</h2>
           </div>
           <p className="mb-4">
-            Retatrutide is an investigational once-weekly injection from Eli Lilly. What makes it
-            different is that it&rsquo;s a <strong className="text-[#191919]">triple agonist</strong>:
-            it activates three receptors at once - GLP-1 and GIP (like tirzepatide) plus a third,
-            glucagon. That extra target is thought to boost metabolism and fat burning on top of the
-            appetite effects, which is why it has produced the largest weight loss seen in trials so far.
+            Retatrutide is a once-weekly investigational injection developed by Eli Lilly. It is a{" "}
+            <strong className="text-[#191919]">triple agonist</strong>, meaning it switches on three
+            receptors together: GLP-1 and GIP, the same pair tirzepatide targets, plus glucagon. The
+            glucagon action is thought to raise metabolism and fat burning in addition to reducing
+            appetite. That combination is the likely reason retatrutide has shown the biggest weight loss
+            of any drug tested so far.
           </p>
         </section>
 
         {/* Comparison */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[24px] font-bold text-[#191919]">Retatrutide vs tirzepatide vs semaglutide</h2>
+          <h2 className="mb-4 text-[24px] font-bold text-[#191919]">How does retatrutide compare with tirzepatide and semaglutide?</h2>
           <div className="mb-4 overflow-x-auto rounded-xl border border-gray-200">
             <table className="w-full min-w-[640px] text-left text-[14px]">
               <thead>
                 <tr className="border-b border-gray-200 bg-gray-50">
-                  <th className="px-4 py-3 font-bold text-[#191919]">Factor</th>
+                  <th className="px-4 py-3 font-bold text-[#191919]">Comparison point</th>
                   <th className="px-4 py-3 font-bold text-[#191919]">Retatrutide</th>
                   <th className="px-4 py-3 font-bold text-[#191919]">Tirzepatide / Semaglutide</th>
                 </tr>
@@ -153,7 +154,7 @@ export default async function RetatrutidePage() {
             </table>
           </div>
           <p className="text-[14px] text-gray-500">
-            Compare the approved options in our{" "}
+            Read more about the approved drugs in our{" "}
             <Link href="/tirzepatide" className="font-semibold text-[#0C4B75] hover:underline">tirzepatide</Link>{" "}
             and{" "}
             <Link href="/semaglutide" className="font-semibold text-[#0C4B75] hover:underline">semaglutide</Link>{" "}
@@ -163,40 +164,41 @@ export default async function RetatrutidePage() {
 
         {/* Trial results */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[24px] font-bold text-[#191919]">What the trials show</h2>
+          <h2 className="mb-4 text-[24px] font-bold text-[#191919]">What did the retatrutide trials find?</h2>
           <p className="mb-4">
-            In a Phase 2 study published in 2023, participants on the highest retatrutide dose lost
-            about <strong className="text-[#191919]">24% of their body weight over 48 weeks</strong> -
-            ahead of tirzepatide (~20%) and semaglutide (~15%) in their own trials. Larger{" "}
-            <strong className="text-[#191919]">Phase 3 trials are now underway</strong> to confirm the
-            effect and its long-term safety. Early results are promising, but Phase 3 outcomes and FDA
-            review are what determine whether - and when - it reaches patients.
+            The highest retatrutide dose led to a loss of about{" "}
+            <strong className="text-[#191919]">24% of body weight over 48 weeks</strong> in a Phase 2
+            study published in 2023. That beats the figures tirzepatide (~20%) and semaglutide (~15%)
+            reached in their own trials.{" "}
+            <strong className="text-[#191919]">Phase 3 trials are now in progress</strong> to confirm the
+            result and check long-term safety. The early data look strong, but only the Phase 3 results
+            and the FDA&rsquo;s review will decide if and when patients can use it.
           </p>
         </section>
 
         {/* What to use now */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[24px] font-bold text-[#191919]">What you can use today</h2>
+          <h2 className="mb-4 text-[24px] font-bold text-[#191919]">What should you take while you wait for retatrutide?</h2>
           <p className="mb-6">
-            Since retatrutide isn&rsquo;t available yet, the most effective approved options are
-            tirzepatide (~20% weight loss) and semaglutide (~15%). Both are prescribed online by
-            licensed telehealth providers, often as affordable compounded versions. Compare providers
-            on pricing, medical support, and value.
+            The strongest approved alternatives are tirzepatide (~20% weight loss in trials) and
+            semaglutide (~15%). Licensed telehealth providers prescribe both online, frequently as
+            lower-cost compounded versions. Weigh providers on price, medical support and overall value
+            before you choose.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link href="/" className="inline-flex h-[46px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">
-              Compare Top Providers
+              See the Top Providers
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <Link href="/glp1-pills-vs-injections" className="inline-flex h-[46px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50">
-              Pills vs Injections
+              GLP-1 Pills or Injections?
             </Link>
           </div>
         </section>
 
         {/* FAQ */}
         <section className="mb-12">
-          <h2 className="mb-6 text-[24px] font-bold text-[#191919]">Retatrutide: FAQs</h2>
+          <h2 className="mb-6 text-[24px] font-bold text-[#191919]">Retatrutide questions, answered</h2>
           <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
             {faqs.map((f, i) => (
               <div key={i} className="p-6">
@@ -212,16 +214,16 @@ export default async function RetatrutidePage() {
         {/* Sources + disclaimer */}
         <section>
           <p className="mb-3 text-[13px] leading-relaxed text-gray-400">
-            Sources: Phase 2 retatrutide trial results (New England Journal of Medicine, 2023) and
-            manufacturer trial program information; published data for tirzepatide (SURMOUNT) and
-            semaglutide (STEP). Trial figures are averages; individual results vary. Brand and drug
-            names are trademarks of their respective manufacturers.
+            Sources: retatrutide Phase 2 trial results (New England Journal of Medicine, 2023) and the
+            manufacturer&rsquo;s trial program details; published tirzepatide (SURMOUNT) and semaglutide
+            (STEP) trial data. All trial figures are averages, and individual results differ. Drug and
+            brand names belong to their respective manufacturers.
           </p>
           <p className="text-[13px] leading-relaxed text-gray-400">
-            topweightloss.us is not a medical provider and does not prescribe medications. This page is
-            for educational purposes only and is not medical advice. Retatrutide is investigational and
-            not FDA-approved. Always consult a licensed healthcare provider about approved treatment
-            options.
+            topweightloss.us does not provide medical care or prescribe medication. This page is
+            educational and is not medical advice. Retatrutide is an investigational drug without FDA
+            approval. Talk to a licensed healthcare provider about the approved treatments that suit
+            you.
           </p>
         </section>
       </div>

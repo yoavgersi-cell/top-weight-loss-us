@@ -66,7 +66,7 @@ export function MedicalReviewBar({
   );
   const policy = (
     <Link href="/medical-review-policy" className="font-medium text-[#0C4B75] hover:underline">
-      How we review
+      Our review process
     </Link>
   );
 
@@ -114,19 +114,19 @@ export function MedicalReviewBar({
           <p className="mt-0.5 text-[12.5px] text-gray-500">
             {review ? (
               <>
-                <span className="sm:hidden">Medically reviewed </span>
-                <span className="hidden sm:inline">Reviewed </span>
+                <span className="sm:hidden">Clinically checked </span>
+                <span className="hidden sm:inline">Checked </span>
                 <time dateTime={review.reviewedAt}>{formatDate(review.reviewedAt)}</time>
                 {" · "}
               </>
             ) : (
               <>
                 <span className="sm:hidden">Medical reviewer · </span>
-                <span className="hidden sm:inline">Reviews this site&rsquo;s health content for scientific accuracy · </span>
+                <span className="hidden sm:inline">Checks the health information on Top Weight Loss for scientific accuracy · </span>
               </>
             )}
             <span className="hidden sm:inline">
-              Written by {writer}
+              Author: {writer}
               {" · "}
             </span>
             {policy}

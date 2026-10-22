@@ -26,7 +26,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 
 // Code-side CTR overrides for high-impression articles whose stored meta lives
 // in the CMS blob (so it can't be tuned from the content files). Applied only
-// on the weight-loss vertical. Prices cited are the providers' real listed
+// site-wide. Prices cited are the providers' real listed
 // prices - keep in sync when pricing changes.
 const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   // Oct 2026, Bing 30-day export: the "legit or scam" phrasings convert at
@@ -34,71 +34,71 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   // "is welludr a scam" 2/2, "welludr scam" 1/1), so the titles name the
   // question the searcher is actually typing. The pages answer it directly.
   "is-embody-legit": {
-    title: "Is embody Legit or a Scam? Pharmacy, Pricing & Reviews (2026)",
+    title: "Is embody Legit or a Scam? Pharmacy, Prices, Reviews (2026)",
     description:
-      "Is embody legit or a scam? LegitScript-certified 503A pharmacies, licensed-provider prescribing, $69 semaglutide and $119 tirzepatide, refund if not approved, and what customers report.",
+      "Is embody legit? Licensed prescribers, LegitScript-certified 503A pharmacies, $69 semaglutide, $119 tirzepatide, a refund if not approved, and real customer feedback.",
   },
   "is-wellmedr-legit": {
-    title: "Is welludr Legit or a Scam? Reviews, Complaints & Real Prices (2026)",
+    title: "Is welludr Legit or a Scam? Complaints & Prices (2026)",
     description:
-      "Is welludr legit or a scam? A verified 4.6 on Trustpilot across 2,188 reviews, what the complaints actually say, the real $49-$89 pricing structure, and our verdict.",
+      "Is welludr a scam? It holds a verified 4.6 on Trustpilot from 2,188 reviews. We cover what complaints say, how the $49-$89 pricing really works, and our verdict.",
   },
   "is-altrx-legit": {
     // Keeps the keyword-rich SERP snippet (prices, flat-dose) even though the
     // visible on-page dek was shortened to a clean editorial line.
-    title: "Is altRx Legit? Pricing, Prescriptions & What to Know (2026)",
+    title: "Is altRx Legit? Prescribing, Pricing & Catches (2026)",
     description:
-      "altRx sells $89 compounded plans and $1,149+ brand-name Ozempic side by side. We examined who prescribes, how the flat-dose pricing works, and the catches.",
+      "altRx sells $89 compounded plans next to brand-name Ozempic from $1,149. We checked who writes the prescriptions, how flat-dose pricing works and the catches to know.",
   },
   "tirzepatide-vs-semaglutide": {
-    title: "Tirzepatide vs Semaglutide (2026): Results & Prices",
+    title: "Tirzepatide vs Semaglutide (2026): Weight Loss & Cost",
     description:
-      "Tirzepatide vs semaglutide, the two leading GLP-1s: up to 22.5% vs ~15% weight loss in trials, side effects, dosing - verified compounded prices from $49 and $89/month.",
+      "Tirzepatide vs semaglutide: up to 22.5% vs about 15% weight loss in trials, plus side effects and dosing. Checked compounded prices start at $49 and $89 per month.",
   },
   "best-mounjaro-alternatives": {
-    title: "7 Best Mounjaro Alternatives in 2026 (From $89/Month)",
+    title: "7 Best Mounjaro Alternatives for 2026 (From $89/Month)",
     description:
-      "Compounded tirzepatide - Mounjaro's active ingredient - from a verified $89/month at licensed providers, vs $1,000+ brand pens. Prices checked Aug 2026.",
+      "Compounded tirzepatide, the active ingredient in Mounjaro, costs from $89/month at licensed providers versus $1,000+ for brand pens. Prices checked October 2026.",
   },
   "best-wegovy-alternatives": {
-    title: "7 Best Wegovy Alternatives in 2026 (From $49/Month)",
+    title: "7 Best Wegovy Alternatives for 2026 (From $49/Month)",
     description:
-      "Compounded semaglutide - Wegovy's active ingredient - from $49-$89/month through licensed online providers. Real prices, what's included, and how to choose.",
+      "Compounded semaglutide, the active ingredient in Wegovy, costs $49-$199/month through licensed online providers. Real prices, what each plan includes and how to pick.",
   },
   "best-ro-alternatives": {
-    title: "Best ro Weight Loss Alternatives in 2026 (From $49/mo)",
+    title: "Best ro Alternatives for Weight Loss in 2026 (From $49/mo)",
     description:
-      "Flat-priced GLP-1 providers that compete with ro: welludr ($49/mo), embody ($69/mo), altRx ($89/mo) and more - compared on price, speed and support.",
+      "GLP-1 providers with flat pricing that rival ro: welludr at $49/mo, embody at $69/mo, altRx at $89/mo and more, compared on cost, shipping speed and support.",
   },
   "can-you-get-ozempic-without-doctor": {
-    title: "Can You Get Ozempic Without Seeing a Doctor? (2026)",
+    title: "Can You Get Ozempic Without a Doctor Visit? (2026)",
     description:
-      "No - GLP-1s legally require a prescription. But you don't need an office visit: licensed telehealth providers evaluate you online, with treatment from $49/month.",
+      "No. Every GLP-1 needs a prescription by law, but an office visit is optional: licensed telehealth clinicians assess you online, with treatment from $49/month.",
   },
   "weight-loss-medication-that-works-fast": {
-    title: "Weight Loss Medication That Actually Works Fast (2026)",
+    title: "Weight Loss Medication That Works Fast: 2026 Guide",
     description:
-      "GLP-1s are the fastest evidence-backed option: appetite changes in weeks, meaningful loss over months. What to realistically expect - and where to start online.",
+      "GLP-1s are the quickest evidence-based option: appetite often shifts within weeks and real weight loss builds over months. Realistic timelines and where to begin online.",
   },
   "how-to-get-ozempic-online": {
-    title: "How to Get Ozempic Online in 2026: 3 Steps (Legally)",
+    title: "How to Get Ozempic Online Legally in 2026: 3 Steps",
     description:
-      "The legitimate route: online intake, licensed-provider review, medication shipped. Brand-name and compounded semaglutide options from $49/month, explained.",
+      "The legal path has three steps: an online intake, review by a licensed provider, and medication by mail. Brand-name and compounded semaglutide options from $49/month.",
   },
   "semaglutide-cost-per-month": {
-    title: "Semaglutide Cost Per Month (2026): $49 vs $1,150+",
+    title: "Semaglutide Cost Per Month (2026): From $49 vs $1,150+",
     description:
-      "Compounded semaglutide runs $49-$199/month all-in via telehealth; brand-name Ozempic/Wegovy runs $1,150-$1,600 without insurance. Full real-price breakdown.",
+      "Compounded semaglutide costs $49-$199/month all-in through telehealth, while brand Ozempic or Wegovy costs $1,150-$1,600 without insurance. Full price breakdown.",
   },
   "weight-loss-medication-without-insurance": {
-    title: "Weight Loss Medication Without Insurance (From $49/mo)",
+    title: "Weight Loss Medication Without Insurance: From $49/mo",
     description:
-      "No coverage? Self-pay compounded GLP-1s start at $49-$89/month with the provider visit included. Real prices from licensed telehealth providers, compared.",
+      "No insurance? Self-pay compounded GLP-1s start at $49-$89/month with the provider visit included. Prices from licensed telehealth providers, compared side by side.",
   },
   "compounded-semaglutide-vs-brand-name": {
-    title: "Compounded Semaglutide vs Brand Name: Real Differences",
+    title: "Compounded Semaglutide vs Brand Name: Key Differences",
     description:
-      "Same active ingredient, 503A-pharmacy preparation, and a 10x price gap ($49-$199 vs $1,150+/mo). What the FDA says, the real trade-offs, and how to stay safe.",
+      "Same active ingredient, made by 503A pharmacies, at roughly a 10x lower price ($49-$199 vs $1,150+/mo). What the FDA says, the trade-offs and how to stay safe.",
   },
 };
 
@@ -109,74 +109,74 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   // Oct 20, 2026 pillar. Figures are the verified price index and the two
   // pivotal trials cited inside the article.
   "glp1-weight-loss-online-complete-guide":
-    "You can get a GLP-1 online three ways, each needing a licensed clinician's prescription: brand-name Wegovy or Zepbound (pens or the new pills) through a telehealth prescriber or your insurance, or compounded semaglutide or tirzepatide from a state-licensed pharmacy through a telehealth provider. Verified compounded prices run $49-$199/month for semaglutide and $89-$299/month for tirzepatide; brand-name cash starts around $1,249/month. The pivotal trials showed about 15% mean weight loss on semaglutide and up to 21% on tirzepatide after 15-17 months, with most of it regained within a year of stopping.",
+    "There are three ways to get a GLP-1 online, and every one needs a prescription from a licensed clinician: brand-name Wegovy or Zepbound (pens or the new pills) through a telehealth prescriber, the same brands through your insurance, or compounded semaglutide or tirzepatide made by a state-licensed pharmacy and prescribed by a telehealth provider. Checked compounded prices are $49-$199/month for semaglutide and $89-$299/month for tirzepatide, while brand-name cash prices start near $1,249/month. In the pivotal trials, average weight loss was about 15% on semaglutide and up to 21% on tirzepatide after 15-17 months, and most of that weight returned within a year of stopping.",
   // Oct 8, 2026 research-driven cluster. Figures derive from the verified
   // price index (see src/lib/true-cost.ts) and dated external sources cited
   // inside each article; the dollar stamp below carries the index date.
   "glp1-true-cost-month-1-vs-year-one":
-    "The price that matters is the one you keep paying, not month 1. At verified prices, year one of compounded semaglutide runs from $588 on welludr's 12-month plan to roughly $1,800-$2,400 at month-to-month providers; tirzepatide about $500-$1,200 more. The month-2 jump comes from promos with no published end date, 20%-off-month-one offers, and memberships billed next to the drug - all visible before you pay.",
+    "What you keep paying after month 1 matters more than the intro price. At checked prices, a first year of compounded semaglutide costs from $588 on welludr's 12-month plan to $828-$2,348 at month-to-month providers, and tirzepatide adds about $480-$1,320 on top. The month-2 price jump comes from promos with no published end date, 20%-off first-month deals and memberships billed alongside the medication, and you can see all of them before you pay.",
   "before-you-prepay-glp1":
-    "Pay monthly for the first two or three cycles, then prepay only if the provider has shipped on time and answered when you wrote. Before any prepaid or 12-month plan, get written answers to five questions: when you're charged and for what, what is refunded if shipments stop, how you cancel and whether you get confirmation, whether the plan auto-renews and with how much notice, and whether a financing company bills you separately.",
+    "Pay month to month for your first two or three cycles, and prepay only after the provider has shipped on time and replied when you contacted it. Before you sign up for any prepaid or 12-month plan, get written answers to five questions: when you are charged and for what; what is refunded if shipments stop; how you cancel and whether you get a confirmation; whether the plan auto-renews and how much notice you receive; and whether a financing company bills you separately.",
   "what-100-to-200-a-month-gets-you-glp1":
-    "At verified published prices, under $100 a month buys compounded semaglutide from welludr ($49, 12-month plan), embody ($69, month to month), altRx ($89) and Medvi ($99 promo); $100-$150 buys compounded tirzepatide from embody ($119), DirectMeds ($147) and altRx ($149); $150-$200 buys the all-inclusive and coaching-led programs. Above $200 the choice becomes brand-name: Foundayo from $149 a month, brand injections from $1,149.",
+    "At checked published prices, under $100 a month gets you compounded semaglutide from welludr ($49 on a 12-month plan), embody ($69, month to month), altRx ($89) or Medvi ($99 promo). Between $100 and $150 buys compounded tirzepatide from embody ($119), DirectMeds ($147) or altRx ($149). From $150 to $200 you are paying for all-inclusive and coaching-led programs. The brand-name Foundayo pill also falls in the $100-$200 range, from $149 a month. Above $200 you reach compounded tirzepatide at TrimRx ($259) and SHED ($299), and brand injections from $1,149.",
   "lost-insurance-coverage-zepbound-wegovy":
-    "Five routes: appeal if the drug is still on your formulary; use the manufacturer's savings card or direct price (Foundayo lists $149-$349 a month self-pay, $25 with commercial insurance); if you're on Medicare, the GLP-1 Bridge pilot charges a flat $50 a month for Wegovy, the Zepbound KwikPen and Foundayo through December 2027; buy brand-name for cash through telehealth ($1,149-$1,799 a month); or switch to a compounded version at $49-$299 a month. A licensed clinician decides whether your dose transfers.",
+    "You have five options. Appeal, if the drug is still on your formulary. Use the manufacturer's savings card or direct price (Foundayo lists $149-$349 a month self-pay, or $25 with commercial insurance). On Medicare, join the GLP-1 Bridge pilot, which charges a flat $50 a month for Wegovy, the Zepbound KwikPen and Foundayo through December 2027. Pay cash for brand-name medication through telehealth ($1,149-$1,799 a month). Or move to a compounded version at $49-$299 a month. Whether your current dose carries over is a decision for a licensed clinician.",
   "503a-vs-503b-pharmacy-28-day-rule":
-    "A 503A pharmacy compounds for a named patient on a prescription and answers to its state board; a 503B outsourcing facility is FDA-registered and makes larger batches under manufacturing standards. Since semaglutide and tirzepatide left the FDA shortage list, a legitimate compounded GLP-1 comes from a licensed pharmacy filling a patient-specific prescription. The 28-day rule is the standard use period for an opened multi-dose vial - which is why plans ship monthly and a 90-day vial is a warning sign. Ask the pharmacy's name, its state licence, and the beyond-use date.",
+    "A 503A pharmacy compounds medication for one named patient with a prescription and is overseen by its state board. A 503B outsourcing facility is registered with the FDA and produces larger batches under manufacturing standards. Now that semaglutide and tirzepatide are off the FDA shortage list, a legitimate compounded GLP-1 comes from a licensed pharmacy filling a patient-specific prescription. The 28-day rule is the standard window for using an opened multi-dose vial, which is why plans ship monthly and a 90-day vial is a red flag. Ask for the pharmacy's name, its state license and the beyond-use date.",
   "glp1-after-65-medicare":
-    "Since July 1, 2026, the Medicare GLP-1 Bridge pilot lets eligible beneficiaries get the Wegovy pill and injection, the Zepbound KwikPen and Foundayo for a flat $50 copay a month, unchanged as the dose rises, through December 31, 2027. Eligibility runs through clinical criteria and an approval step via your Part D plan. Medicare never covers compounded GLP-1s; if you don't qualify, the cash routes are brand-name ($149-$349 a month for Foundayo, $1,149+ for injections) or compounded ($49-$299).",
+    "Since July 1, 2026, eligible Medicare beneficiaries can use the GLP-1 Bridge pilot to get the Wegovy pill and injection, the Zepbound KwikPen and Foundayo for a flat $50 monthly copay that stays the same as the dose rises, through December 31, 2027. Eligibility depends on clinical criteria plus an approval step through your Part D plan. Medicare never covers compounded GLP-1s. If you do not qualify, you can pay cash for brand-name drugs ($149-$349 a month for Foundayo, $1,149+ for injections) or for compounded versions ($49-$299).",
   "is-wellmedr-legit":
-    "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, a weight-loss warranty, and a verified 4.6 on Trustpilot across 2,188 reviews (tied for the highest among providers we track). The honest caveats: the headline $49/$89 rates lock on a 12-month plan, the complaints that exist are about shipping delays and support response time, and results vary by person regardless of service quality.",
+    "Yes. welludr passes every check we can verify: a licensed provider reviews you before prescribing, medication comes from a regulated US pharmacy, it offers a weight loss warranty, and it holds a verified 4.6 on Trustpilot from 2,188 reviews (tied for the highest score among the providers we track). The caveats: the advertised $49 and $89 prices require a 12-month plan, the complaints that do exist focus on shipping delays and slow support replies, and individual results vary no matter how good the service is.",
   // Oct 9, 2026 oral GLP-1 pair. Ro figures are its verified published
   // prices; manufacturer figures are as reported by sources dated inside the
   // articles, so these two carry their own stamp (QUICK_ANSWER_STAMPS).
   "wegovy-pill-price-online":
-    "The Wegovy pill costs $149 for the first month, then $299 a month, plus a $39-then-$74-149 membership at Ro - the one telehealth price we have verified. Novo Nordisk's direct-pay tiers are reported at $149 for the starting dose up to $299 at the maintenance dose. With commercial insurance that covers Wegovy, the manufacturer's savings offer is reported to bring it to as low as $25 a month; on Medicare, the GLP-1 Bridge pilot charges a flat $50 through December 2027. Every route requires a prescription.",
+    "At ro, the Wegovy pill costs $149 for the first month and $299 a month after that, plus a membership of $39 for month one and $74-149 after; this is the only telehealth price we have verified. Novo Nordisk's direct-pay pricing is reported at $149 for the starting dose, rising to $299 for the maintenance dose. If commercial insurance covers Wegovy, the manufacturer's savings offer reportedly lowers the cost to as little as $25 a month, and on Medicare the GLP-1 Bridge pilot charges a flat $50 through December 2027. Every route needs a prescription.",
   "foundayo-vs-wegovy-pill":
-    "Both are FDA-approved daily GLP-1 pills. The Wegovy pill (oral semaglutide, approved December 2025) produced 13.6% mean weight loss at 64 weeks in OASIS 4; Foundayo (orforglipron, approved April 1, 2026) produced 11.2% at the top dose over 72 weeks in ATTAIN-1 - separate trials, not head to head. The Wegovy pill must be taken on an empty stomach with a 30-minute wait; Foundayo has no food or water rules. Self-pay, Foundayo lists $149-$349 a month by dose and the Wegovy pill $149 then $299 plus membership at Ro; both are $25 with a commercial savings card and $50 on Medicare's pilot.",
+    "Both are FDA-approved GLP-1 pills taken once a day. In OASIS 4, the Wegovy pill (oral semaglutide, approved December 2025) produced 13.6% average weight loss at 64 weeks. In ATTAIN-1, Foundayo (orforglipron, approved April 1, 2026) produced 11.2% at its top dose over 72 weeks. These were separate trials, not a head-to-head comparison. The Wegovy pill must be taken on an empty stomach followed by a 30-minute wait, while Foundayo has no food or water rules. Paying cash, Foundayo lists $149-$349 a month by dose, and the Wegovy pill costs $149 then $299 plus membership at ro. Both drop to $25 with a commercial savings card and $50 under Medicare's pilot.",
   "zepbound-price-online":
-    "Brand-name Zepbound online runs $1,249/month cash at altRx and $1,599 at welludr, or Zepbound KwikPens from $299 for the first month (then $399-449) plus a $39-then-$74-149 monthly membership at Ro, where insurance can apply. Compounded tirzepatide, the same active ingredient, runs $89-$299/month through licensed telehealth providers. Every route requires a prescription.",
+    "Paying cash, brand-name Zepbound costs $1,249/month at altRx and $1,599 at welludr. At ro, Zepbound KwikPens start at $299 for month one (then $399-449) plus a monthly membership of $39 at first and $74-149 after, and insurance can apply there. Compounded tirzepatide, which has the same active ingredient, costs $89-$299/month from licensed telehealth providers. Every one of these routes requires a prescription.",
   "best-tirzepatide-online":
-    "Verified compounded tirzepatide prices run $89-$299/month: welludr $89 (12-month plan) is the floor, embody $119 the cheapest with no commitment, and Medvi $166 all-inclusive with one of the two largest review bases. Brand-name Zepbound: $1,249/month cash at altRx, or ro's KwikPen from $299 first month plus membership - where insurance applies, ro can be far cheaper. Every legitimate source requires a prescription.",
+    "Checked compounded tirzepatide prices range from $89 to $299 a month. welludr is the lowest at $89 on a 12-month plan, embody at $119 is the cheapest with no commitment, and Medvi at $166 is all-inclusive and has one of the two largest review bases. For brand-name Zepbound, altRx charges $1,249/month cash, and ro's KwikPen starts at $299 for month one plus membership; where insurance applies, ro can cost far less. Every legitimate source requires a prescription.",
   "ozempic-face":
-    "Ozempic face is facial volume loss caused by losing weight quickly - not a chemical side effect of the drug. It can happen with any GLP-1 or any rapid weight loss. The levers that soften it: a moderate pace of loss, adequate protein, resistance training and hydration - and facial volume often partially recovers as weight stabilizes.",
+    "Ozempic face is the loss of facial volume that comes from losing weight quickly; it is not a chemical side effect of the drug. It can happen with any GLP-1 or any rapid weight loss. What helps: a moderate pace of weight loss, enough protein, resistance training and good hydration. Facial volume often returns in part once your weight stabilizes.",
   "zepbound-vs-wegovy-vs-ozempic":
-    "Zepbound (tirzepatide) produced up to 22.5% average weight loss in trials versus ~15% for Wegovy (semaglutide); Ozempic is the same semaglutide under its diabetes label. Verified prices: brand Zepbound $1,249/month and Wegovy $1,579 at altRx, versus compounded semaglutide from $49 and tirzepatide from $89 through licensed telehealth.",
+    "In trials, Zepbound (tirzepatide) produced up to 22.5% average weight loss, compared with about 15% for Wegovy (semaglutide). Ozempic is the same semaglutide sold under its diabetes approval. Checked prices: brand Zepbound costs $1,249/month and Wegovy $1,579 at altRx, while compounded semaglutide starts at $49 and compounded tirzepatide at $89 through licensed telehealth.",
   "glp1-with-insurance":
-    "Many plans cover GLP-1s for diabetes, far fewer for weight loss alone - your formulary is the only real answer, and prior authorization (BMI thresholds, documented conditions) is the usual gate. If coverage falls through, verified self-pay compounded semaglutide runs $49-$99/month through licensed telehealth providers.",
+    "Many plans cover GLP-1s for diabetes, but far fewer cover them for weight loss alone. Your plan's formulary is the only reliable answer, and prior authorization (BMI cutoffs, documented conditions) is the usual hurdle. If coverage falls through, checked self-pay compounded semaglutide costs $49-$199/month through licensed telehealth providers.",
   "ozempic-vs-wegovy-differences":
-    "Ozempic and Wegovy contain the same active ingredient (semaglutide) but are not the same drug: Ozempic is FDA-approved for type 2 diabetes, Wegovy for chronic weight management at a higher maximum dose (2.4 mg vs 2 mg). For self-pay weight loss, compounded semaglutide runs a verified $49-$99/month versus $1,149+ for either brand.",
+    "Ozempic and Wegovy share one active ingredient, semaglutide, but they are different products. Ozempic is FDA-approved for type 2 diabetes, while Wegovy is approved for chronic weight management and goes up to a higher maximum dose (2.4 mg vs 2 mg). For self-pay weight loss, checked compounded semaglutide costs $49-$199/month, compared with $1,149+ for either brand.",
   "zepbound-vs-wegovy":
-    "Both are FDA-approved for weight loss, but they are different drugs: Zepbound (tirzepatide) targets two hormone receptors and produced up to 22.5% average weight loss in trials versus ~15% for Wegovy (semaglutide). At verified prices, brand Zepbound runs $1,249/month at altRx (pens from $299 first month at ro); compounded routes start at $49-$99/month.",
+    "Zepbound and Wegovy are both FDA-approved for weight loss, but they are different drugs. Zepbound (tirzepatide) acts on two hormone receptors and produced up to 22.5% average weight loss in trials, compared with about 15% for Wegovy (semaglutide). At checked prices, brand Zepbound costs $1,249/month at altRx (pens from $299 for month one at ro), and compounded options start at $49/month for semaglutide and $89/month for tirzepatide.",
   "mounjaro-vs-ozempic":
-    "They are not the same drug: Mounjaro (tirzepatide) targets two hormone receptors and produced up to 22.5% average weight loss in trials, versus ~15% for Ozempic (semaglutide). Ozempic's compounded version is cheaper - verified from $49/month versus $89 for tirzepatide - and both require a prescription from a licensed provider.",
+    "Mounjaro and Ozempic are different drugs. Mounjaro (tirzepatide) acts on two hormone receptors and produced up to 22.5% average weight loss in trials, compared with about 15% for Ozempic (semaglutide). The compounded version of Ozempic's ingredient costs less, from a checked $49/month versus $89 for compounded tirzepatide, and both need a prescription from a licensed provider.",
   "best-mounjaro-alternatives":
-    "The closest Mounjaro alternatives are compounded tirzepatide plans - the same active ingredient - from licensed telehealth providers: $89/month at welludr, $119 at embody, $147 at DirectMeds, versus roughly $1,000+ for brand-name. Prescription required, shipped to your door.",
+    "The closest alternatives to Mounjaro are compounded tirzepatide plans, which use the same active ingredient, from licensed telehealth providers: $89/month at welludr, $119 at embody and $147 at DirectMeds, compared with roughly $1,000+ for the brand. A prescription is required, and medication ships to your door.",
   "best-wegovy-alternatives":
-    "The closest Wegovy alternatives are compounded semaglutide plans - the same active ingredient - starting at $49/month (welludr), $69 (embody) and $89 (altRx) through licensed online providers, versus $1,150+ for brand-name without insurance.",
+    "The closest alternatives to Wegovy are compounded semaglutide plans with the same active ingredient, starting at $49/month (welludr), $69 (embody) and $89 (altRx) through licensed online providers, compared with $1,150+ for the brand without insurance.",
   "best-ro-alternatives":
-    "The strongest ro alternatives are flat-priced compounded GLP-1 providers: welludr from $49/month, embody at $69 with 1-2 day shipping, and altRx at $89 with brand-name options too. All require an online licensed-provider review.",
+    "The strongest alternatives to ro are compounded GLP-1 providers with flat pricing: welludr from $49/month, embody at $69 with 1-2 day shipping, and altRx at $89, which also offers brand-name options. Each one requires an online review by a licensed provider.",
   "can-you-get-ozempic-without-doctor":
-    "No - Ozempic and every GLP-1 medication legally require a prescription in the US. What you don't need is an in-person visit: licensed telehealth providers evaluate you online and, if appropriate, prescribe treatment starting around $49-$89/month.",
+    "No. In the US, Ozempic and every other GLP-1 medication require a prescription by law. What you can skip is the in-person appointment: licensed telehealth providers assess you online and, when appropriate, prescribe treatment that starts at about $49-$89/month.",
   "weight-loss-medication-that-works-fast":
-    "GLP-1 medications (semaglutide, tirzepatide) are the fastest evidence-backed option: most people notice appetite changes within the first weeks, with meaningful weight loss building over 3-6 months. No pill or program works overnight - anyone promising that is selling something.",
+    "GLP-1 medications such as semaglutide and tirzepatide are the fastest evidence-based option. Most people notice their appetite change in the first few weeks, and meaningful weight loss builds over 3-6 months. No pill or program works overnight, so be wary of anyone who promises that.",
   "how-to-get-ozempic-online":
-    "Three steps: complete an online health intake, have a licensed provider review it (required by law), and receive medication by mail if prescribed. Brand-name Ozempic runs $1,150+/month; compounded semaglutide with the same active ingredient starts at $49-$89.",
+    "It takes three steps: complete an online health questionnaire, have a licensed provider review it (a legal requirement), and receive your medication by mail if it is prescribed. Brand-name Ozempic costs $1,149+/month, while compounded semaglutide with the same active ingredient starts at $49.",
   "semaglutide-cost-per-month":
-    "Compounded semaglutide costs $49-$199 per month all-in through licensed telehealth providers (welludr $49, embody $69, altRx $89). Brand-name Ozempic or Wegovy runs roughly $1,150-$1,600 per month without insurance coverage.",
+    "Through licensed telehealth providers, compounded semaglutide costs $49-$199 per month all-in (welludr $49, embody $69, altRx $89). Without insurance, brand-name Ozempic or Wegovy costs roughly $1,150-$1,600 per month.",
   "weight-loss-medication-without-insurance":
-    "You don't need insurance: self-pay compounded GLP-1 plans include the provider visit and medication from $49/month (welludr), $69 (embody) or $89 (altRx). Brand-name without coverage runs $1,150+ - which is exactly why the compounded route exists.",
+    "Insurance is not required. Self-pay compounded GLP-1 plans bundle the provider visit and medication from $49/month (welludr), $69 (embody) or $89 (altRx). Without coverage, brand-name drugs cost $1,150+, which is the main reason the compounded route exists.",
   "compounded-semaglutide-vs-brand-name":
-    "Compounded semaglutide contains the same active ingredient as Ozempic and Wegovy, prepared by state-licensed 503A compounding pharmacies, at $49-$199/month versus $1,150+ for brand-name. The trade-off: compounded versions are not FDA-approved products, so provider and pharmacy quality matter most.",
+    "Compounded semaglutide has the same active ingredient as Ozempic and Wegovy and is made by state-licensed 503A compounding pharmacies, at $49-$199/month compared with $1,150+ for the brands. The trade-off: compounded versions are not FDA-approved products, so the quality of the provider and pharmacy matters most.",
 };
 
 // Per-article override of the dated price stamp under the quick answer, for
 // articles whose dollar figures are not (only) from the verified price index.
 const QUICK_ANSWER_STAMPS: Record<string, string> = {
   "wegovy-pill-price-online":
-    "Ro's prices are its own published figures, verified August 2026. Manufacturer prices are as reported by the dated sources linked in the article and are not verified by us.",
+    "ro's prices come from its own published pricing, checked August 2026. Manufacturer prices come from the dated sources linked in this article and have not been verified by us.",
   "foundayo-vs-wegovy-pill":
-    "Ro's prices are its own published figures, verified August 2026. Manufacturer prices are as reported by the dated sources linked in the article and are not verified by us.",
+    "ro's prices come from its own published pricing, checked August 2026. Manufacturer prices come from the dated sources linked in this article and have not been verified by us.",
 };
 
 export async function articleMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
@@ -187,7 +187,7 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
   const url = canonicalUrl(ctx, `/articles/${slug}`);
 
   // CTR override (code-controlled) wins over stored meta for target articles.
-  const override = ctx.vertical === "weight-loss" ? ARTICLE_SEO_OVERRIDES[slug] : undefined;
+  const override = ARTICLE_SEO_OVERRIDES[slug];
 
   return {
     title: override?.title ?? article.title,
@@ -279,7 +279,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   const subjectTrustpilot =
     subjectProvider?.trustpilotReviews?.length ? subjectProvider : undefined;
   const subjectReddit =
-    ctx.vertical === "weight-loss" && subjectProvider && REDDIT_COMMUNITY_FEEDBACK[subjectProvider.id]
+    subjectProvider && REDDIT_COMMUNITY_FEEDBACK[subjectProvider.id]
       ? subjectProvider
       : undefined;
 
@@ -288,8 +288,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // CTAs the comparison page uses, high on the page. Gated to specific slugs so
   // it never leaks onto informational articles.
   const TOP_PROVIDERS_CRO_SLUGS = new Set(["best-tirzepatide-online"]);
-  const isWeightLoss = ctx.vertical === "weight-loss";
-  const showTopProvidersCro = isWeightLoss && TOP_PROVIDERS_CRO_SLUGS.has(slug);
+  const showTopProvidersCro = TOP_PROVIDERS_CRO_SLUGS.has(slug);
 
   // The tirzepatide buyer guide is tuned as a topic page (Oct 2026 CRO pass):
   // the top-3 block shows only providers with a verified tirzepatide price and
@@ -298,7 +297,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // carousel shows every stored review that mentions the molecule; and the
   // generic mid-page blocks (duplicate provider list, stock-photo callout) are
   // dropped so the page stays on topic.
-  const isTirzGuide = isWeightLoss && slug === "best-tirzepatide-online";
+  const isTirzGuide = slug === "best-tirzepatide-online";
   // Mid-article product carousel: topic-matched and capped (Oct 2026). The full
   // 29-card catalog on every article put ~550 identical words on 80 pages; an
   // article about tirzepatide now shows tirzepatide plans, a semaglutide or
@@ -317,15 +316,15 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
         ? "semaglutide"
         : undefined;
   const carouselTitle = isTirzGuide
-    ? "Shop tirzepatide plans by provider"
+    ? "Tirzepatide plans and prices by provider"
     : carouselMedication
-      ? `Shop ${carouselMedication} plans by provider`
-      : "Shop GLP-1 plans by product";
+      ? `${carouselMedication.charAt(0).toUpperCase()}${carouselMedication.slice(1)} plans and prices by provider`
+      : "Lowest-priced GLP-1 plans";
   const carouselSubtitle = isTirzGuide
-    ? "Every provider's published tirzepatide plan - cheapest first, conditions under each price."
+    ? "Each provider's published tirzepatide plan, sorted from lowest price, with the terms listed under every price."
     : carouselMedication
-      ? `Published ${carouselMedication} plans - cheapest first, conditions under each price.`
-      : "The lowest published plans - cheapest first, conditions under each price.";
+      ? `Each provider's published ${carouselMedication} plan, sorted from lowest price, with the terms listed under every price.`
+      : "The cheapest published plans, sorted from lowest price, with the terms listed under every price.";
   const tirzNote = (id: string): string | undefined => {
     const cell = PRICE_INDEX.find((r) => r.providerId === id)?.tirzepatide;
     if (!cell) return undefined;
@@ -361,13 +360,13 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // "is <brand> legit" pages with operator-verified trust blocks (see
   // LEGIT_PAGES): checklist under the quick answer, dated pricing capture
   // after the cost section, verdict CTA after the last section.
-  const legitData = isWeightLoss ? LEGIT_PAGES[slug] : undefined;
+  const legitData = LEGIT_PAGES[slug];
   const legitProvider = legitData ? config.providers.find((p) => p.id === legitData.providerId) : undefined;
   const legitCaptureAfter = legitData ? article.sections.findIndex((s) => /^how much does/i.test(s.heading)) : -1;
   // Every provider-"alternatives" guide (altrx-alternatives, best-ozempic-
   // alternatives, etc.) gets a CRO block featuring our three GLP-1 partners
   // (embody, altRx, TrimRx) with the same comparison-page cards.
-  const showPartnerCro = isWeightLoss && slug.endsWith("-alternatives");
+  const showPartnerCro = slug.endsWith("-alternatives");
   // "Our top 2 picks" (embody, altRx) after the intro on every other weight-loss
   // article. Skipped where a provider block already renders (the two above) and
   // on "is X legit" trust-check pages, for the same reason as the inline CTA.
@@ -375,7 +374,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // ranking two other providers made no sense on a page about what one
   // provider costs.
   const showTopTwo =
-    isWeightLoss && !showTopProvidersCro && !showPartnerCro && !/^is-.+-legit$/.test(slug) && !/-cost$/.test(slug);
+    !showTopProvidersCro && !showPartnerCro && !/^is-.+-legit$/.test(slug) && !/-cost$/.test(slug);
 
   // Byline author: match the article's author to a team member, else the lead
   const author = experts.find((e) => e.name === article.author) ?? experts[0];
@@ -429,7 +428,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
       url: ctx.origin,
       logo: {
         "@type": "ImageObject",
-        url: `${ctx.origin}/logo-mark.png`,
+        url: `${ctx.origin}/logo.png`,
       },
     },
     // Medical content (Science / Guide / Wellness) is typed as a MedicalWebPage
@@ -573,7 +572,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             <p className="mt-2 max-w-[640px] text-[14px] leading-[1.45] text-gray-600 sm:text-[16px] sm:leading-[1.55]">
               {article.description}
             </p>
-            <p className="mt-2 text-[12px] text-gray-400">Updated {formattedDate}</p>
+            <p className="mt-2 text-[12px] text-gray-400">Last updated {formattedDate}</p>
             <MedicalReviewBar path={`${ctx.prefix}/articles/${slug}`} className="mt-3 max-w-[760px]" />
           </div>
         </div>
@@ -595,10 +594,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           )}
           {/* Direct answer up top (featured-snippet target) - code-injected so
               it also covers articles whose body lives in the CMS blob. */}
-          {ctx.vertical === "weight-loss" && ARTICLE_QUICK_ANSWERS[slug] && (
+          {ARTICLE_QUICK_ANSWERS[slug] && (
             <div className="article-body mb-8 text-[16px] leading-[1.75] text-gray-800">
               <div className="qa">
-                <strong>The quick answer</strong>
+                <strong>Short answer</strong>
                 {ARTICLE_QUICK_ANSWERS[slug]}
                 {/* Dated price stamp: answer engines prefer a figure with an
                     explicit "as of" date; the date is the price index's own
@@ -607,7 +606,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   <span className="mt-2 block text-[13px] text-gray-500">
                     {QUICK_ANSWER_STAMPS[slug] ?? (
                       <>
-                        Prices verified on each provider&rsquo;s site as of{" "}
+                        Prices checked on each provider&rsquo;s website on{" "}
                         {new Date(PRICE_INDEX_VERIFIED).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}.
                       </>
                     )}
@@ -623,7 +622,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               (featured snippets / AI overviews lift lists like this whole). */}
           {article.keyTakeaways && article.keyTakeaways.length > 0 && (
             <div className="mb-8 rounded-xl border border-[#0C4B75]/15 bg-[#F4F8FB] p-5 sm:p-6">
-              <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">Key takeaways</p>
+              <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">Key points</p>
               <ul className="space-y-2">
                 {article.keyTakeaways.map((t) => (
                   <li key={t} className="flex items-start gap-2.5 text-[15px] leading-relaxed text-gray-800">
@@ -640,7 +639,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           {article.sections.length >= 4 && (
             <nav aria-label="Table of contents" className="mb-8 rounded-xl border border-gray-200 bg-white p-5">
               <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-gray-400">
-                In this article
+                On this page
               </p>
               <ol className="space-y-1.5">
                 {article.sections.map((s, i) => (
@@ -679,8 +678,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                       <div className="my-10">
                         <MixedTrustpilotCarousel
                           items={tirzReviews}
-                          title="What tirzepatide customers say on Trustpilot"
-                          subtitle="Every review we have captured that mentions tirzepatide, Zepbound or Mounjaro, across providers - newest first, reviewer names shortened."
+                          title="Trustpilot reviews that mention tirzepatide"
+                          subtitle="All saved reviews from any provider that mention tirzepatide, Zepbound or Mounjaro, newest first, with reviewer names shortened."
                         />
                       </div>
                     )}
@@ -699,8 +698,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                         providerIds={TIRZ_TOP_IDS}
                         priceNotes={tirzPriceNotes}
                         introMode="short"
-                        title="Our top 3 tirzepatide providers"
-                        subtitle="Our highest-ranked providers with a verified compounded tirzepatide price - the same cards as our full comparison, with the tirzepatide rate shown under each starting price."
+                        title="Best 3 tirzepatide providers right now"
+                        subtitle="The top-ranked providers that publish a compounded tirzepatide price we have checked. These are the cards from our full ranking, with each tirzepatide price shown below the starting price."
                       />
                     )}
                   </>
@@ -718,12 +717,12 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 {isTirzGuide && i === article.sections.length - 1 && tirzEmbody && (
                   <div className="my-8 rounded-xl border border-[#0C4B75]/15 bg-[#F4F8FB] p-5 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:p-6">
                     <div>
-                      <p className="text-[15px] font-bold text-[#191919]">Cheapest with no commitment: {tirzEmbody.name}</p>
+                      <p className="text-[15px] font-bold text-[#191919]">Lowest price without a contract: {tirzEmbody.name}</p>
                       <p className="mt-1 text-[13.5px] leading-relaxed text-gray-600">
-                        {tirzNote("embody")?.replace("Tirzepatide ", "Compounded tirzepatide ")}, month to month, ships in 1-2 days, full refund if you are not approved.
+                        {tirzNote("embody")?.replace("Tirzepatide ", "Compounded tirzepatide ")}, billed month to month, shipped in 1-2 days, with a full refund if you are not approved.
                         {tirzWellmedr && tirzNote("wellmedr") && (
                           <>
-                            {" "}Willing to commit a year?{" "}
+                            {" "}Comfortable with a 12-month plan?{" "}
                             <ProviderCta
                               href={tirzWellmedr.affiliateUrl}
                               providerName={tirzWellmedr.name}
@@ -748,7 +747,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                       sourceFlow="main_comparison"
                       className="mt-4 inline-flex h-[46px] w-full shrink-0 items-center justify-center gap-1.5 rounded-xl bg-[#0C4B75] px-6 text-[14.5px] font-bold text-white transition-colors hover:bg-[#093d61] sm:mt-0 sm:w-auto"
                     >
-                      Check availability at {tirzEmbody.name}
+                      See if you qualify at {tirzEmbody.name}
                       <ArrowUpRight className="h-4 w-4" strokeWidth={2.5} />
                     </ProviderCta>
                   </div>
@@ -765,8 +764,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     limit={3}
                     providerIds={["embody", "altrx", "trimrx"]}
                     introMode="short"
-                    title="Our top-rated GLP-1 providers"
-                    subtitle="Our recommended telehealth providers - the same cards from our full comparison."
+                    title="Recommended GLP-1 providers"
+                    subtitle="Three telehealth providers our editors recommend, shown with the same cards as our full ranking."
                   />
                 )}
 
@@ -802,8 +801,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
 
                 {/* Full-catalog product carousel mid-article (weight-loss only) -
                     after roughly the halfway section, never at the bottom. */}
-                {ctx.vertical === "weight-loss" &&
-                  i === Math.max(0, Math.ceil(article.sections.length / 2) - 1) && (
+                {i === Math.max(0, Math.ceil(article.sections.length / 2) - 1) && (
                     <div className="my-10">
                       <ProductCarousel
                         providers={config.providers}
@@ -814,12 +812,12 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                         limit={restrictCarouselToSubject && subjectProvider ? undefined : isTirzGuide ? undefined : 8}
                         title={
                           restrictCarouselToSubject && subjectProvider
-                            ? `Shop ${subjectProvider.name}'s GLP-1 plans`
+                            ? `${subjectProvider.name} GLP-1 plans and prices`
                             : carouselTitle
                         }
                         subtitle={
                           restrictCarouselToSubject && subjectProvider
-                            ? `${subjectProvider.name}'s published plans - conditions shown under each price.`
+                            ? `Every plan ${subjectProvider.name} publishes, with its terms listed under each price.`
                             : carouselSubtitle
                         }
                         withSchema
@@ -831,28 +829,28 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 {/* Editorial callout after 4th section - GLP-1 copy, so
                     weight-loss articles only (it was leaking onto every
                     vertical's articles before this gate). */}
-                {ctx.vertical === "weight-loss" && !isTirzGuide && i === 3 && article.sections.length > 4 && (
+                {!isTirzGuide && i === 3 && article.sections.length > 4 && (
                   <div className="my-10 overflow-hidden rounded-xl bg-transparent">
                     <div className="flex flex-col sm:flex-row">
                       <div className="flex-1 py-6 pr-6 sm:py-8 sm:pr-8">
                         <h3 className="mb-3 text-[18px] font-bold leading-tight text-[#0C4B75] sm:text-[20px]">
-                          What To Know Before Starting GLP-1 Treatment
+                          Is GLP-1 Treatment Right for You?
                         </h3>
                         <p className="mb-3 text-[16px] leading-[1.75] text-gray-800">
-                          Before starting GLP-1 treatment, it&apos;s important to understand a few key things. These medications require a prescription from a licensed clinician and aren&apos;t suitable for everyone. Some people may experience side effects, especially during the first few weeks as the body adjusts.
+                          GLP-1 medication is prescription-only: a licensed clinician has to decide it is appropriate, and it is not a fit for everyone. Side effects are possible, and they tend to show up in the first few weeks while your body adapts.
                         </p>
                         <p className="mb-3 text-[16px] leading-[1.75] text-gray-800">
-                          GLP-1s also tend to work best when combined with basic lifestyle habits like balanced nutrition and regular physical activity.
+                          Results are usually best when the medication is paired with simple daily habits, such as balanced meals and regular movement.
                         </p>
                         <p className="text-[16px] leading-[1.75] text-gray-800">
-                          That&apos;s why choosing a provider that offers proper medical screening and ongoing follow-up support is essential for both safety and long-term success.
+                          For both safety and lasting progress, pick a provider that screens you properly before prescribing and keeps following up once treatment starts.
                         </p>
                       </div>
                       <div className="flex items-center justify-center sm:w-[260px] sm:shrink-0">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src="/editorial-injection.png"
-                          alt="Woman preparing GLP-1 weight loss injection"
+                          alt="Woman getting a GLP-1 weight loss injection pen ready"
                           className="h-[200px] w-full object-cover sm:h-full sm:rounded-r-xl"
                           loading="lazy"
                         />
@@ -872,19 +870,19 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           {/* CTA box */}
           <div className="mt-12 rounded-xl border border-gray-200 bg-white p-6 text-center sm:p-8">
             <p className="text-[18px] font-bold text-[#191919]">
-              {isTirzGuide ? "Compare tirzepatide providers side by side" : "Ready to compare weight loss providers?"}
+              {isTirzGuide ? "See every tirzepatide provider in one ranking" : "Which weight loss provider fits you best?"}
             </p>
             <p className="mt-1 text-[14px] text-gray-500">
               {isTirzGuide
-                ? "Every provider with a verified compounded tirzepatide price, ranked - pricing, plans, shipping and reviews."
-                : "See how top providers stack up on pricing, medical support, and treatment options."}
+                ? "All providers with a checked compounded tirzepatide price, ranked on cost, plans, shipping and reviews."
+                : "Our ranking compares the leading providers on price, clinical support and medication choices."}
             </p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Link
                 href={hubLink(ctx, isTirzGuide ? "/tirzepatide" : "/")}
                 className="inline-flex h-[44px] items-center justify-center rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
               >
-                {isTirzGuide ? "Compare tirzepatide providers" : "Compare Providers"}
+                {isTirzGuide ? "View tirzepatide ranking" : "View the Ranking"}
               </Link>
             </div>
           </div>
@@ -893,7 +891,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           {relatedArticles.length > 0 && (
             <div className="mt-12">
               <h2 className="mb-5 text-[18px] font-bold text-[#191919]">
-                Related Articles
+                You Might Also Like
               </h2>
               <div className="grid gap-4 sm:grid-cols-3">
                 {relatedArticles.map((ra) => (
@@ -960,18 +958,17 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           {/* Contextual comparison hub (weight-loss): routes informational
               readers into the highest-intent comparison pages. Code-injected,
               so it also renders on articles whose bodies live in the CMS blob. */}
-          {ctx.vertical === "weight-loss" && (
-            <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7">
-              <h2 className="mb-1 text-[17px] font-bold text-[#191919]">Compare providers head-to-head</h2>
+          <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7">
+              <h2 className="mb-1 text-[17px] font-bold text-[#191919]">Popular provider matchups</h2>
               <p className="mb-4 text-[13.5px] text-gray-500">
-                Real prices, real trade-offs - the comparisons readers use to decide.
+                Side-by-side comparisons with checked prices, the ones readers rely on most when choosing.
               </p>
               <div className="grid gap-2.5 sm:grid-cols-2">
                 {[
-                  { href: "/embody-vs-wellmedr", label: "embody vs welludr - $69 vs $49" },
-                  { href: "/altrx-vs-embody", label: "altRx vs embody - $89 vs $69" },
-                  { href: "/healthrx-vs-medvi", label: "HealthRx vs Medvi - prepaid vs monthly" },
-                  { href: "/embody-vs-altrx-vs-wellmedr", label: "The budget trio: embody vs altRx vs welludr" },
+                  { href: "/embody-vs-wellmedr", label: "embody vs welludr: $69 or $49" },
+                  { href: "/altrx-vs-embody", label: "altRx vs embody: $89 or $69" },
+                  { href: "/healthrx-vs-medvi", label: "HealthRx vs Medvi: prepaid or monthly" },
+                  { href: "/embody-vs-altrx-vs-wellmedr", label: "Lowest-cost trio: embody vs altRx vs welludr" },
                 ].map((c) => (
                   <Link
                     key={c.href}
@@ -984,7 +981,6 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 ))}
               </div>
             </div>
-          )}
 
           <MedicalSources vertical={ctx.vertical} />
 

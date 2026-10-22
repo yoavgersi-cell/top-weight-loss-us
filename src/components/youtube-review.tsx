@@ -21,9 +21,8 @@ function YoutubeMark({ className }: { className?: string }) {
 // YouTube) - never quote, summarize or characterize the creator's claims.
 export interface YoutubeReviewEntry {
   videoId: string;
-  // The vertical the video was captured for - the section renders only when
-  // the page's vertical matches, so a provider-id collision across verticals
-  // (e.g. maximus in hair-loss and trt) can't surface the wrong video.
+  // The vertical the video was captured for ("weight-loss"); the section
+  // renders only when the page's vertical matches.
   vertical: string;
 }
 
@@ -82,7 +81,7 @@ function LiteYoutubePlayer({ videoId, title }: { videoId: string; title: string 
         <Play className="h-6 w-6 translate-x-[1px] fill-white text-white" strokeWidth={0} />
       </span>
       <span className="absolute bottom-3 left-4 right-4 text-[13px] font-semibold text-white/95">
-        Tap to play the video on YouTube
+        Play this YouTube video
       </span>
     </button>
   );
@@ -102,27 +101,27 @@ export function YoutubeReviewSection({
   const entry = YOUTUBE_REVIEWS[providerId];
   if (!entry || entry.vertical !== vertical) return null;
 
-  const title = `${providerName} review on YouTube`;
+  const title = `${providerName} video review on YouTube`;
 
   return (
     <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7">
       <div className="mb-2 flex items-center gap-2.5">
         <YoutubeMark className="h-5 w-7 shrink-0" />
         <h2 className="text-[20px] font-bold text-[#191919]">
-          Watch: an independent {providerName} review
+          What does an independent {providerName} video review cover?
         </h2>
       </div>
       <p className="mb-5 text-[14.5px] leading-relaxed text-gray-700">
-        Reading reviews is one thing - hearing someone talk through their own experience is
-        another. This video comes from an independent creator on YouTube; we embed it unedited
-        so you can hear an outside voice before you decide.
+        This is a video about {providerName} from an independent YouTube creator, embedded here
+        exactly as published. Written reviews only go so far, so it gives you a second, outside
+        perspective to weigh before you sign up.
       </p>
 
       <LiteYoutubePlayer videoId={entry.videoId} title={title} />
 
       <p className="mt-4 text-[11.5px] leading-relaxed text-gray-400">
-        The creator&apos;s views are their own. We are not affiliated with the channel and no
-        compensation was involved in featuring this video. YouTube is a trademark of Google LLC.
+        Opinions in the video belong to its creator. Top Weight Loss has no affiliation with the
+        channel, and nobody was paid to have it featured here. YouTube is a trademark of Google LLC.
       </p>
     </div>
   );

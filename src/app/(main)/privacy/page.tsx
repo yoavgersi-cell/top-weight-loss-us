@@ -7,7 +7,7 @@ const UPDATED = "2026-10-04";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "What Top Weight Loss collects when you visit, what it does not collect, which analytics run, what happens when you click a provider link, and your choices.",
+    "Top Weight Loss has no accounts or sign-up forms. See what analytics collect, what we never collect, what happens when you click a provider link, and your choices.",
   alternates: { canonical: CANONICAL },
 };
 
@@ -20,68 +20,66 @@ export default function PrivacyPage() {
       <p className="mb-8 text-[13px] text-gray-400">Last updated {UPDATED}</p>
       <div className="space-y-4 text-gray-600 leading-relaxed">
         <p>
-          Top Weight Loss is an information and comparison website. It has no accounts, no sign-up, no newsletter and
-          no forms that send us your details. This policy describes the small amount of data that is collected when
-          you visit, and how to limit it.
+          Top Weight Loss (topweightloss.us) is an information and comparison website. There are no accounts, no
+          sign-up, no newsletter and no forms that send your details to us. This policy explains the limited data
+          collected when you visit and how you can reduce it.
         </p>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">What we do not collect</h2>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">What does Top Weight Loss not collect?</h2>
         <p>
-          We do not ask for or store your name, email address, phone number, health information, payment details or
-          account credentials. The provider-matching quiz runs in your browser; your answers are used to show results
-          on the page and are not sent to or stored by us. We do not sell personal information.
+          We never ask for or keep your name, email address, phone number, health information, payment details or
+          login credentials. The provider-matching quiz runs inside your browser: your answers are used only to show
+          results on the page, and they are not sent to us or stored by us. We do not sell personal information.
         </p>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">What is collected automatically</h2>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">What is collected automatically?</h2>
         <p>
-          <strong className="text-[#191919]">Google Analytics 4.</strong> We use Google Analytics to understand which
-          pages are read and how visitors move through the site. It sets cookies and collects a pseudonymous
-          identifier, pages viewed, approximate location derived from IP address, device and browser information,
-          and events such as clicks on provider links. We do not pass names, emails or health details to it. Google&rsquo;s
-          own notice is at{" "}
+          <strong className="text-[#191919]">Google Analytics 4.</strong> Google Analytics shows us which pages
+          people read and how they move around the site. It sets cookies and collects a pseudonymous identifier, the
+          pages viewed, an approximate location based on IP address, device and browser details, and events such as
+          clicks on provider links. We never send it names, email addresses or health details. Google explains its
+          practices at{" "}
           <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className={ext}>
             policies.google.com/technologies/partner-sites
           </a>.
         </p>
         <p>
-          <strong className="text-[#191919]">Vercel Analytics.</strong> Our hosting provider records aggregate page
-          views and performance timing without cookies and without a persistent identifier.
+          <strong className="text-[#191919]">Vercel Analytics.</strong> Our hosting provider counts page views and
+          measures performance in aggregate, with no cookies and no persistent identifier.
         </p>
         <p>
-          <strong className="text-[#191919]">Server logs.</strong> Like every website, our hosting infrastructure
-          records requests, including IP address, for security and reliability, and retains them for a limited
-          period.
+          <strong className="text-[#191919]">Server logs.</strong> As on any website, our hosting infrastructure logs
+          requests, including IP addresses, for security and reliability, and keeps those logs for a limited time.
         </p>
-        <p>We do not run advertising pixels or social-media trackers.</p>
+        <p>The site runs no advertising pixels and no social-media trackers.</p>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">When you click a provider link</h2>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">What happens when you click a provider link?</h2>
         <p>
-          Links to providers are affiliate links. When you click one, you leave this site and the provider, or its
-          affiliate network, records that the visit came from us so that a commission can be attributed. From that
-          point the provider&rsquo;s own privacy policy applies to anything you enter on its site. We do not receive
-          your name or health information from providers; we receive aggregate reports of clicks and qualifying
-          actions.
+          Provider links are affiliate links. Clicking one takes you off Top Weight Loss, and the provider or its
+          affiliate network records that you arrived from us so a commission can be credited. After that, the
+          provider&rsquo;s own privacy policy covers anything you enter on its site. Providers do not send us your
+          name or health information; we receive only aggregate reports of clicks and qualifying actions.
         </p>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Your choices</h2>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">What choices do you have?</h2>
         <ul className="list-disc space-y-1.5 pl-5">
           <li>
-            Block or clear cookies in your browser, or install Google&rsquo;s{" "}
+            Block or delete cookies in your browser, or add Google&rsquo;s{" "}
             <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className={ext}>Analytics opt-out add-on</a>.
-            The site works fully without analytics cookies.
+            Every part of the site works without analytics cookies.
           </li>
-          <li>Use your browser&rsquo;s Global Privacy Control or Do Not Track setting; we do not sell or share personal information for targeted advertising in any case.</li>
-          <li>Residents of US states with privacy laws may request access to or deletion of personal information; because we hold none that identifies you, there is normally nothing to return or delete, but you can ask at <a href="mailto:contact@topweightloss.us" className={ext}>contact@topweightloss.us</a>.</li>
+          <li>Turn on Global Privacy Control or Do Not Track in your browser. Either way, we do not sell personal information or share it for targeted advertising.</li>
+          <li>If you live in a US state with a consumer privacy law, you can ask to access or delete your personal information. We hold no information that identifies you, so there is usually nothing to provide or erase, but you can still send a request to <a href="mailto:contact@topweightloss.us" className={ext}>contact@topweightloss.us</a>.</li>
         </ul>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Children</h2>
-        <p>This site is intended for adults and is not directed at children under 18. We do not knowingly collect information from children.</p>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Children&rsquo;s privacy</h2>
+        <p>Top Weight Loss is meant for adults and is not aimed at children under 18. We do not knowingly collect information from children.</p>
 
-        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Changes</h2>
-        <p>If what we collect changes, this page changes first, with a new date at the top.</p>
+        <h2 className="pt-4 text-xl font-semibold text-[#191919]">Changes to this policy</h2>
+        <p>Before any change to what we collect takes effect, this page is updated and the date at the top changes.</p>
 
         <p className="pt-4 text-[14px]">
-          See also our <Link href="/disclaimer" className={ext}>disclaimer</Link> and{" "}
+          Related: our <Link href="/disclaimer" className={ext}>disclaimer</Link> and{" "}
           <Link href="/terms" className={ext}>terms of use</Link>.
         </p>
       </div>

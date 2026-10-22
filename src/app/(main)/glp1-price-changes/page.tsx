@@ -30,16 +30,16 @@ const latest = entries[0]?.date ?? PRICE_INDEX_VERIFIED;
 const earliest = entries[entries.length - 1]?.date ?? PRICE_INDEX_VERIFIED;
 
 export const metadata: Metadata = {
-  title: `GLP-1 Price Changes (2026): ${entries.length} Logged Changes to Online Provider Prices`,
-  description: `A dated log of every verified change to online GLP-1 prices - semaglutide and tirzepatide - with before and after. ${entries.length} entries since ${monthLabel(earliest)}; index verified ${longDate(PRICE_INDEX_VERIFIED)}.`,
+  title: `GLP-1 Price Changes 2026: ${entries.length} Verified Price Updates`,
+  description: `${entries.length} verified changes to online semaglutide and tirzepatide prices since ${monthLabel(earliest)}, each dated with the old and new listing. Index checked ${longDate(PRICE_INDEX_VERIFIED)}.`,
   alternates: { canonical: CANONICAL },
-  openGraph: { title: `GLP-1 Price Changes (2026): ${entries.length} Logged Changes`, description: "Every verified change to online GLP-1 provider prices, dated, with before and after.", url: CANONICAL, type: "article" },
+  openGraph: { title: `GLP-1 Price Changes 2026: ${entries.length} Verified Updates`, description: "A dated record of each confirmed change to online GLP-1 provider pricing, showing the previous and the new listing.", url: CANONICAL, type: "article" },
 };
 
 export default async function PriceChangesPage() {
   const config = await getConfig();
   const byId = new Map(config.providers.map((p) => [p.id, p]));
-  const title = `GLP-1 Price Changes: ${entries.length} Logged Changes to Online Provider Prices`;
+  const title = `GLP-1 Price Changes: ${entries.length} Verified Updates to Online Provider Pricing`;
   const thisMonth = entries.filter((e) => e.date.slice(0, 7) === PRICE_INDEX_VERIFIED.slice(0, 7)).length;
   const providersChanged = new Set(entries.map((e) => e.providerId)).size;
 
@@ -86,9 +86,10 @@ export default async function PriceChangesPage() {
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "GLP-1 Price Changes" }]} />
           <h1 className="max-w-[820px] text-[27px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">{title}</h1>
           <p className="mt-3 max-w-[720px] text-[16px] leading-relaxed text-gray-500">
-            Online GLP-1 prices move: promotions start and end, plan terms change, a provider drops its 12-month rate. This
-            is the public record of every change we have verified against a provider&rsquo;s own site - what we listed
-            before, what we list now, and the date. An entry is added only after verification, never on a rumour.
+            Online semaglutide and tirzepatide prices do not stand still. Promotions launch and expire, plan terms get
+            rewritten, and providers lower their 12-month rates. This page records each price change we have confirmed on
+            the provider&rsquo;s own website, with the date, our previous listing and our current listing. Nothing is added
+            until it has been checked.
           </p>
           <LastUpdated date={latest} className="mt-4" />
           <MedicalReviewBar path="/glp1-price-changes" className="mt-4 max-w-[760px]" />
@@ -100,14 +101,15 @@ export default async function PriceChangesPage() {
         <div className="mb-10 flex items-start gap-4 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
           <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
           <div className="text-[15px] leading-[1.75] text-gray-600">
-            <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
+            <h2 className="mb-2 text-[18px] font-bold text-[#191919]">Are online GLP-1 prices going up or down?</h2>
             <p>
-              <strong className="text-[#191919]">{entries.length} verified changes</strong> across {providersChanged} providers since{" "}
-              {monthLabel(earliest)}, {thisMonth} of them in {monthLabel(PRICE_INDEX_VERIFIED)}. The direction has been down or
-              extended: welludr cut its 12-month rates to $49 semaglutide and $89 tirzepatide, TrimRx moved semaglutide to a flat
-              $149 at every dose, and altRx extended its $89 / $149 promotion twice. The full current ladder, with conditions, is
-              on the <Link href="/cheapest-glp1" className={ext}>cheapest GLP-1 comparison</Link>; the index itself was
-              last verified {longDate(PRICE_INDEX_VERIFIED)}.
+              Mostly down. We have logged <strong className="text-[#191919]">{entries.length} verified changes</strong> from{" "}
+              {providersChanged} providers since {monthLabel(earliest)}, including {thisMonth} in {monthLabel(PRICE_INDEX_VERIFIED)}.
+              Prices have either dropped or promotions have been extended: welludr lowered its 12-month rates to $49 for semaglutide
+              and $89 for tirzepatide, TrimRx switched semaglutide to a flat $149 at every dose, and altRx extended its $89 / $149
+              promotion twice. See today&rsquo;s full price ranking, with every condition, in the{" "}
+              <Link href="/cheapest-glp1" className={ext}>cheapest GLP-1 comparison</Link>. The index was last checked on{" "}
+              {longDate(PRICE_INDEX_VERIFIED)}.
             </p>
           </div>
         </div>
@@ -115,7 +117,7 @@ export default async function PriceChangesPage() {
         <section className="mb-12">
           <div className="mb-5 flex items-center gap-2">
             <History className="h-6 w-6 text-[#0C4B75]" strokeWidth={2} />
-            <h2 className="text-[22px] font-bold text-[#191919]">Every logged change, newest first</h2>
+            <h2 className="text-[22px] font-bold text-[#191919]">GLP-1 price change log (most recent first)</h2>
           </div>
           <ol className="relative space-y-4 border-l-2 border-gray-200 pl-6">
             {entries.map((e, i) => {
@@ -145,7 +147,7 @@ export default async function PriceChangesPage() {
                       </span>
                       {p && (
                         <ProviderCta href={p.affiliateUrl} providerName={p.name} providerSlug={p.id} pageType="listing" sourceFlow="main_comparison" className="inline-flex items-center gap-1 font-semibold text-[#0C4B75] hover:underline">
-                          Check current price <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+                          See today&rsquo;s price <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                         </ProviderCta>
                       )}
                     </p>
@@ -157,12 +159,12 @@ export default async function PriceChangesPage() {
         </section>
 
         <section className="mb-12 rounded-2xl border border-gray-200 bg-white p-6">
-          <h2 className="mb-3 text-[20px] font-bold text-[#191919]">How this log works</h2>
+          <h2 className="mb-3 text-[20px] font-bold text-[#191919]">How do we verify a GLP-1 price change?</h2>
           <ul className="list-disc space-y-2 pl-5 text-[15px] leading-[1.7] text-gray-600">
-            <li><strong className="text-[#191919]">One entry per verified change.</strong> A change is logged only after we have read the new figure on the provider&rsquo;s own site. The entry records what our listing said before and after; the price index, and every page built from it, updates in the same step.</li>
-            <li><strong className="text-[#191919]">What &ldquo;listed&rdquo; means.</strong> The headline monthly rate with its condition - a 12-month plan, a promotion with an end date, a flat month-to-month figure. A promotion being extended is logged even when the number does not move, because the condition did.</li>
-            <li><strong className="text-[#191919]">What is not here.</strong> Prices we have not verified, provider rumours, and anything from other comparison sites. If a price you see on a provider&rsquo;s site differs from ours, email{" "}<a href="mailto:contact@topweightloss.us" className={ext}>contact@topweightloss.us</a>{" "}and we will verify and log it.</li>
-            <li><strong className="text-[#191919]">Related.</strong> The dated index and clinical statistics are on the{" "}<Link href="/glp1-weight-loss-statistics" className={ext}>GLP-1 price index</Link>; brand-name routes on{" "}<Link href="/articles/zepbound-price-online" className={ext}>Zepbound price online</Link>.</li>
+            <li><strong className="text-[#191919]">Each entry is a confirmed change.</strong> We record a change only once we have seen the new number on the provider&rsquo;s website. Every entry shows our old listing and our new one, and the price index plus every page that draws on it is updated at the same moment.</li>
+            <li><strong className="text-[#191919]">What a &ldquo;listed&rdquo; price includes.</strong> The headline monthly rate plus the condition attached to it: a 12-month plan, a promotion with an expiry date, or a flat month-to-month price. When a promotion is extended we log it even if the dollar figure stays the same, because the terms changed.</li>
+            <li><strong className="text-[#191919]">What we leave out.</strong> Unverified prices, rumors about providers, and figures taken from other comparison sites. If a provider&rsquo;s website shows a price that does not match ours, write to{" "}<a href="mailto:contact@topweightloss.us" className={ext}>contact@topweightloss.us</a>{" "}and we will check it and add it to the log.</li>
+            <li><strong className="text-[#191919]">Where to go next.</strong> For the dated index alongside clinical statistics, see the{" "}<Link href="/glp1-weight-loss-statistics" className={ext}>GLP-1 price index</Link>. For brand-name options, read{" "}<Link href="/articles/zepbound-price-online" className={ext}>how to buy Zepbound online</Link>.</li>
           </ul>
         </section>
 

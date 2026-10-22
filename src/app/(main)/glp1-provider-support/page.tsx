@@ -108,8 +108,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = await getConfig();
   const rows = buildRows(config.providers);
   const total = rows.reduce((s, r) => s + r.n, 0);
-  const title = `GLP-1 Provider Support Compared: ${total} Trustpilot Reviews (2026)`;
-  const description = `Which online GLP-1 providers get praised or criticised for support, shipping and billing, from 232 Trustpilot reviews captured verbatim across 11 providers.`;
+  const title = `GLP-1 Provider Support 2026: ${total} Trustpilot Reviews`;
+  const description = `How customers rate support, shipping and billing at 11 online GLP-1 providers, based on 232 Trustpilot reviews we captured word for word and scored with one rule.`;
   return {
     title,
     description,
@@ -133,7 +133,7 @@ export default async function ProviderSupportPage() {
   const totalShipping = rows.reduce((s, r) => s + r.shipping.n, 0);
   const totalShippingNeg = rows.reduce((s, r) => s + (r.shipping.n - r.shipping.pos), 0);
 
-  const title = `GLP-1 Provider Customer Support Compared: What ${total} Trustpilot Reviews Say`;
+  const title = `GLP-1 Provider Customer Support Ranked by ${total} Trustpilot Reviews`;
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -170,10 +170,10 @@ export default async function ProviderSupportPage() {
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Provider Support Compared" }]} />
           <h1 className="max-w-[820px] text-[27px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">{title}</h1>
           <p className="mt-3 max-w-[720px] text-[16px] leading-relaxed text-gray-500">
-            Nobody publishes their support response time, so we counted what reviewers report. Every Trustpilot review we
-            have captured for {rows.length} online GLP-1 providers{from && to ? ` (dated ${fmt(from)} to ${fmt(to)})` : ""} was
-            run through the same keyword rule for support, shipping and billing. The counts, the shares and every
-            reviewer-stated time span are below, quoted as written.
+            No GLP-1 provider publishes how quickly its support team responds, so we measured what customers say instead. We
+            ran every Trustpilot review captured for {rows.length} online GLP-1 providers{from && to ? ` (dated ${fmt(from)} to ${fmt(to)})` : ""}{" "}
+            through one keyword rule covering support, shipping and billing. Below you will find the counts, the positive
+            shares and each time span a reviewer mentioned, quoted exactly.
           </p>
           <LastUpdated date={UPDATED} className="mt-4" />
           <MedicalReviewBar path="/glp1-provider-support" className="mt-4 max-w-[760px]" />
@@ -186,22 +186,21 @@ export default async function ProviderSupportPage() {
         <div className="mb-10 flex items-start gap-4 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
           <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
           <div className="text-[15px] leading-[1.75] text-gray-600">
-            <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
+            <h2 className="mb-2 text-[18px] font-bold text-[#191919]">Which GLP-1 provider has the best customer support?</h2>
             <p className="mb-2">
-              Across {total} captured reviews, <strong className="text-[#191919]">{totalSupport} mention support</strong> and{" "}
-              {pct(totalSupportPos, totalSupport)}% of those rate the provider 4 or 5 stars - in these reviews, support is
-              praised far more often than it is criticised. The complaints cluster around{" "}
-              <strong className="text-[#191919]">shipping</strong>: of {totalShipping} reviews that mention delivery,{" "}
-              {pct(totalShippingNeg, totalShipping)}% rate 3 stars or lower.
+              Support is mostly praised. Of {total} captured reviews, <strong className="text-[#191919]">{totalSupport} talk about support</strong>,
+              and {pct(totalSupportPos, totalSupport)}% of those give the provider 4 or 5 stars. The real pain point is{" "}
+              <strong className="text-[#191919]">shipping</strong>: {pct(totalShippingNeg, totalShipping)}% of the {totalShipping} reviews
+              that mention delivery give 3 stars or fewer.
             </p>
             {best && worst && best !== worst && (
               <p>
-                Among providers with at least {SMALL_SAMPLE} support-related reviews captured,{" "}
-                <Link href={`/reviews/${best.provider.id}`} className={ext}>{best.provider.name}</Link> has the
-                highest share of positive support mentions ({share(best.support)} of {best.support.n}) and{" "}
-                <Link href={`/reviews/${worst.provider.id}`} className={ext}>{worst.provider.name}</Link> the
-                lowest ({share(worst.support)} of {worst.support.n}). Sample sizes differ, so read the table, not just the
-                ranking.
+                Looking only at providers with {SMALL_SAMPLE} or more support-related reviews,{" "}
+                <Link href={`/reviews/${best.provider.id}`} className={ext}>{best.provider.name}</Link> earns the
+                highest positive share ({share(best.support)} of {best.support.n}), while{" "}
+                <Link href={`/reviews/${worst.provider.id}`} className={ext}>{worst.provider.name}</Link> earns the
+                lowest ({share(worst.support)} of {worst.support.n}). Because sample sizes vary, check the full table
+                rather than relying on the order alone.
               </p>
             )}
           </div>
@@ -209,18 +208,18 @@ export default async function ProviderSupportPage() {
 
         {/* Table */}
         <section className="mb-12">
-          <h2 className="mb-2 text-[22px] font-bold text-[#191919]">Support, shipping and billing, by provider</h2>
+          <h2 className="mb-2 text-[22px] font-bold text-[#191919]">How do customers rate each provider on support, shipping and billing?</h2>
           <p className="mb-4 text-[15px] text-gray-500">
-            &ldquo;Mention&rdquo; means the review&rsquo;s title or text matches the theme&rsquo;s keyword rule. &ldquo;4-5★&rdquo; is the share
-            of those reviews rating the provider 4 or 5 stars. Sorted by positive support share; providers with fewer than{" "}
-            {SMALL_SAMPLE} support mentions are listed last and marked as small samples.
+            A review counts as a &ldquo;mention&rdquo; when its title or text hits that theme&rsquo;s keyword rule. &ldquo;4-5★&rdquo; is the
+            percentage of those reviews that give 4 or 5 stars. Providers are ordered by positive support share, and any provider
+            with under {SMALL_SAMPLE} support mentions sits at the bottom with a sample warning.
           </p>
           <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
             <table className="w-full min-w-[820px] border-collapse text-[13.5px]">
               <thead>
                 <tr className="border-b border-gray-200 bg-[#F7F8FA] text-left text-[12px] font-bold uppercase tracking-wide text-gray-500">
                   <th className={cell}>Provider</th>
-                  <th className={cell}>Captured</th>
+                  <th className={cell}>Reviews captured</th>
                   <th className={cell}>Mention support</th>
                   <th className={cell}>4-5★</th>
                   <th className={cell}>1-2★</th>
@@ -237,7 +236,7 @@ export default async function ProviderSupportPage() {
                       <Link href={`/reviews/${r.provider.id}`} className="font-bold text-[#191919] hover:text-[#0C4B75] hover:underline">
                         {r.provider.name}
                       </Link>
-                      {r.support.n < SMALL_SAMPLE && <p className="text-[11.5px] text-amber-600">Small sample</p>}
+                      {r.support.n < SMALL_SAMPLE && <p className="text-[11.5px] text-amber-600">Few reviews</p>}
                     </td>
                     <td className={cell}>
                       {r.n}
@@ -256,7 +255,7 @@ export default async function ProviderSupportPage() {
                           {r.provider.trustpilotReviewCount && <span className="text-gray-400">({r.provider.trustpilotReviewCount})</span>}
                         </span>
                       ) : (
-                        <span className="text-gray-400">Not published</span>
+                        <span className="text-gray-400">No public rating</span>
                       )}
                     </td>
                     <td className={cell}>
@@ -268,7 +267,7 @@ export default async function ProviderSupportPage() {
                         sourceFlow="main_comparison"
                         className="inline-flex items-center gap-1 whitespace-nowrap text-[12.5px] font-semibold text-[#0C4B75] hover:underline"
                       >
-                        Visit site <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+                        Go to site <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                       </ProviderCta>
                     </td>
                   </tr>
@@ -277,8 +276,8 @@ export default async function ProviderSupportPage() {
             </table>
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-gray-500">
-            Public Trustpilot figures are each provider&rsquo;s profile aggregate on the date we captured it; &ldquo;Not published&rdquo; means the
-            provider shows no aggregate. A Trustpilot rating reflects customer experience, not medical quality. Source:{" "}
+            Public Trustpilot numbers show each provider&rsquo;s overall profile score on the day we recorded it. &ldquo;No public rating&rdquo;
+            means the provider displays no overall score. Trustpilot measures customer experience, not the quality of medical care. Source:{" "}
             <TrustpilotWordmark starClass="h-3.5 w-3.5" textClass="text-[12.5px]" />
           </p>
         </section>
@@ -287,11 +286,12 @@ export default async function ProviderSupportPage() {
         <section className="mb-12">
           <div className="mb-2 flex items-center gap-2">
             <MessageSquareQuote className="h-6 w-6 text-[#0C4B75]" strokeWidth={2} />
-            <h2 className="text-[22px] font-bold text-[#191919]">What reviewers report about timing</h2>
+            <h2 className="text-[22px] font-bold text-[#191919]">How fast do GLP-1 providers respond, according to reviewers?</h2>
           </div>
           <p className="mb-5 text-[15px] text-gray-500">
-            Every support-related review that states a time span, quoted as written, newest first, up to three per provider.
-            One reviewer&rsquo;s experience is not a service level; it is the only timing data that exists in public.
+            These are support-related reviews that mention a time span, quoted exactly, most recent first and capped at three per
+            provider. A single customer&rsquo;s experience is not a guaranteed response time, but it is the only public timing data
+            available.
           </p>
           <div className="space-y-4">
             {rows.filter((r) => r.timing.length > 0).map((r) => (
@@ -299,7 +299,7 @@ export default async function ProviderSupportPage() {
                 <p className="mb-3 text-[15px] font-bold text-[#191919]">
                   <Link href={`/reviews/${r.provider.id}`} className="hover:text-[#0C4B75] hover:underline">{r.provider.name}</Link>
                   <span className="ml-2 text-[12.5px] font-normal text-gray-400">
-                    {r.timing.length} of {r.support.n} support-related reviews state a time span
+                    {r.timing.length} of {r.support.n} support-related reviews mention a time span
                   </span>
                 </p>
                 <ul className="space-y-2.5">
@@ -325,33 +325,34 @@ export default async function ProviderSupportPage() {
 
         {/* Methodology */}
         <section className="mb-12 rounded-2xl border border-gray-200 bg-white p-6">
-          <h2 className="mb-3 text-[20px] font-bold text-[#191919]">Methodology and limits</h2>
+          <h2 className="mb-3 text-[20px] font-bold text-[#191919]">How we scored the reviews, and what the data cannot tell you</h2>
           <ul className="list-disc space-y-2 pl-5 text-[15px] leading-[1.7] text-gray-600">
             <li>
-              <strong className="text-[#191919]">Source.</strong> The Trustpilot reviews we have captured verbatim for each weight-loss
-              provider, from the provider&rsquo;s public profile, with reviewer names shortened to a first name and initial. Only providers
-              with at least {MIN_REVIEWS} captured reviews appear; {total} reviews across {rows.length} providers today.
+              <strong className="text-[#191919]">Data source.</strong> Trustpilot reviews copied word for word from each weight loss
+              provider&rsquo;s public profile, with reviewer names cut to a first name and last initial. A provider is included only when we
+              hold {MIN_REVIEWS} or more of its reviews. Today that covers {total} reviews from {rows.length} providers.
             </li>
             <li>
-              <strong className="text-[#191919]">Rule.</strong> A review counts as mentioning <em>support</em> if its title or text contains
-              words such as customer service, support, rep, agent, respond, answer, chat, call, phone, email, staff, nurse, care team or
-              coach; <em>shipping</em> if it contains ship, deliver, arrive, tracking, FedEx, package or refill; <em>billing</em> if it
-              contains charge, bill, refund, cancel, subscription or renew. The same rule is applied to every provider; nothing is
-              weighted or hand-picked. A review can count under more than one theme.
+              <strong className="text-[#191919]">Keyword rule.</strong> A review is tagged <em>support</em> when its title or text uses
+              terms like customer service, support, rep, agent, respond, answer, chat, call, phone, email, staff, nurse, care team or
+              coach. It is tagged <em>shipping</em> for ship, deliver, arrive, tracking, FedEx, package or refill, and <em>billing</em> for
+              charge, bill, refund, cancel, subscription or renew. Every provider is scored with this identical rule, with no weighting or
+              cherry-picking, and one review can fall under several themes.
             </li>
             <li>
-              <strong className="text-[#191919]">What the percentages mean.</strong> &ldquo;4-5★&rdquo; is the share of theme-mentioning reviews
-              whose overall star rating is 4 or 5. It is a proxy for sentiment about the theme, not a rating of the theme itself.
+              <strong className="text-[#191919]">Reading the percentages.</strong> &ldquo;4-5★&rdquo; is the percentage of reviews in a theme
+              that carry an overall rating of 4 or 5 stars. It signals how customers feel about that theme, but it is not a score for the
+              theme on its own.
             </li>
             <li>
-              <strong className="text-[#191919]">Timing quotes.</strong> Sentences from support-related reviews that state a span such as
-              &ldquo;within an hour&rdquo; or &ldquo;over 24 hours&rdquo;, quoted as written. They are individual reports, not measured response
-              times, and no provider publishes a service level we could check them against.
+              <strong className="text-[#191919]">Response-time quotes.</strong> Exact sentences from support-related reviews that give a span
+              such as &ldquo;within an hour&rdquo; or &ldquo;over 24 hours&rdquo;. Each is one customer&rsquo;s account rather than a measured
+              response time, and no provider publishes a service standard to compare them with.
             </li>
             <li>
-              <strong className="text-[#191919]">Limits.</strong> Samples are small and uneven, captured over different date ranges, and
-              people who had a problem are more likely to write a review. Treat the table as a map of what customers talk about, not as
-              a ranking of service quality. The page recomputes whenever we add reviews.
+              <strong className="text-[#191919]">Limits.</strong> Sample sizes are small, differ between providers and span different date
+              ranges, and customers with a problem post reviews more often. Use the table to see what customers discuss, not as a definitive
+              service ranking. All figures update automatically each time we add reviews.
             </li>
           </ul>
         </section>

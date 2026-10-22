@@ -17,14 +17,14 @@ type RowNote = { id: string; condition: string; standout: string };
 
 // Article order = cheapest first, matching the index's tirzepatide prices.
 const ROWS: RowNote[] = [
-  { id: "wellmedr", condition: "Locks on a 12-month plan, billed monthly", standout: "Same price at every dose" },
-  { id: "embody", condition: "Flat, no commitment", standout: "1-2 day shipping; refund if not approved" },
-  { id: "directmeds", condition: "Flat, no membership", standout: "Only needle-free sublingual option" },
-  { id: "altrx", condition: "Pause or cancel anytime; BNPL", standout: "Brand-name shelf alongside" },
-  { id: "medvi", condition: "Monthly, all-inclusive", standout: "Dietician + coaching included" },
-  { id: "sprout", condition: "Monthly; $200 off first month", standout: "Ships within 2 days" },
-  { id: "trimrx", condition: "No long-term contract", standout: "Clinical guidance through dose changes" },
-  { id: "shed", condition: "Monthly; 20% off first month", standout: "Lose 5% in 120 days or your money back" },
+  { id: "wellmedr", condition: "Requires a 12-month plan, paid monthly", standout: "Price stays flat as the dose rises" },
+  { id: "embody", condition: "Flat rate, no contract", standout: "Ships in 1-2 days; refunded if not approved" },
+  { id: "directmeds", condition: "Flat rate, no membership fee", standout: "The only under-the-tongue, needle-free choice" },
+  { id: "altrx", condition: "Pause or cancel whenever; buy now, pay later", standout: "Also sells brand-name medications" },
+  { id: "medvi", condition: "Month to month, everything included", standout: "Comes with a dietician and coaching" },
+  { id: "sprout", condition: "Month to month; first month $200 off", standout: "Dispatched within 2 days" },
+  { id: "trimrx", condition: "No long-term commitment", standout: "Clinician support as your dose changes" },
+  { id: "shed", condition: "Month to month; first month 20% off", standout: "Refund if you do not lose 5% in 120 days" },
 ];
 
 function regularFrom(note: string): string | null {
@@ -64,10 +64,10 @@ function VerificationStrip({ byId, linkPrefix }: { byId: Map<string, Provider>; 
   if (tiles.length === 0) return null;
   return (
     <div className="mt-6 rounded-xl border border-gray-200 bg-white p-5 sm:p-6">
-      <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400">How we verified these prices</p>
+      <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400">How we checked these prices</p>
       <p className="mt-1.5 text-[14px] leading-relaxed text-gray-600">
-        Our top three were re-checked on {verifiedLabel(VERIFIED_SCREENSHOTS_DATE)}
-        {" "}against each provider&rsquo;s own pricing page. The crops below are what those pages showed that day; prices and promotions change, so the provider&rsquo;s site is always the final word.
+        On {verifiedLabel(VERIFIED_SCREENSHOTS_DATE)}
+        {" "}we compared our top three against each provider&rsquo;s pricing page. The screenshots below show exactly what those pages listed on that date. Offers and prices move, so treat the provider&rsquo;s own site as the current source.
       </p>
       <div className="mt-4 grid gap-4 sm:grid-cols-3">
         {tiles.map((t) => (
@@ -77,12 +77,12 @@ function VerificationStrip({ byId, linkPrefix }: { byId: Map<string, Provider>; 
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-[200px] items-center justify-center overflow-hidden border-b border-gray-200 bg-white p-2"
-              title="Open the full-size capture"
+              title="View the full-size screenshot"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={t.image}
-                alt={`${t.provider!.name} pricing page, captured ${verifiedLabel(VERIFIED_SCREENSHOTS_DATE)}: ${t.shows}`}
+                alt={`Screenshot of the ${t.provider!.name} pricing page taken ${verifiedLabel(VERIFIED_SCREENSHOTS_DATE)}, showing ${t.shows}`}
                 width={t.width}
                 height={t.height}
                 loading="lazy"
@@ -91,7 +91,7 @@ function VerificationStrip({ byId, linkPrefix }: { byId: Map<string, Provider>; 
             </a>
             <figcaption className="flex flex-1 flex-col p-3.5">
               <p className="text-[13.5px] font-bold text-[#191919]">{t.provider!.name}</p>
-              <p className="mt-0.5 text-[12.5px] leading-snug text-gray-600">Pricing page showed {t.shows}.</p>
+              <p className="mt-0.5 text-[12.5px] leading-snug text-gray-600">On that date the page listed {t.shows}.</p>
               <div className="mt-auto flex items-center gap-3 pt-3 text-[12.5px] font-semibold">
                 <ProviderCta
                   href={t.provider!.affiliateUrl}
@@ -101,11 +101,11 @@ function VerificationStrip({ byId, linkPrefix }: { byId: Map<string, Provider>; 
                   sourceFlow="main_comparison"
                   className="inline-flex items-center gap-1 text-[#0C4B75] hover:underline"
                 >
-                  Visit site
+                  Go to site
                   <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                 </ProviderCta>
                 <Link href={`${linkPrefix}/reviews/${t.id}`} className="text-gray-500 hover:text-[#0C4B75] hover:underline">
-                  Full review
+                  Read review
                 </Link>
               </div>
             </figcaption>
@@ -145,8 +145,8 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
           <thead>
             <tr className="border-b border-gray-200 bg-[#F7F8FA] text-[12px] font-bold uppercase tracking-wide text-gray-500">
               <th className="px-4 py-3">Provider</th>
-              <th className="px-4 py-3">Monthly price</th>
-              <th className="px-4 py-3">The condition</th>
+              <th className="px-4 py-3">Price per month</th>
+              <th className="px-4 py-3">Terms</th>
               <th className="px-4 py-3">Trustpilot</th>
               <th className="px-4 py-3" />
             </tr>
@@ -169,7 +169,7 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
                   {r.tpRating ? (
                     <TpBadge rating={r.tpRating} count={r.tpCount} />
                   ) : (
-                    <span className="text-[12px] text-gray-400">Not published</span>
+                    <span className="text-[12px] text-gray-400">No rating listed</span>
                   )}
                 </td>
                 <td className="px-4 py-3.5 align-top text-right">
@@ -182,7 +182,7 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
                     sourceFlow="main_comparison"
                     className={cta}
                   >
-                    Check availability
+                    See if you qualify
                     <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </ProviderCta>
                 </td>
@@ -214,7 +214,7 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
               {r.tpRating ? (
                 <TpBadge rating={r.tpRating} count={r.tpCount} />
               ) : (
-                <span className="text-[12px] text-gray-400">Trustpilot: not published</span>
+                <span className="text-[12px] text-gray-400">Trustpilot: no rating listed</span>
               )}
               <ProviderCta
                 href={r.provider.affiliateUrl}
@@ -225,7 +225,7 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
                 sourceFlow="main_comparison"
                 className={cta}
               >
-                Check availability
+                See if you qualify
                 <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
               </ProviderCta>
             </div>
@@ -234,10 +234,10 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
       </div>
 
       <p className="mt-3 text-[12.5px] leading-relaxed text-gray-500">
-        Prices are each provider&rsquo;s published compounded tirzepatide rate, last verified {verifiedLabel(PRICE_INDEX_VERIFIED)}
-        {" - "}promos change, so confirm at checkout. Trustpilot figures are each provider&rsquo;s public profile on the date we captured them; a
-        rating reflects customer experience, not medical quality. The same providers&rsquo; semaglutide rates are in the{" "}
-        <Link href={`${linkPrefix}/cheapest-glp1`} className="font-medium text-[#0C4B75] underline underline-offset-2">full price index</Link>.
+        Each price is the provider&rsquo;s published rate for compounded tirzepatide, last checked {verifiedLabel(PRICE_INDEX_VERIFIED)}
+        {" - "}promotions shift, so confirm the total at checkout. Trustpilot numbers come from each provider&rsquo;s public profile on the day we recorded them, and
+        they measure customer experience rather than medical quality. For semaglutide prices from these same providers, see the{" "}
+        <Link href={`${linkPrefix}/cheapest-glp1`} className="font-medium text-[#0C4B75] underline underline-offset-2">complete GLP-1 price index</Link>.
       </p>
 
       <VerificationStrip byId={byId} linkPrefix={linkPrefix} />

@@ -1,3 +1,4 @@
+import { clampMetadata } from "@/lib/utils";
 import type { Metadata } from "next";
 import { ArticlePageView, articleMetadata } from "@/components/pages/article-page";
 import { ROOT_CONTEXT } from "@/lib/site-context";
@@ -10,7 +11,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  return articleMetadata(slug, ROOT_CONTEXT);
+  return clampMetadata(await articleMetadata(slug, ROOT_CONTEXT));
 }
 
 export default async function ArticlePage({

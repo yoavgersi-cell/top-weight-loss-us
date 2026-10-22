@@ -1,4 +1,5 @@
 import { pageReviewSchema } from "@/data/reviewers";
+import { fixBrandCase } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
@@ -45,24 +46,24 @@ const BATTLE_COST_MATH: Record<
   // provider1 = embody, provider2 = Medvi
   "embody-vs-medvi": {
     rows: [
-      ["First month (semaglutide)", "$69", "$99"],
-      ["6-month total", "$414", "$594"],
-      ["12-month total", "$828", "$1,188"],
-      ["Tirzepatide, monthly", "$119 (reg. $129)", "$166 promo (reg. $299)"],
-      ["If the promo ends", "$79/mo regular - $948/yr", "$199/mo regular - $2,388/yr"],
+      ["Month 1, semaglutide", "$69", "$99"],
+      ["Six months, total", "$414", "$594"],
+      ["Full year, total", "$828", "$1,188"],
+      ["Tirzepatide per month", "$119 (reg. $129)", "$166 promo (reg. $299)"],
+      ["After the promo (regular rate)", "$79/mo regular - $948/yr", "$199/mo regular - $2,388/yr"],
     ],
-    note: "Semaglutide at each provider's current published rate, promo conditions applied as published: embody $69/mo promotional (regularly $79), month to month; Medvi $99/mo promotional (regularly $199), all-inclusive with dietician and care coaching. Neither requires a prepaid term.",
+    note: "Both columns use semaglutide at each provider's current published price, with promo terms applied the way each provider states them. embody: $69/mo promo (regular $79), month to month. Medvi: $99/mo promo (regular $199), all-inclusive with a dietician and care coaching. Neither one asks for a prepaid term.",
   },
   // provider1 = Medvi, provider2 = TrimRx - both sides fully verified.
   "medvi-vs-trimrx": {
     rows: [
-      ["First month (semaglutide)", "$99 promo (reg. $199)", "$149"],
-      ["6-month total", "$594", "$894"],
-      ["12-month total", "$1,188", "$1,788"],
-      ["Tirzepatide, monthly", "$166 promo (reg. $299)", "$259"],
-      ["The condition", "$99 promotional - $199 regular", "$149 is the same at every dose; no long-term contract"],
+      ["Month 1, semaglutide", "$99 promo (reg. $199)", "$149"],
+      ["Six months, total", "$594", "$894"],
+      ["Full year, total", "$1,188", "$1,788"],
+      ["Tirzepatide per month", "$166 promo (reg. $299)", "$259"],
+      ["Fine print", "$99 promo price; $199 regular", "$149 at every dose; no long-term contract"],
     ],
-    note: "Semaglutide at published rates, promo conditions applied as published: Medvi $99/mo promotional (regularly $199), all-inclusive with dietician and care coaching. TrimRx bills $149/month for semaglutide, the same at every dose, with no long-term contract. Neither requires a prepaid term.",
+    note: "Semaglutide at published prices, with promo terms applied as each provider states them. Medvi: $99/mo promo (regular $199), all-inclusive with a dietician and care coaching. TrimRx: $149/month for semaglutide at every dose, with no long-term contract. Neither one asks for a prepaid term.",
   },
   // provider1 = embody, provider2 = Ro. Ro's figures are its own published
   // pricing (verified Aug 2026): a Ro Body membership ($39 first month, then
@@ -71,126 +72,124 @@ const BATTLE_COST_MATH: Record<
   // - so the note spells out what each column buys.
   "embody-vs-ro": {
     rows: [
-      ["What the price buys", "Compounded semaglutide, all-inclusive", "Membership + brand-name med, billed separately"],
-      ["First month (semaglutide)", "$69", "$39 membership + Wegovy pill from $149"],
-      ["Monthly thereafter", "$69 (reg. $79)", "$74-$149 membership + $149-$399 medication (cash-pay)"],
-      ["12-month total", "$828", "~$2,676-$4,476 cash-pay (annual membership + Wegovy)"],
-      ["Tirzepatide, monthly", "$119 (reg. $129)", "Zepbound KwikPen from $299 first mo, $399-449 after + membership"],
-      ["With insurance coverage", "-", "Membership + your copay - can be far lower if covered"],
+      ["What you pay for", "All-inclusive compounded semaglutide", "Membership plus brand-name medication, billed separately"],
+      ["Month 1, semaglutide", "$69", "$39 membership + Wegovy pill from $149"],
+      ["Each month after", "$69 (reg. $79)", "$74-$149 membership + $149-$399 medication (cash-pay)"],
+      ["Full year, total", "$828", "~$2,676-$4,476 cash-pay (annual membership + Wegovy)"],
+      ["Tirzepatide per month", "$119 (reg. $129)", "Zepbound KwikPen from $299 in month one, then $399-449, plus membership"],
+      ["If insurance covers it", "-", "Membership plus your copay, which can be much lower with coverage"],
     ],
-    note: "embody's column is its published all-inclusive rate: $69/mo promotional semaglutide (regularly $79), month to month. Ro's column is Ro's own published pricing (August 2026): the Ro Body membership is $39 for the first month, then $74/mo on an annual prepaid plan up to $149/mo, and brand-name medication is billed separately - Wegovy pill from $149/mo (up to $299 after the intro period), Wegovy pen from $199 for two months (up to $399/mo), Zepbound KwikPen from $299 (then $399-449). The honest asymmetry: embody ships compounded semaglutide; Ro ships FDA-approved brand-name medication, and insurance - where it covers - changes Ro's math completely. Check both sites for current figures.",
+    note: "The embody column is its published all-inclusive price: semaglutide at a $69/mo promo (regular $79), month to month. The ro column uses ro's own published pricing from August 2026. The ro Body membership costs $39 for month one, then $74/mo on an annual prepaid plan, up to $149/mo, and brand-name medication is charged on top: Wegovy pill from $149/mo (up to $299 after the intro period), Wegovy pen from $199 for two months (up to $399/mo) and Zepbound KwikPen from $299 (then $399-449). The core difference: embody sends compounded semaglutide, while ro sends FDA-approved brand-name medication, and where insurance pays, ro's cost changes completely. Confirm current figures on both sites.",
   },
   // provider1 = embody, provider2 = altRx (slug order is reversed)
   "altrx-vs-embody": {
     rows: [
-      ["First month (semaglutide)", "$69", "$89"],
-      ["6-month total", "$414", "$534"],
-      ["12-month total", "$828", "$1,068"],
-      ["Tirzepatide, monthly", "$119 (reg. $129)", "$149 (reg. $299)"],
-      ["If the promo ends", "$79/mo regular - $948/yr", "$199/mo regular - $2,388/yr"],
+      ["Month 1, semaglutide", "$69", "$89"],
+      ["Six months, total", "$414", "$534"],
+      ["Full year, total", "$828", "$1,068"],
+      ["Tirzepatide per month", "$119 (reg. $129)", "$149 (reg. $299)"],
+      ["After the promo (regular rate)", "$79/mo regular - $948/yr", "$199/mo regular - $2,388/yr"],
     ],
-    note: "Semaglutide at each provider's current published rate: embody $69/mo promotional (regularly $79), month to month; altRx $89/mo promotional (regularly $199), flat at every dose with pause-anytime terms and Buy Now, Pay Later. Neither requires a prepaid term.",
+    note: "Semaglutide at each provider's current published price. embody: $69/mo promo (regular $79), month to month. altRx: $89/mo promo (regular $199), the same at every dose, with pause-anytime terms and buy now, pay later. Neither one asks for a prepaid term.",
   },
   // provider1 = embody, provider2 = welludr
   "embody-vs-wellmedr": {
     rows: [
-      ["First month (semaglutide)", "$69", "$49"],
-      ["6-month total", "$414", "$294"],
-      ["12-month total", "$828", "$588"],
-      ["Tirzepatide, monthly", "$119 (reg. $129)", "$89"],
-      ["The condition", "$69 is promotional (reg. $79); month to month", "$49 locks on a 12-month plan"],
+      ["Month 1, semaglutide", "$69", "$49"],
+      ["Six months, total", "$414", "$294"],
+      ["Full year, total", "$828", "$588"],
+      ["Tirzepatide per month", "$119 (reg. $129)", "$89"],
+      ["Fine print", "$69 promo price (reg. $79), month to month", "$49 requires a 12-month plan"],
     ],
-    note: "Semaglutide at each provider's published rate: embody $69/mo promotional (regularly $79) with no commitment; welludr $49/mo on a 12-month plan, billed monthly, same price at every dose. welludr wins the year by $240 - embody wins the exit terms.",
+    note: "Semaglutide at each provider's published price. embody: $69/mo promo (regular $79), no commitment. welludr: $49/mo on a 12-month plan billed monthly, the same at every dose. Over a full year welludr costs $240 less, while embody is far easier to leave.",
   },
   // provider1 = Medvi, provider2 = HealthRx
   "healthrx-vs-medvi": {
     rows: [
-      ["First payment (semaglutide)", "$99", "$1,188 at checkout"],
-      ["6-month total", "$594", "No partial-year plan published"],
-      ["12-month total", "$1,188", "$1,188"],
-      ["Tirzepatide, monthly", "$166 promo (reg. $299)", "from $179"],
-      ["The condition", "$99 is promotional (reg. $199)", "$99/mo is contractual for the prepaid year"],
+      ["First charge, semaglutide", "$99", "$1,188 upfront at checkout"],
+      ["Six months, total", "$594", "No shorter plan published"],
+      ["Full year, total", "$1,188", "$1,188"],
+      ["Tirzepatide per month", "$166 promo (reg. $299)", "from $179"],
+      ["Fine print", "$99 promo price (reg. $199)", "$99/mo rate fixed by the prepaid year"],
     ],
-    note: "The year totals tie at $1,188 - the structures don't: Medvi bills $99 monthly at a promotional rate (regularly $199) with no prepay; HealthRx charges the full $1,188 at checkout, which locks the rate for 12 months regardless of promos.",
+    note: "Both years add up to $1,188, but the payment structures differ. Medvi charges $99 each month at a promo rate (regular $199) with nothing prepaid. HealthRx collects the full $1,188 at checkout, which fixes the rate for 12 months no matter how promos change.",
   },
   // provider1 = embody, provider2 = TrimRx
   "embody-vs-trimrx": {
     rows: [
-      ["First month (semaglutide)", "$69", "$149"],
-      ["6-month total", "$414", "$894"],
-      ["12-month total", "$828", "$1,788"],
-      ["Tirzepatide, monthly", "$119 (reg. $129)", "$259"],
-      ["The condition", "$69 is promotional (reg. $79)", "$149 is the same at every dose; no long-term contract"],
+      ["Month 1, semaglutide", "$69", "$149"],
+      ["Six months, total", "$414", "$894"],
+      ["Full year, total", "$828", "$1,788"],
+      ["Tirzepatide per month", "$119 (reg. $129)", "$259"],
+      ["Fine print", "$69 promo price (reg. $79)", "$149 at every dose; no long-term contract"],
     ],
-    note: "Semaglutide at published rates: embody $69/mo promotional (regularly $79), the same every month. TrimRx bills $149/month for semaglutide, the same at every dose, with no long-term contract.",
+    note: "Semaglutide at published prices. embody: $69/mo promo (regular $79), the same each month. TrimRx: $149/month for semaglutide at every dose, with no long-term contract.",
   },
   // provider1 = embody, provider2 = Sprout
   "embody-vs-sprout": {
     rows: [
-      ["First month (semaglutide)", "$69", "$149 with $200 off applied"],
-      ["6-month total", "$414", "$694"],
-      ["12-month total", "$828", "$1,588"],
-      ["Tirzepatide, monthly", "$119 (reg. $129)", "$199"],
-      ["The condition", "$69 is promotional (reg. $79)", "$149 starting price; $200 off month one"],
+      ["Semaglutide per month", "$69 (reg. $79)", "$149"],
+      ["Tirzepatide per month", "$119 (reg. $129)", "$199"],
+      ["Fine print", "$69 promo price (reg. $79)", "Starts at $149; first-month offer advertised, check terms on Sprout's site"],
     ],
-    note: "Semaglutide at published rates: embody $69/mo promotional (regularly $79), month to month. Sprout starts at $149/mo with a standing $200 first-month discount applied to the year totals; confirm current plan terms on Sprout's site.",
+    note: "Semaglutide at published prices. embody: $69/mo promo (regular $79), month to month. Sprout: from $149/mo. Sprout also advertises $200 off the first month, which is more than its $149 starting price, so we do not compute six-month or yearly totals for it. Check Sprout's site for its current plan terms.",
   },
 };
 
 const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   "embody-vs-sprout": {
-    title: "embody vs Sprout (2026): $69 vs $149 GLP-1 Compared",
+    title: "embody vs Sprout (2026): $69 vs $149 GLP-1 Price Check",
     description:
-      "embody ($69/mo semaglutide, 1-2 day cold-chain shipping, LegitScript) vs Sprout ($149/mo, ships in 2 days, brand-name Wegovy available). Real prices, honest verdict.",
+      "embody charges $69/mo for semaglutide with 1-2 day cold-chain shipping and LegitScript certification. Sprout starts at $149/mo, ships in 2 days and offers Wegovy.",
   },
   "altrx-vs-sprout": {
-    title: "altRx vs Sprout (2026): $89 vs $149 GLP-1 Compared",
+    title: "altRx vs Sprout (2026): $89 vs $149 Brand-Name GLP-1s",
     description:
-      "The brand-shelf matchup: altRx ($89/mo + Ozempic/Zepbound/Wegovy, BNPL) vs Sprout ($149/mo, Wegovy available, 2-day fulfillment). Price, selection and speed compared.",
+      "altRx pairs $89/mo semaglutide with Ozempic, Zepbound and Wegovy plus buy now, pay later. Sprout starts at $149/mo with Wegovy and 2-day fulfillment. Compared.",
   },
   "sprout-vs-trimrx": {
-    title: "Sprout vs TrimRx (2026): Both $149 - Which GLP-1 Provider Wins?",
+    title: "Sprout vs TrimRx (2026): Two $149 GLP-1 Plans, One Pick",
     description:
-      "Sprout ($149/mo semaglutide that holds, ships in 2 days, Wegovy option) vs TrimRx ($149/mo flat at every dose, custom dosing, unlimited check-ins, no contract). Compared honestly.",
+      "Both charge $149/mo for semaglutide. Sprout holds that price, ships in 2 days and offers Wegovy; TrimRx is flat at every dose with custom dosing, unlimited check-ins and no contract.",
   },
   "sprout-vs-wellmedr": {
-    title: "Sprout vs welludr (2026): $149 vs $49 GLP-1 Compared",
+    title: "Sprout vs welludr (2026): $149 vs $49 GLP-1 Price Gap",
     description:
-      "Sprout ($149/mo, 2-day fulfillment, brand-name Wegovy) vs welludr ($49/mo, 4.6 on Trustpilot, 1M+ patients, warranty). Real prices and an honest verdict.",
+      "welludr charges $49/mo, holds 4.6 on Trustpilot, reports 1M+ patients and offers a warranty. Sprout costs $149/mo with 2-day fulfillment and brand-name Wegovy.",
   },
   "embody-vs-wellmedr": {
-    title: "embody vs welludr (2026): $69 vs $49 GLP-1 Compared",
+    title: "embody vs welludr (2026): $69 vs $49 Semaglutide Compared",
     description:
-      "embody ($69/mo semaglutide, free 1-2 day shipping, refund if not approved) vs welludr ($49/mo, 1M+ patients, weight-loss warranty). Real prices, real trade-offs - see which fits you.",
+      "embody: $69/mo semaglutide, free 1-2 day shipping and a refund if you are not approved. welludr: $49/mo, 1M+ patients and a weight loss warranty. See the trade-offs.",
   },
   "altrx-vs-embody": {
     // Measured winner, restored Aug 30: when both reverse slugs were live, the
     // question-format title on /embody-vs-altrx did 18.2% CTR on the "altrx vs
     // embody" query vs 6.7% for the price-format title on this slug - same
     // page, same query. Do not switch back to price format without new data.
-    title: "altRx vs embody: Which GLP-1 Provider Is Right for You in 2026?",
+    title: "altRx vs embody (2026): Which GLP-1 Provider Should You Pick?",
     description:
-      "altRx ($89/mo semaglutide + brand-name Zepbound & Wegovy, BNPL) vs embody ($69/mo flat, 1-2 day shipping, LegitScript-certified). Which GLP-1 provider wins? Full comparison.",
+      "altRx offers $89/mo semaglutide plus brand-name Zepbound and Wegovy with buy now, pay later. embody is $69/mo flat, ships in 1-2 days and is LegitScript-certified.",
   },
   "altrx-vs-trimrx": {
-    title: "altRx vs TrimRx (2026): $89 vs $149 GLP-1 Compared",
+    title: "altRx vs TrimRx (2026): $89 vs $149 Semaglutide Plans",
     description:
-      "altRx ($89/mo semaglutide, flat at every dose, brand-name options) vs TrimRx ($149/mo, no contract, multi-month discounts). Pricing, medications and flexibility compared.",
+      "altRx charges $89/mo for semaglutide at every dose and also sells brand-name options. TrimRx costs $149/mo with no contract and multi-month discounts. Compared.",
   },
   "altrx-vs-wellmedr": {
-    title: "altRx vs welludr (2026): $89 vs $49 GLP-1 Compared",
+    title: "altRx vs welludr (2026): $89 vs $49 GLP-1 Head to Head",
     description:
-      "altRx ($89/mo semaglutide + the cheapest brand-name shelf) vs welludr ($49/mo, used by 1M+ patients). We compared price, medications, support and guarantees.",
+      "welludr is the cheaper start at $49/mo and reports 1M+ patients. altRx costs $89/mo but adds the lowest-priced brand-name shelf. Price, meds, support and guarantees.",
   },
   "embody-vs-trimrx": {
-    title: "embody vs TrimRx (2026): $69 vs $149 GLP-1 Compared",
+    title: "embody vs TrimRx (2026): $69 vs $149 Semaglutide Compared",
     description:
-      "embody ($69/mo flat semaglutide, free 1-2 day shipping) vs TrimRx ($149/mo, flexible no-contract plans). Real pricing, speed and support compared side by side.",
+      "embody charges a flat $69/mo for semaglutide with free 1-2 day shipping. TrimRx costs $149/mo on flexible plans with no contract. Price, delivery speed and support.",
   },
   "embody-vs-medvi": {
-    title: "embody vs Medvi (2026): $69 vs $99 GLP-1 Compared",
+    title: "embody vs Medvi (2026): $69 vs $99 GLP-1 Plans Compared",
     description:
-      "embody ($69/mo semaglutide, 1-2 day shipping, refund policy) vs Medvi ($99/mo promo all-inclusive with high-touch provider support). Price or personal care - see which fits.",
+      "embody is $69/mo for semaglutide with 1-2 day shipping and a refund policy. Medvi's $99/mo promo is all-inclusive with hands-on provider support. Price or extra care?",
   },
   "embody-vs-ro": {
     // Sept 3 CTR pass: 0.5% CTR at avg position 6 over 191 impressions (3d) -
@@ -206,74 +205,62 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // differentiator, not a winner). Oct 5, 2026: the ranking now places embody
     // (9.8) above ro (9.6) and the battle verdict names embody the winner; the
     // neutral snippet is kept because it matches the comparison-research intent.
-    title: "Embody vs Ro (2026): $69 Flat or the Big Brand?",
+    title: "embody vs ro (2026): $69 Flat Price or the Big Brand?",
     description:
-      "embody: flat $69/mo all-in compounded semaglutide. ro: $39-then-$74-149/mo membership plus brand-name Wegovy/Zepbound. Compare price, plans, speed and who each fits.",
+      "embody charges a flat $69/mo for compounded semaglutide, all in. ro charges $39, then $74-149/mo for membership, plus brand-name Wegovy or Zepbound. Price, plans, speed.",
   },
   "medvi-vs-trimrx": {
-    title: "Medvi vs TrimRx (2026): $99 vs $149 GLP-1 Compared",
+    title: "Medvi vs TrimRx (2026): $99 vs $149 Semaglutide Compared",
     description:
-      "Medvi ($99/mo promo all-inclusive, Trustpilot-praised support) vs TrimRx ($149/mo flat at every dose, no long-term contract). Close prices, different strengths - here's how to pick.",
+      "Medvi's $99/mo promo is all-inclusive, and Trustpilot reviewers praise its support. TrimRx is $149/mo at every dose with no long-term contract. Which one suits you?",
   },
   "medvi-vs-wellmedr": {
-    title: "Medvi vs welludr (2026): $99 or $49 GLP-1 Compared",
+    title: "Medvi vs welludr (2026): $99 or $49 for Semaglutide?",
     description:
-      "Medvi ($99/mo promo with personal provider support) vs welludr ($49/mo semaglutide, 1M+ patients, warranty). Is high-touch care worth the difference? Full comparison.",
+      "Medvi's $99/mo promo includes personal provider support. welludr charges $49/mo, reports 1M+ patients and offers a warranty. Is the extra care worth the price gap?",
   },
   "medvi-vs-altrx": {
-    title: "Medvi vs altRx (2026): $99 vs $89 GLP-1 Compared",
+    title: "Medvi vs altRx (2026): $99 vs $89 GLP-1 Plans Compared",
     description:
-      "Medvi ($99/mo promo all-inclusive, personal support) vs altRx ($89/mo flat + brand-name options with BNPL). Pricing, medications and support compared honestly.",
+      "Medvi bundles everything into a $99/mo promo with personal support. altRx is $89/mo flat, adds brand-name medications and offers buy now, pay later. Side by side.",
   },
   "trimrx-vs-wellmedr": {
     // Oct 15, 2026: welludr leads (named winner, shown first on the page).
-    title: "welludr vs TrimRx (2026): $49 vs $149 GLP-1 Compared",
+    title: "welludr vs TrimRx (2026): $49 vs $149 Semaglutide Compared",
     description:
-      "welludr ($49/mo semaglutide at every dose, weight-loss warranty, 4.6 on Trustpilot) vs TrimRx ($149/mo flat, custom dosing, no contract). We compared price, flexibility and support.",
+      "welludr: $49/mo semaglutide at every dose, a weight loss warranty and 4.6 on Trustpilot. TrimRx: $149/mo flat, custom dosing and no contract. Price, flexibility, support.",
   },
   "trimrx-vs-ro": {
-    title: "TrimRx vs ro (2026): Which GLP-1 Provider Fits You?",
+    title: "TrimRx vs ro (2026): Which GLP-1 Provider Suits You?",
     description:
-      "TrimRx ($149/mo, no long-term contract, clinical support included) vs ro (established brand, in-house pharmacy). Pricing clarity vs brand trust - full comparison.",
+      "TrimRx costs $149/mo with clinical support and no long-term contract. ro is an established brand with its own in-house pharmacy. Clear pricing or brand trust? Compared.",
   },
   "medvi-vs-ro": {
-    title: "Medvi vs ro (2026): $99 All-In or Membership + Brand-Name?",
+    title: "Medvi vs ro (2026): $99 All-In or Membership Plus Brand?",
     description:
-      "Medvi: $99/mo promo, all-inclusive compounded semaglutide. ro: $39 first-month membership, then $74-149/mo, plus brand-name Wegovy/Zepbound billed separately.",
+      "Medvi charges a $99/mo promo for all-inclusive compounded semaglutide. ro charges $39 for month one, then $74-149/mo membership, with Wegovy or Zepbound billed on top.",
   },
   "altrx-vs-ro": {
-    title: "altRx vs ro (2026): $89 Flat GLP-1 or Membership + Brand-Name?",
+    title: "altRx vs ro (2026): $89 Flat GLP-1 or Membership Plus Brand?",
     description:
-      "altRx: $89/mo promo flat compounded semaglutide (reg $199), BNPL available. ro: $39 first-month membership then $74-149/mo plus brand-name medication billed separately. Which model fits you?",
+      "altRx: compounded semaglutide at a flat $89/mo promo (reg. $199) with buy now, pay later. ro: $39 first month, then $74-149/mo membership plus brand-name meds billed separately.",
   },
   "healthrx-vs-medvi": {
     // Title matches the stored (CMS) title byte-for-byte - this entry exists
     // only to put "GLP-1" in the description (desc-only pass, Aug 30).
-    title: "HealthRx vs Medvi (2026): Two $99 Semaglutide Deals Compared",
+    title: "HealthRx vs Medvi (2026): Two $99 Semaglutide Plans Compared",
     description:
-      "Two $99/month GLP-1 deals, opposite structures: HealthRx's prepaid year ($1,188 at checkout) vs Medvi's monthly promo all-inclusive plan. The honest math inside.",
+      "Both cost $99/month for GLP-1 semaglutide, but HealthRx takes $1,188 upfront for a prepaid year while Medvi bills a monthly all-inclusive promo. Here is the math.",
   },
   "ro-vs-wellmedr": {
-    title: "ro vs welludr (2026): Big Brand or $49 GLP-1?",
+    title: "ro vs welludr (2026): Big-Name Brand or $49 GLP-1?",
     description:
-      "ro (major telehealth brand with in-house pharmacy) vs welludr ($49/mo semaglutide, 1M+ patients, weight-loss warranty). Brand trust vs the lowest price, compared.",
+      "ro is a major telehealth brand with an in-house pharmacy. welludr charges $49/mo for semaglutide, reports 1M+ patients and offers a weight loss warranty. Compared.",
   },
 };
 
-// Category word used in the uniform battle SERP title, per vertical. Verticals
-// not listed fall back to a category-free title.
-// Oct 22, 2026: Nutrafol (hair-loss) is an over-the-counter supplement, the one
-// provider we compare that is not prescribed - no "licensed telehealth" badge
-// and a "not required" prescription row.
-const OTC_PROVIDERS = new Set(["nutrafol"]);
-
-const BATTLE_CATEGORY_BY_VERTICAL: Record<string, string> = {
-  "weight-loss": "GLP-1",
-  trt: "TRT",
-  "hair-loss": "Hair Loss",
-  hrt: "HRT",
-  ed: "ED Treatment",
-};
+// Category word used in the uniform battle SERP title.
+const BATTLE_CATEGORY = "GLP-1";
 
 // Title-case a "{a} vs {b}" matchup so no SERP title starts lowercase, while
 // preserving any internal brand capitals (altRx -> AltRx, TrimRX -> TrimRX).
@@ -281,6 +268,7 @@ function titleCaseMatchup(label: string): string {
   return label
     .split(/\s+vs\s+/i)
     .map((side) => (side ? side.charAt(0).toUpperCase() + side.slice(1) : side))
+    .map(fixBrandCase)
     .join(" vs ");
 }
 
@@ -289,7 +277,7 @@ function titleCaseMatchup(label: string): string {
 // tail verbatim while never starting lowercase - matching the uniform titles.
 function titleCaseOverrideTitle(title: string): string {
   const idx = title.indexOf(":");
-  if (idx === -1) return title.charAt(0).toUpperCase() + title.slice(1);
+  if (idx === -1) return fixBrandCase(title.charAt(0).toUpperCase() + title.slice(1));
   return `${titleCaseMatchup(title.slice(0, idx))}${title.slice(idx)}`;
 }
 
@@ -298,26 +286,26 @@ function titleCaseOverrideTitle(title: string): string {
 // audit). Titles stay whatever the CMS stores - descriptions only.
 const LANDING_META_DESCRIPTION: Record<string, string> = {
   semaglutide:
-    "Compare the best semaglutide (GLP-1) providers of 2026 - verified prices from $49/month, licensed online prescribing, and honest reviews of every program.",
+    "Best semaglutide (GLP-1) providers for 2026, compared on checked prices from $49/month, licensed online prescribing and the trade-offs of each program.",
   tirzepatide:
-    "The best tirzepatide providers of 2026 compared - verified GLP-1 prices from $89/month compounded, licensed online prescribing, honest pros and cons.",
+    "Best tirzepatide providers for 2026: compounded GLP-1 prices from $89/month that we checked, licensed online prescribing, and the pros and cons of each.",
   "ozempic-for-weight-loss":
-    "Ozempic for weight loss in 2026: how the GLP-1 works, who prescribes it online, and verified alternatives from $49/month compared honestly.",
+    "Ozempic for weight loss in 2026: how this GLP-1 works, which online providers prescribe it, and checked alternatives that start at $49/month.",
   "wegovy-providers":
-    "Where to get Wegovy online in 2026 - providers compared, plus verified GLP-1 alternatives from $49/month when brand-name pricing doesn't fit.",
+    "Wegovy online in 2026: the providers that prescribe it, compared, plus checked GLP-1 alternatives from $49/month if brand-name prices are out of reach.",
   "ozempic-alternatives":
-    "Ozempic, Wegovy & Mounjaro alternatives for 2026 - verified GLP-1 options from $49/month, compared honestly on price, terms and support.",
+    "Alternatives to Ozempic, Wegovy and Mounjaro in 2026: GLP-1 options from $49/month, compared on checked prices, plan terms and patient support.",
   "switch-from-ozempic":
-    "Switching from Ozempic to compounded semaglutide - how the GLP-1 switch works, verified prices from $49/month, and what to ask your prescriber.",
+    "Moving from Ozempic to compounded semaglutide: how the GLP-1 switch works, checked prices from $49/month and the questions to ask your prescriber.",
   "retatrutide-weight-loss":
-    "Retatrutide in 2026: where the next-generation GLP-1-class candidate stands, what its trials report, and the approved options available now.",
+    "Retatrutide in 2026: where this next-generation GLP-1-class drug stands, what its clinical trials found, and the approved options you can use today.",
 };
 
 // Metadata for a landing page or head-to-head battle at /<slug> (root) or
 // /<vertical>/<slug> (hub). Returns { title: "Not Found" } for an unknown slug.
 export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
   // Curated 3-way comparisons (/{a}-vs-{b}-vs-{c}) resolve before 2-way battles.
-  const trio = ctx.vertical === "weight-loss" ? threeWayBySlug.get(slug) : undefined;
+  const trio = threeWayBySlug.get(slug);
   if (trio) return threeWayMetadata(trio, ctx);
 
   const config = await getConfig(ctx.vertical);
@@ -327,7 +315,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   if (landing) {
     const url = canonicalUrl(ctx, `/${landing.slug}`);
     const landingDesc =
-      (ctx.vertical === "weight-loss" && LANDING_META_DESCRIPTION[landing.slug]) ||
+      LANDING_META_DESCRIPTION[landing.slug] ||
       landing.seoDescription;
     return {
       title: landing.seoTitle,
@@ -369,17 +357,17 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   // an override fall back to the uniform, competitor-style neutral pattern
   // "{A} vs {B} (2026): {Category} Cost, Plans & Meds Compared". DESCRIPTIONS
   // are always the bespoke override (real prices) when present.
-  const override = ctx.vertical === "weight-loss" ? BATTLE_SEO_OVERRIDES[slug] : undefined;
+  const override = BATTLE_SEO_OVERRIDES[slug];
   const baseLabel = (battle.matchupLabel ?? battle.title.split(":")[0]).trim();
-  const battleCategory = BATTLE_CATEGORY_BY_VERTICAL[ctx.vertical];
+  const battleCategory = BATTLE_CATEGORY;
   const metaTitle = override?.title
     ? titleCaseOverrideTitle(override.title)
-    : `${titleCaseMatchup(baseLabel)} (2026): ${battleCategory && !baseLabel.toLowerCase().includes(battleCategory.toLowerCase()) ? `${battleCategory} ` : ""}Cost, Plans & Meds Compared`;
+    : `${titleCaseMatchup(baseLabel)} (2026): ${battleCategory && !baseLabel.toLowerCase().includes(battleCategory.toLowerCase()) ? `${battleCategory} ` : ""}Prices, Plans & Medications`;
   const metaDescription = override?.description ?? battle.description;
 
   // Thin, low-demand matchups (Tier-2-brand pairs) are noindex,follow so crawl
   // budget concentrates on the money battles - see NOINDEX_WL_BATTLE_SLUGS.
-  const isThinNoindex = ctx.vertical === "weight-loss" && NOINDEX_WL_BATTLE_SLUGS.has(slug);
+  const isThinNoindex = NOINDEX_WL_BATTLE_SLUGS.has(slug);
 
   return {
     title: metaTitle,
@@ -431,7 +419,7 @@ function ReadMoreProse({ text, label, visibleSentences = 2 }: { text: string; la
 
 export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteContext }) {
   // Curated 3-way comparisons render their own template.
-  const trio = ctx.vertical === "weight-loss" ? threeWayBySlug.get(slug) : undefined;
+  const trio = threeWayBySlug.get(slug);
   if (trio) return ThreeWayPageView({ trio, ctx });
 
   const config = await getConfig(ctx.vertical);
@@ -451,7 +439,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     const baseOrder = landing.providerOrder.length > 0 ? landing.providerOrder : config.ranking.providerOrder;
     // Page-specific card facts (verified molecule/brand price per provider) and,
     // on molecule pages, only the providers that publish that molecule.
-    const focus = ctx.vertical === "weight-loss" ? landingFocusFor(landing.slug, baseOrder) : null;
+    const focus = landingFocusFor(landing.slug, baseOrder);
     const providerOrder = focus ? focus.providerIds : baseOrder;
 
     const schemaData = {
@@ -461,6 +449,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       description: landing.seoDescription,
       url: canonicalUrl(ctx, `/${landing.slug}`),
       dateModified: landing.updatedAt || CONTENT_LAST_UPDATED,
+      ...pageReviewSchema(`${ctx.prefix}/${landing.slug}`),
       publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
     };
 
@@ -507,6 +496,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           cardIntroMode={focus ? "short" : "full"}
           priceNotes={focus?.priceNotes}
           onlyProviderIds={focus ? focus.providerIds : undefined}
+          byline={<MedicalReviewBar path={`${ctx.prefix}/${landing.slug}`} className="max-w-[760px]" />}
           heroOverrides={{
             h1: landing.h1,
             h2: landing.h2,
@@ -518,11 +508,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           ) : (
             <EditorialContent />
           )}
-          {ctx.vertical === "weight-loss" && (
-            <div className="mx-auto max-w-[1200px] px-4 pb-12">
-              <GuideCluster currentSlug={landing.slug} prefix={ctx.prefix} />
-            </div>
-          )}
+          <div className="mx-auto max-w-[1200px] px-4 pb-12">
+            <GuideCluster currentSlug={landing.slug} prefix={ctx.prefix} />
+          </div>
         </ComparisonLayout>
       </>
     );
@@ -612,15 +600,15 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // feature data so every value is real. The prescription row is a market
   // constant - every provider we compare requires a licensed-provider review.
   const findFeature = (re: RegExp) => (battle.features ?? []).find((f) => re.test(f.feature));
-  const rxRow = (id: string) => (OTC_PROVIDERS.has(id) ? "Not required - over-the-counter supplement" : "Required - online provider review");
+  const rxValue = "Yes - a licensed clinician reviews your intake online";
   const priceRow = findFeature(/price|cost/i);
   const shippingRow = findFeature(/shipping|delivery|speed/i);
   const medsRow = findFeature(/medication|treatment/i);
   const quickRows = [
-    priceRow && { label: "Starting price", v1: priceRow.provider1Value, v2: priceRow.provider2Value },
-    medsRow && { label: "Medications", v1: medsRow.provider1Value, v2: medsRow.provider2Value },
-    { label: "Prescription", v1: rxRow(p1.id), v2: rxRow(p2.id) },
-    shippingRow && { label: "Delivery", v1: shippingRow.provider1Value, v2: shippingRow.provider2Value },
+    priceRow && { label: "Price from", v1: priceRow.provider1Value, v2: priceRow.provider2Value },
+    medsRow && { label: "Medications offered", v1: medsRow.provider1Value, v2: medsRow.provider2Value },
+    { label: "Prescription needed?", v1: rxValue, v2: rxValue },
+    shippingRow && { label: "Shipping", v1: shippingRow.provider1Value, v2: shippingRow.provider2Value },
   ].filter(Boolean) as { label: string; v1: string; v2: string }[];
 
   // Related comparisons - other battles featuring either provider (internal links).
@@ -650,38 +638,35 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // only internal path into the trio pages, so every trio gets inbound links
   // from its three constituent head-to-heads. Weight-loss only (the registry
   // is a WL registry).
-  const relatedTrios =
-    ctx.vertical === "weight-loss"
-      ? THREE_WAY_COMPARISONS.filter(
-          (t) => t.providerIds.includes(p1.id) && t.providerIds.includes(p2.id)
-        ).map((t) => ({
-          slug: t.slug,
-          names: t.providerIds.map(
-            (id) => config.providers.find((p) => p.id === id)?.name ?? id
-          ),
-        }))
-      : [];
+  const relatedTrios = THREE_WAY_COMPARISONS.filter(
+    (t) => t.providerIds.includes(p1.id) && t.providerIds.includes(p2.id)
+  ).map((t) => ({
+    slug: t.slug,
+    names: t.providerIds.map(
+      (id) => config.providers.find((p) => p.id === id)?.name ?? id
+    ),
+  }));
 
   // FAQ - real, query-shaped questions answered from grounded battle content.
   // Expands the queries the page can rank for (long-tail + People Also Ask) and
   // powers both the visible FAQ section and the FAQPage schema.
   const catToQuestion = (name: string) => {
     const n = name.toLowerCase();
-    if (n.includes("pric") || n.includes("value")) return `Is ${p1.name} cheaper than ${p2.name}?`;
-    if (n.includes("ship") || n.includes("speed")) return `Which is faster, ${p1.name} or ${p2.name}?`;
-    if (n.includes("medication")) return `Which has more medication options, ${p1.name} or ${p2.name}?`;
-    if (n.includes("medical") || n.includes("care") || n.includes("support") || n.includes("monitor")) return `Which has better medical support, ${p1.name} or ${p2.name}?`;
-    if (n.includes("customer") || n.includes("experience") || n.includes("service") || n.includes("personal")) return `Which has better customer reviews, ${p1.name} or ${p2.name}?`;
-    if (n.includes("flexib")) return `Which offers more flexible plans, ${p1.name} or ${p2.name}?`;
-    if (n.includes("focus") || n.includes("simplic")) return `Which is more focused on weight loss, ${p1.name} or ${p2.name}?`;
-    if (n.includes("range") || n.includes("beyond")) return `Does ${p2.name} offer more than weight loss compared to ${p1.name}?`;
-    if (n.includes("brand") || n.includes("track") || n.includes("pharmacy")) return `Which is the more established brand, ${p1.name} or ${p2.name}?`;
-    if (n.includes("transparen") || n.includes("certif")) return `Which is more transparent about pricing, ${p1.name} or ${p2.name}?`;
-    return `${name}: ${p1.name} or ${p2.name}?`;
+    if (n.includes("pric") || n.includes("value")) return `Does ${p1.name} cost less than ${p2.name}?`;
+    if (n.includes("ship") || n.includes("speed")) return `Does ${p1.name} or ${p2.name} deliver medication faster?`;
+    if (n.includes("medication")) return `Does ${p1.name} or ${p2.name} offer more GLP-1 medications?`;
+    if (n.includes("medical") || n.includes("care") || n.includes("support") || n.includes("monitor")) return `Does ${p1.name} or ${p2.name} give you more clinical support?`;
+    if (n.includes("customer") || n.includes("experience") || n.includes("service") || n.includes("personal")) return `Do customers rate ${p1.name} or ${p2.name} higher?`;
+    if (n.includes("flexib")) return `Are ${p1.name} or ${p2.name} plans easier to change or cancel?`;
+    if (n.includes("focus") || n.includes("simplic")) return `Is ${p1.name} or ${p2.name} more dedicated to weight loss?`;
+    if (n.includes("range") || n.includes("beyond")) return `Does ${p2.name} treat more than weight loss, unlike ${p1.name}?`;
+    if (n.includes("brand") || n.includes("track") || n.includes("pharmacy")) return `Is ${p1.name} or ${p2.name} the longer-established company?`;
+    if (n.includes("transparen") || n.includes("certif")) return `Is ${p1.name} or ${p2.name} clearer about what you will pay?`;
+    return `${p1.name} or ${p2.name}: which wins on ${name.toLowerCase()}?`;
   };
 
   const battleFaqs = [
-    { question: `Which is better, ${matchupLabel}?`, answer: battle.verdict },
+    { question: `${matchupLabel}: which GLP-1 provider is better?`, answer: battle.verdict },
     ...battle.categories.map((cat) => ({ question: catToQuestion(cat.name), answer: cat.explanation })),
   ].filter((f, i, arr) => !!f.answer && arr.findIndex((x) => x.question === f.question) === i);
 
@@ -714,7 +699,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       "@type": "Organization",
       name: ctx.brandName,
       url: ctx.origin,
-      logo: { "@type": "ImageObject", url: `${ctx.origin}/treatmentshub.png` },
+      logo: { "@type": "ImageObject", url: `${ctx.origin}/logo.png` },
     },
     mainEntityOfPage: canonicalUrl(ctx, `/${battle.slug}`),
   };
@@ -774,7 +759,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               {config.experts && config.experts.length > 0 && (
                 <>
                   <span>
-                    By{" "}
+                    Written by{" "}
                     <Link href={hubLink(ctx, "/about")} className="font-medium text-gray-600 underline-offset-2 hover:text-[#0C4B75] hover:underline">
                       The {ctx.brandTeam.replace(/\s+Team$/i, "")} Research Team
                     </Link>
@@ -802,7 +787,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <div className="mb-8 max-w-[820px] overflow-hidden rounded-2xl border border-[#0C4B75]/20 bg-white shadow-sm">
               <div className="flex items-center justify-between gap-3 border-b border-gray-100 bg-[#F3F9FD] px-5 py-3 sm:px-6">
                 <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#0C4B75]">
-                  Our top choice
+                  Our recommendation
                 </p>
                 {showShortAnswerScores && (
                   <span className="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-2.5 py-1 text-[11.5px] font-bold text-[#0C4B75] shadow-sm ring-1 ring-[#0C4B75]/15">
@@ -821,31 +806,28 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   />
                 </div>
                 <p className="text-[15.5px] leading-[1.8] text-gray-800 sm:text-[16px]">
-                  <span className="font-bold text-[#191919]">{verdictWinner.name}</span> is our top
-                  choice for most people: <BoldKeyFacts text={shortAnswerReason.replace(/\.$/, "")} />.{" "}
-                  Full reasoning, pricing and the cases where {verdictRunnerUp.name} wins are below.
+                  <span className="font-bold text-[#191919]">{verdictWinner.name}</span> is the provider we
+                  recommend to most readers. The main reason: <BoldKeyFacts text={shortAnswerReason.replace(/\.$/, "")} />.{" "}
+                  Scroll down for the full reasoning, the prices, and the situations where {verdictRunnerUp.name} is the better pick.
                 </p>
               </div>
             </div>
           )}
 
           {/* ───── REDDIT COMMUNITY CAROUSEL (verified threads only) ───── */}
-          {ctx.vertical === "weight-loss" && (
-            <RedditThreadCarousel
-              providers={[p1, p2]}
-              reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
-            />
-          )}
+          <RedditThreadCarousel
+            providers={[p1, p2]}
+            reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
+          />
 
           {/* ───── EVIDENCE -> CONCLUSION SYNTHESIS ─────
               Reads the threads shown directly above and says what keeps coming
               up - one written summary per provider, from the same registry as
               the threads themselves, so it only renders on verified material. */}
-          {ctx.vertical === "weight-loss" &&
-            [p1, p2].some((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes) && (
+          {[p1, p2].some((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes) && (
               <div className="mb-14 max-w-[820px] rounded-2xl border border-gray-200 bg-gray-50/60 p-5 sm:p-6">
                 <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-                  What we found
+                  What Reddit users keep saying
                 </p>
                 <div className="space-y-3 text-[14px] leading-[1.7] text-gray-600">
                   {[p1, p2].map((p) =>
@@ -869,7 +851,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <thead>
                   <tr className="border-b-2 border-gray-200 bg-gray-50/80">
                     <th className="w-[26%] py-3 pl-4 pr-2 text-[11px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:w-[22%] sm:py-3.5 sm:text-[12px]">
-                      At a glance
+                      Key facts
                     </th>
                     <th className="py-3 px-2 text-[13px] font-bold text-[#191919] sm:py-3.5 sm:px-3 sm:text-[15px]">{p1.name}</th>
                     <th className="py-3 px-2 pr-4 text-[13px] font-bold text-[#191919] sm:py-3.5 sm:px-3 sm:text-[15px]">{p2.name}</th>
@@ -892,10 +874,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               {/* Freshness line - SERP winners date-stamp their prices; ours
                   are verified against published rates on every content pass. */}
               <p className="border-t border-gray-100 px-4 py-2.5 text-[11.5px] text-gray-400">
-                Prices are the providers&rsquo; published rates at our last verification - confirm the
-                final figure at checkout, as offers change.{" "}
+                These are the published prices from our most recent check. Offers change, so confirm the
+                final amount at checkout.{" "}
                 <Link href={"/how-we-rank"} className="font-medium text-gray-500 underline underline-offset-2 hover:text-[#0C4B75]">
-                  How we verify prices
+                  Our price-checking method
                 </Link>
               </p>
             </div>
@@ -937,7 +919,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       starSize={16}
                     />
                   )}
-                  {ctx.vertical !== "hearing-aids" && !OTC_PROVIDERS.has(provider.id) && <LicensedTelehealthBadge />}
+                  <LicensedTelehealthBadge />
                 </div>
 
                 <p className="mb-4 text-[14px] leading-relaxed text-gray-500">
@@ -974,18 +956,16 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <div className="mb-14">
             <div className="mb-8 max-w-[760px]">
               <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-                The full breakdown
+                Provider profiles
               </p>
               <h2 className="text-[24px] font-bold text-[#191919]">
-                {p1.name} vs {p2.name}: a closer look at each
+                What do {p1.name} and {p2.name} each offer?
               </h2>
               <p className="mt-3 text-[15px] leading-[1.8] text-gray-600">
-                {ctx.vertical === "weight-loss"
-                  ? "Both are solid GLP-1 weight loss providers, and honestly you can’t go too wrong either way."
-                  : "Both are credible providers in this category, and the right pick comes down to fit."}{" "}
-                So instead of crowning a &ldquo;winner,&rdquo; here&rsquo;s the
-                real rundown on each - what you get, what it actually costs, and what
-                real customers are saying - so you can pick the one that fits <em>you</em>.
+                {p1.name} and {p2.name} are both reputable GLP-1 weight loss providers, so
+                neither is a bad choice. Below, each one gets its own profile: what is included,
+                the real monthly cost and what paying customers report, so you can match the
+                provider to <em>your</em> priorities.
               </p>
             </div>
 
@@ -1025,11 +1005,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                               />
                             </div>
                           )}
-                          {ctx.vertical !== "hearing-aids" && !OTC_PROVIDERS.has(provider.id) && (
-                            <div className="border-l border-gray-200 pl-4">
-                              <LicensedTelehealthBadge />
-                            </div>
-                          )}
+                          <div className="border-l border-gray-200 pl-4">
+                            <LicensedTelehealthBadge />
+                          </div>
                         </div>
                         <ProviderCta
                           href={provider.affiliateUrl}
@@ -1046,9 +1024,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
                       {/* Intro */}
                       <h3 className="mb-2.5 text-[20px] font-bold text-[#191919]">
-                        What is {provider.name}?
+                        How does {provider.name} work?
                       </h3>
-                      <ReadMoreProse text={lead} label={`Read the full ${provider.name} breakdown`} />
+                      <ReadMoreProse text={lead} label={`More about ${provider.name}`} />
 
                       {/* Trust badges */}
                       {badges.length > 0 && (
@@ -1070,7 +1048,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         <div>
                           <h4 className="mb-3 flex items-center gap-2 text-[15px] font-bold text-[#191919]">
                             <Check className="h-4 w-4 text-emerald-500" strokeWidth={2.5} />
-                            What you get with {provider.name}
+                            Included with {provider.name}
                           </h4>
                           <ul className="space-y-2">
                             {features.map((f, i) => (
@@ -1085,7 +1063,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                           <div>
                             <h4 className="mb-3 flex items-center gap-2 text-[15px] font-bold text-[#191919]">
                               <Sparkles className="h-4 w-4 text-[#0C4B75]" strokeWidth={2} />
-                              Who {provider.name} is best for
+                              {provider.name} suits you if
                             </h4>
                             <ul className="space-y-2">
                               {bestFor.map((f, i) => (
@@ -1109,7 +1087,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                             <div className="mb-4 [&>div]:mb-0 [&_p]:text-[14px] [&_p]:leading-[1.7] [&_p]:text-gray-500">
                               <ReadMoreProse
                                 text={review.pricingSummary}
-                                label="Full pricing details"
+                                label="See all pricing details"
                                 visibleSentences={1}
                               />
                             </div>
@@ -1162,7 +1140,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                           {pros.length > 0 && (
                             <div className="rounded-xl border border-emerald-100 bg-emerald-50/40 p-5">
                               <p className="mb-3 text-[14px] font-bold text-emerald-800">
-                                What we like about {provider.name}
+                                {provider.name} strengths
                               </p>
                               <ul className="space-y-2">
                                 {pros.map((pt, i) => (
@@ -1177,7 +1155,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                           {cons.length > 0 && (
                             <div className="rounded-xl border border-gray-200 bg-gray-50/60 p-5">
                               <p className="mb-3 text-[14px] font-bold text-gray-800">
-                                Worth keeping in mind
+                                Possible drawbacks
                               </p>
                               <ul className="space-y-2">
                                 {cons.map((c, i) => (
@@ -1196,7 +1174,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       {reviewCount > 0 && (
                         <div className="mb-8">
                           <h4 className="mb-4 text-[17px] font-bold text-[#191919]">
-                            What real {provider.name} customers are saying
+                            {provider.name} reviews from Trustpilot customers
                           </h4>
                           <TrustpilotCarousel
                             providerName={provider.name}
@@ -1217,7 +1195,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         sourceFlow="battle_page"
                         className="flex h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61]"
                       >
-                        Get started with {provider.name}
+                        Start your {provider.name} assessment
                         <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
                       </ProviderCta>
                     </div>
@@ -1230,14 +1208,14 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {/* ───── 12-MONTH COST MATH ─────
               What a realistic course of treatment costs at each provider -
               the number searchers actually decide on, not the headline rate. */}
-          {ctx.vertical === "weight-loss" && BATTLE_COST_MATH[slug] && (
+          {BATTLE_COST_MATH[slug] && (
             <div className="mb-12">
               <h2 className="mb-1.5 text-[22px] font-bold text-[#191919]">
-                What you actually pay over 12 months
+                How much does {p1.name} vs {p2.name} cost over a year?
               </h2>
               <p className="mb-4 max-w-[680px] text-[14px] text-gray-500">
-                Headline prices are the least useful number in a comparison - this is the real math
-                over a course of treatment, promo conditions applied exactly as published.
+                The advertised monthly price only tells part of the story. These totals add up a full
+                course of treatment, with every promo condition applied as the provider publishes it.
               </p>
               <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
                 <table className="w-full min-w-[520px] border-collapse text-left">
@@ -1267,28 +1245,26 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               Shopping-style product cards for THIS matchup's two providers
               only - a battle page sells the contenders, not the whole market.
               Weight-loss only (the catalog is a WL registry). */}
-          {ctx.vertical === "weight-loss" && (
-            <div className="mb-12">
-              <ProductCarousel
-                providers={config.providers}
-                title={`Shop ${p1.name} and ${p2.name} plans`}
-                subtitle="Both contenders' published plans, cheapest first - conditions under every price."
-                onlyProviderIds={[p1.id, p2.id]}
-                pageType="battle"
-                withSchema
-                pageUrl={canonicalUrl(ctx, `/${slug}`)}
-              />
-            </div>
-          )}
+          <div className="mb-12">
+            <ProductCarousel
+              providers={config.providers}
+              title={`${p1.name} and ${p2.name} plans and prices`}
+              subtitle="Every published plan from both providers, lowest price first, with the terms listed under each price."
+              onlyProviderIds={[p1.id, p2.id]}
+              pageType="battle"
+              withSchema
+              pageUrl={canonicalUrl(ctx, `/${slug}`)}
+            />
+          </div>
 
           {/* ───── FEATURE COMPARISON TABLE ───── */}
           {battle.features && battle.features.length > 0 && (
             <div className="mb-14">
               <h2 className="text-[22px] font-bold leading-tight text-[#191919] sm:text-[24px]">
-                {p1.name} vs. {p2.name}: What&rsquo;s the Difference?
+                How are {p1.name} and {p2.name} different?
               </h2>
               <p className="mt-2 mb-5 max-w-[640px] text-[15px] leading-relaxed text-gray-500">
-                The key differences to consider when comparing the two providers.
+                A feature-by-feature table. Rows where the two providers match are grayed out, so the real differences stand out.
               </p>
 
               <table className="w-full table-fixed border-collapse text-left">
@@ -1340,10 +1316,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {verdictWinner && verdictRunnerUp && (winnerPts.length > 0 || runnerUpPts.length > 0) && (
             <div className="mb-14 max-w-[820px]">
               <h2 className="mb-1.5 text-[22px] font-bold text-[#191919]">
-                So which one should you pick?
+                {p1.name} or {p2.name}: which fits you?
               </h2>
               <p className="mb-4 text-[14px] text-gray-500">
-                Find the line that sounds like you - that&rsquo;s your answer.
+                Pick the statement that matches your situation, and the provider beside it is your best fit.
               </p>
               <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
                 {[
@@ -1367,7 +1343,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {/* ───── EXPERT INTRO ───── */}
           <div className="mb-8 max-w-[760px]">
             <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-              Here&rsquo;s the short version
+              Overview
             </p>
             <ReadableProse text={battle.intro} paragraphClassName="text-[16px] leading-[1.85] text-gray-600" />
           </div>
@@ -1379,11 +1355,11 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {battle.winnerId && verdictWinner && verdictRunnerUp && winnerPts.length > 0 && runnerUpPts.length > 0 && (
             <div className="mb-12 max-w-[820px] rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
               <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-                The quick answer
+                Summary by priority
               </p>
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
-                  <p className="mb-2 text-[14px] font-bold text-[#191919]">Go with {verdictWinner.name} if you want</p>
+                  <p className="mb-2 text-[14px] font-bold text-[#191919]">Pick {verdictWinner.name} for</p>
                   <ul className="space-y-2">
                     {winnerPts.slice(0, 3).map((pt, i) => (
                       <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.65] text-gray-600">
@@ -1394,7 +1370,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </ul>
                 </div>
                 <div>
-                  <p className="mb-2 text-[14px] font-bold text-[#191919]">{verdictRunnerUp.name} makes more sense if you want</p>
+                  <p className="mb-2 text-[14px] font-bold text-[#191919]">Pick {verdictRunnerUp.name} for</p>
                   <ul className="space-y-2">
                     {runnerUpPts.slice(0, 3).map((pt, i) => (
                       <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.65] text-gray-600">
@@ -1407,10 +1383,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </div>
               <p className="mt-4 border-t border-gray-100 pt-3.5 text-[14px] text-gray-800">
                 <span className="font-bold text-[#191919]">
-                  Had to pick one for most people? {verdictWinner.name}.
+                  Our overall pick for most people: {verdictWinner.name}.
                 </span>{" "}
                 <span className="text-gray-500">
-                  The numbers and customer feedback below are why - and where {verdictRunnerUp.name} wins instead.
+                  The prices and customer feedback on this page explain why, and when {verdictRunnerUp.name} comes out ahead.
                 </span>
               </p>
             </div>
@@ -1440,7 +1416,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   />
                 </div>
                 <span className={`flex items-center gap-1 text-[13px] font-bold ${textColor} group-hover:underline`}>
-                  Visit Site
+                  Go to Site
                   <ArrowRight className="h-3 w-3" strokeWidth={2.5} />
                 </span>
               </ProviderCta>
@@ -1451,7 +1427,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {battleFaqs.length > 0 && (
             <div className="mb-14">
               <h2 className="mb-6 text-[24px] font-bold text-[#191919]">
-                {matchupLabel}: FAQs
+                {matchupLabel}: questions people ask
               </h2>
               <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
                 {battleFaqs.map((f, i) => (
@@ -1469,37 +1445,35 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               money pages it has been slow to index on the new domain (Oct 2026
               URL Inspection: altRx review and the tirzepatide guide "unknown to
               Google" while this template's pages are indexed). */}
-          {ctx.vertical === "weight-loss" && (
-            <div className="mb-10">
-              <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">Keep researching</h2>
-              <p className="mb-4 text-[14px] text-gray-500">The pages readers of this comparison open next.</p>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {[
-                  { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight verified compounded prices from $89, plus every brand-name Zepbound route." },
-                  { href: "/reviews/altrx", title: "altRx review", blurb: "$89 semaglutide, $149 tirzepatide, and the only brand-name shelf next to compounded plans." },
-                  { href: "/glp1-provider-support", title: "Provider customer support, compared", blurb: "What captured Trustpilot reviews say about support, shipping and billing, by provider." },
-                  { href: "/articles/zepbound-price-online", title: "Zepbound price online", blurb: "Brand Zepbound at $1,249 to $1,599 cash, the Ro pen route, and the compounded ladder." },
-                ].map((g) => (
-                  <Link
-                    key={g.href}
-                    href={hubLink(ctx, g.href)}
-                    className="group rounded-xl border border-gray-200 bg-white p-4 transition-shadow hover:shadow-md"
-                  >
-                    <p className="flex items-center justify-between text-[15px] font-bold text-[#191919] group-hover:text-[#0C4B75]">
-                      {g.title}
-                      <ArrowRight className="h-4 w-4 shrink-0 text-gray-400 group-hover:text-[#0C4B75]" strokeWidth={2.5} />
-                    </p>
-                    <p className="mt-1 text-[13px] leading-snug text-gray-500">{g.blurb}</p>
-                  </Link>
-                ))}
-              </div>
+          <div className="mb-10">
+            <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">Read next</h2>
+            <p className="mb-4 text-[14px] text-gray-500">Where readers of this comparison usually go after this page.</p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {[
+                { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight checked compounded tirzepatide prices starting at $89, plus each brand-name Zepbound option." },
+                { href: "/reviews/altrx", title: "altRx review", blurb: "Semaglutide at $89, tirzepatide at $149, and brand-name drugs sold alongside compounded plans." },
+                { href: "/glp1-provider-support", title: "GLP-1 provider support compared", blurb: "How each provider handles support, shipping and billing, based on saved Trustpilot reviews." },
+                { href: "/articles/zepbound-price-online", title: "Zepbound price online", blurb: "Cash prices of $1,249 to $1,599 for brand Zepbound, the ro pen option and cheaper compounded tiers." },
+              ].map((g) => (
+                <Link
+                  key={g.href}
+                  href={hubLink(ctx, g.href)}
+                  className="group rounded-xl border border-gray-200 bg-white p-4 transition-shadow hover:shadow-md"
+                >
+                  <p className="flex items-center justify-between text-[15px] font-bold text-[#191919] group-hover:text-[#0C4B75]">
+                    {g.title}
+                    <ArrowRight className="h-4 w-4 shrink-0 text-gray-400 group-hover:text-[#0C4B75]" strokeWidth={2.5} />
+                  </p>
+                  <p className="mt-1 text-[13px] leading-snug text-gray-500">{g.blurb}</p>
+                </Link>
+              ))}
             </div>
-          )}
+          </div>
 
           {/* ───── RELATED COMPARISONS ───── */}
           {(relatedBattles.length > 0 || relatedTrios.length > 0) && (
             <div className="mb-10">
-              <h2 className="mb-5 text-[20px] font-bold text-[#191919]">Related Comparisons</h2>
+              <h2 className="mb-5 text-[20px] font-bold text-[#191919]">More Provider Matchups</h2>
               {/* 3-way comparisons featuring this exact matchup lead the list -
                   the reader already cares about both providers, so "add a third
                   option" is the highest-intent next click. */}
@@ -1520,7 +1494,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         ))}
                       </div>
                       <span className="ml-auto inline-flex shrink-0 items-center gap-1 text-[13px] font-semibold text-[#0C4B75] group-hover:underline">
-                        Compare all three
+                        See all three
                         <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                       </span>
                     </Link>
@@ -1540,7 +1514,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       <span>{bp2.name}</span>
                     </div>
                     <span className="ml-auto inline-flex items-center gap-1 text-[13px] font-semibold text-[#0C4B75] group-hover:underline">
-                      Compare
+                      See matchup
                       <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                     </span>
                   </Link>
@@ -1552,15 +1526,15 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {/* Related links */}
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 py-4 text-[13px]">
             <Link href={hubLink(ctx, `/reviews/${p1.id}`)} className="font-semibold text-[#0C4B75] hover:underline">
-              {p1.name} Review
+              Our {p1.name} Review
             </Link>
             <span className="text-gray-400">|</span>
             <Link href={hubLink(ctx, `/reviews/${p2.id}`)} className="font-semibold text-[#0C4B75] hover:underline">
-              {p2.name} Review
+              Our {p2.name} Review
             </Link>
             <span className="text-gray-400">|</span>
             <Link href={hubLink(ctx, "/")} className="font-semibold text-[#0C4B75] hover:underline">
-              Compare All Providers
+              Full Provider Ranking
             </Link>
           </div>
 

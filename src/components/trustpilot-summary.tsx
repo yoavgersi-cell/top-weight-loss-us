@@ -43,24 +43,24 @@ export function TrustpilotSummary({
 
   return (
     <div className={`rounded-xl border border-gray-200 bg-white p-4 sm:p-5 ${className}`}>
-      <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Trustpilot summary</p>
+      <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Trustpilot at a glance</p>
       <p className="mt-1.5 text-[15px] leading-relaxed text-gray-800">
         {rating && reviewCount ? (
           <>
-            {providerName} holds a <strong>{rating} out of 5 across {reviewCount} reviews</strong> on its public Trustpilot profile.{" "}
+            {providerName} is rated <strong>{rating} out of 5 from {reviewCount} reviews</strong> on its public Trustpilot page.{" "}
           </>
         ) : rating ? (
           <>
-            {providerName} holds a <strong>{rating} out of 5</strong> on its public Trustpilot profile.{" "}
+            {providerName} is rated <strong>{rating} out of 5</strong> on its public Trustpilot page.{" "}
           </>
         ) : null}
-        Of the <strong>{n} reviews we captured verbatim</strong>
+        We saved <strong>{n} of those reviews word for word</strong>
         {range && (
           <>
             {" "}(dated {fmt(range.from)} to {fmt(range.to)})
           </>
         )}
-        , {distText}: {pct(positive)}% rate it 4 or 5 stars and {pct(critical)}% rate it 1 or 2 stars. Reviewer names are shortened; every captured review, including the lowest-rated, is shown below.
+        . They break down as {distText}, so {pct(positive)}% give 4 or 5 stars and {pct(critical)}% give 1 or 2 stars. All of them appear below, the lowest-rated included, with reviewer names shortened.
       </p>
       <div className="mt-3 space-y-1">
         {dist.map((d) => (

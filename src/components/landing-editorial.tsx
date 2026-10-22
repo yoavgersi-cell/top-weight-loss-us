@@ -31,21 +31,21 @@ export function LandingEditorial({ sections }: LandingEditorialProps) {
       <hr className="mb-8 border-gray-200" />
 
       <p className="text-[15px] text-gray-500">
-        We continuously review and update our recommendations. Browse all{" "}
+        Our rankings are rechecked on a rolling basis. For deeper research, read our{" "}
         <Link
           href="/articles"
           className="font-semibold text-[#0C4B75] hover:underline"
         >
-          weight loss articles
-        </Link>{" "}
-        for more research and guides, or{" "}
+          weight loss guides
+        </Link>
+        , or{" "}
         <Link
           href="/find-your-match"
           className="font-semibold text-[#0C4B75] hover:underline"
         >
-          take our matching quiz
+          answer a few quick questions
         </Link>{" "}
-        for a personalized recommendation.
+        to get a provider suggestion that fits your goals and budget.
       </p>
     </div>
   );

@@ -9,7 +9,7 @@ export function DisclosureBar() {
   return (
     <>
       <div className="bg-[#f0f4f8] border-b-[1.5px] border-[#cdd7e1] px-4 py-1.5 sm:py-2 text-center text-[10px] sm:text-[13px] leading-tight sm:leading-normal text-gray-600">
-        Some providers featured on this site may compensate us. This may affect the order and placement of listings but does not influence our editorial ratings or reviews.{" "}
+        We may earn a commission from providers listed here, which can affect where they appear but never our ratings or reviews.{" "}
         <button
           onClick={() => setIsOpen(true)}
           className="font-bold text-[#191919] underline underline-offset-2 hover:text-[#0C4B75]"
@@ -36,22 +36,22 @@ export function DisclosureBar() {
 
             <div className="space-y-4 text-[14px] leading-[1.7] text-gray-600">
               <p>
-                Top Weight Loss is an independent comparison website designed to help consumers explore and evaluate weight loss treatment providers. We research, review, and compare available programs, services, and treatment options to make the decision process easier.
+                Top Weight Loss compares online GLP-1 and medical weight loss programs in the US. We look up each provider&rsquo;s published prices, plans and policies, read what customers report, and set the results side by side so you can choose faster.
               </p>
               <p>
-                The information presented on this website is provided for general informational purposes only. While we strive to keep content accurate and up to date, we cannot guarantee the completeness, accuracy, or availability of every provider, offer, or treatment currently available in the market.
+                Everything here is general information, not medical advice. We work to keep each page current, but offers, prices and availability change, and we cannot promise that every provider or plan on the market is listed or that every detail is up to date.
               </p>
               <p>
-                Some of the companies featured on this website may compensate us when visitors click through to their websites or become customers. This compensation may influence how providers are displayed, ranked, or featured on our pages. However, our goal is to present useful, relevant, and transparent information that helps users make informed decisions.
+                We earn a commission from some providers when you click through to their site or sign up. Those partnerships can affect which providers appear and where they sit on a page. They do not change what we write about a provider or how we score it.
               </p>
               <p>
-                Provider names, trademarks, logos, and brand assets remain the property of their respective owners. Their appearance on this website does not imply endorsement, partnership, or sponsorship unless explicitly stated.
+                Brand names, logos and trademarks belong to their owners. Showing them here does not mean a provider endorses us, partners with us or sponsors this site unless we say so.
               </p>
               <p>
-                Our rankings, reviews, and recommendations are based on a combination of editorial research, publicly available information, pricing, treatment availability, user experience factors, and other criteria determined by our team. Not every provider operating in this industry is included on our website.
+                Rankings draw on our own research, the providers&rsquo; published information, price, which medications are offered, and the customer experience. Not every company in this market is covered.
               </p>
               <p>
-                By using this website, you agree to our Terms of Use and Privacy Policy.
+                Using this site means you accept our Terms of Use and Privacy Policy.
               </p>
             </div>
           </div>
