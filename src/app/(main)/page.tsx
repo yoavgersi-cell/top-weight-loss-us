@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
@@ -14,7 +15,7 @@ export const revalidate = 3600;
 const META_DESCRIPTION =
   "Compare 2026's best online GLP-1 weight loss providers. Verified prices from $49/mo semaglutide and $89/mo tirzepatide, real reviews and side-by-side comparisons.";
 
-export async function generateMetadata(): Promise<Metadata> {
+async function baseMetadata(): Promise<Metadata> {
   const config = await getConfig();
   const url = canonicalUrl(ROOT_CONTEXT, "/");
   return {
@@ -103,4 +104,10 @@ export default async function HomePage() {
       </ComparisonLayout>
     </div>
   );
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function generateMetadata(): Promise<Metadata> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return withSeo("/", await baseMetadata());
 }

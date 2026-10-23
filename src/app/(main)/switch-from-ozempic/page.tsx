@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
@@ -20,12 +21,12 @@ const TITLE = "Switch From Ozempic to Compounded Semaglutide";
 const DESCRIPTION =
   "Spending $1,000+/month on Ozempic or Wegovy? Compounded semaglutide, the same GLP-1 molecule, costs $49-$199/month online. Here is how the switch works in 2026.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/switch-from-ozempic", {
   title: { absolute: `${TITLE} | Top Weight Loss` },
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
   openGraph: { title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
-};
+});
 
 const steps: { title: string; detail: string }[] = [
   {

@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
@@ -26,12 +27,12 @@ const DESCRIPTION =
 const PUBLISHED = "2026-09-24";
 const UPDATED = "2026-09-24";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/how-to-choose-a-glp1-provider", {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
   openGraph: { title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
-};
+});
 
 // ───── The 12-point checklist ─────
 // Every "how to verify" is something a reader can do themselves in minutes.

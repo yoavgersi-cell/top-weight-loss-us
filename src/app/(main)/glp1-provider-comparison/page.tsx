@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
@@ -34,12 +35,12 @@ const UPDATED = "2026-10-17";
 const TRUSTPILOT_CHECKED = "October 12, 2026";
 const TERMS_REVIEWED = "October 12, 2026";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/glp1-provider-comparison", {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
   openGraph: { title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
-};
+});
 
 type Pid = "wellmedr" | "embody" | "eden" | "directmeds" | "medvi" | "trimrx" | "altrx" | "ro";
 

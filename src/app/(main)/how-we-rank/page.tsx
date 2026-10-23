@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -13,7 +14,7 @@ export const revalidate = 60;
 
 const CANONICAL = "https://www.topweightloss.us/how-we-rank";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/how-we-rank", {
   title: "How We Rank GLP-1 Weight Loss Providers: Methodology",
   description:
     "How Top Weight Loss scores GLP-1 weight loss providers: 6 weighted factors, prices verified on each provider's site, and how head-to-head winners are picked.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     url: CANONICAL,
     type: "article",
   },
-};
+});
 
 const FACTORS = [
   { category: "Medical Credibility", weight: "25%", desc: "Oversight by licensed prescribers, how thorough the medical evaluation is, ongoing monitoring, pharmacy standards, and third-party certifications such as LegitScript." },

@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import { REVIEWERS, REVIEW_LOG, reviewerDisplayName, reviewerPath, reviewerPersonSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -22,7 +23,7 @@ export const revalidate = 60;
 
 const CANONICAL = "https://www.topweightloss.us/about";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/about", {
   title: "About Top Weight Loss: How We Verify GLP-1 Prices",
   description:
     "Top Weight Loss compares US GLP-1 weight loss providers using prices checked on each provider's own site, verbatim customer reviews and a named medical reviewer.",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     url: CANONICAL,
     type: "website",
   },
-};
+});
 
 function LinkedInMark({ className }: { className?: string }) {
   return (

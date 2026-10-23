@@ -1,15 +1,16 @@
+import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 const CANONICAL = "https://www.topweightloss.us/disclaimer";
 const UPDATED = "2026-10-04";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/disclaimer", {
   title: "Disclaimer: Affiliate, Medical and Review Policies",
   description:
     "Top Weight Loss is funded by affiliate commissions and is not medical advice. See what commissions can and cannot affect and how reviews and prices are used.",
   alternates: { canonical: CANONICAL },
-};
+});
 
 const ext = "font-semibold text-[#0C4B75] hover:underline";
 

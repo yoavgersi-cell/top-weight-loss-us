@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
@@ -10,12 +11,12 @@ const DESCRIPTION =
   "Who checks the medical claims on Top Weight Loss, what the review covers and excludes, when a page is marked reviewed with a date, and how to report an error.";
 const UPDATED = "2026-10-04";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/medical-review-policy", {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
   openGraph: { title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
-};
+});
 
 export default function MedicalReviewPolicyPage() {
   const schema = {

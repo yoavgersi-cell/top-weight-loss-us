@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -18,7 +19,7 @@ export function generateStaticParams() {
   return REVIEWERS.map((r) => ({ slug: r.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+async function baseMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const r = getReviewer(slug);
   if (!r) return {};
@@ -224,4 +225,10 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
       </div>
     </div>
   );
+}
+
+export async function generateMetadata(props: { params: Promise<Record<string, string>> }): Promise<Metadata> {
+  const params = props.params;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return withSeo(`/reviewers/${(await params).slug}`, await baseMetadata(props as any));
 }

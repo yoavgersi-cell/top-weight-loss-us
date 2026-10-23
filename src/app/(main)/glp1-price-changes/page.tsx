@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, History, ShieldCheck } from "lucide-react";
@@ -29,12 +30,12 @@ const entries = [...PRICE_CHANGELOG].sort((a, b) => b.date.localeCompare(a.date)
 const latest = entries[0]?.date ?? PRICE_INDEX_VERIFIED;
 const earliest = entries[entries.length - 1]?.date ?? PRICE_INDEX_VERIFIED;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/glp1-price-changes", {
   title: `GLP-1 Price Changes 2026: ${entries.length} Verified Price Updates`,
   description: `${entries.length} verified changes to online semaglutide and tirzepatide prices since ${monthLabel(earliest)}, each dated with the old and new listing. Index checked ${longDate(PRICE_INDEX_VERIFIED)}.`,
   alternates: { canonical: CANONICAL },
   openGraph: { title: `GLP-1 Price Changes 2026: ${entries.length} Verified Updates`, description: "A dated record of each confirmed change to online GLP-1 provider pricing, showing the previous and the new listing.", url: CANONICAL, type: "article" },
-};
+});
 
 export default async function PriceChangesPage() {
   const config = await getConfig();

@@ -1,14 +1,15 @@
+import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 const CANONICAL = "https://www.topweightloss.us/terms";
 const UPDATED = "2026-10-04";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo("/terms", {
   title: "Terms of Use",
   description: "The terms for using topweightloss.us: information only, not medical advice, no warranty, independent third-party providers, liability limits and content use.",
   alternates: { canonical: CANONICAL },
-};
+});
 
 const ext = "font-semibold text-[#0C4B75] hover:underline";
 

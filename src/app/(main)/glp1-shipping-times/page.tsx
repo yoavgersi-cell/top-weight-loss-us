@@ -1,3 +1,4 @@
+import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Truck, ShieldCheck, MessageSquareQuote } from "lucide-react";
@@ -84,7 +85,7 @@ function buildRows(providers: Provider[]): Row[] {
     });
 }
 
-export async function generateMetadata(): Promise<Metadata> {
+async function baseMetadata(): Promise<Metadata> {
   const config = await getConfig();
   const rows = buildRows(config.providers);
   const total = rows.reduce((s, r) => s + r.mentions.length, 0);
@@ -285,4 +286,10 @@ export default async function ShippingTimesPage() {
       </div>
     </div>
   );
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function generateMetadata(): Promise<Metadata> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return withSeo("/glp1-shipping-times", await baseMetadata());
 }
