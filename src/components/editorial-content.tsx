@@ -60,7 +60,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
           full provider reviews
         </Link>{" "}
         cover each program in detail, and head-to-heads such as{" "}
-        <Link href="/altrx-vs-embody" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/compare/altrx-vs-embody" className="font-semibold text-[#0C4B75] hover:underline">
           altRx vs embody
         </Link>{" "}show two programs side by side. Want the evidence without scores? The{" "}
         <Link href="/glp1-provider-comparison" className="font-semibold text-[#0C4B75] hover:underline">
@@ -227,13 +227,13 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       </ul>
       <p className="mb-8">
         Side-by-side comparisons such as{" "}
-        <Link href="/altrx-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/compare/altrx-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
           altRx vs ro
         </Link>,{" "}
-        <Link href="/altrx-vs-trimrx" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/compare/altrx-vs-trimrx" className="font-semibold text-[#0C4B75] hover:underline">
           altRx vs TrimRx
         </Link>{" "}and{" "}
-        <Link href="/embody-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/compare/embody-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
           embody vs ro
         </Link>{" "}
         make the differences easier to see before you decide.

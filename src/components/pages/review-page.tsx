@@ -1190,7 +1190,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     return (
                       <Link
                         key={battle.slug}
-                        href={hubLink(ctx, `/${battle.slug}`)}
+                        href={hubLink(ctx, `/compare/${battle.slug}`)}
                         className="flex items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
                       >
                         <span className="truncate">{provider.name} vs {otherProvider?.name}</span>

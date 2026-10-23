@@ -279,7 +279,7 @@ export const brandClusterPart2: Article[] = [
       },
       {
         heading: "Who should choose HealthRx?",
-        body: `<p>HealthRx checks out: LegitScript-certified, clinician-gated and <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">filled by 503A pharmacies</a>, with clean behavior before payment and pricing that shows its catch openly ($1,188 due at checkout, printed directly under the $99).</p><p>It suits someone who has already committed to a year of treatment and wants the lowest committed rate with premium shipping. If you are not there yet, take the free assessment, then compare the month-to-month providers first.</p><p class="cta-row"><a href="/reviews/healthrx">→ Read our full HealthRx review: plans, process and fine print</a></p><p class="cta-row"><a href="/healthrx-vs-medvi">→ Compare HealthRx head to head with Medvi</a></p><p>General information only, not medical advice.</p>`,
+        body: `<p>HealthRx checks out: LegitScript-certified, clinician-gated and <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">filled by 503A pharmacies</a>, with clean behavior before payment and pricing that shows its catch openly ($1,188 due at checkout, printed directly under the $99).</p><p>It suits someone who has already committed to a year of treatment and wants the lowest committed rate with premium shipping. If you are not there yet, take the free assessment, then compare the month-to-month providers first.</p><p class="cta-row"><a href="/reviews/healthrx">→ Read our full HealthRx review: plans, process and fine print</a></p><p class="cta-row"><a href="/compare/healthrx-vs-medvi">→ Compare HealthRx head to head with Medvi</a></p><p>General information only, not medical advice.</p>`,
       },
     ],
   },
@@ -347,7 +347,7 @@ export const brandClusterPart2: Article[] = [
       },
       {
         heading: "Best HealthRx alternative for a proven track record: welludr or Medvi",
-        body: `<p>If HealthRx feels too new, two providers offer more proof.</p><ul><li><a href="/reviews/wellmedr">welludr</a> combines budget pricing, <strong>$49/month</strong> on a 12-month plan billed monthly (a commitment without the lump sum), with scale: over one million patients and a weight-loss warranty.</li><li><a href="/reviews/medvi">Medvi</a>, currently $99/month promotional and all-inclusive, has the kind of evidence that is hard to fake: <strong>4.3 on Trustpilot across 14,987 reviews</strong>, plus video visits and a dietician on every plan.</li></ul><p>Either lets a skeptical buyer pay for proof instead of promises. We compare the two directly in <a href="/healthrx-vs-medvi">HealthRx vs Medvi</a>.</p>`,
+        body: `<p>If HealthRx feels too new, two providers offer more proof.</p><ul><li><a href="/reviews/wellmedr">welludr</a> combines budget pricing, <strong>$49/month</strong> on a 12-month plan billed monthly (a commitment without the lump sum), with scale: over one million patients and a weight-loss warranty.</li><li><a href="/reviews/medvi">Medvi</a>, currently $99/month promotional and all-inclusive, has the kind of evidence that is hard to fake: <strong>4.3 on Trustpilot across 14,987 reviews</strong>, plus video visits and a dietician on every plan.</li></ul><p>Either lets a skeptical buyer pay for proof instead of promises. We compare the two directly in <a href="/compare/healthrx-vs-medvi">HealthRx vs Medvi</a>.</p>`,
       },
       {
         heading: "Where can you get tirzepatide for less than HealthRx's $179?",
@@ -388,7 +388,7 @@ export const brandClusterPart2: Article[] = [
       },
       {
         heading: "Who should choose Sprout, and who should look elsewhere?",
-        body: `<p>Sprout is legitimate, with clear caveats. On the plus side: a licensed-provider review before any prescription, prices that hold, shipping within 2 days, and reviews that name real, reachable staff. On the minus side: limited public proof, with a 4.1 across 188 Trustpilot reviews and no million-patient claim.</p><p><strong>Choose Sprout</strong> if speed, a personal touch and the option to move to Wegovy matter most to you. <strong>Look elsewhere</strong> if you are risk-averse and want a provider with a much larger published record.</p><p class="cta-row"><a href="/reviews/sprout">→ Read our full Sprout review: plans, pricing and customer feedback</a></p><p class="cta-row"><a href="/embody-vs-sprout">→ See how Sprout compares with embody's $69 flat price</a></p><p>General information only, not medical advice.</p>`,
+        body: `<p>Sprout is legitimate, with clear caveats. On the plus side: a licensed-provider review before any prescription, prices that hold, shipping within 2 days, and reviews that name real, reachable staff. On the minus side: limited public proof, with a 4.1 across 188 Trustpilot reviews and no million-patient claim.</p><p><strong>Choose Sprout</strong> if speed, a personal touch and the option to move to Wegovy matter most to you. <strong>Look elsewhere</strong> if you are risk-averse and want a provider with a much larger published record.</p><p class="cta-row"><a href="/reviews/sprout">→ Read our full Sprout review: plans, pricing and customer feedback</a></p><p class="cta-row"><a href="/compare/embody-vs-sprout">→ See how Sprout compares with embody's $69 flat price</a></p><p>General information only, not medical advice.</p>`,
       },
     ],
   },
@@ -424,7 +424,7 @@ export const brandClusterPart2: Article[] = [
       },
       {
         heading: "Is Sprout worth $149 a month?",
-        body: `<p><strong>Sprout is worth it for:</strong> people switching providers who cannot afford a gap in shipments, anyone who wants to keep Wegovy as an option, and people who value fast support from named staff. "Shout out to Frank" shows up in more than one review for a reason.</p><p><strong>Sprout is not worth it if</strong> price per milligram is your only criterion. The same compounded semaglutide costs $49-$99 across the value tier, and over a year the difference would pay for a vacation.</p><p class="cta-row"><a href="/sprout-vs-wellmedr">→ See the starkest version of that choice: Sprout vs welludr at $49</a></p><p>General information only, not medical advice. Prices were accurate when we wrote this; confirm current terms on Sprout's site.</p>`,
+        body: `<p><strong>Sprout is worth it for:</strong> people switching providers who cannot afford a gap in shipments, anyone who wants to keep Wegovy as an option, and people who value fast support from named staff. "Shout out to Frank" shows up in more than one review for a reason.</p><p><strong>Sprout is not worth it if</strong> price per milligram is your only criterion. The same compounded semaglutide costs $49-$99 across the value tier, and over a year the difference would pay for a vacation.</p><p class="cta-row"><a href="/compare/sprout-vs-wellmedr">→ See the starkest version of that choice: Sprout vs welludr at $49</a></p><p>General information only, not medical advice. Prices were accurate when we wrote this; confirm current terms on Sprout's site.</p>`,
       },
     ],
   },
@@ -456,11 +456,11 @@ export const brandClusterPart2: Article[] = [
       },
       {
         heading: "Is welludr a better deal than Sprout?",
-        body: `<p>On price, clearly. <a href="/reviews/wellmedr">welludr</a> sells the same compounded semaglutide for $49/month on a 12-month plan, with a warranty and a 4.6 published record, saving $1,200 a year compared with Sprout.</p><p>Sprout's advantages are real but narrow:</p><ul><li>Shipping within 2 days, vs 3-5 business days at welludr.</li><li>Wegovy available on the same account.</li><li>No 12-month plan attached to its listed rate.</li></ul><p>We cover the full comparison in <a href="/sprout-vs-wellmedr">Sprout vs welludr</a>.</p>`,
+        body: `<p>On price, clearly. <a href="/reviews/wellmedr">welludr</a> sells the same compounded semaglutide for $49/month on a 12-month plan, with a warranty and a 4.6 published record, saving $1,200 a year compared with Sprout.</p><p>Sprout's advantages are real but narrow:</p><ul><li>Shipping within 2 days, vs 3-5 business days at welludr.</li><li>Wegovy available on the same account.</li><li>No 12-month plan attached to its listed rate.</li></ul><p>We cover the full comparison in <a href="/compare/sprout-vs-wellmedr">Sprout vs welludr</a>.</p>`,
       },
       {
         heading: "Is altRx better than Sprout for brand-name GLP-1s?",
-        body: `<p>Yes, on selection and price. <a href="/reviews/altrx">altRx</a> is the only other provider we rank that sells brand-name medication, and its shelf is larger and cheaper: Ozempic $1,149, Zepbound $1,249 and Wegovy $1,579. It also offers $89 compounded semaglutide with BNPL.</p><p>Sprout's one remaining edge is speed: 2 days vs 5-7. See the full breakdown in <a href="/altrx-vs-sprout">altRx vs Sprout</a>.</p><p class="cta-row"><a href="/find-your-match">→ Answer six questions and get a personalized pick</a></p><p>General information only, not medical advice. Prices were accurate when we wrote this.</p>`,
+        body: `<p>Yes, on selection and price. <a href="/reviews/altrx">altRx</a> is the only other provider we rank that sells brand-name medication, and its shelf is larger and cheaper: Ozempic $1,149, Zepbound $1,249 and Wegovy $1,579. It also offers $89 compounded semaglutide with BNPL.</p><p>Sprout's one remaining edge is speed: 2 days vs 5-7. See the full breakdown in <a href="/compare/altrx-vs-sprout">altRx vs Sprout</a>.</p><p class="cta-row"><a href="/find-your-match">→ Answer six questions and get a personalized pick</a></p><p>General information only, not medical advice. Prices were accurate when we wrote this.</p>`,
       },
     ],
   },

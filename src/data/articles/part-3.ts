@@ -104,7 +104,7 @@ export const articlesPart3: Article[] = [
       },
       {
         heading: "Is altRx a good alternative to embody?",
-        body: `<a href="/reviews/altrx">altRx</a> is the strongest alternative if you want more medication choice. altRx prices compounded semaglutide from $89/month and compounded tirzepatide from $149/month, and it also carries <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management" target="_blank" rel="noopener">brand-name options such as Zepbound and Wegovy</a>. That is a wider shelf than embody's compounded-only range. The two providers go head to head in our <a href="/altrx-vs-embody">altRx vs embody comparison</a>.`,
+        body: `<a href="/reviews/altrx">altRx</a> is the strongest alternative if you want more medication choice. altRx prices compounded semaglutide from $89/month and compounded tirzepatide from $149/month, and it also carries <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management" target="_blank" rel="noopener">brand-name options such as Zepbound and Wegovy</a>. That is a wider shelf than embody's compounded-only range. The two providers go head to head in our <a href="/compare/altrx-vs-embody">altRx vs embody comparison</a>.`,
       },
       {
         heading: "Which other GLP-1 providers compete with embody?",
@@ -284,7 +284,7 @@ export const articlesPart3: Article[] = [
       },
       {
         heading: "What is welludr's full price list?",
-        body: `Published rates at our last content check: <strong>compounded semaglutide $49/month and tirzepatide $89/month on a 12-month plan, billed monthly, with the same price at every dose</strong>. Shipping is free every 4 weeks in discreet packaging, and a weight-loss warranty applies (terms on site).<br>How that compares:<ul><li>embody: $69/month semaglutide, flat, with no commitment</li><li>altRx: $89 with pause-anytime terms</li><li>Medvi: $99 all-inclusive with video visits and coaching</li></ul>Every provider is listed in our <a href="/cheapest-glp1">cheapest GLP-1 index</a>, and the direct matchup is <a href="/embody-vs-wellmedr">embody vs welludr</a>.`,
+        body: `Published rates at our last content check: <strong>compounded semaglutide $49/month and tirzepatide $89/month on a 12-month plan, billed monthly, with the same price at every dose</strong>. Shipping is free every 4 weeks in discreet packaging, and a weight-loss warranty applies (terms on site).<br>How that compares:<ul><li>embody: $69/month semaglutide, flat, with no commitment</li><li>altRx: $89 with pause-anytime terms</li><li>Medvi: $99 all-inclusive with video visits and coaching</li></ul>Every provider is listed in our <a href="/cheapest-glp1">cheapest GLP-1 index</a>, and the direct matchup is <a href="/compare/embody-vs-wellmedr">embody vs welludr</a>.`,
       },
       {
         heading: "Who should choose welludr?",
@@ -292,7 +292,7 @@ export const articlesPart3: Article[] = [
       },
       {
         heading: "Our verdict: is welludr worth trusting?",
-        body: `welludr is legitimate on every marker we can verify: one of the strongest Trustpilot records among providers we track (4.6 from 2,188 reviews), a real prescription process, a named pharmacy, published prices that match what buyers say they paid, and a warranty. The two caveats stand: results vary by person regardless of service quality, and the lowest price needs a 12-month commitment. Read the <a href="/reviews/wellmedr">full welludr review</a> for the complete record, or compare it with a no-commitment option in <a href="/embody-vs-wellmedr">embody vs welludr</a>. This article is general information, not medical advice.`,
+        body: `welludr is legitimate on every marker we can verify: one of the strongest Trustpilot records among providers we track (4.6 from 2,188 reviews), a real prescription process, a named pharmacy, published prices that match what buyers say they paid, and a warranty. The two caveats stand: results vary by person regardless of service quality, and the lowest price needs a 12-month commitment. Read the <a href="/reviews/wellmedr">full welludr review</a> for the complete record, or compare it with a no-commitment option in <a href="/compare/embody-vs-wellmedr">embody vs welludr</a>. This article is general information, not medical advice.`,
       },
     ],
   },

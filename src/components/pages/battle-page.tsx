@@ -347,7 +347,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
     .map((b) => b.slug)
     .sort();
   const canonicalSlug = samePairSlugs[0] ?? battle.slug;
-  const url = canonicalUrl(ctx, `/${canonicalSlug}`);
+  const url = canonicalUrl(ctx, `/compare/${canonicalSlug}`);
 
   // SERP title: a curated per-matchup override title wins when one exists (these
   // carry tested CTR hooks/prices - e.g. the question format on altrx-vs-embody
@@ -534,7 +534,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     .sort();
   const canonicalPairSlug = samePairSlugs[0] ?? battle.slug;
   if (canonicalPairSlug !== slug) {
-    permanentRedirect(hubLink(ctx, `/${canonicalPairSlug}`));
+    permanentRedirect(hubLink(ctx, `/compare/${canonicalPairSlug}`));
   }
 
   const p1 = config.providers.find((p) => p.id === battle.provider1Id);
@@ -684,7 +684,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    ...pageReviewSchema(`${ctx.prefix}/${battle.slug}`),
+    ...pageReviewSchema(`${ctx.prefix}/compare/${battle.slug}`),
     headline: battle.title,
     description: battle.description,
     datePublished: battle.publishedAt ?? "2026-06-01",
@@ -701,7 +701,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       url: ctx.origin,
       logo: { "@type": "ImageObject", url: `${ctx.origin}/logo.png` },
     },
-    mainEntityOfPage: canonicalUrl(ctx, `/${battle.slug}`),
+    mainEntityOfPage: canonicalUrl(ctx, `/compare/${battle.slug}`),
   };
 
   const battleBreadcrumbSchema = {
@@ -709,7 +709,8 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: canonicalUrl(ctx, "/") },
-      { "@type": "ListItem", position: 2, name: matchupLabel, item: canonicalUrl(ctx, `/${battle.slug}`) },
+      { "@type": "ListItem", position: 2, name: "Compare", item: canonicalUrl(ctx, "/compare") },
+      { "@type": "ListItem", position: 3, name: matchupLabel, item: canonicalUrl(ctx, `/compare/${battle.slug}`) },
     ],
   };
 
@@ -741,6 +742,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <Breadcrumbs
               items={[
                 { label: "Home", href: hubLink(ctx, "/") },
+                { label: "Compare", href: hubLink(ctx, "/compare") },
                 { label: matchupLabel },
               ]}
             />
@@ -771,7 +773,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               )}
               <LastUpdated date={battleUpdatedAt} />
             </div>
-            <MedicalReviewBar path={`${ctx.prefix}/${battle.slug}`} className="mt-3 max-w-[760px] sm:mt-4" />
+            <MedicalReviewBar path={`${ctx.prefix}/compare/${battle.slug}`} className="mt-3 max-w-[760px] sm:mt-4" />
             <TrustDisclosure disclaimerHref={"/disclaimer"} />
           </div>
         </section>
@@ -1253,7 +1255,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               onlyProviderIds={[p1.id, p2.id]}
               pageType="battle"
               withSchema
-              pageUrl={canonicalUrl(ctx, `/${slug}`)}
+              pageUrl={canonicalUrl(ctx, `/compare/${slug}`)}
             />
           </div>
 
@@ -1482,7 +1484,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   {relatedTrios.map((t) => (
                     <Link
                       key={t.slug}
-                      href={hubLink(ctx, `/${t.slug}`)}
+                      href={hubLink(ctx, `/compare/${t.slug}`)}
                       className="group flex items-center gap-3 rounded-xl border border-[#0C4B75]/20 bg-[#0C4B75]/[0.03] px-4 py-3.5 transition-colors hover:border-[#0C4B75]/40 hover:bg-[#0C4B75]/[0.06]"
                     >
                       <div className="flex flex-wrap items-center gap-2 text-[13px] font-bold text-[#191919]">
@@ -1505,7 +1507,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 {relatedBattles.map(({ slug: relSlug, bp1, bp2 }) => (
                   <Link
                     key={relSlug}
-                    href={hubLink(ctx, `/${relSlug}`)}
+                    href={hubLink(ctx, `/compare/${relSlug}`)}
                     className="group flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3.5 transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
                   >
                     <div className="flex items-center gap-2 text-[13px] font-bold text-[#191919]">
