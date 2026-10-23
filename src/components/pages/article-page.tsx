@@ -236,7 +236,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // If a battle owns this slug, consolidate /articles/<slug> → /<slug> (301/308)
   // so a duplicate or stale /articles/ URL doesn't compete with the battle page.
   if ((config.battles ?? []).some((b) => b.slug === slug)) {
-    permanentRedirect(hubLink(ctx, `/${slug}`));
+    permanentRedirect(hubLink(ctx, `/compare/${slug}`));
   }
 
   // Cannibalization consolidation: the generic "best telehealth providers"
@@ -965,10 +965,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               </p>
               <div className="grid gap-2.5 sm:grid-cols-2">
                 {[
-                  { href: "/embody-vs-wellmedr", label: "embody vs welludr: $69 or $49" },
-                  { href: "/altrx-vs-embody", label: "altRx vs embody: $89 or $69" },
-                  { href: "/healthrx-vs-medvi", label: "HealthRx vs Medvi: prepaid or monthly" },
-                  { href: "/embody-vs-altrx-vs-wellmedr", label: "Lowest-cost trio: embody vs altRx vs welludr" },
+                  { href: "/compare/embody-vs-wellmedr", label: "embody vs welludr: $69 or $49" },
+                  { href: "/compare/altrx-vs-embody", label: "altRx vs embody: $89 or $69" },
+                  { href: "/compare/healthrx-vs-medvi", label: "HealthRx vs Medvi: prepaid or monthly" },
+                  { href: "/compare/embody-vs-altrx-vs-wellmedr", label: "Lowest-cost trio: embody vs altRx vs welludr" },
                 ].map((c) => (
                   <Link
                     key={c.href}

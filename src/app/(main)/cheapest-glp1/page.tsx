@@ -322,7 +322,7 @@ export default async function CheapestGlp1Page() {
               GLP-1 pills vs injections
             </Link>
             {" · "}
-            <Link href="/embody-vs-wellmedr" className="font-semibold text-[#0C4B75] hover:underline">
+            <Link href="/compare/embody-vs-wellmedr" className="font-semibold text-[#0C4B75] hover:underline">
               embody vs welludr
             </Link>
             {" · "}

@@ -3,12 +3,20 @@ import { SLUG_ALIASES } from "@/lib/slug-aliases";
 
 const CANONICAL_HOST = "www.topweightloss.us";
 
+// Comparison slugs ("embody-vs-ro", "embody-vs-altrx-vs-medvi"). Root pages
+// that contain "-vs-" but are guides, not comparisons, are listed separately.
+const COMPARISON_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*-vs-[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const NOT_COMPARISONS = new Set(["glp1-pills-vs-injections"]);
+
 // Content paths that were consolidated onto a stronger page. Resolved here so
 // each one collapses to its destination in a single 301.
 const PATH_REDIRECTS: Record<string, string> = {
   "/embody-vs-noom": "/reviews/embody",
   "/noom-vs-embody": "/reviews/embody",
   "/embody-vs-found": "/reviews/embody",
+  "/compare/embody-vs-noom": "/reviews/embody",
+  "/compare/noom-vs-embody": "/reviews/embody",
+  "/compare/embody-vs-found": "/reviews/embody",
   "/articles/embody-weight-loss-review": "/reviews/embody",
   "/articles/glp1-pills-vs-injections": "/glp1-pills-vs-injections",
   "/articles/online-vs-clinic-weight-loss": "/articles/in-person-vs-online-weight-loss",
@@ -16,7 +24,7 @@ const PATH_REDIRECTS: Record<string, string> = {
   "/articles/noom-weight-loss-review": "/articles/best-noom-alternatives",
   "/articles/noom-subscription-cost": "/articles/best-noom-alternatives",
   "/articles/best-weight-loss-telehealth-providers": "/",
-  "/articles/altrx-vs-ro": "/altrx-vs-ro",
+  "/articles/altrx-vs-ro": "/compare/altrx-vs-ro",
   "/find-your-match-weight-loss": "/find-your-match",
 };
 
@@ -43,12 +51,21 @@ export function proxy(req: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
+  // Comparisons live under /compare/<slug>. A bare /<a>-vs-<b> URL (the
+  // original location) and any reversed or retired alias resolve to the
+  // canonical comparison in a single 301.
   const segments = pathname.split("/").filter(Boolean);
-  const last = segments[segments.length - 1];
-  if (segments.length === 1 && last && SLUG_ALIASES[last]) {
-    const url = req.nextUrl.clone();
-    url.pathname = `/${SLUG_ALIASES[last]}`;
-    return NextResponse.redirect(url, 301);
+  const inCompare = segments[0] === "compare" && segments.length === 2;
+  const slug = inCompare ? segments[1] : segments.length === 1 ? segments[0] : undefined;
+  if (slug) {
+    const target = SLUG_ALIASES[slug] ?? slug;
+    const isComparison = COMPARISON_RE.test(target) && !NOT_COMPARISONS.has(target);
+    const dest = isComparison ? `/compare/${target}` : `/${target}`;
+    if ((SLUG_ALIASES[slug] || (isComparison && !inCompare)) && dest !== pathname) {
+      const url = req.nextUrl.clone();
+      url.pathname = dest;
+      return NextResponse.redirect(url, 301);
+    }
   }
 
   const res = NextResponse.next();

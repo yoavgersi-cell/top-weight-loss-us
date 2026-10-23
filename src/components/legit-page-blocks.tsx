@@ -33,7 +33,7 @@ export const LEGIT_PAGES: Record<string, LegitPageData> = {
       { ok: false, text: "The $49 and $89 prices require a 12-month plan billed month by month, and standard shipping takes 3-5 business days" },
     ],
     priceLine: "Compounded semaglutide $49/mo · tirzepatide $89/mo, with no price change as the dose goes up",
-    alternative: { text: "Prefer not to commit for 12 months? See the month-to-month option in embody vs welludr", href: "/embody-vs-wellmedr" },
+    alternative: { text: "Prefer not to commit for 12 months? See the month-to-month option in embody vs welludr", href: "/compare/embody-vs-wellmedr" },
     capture: {
       image: "/verification/wellmedr-pricing-2026-10-05.webp",
       width: 900,

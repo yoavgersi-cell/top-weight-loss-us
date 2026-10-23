@@ -26,7 +26,7 @@ const MATRIX_ROWS: { label: string; key: keyof typeof TRIO_FACTS[string] }[] = [
 ];
 
 export function threeWayMetadata(trio: ThreeWayComparison, ctx: SiteContext): Metadata {
-  const url = canonicalUrl(ctx, `/${trio.slug}`);
+  const url = canonicalUrl(ctx, `/compare/${trio.slug}`);
   // Three-way comparisons have near-zero search demand and are pure crawl-budget
   // bloat on the young hub, so they're noindex,follow (see NOINDEX_WL_BATTLE_SLUGS).
   const isThinNoindex = NOINDEX_WL_BATTLE_SLUGS.has(trio.slug);
@@ -50,7 +50,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
     .filter(Boolean) as NonNullable<ReturnType<typeof config.providers.find>>[];
   if (providers.length !== 3) return null;
 
-  const url = canonicalUrl(ctx, `/${trio.slug}`);
+  const url = canonicalUrl(ctx, `/compare/${trio.slug}`);
 
   // Related 2-way battles among this trio's providers - the natural next click.
   const ids = new Set(trio.providerIds);
@@ -61,7 +61,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    ...pageReviewSchema(`${ctx.prefix}/${trio.slug}`),
+    ...pageReviewSchema(`${ctx.prefix}/compare/${trio.slug}`),
     name: trio.metaTitle,
     description: trio.description,
     url,
@@ -93,7 +93,8 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: canonicalUrl(ctx, "/") },
-      { "@type": "ListItem", position: 2, name: trio.title, item: url },
+      { "@type": "ListItem", position: 2, name: "Compare", item: canonicalUrl(ctx, "/compare") },
+      { "@type": "ListItem", position: 3, name: trio.title, item: url },
     ],
   };
 
@@ -107,12 +108,12 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
       <section className="relative overflow-hidden border-b border-gray-200 bg-white">
         <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0C4B75] via-[#1a8cd8] to-[#0C4B75]" />
         <div className="mx-auto max-w-[1100px] px-4 pb-5 pt-4 sm:px-6 sm:pb-12 sm:pt-12">
-          <Breadcrumbs items={[{ label: "Home", href: hubLink(ctx, "/") }, { label: trio.title }]} />
+          <Breadcrumbs items={[{ label: "Home", href: hubLink(ctx, "/") }, { label: "Compare", href: hubLink(ctx, "/compare") }, { label: trio.title }]} />
           <h1 className="text-[22px] font-extrabold leading-[1.2] tracking-[-0.01em] text-[#191919] sm:text-[36px] sm:leading-[1.15] sm:tracking-normal">{trio.title}</h1>
           <div className="mt-2 sm:mt-3">
             <LastUpdated date={trio.updatedAt ?? TEMPLATES_LAST_UPDATED} />
           </div>
-          <MedicalReviewBar path={`${ctx.prefix}/${trio.slug}`} className="mt-3 max-w-[760px] sm:mt-4" />
+          <MedicalReviewBar path={`${ctx.prefix}/compare/${trio.slug}`} className="mt-3 max-w-[760px] sm:mt-4" />
           <TrustDisclosure disclaimerHref={"/disclaimer"} />
         </div>
       </section>
@@ -225,7 +226,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
               {relatedBattles.map((b) => (
                 <Link
                   key={b.slug}
-                  href={hubLink(ctx, `/${b.slug}`)}
+                  href={hubLink(ctx, `/compare/${b.slug}`)}
                   className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
                 >
                   <span className="truncate">{b.matchupLabel ?? b.title.split(":")[0]}</span>

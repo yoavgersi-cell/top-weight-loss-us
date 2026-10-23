@@ -102,7 +102,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
           "@type": "ListItem",
           position: articles.length + guides.length + i + 1,
           name: `${p1.name} vs ${p2.name}`,
-          url: canonicalUrl(ctx, `/${battle.slug}`),
+          url: canonicalUrl(ctx, `/compare/${battle.slug}`),
         })),
       ],
     },
@@ -286,7 +286,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
               {comparisons.map(({ battle, p1, p2, winner }) => (
                 <Link
                   key={battle.slug}
-                  href={hubLink(ctx, `/${battle.slug}`)}
+                  href={hubLink(ctx, `/compare/${battle.slug}`)}
                   className="group flex flex-col rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-md"
                 >
                   {/* Logos + VS */}

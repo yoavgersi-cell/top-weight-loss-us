@@ -218,14 +218,15 @@ const LAUNCH_STATIC_PATHS = [
   "/glp1-weight-loss-statistics",
   "/how-to-choose-a-glp1-provider",
   "/how-we-rank",
+  "/compare",
 ];
 
 const LAUNCH_REVIEWED_PATHS = [
   ...LAUNCH_STATIC_PATHS,
   ...launchReviews.map((r) => `/reviews/${r.slug}`),
-  ...launchBattles.map((b) => `/${b.slug}`),
+  ...launchBattles.map((b) => `/compare/${b.slug}`),
   ...launchLandingPages.map((l) => `/${l.slug}`),
-  ...THREE_WAY_COMPARISONS.map((t) => `/${t.slug}`),
+  ...THREE_WAY_COMPARISONS.map((t) => `/compare/${t.slug}`),
   ...launchArticles.map((a) => `/articles/${a.slug}`),
 ];
 

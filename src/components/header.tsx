@@ -12,7 +12,7 @@ export function Header() {
   const nav = [
     { label: "Best Providers", href: navHref(prefix, "/") },
     { label: "Reviews", href: navHref(prefix, "/reviews") },
-    { label: "Comparisons", href: navHref(prefix, "/glp1-provider-comparison") },
+    { label: "Comparisons", href: navHref(prefix, "/compare") },
     { label: "Guides", href: navHref(prefix, "/articles") },
     { label: "Find My Match", href: navHref(prefix, "/find-your-match") },
   ];

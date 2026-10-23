@@ -34,6 +34,7 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
   { path: "/switch-from-ozempic", priority: 0.8, changeFrequency: "weekly" },
   { path: "/glp1-weight-loss-statistics", priority: 0.8, changeFrequency: "weekly" },
   { path: "/how-to-choose-a-glp1-provider", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/compare", priority: 0.9, changeFrequency: "weekly" },
   { path: "/how-we-rank", priority: 0.6, changeFrequency: "monthly" },
   { path: "/about", priority: 0.3, changeFrequency: "monthly" },
   { path: "/disclaimer", priority: 0.2, changeFrequency: "monthly" },
@@ -148,7 +149,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     ...(config.battles ?? [])
       .filter((b) => !(isWeightLoss && NOINDEX_WL_BATTLE_SLUGS.has(b.slug)))
       .map((b) => ({
-        url: P(`/${b.slug}`),
+        url: P(`/compare/${b.slug}`),
         lastModified: flooredLastModified(b.updatedAt),
         changeFrequency: "weekly" as const,
         priority: 0.8,
@@ -169,7 +170,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   if (isWeightLoss) {
     entries.push(
       ...THREE_WAY_COMPARISONS.filter((t) => !NOINDEX_WL_BATTLE_SLUGS.has(t.slug)).map((t) => ({
-        url: P(`/${t.slug}`),
+        url: P(`/compare/${t.slug}`),
         lastModified: flooredLastModified(),
         changeFrequency: "weekly" as const,
         priority: 0.8,

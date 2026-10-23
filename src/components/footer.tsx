@@ -79,13 +79,13 @@ async function featuredComparisons(): Promise<{ label: string; href: string }[]>
         const label =
           battle.matchupLabel ||
           [nameOf(battle.provider1Id), nameOf(battle.provider2Id)].filter(Boolean).join(" vs ");
-        if (label) out.push({ label, href: `/${slug}` });
+        if (label) out.push({ label, href: `/compare/${slug}` });
         continue;
       }
       const three = threeWayBySlug.get(slug);
       if (three) {
         const label = three.providerIds.map(nameOf).filter(Boolean).join(" vs ");
-        if (label) out.push({ label, href: `/${slug}` });
+        if (label) out.push({ label, href: `/compare/${slug}` });
       }
     }
     return out;
@@ -99,7 +99,7 @@ export async function Footer() {
   const columns = [
     ...COLUMNS,
     ...(comparisons.length > 0
-      ? [{ title: "Popular Comparisons", links: comparisons }]
+      ? [{ title: "Popular Comparisons", links: [...comparisons, { label: "All comparisons", href: "/compare" }] }]
       : []),
   ];
 

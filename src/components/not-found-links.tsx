@@ -67,7 +67,7 @@ export function NotFoundLinks({
             {comparisons.map((c) => (
               <Link
                 key={c.slug}
-                href={href(`/${c.slug}`)}
+                href={href(`/compare/${c.slug}`)}
                 className="group flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-[13px] font-semibold text-[#191919] transition-colors hover:border-[#0C4B75]/30"
               >
                 {c.name}

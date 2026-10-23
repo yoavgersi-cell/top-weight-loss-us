@@ -54,6 +54,7 @@ function weightLossSection(config: SiteConfig): string {
 
   // Head-to-heads between partner providers, ordered by the higher-ranked side.
   out.push("### Head-to-head comparisons");
+  out.push(line("All GLP-1 provider comparisons", "/compare", "Every head-to-head and three-way comparison, with our pick and prices side by side"));
   const battles = (config.battles ?? [])
     .filter((b) => PARTNERS.has(b.provider1Id) && PARTNERS.has(b.provider2Id))
     .sort(
@@ -63,7 +64,7 @@ function weightLossSection(config: SiteConfig): string {
     )
     .slice(0, 20);
   for (const b of battles) {
-    out.push(line(b.matchupLabel ?? b.title.split(":")[0], `${base}/${b.slug}`, b.description));
+    out.push(line(b.matchupLabel ?? b.title.split(":")[0], `${base}/compare/${b.slug}`, b.description));
   }
   out.push("");
   return out.join("\n");
