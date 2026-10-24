@@ -227,7 +227,9 @@ const LAUNCH_REVIEWED_PATHS = [
   ...launchBattles.map((b) => `/compare/${b.slug}`),
   ...launchLandingPages.map((l) => `/${l.slug}`),
   ...THREE_WAY_COMPARISONS.map((t) => `/compare/${t.slug}`),
-  ...launchArticles.map((a) => `/articles/${a.slug}`),
+  // Only articles that existed at launch; later articles get their own
+  // entry once the reviewer signs them off.
+  ...launchArticles.filter((a) => a.publishedAt <= LAUNCH_REVIEW_DATE).map((a) => `/articles/${a.slug}`),
 ];
 
 export const REVIEW_LOG: Record<string, PageReview> = Object.fromEntries(

@@ -1,6 +1,7 @@
 // Page-level meta titles and descriptions for topweightloss.us, written for
 // this domain. Applied over each template's generated metadata.
 export const SEO_META: Record<string, { title: string; description: string }> = {
+  "/articles/glp1-side-effects-risks-2026": { title: "GLP-1 Side Effects in 2026: Rare Risks, Real Odds, Evidence", description: "From nausea (44% on Wegovy) to gallstones, pancreatitis and NAION vision loss: every GLP-1 side effect with real odds from FDA labels, EMA and trials." },
   "/compare": { title: "GLP-1 Provider Comparisons 2026: Every Head-to-Head", description: "Every online GLP-1 matchup in one table: our pick for each pair, semaglutide prices side by side from $49/mo, and links to 37 full comparisons." },
   "/": { title: "Online GLP-1 Providers Ranked for 2026: Prices Checked", description: "Want the lowest-cost online GLP-1 that's still safe? We ranked 13 providers on what you'll pay, starting at $49/mo for semaglutide. Find your best match." },
   "/reviews": { title: "18 GLP-1 Provider Reviews (2026): Who's Worth Your Money?", description: "18 online GLP-1 programs, each reviewed on price, ratings, shipping and support, from embody to altRx. Read the honest pros and cons before you sign up." },
