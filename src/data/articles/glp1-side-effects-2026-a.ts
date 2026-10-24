@@ -23,7 +23,7 @@ export const sideEffectsSectionsA: Article["sections"] = [
 <h3>Tier 4: open questions</h3>
 <ul>
 <li><strong>Thyroid cancer</strong>: tumors appeared in rodents, but whether that happens in humans is unknown, and large human studies are mostly reassuring.</li>
-<li><strong>Depression and suicidal thoughts</strong>: regulator reviews have not found a causal link, though labels still advise monitoring.</li>
+<li><strong>Depression and suicidal thoughts</strong>: regulator reviews have not found a causal link, and in January 2026 the FDA asked for the warning to be removed from weight-loss GLP-1 labels.</li>
 <li><strong>Hair loss and nail problems</strong>: under investigation, with limited evidence so far, per <a href="https://www.technologyreview.com/2026/10/09/1146094/were-still-figuring-out-the-side-effects-of-glp-1-weight-loss-drugs/" target="_blank" rel="noopener">MIT Technology Review</a>.</li>
 </ul>
 <h3>Summary table</h3>
@@ -351,16 +351,16 @@ export const sideEffectsSectionsA: Article["sections"] = [
   },
   {
     heading: "Do GLP-1 drugs cause depression or suicidal thoughts?",
-    body: `<p>Current evidence does not show that GLP-1 drugs cause depression or suicidal thoughts. In January 2024, the FDA said its preliminary evaluation found no evidence that GLP-1 receptor agonists cause suicidal thoughts or actions, though it could not definitively rule out a small risk, and in April 2024 the European Medicines Agency concluded the evidence does not support a causal link.</p>
+    body: `<p>Current evidence does not show that GLP-1 drugs cause depression or suicidal thoughts. In January 2024, the FDA said its preliminary evaluation found no evidence that GLP-1 receptor agonists cause suicidal thoughts or actions, though it could not definitively rule out a small risk, and in April 2024 the European Medicines Agency concluded the evidence does not support a causal link, as reported by <a href="https://www.statnews.com/2024/04/12/europe-obesity-drugs-suicidal-thoughts/" target="_blank" rel="noopener">STAT</a>.</p>
 <h3>How the concern started</h3>
 <p>The question gained attention after reports from Iceland prompted the EMA's safety committee (PRAC) to open a review in July 2023, as reported by <a href="https://www.statnews.com/2024/04/12/europe-obesity-drugs-suicidal-thoughts/" target="_blank" rel="noopener">STAT</a>. Individual reports like these are how regulators spot possible signals, but on their own they cannot show whether a drug caused the problem.</p>
 <h3>What regulators concluded</h3>
 <ul>
-<li><strong>FDA, January 2024.</strong> The agency's preliminary evaluation found no evidence that GLP-1 receptor agonists cause suicidal thoughts or actions. The FDA said it could not definitively rule out a small risk.</li>
+<li><strong>FDA, January 2024.</strong> The agency's preliminary evaluation found no evidence that GLP-1 receptor agonists cause suicidal thoughts or actions. The FDA said it could not definitively rule out a small risk (<a href="https://www.fda.gov/drugs/drug-safety-and-availability/update-fdas-ongoing-evaluation-reports-suicidal-thoughts-or-actions-patients-taking-certain-type" target="_blank" rel="noopener">FDA update</a>).</li>
 <li><strong>EMA, April 2024.</strong> After its review, the PRAC concluded that the available evidence does not support a causal link between GLP-1 receptor agonists and suicidal thoughts or actions, and that no update to the product information was needed, according to <a href="https://www.statnews.com/2024/04/12/europe-obesity-drugs-suicidal-thoughts/" target="_blank" rel="noopener">STAT</a> and <a href="https://hospitalpharmacyeurope.com/practice/medicines-safety/no-evidence-of-causal-link-between-glp-1-receptor-agonists-and-suicide-says-prac/" target="_blank" rel="noopener">Hospital Pharmacy Europe</a>.</li>
 </ul>
-<h3>Why the labels still mention it</h3>
-<p>The US labels for weight-management GLP-1s still advise monitoring. The <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf" target="_blank" rel="noopener">Wegovy</a> and <a href="https://pi.lilly.com/us/zepbound-uspi.pdf" target="_blank" rel="noopener">Zepbound</a> prescribing information both advise monitoring for depression and suicidal thoughts. This is common for drugs used in chronic weight management and reflects caution, not a confirmed effect. In practice, it means your prescriber should ask about your mood and you should feel free to raise any changes.</p>
+<h3>What changed on the US labels in 2026?</h3>
+<p>The FDA went a step further in 2026. In a <a href="https://www.fda.gov/media/190557/download" target="_blank" rel="noopener">FDA Drug Safety Communication, January 13, 2026</a>, the agency asked the makers of Wegovy (semaglutide), Zepbound (tirzepatide) and Saxenda (liraglutide) to remove the information about suicidal ideation and behavior from their US labeling, following the reviews described above. That does not mean mood should be ignored: your prescriber should still ask how you are feeling, and you should raise any change in mood, especially if you have a history of depression.</p>
 <h3>"No causal link" is not the same as "no mood effects"</h3>
 <p>The regulatory reviews looked at suicidal thoughts and actions. They do not mean everyone feels the same on these drugs. Changes in appetite and in your relationship with food, along with the life changes that come with significant weight loss, can stir up complicated feelings. Those experiences are worth discussing even when a drug is not causing a psychiatric condition. Our article on <a href="/articles/glp1-and-mental-health">GLP-1s and mental health</a> covers this in more depth.</p>
 <h3>What to do</h3>
@@ -369,7 +369,6 @@ export const sideEffectsSectionsA: Article["sections"] = [
 <li><strong>Notice changes</strong> in mood, sleep, interest in activities or thoughts about yourself after starting or increasing a dose, and share them.</li>
 <li><strong>Do not stop other mental health medications</strong> on your own because you started a GLP-1. Talk to your clinicians first.</li>
 <li><strong>Get help right away</strong> if you have thoughts of harming yourself. In the US, you can call or text <strong>988</strong> to reach the 988 Suicide &amp; Crisis Lifeline at any time. If you are in immediate danger, call 911.</li>
-</ol>
-<p>The remaining sections of this guide, from muscle loss and hair loss to pregnancy, stopping treatment and the overall risk picture, continue below.</p>`,
+</ol>`,
   },
 ];
