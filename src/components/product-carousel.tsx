@@ -170,59 +170,40 @@ export function ProductCarousel({
       ? {
           "@context": "https://schema.org",
           "@type": "ItemList",
-          // Merchant listings require a product image, so imageless catalog
-          // entries (logo-tile fallback cards) are excluded from the schema
-          // entirely - emitting them only produces GSC "missing image"
-          // criticals. They rejoin automatically once a real shot is added.
-          itemListElement: items.filter((p) => p.image).map((p, i) => {
-            const provider = byId.get(p.providerId)!;
-            // Transit time comes only from the catalog's own verified shipping
-            // copy ("Free 1-2 day shipping", "Free overnight shipping") - no
-            // day counts are ever assumed for plain "Free shipping".
-            const dayMatch = p.shipping.match(/(\d+)(?:-(\d+))?\s*day/i);
-            const overnight = /overnight/i.test(p.shipping);
-            const transit = overnight
-              ? { min: 1, max: 1 }
-              : dayMatch
-                ? { min: parseInt(dayMatch[1], 10), max: parseInt(dayMatch[2] ?? dayMatch[1], 10) }
-                : null;
-            // GSC-requested enrichment, verified data only: description from
-            // the catalog's own honest fields; aggregateRating + one review
-            // only when the provider has a verified Trustpilot record; free-
-            // shipping details only when the catalog says shipping is free.
-            // Return policy: dispensed prescription medication cannot be
-            // returned (US pharmacy practice), so MerchantReturnNotPermitted
-            // is the accurate, conservative declaration for every product -
-            // refund guarantees some providers offer are a separate thing and
-            // are deliberately not represented here.
-            const tpCount = provider.trustpilotReviewCount
-              ? parseInt(provider.trustpilotReviewCount.replace(/,/g, ""), 10)
-              : NaN;
-            const hasAggregate =
-              !!provider.trustpilotRating && Number.isFinite(tpCount) && tpCount > 0;
-            const firstReview = provider.trustpilotReviews?.[0];
-            // "included" (SHED's "home delivery included") means no shipping
-            // charge, same as free - both earn the $0 shippingRate.
-            const freeShipping = /free|included/i.test(p.shipping);
-            return {
-              "@type": "ListItem",
-              position: i + 1,
-              item: {
-                "@type": "Product",
-                name: `${provider.name} ${p.name}`,
-                description: `${provider.name} ${p.name}: $${productPriceValue(p)} per month (${p.priceNote}). ${p.shipping}.`,
-                ...(p.image ? { image: `https://www.topweightloss.us${p.image}` } : {}),
-                brand: { "@type": "Brand", name: provider.name },
-                ...(hasAggregate && {
+          // Product snippets only. These plans are sold by the providers, not
+          // by us, so no Offer is emitted: an Offer makes Google treat the page
+          // as a merchant listing and ask for handling and delivery times we
+          // do not have. Each plan is marked up with its provider's verified
+          // Trustpilot aggregate and one real review; plans whose provider has
+          // no Trustpilot record (or no product image) are left out.
+          itemListElement: items
+            .filter((p) => {
+              const provider = byId.get(p.providerId)!;
+              const count = provider.trustpilotReviewCount
+                ? parseInt(provider.trustpilotReviewCount.replace(/,/g, ""), 10)
+                : NaN;
+              return p.image && !!provider.trustpilotRating && Number.isFinite(count) && count > 0;
+            })
+            .map((p, i) => {
+              const provider = byId.get(p.providerId)!;
+              const tpCount = parseInt(provider.trustpilotReviewCount!.replace(/,/g, ""), 10);
+              const firstReview = provider.trustpilotReviews?.[0];
+              return {
+                "@type": "ListItem",
+                position: i + 1,
+                item: {
+                  "@type": "Product",
+                  name: `${provider.name} ${p.name}`,
+                  description: `${provider.name} ${p.name}: $${productPriceValue(p)} per month (${p.priceNote}). ${p.shipping}.`,
+                  image: `https://www.topweightloss.us${p.image}`,
+                  brand: { "@type": "Brand", name: provider.name },
                   aggregateRating: {
                     "@type": "AggregateRating",
                     ratingValue: provider.trustpilotRating,
                     reviewCount: tpCount,
                     bestRating: "5",
                   },
-                }),
-                ...(hasAggregate &&
-                  firstReview && {
+                  ...(firstReview && {
                     review: {
                       "@type": "Review",
                       reviewRating: { "@type": "Rating", ratingValue: String(firstReview.rating), bestRating: "5" },
@@ -230,39 +211,9 @@ export function ProductCarousel({
                       reviewBody: firstReview.text,
                     },
                   }),
-                offers: {
-                  "@type": "Offer",
-                  price: String(productPriceValue(p)),
-                  priceCurrency: "USD",
-                  availability: "https://schema.org/InStock",
-                  url: pageUrl,
-                  hasMerchantReturnPolicy: {
-                    "@type": "MerchantReturnPolicy",
-                    applicableCountry: "US",
-                    returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
-                  },
-                  ...(freeShipping && {
-                    shippingDetails: {
-                      "@type": "OfferShippingDetails",
-                      shippingRate: { "@type": "MonetaryAmount", value: 0, currency: "USD" },
-                      shippingDestination: { "@type": "DefinedRegion", addressCountry: "US" },
-                      ...(transit && {
-                        deliveryTime: {
-                          "@type": "ShippingDeliveryTime",
-                          transitTime: {
-                            "@type": "QuantitativeValue",
-                            minValue: transit.min,
-                            maxValue: transit.max,
-                            unitCode: "DAY",
-                          },
-                        },
-                      }),
-                    },
-                  }),
                 },
-              },
-            };
-          }),
+              };
+            }),
         }
       : null;
 
