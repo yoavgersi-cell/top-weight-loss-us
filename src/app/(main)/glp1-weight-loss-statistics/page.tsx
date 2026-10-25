@@ -63,7 +63,10 @@ export default async function StatisticsPage() {
     url: CANONICAL,
     dateModified: PRICE_INDEX_VERIFIED,
     temporalCoverage: PRICE_INDEX_VERIFIED.slice(0, 7),
-    spatialCoverage: { "@type": "Country", name: "United States" },
+    // Google's Dataset type accepts a Place (not a Country) for coverage.
+    spatialCoverage: { "@type": "Place", name: "United States" },
+    // Reuse terms: the data is published under the site's Terms of Use.
+    license: "https://www.topweightloss.us/terms",
     creator: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
     variableMeasured: [
       "Compounded semaglutide monthly price (USD)",
