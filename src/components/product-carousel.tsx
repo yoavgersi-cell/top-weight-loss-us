@@ -141,7 +141,7 @@ export function ProductCarousel({
    *  catalog is not repeated in full on every page. */
   limit?: number;
   pageType?: "listing" | "review" | "battle";
-  /** Emit Product+Offer ItemList schema. Enable on ONE carousel per page. */
+  /** Emit ItemList schema for the plans shown. Enable on ONE carousel per page. */
   withSchema?: boolean;
   /** Absolute page URL, required for schema offer URLs. */
   pageUrl?: string;
@@ -170,50 +170,22 @@ export function ProductCarousel({
       ? {
           "@context": "https://schema.org",
           "@type": "ItemList",
-          // Product snippets only. These plans are sold by the providers, not
-          // by us, so no Offer is emitted: an Offer makes Google treat the page
-          // as a merchant listing and ask for handling and delivery times we
-          // do not have. Each plan is marked up with its provider's verified
-          // Trustpilot aggregate and one real review; plans whose provider has
-          // no Trustpilot record (or no product image) are left out.
-          itemListElement: items
-            .filter((p) => {
-              const provider = byId.get(p.providerId)!;
-              const count = provider.trustpilotReviewCount
-                ? parseInt(provider.trustpilotReviewCount.replace(/,/g, ""), 10)
-                : NaN;
-              return p.image && !!provider.trustpilotRating && Number.isFinite(count) && count > 0;
-            })
-            .map((p, i) => {
-              const provider = byId.get(p.providerId)!;
-              const tpCount = parseInt(provider.trustpilotReviewCount!.replace(/,/g, ""), 10);
-              const firstReview = provider.trustpilotReviews?.[0];
-              return {
-                "@type": "ListItem",
-                position: i + 1,
-                item: {
-                  "@type": "Product",
-                  name: `${provider.name} ${p.name}`,
-                  description: `${provider.name} ${p.name}: $${productPriceValue(p)} per month (${p.priceNote}). ${p.shipping}.`,
-                  image: `https://www.topweightloss.us${p.image}`,
-                  brand: { "@type": "Brand", name: provider.name },
-                  aggregateRating: {
-                    "@type": "AggregateRating",
-                    ratingValue: provider.trustpilotRating,
-                    reviewCount: tpCount,
-                    bestRating: "5",
-                  },
-                  ...(firstReview && {
-                    review: {
-                      "@type": "Review",
-                      reviewRating: { "@type": "Rating", ratingValue: String(firstReview.rating), bestRating: "5" },
-                      author: { "@type": "Person", name: firstReview.name },
-                      reviewBody: firstReview.text,
-                    },
-                  }),
-                },
-              };
-            }),
+          // A plain list of the plans shown, no Product markup. A Product needs
+          // an Offer, a review or an aggregateRating to be valid; the plans are
+          // sold by the providers (so no Offer) and the only ratings we have are
+          // Trustpilot's, which Google's review-snippet rules forbid marking up
+          // as an aggregate on another site. Prices and Trustpilot scores stay
+          // visible on the cards.
+          name: "GLP-1 plans compared",
+          numberOfItems: items.length,
+          itemListElement: items.map((p, i) => {
+            const provider = byId.get(p.providerId)!;
+            return {
+              "@type": "ListItem",
+              position: i + 1,
+              name: `${provider.name} ${p.name}`,
+            };
+          }),
         }
       : null;
 
