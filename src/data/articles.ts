@@ -2,6 +2,7 @@ import { articlesPart1 } from "./articles/part-1";
 import { articlesPart2 } from "./articles/part-2";
 import { articlesPart3 } from "./articles/part-3";
 import { glp1SideEffects2026 } from "./articles/glp1-side-effects-2026";
+import { glp1Cost2026 } from "./articles/glp1-cost-2026";
 import { brandClusterArticles } from "./brand-cluster-articles";
 import { pillarGlp1Online } from "./pillar-glp1-online";
 
@@ -29,6 +30,7 @@ export const articles: Article[] = [
   ...articlesPart2,
   ...articlesPart3,
   glp1SideEffects2026,
+  glp1Cost2026,
   ...brandClusterArticles,
   pillarGlp1Online,
 ];
