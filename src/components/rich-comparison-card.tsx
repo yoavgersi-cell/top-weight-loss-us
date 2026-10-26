@@ -111,7 +111,7 @@ export function RichComparisonCard({
 
         {/* Headline / tagline */}
         {product.tagline && (
-          <h3 className="mt-3.5 text-[15px] font-bold leading-snug text-[#191919] sm:mt-4 sm:text-[19px]">{product.tagline}</h3>
+          <h2 className="mt-3.5 text-[15px] font-bold leading-snug text-[#191919] sm:mt-4 sm:text-[19px]">{product.tagline}</h2>
         )}
 
         {/* Trust pills - cap at 2 on mobile so the card doesn't stack into a list */}
