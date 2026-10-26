@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Inline the (small, Tailwind) CSS into the HTML so the first paint does
+  // not wait on a separate render-blocking stylesheet request.
+  experimental: {
+    inlineCss: true,
+  },
   images: {
     remotePatterns: [
       {
