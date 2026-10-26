@@ -19,6 +19,7 @@ import { LastUpdated } from "@/components/last-updated";
 import { ProviderCta } from "@/components/provider-cta";
 import { BattleStickyCta } from "@/components/battle-sticky-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
+import { ReviewExperienceComparison } from "@/components/review-insights";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { LicensedTelehealthBadge } from "@/components/licensed-badge";
 import { PromoPopup } from "@/components/promo-popup";
@@ -1206,6 +1207,14 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               })}
             </div>
           </div>
+
+          {/* ───── CUSTOMER EXPERIENCE FROM REVIEWS ─────
+              Where each provider leads according to its quoted Trustpilot
+              reviews, computed from src/data/review-insights.ts. */}
+          <ReviewExperienceComparison
+            a={{ id: p1.id, name: p1.name, reviews: p1.trustpilotReviews ?? [], rating: p1.trustpilotRating, reviewCount: p1.trustpilotReviewCount }}
+            b={{ id: p2.id, name: p2.name, reviews: p2.trustpilotReviews ?? [], rating: p2.trustpilotRating, reviewCount: p2.trustpilotReviewCount }}
+          />
 
           {/* ───── 12-MONTH COST MATH ─────
               What a realistic course of treatment costs at each provider -

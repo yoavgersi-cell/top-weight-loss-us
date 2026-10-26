@@ -27,7 +27,8 @@ Everything ships from code: there is no CMS or blob storage.
 
 - Canonical host `https://www.topweightloss.us`; the apex and other subdomains 301 to www, preview hosts are served `noindex` (`src/proxy.ts`).
 - `/sitemap.xml`, `/robots.txt` (with a Content-Signal line), `/llms.txt` for AI answer engines, and `/feed.xml`.
-- JSON-LD on every template: Organization, WebSite, WebPage + ItemList (home), Review/Product (reviews), Article, FAQPage, BreadcrumbList.
+- JSON-LD on every template: Organization, WebSite, WebPage + ItemList (home), editorial Review with our score (reviews), Article, FAQPage, BreadcrumbList. Trustpilot ratings are shown as attributed text and never marked up as AggregateRating (Google forbids aggregating ratings from other sites).
+- Review insights (pros, cons, featured reviews) and the battle-page customer-experience table are computed from `src/data/review-insights.ts`, a tagged reading of the quoted Trustpilot reviews.
 
 ## Development
 

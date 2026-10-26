@@ -14,6 +14,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotSummary } from "@/components/trustpilot-summary";
+import { FeaturedReviews, ReviewInsights } from "@/components/review-insights";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import { LastUpdated } from "@/components/last-updated";
@@ -448,11 +449,8 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
   // Site's own editorial rating for this provider (same scoring shown on the
   // homepage), keyed off its ranking position. Surfaced visibly on the page.
-  // NOTE: intentionally NOT emitted as review/aggregateRating structured data -
-  // re-publishing Trustpilot's aggregate and self-assigned editorial scores as
-  // Product rating markup to earn SERP stars is a review-snippet policy risk
-  // (and earned ~0 clicks per Search Appearance). The ratings remain visible as
-  // page content; only the star-generating schema is removed.
+  // Marked up as an editorial Review (see editorialReviewSchema); Trustpilot's
+  // aggregate is never marked up as AggregateRating.
   const rankIndex = config.ranking.providerOrder.indexOf(provider.id);
   const editorial =
     rankIndex >= 0
@@ -478,9 +476,8 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // moment a provider changes pricing, so on-page pricing tables stay the single
   // source of truth and the search snippet carries no price.
 
-  // Review/AggregateRating Product schema deliberately removed - see the note
-  // on the editorial rating above. The visible on-page Trustpilot score and
-  // editorial rating stay; we just don't request star rich snippets.
+  // No AggregateRating: the Trustpilot score is third-party data and stays
+  // visible text only. Our own score is marked up as an editorial Review below.
 
   // Article schema (no rating, no price) - the same shape the article and
   // battle templates emit. It gives the page a machine-readable headline,
@@ -516,6 +513,43 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl(ctx, `/reviews/${slug}`) },
   };
+
+  // Our own editorial review of the provider: the score shown in the hero, the
+  // pros and cons listed on the page, and the verdict. This is a critic review
+  // by an independent site, which review-snippet guidelines allow. Trustpilot's
+  // aggregate is deliberately NOT marked up as AggregateRating: Google's rules
+  // say ratings collected on other websites must not be aggregated in markup,
+  // so the Trustpilot figures stay visible, attributed text only.
+  const editorialReviewSchema = editorial
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        name: `${provider.name} review`,
+        url: canonicalUrl(ctx, `/reviews/${slug}`),
+        datePublished: reviewUpdatedAt,
+        itemReviewed: {
+          "@type": "Organization",
+          name: provider.name,
+          ...(FORMER_NAMES[provider.id] && { alternateName: FORMER_NAMES[provider.id] }),
+        },
+        author: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
+        publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
+        reviewRating: { "@type": "Rating", ratingValue: editorial.score, bestRating: 10, worstRating: 0 },
+        reviewBody: review.finalVerdict || review.shortSummary,
+        ...(review.pros.length > 0 && {
+          positiveNotes: {
+            "@type": "ItemList",
+            itemListElement: review.pros.map((name, i) => ({ "@type": "ListItem", position: i + 1, name })),
+          },
+        }),
+        ...(review.cons.length > 0 && {
+          negativeNotes: {
+            "@type": "ItemList",
+            itemListElement: review.cons.map((name, i) => ({ "@type": "ListItem", position: i + 1, name })),
+          },
+        }),
+      }
+    : null;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -606,6 +640,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewArticleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      {editorialReviewSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(editorialReviewSchema) }} />
+      )}
 
       {/* Hero header */}
       <div className="border-b border-gray-200 bg-white">
@@ -802,6 +839,19 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </section>
             ))}
           </article>
+        )}
+
+        {(provider.trustpilotReviews?.length ?? 0) > 0 && (
+          <>
+            <ReviewInsights
+              providerId={provider.id}
+              providerName={provider.name}
+              reviews={provider.trustpilotReviews!}
+              rating={provider.trustpilotRating}
+              reviewCount={provider.trustpilotReviewCount}
+            />
+            <FeaturedReviews providerId={provider.id} providerName={provider.name} reviews={provider.trustpilotReviews!} />
+          </>
         )}
 
         {(provider.trustpilotReviews?.length ?? 0) > 0 && (
