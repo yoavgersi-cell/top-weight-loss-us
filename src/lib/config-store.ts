@@ -179,7 +179,14 @@ const defaultExperts: Expert[] = [
 const RANKING_ORDER = ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "medvi", "sprout", "wellorithm", "directmeds", "healthrx", "bmimd"];
 
 // Articles about providers we don't list (no working link) are not published.
-const RETIRED_ARTICLE_SLUGS = new Set(["noom-weight-loss-review", "noom-subscription-cost", "best-weight-loss-telehealth-providers"]);
+// weight-loss-medication-cost-guide: consolidated into the 2026 cost pillar
+// (glp1-cost-2026-how-to-pay-less), which targets the same queries.
+const RETIRED_ARTICLE_SLUGS = new Set([
+  "noom-weight-loss-review",
+  "noom-subscription-cost",
+  "best-weight-loss-telehealth-providers",
+  "weight-loss-medication-cost-guide",
+]);
 
 function buildConfig(): SiteConfig {
   const providerIds = new Set(productsJson.map((p) => p.id));

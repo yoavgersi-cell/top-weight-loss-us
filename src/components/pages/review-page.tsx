@@ -4,6 +4,7 @@ import { Check, X, ArrowRight, ArrowUpRight, Shield, Star, ArrowBigUp, ArrowBigD
 import { getConfig } from "@/lib/config-store";
 import { latestUpdate, VERTICALS, NOINDEX_WL_REVIEW_SLUGS, NOINDEX_WL_BATTLE_SLUGS, DEFAULT_ROBOTS } from "@/lib/config";
 import { SLUG_ALIASES } from "@/lib/slug-aliases";
+import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import {
   type SiteContext,
   canonicalUrl,
@@ -614,7 +615,12 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     { slug: `is-${provider.id}-legit`, label: `Is ${provider.name} legit? Full check` },
     { slug: `${provider.id}-cost`, label: `${provider.name} cost breakdown` },
     { slug: `${provider.id}-alternatives`, label: `Top alternatives to ${provider.name}` },
+    { slug: `${provider.id}-tirzepatide-cost`, label: `${provider.name} tirzepatide cost` },
+    { slug: `${provider.id}-tirzepatide-review`, label: `${provider.name} tirzepatide review` },
   ].filter((c) => (config.articles ?? []).some((a) => a.slug === c.slug));
+
+  // Three-way comparisons featuring this provider.
+  const relatedTrios = THREE_WAY_COMPARISONS.filter((t) => t.providerIds.includes(provider.id));
 
   // Related articles: actually related, not just the first three in the array.
   // Prefer articles that mention this provider (excluding its own cluster,
@@ -1226,7 +1232,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         </div>
 
         {/* Related content */}
-        {(relatedBattles.length > 0 || relatedArticles.length > 0 || showComparisonLink) && (
+        {(relatedBattles.length > 0 || relatedTrios.length > 0 || relatedArticles.length > 0 || showComparisonLink) && (
           <div className="mb-6">
             <h3 className="mb-4 text-[18px] font-bold text-[#191919]">Keep comparing</h3>
             {relatedBattles.length > 0 && (
@@ -1248,6 +1254,23 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       </Link>
                     );
                   })}
+                </div>
+              </>
+            )}
+            {relatedTrios.length > 0 && (
+              <>
+                <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-gray-400">Three-way comparisons</p>
+                <div className="mb-5 grid gap-2 sm:grid-cols-2">
+                  {relatedTrios.map((t) => (
+                    <Link
+                      key={t.slug}
+                      href={hubLink(ctx, `/compare/${t.slug}`)}
+                      className="flex items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                    >
+                      <span className="truncate">{t.title}</span>
+                      <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gray-400" strokeWidth={2.5} />
+                    </Link>
+                  ))}
                 </div>
               </>
             )}

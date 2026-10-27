@@ -114,6 +114,11 @@ export default async function CheapestGlp1Page() {
             condition attached to it, such as a promotion, a prepaid plan or a first-month discount, is
             shown directly beneath it. Providers are listed from lowest price to highest.
           </p>
+          <p className="mt-2 max-w-[680px] text-[14px] leading-relaxed text-gray-500">
+            Have insurance or Medicare? Compare these with brand-name self-pay prices, the $50 Medicare GLP-1 Bridge and
+            employer coverage in our{" "}
+            <Link href="/articles/glp1-cost-2026-how-to-pay-less" className="font-semibold text-[#0C4B75] underline underline-offset-2">2026 GLP-1 cost guide</Link>.
+          </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
           <MedicalReviewBar path="/cheapest-glp1" className="mt-4 max-w-[760px]" />
           <TrustDisclosure disclaimerHref="/disclaimer" />

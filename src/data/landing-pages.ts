@@ -48,7 +48,7 @@ export const landingPages: LandingPageData[] = [
           },
           {
             heading: "How much does tirzepatide cost?",
-            body: 'Brand-name tirzepatide costs more than $1,000/month at retail. Compounded tirzepatide from telehealth providers is far cheaper, typically $89-$299/month with consultations included. Our <a href="/articles/weight-loss-medication-cost-guide">weight loss medication cost guide</a> has the full breakdown.',
+            body: 'Brand-name tirzepatide costs more than $1,000/month at retail. Compounded tirzepatide from telehealth providers is far cheaper, typically $89-$299/month with consultations included. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">weight loss medication cost guide</a> has the full breakdown.',
             bullets: ["Compounded tirzepatide starting at $89/month", "Many providers bundle everything into one price", "Delivery to your home is included", "You don't need insurance"],
           },
           {
@@ -109,7 +109,7 @@ export const landingPages: LandingPageData[] = [
           },
           {
             heading: "How much do weight loss injections cost?",
-            body: 'Brand-name GLP-1 injections cost $900-$1,400/month at retail. Compounded versions from telehealth providers usually run $49-$299/month, often with everything included. Our <a href="/articles/weight-loss-medication-cost-guide">cost guide</a> breaks down the numbers, and <a href="/find-your-match">our quiz</a> can match you with a provider in your budget.',
+            body: 'Brand-name GLP-1 injections cost $900-$1,400/month at retail. Compounded versions from telehealth providers usually run $49-$299/month, often with everything included. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">cost guide</a> breaks down the numbers, and <a href="/find-your-match">our quiz</a> can match you with a provider in your budget.',
           },
         ],
       },
@@ -128,7 +128,7 @@ export const landingPages: LandingPageData[] = [
           },
           {
             heading: "Is compounded semaglutide the same as Ozempic?",
-            body: 'Compounded semaglutide uses the same active ingredient as Ozempic but is made by licensed compounding pharmacies, not by the original manufacturer. Brand-name Ozempic costs $900-$1,000/month, while compounded semaglutide from telehealth providers runs $49-$199/month and often includes consultations and delivery. Our <a href="/articles/weight-loss-medication-cost-guide">cost guide</a> has the details.',
+            body: 'Compounded semaglutide uses the same active ingredient as Ozempic but is made by licensed compounding pharmacies, not by the original manufacturer. Brand-name Ozempic costs $900-$1,000/month, while compounded semaglutide from telehealth providers runs $49-$199/month and often includes consultations and delivery. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">cost guide</a> has the details.',
             bullets: ["Same active ingredient: semaglutide", "Compounded versions cost far less", "Offered by licensed telehealth providers", "Medical oversight and home delivery included"],
           },
           {
@@ -176,7 +176,7 @@ export const landingPages: LandingPageData[] = [
         editorialSections: [
           {
             heading: "Why is GLP-1 medication getting cheaper?",
-            body: 'Compounded semaglutide and tirzepatide have brought GLP-1 treatment within reach of far more people. Licensed compounding pharmacies make these medications with the same active ingredients for a fraction of the brand-name price. Our <a href="/articles/weight-loss-medication-cost-guide">complete cost guide</a> explains the details.',
+            body: 'Compounded semaglutide and tirzepatide have brought GLP-1 treatment within reach of far more people. Licensed compounding pharmacies make these medications with the same active ingredients for a fraction of the brand-name price. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">complete cost guide</a> explains the details.',
           },
           {
             heading: "What should a low monthly price include?",

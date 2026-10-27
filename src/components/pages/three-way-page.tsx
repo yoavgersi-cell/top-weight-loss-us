@@ -12,7 +12,7 @@ import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { LicensedTelehealthBadge } from "@/components/licensed-badge";
 import { LastUpdated } from "@/components/last-updated";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
-import { TRIO_FACTS, type ThreeWayComparison } from "@/lib/three-way";
+import { THREE_WAY_COMPARISONS, TRIO_FACTS, type ThreeWayComparison } from "@/lib/three-way";
 
 // Matrix rows rendered for every trio - one place to add a row site-wide.
 const MATRIX_ROWS: { label: string; key: keyof typeof TRIO_FACTS[string] }[] = [
@@ -236,6 +236,56 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
             </div>
           </div>
         )}
+
+        {/* Each provider's full review */}
+        <div className="mb-4 mt-8">
+          <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">Read each full review</h2>
+          <p className="mb-4 text-[14px] text-gray-500">Pricing, Trustpilot reviews and our verdict for each provider in this comparison.</p>
+          <div className="grid gap-2.5 sm:grid-cols-3">
+            {trio.providerIds.map((id) => {
+              const p = config.providers.find((x) => x.id === id);
+              if (!p) return null;
+              return (
+                <Link
+                  key={id}
+                  href={hubLink(ctx, `/reviews/${id}`)}
+                  className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                >
+                  <span className="truncate">{p.name} review</span>
+                  <ArrowRight className="ml-auto h-3.5 w-3.5 shrink-0" strokeWidth={2} />
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Other three-way comparisons, those sharing a provider first */}
+        <div className="mb-4 mt-8">
+          <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">More three-way comparisons</h2>
+          <p className="mb-4 text-[14px] text-gray-500">
+            Other trios we compare, or see{" "}
+            <Link href={hubLink(ctx, "/compare")} className="font-semibold text-[#0C4B75] underline underline-offset-2">
+              every GLP-1 provider comparison
+            </Link>
+            .
+          </p>
+          <div className="grid gap-2.5 sm:grid-cols-2">
+            {THREE_WAY_COMPARISONS.filter((t) => t.slug !== trio.slug)
+              .map((t) => ({ t, shared: t.providerIds.filter((id) => trio.providerIds.includes(id)).length }))
+              .sort((a, b) => b.shared - a.shared)
+              .slice(0, 4)
+              .map(({ t }) => (
+                <Link
+                  key={t.slug}
+                  href={hubLink(ctx, `/compare/${t.slug}`)}
+                  className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                >
+                  <span className="truncate">{t.title.split(":")[0]}</span>
+                  <ArrowRight className="ml-auto h-3.5 w-3.5 shrink-0" strokeWidth={2} />
+                </Link>
+              ))}
+          </div>
+        </div>
 
         <MedicalSources vertical={ctx.vertical} />
       </div>

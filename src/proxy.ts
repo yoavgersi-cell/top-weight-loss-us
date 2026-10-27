@@ -23,6 +23,7 @@ const PATH_REDIRECTS: Record<string, string> = {
   "/articles/noom-vs-glp1-providers": "/best-online-weight-loss-programs",
   "/articles/noom-weight-loss-review": "/articles/best-noom-alternatives",
   "/articles/noom-subscription-cost": "/articles/best-noom-alternatives",
+  "/articles/weight-loss-medication-cost-guide": "/articles/glp1-cost-2026-how-to-pay-less",
   "/articles/best-weight-loss-telehealth-providers": "/",
   "/articles/altrx-vs-ro": "/compare/altrx-vs-ro",
   "/find-your-match-weight-loss": "/find-your-match",

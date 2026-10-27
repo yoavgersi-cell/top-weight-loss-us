@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Clock, ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { NOINDEX_ARTICLE_SLUGS, latestUpdate, AFFILIATE_PROVIDER_IDS, DEFAULT_ROBOTS } from "@/lib/config";
+import { NOINDEX_ARTICLE_SLUGS, NOINDEX_WL_BATTLE_SLUGS, latestUpdate, AFFILIATE_PROVIDER_IDS, DEFAULT_ROBOTS } from "@/lib/config";
 import { PRODUCT_CATALOG } from "@/lib/product-catalog";
 import { enhanceArticleHtml } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
@@ -23,6 +23,9 @@ import { PRICE_INDEX } from "@/lib/price-index";
 import type { TrustpilotReview } from "@/lib/config";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { notFound, permanentRedirect } from "next/navigation";
+import { TOPIC_CLUSTERS, clusterForArticle, siblingSlugs } from "@/lib/topic-clusters";
+import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
+import { SLUG_ALIASES } from "@/lib/slug-aliases";
 
 // Code-side CTR overrides for high-impression articles whose stored meta lives
 // in the CMS blob (so it can't be tuned from the content files). Applied only
@@ -379,15 +382,77 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // Byline author: match the article's author to a team member, else the lead
   const author = experts.find((e) => e.name === article.author) ?? experts[0];
 
-  // Related articles: same category first, then others, exclude self, max 3
-  const relatedArticles = [
-    ...articles.filter(
-      (a) => a.slug !== slug && a.category === article.category
-    ),
-    ...articles.filter(
-      (a) => a.slug !== slug && a.category !== article.category
-    ),
-  ].slice(0, 3);
+  // Topic cluster (src/lib/topic-clusters.ts): every article links up to its
+  // hub near the top and to cluster siblings at the bottom; a hub links down
+  // to every member. Provider cost articles roll up to the cost hub and the
+  // other provider articles (legit, alternatives) to the getting-started hub.
+  const byId = (id: string) => TOPIC_CLUSTERS.find((c) => c.id === id)!;
+  const topic =
+    clusterForArticle(slug) ??
+    (subjectProvider ? { cluster: byId(/-cost$/.test(slug) ? "cost" : "getting-started"), isHub: false } : null);
+  const titleOf = new Map(articles.map((a) => [a.slug, a.title]));
+  const articleLink = (s: string) =>
+    titleOf.has(s) ? { href: `/articles/${s}`, label: titleOf.get(s)! } : null;
+  const topicLinks: { href: string; label: string }[] = !topic
+    ? []
+    : topic.isHub
+      ? [
+          ...topic.cluster.articles.map(articleLink).filter((l): l is { href: string; label: string } => !!l),
+          ...topic.cluster.pages,
+          // Hubs also link every provider article of their kind: the cost hub
+          // each provider's cost breakdown, the getting-started hub each
+          // provider's legitimacy check.
+          ...articles
+            .filter((a) =>
+              topic.cluster.id === "cost"
+                ? /-cost$/.test(a.slug) && !topic.cluster.articles.includes(a.slug)
+                : topic.cluster.id === "getting-started" && /^is-.+-legit$/.test(a.slug),
+            )
+            .map((a) => ({ href: `/articles/${a.slug}`, label: a.title })),
+        ]
+      : (() => {
+          const members = siblingSlugs(topic.cluster, slug, 5)
+            .filter((s) => s !== slug)
+            .map(articleLink)
+            .filter((l): l is { href: string; label: string } => !!l);
+          // Rotate which two topic pages each member links, so all get equity.
+          const pages = topic.cluster.pages;
+          const offset = Math.max(0, topic.cluster.articles.indexOf(slug)) % Math.max(1, pages.length);
+          const rotated = [...pages.slice(offset), ...pages.slice(0, offset)].slice(0, 2);
+          return [topic.cluster.hub, ...members, ...rotated];
+        })();
+
+  // Provider entity cluster: on a provider article (is-X-legit, X-cost,
+  // X-alternatives, ...), link the provider's review, its other articles and
+  // its head-to-head and three-way comparisons.
+  const providerLinks: { href: string; label: string }[] = subjectProvider
+    ? [
+        { href: `/reviews/${subjectProvider.id}`, label: `${subjectProvider.name} review` },
+        ...articles
+          .filter((a) => a.slug !== slug && a.slug.split("-").includes(subjectProvider.id))
+          .filter((a) => /^is-.+-legit$|-cost$|-alternatives$|-review$/.test(a.slug))
+          .map((a) => ({ href: `/articles/${a.slug}`, label: a.title })),
+        ...(config.battles ?? [])
+          .filter((b) => b.provider1Id === subjectProvider.id || b.provider2Id === subjectProvider.id)
+          .filter((b) => !(b.slug in SLUG_ALIASES) && !NOINDEX_WL_BATTLE_SLUGS.has(b.slug))
+          .slice(0, 4)
+          .map((b) => {
+            const name = (id: string) => config.providers.find((p) => p.id === id)?.name ?? id;
+            return { href: `/compare/${b.slug}`, label: `${name(b.provider1Id)} vs ${name(b.provider2Id)}` };
+          }),
+        ...THREE_WAY_COMPARISONS.filter((t) => t.providerIds.includes(subjectProvider.id))
+          .slice(0, 2)
+          .map((t) => ({ href: `/compare/${t.slug}`, label: t.title })),
+      ]
+    : [];
+
+  // Fallback for articles outside every cluster: same category first.
+  const relatedArticles = topic
+    ? []
+    : [
+        ...articles.filter((a) => a.slug !== slug && a.category === article.category),
+        ...articles.filter((a) => a.slug !== slug && a.category !== article.category),
+      ].slice(0, 3);
 
   const formattedDate = new Date(latestUpdate(article.updatedAt)).toLocaleDateString(
     "en-US",
@@ -632,6 +697,18 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 ))}
               </ul>
             </div>
+          )}
+          {/* Topic hub link: high on the page, so readers and crawlers see
+              which pillar this article belongs to. */}
+          {topic && !topic.isHub && (
+            <p className="mb-8 rounded-xl border border-gray-200 bg-white px-5 py-4 text-[14.5px] leading-relaxed text-gray-700">
+              Part of our guide to <strong>{topic.cluster.name.toLowerCase().replace(/^glp-1/, "GLP-1")}</strong>. For the full
+              picture, start with{" "}
+              <Link href={topic.cluster.hub.href} className="font-semibold text-[#0C4B75] underline underline-offset-2">
+                {topic.cluster.hub.label}
+              </Link>
+              .
+            </p>
           )}
           {/* Table of contents - anchor jump-links. Signals structure to Google
               (eligible for "jump to" sitelinks) and improves navigation on long
@@ -887,7 +964,54 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             </div>
           </div>
 
-          {/* Related Articles */}
+          {/* Topic cluster links */}
+          {topic && topicLinks.length > 0 && (
+            <div className="mt-12">
+              <h2 className="mb-1 text-[18px] font-bold text-[#191919]">
+                {topic.isHub ? `Every guide on ${topic.cluster.name.toLowerCase().replace(/^glp-1/, "GLP-1")}` : `More on ${topic.cluster.name.toLowerCase().replace(/^glp-1/, "GLP-1")}`}
+              </h2>
+              <p className="mb-4 text-[13.5px] text-gray-500">
+                {topic.isHub
+                  ? "This guide is the overview. Each of these goes deeper on one question."
+                  : "Related guides from the same topic, starting with the overview."}
+              </p>
+              <ul className="grid gap-2.5 sm:grid-cols-2">
+                {topicLinks.map((l) => (
+                  <li key={l.href}>
+                    <Link
+                      href={l.href}
+                      className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold leading-snug text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                    >
+                      <span>{l.label}</span>
+                      <ArrowRight className="ml-auto h-3.5 w-3.5 shrink-0" strokeWidth={2} />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Provider entity links */}
+          {subjectProvider && providerLinks.length > 1 && (
+            <div className="mt-10">
+              <h2 className="mb-4 text-[18px] font-bold text-[#191919]">More on {subjectProvider.name}</h2>
+              <ul className="grid gap-2.5 sm:grid-cols-2">
+                {providerLinks.map((l) => (
+                  <li key={l.href}>
+                    <Link
+                      href={l.href}
+                      className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold leading-snug text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                    >
+                      <span>{l.label}</span>
+                      <ArrowRight className="ml-auto h-3.5 w-3.5 shrink-0" strokeWidth={2} />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Related Articles (articles outside every topic cluster) */}
           {relatedArticles.length > 0 && (
             <div className="mt-12">
               <h2 className="mb-5 text-[18px] font-bold text-[#191919]">
@@ -958,6 +1082,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           {/* Contextual comparison hub (weight-loss): routes informational
               readers into the highest-intent comparison pages. Code-injected,
               so it also renders on articles whose bodies live in the CMS blob. */}
+{!subjectProvider && (
           <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7">
               <h2 className="mb-1 text-[17px] font-bold text-[#191919]">Popular provider matchups</h2>
               <p className="mb-4 text-[13.5px] text-gray-500">
@@ -981,6 +1106,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 ))}
               </div>
             </div>
+          )}
 
           <MedicalSources vertical={ctx.vertical} />
 

@@ -31,7 +31,8 @@ export const costSectionsB: Article["sections"] = [
 <p>Mercer's spring 2026 survey of 604 organizations adds a forward-looking signal: 6% of employers with 500 or more employees dropped weight-loss GLP-1 coverage in 2026, and 5% plan to drop it or are considering doing so for 2027 (<a href="https://www.mercer.com/en-us/about/newsroom/employers-are-shifting-healthcare-costs-to-employees/" target="_blank" rel="noopener">Mercer</a>).</p>
 <h3>What about ACA Marketplace plans?</h3>
 <p>If you buy your own coverage on the ACA Marketplace, your odds are lower still. KFF describes Marketplace coverage of GLP-1s for obesity as limited, and a 2026 industry analysis found that only 26 of about 300 Marketplace carriers covered them for obesity (<a href="https://www.beckerspayer.com/payer/aca/glp-1-coverage-under-aca-plans-continues-to-decline-6-notes/" target="_blank" rel="noopener">Becker's Payer Issues</a>).</p>
-<p>The practical takeaway: do not assume either way. Coverage for diabetes is far more common than coverage for weight loss, and plans that cover weight loss usually add conditions.</p>`,
+<p>The practical takeaway: do not assume either way. Coverage for diabetes is far more common than coverage for weight loss, and plans that cover weight loss usually add conditions.</p>
+<p>For prior authorization, step therapy and a fallback plan if coverage is denied, see our <a href="/articles/glp1-with-insurance">GLP-1 insurance coverage guide</a>.</p>`,
   },
   {
     heading: "Why are employers dropping GLP-1 coverage?",
@@ -298,7 +299,8 @@ export const costSectionsB: Article["sections"] = [
 <li><strong>2027 list price cuts do not change self-pay prices.</strong> Novo is cutting Wegovy's list price to $675 a month effective January 1, 2027, but it said the cut does not change its direct-to-patient self-pay prices (<a href="https://www.prnewswire.com/news-releases/novo-nordisk-announces-significant-reduction-in-us-list-price-for-wegovy-ozempic-and-rybelsus-semaglutide-medicines-building-on-continued-efforts-to-expand-access-302695705.html" target="_blank" rel="noopener">Novo Nordisk</a>).</li>
 <li><strong>The Bridge has an end date.</strong> The Medicare GLP-1 Bridge runs through December 31, 2027, and coverage after that is uncertain (<a href="https://www.kff.org/quick-insights/cms-extends-medicares-short-term-bridge-program-for-glp-1-obesity-drug-coverage/" target="_blank" rel="noopener">KFF</a>).</li>
 <li><strong>Tax savings.</strong> Paying with HSA or FSA money lowers your effective cost by roughly your marginal tax rate, as explained above.</li>
-</ul>`,
+</ul>
+<p>Working to a fixed monthly budget? See <a href="/articles/what-100-to-200-a-month-gets-you-glp1">what $100 to $200 a month gets you</a>. Thinking of paying for several months up front? Read <a href="/articles/before-you-prepay-glp1">five questions to ask before you prepay</a>.</p>`,
   },
   {
     heading: "Which way to pay is cheapest for you?",

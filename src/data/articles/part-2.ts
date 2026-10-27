@@ -225,7 +225,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "What are the benefits of an online weight loss program?",
-        body: `Online programs are usually cheaper, quicker to start and easier to fit into your week.<ul><li>You complete the medical evaluation from home.</li><li>Medication ships to your door.</li><li>Follow-ups happen by video or secure message.</li><li>Most providers offer <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded GLP-1 medications</a> for a fraction of what clinics charge.</li></ul>Our <a href="/articles/weight-loss-medication-cost-guide">medication cost guide</a> breaks down the numbers.`,
+        body: `Online programs are usually cheaper, quicker to start and easier to fit into your week.<ul><li>You complete the medical evaluation from home.</li><li>Medication ships to your door.</li><li>Follow-ups happen by video or secure message.</li><li>Most providers offer <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded GLP-1 medications</a> for a fraction of what clinics charge.</li></ul>Our <a href="/articles/glp1-cost-2026-how-to-pay-less">medication cost guide</a> breaks down the numbers.`,
       },
       {
         heading: "What are the benefits of an in-person weight loss clinic?",
@@ -273,7 +273,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "What does the monthly semaglutide price include?",
-        body: `At the best telehealth providers, one monthly fee covers:<ul><li>The medication.</li><li>Medical consultations and dose adjustments.</li><li>Ongoing support.</li><li>Home delivery.</li></ul>Always compare the full monthly total rather than the medication price alone, because some providers bill separately for consultations or shipping. Our <a href="/articles/weight-loss-medication-cost-guide">full cost guide</a> has more detail.`,
+        body: `At the best telehealth providers, one monthly fee covers:<ul><li>The medication.</li><li>Medical consultations and dose adjustments.</li><li>Ongoing support.</li><li>Home delivery.</li></ul>Always compare the full monthly total rather than the medication price alone, because some providers bill separately for consultations or shipping. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">full cost guide</a> has more detail.`,
       },
       {
         heading: "How can you pay the least for semaglutide?",
@@ -377,7 +377,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "How much does each GLP-1 cost per month?",
-        body: `Brand-name prices:<ul><li>Wegovy: $1,300+/month.</li><li>Zepbound: $1,000+/month.</li><li>Saxenda: $1,300+/month.</li></ul>Compounded versions cost far less: semaglutide from a verified $49/month and tirzepatide from $89/month. See the <a href="/articles/semaglutide-cost-per-month">semaglutide cost breakdown</a> and our <a href="/articles/weight-loss-medication-cost-guide">full cost guide</a>.`,
+        body: `Brand-name prices:<ul><li>Wegovy: $1,300+/month.</li><li>Zepbound: $1,000+/month.</li><li>Saxenda: $1,300+/month.</li></ul>Compounded versions cost far less: semaglutide from a verified $49/month and tirzepatide from $89/month. See the <a href="/articles/semaglutide-cost-per-month">semaglutide cost breakdown</a> and our <a href="/articles/glp1-cost-2026-how-to-pay-less">full cost guide</a>.`,
       },
       {
         heading: "Which GLP-1 should you choose?",
@@ -463,7 +463,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "How much does Noom cost per month in 2026?",
-        body: `Noom's 2026 prices by plan:<ul><li><strong>Noom Weight</strong> (app only, no medication): $17.42/month on a 12-month plan, with psychology-based lessons, food tracking and coaching.</li><li><strong>Noom Med, compounded GLP-1</strong>: $79 for the first 3-week subscription plus 4 weeks of medication, then $199/month with medication included.</li><li><strong>Full-dose GLP-1</strong>: $129 to start, then $279/month.</li><li><strong>Telehealth for branded drugs</strong> (Ozempic, Wegovy, Zepbound): from $69/month, with the medication billed separately.</li></ul>Every compounded plan includes the medication in the monthly price. Our <a href="/articles/weight-loss-medication-cost-guide">full cost comparison</a> puts these numbers in context, and our <a href="/articles/best-noom-alternatives">Noom subscription cost guide</a> covers each plan in detail.`,
+        body: `Noom's 2026 prices by plan:<ul><li><strong>Noom Weight</strong> (app only, no medication): $17.42/month on a 12-month plan, with psychology-based lessons, food tracking and coaching.</li><li><strong>Noom Med, compounded GLP-1</strong>: $79 for the first 3-week subscription plus 4 weeks of medication, then $199/month with medication included.</li><li><strong>Full-dose GLP-1</strong>: $129 to start, then $279/month.</li><li><strong>Telehealth for branded drugs</strong> (Ozempic, Wegovy, Zepbound): from $69/month, with the medication billed separately.</li></ul>Every compounded plan includes the medication in the monthly price. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">full cost comparison</a> puts these numbers in context, and our <a href="/articles/best-noom-alternatives">Noom subscription cost guide</a> covers each plan in detail.`,
       },
       {
         heading: "What is the difference between Noom Med and Noom coaching?",
@@ -579,7 +579,7 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "How do you start GLP-1 treatment after 40?",
-        body: `Most telehealth providers accept adults of any age and can review your situation online. The evaluation looks at your age, medical history, current medications and goals. Use the <a href="/find-your-match">matching quiz</a> to find a suitable provider, or <a href="/">compare providers</a> directly. For prices, see our <a href="/articles/weight-loss-medication-cost-guide">cost guide</a>.`,
+        body: `Most telehealth providers accept adults of any age and can review your situation online. The evaluation looks at your age, medical history, current medications and goals. Use the <a href="/find-your-match">matching quiz</a> to find a suitable provider, or <a href="/">compare providers</a> directly. For prices, see our <a href="/articles/glp1-cost-2026-how-to-pay-less">cost guide</a>.`,
       },
     ],
   },

@@ -358,7 +358,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         Without insurance, brand-name GLP-1 medications cost $900-$1,400 a month at retail. Licensed
         telehealth providers offer compounded semaglutide and tirzepatide for much less, typically
         $49-$299 a month with physician consultations, medication and home delivery included. Our{" "}
-        <Link href="/articles/weight-loss-medication-cost-guide" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/articles/glp1-cost-2026-how-to-pay-less" className="font-semibold text-[#0C4B75] hover:underline">
           GLP-1 cost guide
         </Link>{" "}breaks the numbers down.
       </p>

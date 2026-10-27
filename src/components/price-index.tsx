@@ -3,6 +3,9 @@ import { ArrowRight } from "lucide-react";
 import { PRICE_INDEX, type PriceCell } from "@/lib/price-index";
 import { ProviderCta } from "@/components/provider-cta";
 import type { Provider } from "@/lib/config";
+import { articles } from "@/data/articles";
+
+const ARTICLE_SLUGS = new Set(articles.map((a) => a.slug));
 
 // ───── The price index ─────
 // A price-led editorial table, not a card grid: the provider is a row, the
@@ -104,7 +107,7 @@ export function PriceIndex({
             </div>
 
             {/* Actions - plain text links, no button chrome */}
-            <div className="mt-4 flex items-center gap-4 sm:mt-0 sm:flex-col sm:items-end sm:gap-1.5">
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 sm:mt-0 sm:flex-col sm:flex-nowrap sm:items-end sm:gap-1.5">
               <ProviderCta
                 href={p.affiliateUrl}
                 providerName={p.name}
@@ -120,6 +123,14 @@ export function PriceIndex({
               <Link href={review} className="text-[12.5px] font-medium text-gray-400 hover:text-gray-600 hover:underline">
                 Full review
               </Link>
+              {ARTICLE_SLUGS.has(`${p.id}-cost`) && (
+                <Link
+                  href={`/articles/${p.id}-cost`}
+                  className="text-[12.5px] font-medium text-gray-400 hover:text-gray-600 hover:underline"
+                >
+                  {p.name} cost breakdown
+                </Link>
+              )}
             </div>
           </div>
         );

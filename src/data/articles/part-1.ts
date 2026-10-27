@@ -123,7 +123,7 @@ export const articlesPart1: Article[] = [
       },
       {
         heading: "What does the monthly fee actually cover?",
-        body: `Compare the total monthly cost, not the headline price. Some providers advertise a low fee and then bill separately for medication, consultations or shipping, while others bundle all of it.<br><br>Before signing up, check for:<ul><li>Enrollment fees</li><li>Cancellation fees</li><li>Minimum commitment periods</li></ul>Our <a href="/articles/weight-loss-medication-cost-guide">weight loss medication cost guide</a> breaks the pricing down further.`,
+        body: `Compare the total monthly cost, not the headline price. Some providers advertise a low fee and then bill separately for medication, consultations or shipping, while others bundle all of it.<br><br>Before signing up, check for:<ul><li>Enrollment fees</li><li>Cancellation fees</li><li>Minimum commitment periods</li></ul>Our <a href="/articles/glp1-cost-2026-how-to-pay-less">weight loss medication cost guide</a> breaks the pricing down further.`,
       },
       {
         heading: "Should you choose compounded or brand-name medication?",
@@ -139,7 +139,7 @@ export const articlesPart1: Article[] = [
       },
       {
         heading: "How much does an online GLP-1 program cost per month?",
-        body: `Verified pricing for compounded programs runs $49-$199/month for semaglutide and $89-$299/month for tirzepatide. The best value comes from providers whose single monthly fee covers medication, physician consults, dose changes and home delivery.<br><br>Be skeptical of a low base price that grows once consultations, shipping or supplies are added. See the <a href="/articles/semaglutide-cost-per-month">semaglutide cost guide</a> and our <a href="/articles/weight-loss-medication-cost-guide">full pricing comparison</a>.`,
+        body: `Verified pricing for compounded programs runs $49-$199/month for semaglutide and $89-$299/month for tirzepatide. The best value comes from providers whose single monthly fee covers medication, physician consults, dose changes and home delivery.<br><br>Be skeptical of a low base price that grows once consultations, shipping or supplies are added. See the <a href="/articles/semaglutide-cost-per-month">semaglutide cost guide</a> and our <a href="/articles/glp1-cost-2026-how-to-pay-less">full pricing comparison</a>.`,
       },
       {
         heading: "What should you ask a provider before you enroll?",
@@ -670,7 +670,7 @@ export const articlesPart1: Article[] = [
       },
       {
         heading: "Do you need to take a GLP-1 for life?",
-        body: `Many patients may need ongoing treatment. Major medical organizations, including the American Association of Clinical Endocrinology, now recognize <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener">obesity as a chronic disease</a> that may need long-term care, much like high blood pressure or diabetes. Stopping blood pressure medication lets blood pressure rise again; stopping weight loss medication lets weight return.<br><br>For many people, the most effective approach is continuing at a maintenance dose, which can be lower than the dose used for weight loss. Our <a href="/articles/weight-loss-medication-cost-guide">medication cost guide</a> covers long-term costs.`,
+        body: `Many patients may need ongoing treatment. Major medical organizations, including the American Association of Clinical Endocrinology, now recognize <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener">obesity as a chronic disease</a> that may need long-term care, much like high blood pressure or diabetes. Stopping blood pressure medication lets blood pressure rise again; stopping weight loss medication lets weight return.<br><br>For many people, the most effective approach is continuing at a maintenance dose, which can be lower than the dose used for weight loss. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">medication cost guide</a> covers long-term costs.`,
       },
       {
         heading: "How do you decide whether to stop or continue?",
@@ -762,7 +762,7 @@ export const articlesPart1: Article[] = [
       },
       {
         heading: "What does semaglutide cost online without insurance?",
-        body: `Brand-name Ozempic costs $900-$1,000/month without insurance. Compounded semaglutide from telehealth providers costs a verified $49-$199/month, often with consultations and delivery included, and many providers accept HSA/FSA payments. Our <a href="/articles/weight-loss-medication-cost-guide">medication cost guide</a> has the full breakdown.`,
+        body: `Brand-name Ozempic costs $900-$1,000/month without insurance. Compounded semaglutide from telehealth providers costs a verified $49-$199/month, often with consultations and delivery included, and many providers accept HSA/FSA payments. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">medication cost guide</a> has the full breakdown.`,
       },
     ],
   },
@@ -802,7 +802,7 @@ export const articlesPart1: Article[] = [
       },
       {
         heading: "How much less does compounded semaglutide cost?",
-        body: `The price gap is the biggest difference:<table><tr><th>Option</th><th>Monthly price</th></tr><tr><td>Brand Wegovy (retail)</td><td>$1,300-$1,400</td></tr><tr><td>Brand Ozempic (retail)</td><td>$900-$1,000</td></tr><tr><td>Compounded semaglutide (telehealth, verified)</td><td>$49-$199, often with consultations and delivery</td></tr></table>For many patients, this difference is what makes treatment affordable at all. See our <a href="/articles/weight-loss-medication-cost-guide">full cost comparison</a>.`,
+        body: `The price gap is the biggest difference:<table><tr><th>Option</th><th>Monthly price</th></tr><tr><td>Brand Wegovy (retail)</td><td>$1,300-$1,400</td></tr><tr><td>Brand Ozempic (retail)</td><td>$900-$1,000</td></tr><tr><td>Compounded semaglutide (telehealth, verified)</td><td>$49-$199, often with consultations and delivery</td></tr></table>For many patients, this difference is what makes treatment affordable at all. See our <a href="/articles/glp1-cost-2026-how-to-pay-less">full cost comparison</a>.`,
       },
       {
         heading: "Should you choose compounded or brand-name semaglutide?",

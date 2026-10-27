@@ -404,6 +404,10 @@ export default async function WeightLossPillsPage() {
               pills, compounded oral products and over-the-counter diet pills: how each works, its
               trial evidence, its price and who should avoid it.
             </p>
+            <p className="mt-2 max-w-[640px] text-[13.5px] leading-[1.5] text-gray-500">
+              Comparing pills with injections on price, or paying through Medicare? See our{" "}
+              <Link href="/articles/glp1-cost-2026-how-to-pay-less" className="font-semibold text-[#0C4B75] underline underline-offset-2">2026 GLP-1 cost guide</Link>.
+            </p>
             <p className="mt-2 text-[12px] text-gray-400">Updated {fmt(PAGE_UPDATED)}</p>
             <MedicalReviewBar path="/weight-loss-pills" className="mt-3 max-w-[760px]" />
           </div>
