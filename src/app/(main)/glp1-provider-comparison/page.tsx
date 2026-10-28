@@ -29,7 +29,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.topweightloss.us/glp1-provider-comparison";
 const TITLE = "GLP-1 Provider Comparison 2026: Real Prices and Reviews";
 const DESCRIPTION =
-  "GLP-1 provider comparison: 8 telehealth services side by side on verified prices from $49/mo, month-two costs, Trustpilot, Reddit and cancellation terms.";
+  "GLP-1 provider comparison: 8 telehealth services side by side on verified prices from $41/mo, month-two costs, Trustpilot, Reddit and cancellation terms.";
 const PUBLISHED = "2026-10-12";
 const UPDATED = "2026-10-17";
 const TRUSTPILOT_CHECKED = "October 12, 2026";
@@ -65,16 +65,16 @@ const ROWS: Row[] = [
     id: "wellmedr",
     name: "welludr",
     medications: "Compounded semaglutide and tirzepatide, plus brand-name Ozempic and Zepbound",
-    entry: "$49 sema / $89 tirz",
-    entryNote: "on the 12-month plan; one price at every dose",
-    after: "Unchanged while on the plan; higher if you pay month to month",
+    entry: "$41 sema / $71 tirz",
+    entryNote: "Pre-Black Friday sale from October 28, 2026; check plan terms at checkout",
+    after: "Depends on the sale's plan terms; check at checkout",
     membership: "None",
     shipping: "3-5 business days",
     support: "Board-certified specialists and a weight-care coach",
     trustpilot: { rating: "4.6", count: "2,188", checked: TRUSTPILOT_CHECKED, url: "https://www.trustpilot.com/review/wellmedr.com" },
     advantage: "Lowest ongoing price we track; weight-loss warranty",
-    limitation: "Best rate requires a 12-month plan; shipping is slower",
-    cta: "See welludr's 12-month pricing",
+    limitation: "Sale plan terms are not published up front; shipping is slower",
+    cta: "See welludr's sale pricing",
   },
   {
     id: "embody",
@@ -210,12 +210,12 @@ const SECTIONS: Section[] = [
     id: "wellmedr",
     overview: (
       <>
-        welludr offers <strong className="text-[#191919]">the lowest ongoing price we track</strong> for compounded semaglutide and tirzepatide, on a twelve-month plan that charges the same at every dose. Every plan includes a coach, and brand-name Ozempic and Zepbound are available for patients who want them. welludr fits people who already plan to stay on treatment and want the cheapest rate they can sustain.
+        welludr offers <strong className="text-[#191919]">the lowest ongoing price we track</strong> for compounded semaglutide and tirzepatide, now from $41 and $71 a month in its Pre-Black Friday sale. Every plan includes a coach, and brand-name Ozempic and Zepbound are available for patients who want them. welludr fits people who already plan to stay on treatment and want the cheapest rate they can sustain.
       </>
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">On the twelve-month plan, welludr charges $49 a month for semaglutide and $89 a month for tirzepatide</strong>, shipped every four weeks (verified October 16, 2026). Both prices dropped on September 14, from $59 and $99. Brand-name Ozempic costs $1,399 a month and Zepbound $1,599. Standard shipping takes three to five business days, and there is no membership fee. The catch is the plan itself: the $49 rate depends on the twelve-month commitment, and reviewers paying month to month report $129. A full year of semaglutide on the plan comes to $588, the lowest year-one total on this page.
+        <strong className="text-[#191919]">In its Pre-Black Friday sale (from October 28, 2026), welludr charges from $41 a month for semaglutide and from $71 a month for tirzepatide</strong>. Before the sale, its twelve-month plan was $49 and $89, shipped every four weeks (verified October 16, 2026), after both prices dropped on September 14 from $59 and $99. Brand-name Ozempic costs $1,399 a month and Zepbound $1,599. Standard shipping takes three to five business days, and there is no membership fee. The catch is that welludr has not spelled out the plan terms behind the sale prices, so check them at checkout; reviewers paying month to month have reported $129. A full year of semaglutide at $41 comes to $492, the lowest year-one total on this page.
       </>
     ),
     support:
@@ -234,11 +234,11 @@ const SECTIONS: Section[] = [
     cancellation:
       "Cancel before your next billing date. welludr refunds qualifying unfulfilled orders and services that were objectively not earned, the most refund-friendly language of the eight providers.",
     pros: ["Lowest ongoing price on this page, the same at every dose", "Weight-care coach included", "Weight-loss warranty", "Recent reviews name reachable support staff"],
-    cons: ["The advertised rate requires a twelve-month plan", "Ships more slowly than the one-to-two-day providers", "One reviewer reports billing more often than once a calendar month", "Pharmacy not named on the website"],
+    cons: ["The plan terms behind the advertised sale rates are not published up front", "Ships more slowly than the one-to-two-day providers", "One reviewer reports billing more often than once a calendar month", "Pharmacy not named on the website"],
     suits: "People who know they will stay on treatment for a year, want the lowest total cost, and care more about a coach and a support team that answers than about next-day delivery.",
     assessment: (
       <>
-        Based on the evidence, welludr makes <strong className="text-[#191919]">the strongest value case on this page for long-term patients</strong>: the lowest verified ongoing price, service that Trustpilot and Reddit both describe as responsive, and refund terms more generous than most. In exchange you accept a commitment and slower shipping. If you are not yet sure you will stay on a GLP-1, start with a month-to-month provider and return to welludr later.
+        Based on the evidence, welludr makes <strong className="text-[#191919]">the strongest value case on this page for long-term patients</strong>: the lowest verified ongoing price, service that Trustpilot and Reddit both describe as responsive, and refund terms more generous than most. In exchange you accept sale plan terms you should check at checkout, and slower shipping. If you are not yet sure you will stay on a GLP-1, start with a month-to-month provider and return to welludr later.
       </>
     ),
   },
@@ -595,8 +595,8 @@ export default async function Glp1ProviderComparisonPage() {
             GLP-1 Telehealth Providers Compared for 2026: Prices, Month-Two Costs and Customer Reviews
           </h1>
           <p className="mt-3 max-w-[720px] text-[15.5px] leading-relaxed text-gray-500">
-            The lowest ongoing GLP-1 price we track is welludr&rsquo;s $49 a month for semaglutide on a twelve-month
-            plan, and the lowest no-commitment price is embody&rsquo;s $69. But the advertised price is only part of the
+            The lowest ongoing GLP-1 price we track is welludr&rsquo;s $41 a month for semaglutide in its Pre-Black
+            Friday sale, and the lowest no-commitment price is embody&rsquo;s $69. But the advertised price is only part of the
             answer. This page compares eight online providers (welludr, embody, Eden, DirectMeds, Medvi, TrimRx, altRx
             and ro) across four pricing models and two kinds of medication, on what you will pay by month three and
             whether anyone responds when something goes wrong. Each provider is checked against its published prices,
@@ -631,7 +631,7 @@ export default async function Glp1ProviderComparisonPage() {
           <p className="mb-4">
             GLP-1 provider prices are hard to compare because the advertised number is rarely what you pay in month
             two. Across eight provider homepages you will find eight headline prices measuring different things: some
-            are first-month promotions, some are the monthly rate on a twelve-month plan, and one is a membership fee
+            are first-month promotions, some are limited-time sale prices, and one is a membership fee
             that excludes the medication entirely. Lining them up as printed compares eight unlike quantities.
           </p>
           <p className="mb-3">These six factors change what you actually pay and experience:</p>
@@ -890,7 +890,7 @@ export default async function Glp1ProviderComparisonPage() {
             <li className="list-disc"><strong className="text-[#191919]">Dose-based medication pricing.</strong> ro&rsquo;s brand-name medication costs more as the dose rises ($299 to $449 for Zepbound). Every compounded provider here states one price at every dose, a genuine advantage of that model that is worth getting in writing.</li>
             <li className="list-disc"><strong className="text-[#191919]">Shipping.</strong> Free at the seven providers that state their shipping terms; Eden does not publish them. Speed varies from one to two days (embody, DirectMeds) to five to seven (altRx).</li>
             <li className="list-disc"><strong className="text-[#191919]">Billing frequency.</strong> Billing &ldquo;every four weeks&rdquo; (welludr&rsquo;s stated cycle) means thirteen charges a year, not twelve, and one reviewer reports a 21-day cycle. Ask before you sign up.</li>
-            <li className="list-disc"><strong className="text-[#191919]">Switching medications.</strong> Moving from semaglutide to tirzepatide raises the price at most providers here; DirectMeds charges $147 for either. Among the others, the difference runs from $30 (Eden) to $110 (TrimRx).</li>
+            <li className="list-disc"><strong className="text-[#191919]">Switching medications.</strong> Moving from semaglutide to tirzepatide raises the price at most providers here; DirectMeds charges $147 for either. Among the others, the difference runs from $30 (Eden, and welludr in its sale) to $110 (TrimRx).</li>
             <li className="list-disc"><strong className="text-[#191919]">Cancellation rules.</strong> ro requires 48 hours&rsquo; notice; embody, altRx and Medvi require 72 hours; and prepaid plans at altRx and TrimRx are non-refundable.</li>
           </ul>
           <p className="mb-3 text-[15px] font-semibold text-[#191919]">What do three months of GLP-1 treatment cost? An example with verified prices</p>
@@ -906,7 +906,7 @@ export default async function Glp1ProviderComparisonPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">welludr semaglutide, 12-month plan</th><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-800"><strong>$147</strong> (plus nine more months committed)</td></tr>
+                <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">welludr semaglutide, Pre-Black Friday sale</th><td className="px-4 py-3 text-gray-600">$41</td><td className="px-4 py-3 text-gray-600">$41</td><td className="px-4 py-3 text-gray-600">$41</td><td className="px-4 py-3 text-gray-800"><strong>$123</strong> (check the sale&rsquo;s plan terms at checkout)</td></tr>
                 <tr className="bg-gray-50/50"><th scope="row" className="px-4 py-3 font-medium text-[#191919]">embody semaglutide, month to month</th><td className="px-4 py-3 text-gray-600">$69</td><td className="px-4 py-3 text-gray-600">$69</td><td className="px-4 py-3 text-gray-600">$69</td><td className="px-4 py-3 text-gray-800"><strong>$207</strong> (nothing further committed)</td></tr>
                 <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">ro Wegovy pill plus membership, month to month</th><td className="px-4 py-3 text-gray-600">$39 + $149 = $188</td><td className="px-4 py-3 text-gray-600">$149 + $299 = $448</td><td className="px-4 py-3 text-gray-600">$149 + $299 = $448</td><td className="px-4 py-3 text-gray-800"><strong>$1,084</strong> (FDA-approved product; insurance could change this completely)</td></tr>
               </tbody>

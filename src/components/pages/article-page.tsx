@@ -44,7 +44,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "is-wellmedr-legit": {
     title: "Is welludr Legit or a Scam? Complaints & Prices (2026)",
     description:
-      "Is welludr a scam? It holds a verified 4.6 on Trustpilot from 2,188 reviews. We cover what complaints say, how the $49-$89 pricing really works, and our verdict.",
+      "Is welludr a scam? It holds a verified 4.6 on Trustpilot from 2,188 reviews. We cover what complaints say, how the $41-$71 pricing really works, and our verdict.",
   },
   "is-altrx-legit": {
     // Keeps the keyword-rich SERP snippet (prices, flat-dose) even though the
@@ -56,27 +56,27 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "tirzepatide-vs-semaglutide": {
     title: "Tirzepatide vs Semaglutide (2026): Weight Loss & Cost",
     description:
-      "Tirzepatide vs semaglutide: up to 22.5% vs about 15% weight loss in trials, plus side effects and dosing. Checked compounded prices start at $49 and $89 per month.",
+      "Tirzepatide vs semaglutide: up to 22.5% vs about 15% weight loss in trials, plus side effects and dosing. Checked compounded prices start at $41 and $71 per month.",
   },
   "best-mounjaro-alternatives": {
-    title: "7 Best Mounjaro Alternatives for 2026 (From $89/Month)",
+    title: "7 Best Mounjaro Alternatives for 2026 (From $71/Month)",
     description:
-      "Compounded tirzepatide, the active ingredient in Mounjaro, costs from $89/month at licensed providers versus $1,000+ for brand pens. Prices checked October 2026.",
+      "Compounded tirzepatide, the active ingredient in Mounjaro, costs from $71/month at licensed providers versus $1,000+ for brand pens. Prices checked October 2026.",
   },
   "best-wegovy-alternatives": {
-    title: "7 Best Wegovy Alternatives for 2026 (From $49/Month)",
+    title: "7 Best Wegovy Alternatives for 2026 (From $41/Month)",
     description:
-      "Compounded semaglutide, the active ingredient in Wegovy, costs $49-$199/month through licensed online providers. Real prices, what each plan includes and how to pick.",
+      "Compounded semaglutide, the active ingredient in Wegovy, costs $41-$199/month through licensed online providers. Real prices, what each plan includes and how to pick.",
   },
   "best-ro-alternatives": {
-    title: "Best ro Alternatives for Weight Loss in 2026 (From $49/mo)",
+    title: "Best ro Alternatives for Weight Loss in 2026 (From $41/mo)",
     description:
-      "GLP-1 providers with flat pricing that rival ro: welludr at $49/mo, embody at $69/mo, altRx at $89/mo and more, compared on cost, shipping speed and support.",
+      "GLP-1 providers with flat pricing that rival ro: welludr from $41/mo, embody at $69/mo, altRx at $89/mo and more, compared on cost, shipping speed and support.",
   },
   "can-you-get-ozempic-without-doctor": {
     title: "Can You Get Ozempic Without a Doctor Visit? (2026)",
     description:
-      "No. Every GLP-1 needs a prescription by law, but an office visit is optional: licensed telehealth clinicians assess you online, with treatment from $49/month.",
+      "No. Every GLP-1 needs a prescription by law, but an office visit is optional: licensed telehealth clinicians assess you online, with treatment from $41/month.",
   },
   "weight-loss-medication-that-works-fast": {
     title: "Weight Loss Medication That Works Fast: 2026 Guide",
@@ -86,22 +86,22 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "how-to-get-ozempic-online": {
     title: "How to Get Ozempic Online Legally in 2026: 3 Steps",
     description:
-      "The legal path has three steps: an online intake, review by a licensed provider, and medication by mail. Brand-name and compounded semaglutide options from $49/month.",
+      "The legal path has three steps: an online intake, review by a licensed provider, and medication by mail. Brand-name and compounded semaglutide options from $41/month.",
   },
   "semaglutide-cost-per-month": {
-    title: "Semaglutide Cost Per Month (2026): From $49 vs $1,150+",
+    title: "Semaglutide Cost Per Month (2026): From $41 vs $1,150+",
     description:
-      "Compounded semaglutide costs $49-$199/month all-in through telehealth, while brand Ozempic or Wegovy costs $1,150-$1,600 without insurance. Full price breakdown.",
+      "Compounded semaglutide costs $41-$199/month all-in through telehealth, while brand Ozempic or Wegovy costs $1,150-$1,600 without insurance. Full price breakdown.",
   },
   "weight-loss-medication-without-insurance": {
-    title: "Weight Loss Medication Without Insurance: From $49/mo",
+    title: "Weight Loss Medication Without Insurance: From $41/mo",
     description:
-      "No insurance? Self-pay compounded GLP-1s start at $49-$89/month with the provider visit included. Prices from licensed telehealth providers, compared side by side.",
+      "No insurance? Self-pay compounded GLP-1s start at $41-$71/month with the provider visit included. Prices from licensed telehealth providers, compared side by side.",
   },
   "compounded-semaglutide-vs-brand-name": {
     title: "Compounded Semaglutide vs Brand Name: Key Differences",
     description:
-      "Same active ingredient, made by 503A pharmacies, at roughly a 10x lower price ($49-$199 vs $1,150+/mo). What the FDA says, the trade-offs and how to stay safe.",
+      "Same active ingredient, made by 503A pharmacies, at roughly a 10x lower price ($41-$199 vs $1,150+/mo). What the FDA says, the trade-offs and how to stay safe.",
   },
 };
 
@@ -112,16 +112,16 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   // Oct 20, 2026 pillar. Figures are the verified price index and the two
   // pivotal trials cited inside the article.
   "glp1-weight-loss-online-complete-guide":
-    "There are three ways to get a GLP-1 online, and every one needs a prescription from a licensed clinician: brand-name Wegovy or Zepbound (pens or the new pills) through a telehealth prescriber, the same brands through your insurance, or compounded semaglutide or tirzepatide made by a state-licensed pharmacy and prescribed by a telehealth provider. Checked compounded prices are $49-$199/month for semaglutide and $89-$299/month for tirzepatide, while brand-name cash prices start near $1,249/month. In the pivotal trials, average weight loss was about 15% on semaglutide and up to 21% on tirzepatide after 15-17 months, and most of that weight returned within a year of stopping.",
+    "There are three ways to get a GLP-1 online, and every one needs a prescription from a licensed clinician: brand-name Wegovy or Zepbound (pens or the new pills) through a telehealth prescriber, the same brands through your insurance, or compounded semaglutide or tirzepatide made by a state-licensed pharmacy and prescribed by a telehealth provider. Checked compounded prices are $41-$199/month for semaglutide and $71-$299/month for tirzepatide, while brand-name cash prices start near $1,249/month. In the pivotal trials, average weight loss was about 15% on semaglutide and up to 21% on tirzepatide after 15-17 months, and most of that weight returned within a year of stopping.",
   // Oct 8, 2026 research-driven cluster. Figures derive from the verified
   // price index (see src/lib/true-cost.ts) and dated external sources cited
   // inside each article; the dollar stamp below carries the index date.
   "glp1-true-cost-month-1-vs-year-one":
-    "What you keep paying after month 1 matters more than the intro price. At checked prices, a first year of compounded semaglutide costs from $588 on welludr's 12-month plan to $828-$2,348 at month-to-month providers, and tirzepatide adds about $480-$1,320 on top. The month-2 price jump comes from promos with no published end date, 20%-off first-month deals and memberships billed alongside the medication, and you can see all of them before you pay.",
+    "What you keep paying after month 1 matters more than the intro price. At checked prices, a first year of compounded semaglutide costs from $492 at welludr's Pre-Black Friday sale price to $828-$2,348 at month-to-month providers, and tirzepatide adds about $360-$1,320 on top. The month-2 price jump comes from promos with no published end date, 20%-off first-month deals and memberships billed alongside the medication, and you can see all of them before you pay.",
   "before-you-prepay-glp1":
     "Pay month to month for your first two or three cycles, and prepay only after the provider has shipped on time and replied when you contacted it. Before you sign up for any prepaid or 12-month plan, get written answers to five questions: when you are charged and for what; what is refunded if shipments stop; how you cancel and whether you get a confirmation; whether the plan auto-renews and how much notice you receive; and whether a financing company bills you separately.",
   "what-100-to-200-a-month-gets-you-glp1":
-    "At checked published prices, under $100 a month gets you compounded semaglutide from welludr ($49 on a 12-month plan), embody ($69, month to month), altRx ($89) or Medvi ($99 promo). Between $100 and $150 buys compounded tirzepatide from embody ($119), DirectMeds ($147) or altRx ($149). From $150 to $200 you are paying for all-inclusive and coaching-led programs. The brand-name Foundayo pill also falls in the $100-$200 range, from $149 a month. Above $200 you reach compounded tirzepatide at TrimRx ($259) and SHED ($299), and brand injections from $1,149.",
+    "At checked published prices, under $100 a month gets you compounded semaglutide from welludr (from $41 in its Pre-Black Friday sale), embody ($69, month to month), altRx ($89) or Medvi ($99 promo). Between $100 and $150 buys compounded tirzepatide from embody ($119), DirectMeds ($147) or altRx ($149). From $150 to $200 you are paying for all-inclusive and coaching-led programs. The brand-name Foundayo pill also falls in the $100-$200 range, from $149 a month. Above $200 you reach compounded tirzepatide at TrimRx ($259) and SHED ($299), and brand injections from $1,149.",
   "lost-insurance-coverage-zepbound-wegovy":
     "You have five options. Appeal, if the drug is still on your formulary. Use the manufacturer's savings card or direct price (Foundayo lists $149-$349 a month self-pay, or $25 with commercial insurance). On Medicare, join the GLP-1 Bridge pilot, which charges a flat $50 a month for Wegovy, the Zepbound KwikPen and Foundayo through December 2027. Pay cash for brand-name medication through telehealth ($1,149-$1,799 a month). Or move to a compounded version at $49-$299 a month. Whether your current dose carries over is a decision for a licensed clinician.",
   "503a-vs-503b-pharmacy-28-day-rule":
@@ -129,7 +129,7 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "glp1-after-65-medicare":
     "Since July 1, 2026, eligible Medicare beneficiaries can use the GLP-1 Bridge pilot to get the Wegovy pill and injection, the Zepbound KwikPen and Foundayo for a flat $50 monthly copay that stays the same as the dose rises, through December 31, 2027. Eligibility depends on clinical criteria plus an approval step through your Part D plan. Medicare never covers compounded GLP-1s. If you do not qualify, you can pay cash for brand-name drugs ($149-$349 a month for Foundayo, $1,149+ for injections) or for compounded versions ($49-$299).",
   "is-wellmedr-legit":
-    "Yes. welludr passes every check we can verify: a licensed provider reviews you before prescribing, medication comes from a regulated US pharmacy, it offers a weight loss warranty, and it holds a verified 4.6 on Trustpilot from 2,188 reviews (tied for the highest score among the providers we track). The caveats: the advertised $49 and $89 prices require a 12-month plan, the complaints that do exist focus on shipping delays and slow support replies, and individual results vary no matter how good the service is.",
+    "Yes. welludr passes every check we can verify: a licensed provider reviews you before prescribing, medication comes from a regulated US pharmacy, it offers a weight loss warranty, and it holds a verified 4.6 on Trustpilot from 2,188 reviews (tied for the highest score among the providers we track). The caveats: the advertised $41 and $71 prices are Pre-Black Friday sale prices (from October 28, 2026) whose plan terms you should check at checkout, the complaints that do exist focus on shipping delays and slow support replies, and individual results vary no matter how good the service is.",
   // Oct 9, 2026 oral GLP-1 pair. Ro figures are its verified published
   // prices; manufacturer figures are as reported by sources dated inside the
   // articles, so these two carry their own stamp (QUICK_ANSWER_STAMPS).
@@ -138,39 +138,39 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "foundayo-vs-wegovy-pill":
     "Both are FDA-approved GLP-1 pills taken once a day. In OASIS 4, the Wegovy pill (oral semaglutide, approved December 2025) produced 13.6% average weight loss at 64 weeks. In ATTAIN-1, Foundayo (orforglipron, approved April 1, 2026) produced 11.2% at its top dose over 72 weeks. These were separate trials, not a head-to-head comparison. The Wegovy pill must be taken on an empty stomach followed by a 30-minute wait, while Foundayo has no food or water rules. Paying cash, Foundayo lists $149-$349 a month by dose, and the Wegovy pill costs $149 then $299 plus membership at ro. Both drop to $25 with a commercial savings card and $50 under Medicare's pilot.",
   "zepbound-price-online":
-    "Paying cash, brand-name Zepbound costs $1,249/month at altRx and $1,599 at welludr. At ro, Zepbound KwikPens start at $299 for month one (then $399-449) plus a monthly membership of $39 at first and $74-149 after, and insurance can apply there. Compounded tirzepatide, which has the same active ingredient, costs $89-$299/month from licensed telehealth providers. Every one of these routes requires a prescription.",
+    "Paying cash, brand-name Zepbound costs $1,249/month at altRx and $1,599 at welludr. At ro, Zepbound KwikPens start at $299 for month one (then $399-449) plus a monthly membership of $39 at first and $74-149 after, and insurance can apply there. Compounded tirzepatide, which has the same active ingredient, costs $71-$299/month from licensed telehealth providers. Every one of these routes requires a prescription.",
   "best-tirzepatide-online":
-    "Checked compounded tirzepatide prices range from $89 to $299 a month. welludr is the lowest at $89 on a 12-month plan, embody at $119 is the cheapest with no commitment, and Medvi at $166 is all-inclusive and has one of the two largest review bases. For brand-name Zepbound, altRx charges $1,249/month cash, and ro's KwikPen starts at $299 for month one plus membership; where insurance applies, ro can cost far less. Every legitimate source requires a prescription.",
+    "Checked compounded tirzepatide prices range from $71 to $299 a month. welludr is the lowest at $71 in its Pre-Black Friday sale (check the plan terms at checkout), embody at $119 is the cheapest flat month-to-month price, and Medvi at $166 is all-inclusive and has one of the two largest review bases. For brand-name Zepbound, altRx charges $1,249/month cash, and ro's KwikPen starts at $299 for month one plus membership; where insurance applies, ro can cost far less. Every legitimate source requires a prescription.",
   "ozempic-face":
     "Ozempic face is the loss of facial volume that comes from losing weight quickly; it is not a chemical side effect of the drug. It can happen with any GLP-1 or any rapid weight loss. What helps: a moderate pace of weight loss, enough protein, resistance training and good hydration. Facial volume often returns in part once your weight stabilizes.",
   "zepbound-vs-wegovy-vs-ozempic":
-    "In trials, Zepbound (tirzepatide) produced up to 22.5% average weight loss, compared with about 15% for Wegovy (semaglutide). Ozempic is the same semaglutide sold under its diabetes approval. Checked prices: brand Zepbound costs $1,249/month and Wegovy $1,579 at altRx, while compounded semaglutide starts at $49 and compounded tirzepatide at $89 through licensed telehealth.",
+    "In trials, Zepbound (tirzepatide) produced up to 22.5% average weight loss, compared with about 15% for Wegovy (semaglutide). Ozempic is the same semaglutide sold under its diabetes approval. Checked prices: brand Zepbound costs $1,249/month and Wegovy $1,579 at altRx, while compounded semaglutide starts at $41 and compounded tirzepatide at $71 through licensed telehealth.",
   "glp1-with-insurance":
-    "Many plans cover GLP-1s for diabetes, but far fewer cover them for weight loss alone. Your plan's formulary is the only reliable answer, and prior authorization (BMI cutoffs, documented conditions) is the usual hurdle. If coverage falls through, checked self-pay compounded semaglutide costs $49-$199/month through licensed telehealth providers.",
+    "Many plans cover GLP-1s for diabetes, but far fewer cover them for weight loss alone. Your plan's formulary is the only reliable answer, and prior authorization (BMI cutoffs, documented conditions) is the usual hurdle. If coverage falls through, checked self-pay compounded semaglutide costs $41-$199/month through licensed telehealth providers.",
   "ozempic-vs-wegovy-differences":
-    "Ozempic and Wegovy share one active ingredient, semaglutide, but they are different products. Ozempic is FDA-approved for type 2 diabetes, while Wegovy is approved for chronic weight management and goes up to a higher maximum dose (2.4 mg vs 2 mg). For self-pay weight loss, checked compounded semaglutide costs $49-$199/month, compared with $1,149+ for either brand.",
+    "Ozempic and Wegovy share one active ingredient, semaglutide, but they are different products. Ozempic is FDA-approved for type 2 diabetes, while Wegovy is approved for chronic weight management and goes up to a higher maximum dose (2.4 mg vs 2 mg). For self-pay weight loss, checked compounded semaglutide costs $41-$199/month, compared with $1,149+ for either brand.",
   "zepbound-vs-wegovy":
-    "Zepbound and Wegovy are both FDA-approved for weight loss, but they are different drugs. Zepbound (tirzepatide) acts on two hormone receptors and produced up to 22.5% average weight loss in trials, compared with about 15% for Wegovy (semaglutide). At checked prices, brand Zepbound costs $1,249/month at altRx (pens from $299 for month one at ro), and compounded options start at $49/month for semaglutide and $89/month for tirzepatide.",
+    "Zepbound and Wegovy are both FDA-approved for weight loss, but they are different drugs. Zepbound (tirzepatide) acts on two hormone receptors and produced up to 22.5% average weight loss in trials, compared with about 15% for Wegovy (semaglutide). At checked prices, brand Zepbound costs $1,249/month at altRx (pens from $299 for month one at ro), and compounded options start at $41/month for semaglutide and $71/month for tirzepatide.",
   "mounjaro-vs-ozempic":
-    "Mounjaro and Ozempic are different drugs. Mounjaro (tirzepatide) acts on two hormone receptors and produced up to 22.5% average weight loss in trials, compared with about 15% for Ozempic (semaglutide). The compounded version of Ozempic's ingredient costs less, from a checked $49/month versus $89 for compounded tirzepatide, and both need a prescription from a licensed provider.",
+    "Mounjaro and Ozempic are different drugs. Mounjaro (tirzepatide) acts on two hormone receptors and produced up to 22.5% average weight loss in trials, compared with about 15% for Ozempic (semaglutide). The compounded version of Ozempic's ingredient costs less, from a checked $41/month versus $71 for compounded tirzepatide, and both need a prescription from a licensed provider.",
   "best-mounjaro-alternatives":
-    "The closest alternatives to Mounjaro are compounded tirzepatide plans, which use the same active ingredient, from licensed telehealth providers: $89/month at welludr, $119 at embody and $147 at DirectMeds, compared with roughly $1,000+ for the brand. A prescription is required, and medication ships to your door.",
+    "The closest alternatives to Mounjaro are compounded tirzepatide plans, which use the same active ingredient, from licensed telehealth providers: $71/month at welludr, $119 at embody and $147 at DirectMeds, compared with roughly $1,000+ for the brand. A prescription is required, and medication ships to your door.",
   "best-wegovy-alternatives":
-    "The closest alternatives to Wegovy are compounded semaglutide plans with the same active ingredient, starting at $49/month (welludr), $69 (embody) and $89 (altRx) through licensed online providers, compared with $1,150+ for the brand without insurance.",
+    "The closest alternatives to Wegovy are compounded semaglutide plans with the same active ingredient, starting at $41/month (welludr), $69 (embody) and $89 (altRx) through licensed online providers, compared with $1,150+ for the brand without insurance.",
   "best-ro-alternatives":
-    "The strongest alternatives to ro are compounded GLP-1 providers with flat pricing: welludr from $49/month, embody at $69 with 1-2 day shipping, and altRx at $89, which also offers brand-name options. Each one requires an online review by a licensed provider.",
+    "The strongest alternatives to ro are compounded GLP-1 providers with flat pricing: welludr from $41/month, embody at $69 with 1-2 day shipping, and altRx at $89, which also offers brand-name options. Each one requires an online review by a licensed provider.",
   "can-you-get-ozempic-without-doctor":
-    "No. In the US, Ozempic and every other GLP-1 medication require a prescription by law. What you can skip is the in-person appointment: licensed telehealth providers assess you online and, when appropriate, prescribe treatment that starts at about $49-$89/month.",
+    "No. In the US, Ozempic and every other GLP-1 medication require a prescription by law. What you can skip is the in-person appointment: licensed telehealth providers assess you online and, when appropriate, prescribe treatment that starts at about $41-$71/month.",
   "weight-loss-medication-that-works-fast":
     "GLP-1 medications such as semaglutide and tirzepatide are the fastest evidence-based option. Most people notice their appetite change in the first few weeks, and meaningful weight loss builds over 3-6 months. No pill or program works overnight, so be wary of anyone who promises that.",
   "how-to-get-ozempic-online":
-    "It takes three steps: complete an online health questionnaire, have a licensed provider review it (a legal requirement), and receive your medication by mail if it is prescribed. Brand-name Ozempic costs $1,149+/month, while compounded semaglutide with the same active ingredient starts at $49.",
+    "It takes three steps: complete an online health questionnaire, have a licensed provider review it (a legal requirement), and receive your medication by mail if it is prescribed. Brand-name Ozempic costs $1,149+/month, while compounded semaglutide with the same active ingredient starts at $41.",
   "semaglutide-cost-per-month":
-    "Through licensed telehealth providers, compounded semaglutide costs $49-$199 per month all-in (welludr $49, embody $69, altRx $89). Without insurance, brand-name Ozempic or Wegovy costs roughly $1,150-$1,600 per month.",
+    "Through licensed telehealth providers, compounded semaglutide costs $41-$199 per month all-in (welludr $41, embody $69, altRx $89). Without insurance, brand-name Ozempic or Wegovy costs roughly $1,150-$1,600 per month.",
   "weight-loss-medication-without-insurance":
-    "Insurance is not required. Self-pay compounded GLP-1 plans bundle the provider visit and medication from $49/month (welludr), $69 (embody) or $89 (altRx). Without coverage, brand-name drugs cost $1,150+, which is the main reason the compounded route exists.",
+    "Insurance is not required. Self-pay compounded GLP-1 plans bundle the provider visit and medication from $41/month (welludr), $69 (embody) or $89 (altRx). Without coverage, brand-name drugs cost $1,150+, which is the main reason the compounded route exists.",
   "compounded-semaglutide-vs-brand-name":
-    "Compounded semaglutide has the same active ingredient as Ozempic and Wegovy and is made by state-licensed 503A compounding pharmacies, at $49-$199/month compared with $1,150+ for the brands. The trade-off: compounded versions are not FDA-approved products, so the quality of the provider and pharmacy matters most.",
+    "Compounded semaglutide has the same active ingredient as Ozempic and Wegovy and is made by state-licensed 503A compounding pharmacies, at $41-$199/month compared with $1,150+ for the brands. The trade-off: compounded versions are not FDA-approved products, so the quality of the provider and pharmacy matters most.",
 };
 
 // Per-article override of the dated price stamp under the quick answer, for
@@ -790,7 +790,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 )}
 
                 {/* Tirzepatide guide: the verdict gets a CTA - the no-commitment
-                    pick and the 12-month floor, both at their verified rates. */}
+                    pick and welludr's sale floor, both at their verified rates. */}
                 {isTirzGuide && i === article.sections.length - 1 && tirzEmbody && (
                   <div className="my-8 rounded-xl border border-[#0C4B75]/15 bg-[#F4F8FB] p-5 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:p-6">
                     <div>
@@ -799,7 +799,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                         {tirzNote("embody")?.replace("Tirzepatide ", "Compounded tirzepatide ")}, billed month to month, shipped in 1-2 days, with a full refund if you are not approved.
                         {tirzWellmedr && tirzNote("wellmedr") && (
                           <>
-                            {" "}Comfortable with a 12-month plan?{" "}
+                            {" "}Want the lowest sale price?{" "}
                             <ProviderCta
                               href={tirzWellmedr.affiliateUrl}
                               providerName={tirzWellmedr.name}
@@ -1090,7 +1090,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               </p>
               <div className="grid gap-2.5 sm:grid-cols-2">
                 {[
-                  { href: "/compare/embody-vs-wellmedr", label: "embody vs welludr: $69 or $49" },
+                  { href: "/compare/embody-vs-wellmedr", label: "embody vs welludr: $69 or $41" },
                   { href: "/compare/altrx-vs-embody", label: "altRx vs embody: $89 or $69" },
                   { href: "/compare/healthrx-vs-medvi", label: "HealthRx vs Medvi: prepaid or monthly" },
                   { href: "/compare/embody-vs-altrx-vs-wellmedr", label: "Lowest-cost trio: embody vs altRx vs welludr" },

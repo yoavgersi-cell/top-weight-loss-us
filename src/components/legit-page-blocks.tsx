@@ -14,7 +14,7 @@ export type LegitChecklistItem = { ok: boolean; text: string };
 export type LegitPageData = {
   providerId: string;
   checklist: LegitChecklistItem[];
-  /** One line of verified pricing for the verdict box, e.g. "$49/mo semaglutide · $89/mo tirzepatide". */
+  /** One line of verified pricing for the verdict box, e.g. "$41/mo semaglutide · $71/mo tirzepatide". */
   priceLine: string;
   /** Optional secondary link for readers the caveat rules out. */
   alternative?: { text: string; href: string };
@@ -30,10 +30,10 @@ export const LEGIT_PAGES: Record<string, LegitPageData> = {
       { ok: true, text: "Medication comes from a regulated US pharmacy (separate Reddit users identify it as a Florida pharmacy)" },
       { ok: true, text: "Rated 4.6 on Trustpilot from 2,188 reviews, checked again on October 5, 2026" },
       { ok: true, text: "Offers a weight loss warranty, and the conditions are posted on welludr's website" },
-      { ok: false, text: "The $49 and $89 prices require a 12-month plan billed month by month, and standard shipping takes 3-5 business days" },
+      { ok: false, text: "The $41 and $71 prices are part of a Pre-Black Friday sale (from October 28, 2026), so check the plan terms at checkout, and standard shipping takes 3-5 business days" },
     ],
-    priceLine: "Compounded semaglutide $49/mo · tirzepatide $89/mo, with no price change as the dose goes up",
-    alternative: { text: "Prefer not to commit for 12 months? See the month-to-month option in embody vs welludr", href: "/compare/embody-vs-wellmedr" },
+    priceLine: "Compounded semaglutide from $41/mo · tirzepatide from $71/mo in the Pre-Black Friday sale",
+    alternative: { text: "Prefer a flat month-to-month price? See the month-to-month option in embody vs welludr", href: "/compare/embody-vs-wellmedr" },
     capture: {
       image: "/verification/wellmedr-pricing-2026-10-05.webp",
       width: 900,

@@ -13,7 +13,7 @@ import { LatestGuides, newestGuides } from "@/components/latest-guides";
 export const revalidate = 3600;
 
 const META_DESCRIPTION =
-  "Compare 2026's best online GLP-1 weight loss providers. Verified prices from $49/mo semaglutide and $89/mo tirzepatide, real reviews and side-by-side comparisons.";
+  "Compare 2026's best online GLP-1 weight loss providers. Verified prices from $41/mo semaglutide and $71/mo tirzepatide, real reviews and side-by-side comparisons.";
 
 async function baseMetadata(): Promise<Metadata> {
   const config = await getConfig();

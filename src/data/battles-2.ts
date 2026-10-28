@@ -183,8 +183,8 @@ export const altrxwellmedrBattle: BattleData = {
   provider2Id: "wellmedr",
   title: "altRx vs welludr: Which GLP-1 Provider Wins in 2026?",
   subtitle: "Flat-priced GLP-1 plus brand-name pens vs the lowest headline rates and a wider wellness menu: price, medications and payment compared.",
-  description: "altRx vs welludr: altRx charges a flat $89/mo with brand-name Zepbound and Wegovy; welludr lists $49/mo semaglutide, 1M+ patients and a weight-loss warranty.",
-  intro: "altRx is our pick for weight-loss value and choice: compounded semaglutide from $89 per month and tirzepatide from $149, the same at every dose, plus brand-name Zepbound and Wegovy and a Buy Now, Pay Later option. welludr advertises lower headline prices, with semaglutide from $49 per month and tirzepatide from $89, and pairs them with board-certified specialists, a Medical Weight-Care Coach and a weight-loss warranty. Both prescribe compounded GLP-1 online. Here is the full comparison.",
+  description: "altRx vs welludr: altRx charges a flat $89/mo with brand-name Zepbound and Wegovy; welludr lists $41/mo semaglutide, 1M+ patients and a weight-loss warranty.",
+  intro: "altRx is our pick for weight-loss value and choice: compounded semaglutide from $89 per month and tirzepatide from $149, the same at every dose, plus brand-name Zepbound and Wegovy and a Buy Now, Pay Later option. welludr advertises lower headline prices, with semaglutide from $41 per month and tirzepatide from $71 in its Pre-Black Friday sale, and pairs them with board-certified specialists, a Medical Weight-Care Coach and a weight-loss warranty. Both prescribe compounded GLP-1 online. Here is the full comparison.",
   verdict: "altRx wins for people focused on weight loss, thanks to flat $89/$149 pricing at every dose, the option of brand-name Zepbound or Wegovy, and Buy Now, Pay Later. welludr makes more sense if you want its enhanced formulation (semaglutide with NAD+/B12) or a wider wellness and longevity platform that goes beyond weight loss.",
   verdictWinnerPoints: [
     "Compounded GLP-1 from $89/mo, one price at every dose",
@@ -192,7 +192,7 @@ export const altrxwellmedrBattle: BattleData = {
     "No insurance needed; Buy Now, Pay Later available",
   ],
   verdictLoserPoints: [
-    "Semaglutide from $49/mo; tirzepatide (GLP-1/GIP) from $89/mo",
+    "Semaglutide from $41/mo; tirzepatide (GLP-1/GIP) from $71/mo",
     "A distinctive semaglutide + NAD+/B12 microdose",
     "Wider wellness and longevity menu, including NAD+",
   ],
@@ -201,11 +201,11 @@ export const altrxwellmedrBattle: BattleData = {
     {
       name: "How do altRx and welludr prices compare?",
       winner: "provider1",
-      explanation: "welludr's headline is lower, but altRx is simpler. altRx charges from $89 per month for compounded semaglutide and from $149 for tirzepatide, and the price holds at every dose. welludr lists semaglutide from $49 per month and tirzepatide from $89, with the $49 rate tied to a 12-month plan. altRx keeps one flat price and adds brand-name Zepbound and Wegovy, while welludr comes in lower if you commit to a year.",
+      explanation: "welludr's headline is lower, but altRx is simpler. altRx charges from $89 per month for compounded semaglutide and from $149 for tirzepatide, and the price holds at every dose. welludr lists semaglutide from $41 per month and tirzepatide from $71 in its Pre-Black Friday sale (from October 28, 2026); check the plan terms at checkout. altRx keeps one flat price and adds brand-name Zepbound and Wegovy, while welludr comes in lower on headline price.",
       supportingPoints: [
         "altRx: from $89/mo, flat at every dose",
         "altRx: predictable pricing month after month",
-        "welludr: semaglutide from $49/mo, tirzepatide from $89/mo",
+        "welludr: semaglutide from $41/mo, tirzepatide from $71/mo",
         "Both: no insurance needed",
       ],
     },
@@ -255,7 +255,7 @@ export const altrxwellmedrBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Monthly price", provider1Value: "From $89/mo, flat at every dose", provider2Value: "$49/mo semaglutide · $89/mo tirzepatide", highlight: "both" },
+    { feature: "Monthly price", provider1Value: "From $89/mo, flat at every dose", provider2Value: "From $41/mo semaglutide · from $71/mo tirzepatide", highlight: "both" },
     { feature: "GLP-1 options", provider1Value: "Compounded + brand-name Zepbound/Wegovy", provider2Value: "Tirzepatide + semaglutide/NAD+/B12 microdose", highlight: "provider1" },
     { feature: "Beyond GLP-1", provider1Value: "Weight-loss only", provider2Value: "Wellness and longevity services, incl. NAD+", highlight: "provider2" },
     { feature: "Payment", provider1Value: "Buy Now, Pay Later; pause any time", provider2Value: "Wellness membership", highlight: "provider1" },
@@ -1130,13 +1130,13 @@ export const sproutWellmedrBattle: BattleData = {
   matchupLabel: "Sprout vs welludr",
   subtitle: "The lowest prices in our ranking and a million-patient record against 2-day fulfillment and a brand-name Wegovy option.",
   description:
-    "Sprout vs welludr: welludr lists $49/mo semaglutide, a 4.6 Trustpilot score and 1M+ patients; Sprout starts at $149/mo, ships in 2 days and offers Wegovy.",
+    "Sprout vs welludr: welludr lists $41/mo semaglutide, a 4.6 Trustpilot score and 1M+ patients; Sprout starts at $149/mo, ships in 2 days and offers Wegovy.",
   intro:
-    "welludr is the clear winner on price and proof: semaglutide at $49 per month and tirzepatide at $89 are the lowest prices in our ranking, backed by more than 1,000,000 patients, a 4.6 Trustpilot average across 2,188 reviews and a weight-loss warranty. Sprout still has openings in the details. welludr's lowest rate requires a 12-month plan and standard delivery takes 3-5 business days, while Sprout ships within 2 days, takes $200 off your first month and stocks brand-name Wegovy, which welludr's brand-name lineup (Ozempic $1,399, Zepbound $1,599) does not include.",
+    "welludr is the clear winner on price and proof: semaglutide from $41 per month and tirzepatide from $71 in its Pre-Black Friday sale are the lowest prices in our ranking, backed by more than 1,000,000 patients, a 4.6 Trustpilot average across 2,188 reviews and a weight-loss warranty. Sprout still has openings in the details. welludr's lowest rates are Pre-Black Friday sale prices whose plan terms you should check at checkout, and standard delivery takes 3-5 business days, while Sprout ships within 2 days, takes $200 off your first month and stocks brand-name Wegovy, which welludr's brand-name lineup (Ozempic $1,399, Zepbound $1,599) does not include.",
   verdict:
-    "welludr wins if price or proof is your priority: semaglutide at $49 vs $149, tirzepatide at $89 vs $199, a 4.6 Trustpilot record and a warranty behind it. Sprout's case is narrower but genuine. Choose it if you need your prescription within 2 days instead of 3-5, if you want Wegovy specifically (welludr carries Ozempic and Zepbound, not Wegovy), or if you would rather not sign a 12-month plan to get the best rate. If none of those apply, take the $49.",
+    "welludr wins if price or proof is your priority: semaglutide from $41 vs $149, tirzepatide from $71 vs $199, a 4.6 Trustpilot record and a warranty behind it. Sprout's case is narrower but genuine. Choose it if you need your prescription within 2 days instead of 3-5, if you want Wegovy specifically (welludr carries Ozempic and Zepbound, not Wegovy), or if you would rather not depend on sale pricing whose plan terms you have to check at checkout. If none of those apply, take the $41.",
   verdictWinnerPoints: [
-    "$49/mo semaglutide, $89 tirzepatide, the lowest in our ranking",
+    "From $41/mo semaglutide, $71 tirzepatide, the lowest in our ranking",
     "4.6 on Trustpilot across 2,188 reviews; 1M+ patients",
     "Weight-loss warranty and a Medical Weight-Care Coach included",
   ],
@@ -1151,10 +1151,10 @@ export const sproutWellmedrBattle: BattleData = {
       name: "How much less does welludr cost than Sprout?",
       winner: "provider1",
       explanation:
-        "A lot. welludr charges $49 per month for semaglutide and $89 for tirzepatide, the same at every dose, against Sprout's $149 and $199. The trade-off is commitment, because the $49 rate requires a 12-month plan. Even so, Sprout's $200 first-month discount comes nowhere near closing the yearly gap.",
+        "A lot. welludr charges from $41 per month for semaglutide and from $71 for tirzepatide in its Pre-Black Friday sale (from October 28, 2026), against Sprout's $149 and $199. Check welludr's plan terms at checkout. Even so, Sprout's $200 first-month discount comes nowhere near closing the yearly gap.",
       supportingPoints: [
-        "Semaglutide: $49 vs $149 (welludr)",
-        "Tirzepatide: $89 vs $199 (welludr)",
+        "Semaglutide: $41 vs $149 (welludr)",
+        "Tirzepatide: $71 vs $199 (welludr)",
         "welludr: same price at every dose",
       ],
     },
@@ -1202,8 +1202,8 @@ export const sproutWellmedrBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting price", provider1Value: "$49/mo semaglutide · $89 tirzepatide (12-mo plan)", provider2Value: "$149/mo semaglutide · $199 tirzepatide", highlight: "provider1" },
-    { feature: "Commitment", provider1Value: "12-month plan for the lowest rate", provider2Value: "$200 off the first month; see site for terms", highlight: "provider2" },
+    { feature: "Starting price", provider1Value: "From $41/mo semaglutide · $71 tirzepatide (Pre-Black Friday sale)", provider2Value: "$149/mo semaglutide · $199 tirzepatide", highlight: "provider1" },
+    { feature: "Commitment", provider1Value: "Sale from October 28, 2026; check plan terms at checkout", provider2Value: "$200 off the first month; see site for terms", highlight: "provider2" },
     { feature: "Delivery", provider1Value: "Free, 3-5 business days, every 4 weeks", provider2Value: "Ships within 2 days", highlight: "provider2" },
     { feature: "Brand-name options", provider1Value: "Ozempic $1,399 · Zepbound $1,599", provider2Value: "Wegovy from $1,799", highlight: "both" },
     { feature: "Trustpilot", provider1Value: "4.6 across 2,188 reviews", provider2Value: "4.1 across 188 reviews", highlight: "provider1" },

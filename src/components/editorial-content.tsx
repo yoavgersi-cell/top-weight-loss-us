@@ -82,8 +82,8 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         How Much Do Online GLP-1 Weight Loss Programs Cost in 2026?
       </h2>
       <p className="mb-4">
-        Monthly prices in our ranking start at $49 for semaglutide and $89 for tirzepatide, both at
-        welludr on its 12-month plan. Each figure below is the price published on the provider&apos;s
+        Monthly prices in our ranking start at $41 for semaglutide and $71 for tirzepatide, both at
+        welludr in its Pre-Black Friday sale (from October 28, 2026; check the plan terms at checkout). Each figure below is the price published on the provider&apos;s
         own site, not an estimate. Most plans bundle the prescription, clinician consultations,
         ongoing support and home delivery into a single monthly fee.
       </p>
@@ -99,7 +99,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
           </thead>
           <tbody className="divide-y divide-gray-100">
             {[
-              ["welludr", "$49/mo", "$89/mo", "Best rate requires a 12-month plan"],
+              ["welludr", "from $41/mo", "from $71/mo", "Pre-Black Friday sale; check plan terms at checkout"],
               ["embody", "$69/mo", "$119/mo", "Flat monthly price, no commitment"],
               ["altRx", "$89/mo", "$149/mo", "Same price at every dose, buy now pay later"],
               ["Medvi", "$99/mo promo (reg. $199)", "$166/mo promo (reg. $299)", "All-inclusive, with a dietitian"],
@@ -295,13 +295,13 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
               <td className="px-4 py-3 font-medium">Semaglutide (Wegovy)</td>
               <td className="px-4 py-3">~15% of body weight</td>
               <td className="px-4 py-3">68 weeks (STEP trials)</td>
-              <td className="hidden sm:table-cell px-4 py-3">From $49/month</td>
+              <td className="hidden sm:table-cell px-4 py-3">From $41/month</td>
             </tr>
             <tr className="bg-gray-50/50">
               <td className="px-4 py-3 font-medium">Tirzepatide (Zepbound)</td>
               <td className="px-4 py-3">Up to 20.9% average (22.5% on treatment)</td>
               <td className="px-4 py-3">72 weeks (SURMOUNT trials)</td>
-              <td className="hidden sm:table-cell px-4 py-3">From $89/month</td>
+              <td className="hidden sm:table-cell px-4 py-3">From $71/month</td>
             </tr>
             <tr>
               <td className="px-4 py-3 font-medium">Liraglutide (Saxenda)</td>
@@ -357,7 +357,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <p className="mb-3">
         Without insurance, brand-name GLP-1 medications cost $900-$1,400 a month at retail. Licensed
         telehealth providers offer compounded semaglutide and tirzepatide for much less, typically
-        $49-$299 a month with physician consultations, medication and home delivery included. Our{" "}
+        $41-$299 a month with physician consultations, medication and home delivery included. Our{" "}
         <Link href="/articles/glp1-cost-2026-how-to-pay-less" className="font-semibold text-[#0C4B75] hover:underline">
           GLP-1 cost guide
         </Link>{" "}breaks the numbers down.

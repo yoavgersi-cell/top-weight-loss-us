@@ -17,7 +17,7 @@ type RowNote = { id: string; condition: string; standout: string };
 
 // Article order = cheapest first, matching the index's tirzepatide prices.
 const ROWS: RowNote[] = [
-  { id: "wellmedr", condition: "Requires a 12-month plan, paid monthly", standout: "Price stays flat as the dose rises" },
+  { id: "wellmedr", condition: "Pre-Black Friday sale from October 28, 2026; check plan terms at checkout", standout: "Lowest compounded tirzepatide price in our index" },
   { id: "embody", condition: "Flat rate, no contract", standout: "Ships in 1-2 days; refunded if not approved" },
   { id: "directmeds", condition: "Flat rate, no membership fee", standout: "The only under-the-tongue, needle-free choice" },
   { id: "altrx", condition: "Pause or cancel whenever; buy now, pay later", standout: "Also sells brand-name medications" },

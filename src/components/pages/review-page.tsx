@@ -266,7 +266,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Does welludr charge more at higher doses?",
       answer:
-        "No. welludr keeps the same price at every dose: compounded semaglutide from $49/month and tirzepatide from $89/month. The $49 rate requires a 12-month plan.",
+        "welludr has advertised one price at every dose. In its Pre-Black Friday sale (from October 28, 2026), compounded semaglutide is from $41/month and tirzepatide from $71/month; check the plan terms, including any dose conditions, at checkout.",
     },
     {
       question: "How long does welludr shipping take?",
@@ -276,7 +276,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Can I cancel welludr whenever I want?",
       answer:
-        "Yes. You can cancel or change your welludr plan at any time. The headline $49/month price is locked through a 12-month plan, and the program comes with welludr's weight-loss warranty.",
+        "Yes. You can cancel or change your welludr plan at any time. The headline price, from $41/month, is part of its Pre-Black Friday sale (from October 28, 2026), so check the plan terms at checkout, and the program comes with welludr's weight-loss warranty.",
     },
   ],
   medvi: [
@@ -356,9 +356,9 @@ const REVIEW_PROMOS: Record<string, { segments: { text: string; bold?: boolean }
     segments: [
       { text: "Get " },
       { text: "$200 off", bold: true },
-      { text: " every month or " },
-      { text: "$49/mo", bold: true },
-      { text: " on a 12-month plan, locked in for life." },
+      { text: " every month, or semaglutide from " },
+      { text: "$41/mo", bold: true },
+      { text: " in the Pre-Black Friday sale (from October 28, 2026)." },
     ],
   },
 };
