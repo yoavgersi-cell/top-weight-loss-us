@@ -393,7 +393,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "Reddit comments on welludr are mostly positive: users call it “legit,” name the pharmacy (one says Florida, another names Logos, a 503A compounder), and describe fast delivery and responsive service. The $88-$99/month that commenters paid on annual plans lines up with welludr's published pricing ($49/month semaglutide on the 12-month plan, $89/month tirzepatide). One long-term user pays $129 month to month and says that is the only charge. The counterpoint is a detailed account of losing just 1 pound in 8 weeks on tirzepatide despite good service. Response to GLP-1 medication varies from person to person, and no provider can guarantee results.",
+      "Reddit comments on welludr are mostly positive: users call it “legit,” name the pharmacy (one says Florida, another names Logos, a 503A compounder), and describe fast delivery and responsive service. The $88-$99/month that commenters paid on annual plans lines up with welludr's pricing before its October 28, 2026 Pre-Black Friday sale ($49/month semaglutide on the 12-month plan, $89/month tirzepatide; the sale starts at $41 and $71). One long-term user pays $129 month to month and says that is the only charge. The counterpoint is a detailed account of losing just 1 pound in 8 weeks on tirzepatide despite good service. Response to GLP-1 medication varies from person to person, and no provider can guarantee results.",
   },
 };
 

@@ -90,7 +90,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "Can you cancel, and what is refundable?",
     check: "Whether you can stop at any renewal date, whether a minimum term applies, and what is returned if the clinician does not approve you.",
-    verify: "embody gives a full refund if you are not approved and requires no commitment. TrimRx has no long-term contract. welludr's $49 rate requires a 12-month plan. HealthRx collects $1,188 upfront. Each model is legitimate; the point is to know which one you are agreeing to.",
+    verify: "embody gives a full refund if you are not approved and requires no commitment. TrimRx has no long-term contract. welludr's $41 rate is a Pre-Black Friday sale price, so check its plan terms at checkout. HealthRx collects $1,188 upfront. Each model is legitimate; the point is to know which one you are agreeing to.",
     redFlag: "Auto-renewal terms that appear only in checkout fine print. Read them before paying.",
   },
   {
@@ -185,7 +185,7 @@ const ROWS: Row[] = [
     pharmacy: "Regulated US pharmacy; Reddit commenters identify it as a Florida pharmacy",
     dosePricing: "One price at every dose; lowest rate on a 12-month plan billed monthly",
     likes: "welludr's 5-star Trustpilot reviews credit getting a person on the line within minutes, fast answers from named agents, and an easy switch from another provider. Several low-star reviewers raised their rating after an operations manager phoned them. Reddit verdicts are short: \"legit\", a named Florida pharmacy, and annual-plan prices that match what welludr publishes.",
-    complaints: "welludr's low-star Trustpilot reviews from September nearly all concern reaching a person: an order stuck on \"delay in shipping\" for 8 days while support could not locate the account; a request still unanswered after 24 hours; chat and phone unanswered until a manager got involved; a shipment held at the pharmacy for more than a week. An August reviewer says they were billed every 21 days instead of monthly; we have not verified welludr's billing cycle. On Reddit, one detailed post reports losing only 1 pound in 8 weeks despite good service. The $49 rate is tied to the 12-month plan.",
+    complaints: "welludr's low-star Trustpilot reviews from September nearly all concern reaching a person: an order stuck on \"delay in shipping\" for 8 days while support could not locate the account; a request still unanswered after 24 hours; chat and phone unanswered until a manager got involved; a shipment held at the pharmacy for more than a week. An August reviewer says they were billed every 21 days instead of monthly; we have not verified welludr's billing cycle. On Reddit, one detailed post reports losing only 1 pound in 8 weeks despite good service. The $41 rate is a Pre-Black Friday sale price; check the plan terms at checkout.",
   },
   {
     id: "medvi",
@@ -233,7 +233,7 @@ const PATTERNS: { title: string; body: string }[] = [
   },
   {
     title: "Most headline prices come with a condition",
-    body: "welludr's $49 depends on a 12-month plan. HealthRx's $99 is collected as $1,188 upfront. Medvi's $99 and altRx's $89 are promotions against a regular $199. ro charges membership and medication separately. The condition matters as much as the number, so the price index records both.",
+    body: "welludr's $41 is a Pre-Black Friday sale price (from October 28, 2026) whose plan terms you see at checkout. HealthRx's $99 is collected as $1,188 upfront. Medvi's $99 and altRx's $89 are promotions against a regular $199. ro charges membership and medication separately. The condition matters as much as the number, so the price index records both.",
   },
   {
     title: "Seven of the ten providers charge one price at every dose",
@@ -267,7 +267,7 @@ const EXPLORE: Record<string, { useCase: string; reason: string }> = {
   },
   wellmedr: {
     useCase: "Lowest verified semaglutide price, with a 12-month plan",
-    reason: "welludr's semaglutide costs $49 a month at every dose on the 12-month plan, billed monthly. Every plan includes a weight-care coach, and welludr holds 4.6 from 2,188 Trustpilot reviews.",
+    reason: "welludr's semaglutide costs from $41 a month in its Pre-Black Friday sale (from October 28, 2026); check the plan terms at checkout. Every plan includes a weight-care coach, and welludr holds 4.6 from 2,188 Trustpilot reviews.",
   },
 };
 
@@ -290,7 +290,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "How much does an online GLP-1 provider cost per month?",
     answer:
-      "Based on the verified published prices in our index, compounded semaglutide costs $49 to $199 a month and compounded tirzepatide $89 to $299, usually including the consultation and shipping. Brand-name Wegovy, Zepbound and Ozempic cost four figures a month when paid in cash. Always ask for the maintenance-dose price rather than the starter price, and add any membership fee billed separately.",
+      "Based on the verified published prices in our index, compounded semaglutide costs $41 to $199 a month and compounded tirzepatide $71 to $299, usually including the consultation and shipping. Brand-name Wegovy, Zepbound and Ozempic cost four figures a month when paid in cash. Always ask for the maintenance-dose price rather than the starter price, and add any membership fee billed separately.",
   },
   {
     question: "Which GLP-1 providers are not in this comparison?",
