@@ -3,8 +3,8 @@ import type { LandingPageData } from "@/lib/config";
 export const landingPages: LandingPageData[] = [
       {
         slug: "semaglutide",
-        seoTitle: "Semaglutide Providers 2026: Compare Prices From $49/mo",
-        seoDescription: "Compare 2026's top online semaglutide providers by monthly price, clinical support and brand-name vs compounded options, with plans starting at $49/month.",
+        seoTitle: "Semaglutide Providers 2026: Compare Prices From $41/mo",
+        seoDescription: "Compare 2026's top online semaglutide providers by monthly price, clinical support and brand-name vs compounded options, with plans starting at $41/month.",
         h1: "Best Semaglutide Providers of 2026",
         h2: "Online semaglutide programs, compared side by side",
         heroDescription: "Semaglutide, the active ingredient in Ozempic and Wegovy, is one of the most effective GLP-1 medications for weight loss. Use the comparison below to weigh each provider's price, medical support and medication options.",
@@ -31,8 +31,8 @@ export const landingPages: LandingPageData[] = [
       },
       {
         slug: "tirzepatide",
-        seoTitle: "Tirzepatide Providers 2026: Compare Prices From $89/mo",
-        seoDescription: "Compare 2026's top online tirzepatide providers, the ingredient in Mounjaro and Zepbound, with monthly prices from $89 and medical support side by side.",
+        seoTitle: "Tirzepatide Providers 2026: Compare Prices From $71/mo",
+        seoDescription: "Compare 2026's top online tirzepatide providers, the ingredient in Mounjaro and Zepbound, with monthly prices from $71 and medical support side by side.",
         h1: "Best Tirzepatide Providers of 2026",
         h2: "Dual GLP-1 and GIP weight loss programs, compared",
         heroDescription: "Tirzepatide, the active ingredient in Mounjaro and Zepbound, acts on both GLP-1 and GIP receptors to boost weight loss. Use the comparison below to find a tirzepatide provider that fits your budget and needs.",
@@ -48,8 +48,8 @@ export const landingPages: LandingPageData[] = [
           },
           {
             heading: "How much does tirzepatide cost?",
-            body: 'Brand-name tirzepatide costs more than $1,000/month at retail. Compounded tirzepatide from telehealth providers is far cheaper, typically $89-$299/month with consultations included. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">weight loss medication cost guide</a> has the full breakdown.',
-            bullets: ["Compounded tirzepatide starting at $89/month", "Many providers bundle everything into one price", "Delivery to your home is included", "You don't need insurance"],
+            body: 'Brand-name tirzepatide costs more than $1,000/month at retail. Compounded tirzepatide from telehealth providers is far cheaper, typically $71-$299/month with consultations included. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">weight loss medication cost guide</a> has the full breakdown.',
+            bullets: ["Compounded tirzepatide starting at $71/month", "Many providers bundle everything into one price", "Delivery to your home is included", "You don't need insurance"],
           },
           {
             heading: "Is tirzepatide the right medication for you?",
@@ -109,7 +109,7 @@ export const landingPages: LandingPageData[] = [
           },
           {
             heading: "How much do weight loss injections cost?",
-            body: 'Brand-name GLP-1 injections cost $900-$1,400/month at retail. Compounded versions from telehealth providers usually run $49-$299/month, often with everything included. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">cost guide</a> breaks down the numbers, and <a href="/find-your-match">our quiz</a> can match you with a provider in your budget.',
+            body: 'Brand-name GLP-1 injections cost $900-$1,400/month at retail. Compounded versions from telehealth providers usually run $41-$299/month, often with everything included. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">cost guide</a> breaks down the numbers, and <a href="/find-your-match">our quiz</a> can match you with a provider in your budget.',
           },
         ],
       },
@@ -128,7 +128,7 @@ export const landingPages: LandingPageData[] = [
           },
           {
             heading: "Is compounded semaglutide the same as Ozempic?",
-            body: 'Compounded semaglutide uses the same active ingredient as Ozempic but is made by licensed compounding pharmacies, not by the original manufacturer. Brand-name Ozempic costs $900-$1,000/month, while compounded semaglutide from telehealth providers runs $49-$199/month and often includes consultations and delivery. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">cost guide</a> has the details.',
+            body: 'Compounded semaglutide uses the same active ingredient as Ozempic but is made by licensed compounding pharmacies, not by the original manufacturer. Brand-name Ozempic costs $900-$1,000/month, while compounded semaglutide from telehealth providers runs $41-$199/month and often includes consultations and delivery. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">cost guide</a> has the details.',
             bullets: ["Same active ingredient: semaglutide", "Compounded versions cost far less", "Offered by licensed telehealth providers", "Medical oversight and home delivery included"],
           },
           {
@@ -153,7 +153,7 @@ export const landingPages: LandingPageData[] = [
           {
             heading: "How is Wegovy different from compounded semaglutide?",
             body: 'Wegovy is brand-name semaglutide approved specifically for weight loss, at a maximum dose of 2.4 mg per week. Many telehealth providers now sell compounded semaglutide as a cheaper option made with the same active ingredient. To compare the two brand-name versions, read <a href="/articles/ozempic-vs-wegovy-differences">Ozempic vs Wegovy</a>.',
-            bullets: ["Wegovy retail price: $1,300-$1,400/month", "Compounded semaglutide: $49-$199/month", "Both use the same active ingredient", "More dosing schedules are available"],
+            bullets: ["Wegovy retail price: $1,300-$1,400/month", "Compounded semaglutide: $41-$199/month", "Both use the same active ingredient", "More dosing schedules are available"],
           },
           {
             heading: "How much weight do people lose on Wegovy?",
@@ -167,11 +167,11 @@ export const landingPages: LandingPageData[] = [
       },
       {
         slug: "cheapest-weight-loss-medication",
-        seoTitle: "Cheapest Weight Loss Medication 2026: GLP-1 From $49",
-        seoDescription: "Find the cheapest GLP-1 weight loss medication in 2026: compounded semaglutide from $49/month and tirzepatide from $89, with full cost breakdowns.",
+        seoTitle: "Cheapest Weight Loss Medication 2026: GLP-1 From $41",
+        seoDescription: "Find the cheapest GLP-1 weight loss medication in 2026: compounded semaglutide from $41/month and tirzepatide from $71, with full cost breakdowns.",
         h1: "Most Affordable Weight Loss Medication of 2026",
         h2: "The lowest-cost GLP-1 providers, compared",
-        heroDescription: "GLP-1 treatment doesn't have to cost $1,000 a month. Licensed telehealth providers offer compounded semaglutide from a verified $49/month and tirzepatide from $89/month, with medication, consultations and delivery included.",
+        heroDescription: "GLP-1 treatment doesn't have to cost $1,000 a month. Licensed telehealth providers offer compounded semaglutide from a verified $41/month and tirzepatide from $71/month, with medication, consultations and delivery included.",
         providerOrder: ["altrx", "trimrx", "shed", "embody", "eden", "ro", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {

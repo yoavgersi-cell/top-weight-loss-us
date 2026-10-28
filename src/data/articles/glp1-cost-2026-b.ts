@@ -182,12 +182,12 @@ export const costSectionsB: Article["sections"] = [
   },
   {
     heading: "How much do compounded semaglutide and tirzepatide cost online?",
-    body: `<p><strong>Compounded semaglutide from online providers costs about $49-$199 a month and compounded tirzepatide about $89-$299 a month, based on Top Weight Loss's own price index verified October 16, 2026.</strong> Compounded medications are not FDA-approved and are not generic versions of Wegovy or Zepbound.</p>
-<p>Prices below are the providers' published prices as checked on October 16, 2026. They change often, many are promotional or require a longer plan, and you should confirm the current price and terms on the provider's site before you sign up (<a href="/cheapest-glp1">Top Weight Loss price index</a>).</p>
+    body: `<p><strong>Compounded semaglutide from online providers costs about $41-$199 a month and compounded tirzepatide about $71-$299 a month, based on Top Weight Loss's own price index verified October 16, 2026, with welludr's Pre-Black Friday sale prices from October 28, 2026.</strong> Compounded medications are not FDA-approved and are not generic versions of Wegovy or Zepbound.</p>
+<p>Prices below are the providers' published prices as checked on October 16, 2026, except welludr's row, which shows its Pre-Black Friday sale prices from October 28, 2026. They change often, many are promotional or require a longer plan, and you should confirm the current price and terms on the provider's site before you sign up (<a href="/cheapest-glp1">Top Weight Loss price index</a>).</p>
 <table>
 <thead><tr><th>Provider</th><th>Compounded semaglutide</th><th>Compounded tirzepatide</th><th>Terms and shipping</th></tr></thead>
 <tbody>
-<tr><td><a href="/reviews/wellmedr">welludr</a></td><td>$49/mo (12-month plan; provider says locked for life)</td><td>$89/mo (shipped every 4 weeks)</td><td>12-month plan for the lowest rate; cancel or change anytime; ships in 3-5 business days</td></tr>
+<tr><td><a href="/reviews/wellmedr">welludr</a></td><td>From $41/mo (Pre-Black Friday sale price, October 28, 2026)</td><td>From $71/mo (Pre-Black Friday sale price, October 28, 2026)</td><td>Sale plan terms not confirmed: check plan length and dose pricing at checkout; ships in 3-5 business days</td></tr>
 <tr><td><a href="/reviews/embody">embody</a></td><td>$69/mo (reg. $79; month-to-month)</td><td>$119/mo (reg. $129; month-to-month)</td><td>No contract; ships in 1-2 days, cold-chain</td></tr>
 <tr><td><a href="/reviews/altrx">altRx</a></td><td>$89/mo (reg. $199; flat at every dose)</td><td>$149/mo (reg. $299; flat at every dose)</td><td>Pause or cancel anytime; Buy Now, Pay Later; free shipping in 5-7 days</td></tr>
 <tr><td><a href="/reviews/medvi">Medvi</a></td><td>$99/mo (promo; reg. $199, all-inclusive)</td><td>$166/mo (promo; reg. $299)</td><td>No membership or hidden fees; HSA/FSA; free shipping</td></tr>
@@ -200,7 +200,7 @@ export const costSectionsB: Article["sections"] = [
 <h3>How to read these prices</h3>
 <ul>
 <li><strong>Promo versus regular.</strong> Several prices are introductory. altRx's semaglutide, for example, is listed at $89 against a regular $199, and Medvi's at $99 against a regular $199. Budget for the regular price in case the promotion ends.</li>
-<li><strong>Plan length.</strong> welludr's $49 semaglutide price requires a 12-month plan. Month-to-month options, such as embody and TrimRx, cost more per month but commit you to less.</li>
+<li><strong>Plan length.</strong> welludr's from-$41 semaglutide price is a Pre-Black Friday sale price (from October 28, 2026), so check the plan length and how long the sale lasts at checkout. Month-to-month options, such as embody and TrimRx, cost more per month but commit you to less.</li>
 <li><strong>Flat versus dose-based pricing.</strong> altRx, DirectMeds and TrimRx (semaglutide) list one price at every dose. Elsewhere, ask whether the price rises as your dose increases.</li>
 <li><strong>Extras.</strong> Check for separate membership fees. Some providers in our index say they charge none; across the wider market, advertised prices often require prepaying several months or paying a separate membership fee and rise with dose (<a href="https://health.usnews.com/best-diet/medication/hims-&amp;-hers" target="_blank" rel="noopener">US News</a>).</li>
 </ul>
@@ -249,8 +249,8 @@ export const costSectionsB: Article["sections"] = [
 <tr><td>Wegovy pen</td><td>Weekly injection</td><td>$199 for the first two fills (intro offer through Dec 31, 2026)</td><td>$349 (all doses to 2.4 mg)</td><td>Intro offer for new self-pay patients on 0.25 and 0.5 mg</td></tr>
 <tr><td>Wegovy HD</td><td>Weekly injection</td><td>Not a starting dose</td><td>$399 (7.2 mg)</td><td>Insurance coverage not available per NovoCare</td></tr>
 <tr><td>Zepbound</td><td>Weekly injection (vial or KwikPen)</td><td>$299 (2.5 mg)</td><td>$399 (5 mg); $449 (7.5-15 mg)</td><td>$449 only if refilled within 45 days; higher if you refill late</td></tr>
-<tr><td>Compounded semaglutide</td><td>Varies by provider</td><td colspan="2">$49-$199 in our October 16, 2026 index</td><td>Not FDA-approved</td></tr>
-<tr><td>Compounded tirzepatide</td><td>Varies by provider</td><td colspan="2">$89-$299 in our October 16, 2026 index</td><td>Not FDA-approved</td></tr>
+<tr><td>Compounded semaglutide</td><td>Varies by provider</td><td colspan="2">$41-$199 in our October 16, 2026 index (welludr's October 28 sale price)</td><td>Not FDA-approved</td></tr>
+<tr><td>Compounded tirzepatide</td><td>Varies by provider</td><td colspan="2">$71-$299 in our October 16, 2026 index (welludr's October 28 sale price)</td><td>Not FDA-approved</td></tr>
 </tbody>
 </table>
 <p>The Wegovy pen intro offer is described on <a href="https://www.novocare.com/patient/medicines/wegovy/savings-offer.html" target="_blank" rel="noopener">NovoCare's savings page</a>, Wegovy HD pricing and coverage on <a href="https://www.novocare.com/patient/medicines/wegovy/check-coverage.html" target="_blank" rel="noopener">NovoCare's coverage page</a>, and Zepbound's 45-day refill condition on <a href="https://www.lilly.com/lillydirect/zepbound" target="_blank" rel="noopener">LillyDirect</a>.</p>
@@ -270,7 +270,7 @@ export const costSectionsB: Article["sections"] = [
   },
   {
     heading: "What will a GLP-1 cost you over a full year?",
-    body: `<p><strong>A full year of a brand-name GLP-1 at self-pay prices costs roughly $3,300-$5,400 as of fall 2026, compared with $600 a year through the $50 Medicare GLP-1 Bridge and about $590-$3,530 for the compounded examples from our price index.</strong> The figures below are worked examples built from published prices, not quotes. Your real total depends on your dose schedule, refill timing, coverage and price changes.</p>
+    body: `<p><strong>A full year of a brand-name GLP-1 at self-pay prices costs roughly $3,300-$5,400 as of fall 2026, compared with $600 a year through the $50 Medicare GLP-1 Bridge and about $490-$3,530 for the compounded examples from our price index.</strong> The figures below are worked examples built from published prices, not quotes. Your real total depends on your dose schedule, refill timing, coverage and price changes.</p>
 <p>Month one is rarely representative: starting doses are often cheaper, intro offers expire, and some prices depend on refilling on time. For a deeper breakdown of how costs shift over time, see our guide to <a href="/articles/glp1-true-cost-month-1-vs-year-one">the true cost of GLP-1s, month 1 vs. year one</a>.</p>
 <h3>Worked examples: 12 months of treatment</h3>
 <p>Each row multiplies published monthly prices by the number of months shown. Dose schedules are illustrative only; your clinician decides how fast your dose changes (<a href="https://www.novocare.com/patient/medicines/wegovy/savings-offer.html" target="_blank" rel="noopener">NovoCare</a>; <a href="https://www.cnn.com/2026/01/06/health/wegovy-pill-weight-loss-explained" target="_blank" rel="noopener">CNN</a>; <a href="https://www.lilly.com/lillydirect/zepbound" target="_blank" rel="noopener">LillyDirect</a>; <a href="https://www.lilly.com/lillydirect/foundayo" target="_blank" rel="noopener">LillyDirect Foundayo</a>; <a href="https://www.npr.org/2026/05/06/nx-s1-5812662/medicare-bridge-glp1-drugs-copay" target="_blank" rel="noopener">NPR</a>).</p>
@@ -286,12 +286,12 @@ export const costSectionsB: Article["sections"] = [
 <tr><td>Wegovy HD 7.2 mg all year</td><td>12 x $399</td><td>$4,788</td></tr>
 <tr><td>Zepbound: 1 month at 2.5 mg, 1 month at 5 mg, 10 months at 7.5 mg or higher (on-time refills)</td><td>$299 + $399 + (10 x $449)</td><td>$5,188</td></tr>
 <tr><td>Zepbound at 7.5-15 mg all year (on-time refills)</td><td>12 x $449</td><td>$5,388</td></tr>
-<tr><td>Compounded semaglutide, welludr 12-month plan</td><td>12 x $49</td><td>$588</td></tr>
+<tr><td>Compounded semaglutide, welludr Pre-Black Friday sale price held all year</td><td>12 x $41</td><td>$492</td></tr>
 <tr><td>Compounded semaglutide, DirectMeds flat price</td><td>12 x $147</td><td>$1,764</td></tr>
 <tr><td>Compounded tirzepatide, SHED (20% off month one)</td><td>$239.20 + (11 x $299)</td><td>$3,528.20</td></tr>
 </tbody>
 </table>
-<p>The maintenance-dose totals match a simple check: 12 months at $299, $349 and $449 come to about $3,588, $4,188 and $5,388. Compounded figures use Top Weight Loss's own price index, verified October 16, 2026, and assume the listed price holds all year, which promotional prices may not.</p>
+<p>The maintenance-dose totals match a simple check: 12 months at $299, $349 and $449 come to about $3,588, $4,188 and $5,388. Compounded figures use Top Weight Loss's own price index, verified October 16, 2026 (welludr's Pre-Black Friday sale price from October 28, 2026), and assume the listed price holds all year, which promotional and sale prices may not.</p>
 <h3>What can push your total up or down</h3>
 <ul>
 <li><strong>Introductory offers end.</strong> The Wegovy pen's $199 intro price applies to the first two fills for new self-pay patients and is available through December 31, 2026 (<a href="https://www.novocare.com/patient/medicines/wegovy/savings-offer.html" target="_blank" rel="noopener">NovoCare</a>). Foundayo's temporary $149 and $199 prices for the 2.5 mg and 5.5 mg doses also run through December 31, 2026 (<a href="https://foundayo.lilly.com/hcp/savings-coverage" target="_blank" rel="noopener">Lilly</a>).</li>
@@ -312,12 +312,12 @@ export const costSectionsB: Article["sections"] = [
 <tr><td>Medicare with Part D or MA-PD, meets Bridge criteria</td><td>Medicare GLP-1 Bridge (Wegovy, Zepbound KwikPen or Foundayo)</td><td>$50</td><td>Prescriber must submit PA to CMS's central processor; savings cards cannot lower it</td></tr>
 <tr><td>Medicare, GLP-1 covered for another use (e.g., type 2 diabetes)</td><td>Your regular Part D plan</td><td>Depends on plan tier and phase</td><td>You go through your plan, not the Bridge</td></tr>
 <tr><td>Commercial insurance that covers your GLP-1</td><td>Insurance plus manufacturer savings card</td><td>As little as $25</td><td>Prior authorization, program requirements, card caps and expiry</td></tr>
-<tr><td>Commercial insurance that excludes weight-loss GLP-1s</td><td>Manufacturer self-pay (pills often cheapest), or compounded</td><td>$149-$449 brand-name; $49-$299 compounded in our index</td><td>Self-pay usually does not count toward your deductible</td></tr>
+<tr><td>Commercial insurance that excludes weight-loss GLP-1s</td><td>Manufacturer self-pay (pills often cheapest), or compounded</td><td>$149-$449 brand-name; $41-$299 compounded in our index</td><td>Self-pay usually does not count toward your deductible</td></tr>
 <tr><td>Medicaid</td><td>Your state's Medicaid program, if it covers obesity</td><td>Low state-set copays where covered</td><td>Only 13 state Medicaid programs (fee-for-service) covered obesity GLP-1s as of January 2026</td></tr>
-<tr><td>Uninsured</td><td>Manufacturer self-pay or TrumpRx, or compounded</td><td>$149-$449 brand-name; $49-$299 compounded in our index</td><td>Intro prices ending; refill-timing rules; compounded is not FDA-approved</td></tr>
+<tr><td>Uninsured</td><td>Manufacturer self-pay or TrumpRx, or compounded</td><td>$149-$449 brand-name; $41-$299 compounded in our index</td><td>Intro prices ending; refill-timing rules; compounded is not FDA-approved</td></tr>
 </tbody>
 </table>
-<p>The Medicare figures come from <a href="https://www.cms.gov/medicare/coverage/prescription-drug-coverage/medicare-glp-1-bridge" target="_blank" rel="noopener">CMS</a> and <a href="https://www.aarp.org/medicare/glp1-weight-loss-copay-program/" target="_blank" rel="noopener">AARP</a>; savings card terms from <a href="https://www.novocare.com/patient/medicines/wegovy/savings-offer.html" target="_blank" rel="noopener">NovoCare</a>; and the Medicaid count from <a href="https://www.kff.org/medicaid/medicaid-coverage-of-and-spending-on-glp-1s/" target="_blank" rel="noopener">KFF</a>. Self-pay prices are from <a href="https://www.novocare.com/content/dam/novonordisk/novocare/redesign/pdf/Wegovy_Price_Guide.pdf" target="_blank" rel="noopener">NovoCare</a> and <a href="https://www.lilly.com/lillydirect/zepbound" target="_blank" rel="noopener">LillyDirect</a>, and compounded prices from our own index verified October 16, 2026.</p>
+<p>The Medicare figures come from <a href="https://www.cms.gov/medicare/coverage/prescription-drug-coverage/medicare-glp-1-bridge" target="_blank" rel="noopener">CMS</a> and <a href="https://www.aarp.org/medicare/glp1-weight-loss-copay-program/" target="_blank" rel="noopener">AARP</a>; savings card terms from <a href="https://www.novocare.com/patient/medicines/wegovy/savings-offer.html" target="_blank" rel="noopener">NovoCare</a>; and the Medicaid count from <a href="https://www.kff.org/medicaid/medicaid-coverage-of-and-spending-on-glp-1s/" target="_blank" rel="noopener">KFF</a>. Self-pay prices are from <a href="https://www.novocare.com/content/dam/novonordisk/novocare/redesign/pdf/Wegovy_Price_Guide.pdf" target="_blank" rel="noopener">NovoCare</a> and <a href="https://www.lilly.com/lillydirect/zepbound" target="_blank" rel="noopener">LillyDirect</a>, and compounded prices from our own index verified October 16, 2026 (welludr's Pre-Black Friday sale prices from October 28, 2026).</p>
 <h3>A few rules of thumb</h3>
 <ul>
 <li><strong>If you have any coverage, check it first.</strong> A $25 copay with a savings card or a $50 Bridge copay beats every brand-name self-pay price.</li>
