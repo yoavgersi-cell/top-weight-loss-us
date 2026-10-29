@@ -86,6 +86,18 @@ export const embodyTrimrxBattle: BattleData = {
     { feature: "Pharmacy", provider1Value: "LegitScript-certified 503A", provider2Value: "Licensed pharmacies", highlight: "provider1" },
     { feature: "Consultation", provider1Value: "Fully online", provider2Value: "Fully online", highlight: "both" },
   ],
+  faqs: [
+    {
+      question: "Which is better, TrimRx or embody?",
+      answer:
+        "embody wins our comparison: $69/month for compounded semaglutide and $119 for tirzepatide, against $149 and $259 at TrimRx, with free delivery in 1-2 days. TrimRx is the better choice if you want unlimited check-ins with a provider and custom dosing, and it discounts multi-month plans. Both run month to month with no contract, and both rate 3.8 on Trustpilot (embody across 9,604 reviews, TrimRx across 5,392).",
+    },
+    {
+      question: "How much do embody and TrimRx cost over a year?",
+      answer:
+        "A year of compounded semaglutide costs $828 at embody and $1,788 at TrimRx, a $960 difference. For tirzepatide, embody comes to $1,428 a year and TrimRx to $3,108. Neither raises the semaglutide price as your dose goes up. TrimRx's multi-month discounts can narrow the gap, so check its checkout if you plan to buy several months at once.",
+    },
+  ],
 };
 
 export const embodyMedviBattle: BattleData = {
@@ -174,6 +186,18 @@ export const embodyMedviBattle: BattleData = {
     { feature: "Monitoring", provider1Value: "Regular monitoring", provider2Value: "Regular check-ins", highlight: "both" },
     { feature: "Consultation", provider1Value: "Fully online", provider2Value: "Fully online", highlight: "both" },
   ],
+  faqs: [
+    {
+      question: "Which is better, embody or Medvi?",
+      answer:
+        "embody wins our comparison on price and speed: $69/month for compounded semaglutide and $119 for tirzepatide, against Medvi's $99 and $166 promotional rates, with free delivery in 1-2 days. Medvi is the better choice if you want more people involved, since its price includes video visits, a free dietician and care coaching, and it holds 4.3 stars across 14,987 Trustpilot reviews against embody's 3.8 across 9,604. Choose embody for the lowest bill, and Medvi if regular contact helps you stay on track.",
+    },
+    {
+      question: "How much do embody and Medvi cost over a year?",
+      answer:
+        "A year of compounded semaglutide costs $828 at embody ($69 a month) and $1,188 at Medvi ($99 a month), a $360 difference. For tirzepatide, embody comes to $1,428 and Medvi to $1,992 ($166 a month). Both are promotional rates: embody's regular prices are $79 and $129, and Medvi's are $199 and $299. Medvi plans are HSA/FSA approved, which can lower your real cost if you have pre-tax funds.",
+    },
+  ],
 };
 
 export const altrxwellmedrBattle: BattleData = {
@@ -261,6 +285,18 @@ export const altrxwellmedrBattle: BattleData = {
     { feature: "Payment", provider1Value: "Buy Now, Pay Later; pause any time", provider2Value: "Wellness membership", highlight: "provider1" },
     { feature: "Delivery", provider1Value: "Free, roughly 5-7 days", provider2Value: "Standard, roughly 3-5 days", highlight: "provider2" },
     { feature: "Consultation", provider1Value: "Fully online", provider2Value: "Fully online", highlight: "both" },
+  ],
+  faqs: [
+    {
+      question: "Which is better, welludr or altRx?",
+      answer:
+        "altRx wins our comparison for people focused on weight loss: one flat price at every dose ($89/month for compounded semaglutide, $149 for tirzepatide), brand-name Zepbound and Wegovy on the same menu, and Buy Now, Pay Later. welludr (formerly wellmedr) has the lower headline price, from $41 and $71 a month in its Pre-Black Friday sale, and a 4.6 rating across 2,188 Trustpilot reviews, while altRx shows no overall Trustpilot score. Choose welludr if its sale price and plan terms suit you or you want its NAD+ and longevity services, and altRx for flat pricing and brand-name options.",
+    },
+    {
+      question: "Which ships faster, welludr or altRx?",
+      answer:
+        "welludr's standard delivery takes about 3-5 business days, with refills every 4 weeks in plain, unbranded packaging. altRx ships free in about 5-7 days. If you are timing your first dose or a switch from another provider, welludr is the quicker of the two, while altRx makes up for the wait with flat pricing and its brand-name shelf.",
+    },
   ],
 };
 
@@ -351,6 +387,23 @@ export const foundEmbodyBattle: BattleData = {
     { feature: "Medications", provider1Value: "Compounded semaglutide and tirzepatide", provider2Value: "GLP-1 and non-GLP-1 options", highlight: "both" },
     { feature: "Refunds", provider1Value: "Full refund if not approved", provider2Value: "Check Found's site", highlight: "provider1" },
     { feature: "Insurance", provider1Value: "Not needed, flat self-pay", provider2Value: "Some plans insurance/HSA eligible", highlight: "both" },
+  ],
+  faqs: [
+    {
+      question: "Should I pick found for coaching or embody for a flat price?",
+      answer:
+        "Pick embody if you mainly want GLP-1 medication at a known cost: $69/month for compounded semaglutide or $119 for tirzepatide, medication included, delivered free in 1-2 days. Pick found if you want a health coach and a behavior-change program around your treatment and are open to non-GLP-1 medication too. found bills a membership for visits and coaching, and the medication cost on top varies with the prescription and your insurance, so check found's site for current prices. For most people who just want the medication, embody is the better fit.",
+    },
+    {
+      question: "Does embody include coaching like found?",
+      answer:
+        "No. embody focuses on medication with medical oversight from licensed doctors, a medical director and a nursing team, and it does not add a coaching program. found includes a dedicated health coach, a behavioral program and progress tracking in its membership. If coaching is the reason you are looking, found is the stronger choice; if you would rather keep the monthly cost at a flat $69 or $119, embody is.",
+    },
+    {
+      question: "Can I use insurance with found or embody?",
+      answer:
+        "embody does not use insurance: it is cash-pay at $69 or $119 a month, the same price for everyone. Some found plans may qualify for insurance or HSA/FSA payment, which can lower what you pay, so check your coverage with found. If insurance would cover your medication through found, compare that total with embody's flat price before you decide.",
+    },
   ],
 };
 
@@ -1208,5 +1261,17 @@ export const sproutWellmedrBattle: BattleData = {
     { feature: "Brand-name options", provider1Value: "Ozempic $1,399 · Zepbound $1,599", provider2Value: "Wegovy from $1,799", highlight: "both" },
     { feature: "Trustpilot", provider1Value: "4.6 across 2,188 reviews", provider2Value: "4.1 across 188 reviews", highlight: "provider1" },
     { feature: "Guarantee", provider1Value: "Weight-loss warranty", provider2Value: "-", highlight: "provider1" },
+  ],
+  faqs: [
+    {
+      question: "Which is better, Sprout or welludr?",
+      answer:
+        "welludr wins our comparison on price and track record: compounded semaglutide from $41/month and tirzepatide from $71 in its Pre-Black Friday sale, against Sprout's $149 and $199, plus 4.6 stars across 2,188 Trustpilot reviews against Sprout's 4.1 across 188. Sprout is the better choice if you need brand-name Wegovy, which welludr does not carry, or want your prescription shipped within 2 days instead of about 3-5 business days. If neither applies, welludr costs far less.",
+    },
+    {
+      question: "How much do Sprout and welludr cost over a year?",
+      answer:
+        "Sprout's compounded semaglutide at $149 a month comes to $1,788 for 12 months, or $1,588 after its $200 first-month discount, and tirzepatide at $199 comes to $2,388, or $2,188 with the discount. welludr starts far lower, at $41 and $71 a month in its Pre-Black Friday sale, but because those are sale prices, your yearly total at welludr depends on the plan terms shown at checkout. Check the current offer at either provider before you pay.",
+    },
   ],
 };

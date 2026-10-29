@@ -176,6 +176,21 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
         answer:
           "No. embody, altRx and Medvi all bill month to month. embody also refunds you in full if a licensed provider doesn't approve treatment, altRx lets you pause or cancel at any time, and Medvi's all-inclusive price is HSA/FSA approved with no surprise charges.",
       },
+      {
+        question: "Which is cheapest over a full year: embody, altRx or Medvi?",
+        answer:
+          "At current prices, a year of compounded semaglutide costs $828 at embody, $1,068 at altRx and $1,188 at Medvi. For tirzepatide, the yearly totals are $1,428 at embody, $1,788 at altRx and $1,992 at Medvi. All three are promotional rates (embody regularly $79, altRx and Medvi regularly $199 for semaglutide), so check each checkout before you budget. Medvi plans are HSA/FSA approved, which can lower the real cost if you have pre-tax funds.",
+      },
+      {
+        question: "Which of embody, altRx and Medvi has the best support?",
+        answer:
+          "Medvi offers the most support: its price includes video visits, a free dietician and care coaching, and its Trustpilot reviewers most often praise nurses and providers who take their time. embody gives you licensed doctors, a medical director and a nursing team, but it is self-serve by design, and some reviewers describe missed video visits when getting started. altRx has a licensed physician, PA or nurse practitioner review your case, and reviewers describe replies within a day, though it shows no overall Trustpilot score. Choose Medvi if regular human contact matters most.",
+      },
+      {
+        question: "Which ships fastest: embody, altRx or Medvi?",
+        answer:
+          "embody is fastest, delivering free in 1-2 days with tracking and insurance. altRx ships free in about 5-7 days, and Medvi ships free but does not publish a delivery window we could verify. If you need medication quickly, for example to avoid a gap when switching providers, embody is the safest of the three.",
+      },
     ],
   },
   {
@@ -238,6 +253,21 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
         question: "Does embody, Medvi or welludr offer a guarantee?",
         answer:
           "welludr offers a weight-loss warranty (terms on its site), and embody gives a full refund if you aren't approved. Medvi doesn't advertise a results guarantee and leans on its all-inclusive support model instead.",
+      },
+      {
+        question: "Which is cheapest over a full year: embody, Medvi or welludr?",
+        answer:
+          "A year of compounded semaglutide costs $828 at embody ($69 a month) and $1,188 at Medvi ($99 a month, a promotional rate). welludr has the lowest monthly price, from $41 in its Pre-Black Friday sale, but because it is a sale rate, its yearly total depends on the plan terms shown at checkout. For tirzepatide, embody comes to $1,428 a year and Medvi to $1,992, while welludr starts from $71 a month.",
+      },
+      {
+        question: "Which of embody, Medvi and welludr has the best support?",
+        answer:
+          "Medvi includes the most support: video visits, a free dietician and care coaching, and 15 of the 40 Medvi Trustpilot reviews we quote praise nurses and providers who take their time. welludr puts a Medical Weight-Care Coach on every plan, and its quoted reviews often name support agents who solved problems quickly, though five describe messages or calls going unanswered. embody is the most self-serve of the three, with licensed doctors, a medical director and a nursing team by message. Choose Medvi for hands-on care, welludr for a coach at the lowest price, and embody if you prefer to manage things yourself.",
+      },
+      {
+        question: "Which ships fastest: embody, Medvi or welludr?",
+        answer:
+          "embody is fastest, delivering free in 1-2 days with tracking and insurance. welludr's standard delivery takes about 3-5 business days, with refills every 4 weeks, and Medvi ships free without a published delivery window we could verify. If you are timing a switch from another provider, embody leaves the least room for a gap between doses.",
       },
     ],
   },

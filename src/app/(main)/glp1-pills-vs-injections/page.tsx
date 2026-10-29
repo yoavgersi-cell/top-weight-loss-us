@@ -166,7 +166,7 @@ const SECTIONS: Section[] = [
 <tr><td>Zepbound (tirzepatide 5 mg weekly injection)</td><td>SURMOUNT-1</td><td>72 weeks</td><td>-15.0%</td><td>-3.1%</td></tr>
 <tr><td>Wegovy (semaglutide 2.4 mg weekly injection)</td><td>${ext(SRC.step1, "STEP 1")}, NEJM, March 18, 2021</td><td>68 weeks</td><td><strong>-14.9%</strong></td><td>-2.4%</td></tr>
 <tr><td>Wegovy pill (oral semaglutide 25 mg daily)</td><td>${ext(SRC.oasis4, "OASIS 4")}, NEJM, September 2025</td><td>64 weeks</td><td><strong>-13.6%</strong></td><td>-2.2%</td></tr>
-<tr><td>Foundayo (orforglipron 36 mg daily)</td><td>${ext(SRC.attain1, "ATTAIN-1")}, NEJM, September 2025</td><td>72 weeks</td><td><strong>-11.2%</strong></td><td>-2.1%</td></tr>
+<tr><td>Foundayo (orforglipron, top trial dose)</td><td>${ext(SRC.attain1, "ATTAIN-1")}, NEJM, September 2025</td><td>72 weeks</td><td><strong>-11.2%</strong></td><td>-2.1%</td></tr>
 </tbody></table>
 <h3>Why you see two different numbers for each drug</h3>
 <p>Every trial reports two valid figures. The table uses the treatment-policy (or treatment-regimen) result, which counts everyone randomized whether or not they stayed on the drug. Manufacturers also publish an on-treatment result for people who took the drug as directed until the end: 22.5% for tirzepatide 15 mg, 16.6% for the Wegovy pill and 12.4% for Foundayo. Marketing usually quotes the on-treatment figure. We use the treatment-policy figure because it better reflects what happens across a real group of patients. The two answer different questions and do not contradict each other.</p>
@@ -189,7 +189,7 @@ const SECTIONS: Section[] = [
     body: `<p><strong>The Wegovy pill is taken daily on an empty stomach with a 30-minute wait, Foundayo is taken daily at any time, and the pens are used once a week.</strong> For most people this is the difference they feel day to day, and it shows that "pills are easier" is not always true.</p>
 <table><thead><tr><th>Product</th><th>How often</th><th>The rules</th></tr></thead><tbody>
 <tr><td>Wegovy pill</td><td>Once a day</td><td>Taken on an empty stomach with a small sip of water, then 30 minutes before any food, drink or other medicine. The dose rises from 1.5 mg to 25 mg over the first months.</td></tr>
-<tr><td>Foundayo</td><td>Once a day</td><td>Any time of day, with or without food or water. Increased through 6, 12 and 36 mg tablets.</td></tr>
+<tr><td>Foundayo</td><td>Once a day</td><td>Any time of day, with or without food or water. Starts at 0.8 mg and steps up at least every 30 days, to a maximum of 17.2 mg.</td></tr>
 <tr><td>Wegovy or Zepbound pen</td><td>Once a week</td><td>Injected under the skin from a pre-filled, factory-sealed pen. Nothing to do on other days; the dose rises every few weeks.</td></tr>
 <tr><td>Compounded injection</td><td>Once a week</td><td>Drawn from a multi-dose vial into a syringe. You measure the dose in units yourself, which is where the FDA has recorded dosing errors.</td></tr>
 </tbody></table>
