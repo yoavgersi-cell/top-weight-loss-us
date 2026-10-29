@@ -125,7 +125,7 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
     slug: "how-long-for-semaglutide-to-work",
     title: "How Long Does Semaglutide Take to Work? Timeline",
     description:
-      "Semaglutide curbs appetite in 1-2 weeks, many lose 3-5 lbs in month one and 5-10% by month 3. A month-by-month timeline of what to expect, with trial data.",
+      "Semaglutide often curbs appetite within 1-2 weeks, while weight loss builds as the dose rises. A week-by-week timeline of what to expect, with trial data.",
     category: "Guide",
     readTime: "11 min read",
     publishedAt: "2026-07-15",
@@ -133,8 +133,8 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     keyTakeaways: [
-      "On the starting dose, appetite and cravings usually ease within the first 1-2 weeks, and many people are 3-5 pounds lighter by the end of month one.",
-      "Months 2-3, when the dose steps up, tend to bring the largest monthly drops; many patients reach 5-10% of starting weight lost by month 3.",
+      "On the starting dose, appetite and cravings usually ease within the first 1-2 weeks, while weight loss in month one is usually modest because the starting dose is low.",
+      "Months 2-3, when the dose steps up, tend to bring the largest monthly drops; in the STEP 4 trial, people averaged 10.6% weight loss by the end of the 20-week dose-escalation period.",
       "In trials, average loss was 15% of body weight at 68 weeks, and most people hit their peak somewhere between months 9 and 15 before moving to maintenance.",
       "Slow progress at month 3 usually means the dose is not yet optimal or eating habits are working against the drug, so talk to your provider before concluding it failed.",
       "Wegovy's label steps the dose up every 4 weeks, from 0.25 mg to the 2.4 mg maintenance dose at week 17, so month one is spent on roughly one-tenth of the full dose.",
@@ -171,11 +171,11 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
       },
       {
         heading: "How much weight do you lose in the first month?",
-        body: `Many patients are down 3-5 pounds by the end of month one, though the range is wide and some lose more or less. Since you are still on a low dose, the scale is not the only signal worth watching. Early progress also shows up as:<ul><li>Clothes fitting differently.</li><li>Steadier energy.</li><li>A calmer relationship with food.</li></ul>`,
+        body: `Weight loss in month one is usually modest and varies widely, because the 0.25 mg starting dose is meant to let your body adjust rather than to drive weight loss. Since you are still on a low dose, the scale is not the only signal worth watching. Early progress also shows up as:<ul><li>Clothes fitting differently.</li><li>Steadier energy.</li><li>A calmer relationship with food.</li></ul>`,
       },
       {
         heading: "Why does weight loss speed up in months 2-3?",
-        body: `Months 2-3 are when your provider raises the dose step by step, following <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">the standard titration schedule</a>, so appetite suppression gets stronger and the scale usually moves faster. For most people this is the stretch with the biggest month-to-month changes, and many have lost 5-10% of starting weight by month 3. Good <a href="/articles/what-to-eat-on-glp1-medication">nutrition</a> and regular <a href="/articles/exercise-while-on-glp1-medication">exercise</a> make the biggest difference here.`,
+        body: `Months 2-3 are when your provider raises the dose step by step, following <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">the standard titration schedule</a>, so appetite suppression gets stronger and the scale usually moves faster. For most people this is the stretch with the biggest month-to-month changes, and in the <a href="https://jamanetwork.com/journals/jama/fullarticle/2777886" target="_blank" rel="noopener">STEP 4 trial</a> people had lost 10.6% on average by week 20, when the dose escalation ended. Good <a href="/articles/what-to-eat-on-glp1-medication">nutrition</a> and regular <a href="/articles/exercise-while-on-glp1-medication">exercise</a> make the biggest difference here.`,
       },
       {
         heading: "Is it normal for weight loss to slow in months 4-6?",
@@ -594,7 +594,7 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
       },
       {
         heading: "What does a realistic GLP-1 weight loss timeline look like?",
-        body: `Based on <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">clinical trial averages</a>, a typical course looks like this:<ul><li>Weeks 1-2: appetite starts to drop.</li><li>Month 1: about 3-5 lbs lost.</li><li>Months 2-3: loss speeds up as the dose rises, reaching 5-10% of body weight.</li><li>Months 6-12: peak results of 15-22%, depending on the medication.</li></ul>Your own results may differ. Read our <a href="/articles/first-month-weight-loss-medication">first month guide</a> for the early weeks.`,
+        body: `Based on <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">clinical trial averages</a>, a typical course looks like this:<ul><li>Weeks 1-2: appetite often starts to drop.</li><li>Months 1-4: weight loss is gradual, because the dose starts low and steps up every 4 weeks.</li><li>After the maintenance dose is reached: loss continues for months. At the end of STEP 1 (68 weeks), people on semaglutide 2.4 mg had lost 14.9% of body weight on average; in <a href="https://doi.org/10.1056/NEJMoa2206038" target="_blank" rel="noopener">SURMOUNT-1</a>, tirzepatide 15 mg averaged 20.9% at 72 weeks.</li></ul>Your own results may differ. Read our <a href="/articles/first-month-weight-loss-medication">first month guide</a> for the early weeks.`,
       },
       {
         heading: "Which GLP-1 gives the fastest results?",
