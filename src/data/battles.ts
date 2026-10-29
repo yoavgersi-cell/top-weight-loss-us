@@ -825,28 +825,28 @@ const embodyRoBattle: BattleData = {
 // (4.5 across 4,917, operator screenshot Oct 13, 2026). ──
 const edenEmbodyBattle: BattleData = {
   slug: "eden-vs-embody",
-  updatedAt: "2026-10-13",
+  updatedAt: "2026-10-29",
   publishedAt: "2026-10-13",
   provider1Id: "eden",
   provider2Id: "embody",
   title: "Eden vs embody: Flat-Price GLP-1 Providers (2026)",
   subtitle: "Two compounded GLP-1 providers with no commitment, compared on price, shipping, human support and Trustpilot record.",
-  description: "Eden vs embody: embody wins at $69/$119 a month with free 1-2 day shipping; Eden costs $99/$129 but adds 24/7 human support and 4.5 stars.",
-  intro: "embody wins this comparison: it is the cheaper of the two at every dose and the faster to deliver. Both sell compounded semaglutide and tirzepatide month to month, with no membership, no long-term plan and a single price at every dose. embody charges $69/month for semaglutide and $119 for tirzepatide against Eden's $99 and $129, ships free in 1-2 days cold-chain, and refunds you if a provider does not approve treatment. Eden's strengths are doctor-guided care, 24/7 human support and a 4.5 rating across 4,917 Trustpilot reviews, against embody's 3.8 across 9,604. For most people paying cash, embody's lower price and faster delivery decide it.",
-  verdict: "embody is our pick. It costs $30 a month less on semaglutide ($69 vs $99) and $10 less on tirzepatide ($119 vs $129), which adds up to $360 a year on semaglutide, and it ships free in 1-2 days with a refund if you are not approved. Both are month to month with no membership, so the lower price carries no extra commitment. Choose Eden instead if round-the-clock human support matters more to you than price: it offers 24/7 support, doctor-guided care and a 4.5 Trustpilot average across 4,917 reviews.",
+  description: "Eden vs embody: Eden wins with 24/7 human support and 4.5 Trustpilot stars at a flat $99/$129; embody is cheaper at $69/$119 with 1-2 day shipping.",
+  intro: "Eden wins this comparison: it pairs doctor-guided care and 24/7 human support with the stronger customer record, 4.5 stars across 4,917 Trustpilot reviews against embody's 3.8 across 9,604. Both sell compounded semaglutide and tirzepatide month to month, with no membership, no long-term plan and a single price at every dose. Eden charges $99/month for semaglutide and $129 for tirzepatide as standard rates with no promotion to expire; embody charges less, $69 and $119 on promotion (regularly $79 and $129), and ships free in 1-2 days. For most people starting a GLP-1, being able to reach a person at any hour and a provider with consistently happy customers is worth the difference; if the lowest monthly price is what matters most, embody is the cheaper option.",
+  verdict: "Eden is our pick. It wins on the parts of care that are hardest to fix later: 24/7 human support, doctor-guided treatment and a 4.5 Trustpilot average across 4,917 reviews, where recent reviewers name the agents who solved their problems. Its $99 semaglutide and $129 tirzepatide are standard prices, the same every month and at every dose, with no membership and no long-term plan. Choose embody instead if the lowest price is your priority: it costs $30 a month less on semaglutide ($69 vs $99) and $10 less on tirzepatide ($119 vs $129) on its current promotion, ships free in 1-2 days and refunds you if you are not approved.",
   verdictWinnerPoints: [
-    "Lowest no-commitment price: $69 semaglutide, $119 tirzepatide",
-    "Free 1-2 day cold-chain delivery",
-    "Refund if a provider does not approve treatment",
-    "LegitScript-certified, with named US 503A pharmacies",
-  ],
-  verdictLoserPoints: [
     "$99 semaglutide and $129 tirzepatide, the same every month at every dose",
     "24/7 human support and doctor-guided care included",
     "4.5 stars across 4,917 Trustpilot reviews; recent reviews name helpful staff",
     "No membership and no annual or long-term plan",
   ],
-  winnerId: "embody",
+  verdictLoserPoints: [
+    "Lowest no-commitment price: $69 semaglutide, $119 tirzepatide",
+    "Free 1-2 day cold-chain delivery",
+    "Refund if a provider does not approve treatment",
+    "LegitScript-certified, with named US 503A pharmacies",
+  ],
+  winnerId: "eden",
   categories: [
     {
       name: "Monthly Price",
@@ -893,7 +893,7 @@ const edenEmbodyBattle: BattleData = {
     {
       question: "Which is better, Eden or embody?",
       answer:
-        "embody wins this comparison on price and speed: $69/month for compounded semaglutide and $119 for tirzepatide, against Eden's $99 and $129, with free 1-2 day delivery. Eden is the better choice if you want 24/7 human support and a higher Trustpilot rating, 4.5 across 4,917 reviews against embody's 3.8 across 9,604. Both are month to month with no membership, so choose embody to save money and Eden if reaching a person at any hour matters more.",
+        "Eden wins this comparison: 24/7 human support, doctor-guided care and a 4.5 Trustpilot rating across 4,917 reviews, against embody's 3.8 across 9,604, at a flat $99 a month for semaglutide and $129 for tirzepatide. embody is the better choice if price comes first: $69 and $119 a month on its current promotion, with free 1-2 day delivery. Both are month to month with no membership, so choose Eden for support and consistency and embody to spend less."
     },
     {
       question: "Will Eden or embody prices change over time?",

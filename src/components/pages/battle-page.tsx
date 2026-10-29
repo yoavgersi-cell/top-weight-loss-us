@@ -569,7 +569,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // Mobile promo popup - the highest-priority featured provider that has a
   // creative (registry + priority in @/lib/promo-popups). Each popup's link and
   // offer come from that provider's own real affiliate data.
-  const promoPopup = resolvePromoPopup([p1, p2]);
+  // Comparisons where a provider's promo popup is switched off (operator
+  // request): the popup would push the losing provider on the winner's page.
+  const POPUP_EXCLUDED: Record<string, string[]> = { "eden-vs-embody": ["embody"] };
+  const promoPopup = resolvePromoPopup([p1, p2].filter((p) => !(POPUP_EXCLUDED[slug] ?? []).includes(p.id)));
 
   // CRO layer (rolled out to all battles after the embody-vs-ro prototype):
   // quick answer, fit finder, Reddit synthesis, read-more accordions (content
