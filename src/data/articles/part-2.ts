@@ -574,7 +574,7 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
     slug: "weight-loss-medication-that-works-fast",
     title: "Fastest Weight Loss Medication: Realistic Timeline",
     description:
-      "GLP-1s curb appetite in 1-2 weeks; expect about 3-5 lbs in month one and 15-22% at 6-12+ months. Which drug works fastest and what speeds or slows results.",
+      "GLP-1s often curb appetite within 1-2 weeks, and weight loss builds for months: 14.9% to 20.9% on average in the main trials. Which drug works fastest and why.",
     category: "Guide",
     readTime: "5 min read",
     publishedAt: "2026-07-21",
@@ -582,7 +582,7 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     keyTakeaways: [
-      "GLP-1s cut appetite within 1-2 weeks, but real loss builds over months: about 3-5 lbs in month one, 5-10% of body weight by months 2-3, and 15-22% at 6-12+ months.",
+      "GLP-1s often cut appetite within 1-2 weeks, but real loss builds over months: 10.6% on average by week 20 on semaglutide (STEP 4), and 14.9% (semaglutide, 68 weeks) to 20.9% (tirzepatide, 72 weeks) by the end of the main trials.",
       "Tirzepatide gives the fastest average results because of its dual mechanism, with semaglutide close behind. Phentermine works within hours but is approved only for short-term use.",
       "Plenty of protein, exercise, water and sleep speed results up; eating too much despite a smaller appetite, too little protein, and stress slow them down.",
       "Losing 1-2 lbs a week is the pace that tends to last, so \"fast\" should mean faster than without medication, not overnight.",
