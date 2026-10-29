@@ -1444,11 +1444,12 @@ export const seedTrustpilot: Record<string, { rating?: string; reviewCount?: str
     ],
   },
   eden: {
-    // Aggregate verified Oct 13, 2026 from Eden's claimed Trustpilot profile
-    // (operator-supplied screenshot): 4.5 across 4,917 reviews, Weight Loss
-    // Service category, claimed June 2024, paid Trustpilot subscription.
+    // Aggregate re-verified Oct 29, 2026 from Eden's claimed Trustpilot
+    // profile (operator-supplied screenshot): 4.5 across 5,044 reviews (was
+    // 4,917 on Oct 13), Weight Loss Service category, claimed June 2024, paid
+    // Trustpilot subscription.
     rating: "4.5",
-    reviewCount: "4,917",
+    reviewCount: "5,044",
     reviews: [
       // Oct 13, 2026 batch (operator-supplied screenshots of the profile's
       // newest reviews, Oct 1-12 2026, all marked "Unprompted review").
@@ -1517,6 +1518,171 @@ export const seedTrustpilot: Record<string, { rating?: string; reviewCount?: str
         location: "US",
         rating: 5,
         date: "Oct 1, 2026",
+      },
+      // Oct 29, 2026 batch (operator-supplied copy of the profile's newest
+      // reviews, all 5 stars). Transcribed verbatim; names reduced to first
+      // name + last initial. Trustpilot showed relative times ("11 hours ago",
+      // "2 days ago"), converted to calendar dates as of Oct 29, 2026, so a
+      // date can be off by one day.
+      {
+        title: "Erin was amazing help though my…",
+        text: "Erin was amazing help though my difficult time of need. She was very polite and helpful, sweetheart of lady. Thank you!",
+        name: "Sam",
+        location: "US",
+        rating: 5,
+        date: "Oct 29, 2026",
+      },
+      {
+        title: "My questions were answered in a very…",
+        text: "My questions were answered in a very professional manner",
+        name: "Lu",
+        location: "US",
+        rating: 5,
+        date: "Oct 29, 2026",
+      },
+      {
+        title: "Ann Negradas was extremely pleasant and…",
+        text: "Ann Negradas was extremely pleasant and helpful! She even followed up our call with an email informing me of all necessary info. Thank you Ann!",
+        name: "Brianna",
+        location: "US",
+        rating: 5,
+        date: "Oct 29, 2026",
+      },
+      {
+        title: "I started using the services of Eden 2…",
+        text: "I started using the services of Eden 2 days ago, and I'm already impressed with the work of KIM, who helped me solving all my remaining questions. Looking forward with enhanced optimism to become a permanent client of Eden Health!",
+        name: "Alex T.",
+        location: "US",
+        rating: 5,
+        date: "Oct 29, 2026",
+      },
+      {
+        title: "I am really happy with the treatment…",
+        text: "I am really happy with the treatment and more with the person that help me her name is Lupe she always does her job right reason why i ask for her i am really thankful and happy with the treatment i recommend.",
+        name: "Maribel",
+        location: "US",
+        rating: 5,
+        date: "Oct 29, 2026",
+      },
+      {
+        title: "Mahesh was absolutely wonderful",
+        text: "Mahesh was absolutely wonderful! They took the time to answer my email and point me in the right direction! Very informative and helpful!!",
+        name: "Jody S.",
+        location: "US",
+        rating: 5,
+        date: "Oct 29, 2026",
+      },
+      {
+        title: "Ann was great!",
+        text: "Ann was great!",
+        name: "Catherine F.",
+        location: "US",
+        rating: 5,
+        date: "Oct 29, 2026",
+      },
+      {
+        title: "Great customer service.",
+        text: "Great customer service.",
+        name: "Mike",
+        location: "US",
+        rating: 5,
+        date: "Oct 28, 2026",
+      },
+      {
+        title: "Very good!",
+        text: "Nathalie was vert nice and helpful and answered ll my questions.",
+        name: "Constance C.",
+        location: "US",
+        rating: 5,
+        date: "Oct 27, 2026",
+      },
+      {
+        title: "Lupe D was so friendly and helpful",
+        text: "Lupe D was so friendly and helpful. She made my experience way better and helped me with a problem I had been dealing with for a long time. She is amazing!",
+        name: "Sophie B.",
+        location: "US",
+        rating: 5,
+        date: "Oct 27, 2026",
+      },
+      {
+        title: "Tryeden is a trustworthy compounding pharmacy",
+        text: "Been with Tryeden for a couple of years. I just paused a shipment of meds, which you’re free to do at anytime, through their CHAT feature. Easy peasy. A pleasant and helpful human representative ( it’s nice to speak to a real person instead of an automated message system) took care of it for me and assured me that I can use CHAT to restart my prescription just as painlessly anytime I like.",
+        name: "Yvette",
+        location: "US",
+        rating: 5,
+        date: "Oct 27, 2026",
+      },
+      {
+        title: "Very knowledgeable",
+        text: "Very knowledgeable, a great experience! It made everything go so smoothly on the intake",
+        name: "Celso Z.",
+        location: "US",
+        rating: 5,
+        date: "Oct 27, 2026",
+      },
+      {
+        title: "Shravan was very helpful in resolving…",
+        text: "Shravan was very helpful in resolving my concerns and ultimately keeping me as an Eden customer. Thank you!",
+        name: "Kpl",
+        location: "US",
+        rating: 5,
+        date: "Oct 27, 2026",
+      },
+      {
+        title: "I really love this company and the team…",
+        text: "I really love this company and the team work they have they are so professional and very helpful i love how they help us as customers",
+        name: "Maribel",
+        location: "US",
+        rating: 5,
+        date: "Oct 27, 2026",
+      },
+      {
+        title: "Xyryl has been very responsive and…",
+        text: "Xyryl has been very responsive and attentive so far. It’s much appreciated.",
+        name: "Valued Customer",
+        location: "US",
+        rating: 5,
+        date: "Oct 26, 2026",
+      },
+      {
+        title: "Ann was great",
+        text: "Ann was great",
+        name: "Lori",
+        location: "US",
+        rating: 5,
+        date: "Oct 26, 2026",
+      },
+      {
+        title: "DANIFER was very quick to help and…",
+        text: "DANIFER was very quick to help and thoughtful in her conversation.",
+        name: "Mei Mei N.",
+        location: "US",
+        rating: 5,
+        date: "Oct 26, 2026",
+      },
+      {
+        title: "Excellent follow up on my customer…",
+        text: "Excellent follow up on my customer service inquiry by Sandra - thank you!!",
+        name: "Maureen K.",
+        location: "US",
+        rating: 5,
+        date: "Oct 26, 2026",
+      },
+      {
+        title: "Lupe D was great!",
+        text: "Lupe D. Was phenomenal! Very helpful and knowledgeable. She helped me solve my issue!",
+        name: "juliana D.",
+        location: "US",
+        rating: 5,
+        date: "Oct 26, 2026",
+      },
+      {
+        title: "Zee handled my issue quickly and…",
+        text: "Zee handled my issue quickly and professionally. Thanks",
+        name: "Fabrice",
+        location: "FR",
+        rating: 5,
+        date: "Oct 26, 2026",
       },
     ],
   },

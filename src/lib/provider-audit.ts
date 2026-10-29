@@ -109,7 +109,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Membership fee", value: "None" },
       { label: "Commitment", value: "None - no annual or long-term plans required" },
       { label: "Support", value: "Doctor-guided care with 24/7 human support" },
-      { label: "Trustpilot record", value: "4.5 across 4,917 reviews" },
+      { label: "Trustpilot record", value: "4.5 across 5,044 reviews" },
     ],
   },
   "weight-loss:ro": {

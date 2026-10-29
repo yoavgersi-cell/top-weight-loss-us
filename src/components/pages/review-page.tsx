@@ -386,7 +386,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "What do Eden weight loss reviews say?",
       answer:
-        "Eden averages 4.5 across 4,917 Trustpilot reviews on a profile it claimed in June 2024. The reviews we quote are all five stars and nearly all about support: named agents who replied quickly and resolved the issue in writing. One reviewer switched after a previous provider raised its prices and said Eden's ratings for fair pricing, customer service and doctor support decided it. We found no complaints among the reviews we quote, but they are a small sample of the total.",
+        "Eden averages 4.5 across 5,044 Trustpilot reviews on a profile it claimed in June 2024. The reviews we quote are all five stars and nearly all about support: named agents who replied quickly and resolved the issue in writing. One reviewer switched after a previous provider raised its prices and said Eden's ratings for fair pricing, customer service and doctor support decided it. We found no complaints among the reviews we quote, but they are a small sample of the total.",
     },
     {
       question: "How much is Eden tirzepatide?",

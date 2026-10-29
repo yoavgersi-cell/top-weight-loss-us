@@ -101,7 +101,7 @@ const ROWS: Row[] = [
     membership: "None",
     shipping: "Ships to your home; delivery time not listed on the pricing page",
     support: "Doctor-guided care; 24/7 human support",
-    trustpilot: { rating: "4.5", count: "4,917", checked: "October 13, 2026", url: "https://www.trustpilot.com/review/tryeden.com" },
+    trustpilot: { rating: "4.5", count: "5,044", checked: "October 29, 2026", url: "https://www.trustpilot.com/review/tryeden.com" },
     advantage: "Flat price with no promotion to expire; best recent support reviews",
     limitation: "No Reddit record; shipping time unpublished; FDA warning letter on marketing (June 2026)",
     cta: "See Eden's flat monthly price",
@@ -294,10 +294,10 @@ const SECTIONS: Section[] = [
     ),
     support:
       "Eden includes doctor-guided clinical care and 24/7 human support in the price. Eden says its medication is made in the US under strict quality oversight; the pages we captured do not name the compounding pharmacy. Recent Trustpilot reviews back up the support claim: nearly every one names the agent who helped, and one says the messaging process \"worked much better than trying to get someone on the phone.\"",
-    trustpilotHeading: "Eden on Trustpilot: 4.5 from 4,917 reviews",
+    trustpilotHeading: "Eden on Trustpilot: 4.5 from 5,044 reviews",
     trustpilot: (
       <>
-        Checked October 13, 2026 (<Ext href="https://www.trustpilot.com/review/tryeden.com">Eden Trustpilot profile</Ext>; claimed since June 2024, on a paid Trustpilot subscription). Every one of the newest reviews we captured, dated October 1 to 12, is five stars and about a person: &ldquo;Ann was a great help&rdquo;, &ldquo;MELANIE was fantastic!!&rdquo;, &ldquo;Sandra was super helpful!&rdquo;, &ldquo;Joanne with customer support was great&rdquo;, &ldquo;Prompt and helpful&rdquo;. A customer who switched after another provider raised prices wrote that Eden&rsquo;s &ldquo;high ratings for fair pricing, customer service, and support of the doctors was the deciding factor for me, and they were spot on.&rdquo; A named support lead replies to reviews on Eden&rsquo;s behalf. <strong className="text-[#191919]">This is the strongest support record on this page, though we read only the newest page of reviews, not all 4,917.</strong>
+        Checked October 29, 2026 (<Ext href="https://www.trustpilot.com/review/tryeden.com">Eden Trustpilot profile</Ext>; claimed since June 2024, on a paid Trustpilot subscription). Every one of the newest reviews we captured, dated October 1 to 29, is five stars and about a person: &ldquo;Ann was a great help&rdquo;, &ldquo;MELANIE was fantastic!!&rdquo;, &ldquo;Sandra was super helpful!&rdquo;, &ldquo;Joanne with customer support was great&rdquo;, &ldquo;Prompt and helpful&rdquo;. A customer who switched after another provider raised prices wrote that Eden&rsquo;s &ldquo;high ratings for fair pricing, customer service, and support of the doctors was the deciding factor for me, and they were spot on.&rdquo; A named support lead replies to reviews on Eden&rsquo;s behalf. <strong className="text-[#191919]">This is the strongest support record on this page, though we read only the newest page of reviews, not all 5,044.</strong>
       </>
     ),
     reddit: (
@@ -307,7 +307,7 @@ const SECTIONS: Section[] = [
     ),
     cancellation:
       "Eden's published terms were outside our October 12 review, so we do not summarize them here. Eden's pricing page says no annual or long-term plan is required. We will add Eden's cancellation and refund terms after reviewing them.",
-    pros: ["Flat $99 / $129 with no first-month gimmick and no promotion to run out", "No membership and no annual or long-term plan", "4.5 from 4,917 Trustpilot reviews, with staff praised by name in nearly every recent review", "Doctor-guided care and 24/7 human support included"],
+    pros: ["Flat $99 / $129 with no first-month gimmick and no promotion to run out", "No membership and no annual or long-term plan", "4.5 from 5,044 Trustpilot reviews, with staff praised by name in nearly every recent review", "Doctor-guided care and 24/7 human support included"],
     cons: ["No Reddit record to cross-check", "Shipping time and cost missing from the pricing page", "Compounded medication only, with no brand-name options and no named pharmacy", "FDA warning letter on marketing, June 2026 (details below)"],
     suits: "People who want one fixed monthly cost they can plan around for a year without signing a plan, who value reachable human support, and tirzepatide patients who want a flat price without paying a premium.",
     assessment: (

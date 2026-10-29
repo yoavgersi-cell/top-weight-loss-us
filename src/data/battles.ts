@@ -822,7 +822,7 @@ const embodyRoBattle: BattleData = {
 
 // ── Eden battles (added Oct 13, 2026). Eden's figures are its own published
 // pricing (flat $99 / $129, every month, every dose) and its Trustpilot record
-// (4.5 across 4,917, operator screenshot Oct 13, 2026). ──
+// (4.5 across 5,044, operator screenshot Oct 29, 2026). ──
 const edenEmbodyBattle: BattleData = {
   slug: "eden-vs-embody",
   updatedAt: "2026-10-29",
@@ -832,12 +832,12 @@ const edenEmbodyBattle: BattleData = {
   title: "Eden vs embody: Flat-Price GLP-1 Providers (2026)",
   subtitle: "Two compounded GLP-1 providers with no commitment, compared on price, shipping, human support and Trustpilot record.",
   description: "Eden vs embody: Eden wins with 24/7 human support and 4.5 Trustpilot stars at a flat $99/$129; embody is cheaper at $69/$119 with 1-2 day shipping.",
-  intro: "Eden wins this comparison: it pairs doctor-guided care and 24/7 human support with the stronger customer record, 4.5 stars across 4,917 Trustpilot reviews against embody's 3.8 across 9,604. Both sell compounded semaglutide and tirzepatide month to month, with no membership, no long-term plan and a single price at every dose. Eden charges $99/month for semaglutide and $129 for tirzepatide as standard rates with no promotion to expire; embody charges less, $69 and $119 on promotion (regularly $79 and $129), and ships free in 1-2 days. For most people starting a GLP-1, being able to reach a person at any hour and a provider with consistently happy customers is worth the difference; if the lowest monthly price is what matters most, embody is the cheaper option.",
-  verdict: "Eden is our pick. It wins on the parts of care that are hardest to fix later: 24/7 human support, doctor-guided treatment and a 4.5 Trustpilot average across 4,917 reviews, where recent reviewers name the agents who solved their problems. Its $99 semaglutide and $129 tirzepatide are standard prices, the same every month and at every dose, with no membership and no long-term plan. Choose embody instead if the lowest price is your priority: it costs $30 a month less on semaglutide ($69 vs $99) and $10 less on tirzepatide ($119 vs $129) on its current promotion, ships free in 1-2 days and refunds you if you are not approved.",
+  intro: "Eden wins this comparison: it pairs doctor-guided care and 24/7 human support with the stronger customer record, 4.5 stars across 5,044 Trustpilot reviews against embody's 3.8 across 9,604. Both sell compounded semaglutide and tirzepatide month to month, with no membership, no long-term plan and a single price at every dose. Eden charges $99/month for semaglutide and $129 for tirzepatide as standard rates with no promotion to expire; embody charges less, $69 and $119 on promotion (regularly $79 and $129), and ships free in 1-2 days. For most people starting a GLP-1, being able to reach a person at any hour and a provider with consistently happy customers is worth the difference; if the lowest monthly price is what matters most, embody is the cheaper option.",
+  verdict: "Eden is our pick. It wins on the parts of care that are hardest to fix later: 24/7 human support, doctor-guided treatment and a 4.5 Trustpilot average across 5,044 reviews, where recent reviewers name the agents who solved their problems. Its $99 semaglutide and $129 tirzepatide are standard prices, the same every month and at every dose, with no membership and no long-term plan. Choose embody instead if the lowest price is your priority: it costs $30 a month less on semaglutide ($69 vs $99) and $10 less on tirzepatide ($119 vs $129) on its current promotion, ships free in 1-2 days and refunds you if you are not approved.",
   verdictWinnerPoints: [
     "$99 semaglutide and $129 tirzepatide, the same every month at every dose",
     "24/7 human support and doctor-guided care included",
-    "4.5 stars across 4,917 Trustpilot reviews; recent reviews name helpful staff",
+    "4.5 stars across 5,044 Trustpilot reviews; recent reviews name helpful staff",
     "No membership and no annual or long-term plan",
   ],
   verdictLoserPoints: [
@@ -875,8 +875,8 @@ const edenEmbodyBattle: BattleData = {
     {
       name: "Trustpilot Record",
       winner: "provider1",
-      explanation: "Eden has the higher rating: 4.5 across 4,917 Trustpilot reviews, against embody's 3.8 across 9,604. embody has more reviews, but its average is more mixed, with shipping delays and support as the recurring complaints.",
-      supportingPoints: ["Eden: 4.5 across 4,917 reviews", "embody: 3.8 across 9,604 reviews", "Both profiles claimed with paid Trustpilot subscriptions"],
+      explanation: "Eden has the higher rating: 4.5 across 5,044 Trustpilot reviews, against embody's 3.8 across 9,604. embody has more reviews, but its average is more mixed, with shipping delays and support as the recurring complaints.",
+      supportingPoints: ["Eden: 4.5 across 5,044 reviews", "embody: 3.8 across 9,604 reviews", "Both profiles claimed with paid Trustpilot subscriptions"],
     },
   ],
   features: [
@@ -886,14 +886,14 @@ const edenEmbodyBattle: BattleData = {
     { feature: "Commitment", provider1Value: "None, no annual or long-term plans", provider2Value: "None, month to month", highlight: "both" },
     { feature: "Delivery", provider1Value: "Home delivery; timing not listed on the pricing page", provider2Value: "Free 1-2 day cold-chain", highlight: "provider2" },
     { feature: "Support", provider1Value: "Doctor-guided care, 24/7 human support", provider2Value: "Nursing team by message, video appointments", highlight: "provider1" },
-    { feature: "Trustpilot", provider1Value: "4.5 across 4,917 (Oct 13, 2026)", provider2Value: "3.8 across 9,604 (Oct 12, 2026)", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.5 across 5,044 (Oct 29, 2026)", provider2Value: "3.8 across 9,604 (Oct 12, 2026)", highlight: "provider1" },
     { feature: "Brand-name medication", provider1Value: "No", provider2Value: "No", highlight: "none" },
   ],
   faqs: [
     {
       question: "Which is better, Eden or embody?",
       answer:
-        "Eden wins this comparison: 24/7 human support, doctor-guided care and a 4.5 Trustpilot rating across 4,917 reviews, against embody's 3.8 across 9,604, at a flat $99 a month for semaglutide and $129 for tirzepatide. embody is the better choice if price comes first: $69 and $119 a month on its current promotion, with free 1-2 day delivery. Both are month to month with no membership, so choose Eden for support and consistency and embody to spend less."
+        "Eden wins this comparison: 24/7 human support, doctor-guided care and a 4.5 Trustpilot rating across 5,044 reviews, against embody's 3.8 across 9,604, at a flat $99 a month for semaglutide and $129 for tirzepatide. embody is the better choice if price comes first: $69 and $119 a month on its current promotion, with free 1-2 day delivery. Both are month to month with no membership, so choose Eden for support and consistency and embody to spend less."
     },
     {
       question: "Will Eden or embody prices change over time?",
@@ -912,13 +912,13 @@ const altrxEdenBattle: BattleData = {
   title: "altRx vs Eden: Flat GLP-1 Prices Compared (2026)",
   subtitle: "Both charge one price at every dose. Here is how altRx and Eden differ on price, plans, support and public reviews.",
   description: "altRx vs Eden: altRx has $89/mo promo semaglutide and brand-name meds; Eden charges a flat $99/$129 with 24/7 support and 4.5 stars on Trustpilot.",
-  intro: "Eden wins this comparison: standard flat prices with no promotion to expire, the cheaper tirzepatide, 24/7 human support and a strong public Trustpilot record. altRx is cheaper on semaglutide while its promotion lasts and offers brand-name drugs. Both charge one price at every dose and neither requires a membership. The prices cross over: altRx's semaglutide is cheaper ($89 against Eden's $99), while Eden's tirzepatide is cheaper ($129 against altRx's $149). altRx's figures are promotional rates against regular prices of $199 and $299, with a sale end date that has been pushed back more than once; Eden's are its everyday rates. altRx adds a brand-name shelf (Ozempic, Zepbound, Wegovy) and Buy Now, Pay Later. Eden adds 24/7 human support and a 4.5 rating across 4,917 Trustpilot reviews, while altRx has no Trustpilot profile.",
-  verdict: "Eden is our pick, and it wins on the factors you can verify: a flat price with no promotion to expire, 24/7 human support, and 4.5 stars across 4,917 Trustpilot reviews, compared with altRx's promotional pricing and lack of a public review aggregate. altRx is the better choice if you want brand-name medication at a cash price, financing through Buy Now, Pay Later, or the lower semaglutide price of the two while its promotion lasts. Its one detailed firsthand Reddit account describes approval and cold-chain delivery within a day.",
+  intro: "Eden wins this comparison: standard flat prices with no promotion to expire, the cheaper tirzepatide, 24/7 human support and a strong public Trustpilot record. altRx is cheaper on semaglutide while its promotion lasts and offers brand-name drugs. Both charge one price at every dose and neither requires a membership. The prices cross over: altRx's semaglutide is cheaper ($89 against Eden's $99), while Eden's tirzepatide is cheaper ($129 against altRx's $149). altRx's figures are promotional rates against regular prices of $199 and $299, with a sale end date that has been pushed back more than once; Eden's are its everyday rates. altRx adds a brand-name shelf (Ozempic, Zepbound, Wegovy) and Buy Now, Pay Later. Eden adds 24/7 human support and a 4.5 rating across 5,044 Trustpilot reviews, while altRx has no Trustpilot profile.",
+  verdict: "Eden is our pick, and it wins on the factors you can verify: a flat price with no promotion to expire, 24/7 human support, and 4.5 stars across 5,044 Trustpilot reviews, compared with altRx's promotional pricing and lack of a public review aggregate. altRx is the better choice if you want brand-name medication at a cash price, financing through Buy Now, Pay Later, or the lower semaglutide price of the two while its promotion lasts. Its one detailed firsthand Reddit account describes approval and cold-chain delivery within a day.",
   verdictWinnerPoints: [
     "$99 semaglutide and $129 tirzepatide at standard rates, with no promo end date",
     "The cheaper tirzepatide of the two",
     "24/7 human support and doctor-guided care",
-    "4.5 stars across 4,917 Trustpilot reviews",
+    "4.5 stars across 5,044 Trustpilot reviews",
   ],
   verdictLoserPoints: [
     "$89 semaglutide, cheaper while the promotion lasts",
@@ -955,8 +955,8 @@ const altrxEdenBattle: BattleData = {
     {
       name: "Public Track Record",
       winner: "provider2",
-      explanation: "Eden has a public Trustpilot record of 4.5 across 4,917 reviews on a claimed profile. altRx's Trustpilot profile shows no overall score, so its public record consists of individual reviews and the one Reddit thread we captured. Both companies received FDA warning letters in June 2026 about marketing claims for compounded GLP-1s.",
-      supportingPoints: ["Eden: 4.5 across 4,917 Trustpilot reviews", "altRx: no Trustpilot profile", "Both: FDA marketing warning letters, June 2026"],
+      explanation: "Eden has a public Trustpilot record of 4.5 across 5,044 reviews on a claimed profile. altRx's Trustpilot profile shows no overall score, so its public record consists of individual reviews and the one Reddit thread we captured. Both companies received FDA warning letters in June 2026 about marketing claims for compounded GLP-1s.",
+      supportingPoints: ["Eden: 4.5 across 5,044 Trustpilot reviews", "altRx: no Trustpilot profile", "Both: FDA marketing warning letters, June 2026"],
     },
   ],
   features: [
@@ -966,7 +966,7 @@ const altrxEdenBattle: BattleData = {
     { feature: "Membership", provider1Value: "None", provider2Value: "None", highlight: "both" },
     { feature: "Delivery", provider1Value: "Free, 5-7 days", provider2Value: "Home delivery; timing not listed on the pricing page", highlight: "none" },
     { feature: "Support", provider1Value: "Clinician-guided", provider2Value: "Doctor-guided care, 24/7 human support", highlight: "provider2" },
-    { feature: "Trustpilot", provider1Value: "No profile", provider2Value: "4.5 across 4,917 (Oct 13, 2026)", highlight: "provider2" },
+    { feature: "Trustpilot", provider1Value: "No profile", provider2Value: "4.5 across 5,044 (Oct 29, 2026)", highlight: "provider2" },
     { feature: "Financing", provider1Value: "Buy Now, Pay Later", provider2Value: "Not listed", highlight: "provider1" },
   ],
 };
@@ -980,12 +980,12 @@ const edenRoBattle: BattleData = {
   title: "Eden vs ro: Compounded or Brand-Name GLP-1? (2026)",
   subtitle: "A flat-price compounded provider against a brand-name provider that charges a membership plus the medication.",
   description: "Eden vs ro: Eden wins with a flat $99/mo semaglutide, no membership and 24/7 support; ro bills a $39-then-$74-149 membership plus brand-name drugs.",
-  intro: "Eden wins this comparison: one flat price with no membership, 24/7 human support and the stronger Trustpilot record. ro is the alternative only if your insurance covers a brand-name GLP-1. Eden sells compounded semaglutide at $99/month and tirzepatide at $129/month, flat every month at every dose, with no membership. ro sells FDA-approved medication, including the Wegovy pill and pen and the Zepbound KwikPen, billed separately from a Body membership that costs $39 the first month and $74-$149 after; that split is what lets insurance pay for the drug. On cash price the two are far apart, but with coverage ro can be the cheaper route. Support and reputation also differ: Eden offers 24/7 human support and has 4.5 stars across 4,917 Trustpilot reviews, while ro follows up by message and has 3.9 across 7,105.",
-  verdict: "Eden is our pick. It charges one flat price, $99 for semaglutide or $129 for tirzepatide, with no membership, while ro bills a membership of $39 the first month and $74-$149 after on top of the medication. Eden also offers 24/7 human support and rates 4.5 across 4,917 Trustpilot reviews against ro's 3.9 across 7,105. Consider ro only if your insurance covers Wegovy or Zepbound: it sells FDA-approved brand-name medication, and with coverage its membership plus a copay can cost less.",
+  intro: "Eden wins this comparison: one flat price with no membership, 24/7 human support and the stronger Trustpilot record. ro is the alternative only if your insurance covers a brand-name GLP-1. Eden sells compounded semaglutide at $99/month and tirzepatide at $129/month, flat every month at every dose, with no membership. ro sells FDA-approved medication, including the Wegovy pill and pen and the Zepbound KwikPen, billed separately from a Body membership that costs $39 the first month and $74-$149 after; that split is what lets insurance pay for the drug. On cash price the two are far apart, but with coverage ro can be the cheaper route. Support and reputation also differ: Eden offers 24/7 human support and has 4.5 stars across 5,044 Trustpilot reviews, while ro follows up by message and has 3.9 across 7,105.",
+  verdict: "Eden is our pick. It charges one flat price, $99 for semaglutide or $129 for tirzepatide, with no membership, while ro bills a membership of $39 the first month and $74-$149 after on top of the medication. Eden also offers 24/7 human support and rates 4.5 across 5,044 Trustpilot reviews against ro's 3.9 across 7,105. Consider ro only if your insurance covers Wegovy or Zepbound: it sells FDA-approved brand-name medication, and with coverage its membership plus a copay can cost less.",
   verdictWinnerPoints: [
     "$99 semaglutide and $129 tirzepatide, flat every month, no membership",
     "24/7 human support and doctor-guided care",
-    "4.5 stars across 4,917 Trustpilot reviews",
+    "4.5 stars across 5,044 Trustpilot reviews",
     "No annual or long-term plan required",
   ],
   verdictLoserPoints: [
@@ -1023,8 +1023,8 @@ const edenRoBattle: BattleData = {
     {
       name: "Trustpilot Record",
       winner: "provider1",
-      explanation: "Eden rates 4.5 across 4,917 Trustpilot reviews, and ro rates 3.9 across 7,105 on a profile claimed in 2021. ro's review base is bigger and older, but Eden's average is higher and its recent reviews are more consistently positive about support.",
-      supportingPoints: ["Eden: 4.5 across 4,917", "ro: 3.9 across 7,105", "Both: claimed profiles with paid subscriptions"],
+      explanation: "Eden rates 4.5 across 5,044 Trustpilot reviews, and ro rates 3.9 across 7,105 on a profile claimed in 2021. ro's review base is bigger and older, but Eden's average is higher and its recent reviews are more consistently positive about support.",
+      supportingPoints: ["Eden: 4.5 across 5,044", "ro: 3.9 across 7,105", "Both: claimed profiles with paid subscriptions"],
     },
   ],
   features: [
@@ -1034,7 +1034,7 @@ const edenRoBattle: BattleData = {
     { feature: "FDA-approved medication", provider1Value: "No (compounded)", provider2Value: "Yes", highlight: "provider2" },
     { feature: "Insurance", provider1Value: "Not needed, cash-pay", provider2Value: "Can apply to the medication", highlight: "provider2" },
     { feature: "Support", provider1Value: "Doctor-guided care, 24/7 human support", provider2Value: "Licensed providers, by message", highlight: "provider1" },
-    { feature: "Trustpilot", provider1Value: "4.5 across 4,917 (Oct 13, 2026)", provider2Value: "3.9 across 7,105 (Oct 12, 2026)", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.5 across 5,044 (Oct 29, 2026)", provider2Value: "3.9 across 7,105 (Oct 12, 2026)", highlight: "provider1" },
     { feature: "Cancellation", provider1Value: "No long-term plan to cancel", provider2Value: "48 hours before renewal; fees non-refundable", highlight: "provider1" },
   ],
 };
