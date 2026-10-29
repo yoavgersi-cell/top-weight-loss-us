@@ -7,16 +7,17 @@ export const articlesPart2: Article[] = [
     description:
       "Uninsured or denied coverage? Compounded semaglutide starts at $41/month and tirzepatide at $71/month through telehealth. Here is how to pay less for GLP-1s.",
     category: "Advice",
-    readTime: "6 min read",
+    readTime: "11 min read",
     publishedAt: "2026-07-14",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-10-29",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
     keyTakeaways: [
       "Wegovy and Zepbound, the drugs labeled for weight loss, are often left off insurance formularies, and covered plans can still require prior authorization and steep copays.",
       "Without insurance, the lowest verified telehealth prices are from $41/month for compounded semaglutide and from $71/month for compounded tirzepatide, with consultations and delivery included.",
       "Paying with HSA or FSA money usually works for medication and visits, which lowers your real cost by roughly 20-35% depending on your tax bracket.",
-      "Novo Nordisk and Eli Lilly savings programs generally require commercial insurance, so uninsured patients usually save the most with compounded medication through telehealth.",
+      "Brand-name GLP-1s now have cash prices for people without insurance: as of October 2026, Wegovy pens cost $349/month ($199 for the first two fills for new patients), Zepbound $299-$449 by dose, and the Wegovy pill and Foundayo start at $149.",
+      "Manufacturer savings cards still require commercial insurance, but self-pay programs (NovoCare, LillyDirect, TrumpRx) do not. Medicare enrollees who qualify can get Wegovy, Zepbound KwikPen or Foundayo for $50/month through the GLP-1 Bridge.",
     ],
     sections: [
       {
@@ -25,7 +26,68 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "What does a GLP-1 cost per month with no insurance?",
-        body: `Through telehealth, compounded semaglutide starts at a verified $41/month and compounded tirzepatide at $71/month, and those prices include the consultation and shipping. Compounded medications contain the same active ingredients as the brand-name drugs and are <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">prepared by licensed compounding pharmacies</a>. This is the most common way uninsured patients start a GLP-1. Our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> explains how the two differ.`,
+        body: `<p>Without insurance, a GLP-1 costs about $41-$299 a month for compounded semaglutide or tirzepatide through telehealth, and $149-$449 a month for FDA-approved brand-name drugs bought at the manufacturers' self-pay prices, as of October 2026. Through telehealth, compounded semaglutide starts at a verified $41/month and compounded tirzepatide at $71/month (welludr's Pre-Black Friday sale, from October 28, 2026), with the consultation and shipping included.</p>
+<p>Compounded medications are <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">prepared by licensed compounding pharmacies</a> from the same active ingredient, but they are not FDA-approved and are not generics. Our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> explains how the two differ.</p>
+<h3>Brand-name self-pay prices by dose (October 2026)</h3>
+<table><thead><tr><th>Drug</th><th>Dose</th><th>Cash price per month</th></tr></thead><tbody>
+<tr><td>Wegovy pen (semaglutide)</td><td>0.25 mg and 0.5 mg, new self-pay patients</td><td>$199 for each of the first two fills, through Dec 31, 2026</td></tr>
+<tr><td>Wegovy pen</td><td>0.25 mg to 2.4 mg</td><td>$349</td></tr>
+<tr><td>Wegovy HD pen</td><td>7.2 mg</td><td>$399</td></tr>
+<tr><td>Wegovy pill (oral semaglutide)</td><td>1.5 mg</td><td>$149</td></tr>
+<tr><td>Wegovy pill</td><td>4 mg</td><td>$199</td></tr>
+<tr><td>Wegovy pill</td><td>9 mg and 25 mg</td><td>$299</td></tr>
+<tr><td>Ozempic (semaglutide)</td><td>0.25 mg and 0.5 mg, new self-pay patients</td><td>$199 introductory</td></tr>
+<tr><td>Ozempic</td><td>up to 1 mg</td><td>$349</td></tr>
+<tr><td>Zepbound vial or KwikPen (tirzepatide)</td><td>2.5 mg</td><td>$299</td></tr>
+<tr><td>Zepbound vial or KwikPen</td><td>5 mg</td><td>$399</td></tr>
+<tr><td>Zepbound vial or KwikPen</td><td>7.5 mg to 15 mg</td><td>$449 if refilled within 45 days (higher if late)</td></tr>
+<tr><td>Foundayo pill (orforglipron)</td><td>0.8 mg</td><td>$149</td></tr>
+<tr><td>Foundayo pill</td><td>2.5 mg / 5.5 mg</td><td>$149 / $199 (temporary prices through Dec 31, 2026)</td></tr>
+<tr><td>Foundayo pill</td><td>9 mg to 17.2 mg</td><td>$299 ($349 for 14.5 mg and 17.2 mg if not refilled within 45 days)</td></tr>
+</tbody></table>
+<p>Sources: Wegovy and Ozempic prices from the <a href="https://www.novocare.com/content/dam/novonordisk/novocare/redesign/pdf/Wegovy_Price_Guide.pdf" target="_blank" rel="noopener">NovoCare Wegovy price guide</a>, the <a href="https://www.novocare.com/patient/medicines/wegovy/savings-offer.html" target="_blank" rel="noopener">NovoCare introductory offer</a>, <a href="https://www.prnewswire.com/news-releases/novo-nordisk-launches-introductory-self-pay-offer-for-wegovy-and-ozempic-for-199-per-month-302617100.html" target="_blank" rel="noopener">Novo Nordisk's self-pay announcement</a> and <a href="https://www.cnn.com/2026/01/06/health/wegovy-pill-weight-loss-explained" target="_blank" rel="noopener">CNN on Wegovy pill pricing</a>; Zepbound and Foundayo prices from <a href="https://www.lilly.com/lillydirect/zepbound" target="_blank" rel="noopener">LillyDirect Zepbound</a> and <a href="https://www.lilly.com/lillydirect/foundayo" target="_blank" rel="noopener">LillyDirect Foundayo</a>. Ozempic's 2 mg dose costs more; check NovoCare for the current figure. All prices need a valid prescription and can change.</p>
+<h3>Compounded prices through telehealth (October 2026)</h3>
+<table><thead><tr><th>Provider</th><th>Compounded semaglutide</th><th>Compounded tirzepatide</th><th>Condition</th></tr></thead><tbody>
+<tr><td><a href="/reviews/wellmedr">welludr</a></td><td>from $41</td><td>from $71</td><td>Pre-Black Friday sale from Oct 28, 2026; 12-month plan for the lowest rate</td></tr>
+<tr><td><a href="/reviews/embody">embody</a></td><td>$69</td><td>$119</td><td>Sale prices (reg. $79 / $129); month to month</td></tr>
+<tr><td>altRx</td><td>$89</td><td>$149</td><td>Sale prices (reg. $199 / $299); flat at every dose</td></tr>
+<tr><td>Medvi</td><td>$99</td><td>$166</td><td>Promo (reg. $199 / $299); visits and dietitian included</td></tr>
+<tr><td>HealthRx</td><td>$99</td><td>from $179</td><td>Semaglutide price needs a 12-month prepaid plan ($1,188)</td></tr>
+<tr><td>DirectMeds</td><td>$147</td><td>$147</td><td>Flat at every dose</td></tr>
+<tr><td>SHED</td><td>$199</td><td>$299</td><td>20% off month one; coaching included</td></tr>
+</tbody></table>
+<p>These come from our <a href="/cheapest-glp1">verified price index</a>; sale prices end, so confirm the total at checkout.</p>`,
+      },
+      {
+        heading: "How much is Wegovy per month without insurance?",
+        body: `<p>Wegovy costs $349 a month without insurance at Novo Nordisk's self-pay price for every pen dose from 0.25 mg to 2.4 mg, as of October 2026, and new self-pay patients pay $199 for each of their first two monthly fills of the 0.25 mg and 0.5 mg doses through December 31, 2026, according to <a href="https://www.novocare.com/patient/medicines/wegovy/savings-offer.html" target="_blank" rel="noopener">NovoCare</a>. The high-dose Wegovy HD pen (7.2 mg) is $399, and the Wegovy pill runs $149-$299 depending on dose.</p>
+<p>That is far below Wegovy's list price, about $1,349 per 28-day package, which is what you might be quoted at a pharmacy counter if the pharmacist does not apply the self-pay program. Novo Nordisk plans to cut the list price to $675 a month on January 1, 2027, but said that change does not alter its direct-to-patient self-pay prices, per its <a href="https://www.prnewswire.com/news-releases/novo-nordisk-announces-significant-reduction-in-us-list-price-for-wegovy-ozempic-and-rybelsus-semaglutide-medicines-building-on-continued-efforts-to-expand-access-302695705.html" target="_blank" rel="noopener">February 2026 announcement</a>.</p>
+<p>Over a year at the maintenance dose, the Wegovy pen at $349 adds up to $4,188 and a $299 pill to $3,588. The same arithmetic for compounded semaglutide at $69-$199 a month gives $828-$2,388, before any sale or prepay discount.</p>
+<p>Ozempic, the same molecule approved for type 2 diabetes, is priced the same as Wegovy at the self-pay level for doses up to 1 mg. Prescribing it for weight loss alone is off-label, so most uninsured patients who want brand semaglutide for weight are prescribed Wegovy.</p>`,
+      },
+      {
+        heading: "How much is tirzepatide or Zepbound without insurance?",
+        body: `<p>Zepbound costs $299 a month for the 2.5 mg starting dose, $399 for 5 mg and $449 for 7.5 mg to 15 mg without insurance through LillyDirect, as of October 2026, with the $449 price applying only when you refill within 45 days of your last delivery, per <a href="https://www.lilly.com/lillydirect/zepbound" target="_blank" rel="noopener">Lilly</a>. The self-pay price covers both the single-dose vial and the multi-dose KwikPen, and it cannot be billed to insurance.</p>
+<p>Lilly cut those prices on December 1, 2025, down from $349-$499, <a href="https://www.cnbc.com/2025/12/01/eli-lilly-prices-zepbound-weight-loss-drug-vials.html" target="_blank" rel="noopener">CNBC reported</a>. Zepbound's list price, by contrast, is roughly $1,060-$1,090 a month, per <a href="https://www.ajmc.com/view/trumprx-launch-brings-savings-and-uncertainty" target="_blank" rel="noopener">AJMC</a>. A year at the top self-pay tier costs $5,388.</p>
+<p>Compounded tirzepatide through telehealth runs from $71/month (welludr's sale) to $299/month in our price index. It is not FDA-approved, and the FDA has <a href="https://www.fda.gov/news-events/press-announcements/fda-proposes-exclude-semaglutide-tirzepatide-and-liraglutide-503b-bulks-list" target="_blank" rel="noopener">proposed barring outsourcing facilities</a> from compounding it from bulk ingredient. Mounjaro, the same molecule approved for type 2 diabetes, is not part of Lilly's weight-loss self-pay program. Our <a href="/articles/best-tirzepatide-online">best tirzepatide online guide</a> compares providers.</p>`,
+      },
+      {
+        heading: "Why is compounded semaglutide so much cheaper than brand-name Wegovy?",
+        body: `<p>Compounded semaglutide is cheaper because the pharmacy that makes it skips the costs that come with an FDA-approved brand: no clinical trials to recoup, no FDA approval review, no branded injector pen, and no manufacturer markup set by a patent holder. Pharmacies buy the active ingredient and prepare it in vials, usually drawn up with a standard syringe.</p>
+<p>The trade-off is oversight. The FDA <a href="https://www.fda.gov/news-events/press-announcements/fda-warns-30-telehealth-companies-against-illegal-marketing-compounded-glp-1s" target="_blank" rel="noopener">does not review compounded GLP-1s for safety, effectiveness or quality</a> before they are marketed, and in March 2026 it warned 30 telehealth companies about marketing that implied compounded products were the same as approved drugs. Since the shortages ended in 2024-2025, pharmacies may compound these drugs only in limited, patient-specific circumstances, and in April 2026 the FDA proposed stopping outsourcing facilities from compounding them from bulk ingredient.</p>
+<p>The price gap has also narrowed. When Wegovy cost about <a href="https://www.ajmc.com/view/trump-announces-deals-with-eli-lilly-novo-nordisk-for-lower-weight-loss-drug-prices" target="_blank" rel="noopener">$1,350 a month</a> before the November 2025 pricing deal, compounded semaglutide saved over $1,000 a month. With Wegovy at $349 and the Wegovy pill from $149, compounded semaglutide at $69-$199 saves roughly $150-$280 a month versus the pen. Whether that is worth giving up FDA approval is a decision to make with your clinician. See <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name semaglutide</a>.</p>`,
+      },
+      {
+        heading: "Can you get a GLP-1 for under $100 a month without insurance?",
+        body: `<p>Yes, but only compounded GLP-1s go under $100 a month without insurance. As of October 2026, five providers in our price index list compounded semaglutide at $99 or less: welludr (from $41, sale), embody ($69), altRx ($89), Medvi ($99, promo) and HealthRx ($99 on a 12-month prepaid plan). For tirzepatide, only welludr (from $71, sale) is under $100.</p>
+<p>The cheapest FDA-approved option is $149 a month: the Wegovy pill 1.5 mg starting dose, or Foundayo at 0.8 mg (and 2.5 mg through December 31, 2026), per <a href="https://www.lilly.com/lillydirect/foundayo" target="_blank" rel="noopener">LillyDirect</a>. Those prices rise as the dose goes up.</p>
+<p>Low headline prices often come with conditions:</p>
+<ul><li><strong>Plan length:</strong> the lowest rate may require a 6- or 12-month plan or prepayment. Read the cancellation and refund terms; see <a href="/articles/before-you-prepay-glp1">before you prepay for a GLP-1</a>.</li><li><strong>Sale end dates:</strong> promotional prices revert to regular prices.</li><li><strong>Dose-based pricing:</strong> some providers raise the price at higher doses, so ask what you will pay at maintenance, not just month one.</li><li><strong>Add-on fees:</strong> separate membership, visit or shipping fees change the real total.</li></ul>`,
+      },
+      {
+        heading: "How much does Saxenda cost without insurance?",
+        body: `<p>Saxenda (liraglutide), an older daily GLP-1 injection, can cost far more than the self-pay prices for Wegovy or Zepbound if you pay a pharmacy's list-based cash price. Its list price was about $1,350 a month when Teva launched the first generic version on August 28, 2025, at a list price of $1,165, according to <a href="https://www.fiercepharma.com/pharma/saxenda-knockoff-teva-launches-first-generic-glp-1-obesity" target="_blank" rel="noopener">Fierce Pharma</a>.</p>
+<p>Unlike semaglutide and tirzepatide, liraglutide for weight loss does have an FDA-approved generic. List prices are not what every pharmacy charges, so get quotes from several pharmacies and ask about discount cards. Compare any quote against the $149-$449 brand self-pay prices for Wegovy, Zepbound and Foundayo above, and ask your clinician whether a daily or weekly medication suits you better.</p>`,
       },
       {
         heading: "Which telehealth plans include everything in one price?",
@@ -33,15 +95,29 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "Can I use my HSA or FSA for GLP-1 medication?",
-        body: `Usually, yes. Money in a Health Savings Account (HSA) or Flexible Spending Account (FSA) can typically be spent on weight loss medication and the consultations that go with it. Because those dollars are pre-tax, the effective saving is about 20-35%, depending on your tax bracket. Ask your provider whether it takes HSA/FSA cards before you pay.`,
+        body: `<p>Usually, yes. Money in a Health Savings Account (HSA) or Flexible Spending Account (FSA) can typically be spent on a prescribed GLP-1 and the consultations that go with it, when the medication treats a diagnosed condition such as obesity. Because those dollars are pre-tax, the effective saving is roughly your tax rate, often about 20-35% depending on your bracket and account.</p>
+<p>The rule comes from <a href="https://www.irs.gov/publications/p502" target="_blank" rel="noopener">IRS Publication 502</a>: weight-loss costs count as medical expenses only when they treat a specific disease diagnosed by a physician, "such as obesity, hypertension, or heart disease," and prescribed drugs qualify while most non-prescribed ones do not. The IRS does not name GLP-1s specifically, so this is an application of the general rule. Gym memberships and food do not qualify, even as part of a weight-loss plan.</p>
+<ul><li>Keep your prescription, receipts and, if asked, a letter of medical necessity showing the diagnosis. Plan administrators may request them, especially for compounded medication.</li><li>Self-pay purchases through NovoCare, LillyDirect or a pharmacy can generally be paid with an HSA or FSA card, since the drug is prescribed.</li><li>Several providers in our index, including Medvi and SHED, list their plans as HSA/FSA approved. Ask any other provider before you pay.</li></ul>
+<p>Example: a $349 Wegovy pen paid with pre-tax money costs someone in a 22% federal bracket about $272 in after-tax terms, before any state or payroll tax savings.</p>`,
       },
       {
         heading: "Will a Novo Nordisk or Eli Lilly savings card help if I'm uninsured?",
-        body: `Probably not much. Novo Nordisk (Ozempic, Wegovy) and Eli Lilly (Mounjaro, Zepbound) both run savings programs that can cut brand-name costs a lot, but eligibility usually depends on having commercial insurance. If you have no insurance at all, compounded medication through a telehealth provider is still the cheapest route.`,
+        body: `<p>The savings cards will not help if you have no insurance, but the manufacturers' self-pay programs will. Novo Nordisk and Eli Lilly run two different things, and they are easy to confuse.</p>
+<ul><li><strong>Savings cards (copay cards)</strong> are for people with commercial insurance. With coverage, the Wegovy Savings Offer can bring the cost to as little as $25 a month, with savings capped at $100 a month, per <a href="https://www.novocare.com/patient/medicines/wegovy/savings-offer.html" target="_blank" rel="noopener">NovoCare</a>. The Zepbound and Foundayo cards work similarly. They cannot be used with Medicare, Medicaid, TRICARE or other government plans.</li><li><strong>Self-pay programs</strong> are for anyone with a valid prescription, insured or not. NovoCare Pharmacy sells Wegovy pens at $349 a month and LillyDirect sells Zepbound at $299-$449, and the government site <a href="https://www.cnbc.com/2026/02/05/trump-rx-white-house-launches-direct-to-consumer-drug-site.html" target="_blank" rel="noopener">TrumpRx</a> sends cash payers to those same programs at the same prices.</li></ul>
+<p>If you have no insurance at all, compounded medication through telehealth is still the cheapest route, from $41 a month for semaglutide in our index. If you want an FDA-approved drug, the self-pay programs are now the cheapest brand-name route, from $149 a month for a starting-dose pill. Note that cash purchases generally do not count toward an insurance deductible.</p>`,
+      },
+      {
+        heading: "Can Medicare help pay for GLP-1s for weight loss?",
+        body: `<p>Yes, for some people. Since July 1, 2026, the Medicare GLP-1 Bridge lets eligible Part D and Medicare Advantage drug-plan enrollees get Wegovy (pen or pill), the Zepbound KwikPen or Foundayo for weight loss for a $50 copay per monthly supply, through December 31, 2027, according to <a href="https://www.cms.gov/medicare/coverage/prescription-drug-coverage/medicare-glp-1-bridge" target="_blank" rel="noopener">CMS</a>.</p>
+<p>Eligibility has BMI tiers: a BMI of 35 or higher alone; 30 or higher with heart failure with preserved ejection fraction, uncontrolled high blood pressure or chronic kidney disease; or 27 or higher with prediabetes, a prior heart attack or stroke, or symptomatic peripheral artery disease, as <a href="https://www.ncoa.org/article/expanding-access-to-weight-loss-medications-the-medicare-glp-1-bridge-program/" target="_blank" rel="noopener">NCOA explains</a>. Your prescriber sends the prior authorization to a central CMS processor, not your Part D plan. The $50 copay does not count toward the Part D out-of-pocket cap, and manufacturer savings cards cannot lower it further.</p>
+<p>If you are on Medicare and do not qualify, you can still pay cash through the self-pay programs above. Our <a href="/articles/glp1-after-65-medicare">GLP-1 after 65 guide</a> walks through eligibility step by step.</p>`,
       },
       {
         heading: "How do I compare providers on a tight budget?",
-        body: `Look at the full monthly total, not the headline medication price. Some providers advertise a low base rate and then bill separately for consultations, shipping or supplies. Before you enroll, confirm:<ul><li>What the monthly price includes.</li><li>Whether visits and follow-ups cost extra.</li><li>Whether shipping and supplies are bundled.</li></ul>Our guide to <a href="/articles/choosing-telehealth-weight-loss-provider">choosing a telehealth provider</a> covers the rest, and the <a href="/find-your-match">matching quiz</a> filters providers by budget and goals.`,
+        body: `Look at the full monthly total, not the headline medication price. Some providers advertise a low base rate and then bill separately for consultations, shipping or supplies. Before you enroll, confirm:<ul><li>What the monthly price includes.</li><li>Whether visits and follow-ups cost extra.</li><li>Whether shipping and supplies are bundled.</li><li>What you will pay at your maintenance dose, not just month one.</li><li>How long you are committing for, and what happens if you cancel early.</li></ul>
+<h3>A simple way to choose</h3>
+<ol><li><strong>Decide brand or compounded first.</strong> If FDA approval matters to you, compare the self-pay prices in the table above: the Wegovy pill and Foundayo start at $149, the Wegovy pen is $349, and Zepbound is $299-$449. If the lowest price matters most, compounded semaglutide starts at $41-$99 in our index.</li><li><strong>Price the whole first year.</strong> Multiply the maintenance-dose price by 12 and add any membership fees. A $349 pen is $4,188 a year; a $69 month-to-month compounded plan is $828.</li><li><strong>Check flexibility.</strong> Month-to-month plans cost a little more but let you stop if side effects or results disappoint.</li><li><strong>Pay with pre-tax money</strong> from an HSA or FSA if you have one.</li><li><strong>Re-check every few months.</strong> Prices moved several times in 2025 and 2026; our <a href="/glp1-price-changes">price change log</a> tracks them.</li></ol>
+For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-less">GLP-1 cost guide for 2026</a>. Our guide to <a href="/articles/choosing-telehealth-weight-loss-provider">choosing a telehealth provider</a> covers the rest, and the <a href="/find-your-match">matching quiz</a> filters providers by budget and goals.`,
       },
     ],
   },
@@ -51,9 +127,9 @@ export const articlesPart2: Article[] = [
     description:
       "Semaglutide curbs appetite in 1-2 weeks, many lose 3-5 lbs in month one and 5-10% by month 3. A month-by-month timeline of what to expect, with trial data.",
     category: "Guide",
-    readTime: "5 min read",
+    readTime: "11 min read",
     publishedAt: "2026-07-15",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-10-29",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     keyTakeaways: [
@@ -61,11 +137,37 @@ export const articlesPart2: Article[] = [
       "Months 2-3, when the dose steps up, tend to bring the largest monthly drops; many patients reach 5-10% of starting weight lost by month 3.",
       "In trials, average loss was 15% of body weight at 68 weeks, and most people hit their peak somewhere between months 9 and 15 before moving to maintenance.",
       "Slow progress at month 3 usually means the dose is not yet optimal or eating habits are working against the drug, so talk to your provider before concluding it failed.",
+      "Wegovy's label steps the dose up every 4 weeks, from 0.25 mg to the 2.4 mg maintenance dose at week 17, so month one is spent on roughly one-tenth of the full dose.",
+      "In the STEP 4 trial, people lost 10.6% of body weight on average during the first 20 weeks of semaglutide; in STEP 1, 86.4% had lost at least 5% by week 68.",
     ],
     sections: [
       {
         heading: "What happens in the first two weeks on semaglutide?",
-        body: `Most people notice semaglutide within two weeks, and the first sign is a quieter appetite. You may fill up faster at meals, think about food less, and find that cravings for sweets and processed snacks fade. Because you start on the lowest dose, these effects are usually mild. Our <a href="/articles/first-month-weight-loss-medication">first month guide</a> covers this stage in more depth.`,
+        body: `<p>Most people notice semaglutide within two weeks, and the first sign is a quieter appetite. You may fill up faster at meals, think about food less, and find that cravings for sweets and processed snacks fade. Because you start on the lowest dose, these effects are usually mild. Our <a href="/articles/first-month-weight-loss-medication">first month guide</a> covers this stage in more depth.</p>
+<p>Semaglutide starts acting within days of the first shot. According to the <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf" target="_blank" rel="noopener">Wegovy prescribing information</a>, the drug reaches its peak level in the blood 1 to 3 days after an injection and has an elimination half-life of about one week. Because each weekly dose is added before the last one has cleared, levels keep building over the first several weeks, which is one reason the appetite effect tends to feel stronger in week three or four than on day two.</p>
+<h3>What the first week on semaglutide feels like</h3>
+<ul><li><strong>Appetite:</strong> smaller portions feel like enough, and you may forget snacks you normally reach for.</li><li><strong>Digestive side effects:</strong> nausea, fullness, burping, constipation or diarrhea are the most common early effects. In the Wegovy trials, 44% of people on the drug reported nausea at some point, versus 16% on placebo, per the <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/215256s015lbl.pdf" target="_blank" rel="noopener">label</a>, and gastrointestinal effects are most common while the dose is being raised.</li><li><strong>The scale:</strong> often a small drop, partly from eating less, but the first week is not a reliable predictor of long-term results.</li></ul>
+<p>Eating smaller meals, stopping when you feel full and staying hydrated help with early nausea. Our <a href="/articles/what-to-eat-on-glp1-medication">guide to what to eat on a GLP-1</a> has practical meal ideas.</p>`,
+      },
+      {
+        heading: "What is the semaglutide dose schedule week by week?",
+        body: `<p>Semaglutide for weight loss (Wegovy) starts at 0.25 mg once a week and steps up every 4 weeks until it reaches the 2.4 mg maintenance dose in week 17, according to the <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf" target="_blank" rel="noopener">FDA-approved Wegovy label</a>. The slow climb is there to reduce nausea and other digestive side effects, not because the early doses are expected to deliver full weight loss.</p>
+<table><thead><tr><th>Weeks</th><th>Weekly Wegovy dose</th><th>What it is for</th></tr></thead><tbody>
+<tr><td>1-4</td><td>0.25 mg</td><td>Starting dose, lets your stomach adjust</td></tr>
+<tr><td>5-8</td><td>0.5 mg</td><td>Escalation</td></tr>
+<tr><td>9-12</td><td>1 mg</td><td>Escalation</td></tr>
+<tr><td>13-16</td><td>1.7 mg</td><td>Escalation</td></tr>
+<tr><td>17 onward</td><td>2.4 mg (or 1.7 mg)</td><td>Maintenance</td></tr>
+</tbody></table>
+<p>If a step is not tolerated, the label lets your prescriber delay the next increase by 4 weeks. Since March 19, 2026 there is also Wegovy HD, a 7.2 mg weekly dose approved for adults who have tolerated 2.4 mg for at least 4 weeks and need more weight loss, per <a href="https://www.prnewswire.com/news-releases/fda-approves-novo-nordisks-new-wegovy-hd-injection-delivering-the-highest-weight-loss-to-date-for-a-wegovy-injection-adding-to-its-already-expansive-clinical-profile-302718982.html" target="_blank" rel="noopener">Novo Nordisk</a>.</p>
+<p>Ozempic, the diabetes version, also starts at 0.25 mg for 4 weeks before moving to 0.5 mg. Its <a href="https://www.novo-pi.com/ozempic.pdf" target="_blank" rel="noopener">prescribing information</a> says the 0.25 mg dose "is intended for treatment initiation and is not effective for glycemic control." Compounded semaglutide programs usually follow a similar monthly step-up, though doses are written in milligrams and drawn in syringe units, so read your instructions carefully.</p>`,
+      },
+      {
+        heading: "Why are semaglutide results modest in the first month?",
+        body: `<p>Semaglutide results are modest in month one because you spend the whole month on the 0.25 mg starting dose, about one-tenth of the 2.4 mg maintenance dose, and that dose is chosen for tolerability rather than maximum effect. Most of the weight loss in trials came after the dose had been raised.</p>
+<p>Three other things keep month-one numbers small:</p>
+<ul><li><strong>Drug levels are still building.</strong> With a half-life of about a week, semaglutide accumulates over several weekly doses.</li><li><strong>Early losses mix water and food volume.</strong> Eating less food means less food and fluid in your gut, so the first pounds can fluctuate day to day.</li><li><strong>Your habits are still adjusting.</strong> The drug lowers appetite; what you choose to eat with that smaller appetite still matters.</li></ul>
+<p>That is why "semaglutide before and after 1 month" photos vary so much. A modest first month is expected and is not a sign that the drug will fail. Judge progress at the end of dose escalation, around months 4-5, not at week 4.</p>`,
       },
       {
         heading: "How much weight do you lose in the first month?",
@@ -84,8 +186,34 @@ export const articlesPart2: Article[] = [
         body: `<a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">In clinical trials, results peaked at 68 weeks</a> (roughly 16 months), with participants losing 15% of body weight on average. In practice, most patients reach their best results between months 9 and 15. Once you hit your goal, work out a maintenance plan with your provider. Some people move to a lower dose instead of stopping completely. See <a href="/articles/stopping-glp1-medication-what-happens">what happens when you stop</a>.`,
       },
       {
+        heading: "How much weight do people lose on semaglutide at 3, 6 and 12 months?",
+        body: `<p>In clinical trials, people taking semaglutide 2.4 mg lost about 10.6% of their body weight on average in the first 20 weeks (roughly 4-5 months) and 14.9% by week 68, though individual results range widely. These figures come from two large Novo Nordisk-funded trials in adults without diabetes who also had lifestyle counseling.</p>
+<table><thead><tr><th>Time on semaglutide</th><th>Average result</th><th>Source</th></tr></thead><tbody>
+<tr><td>Month 1 (weeks 1-4)</td><td>Small; you are on the 0.25 mg starting dose</td><td>Label dose schedule</td></tr>
+<tr><td>About 3 months (week 12)</td><td>Still escalating; you reach 1.7 mg in week 13</td><td>Label dose schedule</td></tr>
+<tr><td>About 5 months (week 20)</td><td>10.6% average loss</td><td><a href="https://jamanetwork.com/journals/jama/fullarticle/2777886" target="_blank" rel="noopener">STEP 4, JAMA 2021</a> (803 people who completed the run-in)</td></tr>
+<tr><td>About 16 months (week 68)</td><td>14.9% average loss vs 2.4% on placebo</td><td><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183" target="_blank" rel="noopener">STEP 1, NEJM 2021</a></td></tr>
+</tbody></table>
+<p>We could not verify week-by-week averages for months 3, 6 and 12 from the primary STEP 1 publication, so we have not printed them. The overall pattern in the trials is steady loss through dose escalation and the following months, slowing as people approach their plateau.</p>
+<h3>How many people reach 5%, 10% and 15%?</h3>
+<p>By week 68 in STEP 1, 86.4% of people on semaglutide had lost at least 5% of their body weight, 69.1% at least 10% and 50.5% at least 15%. On placebo the figures were 31.5%, 12.0% and 4.9%, per the <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183" target="_blank" rel="noopener">NEJM paper</a>. So about half of the people on the drug lost 15% or more, and roughly 1 in 7 lost less than 5%.</p>
+<p>For a 220-pound person, 10.6% is about 23 pounds and 14.9% is about 33 pounds. Real-world results can be lower when people stay on a lower dose, miss doses or stop early. For context, tirzepatide 15 mg produced 20.9% average loss at 72 weeks in <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038" target="_blank" rel="noopener">SURMOUNT-1</a>; see <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide</a>.</p>`,
+      },
+      {
+        heading: "How long does compounded semaglutide take to work?",
+        body: `<p>Compounded semaglutide should follow a similar timeline to Wegovy if it contains the right ingredient at the prescribed dose and you follow the same monthly step-up: appetite changes in the first couple of weeks and most weight loss after the dose has been raised. There are no clinical trials of compounded semaglutide itself, so the trial numbers above describe the FDA-approved drug.</p>
+<p>Compounded semaglutide is not FDA-approved, and the FDA does not review it for safety, effectiveness or quality. Two practical issues can change how it works for you:</p>
+<ul><li><strong>Dosing mistakes.</strong> The FDA has reported people taking 5 to 20 times the intended dose after confusing milligrams, milliliters and syringe "units," per its <a href="https://www.fda.gov/drugs/human-drug-compounding/fda-alerts-health-care-providers-compounders-and-patients-dosing-errors-associated-compounded" target="_blank" rel="noopener">dosing error alert</a>. Too much can cause severe vomiting and dehydration; too little can look like "it isn't working."</li><li><strong>Ingredient form.</strong> The FDA has warned that salt forms such as semaglutide sodium or acetate are <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">different active ingredients</a> from the one in approved products. Ask your provider which pharmacy makes your medication.</li></ul>
+<p>Our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> covers the differences in more detail.</p>`,
+      },
+      {
         heading: "What if semaglutide isn't working by month 3?",
-        body: `Slow results at month 3 are not a reason to panic. The usual causes are:<ul><li>You have not reached your best dose yet.</li><li>Eating habits are cancelling out part of the effect.</li><li>Individual metabolic differences.</li></ul>Ask your provider about adjusting the dose. Some people do better on <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide</a>, which acts on two receptors rather than one.`,
+        body: `Slow results at month 3 are not a reason to panic. The usual causes are:<ul><li>You have not reached your best dose yet.</li><li>Eating habits are cancelling out part of the effect.</li><li>Individual metabolic differences.</li></ul>Ask your provider about adjusting the dose. Some people do better on <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide</a>, which acts on two receptors rather than one.
+<h3>When to talk to your clinician</h3>
+<p>Talk to your prescriber if you have been on your maintenance dose for a few months and have lost little weight, if side effects have kept you stuck on a low dose, or if your appetite has come back strongly. In STEP 1, roughly 1 in 7 people on semaglutide did not reach 5% weight loss by week 68 (<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183" target="_blank" rel="noopener">NEJM</a>), so a weak response happens and is not your fault.</p>
+<p>Options your clinician may discuss include:</p>
+<ul><li>Holding or slowing the dose increase if side effects are the barrier.</li><li>Moving up to the next dose if you tolerate it, including Wegovy HD (7.2 mg), which produced 20.7% average weight loss in the STEP UP trial, per <a href="https://www.prnewswire.com/news-releases/fda-approves-novo-nordisks-new-wegovy-hd-injection-delivering-the-highest-weight-loss-to-date-for-a-wegovy-injection-adding-to-its-already-expansive-clinical-profile-302718982.html" target="_blank" rel="noopener">Novo Nordisk</a>.</li><li>Switching to tirzepatide.</li><li>Checking for medications or conditions that work against weight loss.</li></ul>
+<p>Get medical help right away for severe stomach pain that does not go away (with or without vomiting), which can signal pancreatitis or gallbladder problems, or for signs of dehydration. These are warnings on the <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf" target="_blank" rel="noopener">Wegovy label</a>. Our <a href="/articles/glp1-side-effects-risks-2026">GLP-1 side effects guide</a> lists the rest.</p>`,
       },
       {
         heading: "Does exercise make semaglutide work faster?",
@@ -299,21 +427,34 @@ export const articlesPart2: Article[] = [
     description:
       "You need a prescription for Ozempic, but not an office visit. How online prescribing works, what it costs, lab rules, and how you can start in 1-2 weeks.",
     category: "Guide",
-    readTime: "5 min read",
+    readTime: "10 min read",
     publishedAt: "2026-07-20",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-10-29",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     keyTakeaways: [
-      "Semaglutide requires a prescription, so you cannot legally buy it without a prescriber, but you also do not need to see one in person.",
-      "The telehealth process: fill in an online health questionnaire, a licensed physician reviews it, a prescription is written, and medication ships to you, usually 1-5 days after sign-up.",
-      "It is safe and legal when the provider is licensed and a real physician oversees your care; most people \"getting Ozempic online\" are prescribed compounded semaglutide.",
+      "Semaglutide and tirzepatide are prescription-only under federal law, so you cannot legally buy Ozempic, Wegovy, Zepbound or compounded versions without a prescription, but you do not need to see a prescriber in person.",
+      "\"Without a doctor\" can legally mean a telehealth visit with a licensed clinician, such as a physician, nurse practitioner or physician assistant, who reviews your health history and writes the prescription.",
+      "Sites that sell semaglutide with no prescription, \"research use only\" peptides, and too-cheap pens are the riskiest route: the FDA has seized counterfeit Ozempic in the US supply chain and warned peptide sellers.",
+      "Compounded semaglutide is legal only when a licensed pharmacy fills a valid, patient-specific prescription, and it is not FDA-approved. GLP-1 gummies and supplements contain no semaglutide.",
       "Some providers ask for recent labs (metabolic panel, A1C) or order them for you; most patients take their first dose within 1-2 weeks of signing up.",
     ],
     sections: [
       {
         heading: "Can you buy Ozempic without a prescription?",
-        body: `No. Semaglutide, the active ingredient in Ozempic and Wegovy, <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">is a prescription drug</a>, so buying it legally requires a prescriber's authorization. What you do not need is an in-person office visit. Telehealth providers run the whole evaluation online: a licensed physician reviews your health information and can prescribe semaglutide remotely.`,
+        body: `<p>No. Ozempic cannot be bought legally in the US without a prescription, because semaglutide, the active ingredient in Ozempic and Wegovy, <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">is a prescription drug</a> and a pharmacy may only dispense it on a licensed prescriber's order. What you do not need is an in-person office visit. Telehealth providers run the whole evaluation online: a licensed clinician reviews your health information and can prescribe semaglutide remotely.</p>
+<h3>Why a prescription is required</h3>
+<p>Under the federal Food, Drug, and Cosmetic Act, drugs that are not safe to use without medical supervision are classed as prescription-only, and their labels carry the "Rx only" marking. Ozempic, Wegovy, Zepbound, Mounjaro and Foundayo are all in that category. Each has boxed warnings and contraindications (for example, a personal or family history of medullary thyroid carcinoma) that a prescriber is supposed to screen for, and each needs a gradual dose schedule, as the <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf" target="_blank" rel="noopener">Wegovy prescribing information</a> sets out.</p>
+<h3>Is Ozempic legal for weight loss?</h3>
+<p>Ozempic itself is legal with a prescription. It is FDA-approved for type 2 diabetes, so prescribing it for weight loss alone is off-label. The semaglutide product the FDA approved for chronic weight management is Wegovy, which comes as a weekly pen and a daily pill. Both use the same active ingredient, and both still require a prescription. Our <a href="/articles/ozempic-vs-wegovy-differences">Ozempic vs Wegovy guide</a> explains the differences.</p>`,
+      },
+      {
+        heading: "What does \"without a doctor\" legally mean for GLP-1 medication?",
+        body: `<p>Getting a GLP-1 "without a doctor" can only legally mean getting it without an office visit: a licensed clinician still has to evaluate you and write the prescription, usually through a telehealth visit. That clinician may be a physician, a nurse practitioner (NP) or a physician assistant (PA). All three can prescribe GLP-1 medications, within their state's rules.</p>
+<p>State law decides how independently NPs and PAs work. The American Association of Nurse Practitioners sorts states into full, reduced and restricted practice, and in reduced or restricted states NPs prescribe under some form of physician collaboration or supervision, as <a href="https://www.beckershospitalreview.com/hospital-physician-relationships/np-practice-laws-by-state.html" target="_blank" rel="noopener">Becker's summarizes</a>. For you as a patient, the practical point is the same either way: the prescriber must be licensed in the state where you are located at the time of the visit.</p>
+<h3>What a legitimate telehealth evaluation looks like</h3>
+<ul><li>A medical intake covering your weight, height, health conditions, medications and history of thyroid cancer, pancreatitis or gallbladder disease.</li><li>A review by a named, licensed clinician, by video, phone or secure message depending on your state.</li><li>A prescription sent to a state-licensed pharmacy, with dosing instructions and a plan for follow-up.</li><li>A way to reach the care team about side effects or dose changes.</li></ul>
+<p>If a site skips all of that and simply lets you pick a vial and pay, it is not offering telehealth. It is selling a prescription drug without a prescription. Our guide to <a href="/articles/choosing-telehealth-weight-loss-provider">choosing a telehealth provider</a> lists more checks.</p>`,
       },
       {
         heading: "How does getting an Ozempic prescription online work?",
@@ -321,11 +462,55 @@ export const articlesPart2: Article[] = [
       },
       {
         heading: "Is getting Ozempic online safe and legal?",
-        body: `Yes, provided you use a licensed telehealth provider with genuine physician oversight. The FDA allows telemedicine prescribing for most medications, GLP-1 drugs included. What matters is picking a <a href="https://www.fda.gov/drugs/buying-using-medicine-safely/besaferx-your-source-online-pharmacy-information" target="_blank" rel="noopener">reputable platform</a> whose providers are licensed and board-certified. See our guide to <a href="/articles/choosing-telehealth-weight-loss-provider">choosing a telehealth provider</a>.`,
+        body: `Yes, provided you use a licensed telehealth provider with genuine physician oversight. GLP-1 drugs are not controlled substances, so a clinician licensed in your state can prescribe them after a telehealth evaluation, the same way they could after an office visit. What matters is picking a <a href="https://www.fda.gov/drugs/buying-using-medicine-safely/besaferx-your-source-online-pharmacy-information" target="_blank" rel="noopener">reputable platform</a> whose providers are licensed and board-certified. See our guide to <a href="/articles/choosing-telehealth-weight-loss-provider">choosing a telehealth provider</a>.`,
       },
       {
         heading: "Is online \"Ozempic\" actually compounded semaglutide?",
-        body: `Usually, yes. Most people who say they "get Ozempic online" are actually prescribed <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded semaglutide, which has the same active ingredient at a lower price</a>. The same licensed telehealth physicians prescribe it, and it is delivered to your home. Our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> explains how it differs from the brand.`,
+        body: `<p>Often, but not always. Many telehealth programs prescribe compounded semaglutide, a pharmacy-made version that is <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">not FDA-approved and not reviewed by the FDA for safety, effectiveness or quality</a>. It is usually cheaper than the brand. Other programs prescribe brand-name Wegovy or Ozempic and send the prescription to a pharmacy or to Novo Nordisk's self-pay pharmacy.</p>
+<p>Brand-name use is still the larger group: Gallup's 2026 survey found that among current GLP-1 users, 68% take brand-name drugs and 19% take compounded versions, as <a href="https://www.medscape.com/viewarticle/1-9-americans-now-glp-1s-2026a1000nds" target="_blank" rel="noopener">Medscape reported</a>. Before you pay, ask the provider which one you are getting. A compounded product should never be described as "generic Ozempic" or "FDA-approved." Our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> explains the differences.</p>`,
+      },
+      {
+        heading: "Is it safe to buy semaglutide online without a prescription?",
+        body: `<p>No. Buying semaglutide without a prescription is not legal, and the products sold that way are the ones most likely to be fake, contaminated or mislabeled. The FDA cannot tell you what is in a vial from an unlicensed seller, and neither can the seller's label.</p>
+<h3>Counterfeit Ozempic has reached the US supply chain</h3>
+<p>The FDA has repeatedly <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fda-warns-consumers-not-use-counterfeit-ozempic-semaglutide-found-us-drug-supply-chain" target="_blank" rel="noopener">warned consumers not to use counterfeit Ozempic</a> found in the US drug supply chain. In December 2023 it seized thousands of fake units, some with needles that were not sterile. In April 2025 it seized counterfeit 1 mg pens from lot PAR0362 after Novo Nordisk reported several hundred had moved outside its authorized channels. In December 2025 it warned about more counterfeit 1 mg pens carrying lot number PAR1229, which is also a genuine lot number, so the lot alone does not tell you whether a pen is real. The FDA's advice is to get Ozempic only with a prescription from a state-licensed pharmacy.</p>
+<h3>"Research use only" peptides are not a loophole</h3>
+<p>Some websites sell semaglutide, tirzepatide or retatrutide in vials labeled "research use only" or "not for human consumption," often with no prescription step and with bacteriostatic water and dosing charts on the same page. The FDA treats those products as unapproved drugs intended for people. In a <a href="https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/usapeptidecom-696885-02262025" target="_blank" rel="noopener">2025 warning letter to one seller</a>, the agency said labels such as "research use only" and "not for human consumption" did not change that, because the website showed the products were meant for human use. Retatrutide is not FDA-approved for any use.</p>
+<h3>Other risks of no-prescription sources</h3>
+<ul><li><strong>Wrong ingredient:</strong> the FDA has received reports of products made with semaglutide sodium or semaglutide acetate, salt forms that are <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">different active ingredients from the one in approved drugs</a>.</li><li><strong>Dosing errors:</strong> the FDA has documented <a href="https://www.fda.gov/drugs/human-drug-compounding/fda-alerts-health-care-providers-compounders-and-patients-dosing-errors-associated-compounded" target="_blank" rel="noopener">people taking 5 to 20 times the intended dose</a> of compounded semaglutide after mixing up milliliters, milligrams and syringe "units," with nausea, vomiting, fainting, dehydration and pancreatitis reported. Without a prescriber, nobody checks your dose.</li><li><strong>No medical screening:</strong> semaglutide is not for people with a personal or family history of medullary thyroid carcinoma or MEN 2, and it needs extra care with insulin, sulfonylureas, gallbladder disease or a planned pregnancy. See our <a href="/articles/glp1-side-effects-risks-2026">GLP-1 side effects guide</a>.</li><li><strong>No recourse:</strong> if a product is fake or causes harm, there is no licensed pharmacy or prescriber to report it to or to help you.</li></ul>
+<p>If you already bought a product without a prescription, stop using it and talk to a clinician or pharmacist. You can report a suspected counterfeit or bad reaction to the FDA's MedWatch program.</p>`,
+      },
+      {
+        heading: "Is compounded semaglutide legal in 2026?",
+        body: `<p>Compounded semaglutide is legal in 2026 only in narrow cases: a state-licensed 503A pharmacy may prepare it for an individual patient when a prescriber documents a clinically meaningful difference from the approved drug, such as a different dose or an allergy-free formulation. It is never FDA-approved, and it is not a generic.</p>
+<p>The rules tightened after the shortages ended. The FDA declared the semaglutide shortage resolved on February 21, 2025, and its period of enforcement discretion ended April 22, 2025 for 503A pharmacies and May 22, 2025 for 503B outsourcing facilities, as <a href="https://www.mcdermottlaw.com/insights/semaglutide-shortage-resolved/" target="_blank" rel="noopener">McDermott Will & Emery summarized</a>. Since then, pharmacies may not routinely make what the law calls "essentially copies" of Wegovy or Ozempic. The tirzepatide shortage was <a href="https://www.mcdermottlaw.com/insights/tirzepatide-shortage-resolved/" target="_blank" rel="noopener">declared resolved earlier</a>, on October 2, 2024.</p>
+<p>Enforcement has stepped up in 2026:</p>
+<ul><li>On March 3, 2026, the FDA said it had sent <a href="https://www.fda.gov/news-events/press-announcements/fda-warns-30-telehealth-companies-against-illegal-marketing-compounded-glp-1s" target="_blank" rel="noopener">warning letters to 30 telehealth companies</a> for false or misleading marketing of compounded GLP-1s, mainly implying they were the same as FDA-approved drugs.</li><li>On April 30, 2026, the FDA <a href="https://www.fda.gov/news-events/press-announcements/fda-proposes-exclude-semaglutide-tirzepatide-and-liraglutide-503b-bulks-list" target="_blank" rel="noopener">proposed excluding semaglutide, tirzepatide and liraglutide</a> from the list of bulk ingredients 503B outsourcing facilities may use. As of the latest reports we found, no final decision had been announced, and the proposal does not cover 503A pharmacies filling individual prescriptions.</li></ul>
+<p>What that means for you: a compounded GLP-1 from a licensed pharmacy, prescribed by a licensed clinician who evaluated you, is a legal route. A compounded vial bought with no prescription is not. Ask any provider which pharmacy fills the prescription and confirm the pharmacy's license with your state board of pharmacy.</p>`,
+      },
+      {
+        heading: "Are GLP-1 gummies and supplements the same as Ozempic?",
+        body: `<p>No. GLP-1 gummies, drops and "GLP-1 support" supplements contain no semaglutide or tirzepatide, and they are not a substitute for Ozempic, Wegovy or Zepbound. They are sold as dietary supplements, which is why they need no prescription.</p>
+<p>Dietary supplements do not go through FDA approval for safety or effectiveness before they are sold; <a href="https://www.fda.gov/food/dietary-supplements" target="_blank" rel="noopener">the FDA explains</a> that manufacturers are responsible for their own products. Common ingredients include berberine, fiber and probiotics. Berberine, nicknamed "nature's Ozempic," works through a different pathway than GLP-1 drugs, and <a href="https://www.uclahealth.org/news/article/what-know-about-berberine-so-called-natures-ozempic" target="_blank" rel="noopener">UCLA Health notes</a> that more high-quality randomized trials are needed before it can be recommended for weight loss.</p>
+<p>Be especially wary of any supplement that says it "contains semaglutide" or is "the same as Ozempic." A supplement cannot legally contain a prescription drug ingredient, so that claim means the label is either false or the product is an illegal drug. If you want the effect of a GLP-1, the legal path is a prescription.</p>`,
+      },
+      {
+        heading: "Can you get tirzepatide or other weight loss injections without a prescription?",
+        body: `<p>No. Tirzepatide (Zepbound and Mounjaro), liraglutide (Saxenda) and every other GLP-1 weight loss injection sold in the US require a prescription, exactly like semaglutide. The same rules apply to compounded tirzepatide, which also needs a valid, patient-specific prescription and is also not FDA-approved.</p>
+<p>Even Eli Lilly's own cash-pay program requires one: <a href="https://www.lilly.com/lillydirect/zepbound" target="_blank" rel="noopener">LillyDirect</a> sells Zepbound vials and KwikPens only to adults with a valid prescription. The government site TrumpRx works the same way. It does not sell drugs itself; it sends cash-paying patients with a prescription to manufacturer programs or gives them a pharmacy coupon, as <a href="https://www.cnbc.com/2026/02/05/trump-rx-white-house-launches-direct-to-consumer-drug-site.html" target="_blank" rel="noopener">CNBC reported at launch</a>.</p>
+<p>The fastest legal way to get tirzepatide without an office visit is a telehealth evaluation. See our <a href="/articles/best-tirzepatide-online">best tirzepatide online guide</a> for providers that prescribe it.</p>`,
+      },
+      {
+        heading: "Where can you buy semaglutide legally, and what does it cost?",
+        body: `<p>Semaglutide is legally for sale only through a state-licensed pharmacy filling a valid prescription: a retail pharmacy, a mail-order pharmacy, Novo Nordisk's NovoCare Pharmacy, or the pharmacy a telehealth provider works with. Prices without insurance, as of October 2026:</p>
+<table><thead><tr><th>Option</th><th>Typical self-pay price</th><th>Prescription needed?</th></tr></thead><tbody>
+<tr><td>Wegovy pen (brand), new patients, 0.25 mg and 0.5 mg</td><td>$199/month for the first two fills (offer through Dec 31, 2026)</td><td>Yes</td></tr>
+<tr><td>Wegovy pen (all doses to 2.4 mg) or Ozempic (doses up to 1 mg), standard</td><td>$349/month</td><td>Yes</td></tr>
+<tr><td>Wegovy pill (brand)</td><td>$149-$299/month by dose</td><td>Yes</td></tr>
+<tr><td>Compounded semaglutide via telehealth</td><td>from $41/month (welludr sale) to about $199/month in our price index</td><td>Yes</td></tr>
+<tr><td>"Research" vials, no-prescription sites</td><td>Varies</td><td>Not legal to buy for human use</td></tr>
+</tbody></table>
+<p>The brand prices come from <a href="https://www.novocare.com/patient/medicines/wegovy/savings-offer.html" target="_blank" rel="noopener">NovoCare</a> and <a href="https://www.prnewswire.com/news-releases/novo-nordisk-launches-introductory-self-pay-offer-for-wegovy-and-ozempic-for-199-per-month-302617100.html" target="_blank" rel="noopener">Novo Nordisk's self-pay announcement</a>; prices can change, so check before you order. The compounded prices come from our <a href="/cheapest-glp1">verified price index</a>. With brand-name self-pay prices this low, the savings from going around the system are small and the risks are large. Our <a href="/articles/glp1-cost-2026-how-to-pay-less">full GLP-1 cost guide</a> covers every way to pay less legally.</p>`,
       },
       {
         heading: "Do you need blood work to get semaglutide online?",
