@@ -201,6 +201,18 @@ export interface PageReview {
 // signs it off; dates are never backfilled.
 const LAUNCH_REVIEW_DATE = "2026-10-22";
 
+// Non-article pages whose medical or scientific content was rewritten after
+// the launch review (Oct 29, 2026 depth pass). They carry no "reviewed" claim
+// until the reviewer signs the new version off; remove a path from this set
+// when she does, and log the new date.
+const REVIEW_PENDING_PATHS = new Set([
+  "/best-weight-loss-injections",
+  "/cheapest-weight-loss-medication",
+  "/retatrutide-weight-loss",
+  "/weight-loss-pills",
+  "/glp1-pills-vs-injections",
+]);
+
 const LAUNCH_STATIC_PATHS = [
   "/",
   "/reviews",
@@ -227,10 +239,13 @@ const LAUNCH_REVIEWED_PATHS = [
   ...launchBattles.map((b) => `/compare/${b.slug}`),
   ...launchLandingPages.map((l) => `/${l.slug}`),
   ...THREE_WAY_COMPARISONS.map((t) => `/compare/${t.slug}`),
-  // Only articles that existed at launch; later articles get their own
-  // entry once the reviewer signs them off.
-  ...launchArticles.filter((a) => a.publishedAt <= LAUNCH_REVIEW_DATE).map((a) => `/articles/${a.slug}`),
-];
+  // Only articles that existed at launch and have not been materially
+  // rewritten since; later articles and rewrites get their own entry once the
+  // reviewer signs them off.
+  ...launchArticles
+    .filter((a) => a.publishedAt <= LAUNCH_REVIEW_DATE && a.updatedAt <= LAUNCH_REVIEW_DATE)
+    .map((a) => `/articles/${a.slug}`),
+].filter((p) => !REVIEW_PENDING_PATHS.has(p));
 
 export const REVIEW_LOG: Record<string, PageReview> = Object.fromEntries(
   LAUNCH_REVIEWED_PATHS.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: LAUNCH_REVIEW_DATE }]),
