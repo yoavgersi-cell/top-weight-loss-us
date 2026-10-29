@@ -667,7 +667,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   };
 
   const battleFaqs = [
-    { question: `${matchupLabel}: which GLP-1 provider is better?`, answer: battle.verdict },
+    // A hand-written "which is better" FAQ replaces the generic one.
+    ...((battle.faqs ?? []).some((f) => /better/i.test(f.question))
+      ? []
+      : [{ question: `${matchupLabel}: which GLP-1 provider is better?`, answer: battle.verdict }]),
     ...(battle.faqs ?? []),
     ...battle.categories.map((cat) => ({ question: catToQuestion(cat.name), answer: cat.explanation })),
   ].filter((f, i, arr) => !!f.answer && arr.findIndex((x) => x.question === f.question) === i);

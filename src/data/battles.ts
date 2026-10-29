@@ -579,7 +579,7 @@ const medviRoBattle: BattleData = {
     {
       name: "Brand and Track Record",
       winner: "provider2",
-      explanation: "ro has the longer track record. It is a large, widely recognized telehealth brand with an integrated in-house pharmacy that simplifies fulfillment. Medvi is a newer platform with fewer reviews, although the reviews it has are strongly positive.",
+      explanation: "ro has the longer track record. It is a large, widely recognized telehealth brand with an integrated in-house pharmacy that simplifies fulfillment. Medvi is the younger company, but its public record is larger: 4.3 stars across 14,987 Trustpilot reviews, against ro's 3.9 across 7,105.",
       supportingPoints: [
         "ro: large, widely known telehealth brand",
         "ro: integrated in-house pharmacy",
@@ -955,7 +955,7 @@ const altrxEdenBattle: BattleData = {
     {
       name: "Public Track Record",
       winner: "provider2",
-      explanation: "Eden has a public Trustpilot record of 4.5 across 4,917 reviews on a claimed profile. altRx has no Trustpilot profile, so its public record consists of individual reviews and the one Reddit thread we captured. Both companies received FDA warning letters in June 2026 about marketing claims for compounded GLP-1s.",
+      explanation: "Eden has a public Trustpilot record of 4.5 across 4,917 reviews on a claimed profile. altRx's Trustpilot profile shows no overall score, so its public record consists of individual reviews and the one Reddit thread we captured. Both companies received FDA warning letters in June 2026 about marketing claims for compounded GLP-1s.",
       supportingPoints: ["Eden: 4.5 across 4,917 Trustpilot reviews", "altRx: no Trustpilot profile", "Both: FDA marketing warning letters, June 2026"],
     },
   ],
@@ -1356,7 +1356,7 @@ export const battles: BattleData[] = [
           { feature: "Online Consultation", provider1Value: "Included", provider2Value: "Included" },
           { feature: "Personalized Plans", provider1Value: "Customized protocols", provider2Value: "Provider-guided adjustments" },
           { feature: "Ongoing Care", provider1Value: "Continuous monitoring", provider2Value: "Regular check-ins" },
-          { feature: "Delivery", provider1Value: "Fast nationwide delivery", provider2Value: "In-house pharmacy fulfillment" },
+          { feature: "Delivery", provider1Value: "Free nationwide shipping in 5-7 days", provider2Value: "In-house pharmacy fulfillment" },
           { feature: "Payment Terms", provider1Value: "No long-term contracts", provider2Value: "Monthly plans, FSA/HSA eligible" },
           { feature: "Best For", provider1Value: "Personalized care, more options", provider2Value: "Full-service, brand-backed care" },
         ],
