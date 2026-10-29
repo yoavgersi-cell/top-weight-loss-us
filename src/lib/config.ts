@@ -251,6 +251,9 @@ export interface BattleData {
   winnerId: string;
   categories: BattleCategory[];
   features: BattleFeatureRow[];
+  // Optional reader questions answered on the page (rendered in the FAQ
+  // section and the FAQPage schema), e.g. "Is embody or welludr better?".
+  faqs?: { question: string; answer: string }[];
   updatedAt?: string;
   // Set only when the real creation date is known; older battles fall back
   // to the template's long-standing default.
