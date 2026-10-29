@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { TOPIC_CLUSTERS } from "@/lib/topic-clusters";
 
 // ───── Weight-loss guide cluster ─────
 // The standalone GLP-1 guides (static routes + config landing pages) are the
@@ -97,6 +98,21 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
     blurb: "Online sources for Wegovy, plus alternatives worth a look.",
   },
   {
+    slug: "best-online-weight-loss-programs",
+    title: "Best Online Weight Loss Programs",
+    blurb: "The online GLP-1 programs we rank highest, with what each one includes.",
+  },
+  {
+    slug: "best-weight-loss-injections",
+    title: "Best Weight Loss Injections",
+    blurb: "Weekly GLP-1 injections compared, brand-name and compounded.",
+  },
+  {
+    slug: "cheapest-weight-loss-medication",
+    title: "Most Affordable Weight Loss Medication",
+    blurb: "The lowest-cost ways to get a prescription weight loss medication online.",
+  },
+  {
     slug: "ozempic-for-weight-loss",
     title: "Ozempic for Weight Loss",
     blurb: "Off-label Ozempic: which providers offer it, what it costs and what else to consider.",
@@ -123,6 +139,17 @@ export function GuideCluster({
       </h2>
       <p className="mb-4 text-[14px] text-gray-500">
         Every other weight loss medication guide on Top Weight Loss, each built on prices we have checked ourselves.
+      </p>
+      <p className="mb-4 text-[14px] leading-relaxed text-gray-600">
+        In-depth guides:{" "}
+        {TOPIC_CLUSTERS.map((c, i) => (
+          <span key={c.id}>
+            {i > 0 && " · "}
+            <Link href={c.hub.href} className="font-semibold text-[#0C4B75] underline underline-offset-2">
+              {c.hub.label}
+            </Link>
+          </span>
+        ))}
       </p>
       <ul className="grid gap-2.5 sm:grid-cols-2">
         {guides.map((g) => (

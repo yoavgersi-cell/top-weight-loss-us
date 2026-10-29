@@ -4,6 +4,7 @@ import { Check, X, ArrowRight, ArrowUpRight, Shield, Star, ArrowBigUp, ArrowBigD
 import { getConfig } from "@/lib/config-store";
 import { latestUpdate, VERTICALS, NOINDEX_WL_REVIEW_SLUGS, NOINDEX_WL_BATTLE_SLUGS, DEFAULT_ROBOTS } from "@/lib/config";
 import { SLUG_ALIASES } from "@/lib/slug-aliases";
+import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import {
   type SiteContext,
   canonicalUrl,
@@ -226,6 +227,16 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
       answer:
         "Yes. altRx is self-pay with no long-term contract, so you can pause or cancel whenever you like. Buy Now, Pay Later is also available if you prefer to split the monthly cost.",
     },
+    {
+      question: "What do altRx reviews say?",
+      answer:
+        "altRx's Trustpilot profile does not show an overall score, so we read the individual reviews instead. They most often praise the price, with several reviewers saying their monthly tirzepatide price stayed the same as the dose went up, and describe support that replies within a day or even an hour. The weak spots are refills and shipping, including a stalled third refill and slower deliveries, plus one advertised price that did not match checkout. On Reddit, users describe approval within about 4 hours to a day and cold-packed delivery, alongside one cooler that arrived with melted ice packs.",
+    },
+    {
+      question: "Is altRx's $89 price a sale price?",
+      answer:
+        "Yes. altRx lists compounded semaglutide at $89/month and tirzepatide at $149/month as sale prices against regular prices of $199 and $299, and the sale's listed end date has been extended more than once. Both prices stay the same at every dose, and brand-name Ozempic ($1,149), Zepbound ($1,249) and Wegovy ($1,579) are priced separately. Check the price shown at checkout, since one reviewer reported an advertised price that differed there.",
+    },
   ],
   trimrx: [
     {
@@ -265,7 +276,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Does welludr charge more at higher doses?",
       answer:
-        "No. welludr keeps the same price at every dose: compounded semaglutide from $49/month and tirzepatide from $89/month. The $49 rate requires a 12-month plan.",
+        "welludr has advertised one price at every dose. In its Pre-Black Friday sale (from October 28, 2026), compounded semaglutide is from $41/month and tirzepatide from $71/month; check the plan terms, including any dose conditions, at checkout.",
     },
     {
       question: "How long does welludr shipping take?",
@@ -275,7 +286,22 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Can I cancel welludr whenever I want?",
       answer:
-        "Yes. You can cancel or change your welludr plan at any time. The headline $49/month price is locked through a 12-month plan, and the program comes with welludr's weight-loss warranty.",
+        "Yes. You can cancel or change your welludr plan at any time. The headline price, from $41/month, is part of its Pre-Black Friday sale (from October 28, 2026), so check the plan terms at checkout, and the program comes with welludr's weight-loss warranty.",
+    },
+    {
+      question: "What do welludr reviews say?",
+      answer:
+        "welludr averages 4.6 across 2,188 Trustpilot reviews, and the reviews we quote are dominated by its support team: reviewers name agents who answered quickly, paused or slowed refills, lowered a plan price or passed a problem to the operations manager. Shipping is the recurring complaint, with several reviewers describing late prescriptions or orders that sat at the pharmacy, and a smaller group says messages and calls went unanswered. Taken together, the reviews describe a real company with helpful staff and uneven shipping, so order refills early.",
+    },
+    {
+      question: "What do Reddit users say about welludr?",
+      answer:
+        "Reddit comments on welludr are mostly short and positive: users call it legit, name the pharmacy filling their orders (one says Florida, another names Logos, a 503A compounder) and describe fast delivery and responsive service. Commenters on annual plans paid $88-$99 a month, in line with welludr's pricing before its October 28, 2026 Pre-Black Friday sale, and one long-term user pays $129 month to month. The main counterpoint is one detailed account of losing 1 pound in 8 weeks on tirzepatide despite good service, a reminder that results vary and no provider can guarantee them.",
+    },
+    {
+      question: "Is welludr the same as wellmedr?",
+      answer:
+        "Yes. wellmedr changed its name to welludr in October 2026, and the company, its plans and this review are the same, which is why the page address still says wellmedr. Its compounded semaglutide starts at $41/month and tirzepatide at $71/month in the Pre-Black Friday sale from October 28, 2026, and it holds 4.6 across 2,188 Trustpilot reviews.",
     },
   ],
   medvi: [
@@ -310,6 +336,16 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
       question: "How long does DirectMeds take to ship?",
       answer:
         "DirectMeds ships free and delivers in 1-2 days after your prescription is issued, which matches embody for the fastest delivery in our ranking.",
+    },
+    {
+      question: "What do DirectMeds reviews say?",
+      answer:
+        "DirectMeds averages 4.6 across 16,390 Trustpilot reviews, one of the largest review records in our ranking, and the reviews we quote are almost entirely about its phone and support staff, often naming the same patient, quick representatives. Sign-up is described as straightforward. The critical reviews describe an order that did not ship until the reviewer called three times and an AI chat that reported a damaged order as delivered, so the phone line is the better way to reach them.",
+    },
+    {
+      question: "Are DirectMeds medications FDA-approved?",
+      answer:
+        "No. DirectMeds prescribes compounded semaglutide and tirzepatide, as weekly injections or sublingual drops, and compounded medications are not FDA-approved. A doctor reviews you through a telemedicine visit before anything is prescribed, and the $147/month price includes that visit. DirectMeds does not sell brand-name Ozempic, Wegovy or Zepbound, so look at altRx or ro if you want FDA-approved brand-name medication.",
     },
   ],
   sprout: [
@@ -346,6 +382,18 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
         "HealthRx ships overnight on every plan at no charge, in temperature-controlled, lot-tracked cold-chain packaging sent from a licensed 503A pharmacy.",
     },
   ],
+  eden: [
+    {
+      question: "What do Eden weight loss reviews say?",
+      answer:
+        "Eden averages 4.5 across 4,917 Trustpilot reviews on a profile it claimed in June 2024. The reviews we quote are all five stars and nearly all about support: named agents who replied quickly and resolved the issue in writing. One reviewer switched after a previous provider raised its prices and said Eden's ratings for fair pricing, customer service and doctor support decided it. We found no complaints among the reviews we quote, but they are a small sample of the total.",
+    },
+    {
+      question: "How much is Eden tirzepatide?",
+      answer:
+        "Eden's compounded tirzepatide costs $129/month, the same in month one and every month after and at every dose, with no membership or long-term plan. That is among the lowest flat, no-commitment tirzepatide prices we track; embody's promotional $119 and welludr's sale price from $71 are lower, while altRx charges $149 and Medvi $166. Compounded tirzepatide is not FDA-approved, and a doctor decides whether it suits you.",
+    },
+  ],
 };
 
 // Operator-verified standing promos, shown as a prominent banner under the hero
@@ -355,9 +403,9 @@ const REVIEW_PROMOS: Record<string, { segments: { text: string; bold?: boolean }
     segments: [
       { text: "Get " },
       { text: "$200 off", bold: true },
-      { text: " every month or " },
-      { text: "$49/mo", bold: true },
-      { text: " on a 12-month plan, locked in for life." },
+      { text: " every month, or semaglutide from " },
+      { text: "$41/mo", bold: true },
+      { text: " in the Pre-Black Friday sale (from October 28, 2026)." },
     ],
   },
 };
@@ -614,7 +662,12 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     { slug: `is-${provider.id}-legit`, label: `Is ${provider.name} legit? Full check` },
     { slug: `${provider.id}-cost`, label: `${provider.name} cost breakdown` },
     { slug: `${provider.id}-alternatives`, label: `Top alternatives to ${provider.name}` },
+    { slug: `${provider.id}-tirzepatide-cost`, label: `${provider.name} tirzepatide cost` },
+    { slug: `${provider.id}-tirzepatide-review`, label: `${provider.name} tirzepatide review` },
   ].filter((c) => (config.articles ?? []).some((a) => a.slug === c.slug));
+
+  // Three-way comparisons featuring this provider.
+  const relatedTrios = THREE_WAY_COMPARISONS.filter((t) => t.providerIds.includes(provider.id));
 
   // Related articles: actually related, not just the first three in the array.
   // Prefer articles that mention this provider (excluding its own cluster,
@@ -1226,7 +1279,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         </div>
 
         {/* Related content */}
-        {(relatedBattles.length > 0 || relatedArticles.length > 0 || showComparisonLink) && (
+        {(relatedBattles.length > 0 || relatedTrios.length > 0 || relatedArticles.length > 0 || showComparisonLink) && (
           <div className="mb-6">
             <h3 className="mb-4 text-[18px] font-bold text-[#191919]">Keep comparing</h3>
             {relatedBattles.length > 0 && (
@@ -1248,6 +1301,23 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       </Link>
                     );
                   })}
+                </div>
+              </>
+            )}
+            {relatedTrios.length > 0 && (
+              <>
+                <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-gray-400">Three-way comparisons</p>
+                <div className="mb-5 grid gap-2 sm:grid-cols-2">
+                  {relatedTrios.map((t) => (
+                    <Link
+                      key={t.slug}
+                      href={hubLink(ctx, `/compare/${t.slug}`)}
+                      className="flex items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                    >
+                      <span className="truncate">{t.title}</span>
+                      <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gray-400" strokeWidth={2.5} />
+                    </Link>
+                  ))}
                 </div>
               </>
             )}

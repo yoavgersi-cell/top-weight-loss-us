@@ -113,6 +113,11 @@ export default async function StatisticsPage() {
             alongside the published trial results for GLP-1 weight-loss medicines (STEP, SURMOUNT,
             SCALE). Free to cite.
           </p>
+          <p className="mt-2 max-w-[640px] text-[14px] leading-relaxed text-gray-500">
+            For brand-name self-pay prices, Medicare and insurance coverage, see our{" "}
+            <Link href="/articles/glp1-cost-2026-how-to-pay-less" className="font-semibold text-[#0C4B75] underline underline-offset-2">2026 GLP-1 cost
+            guide</Link>.
+          </p>
           <p className="mt-2 text-[12px] text-gray-400">
             Last price check {longDate(PRICE_INDEX_VERIFIED)} · {PRICE_CHANGELOG.length} changes recorded since{" "}
             {longDate(PRICE_CHANGELOG[PRICE_CHANGELOG.length - 1]?.date ?? PRICE_INDEX_VERIFIED)}

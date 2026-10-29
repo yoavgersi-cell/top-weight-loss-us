@@ -17,9 +17,9 @@ import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 export const revalidate = 60;
 
 const CANONICAL = "https://www.topweightloss.us/cheapest-glp1";
-const TITLE = "Cheapest GLP-1 2026: Prices From 9 Providers ($49-$299)";
+const TITLE = "Cheapest GLP-1 2026: Prices From 9 Providers ($41-$299)";
 const DESCRIPTION =
-  "Cheapest GLP-1 options in 2026 ranked by verified price: compounded semaglutide from $49/month and tirzepatide from $89/month, with every plan condition shown.";
+  "Cheapest GLP-1 options in 2026 ranked by verified price: compounded semaglutide from $41/month and tirzepatide from $71/month, with every plan condition shown.";
 
 export const metadata: Metadata = withSeo("/cheapest-glp1", {
   title: { absolute: TITLE },
@@ -37,12 +37,12 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What is the cheapest GLP-1 in 2026?",
     answer:
-      "welludr is the cheapest GLP-1 program we track, charging $49/month for compounded semaglutide on a 12-month plan, with the same price at every dose. embody is the cheapest option without a commitment, at $69/month billed month to month. Every price on this page is the provider's own published rate, shown with its conditions.",
+      "welludr is the cheapest GLP-1 program we track, charging from $41/month for compounded semaglutide in its Pre-Black Friday sale (from October 28, 2026; check the plan terms at checkout). embody is the cheapest flat month-to-month option, at $69/month. Every price on this page is the provider's own published rate, shown with its conditions.",
   },
   {
     question: "Where can I get the cheapest tirzepatide?",
     answer:
-      "welludr has the lowest published tirzepatide price we track, with compounded tirzepatide from $89/month. For month-to-month billing, embody is cheapest at $119/month ($129 regular). DirectMeds charges a flat $147/month for semaglutide or tirzepatide, and that price also covers its needle-free sublingual drops.",
+      "welludr has the lowest published tirzepatide price we track, with compounded tirzepatide from $71/month in its Pre-Black Friday sale. For month-to-month billing, embody is cheapest at $119/month ($129 regular). DirectMeds charges a flat $147/month for semaglutide or tirzepatide, and that price also covers its needle-free sublingual drops.",
   },
   {
     question: "Why do these GLP-1 programs cost so much less than Ozempic?",
@@ -57,7 +57,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What is the catch with the lowest GLP-1 prices?",
     answer:
-      "The trade-offs are commitment and shipping speed. welludr's $49/month rate requires a 12-month plan, and HealthRx's $99/month is a 12-month prepaid plan that charges $1,188 at checkout. Paying month to month costs a little more (embody at $69/$119), and altRx at $89 ships in about 5-7 days compared with 1-2 days at embody and DirectMeds. We list every known condition under each price above.",
+      "The trade-offs are plan terms and shipping speed. welludr's $41/month is a Pre-Black Friday sale price, so check the plan terms at checkout, and HealthRx's $99/month is a 12-month prepaid plan that charges $1,188 at checkout. Paying month to month costs a little more (embody at $69/$119), and altRx at $89 ships in about 5-7 days compared with 1-2 days at embody and DirectMeds. We list every known condition under each price above.",
   },
   {
     question: "Are cheap compounded GLP-1s safe?",
@@ -114,6 +114,11 @@ export default async function CheapestGlp1Page() {
             condition attached to it, such as a promotion, a prepaid plan or a first-month discount, is
             shown directly beneath it. Providers are listed from lowest price to highest.
           </p>
+          <p className="mt-2 max-w-[680px] text-[14px] leading-relaxed text-gray-500">
+            Have insurance or Medicare? Compare these with brand-name self-pay prices, the $50 Medicare GLP-1 Bridge and
+            employer coverage in our{" "}
+            <Link href="/articles/glp1-cost-2026-how-to-pay-less" className="font-semibold text-[#0C4B75] underline underline-offset-2">2026 GLP-1 cost guide</Link>.
+          </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
           <MedicalReviewBar path="/cheapest-glp1" className="mt-4 max-w-[760px]" />
           <TrustDisclosure disclaimerHref="/disclaimer" />
@@ -129,9 +134,9 @@ export default async function CheapestGlp1Page() {
           <p className="text-[15.5px] leading-[1.85] text-gray-800">
             <Link href="/reviews/wellmedr" className="font-semibold text-[#0C4B75] hover:underline">welludr</Link>{" "}
             is the cheapest GLP-1 provider we track, with compounded semaglutide at{" "}
-            <strong className="text-[#191919]">$49/month</strong> on a 12-month plan and the lowest
-            tirzepatide price at <strong className="text-[#191919]">$89/month</strong>. Without a
-            commitment, the cheapest choice is{" "}
+            <strong className="text-[#191919]">$41/month</strong> and the lowest tirzepatide price
+            at <strong className="text-[#191919]">$71/month</strong>, both from its Pre-Black Friday
+            sale (check the plan terms at checkout). For a flat month-to-month price, the cheapest choice is{" "}
             <Link href="/reviews/embody" className="font-semibold text-[#0C4B75] hover:underline">embody</Link>{" "}
             at <strong className="text-[#191919]">$69/$119</strong> month to month, shipped in 1-2
             days.{" "}
@@ -174,7 +179,7 @@ export default async function CheapestGlp1Page() {
             <h2 className="text-[22px] font-bold text-[#191919]">How much does a full year of semaglutide cost?</h2>
           </div>
           <p className="mb-5 max-w-[680px] text-[14px] text-gray-500">
-            A year of compounded semaglutide costs between $588 and $2,348 across these providers,
+            A year of compounded semaglutide costs between $492 and $2,348 across these providers,
             compared with $13,788 for a year of brand-name Ozempic at altRx&rsquo;s $1,149/month. The
             monthly headline can mislead, because first-month promotions end and prepaid plans charge up
             front, so the table applies each published condition exactly.
@@ -191,7 +196,7 @@ export default async function CheapestGlp1Page() {
               </thead>
               <tbody className="text-[13.5px]">
                 {[
-                  ["welludr", "12 months at the $49 plan rate", "$588", "$13,200"],
+                  ["welludr", "12 months at the $41 Pre-Black Friday sale price", "$492", "$13,296"],
                   ["embody", "12 months at the $69 promo ($948 at the $79 regular price)", "$828", "$12,960"],
                   ["altRx", "12 months at $89, same at every dose", "$1,068", "$12,720"],
                   ["Medvi", "12 months at the $99 promo (regular $199), all-inclusive", "$1,188", "$12,600"],
@@ -231,7 +236,7 @@ export default async function CheapestGlp1Page() {
             Is tirzepatide worth paying more for than semaglutide?
           </h2>
           <p className="mb-5 max-w-[680px] text-[14px] text-gray-500">
-            At most providers, tirzepatide runs $40-$110/month above semaglutide. Whether the extra
+            At most providers, tirzepatide runs $30-$110/month above semaglutide. Whether the extra
             cost makes sense is a medical decision, so the published trial evidence and prices are laid
             out below for comparison.
           </p>
@@ -254,7 +259,7 @@ export default async function CheapestGlp1Page() {
                     "~21% average body weight loss after 72 weeks (SURMOUNT-1, 15 mg)",
                   ],
                   ["How often", "Weekly injection", "Weekly injection"],
-                  ["Lowest compounded price", "$49/mo (welludr, 12-month plan)", "$89/mo (welludr)"],
+                  ["Lowest compounded price", "$41/mo (welludr, Pre-Black Friday sale)", "$71/mo (welludr)"],
                   ["Lowest month-to-month price", "$69/mo (embody)", "$119/mo (embody)"],
                   ["One price for either drug", "$147/mo flat (DirectMeds, injections or drops)", "$147/mo flat (DirectMeds)"],
                 ].map(([label, sema, tirz], i) => (

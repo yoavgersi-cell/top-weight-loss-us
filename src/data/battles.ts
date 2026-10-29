@@ -101,6 +101,23 @@ const embodyAltrxBattle: Omit<BattleData, "slug"> = {
     { feature: "Who Treats You", provider1Value: "Licensed doctors, medical director, nurses", provider2Value: "Licensed clinicians", highlight: "provider1" },
     { feature: "Ways to Pay", provider1Value: "Cash-pay, no insurance needed", provider2Value: "Cash-pay plus Buy Now, Pay Later", highlight: "provider2" },
   ],
+  faqs: [
+    {
+      question: "Is embody or altRx better?",
+      answer:
+        "embody is the better pick for most people: it charges $69/month for compounded semaglutide and $119 for tirzepatide, against altRx's $89 and $149, and ships free in 1-2 days instead of 5-7. altRx is the better pick if you want brand-name medication, since it lists Ozempic at $1,149, Zepbound at $1,249 and Wegovy at $1,579 a month, or if you want to pay with Buy Now, Pay Later. Both run fully online and neither needs insurance.",
+    },
+    {
+      question: "How much do embody and altRx cost over a year?",
+      answer:
+        "A year of compounded semaglutide costs $828 at embody ($69 a month) and $1,068 at altRx ($89 a month), a $240 difference. For tirzepatide, embody comes to $1,428 a year ($119 a month) and altRx to $1,788 ($149 a month). Both sets of prices are promotional: embody's regular rates are $79 and $129, and altRx's are $199 and $299. Neither charges more as your dose goes up, so embody stays the cheaper of the two at every dose.",
+    },
+    {
+      question: "Should I choose altRx over embody if I might want brand-name Wegovy or Zepbound later?",
+      answer:
+        "Yes, that is the main reason to pick altRx over embody. altRx sells compounded semaglutide ($89/month) and tirzepatide ($149/month) alongside brand-name Ozempic ($1,149), Zepbound ($1,249) and Wegovy ($1,579), so you can move to a brand-name pen without changing providers. embody sells only compounded semaglutide and tirzepatide, at $69 and $119 a month. If you are sure compounded medication is what you want, embody costs less and arrives faster.",
+    },
+  ],
 };
 
 // Embody vs welludr battle - winner: Embody. Injected when the CMS has no
@@ -112,9 +129,9 @@ const embodywellmedrBattle: BattleData = {
   provider2Id: "wellmedr",
   title: "embody vs welludr: GLP-1 Price, Speed and Support (2026)",
   subtitle: "embody and welludr compared on monthly price, plan terms, medical oversight, delivery time and what each offers beyond weight loss.",
-  description: "embody vs welludr: embody charges a flat $69/mo with 1-2 day free shipping; welludr starts at $49/mo on a 12-month plan and offers a weight-loss warranty.",
-  intro: "embody is the stronger pick for straightforward, month-to-month GLP-1 treatment: $69/month for compounded semaglutide, $119/month for tirzepatide and free delivery in 1-2 days. welludr advertises lower headline prices (semaglutide from $49/month, tirzepatide from $89/month), but the $49 rate depends on a 12-month plan. welludr is an AI-driven telehealth brand whose catalog reaches past weight loss into NAD+ and other longevity care, and its board-certified specialists can pair GLP-1 treatment with NAD+ and vitamin B12. embody focuses only on weight loss. Here is how embody and welludr compare, category by category.",
-  verdict: "embody wins for most people who want simple, fast GLP-1 treatment. Prices are close: welludr's headline is lower ($49/month semaglutide, $89/month tirzepatide), but its best rate requires a 12-month plan, while embody's $69 and $119 apply every month with no strings attached. embody also ships free in 1-2 days and draws strong recent customer feedback. Choose welludr if you are comfortable committing to a full year for the lowest price, or if you want board-certified specialists and a wider wellness catalog on one platform.",
+  description: "embody vs welludr: embody charges a flat $69/mo with 1-2 day free shipping; welludr starts at $41/mo in its Pre-Black Friday sale and offers a weight-loss warranty.",
+  intro: "embody is the stronger pick for straightforward, month-to-month GLP-1 treatment: $69/month for compounded semaglutide, $119/month for tirzepatide and free delivery in 1-2 days. welludr advertises lower headline prices (semaglutide from $41/month, tirzepatide from $71/month in its Pre-Black Friday sale, from October 28, 2026), but check the plan terms behind those rates at checkout. welludr is an AI-driven telehealth brand whose catalog reaches past weight loss into NAD+ and other longevity care, and its board-certified specialists can pair GLP-1 treatment with NAD+ and vitamin B12. embody focuses only on weight loss. Here is how embody and welludr compare, category by category.",
+  verdict: "embody wins for most people who want simple, fast GLP-1 treatment. welludr's headline is lower ($41/month semaglutide, $71/month tirzepatide in its Pre-Black Friday sale), but those are starting prices whose plan terms you should check at checkout, while embody's $69 and $119 apply every month with no strings attached. embody also ships free in 1-2 days and draws strong recent customer feedback. Choose welludr if the lowest sale price matters most and its plan terms suit you, or if you want board-certified specialists and a wider wellness catalog on one platform.",
   verdictWinnerPoints: [
     "Flat month-to-month pricing: $69/mo semaglutide, $119/mo tirzepatide",
     "Free 1-2 day delivery, against roughly 3-5 days at welludr",
@@ -123,19 +140,19 @@ const embodywellmedrBattle: BattleData = {
   verdictLoserPoints: [
     "Wider wellness catalog, including NAD+ and longevity care",
     "GLP-1 options combined with NAD+ and vitamin B12",
-    "Board-certified specialists and entry pricing from $49/mo",
+    "Board-certified specialists and entry pricing from $41/mo",
   ],
   winnerId: "embody",
   categories: [
     {
       name: "Price and Plan Terms",
       winner: "provider1",
-      explanation: "On entry price the two are close, but embody has the simpler deal. embody charges $69/month for compounded semaglutide and $119 for tirzepatide, with no insurance, no hidden fees and free fast shipping. welludr lists semaglutide from $49/month and tirzepatide from $89, but the $49 figure is tied to a 12-month plan. Both keep the same price at every dose. welludr is cheaper if you commit for a year; embody is easier if you want to stay month to month.",
+      explanation: "On entry price the two are close, but embody has the simpler deal. embody charges $69/month for compounded semaglutide and $119 for tirzepatide, with no insurance, no hidden fees and free fast shipping. welludr lists semaglutide from $41/month and tirzepatide from $71 in its Pre-Black Friday sale (from October 28, 2026), but check the plan terms at checkout. embody keeps the same price at every dose. welludr is cheaper on headline price; embody is easier if you want to stay month to month.",
       supportingPoints: [
         "embody: $69 semaglutide, $119 tirzepatide per month",
         "embody: no insurance, no hidden fees, cancel anytime",
-        "welludr: from $49 semaglutide, $89 tirzepatide",
-        "Both: prescription treatment at one price per dose",
+        "welludr: from $41 semaglutide, $71 tirzepatide",
+        "embody: one price at every dose",
       ],
     },
     {
@@ -184,12 +201,34 @@ const embodywellmedrBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Entry Price", provider1Value: "$69/mo semaglutide · $119/mo tirzepatide", provider2Value: "$49/mo semaglutide · $89/mo tirzepatide", highlight: "both" },
+    { feature: "Entry Price", provider1Value: "$69/mo semaglutide · $119/mo tirzepatide", provider2Value: "From $41/mo semaglutide · from $71/mo tirzepatide", highlight: "both" },
     { feature: "Consultation", provider1Value: "Fully online", provider2Value: "Fully online", highlight: "both" },
     { feature: "Delivery", provider1Value: "Free in 1-2 days, tracked and insured", provider2Value: "About 3-5 business days, discreet packaging", highlight: "provider1" },
     { feature: "Medication Menu", provider1Value: "Compounded semaglutide and tirzepatide", provider2Value: "GLP-1/GIP plus semaglutide/NAD+/B12 microdose", highlight: "both" },
     { feature: "Who Treats You", provider1Value: "Medical director, nurses, LegitScript-certified", provider2Value: "Board-certified specialists", highlight: "both" },
     { feature: "Other Services", provider1Value: "Weight loss only", provider2Value: "NAD+ and longevity care", highlight: "provider2" },
+  ],
+  faqs: [
+    {
+      question: "Is embody or welludr better?",
+      answer:
+        "embody is the better choice for most people in our comparison, and welludr is the better choice if the lowest monthly price is what you want. embody charges a flat $69/month for compounded semaglutide and $119 for tirzepatide, month to month, and ships free in 1-2 days, while welludr's Pre-Black Friday sale starts at $41 and $71 a month with standard delivery of about 3-5 business days. welludr has the higher Trustpilot rating, 4.6 across 2,188 reviews against embody's 3.8 across 9,604. Pick embody for no commitment and the fastest delivery, and pick welludr if the sale price and its plan terms at checkout suit you.",
+    },
+    {
+      question: "Is welludr the same company as wellmedr?",
+      answer:
+        "Yes. wellmedr changed its name to welludr in October 2026, so a search for wellmedr vs embody or welludr vs embody leads to the same comparison. The rename did not change welludr's plans, and its prices now start at $41/month for semaglutide and $71 for tirzepatide in its Pre-Black Friday sale from October 28, 2026. embody is a separate company that charges $69 and $119 a month.",
+    },
+    {
+      question: "Do embody prices go up?",
+      answer:
+        "Not with your dose: embody charges the same $69/month for semaglutide and $119/month for tirzepatide at every dose, billed month to month. Those are promotional prices, and embody lists regular prices of $79 and $129 next to them. welludr's lowest prices, from $41 and $71 a month, are Pre-Black Friday sale prices that began October 28, 2026, so check welludr's plan terms at checkout before you count on them long term. If you want a price you can predict, embody is the safer bet; if you want the lowest price today, welludr is.",
+    },
+    {
+      question: "What does a year of semaglutide cost at embody compared with welludr?",
+      answer:
+        "At embody, 12 months of compounded semaglutide costs $828 ($69 a month) and tirzepatide $1,428 ($119 a month), with nothing paid up front. welludr's sale starts lower, at $41 a month for semaglutide and $71 for tirzepatide, but because it is a Pre-Black Friday sale price, your yearly total at welludr depends on the plan terms shown at checkout. One welludr Trustpilot reviewer also reports being billed every 21 days, so ask how many charges a year includes. Choose welludr for the lowest monthly figure and embody for a yearly cost you can work out in advance.",
+    },
   ],
 };
 
@@ -283,6 +322,18 @@ const altrxTrimrxBattle: BattleData = {
     { feature: "Who Treats You", provider1Value: "Licensed clinicians", provider2Value: "Provider consultations plus ongoing guidance", highlight: "both" },
     { feature: "Flexibility", provider1Value: "Pause or cancel anytime", provider2Value: "Flexible plans, no long-term commitment", highlight: "provider2" },
     { feature: "Ways to Pay", provider1Value: "Cash-pay plus Buy Now, Pay Later", provider2Value: "Cash-pay, no insurance needed", highlight: "provider1" },
+  ],
+  faqs: [
+    {
+      question: "Which is better, altRx or TrimRx?",
+      answer:
+        "TrimRx wins our comparison for most people because of how its plans work: month to month with no long-term commitment, custom dosing, unlimited check-ins with a provider and free tracked delivery that often arrives the next day, backed by 3.8 stars across 5,392 Trustpilot reviews. altRx is cheaper on the sticker, at $89/month for compounded semaglutide and $149 for tirzepatide against TrimRx's $149 and $259, and it also sells brand-name Zepbound and Wegovy. Choose altRx if the lowest monthly price or brand-name medication matters most, and TrimRx if you want more provider contact and faster delivery.",
+    },
+    {
+      question: "How much do altRx and TrimRx cost over a year?",
+      answer:
+        "At current prices, a year of compounded semaglutide costs $1,068 at altRx ($89 a month) and $1,788 at TrimRx ($149 a month at every dose). For tirzepatide, altRx comes to $1,788 a year ($149 a month) and TrimRx to $3,108 ($259 a month). altRx's prices are promotional against regular rates of $199 and $299, and TrimRx discounts multi-month plans, so check both checkouts for the current figure. On price alone, altRx is the cheaper of the two.",
+    },
   ],
 };
 
@@ -528,7 +579,7 @@ const medviRoBattle: BattleData = {
     {
       name: "Brand and Track Record",
       winner: "provider2",
-      explanation: "ro has the longer track record. It is a large, widely recognized telehealth brand with an integrated in-house pharmacy that simplifies fulfillment. Medvi is a newer platform with fewer reviews, although the reviews it has are strongly positive.",
+      explanation: "ro has the longer track record. It is a large, widely recognized telehealth brand with an integrated in-house pharmacy that simplifies fulfillment. Medvi is the younger company, but its public record is larger: 4.3 stars across 14,987 Trustpilot reviews, against ro's 3.9 across 7,105.",
       supportingPoints: [
         "ro: large, widely known telehealth brand",
         "ro: integrated in-house pharmacy",
@@ -556,6 +607,18 @@ const medviRoBattle: BattleData = {
     { feature: "Track Record", provider1Value: "Newer, strongly reviewed", provider2Value: "Large, established brand", highlight: "provider2" },
     { feature: "Consultation", provider1Value: "Fully online", provider2Value: "Fully online", highlight: "both" },
   ],
+  faqs: [
+    {
+      question: "Which is better, ro or Medvi?",
+      answer:
+        "ro wins our comparison for most people: an established telehealth company with an in-house pharmacy that sells FDA-approved Wegovy and Zepbound and can bill them to insurance. Medvi is the better choice if you pay cash, because its all-inclusive $99/month for compounded semaglutide covers visits, medication, a dietician and coaching, and it rates 4.3 across 14,987 Trustpilot reviews against ro's 3.9 across 7,105. Choose ro if insurance may cover a brand-name GLP-1, and Medvi if you want hands-on support at one cash price.",
+    },
+    {
+      question: "How much do ro and Medvi cost over a year without insurance?",
+      answer:
+        "Without insurance, a year of Medvi's compounded semaglutide comes to $1,188 at the $99/month promotional rate (regularly $199), with visits and coaching included. A cash year at ro on the Wegovy pill with the 12-month prepaid membership is about $4,200, and on the Zepbound KwikPen about $6,100. With insurance that covers the drug, ro can come to about $1,200 a year at a $25 copay, which is why ro suits insured patients and Medvi suits cash payers.",
+    },
+  ],
 };
 
 const medviwellmedrBattle: BattleData = {
@@ -565,7 +628,7 @@ const medviwellmedrBattle: BattleData = {
   provider2Id: "wellmedr",
   title: "Medvi vs welludr: Which GLP-1 Provider Wins? (2026)",
   subtitle: "Medvi and welludr compared on personal support, focus, pricing, medical oversight and services beyond weight loss.",
-  description: "Medvi vs welludr: Medvi offers focused, attentive GLP-1 care at all-inclusive prices; welludr lists semaglutide from $49/mo and a weight-loss warranty.",
+  description: "Medvi vs welludr: Medvi offers focused, attentive GLP-1 care at all-inclusive prices; welludr lists semaglutide from $41/mo and a weight-loss warranty.",
   intro: "For weight loss specifically, Medvi is the better fit: it keeps treatment simple and focused, pairing prescription GLP-1 medication with attentive providers, regular monitoring and all-inclusive pricing. welludr is an AI-driven telehealth brand that stretches beyond weight loss into NAD+ and other longevity care, and it combines GLP-1 treatment with add-ons such as NAD+ and vitamin B12. Both treat patients online. Here is how Medvi and welludr compare for people whose goal is losing weight.",
   verdict: "Medvi wins this comparison for weight loss. Medvi and welludr are both credible online GLP-1 providers, but Medvi customers consistently praise its personal, attentive service, and its plans include medication, provider consultations and ongoing monitoring at a transparent price with no surprise charges. welludr is the better fit if you want more than weight loss from one platform, with NAD+ and other longevity services alongside GLP-1 care.",
   verdictWinnerPoints: [
@@ -576,7 +639,7 @@ const medviwellmedrBattle: BattleData = {
   verdictLoserPoints: [
     "Wider wellness catalog, including NAD+ and longevity care",
     "GLP-1 options combined with NAD+ and vitamin B12",
-    "Low entry prices: semaglutide from $49/mo, tirzepatide from $89/mo",
+    "Low entry prices: semaglutide from $41/mo, tirzepatide from $71/mo",
   ],
   winnerId: "medvi",
   categories: [
@@ -605,11 +668,11 @@ const medviwellmedrBattle: BattleData = {
     {
       name: "Price and Value",
       winner: "provider1",
-      explanation: "Medvi offers one predictable, all-inclusive monthly rate that covers medication, provider consultations and ongoing support, with no surprise charges. welludr's headline prices are lower, with semaglutide from $49/month and tirzepatide from $89, but the $49 rate requires a 12-month plan. The better value depends on whether you prefer a bundled monthly price or a lower annual commitment.",
+      explanation: "Medvi offers one predictable, all-inclusive monthly rate that covers medication, provider consultations and ongoing support, with no surprise charges. welludr's headline prices are lower, with semaglutide from $41/month and tirzepatide from $71 in its Pre-Black Friday sale (from October 28, 2026); check the plan terms at checkout. The better value depends on whether you prefer a bundled monthly price or the lowest sale price.",
       supportingPoints: [
         "Medvi: all-inclusive, no surprise charges",
         "Medvi: predictable monthly cost",
-        "welludr: from $49 semaglutide, $89 tirzepatide",
+        "welludr: from $41 semaglutide, $71 tirzepatide",
         "Both: no insurance needed",
       ],
     },
@@ -639,7 +702,7 @@ const medviwellmedrBattle: BattleData = {
   features: [
     { feature: "Personal Attention", provider1Value: "Attentive, highly rated providers", provider2Value: "Message your provider anytime", highlight: "provider1" },
     { feature: "Focus", provider1Value: "Dedicated to weight loss", provider2Value: "Broad multi-service platform", highlight: "provider1" },
-    { feature: "Price Structure", provider1Value: "All-inclusive, no surprise charges", provider2Value: "$49/mo semaglutide · $89/mo tirzepatide", highlight: "both" },
+    { feature: "Price Structure", provider1Value: "All-inclusive, no surprise charges", provider2Value: "From $41/mo semaglutide · from $71/mo tirzepatide", highlight: "both" },
     { feature: "Other Services", provider1Value: "Weight loss only", provider2Value: "NAD+ and longevity care", highlight: "provider2" },
     { feature: "Consultation", provider1Value: "Fully online", provider2Value: "Fully online", highlight: "both" },
     { feature: "Medication Menu", provider1Value: "Prescription GLP-1 treatment", provider2Value: "GLP-1/GIP plus semaglutide/NAD+/B12 microdose", highlight: "both" },
@@ -738,6 +801,23 @@ const embodyRoBattle: BattleData = {
     { feature: "Who Treats You", provider1Value: "Licensed doctors, medical director, nurses", provider2Value: "Licensed providers review every plan", highlight: "both" },
     { feature: "Ways to Pay", provider1Value: "Cash-pay, no insurance needed", provider2Value: "Monthly plans, FSA/HSA eligible", highlight: "provider2" },
   ],
+  faqs: [
+    {
+      question: "Is ro or embody better?",
+      answer:
+        "embody is the better choice if you pay cash, and ro is the better choice if your insurance covers a brand-name GLP-1. embody charges a flat $69/month for compounded semaglutide, or $828 a year, while ro bills a membership ($39 the first month, then $74-$149 a month) plus brand-name medication such as the Wegovy pill at $149-$299 a month, about $4,200 for a cash year on its prepaid plan. With coverage, ro's membership plus copays can come to about $1,200 a year at a $25 copay, and you get FDA-approved Wegovy or Zepbound, which embody does not sell.",
+    },
+    {
+      question: "What do Reddit users say about ro vs embody?",
+      answer:
+        "On Reddit, ro users report real results, from 22 to 60 pounds in the positive accounts we found, and the main complaint is cost: a membership fee plus a separate medication charge that one commenter found confusing. embody users on Reddit describe fast approval and shipping and a self-serve model one user called autopilot, which keeps the price low but means little human contact. Reddit points the same way as our verdict: embody for a low cash price, ro for brand-name medication through insurance.",
+    },
+    {
+      question: "Does ro sell compounded GLP-1 medication like embody?",
+      answer:
+        "No. ro's published weight-loss pricing covers brand-name medication only: the Wegovy pill, the Wegovy pen and the Zepbound KwikPen. embody sells only compounded semaglutide and tirzepatide, which are not FDA-approved, at $69 and $119 a month. Choose ro if you want an FDA-approved brand-name GLP-1, and embody if you want the lowest cash price for compounded medication.",
+    },
+  ],
 };
 
 // ── Eden battles (added Oct 13, 2026). Eden's figures are its own published
@@ -745,28 +825,28 @@ const embodyRoBattle: BattleData = {
 // (4.5 across 4,917, operator screenshot Oct 13, 2026). ──
 const edenEmbodyBattle: BattleData = {
   slug: "eden-vs-embody",
-  updatedAt: "2026-10-13",
+  updatedAt: "2026-10-29",
   publishedAt: "2026-10-13",
   provider1Id: "eden",
   provider2Id: "embody",
   title: "Eden vs embody: Flat-Price GLP-1 Providers (2026)",
   subtitle: "Two compounded GLP-1 providers with no commitment, compared on price, shipping, human support and Trustpilot record.",
-  description: "Eden vs embody: embody wins at $69/$119 a month with free 1-2 day shipping; Eden costs $99/$129 but adds 24/7 human support and 4.5 stars.",
-  intro: "embody wins this comparison: it is the cheaper of the two at every dose and the faster to deliver. Both sell compounded semaglutide and tirzepatide month to month, with no membership, no long-term plan and a single price at every dose. embody charges $69/month for semaglutide and $119 for tirzepatide against Eden's $99 and $129, ships free in 1-2 days cold-chain, and refunds you if a provider does not approve treatment. Eden's strengths are doctor-guided care, 24/7 human support and a 4.5 rating across 4,917 Trustpilot reviews, against embody's 3.8 across 9,604. For most people paying cash, embody's lower price and faster delivery decide it.",
-  verdict: "embody is our pick. It costs $30 a month less on semaglutide ($69 vs $99) and $10 less on tirzepatide ($119 vs $129), which adds up to $360 a year on semaglutide, and it ships free in 1-2 days with a refund if you are not approved. Both are month to month with no membership, so the lower price carries no extra commitment. Choose Eden instead if round-the-clock human support matters more to you than price: it offers 24/7 support, doctor-guided care and a 4.5 Trustpilot average across 4,917 reviews.",
+  description: "Eden vs embody: Eden wins with 24/7 human support and 4.5 Trustpilot stars at a flat $99/$129; embody is cheaper at $69/$119 with 1-2 day shipping.",
+  intro: "Eden wins this comparison: it pairs doctor-guided care and 24/7 human support with the stronger customer record, 4.5 stars across 4,917 Trustpilot reviews against embody's 3.8 across 9,604. Both sell compounded semaglutide and tirzepatide month to month, with no membership, no long-term plan and a single price at every dose. Eden charges $99/month for semaglutide and $129 for tirzepatide as standard rates with no promotion to expire; embody charges less, $69 and $119 on promotion (regularly $79 and $129), and ships free in 1-2 days. For most people starting a GLP-1, being able to reach a person at any hour and a provider with consistently happy customers is worth the difference; if the lowest monthly price is what matters most, embody is the cheaper option.",
+  verdict: "Eden is our pick. It wins on the parts of care that are hardest to fix later: 24/7 human support, doctor-guided treatment and a 4.5 Trustpilot average across 4,917 reviews, where recent reviewers name the agents who solved their problems. Its $99 semaglutide and $129 tirzepatide are standard prices, the same every month and at every dose, with no membership and no long-term plan. Choose embody instead if the lowest price is your priority: it costs $30 a month less on semaglutide ($69 vs $99) and $10 less on tirzepatide ($119 vs $129) on its current promotion, ships free in 1-2 days and refunds you if you are not approved.",
   verdictWinnerPoints: [
-    "Lowest no-commitment price: $69 semaglutide, $119 tirzepatide",
-    "Free 1-2 day cold-chain delivery",
-    "Refund if a provider does not approve treatment",
-    "LegitScript-certified, with named US 503A pharmacies",
-  ],
-  verdictLoserPoints: [
     "$99 semaglutide and $129 tirzepatide, the same every month at every dose",
     "24/7 human support and doctor-guided care included",
     "4.5 stars across 4,917 Trustpilot reviews; recent reviews name helpful staff",
     "No membership and no annual or long-term plan",
   ],
-  winnerId: "embody",
+  verdictLoserPoints: [
+    "Lowest no-commitment price: $69 semaglutide, $119 tirzepatide",
+    "Free 1-2 day cold-chain delivery",
+    "Refund if a provider does not approve treatment",
+    "LegitScript-certified, with named US 503A pharmacies",
+  ],
+  winnerId: "eden",
   categories: [
     {
       name: "Monthly Price",
@@ -808,6 +888,18 @@ const edenEmbodyBattle: BattleData = {
     { feature: "Support", provider1Value: "Doctor-guided care, 24/7 human support", provider2Value: "Nursing team by message, video appointments", highlight: "provider1" },
     { feature: "Trustpilot", provider1Value: "4.5 across 4,917 (Oct 13, 2026)", provider2Value: "3.8 across 9,604 (Oct 12, 2026)", highlight: "provider1" },
     { feature: "Brand-name medication", provider1Value: "No", provider2Value: "No", highlight: "none" },
+  ],
+  faqs: [
+    {
+      question: "Which is better, Eden or embody?",
+      answer:
+        "Eden wins this comparison: 24/7 human support, doctor-guided care and a 4.5 Trustpilot rating across 4,917 reviews, against embody's 3.8 across 9,604, at a flat $99 a month for semaglutide and $129 for tirzepatide. embody is the better choice if price comes first: $69 and $119 a month on its current promotion, with free 1-2 day delivery. Both are month to month with no membership, so choose Eden for support and consistency and embody to spend less."
+    },
+    {
+      question: "Will Eden or embody prices change over time?",
+      answer:
+        "Eden's $99 and $129 are its standard rates, the same every month and at every dose, with no promotion to expire. embody's $69 and $119 are also the same at every dose, but they are promotional prices set against regular rates of $79 and $129. Even at its regular price, embody's semaglutide costs $20 a month less than Eden's, while its regular tirzepatide price matches Eden's $129.",
+    },
   ],
 };
 
@@ -863,7 +955,7 @@ const altrxEdenBattle: BattleData = {
     {
       name: "Public Track Record",
       winner: "provider2",
-      explanation: "Eden has a public Trustpilot record of 4.5 across 4,917 reviews on a claimed profile. altRx has no Trustpilot profile, so its public record consists of individual reviews and the one Reddit thread we captured. Both companies received FDA warning letters in June 2026 about marketing claims for compounded GLP-1s.",
+      explanation: "Eden has a public Trustpilot record of 4.5 across 4,917 reviews on a claimed profile. altRx's Trustpilot profile shows no overall score, so its public record consists of individual reviews and the one Reddit thread we captured. Both companies received FDA warning letters in June 2026 about marketing claims for compounded GLP-1s.",
       supportingPoints: ["Eden: 4.5 across 4,917 Trustpilot reviews", "altRx: no Trustpilot profile", "Both: FDA marketing warning letters, June 2026"],
     },
   ],
@@ -1044,11 +1136,11 @@ const trimrxwellmedrBattle: BattleData = {
   matchupLabel: "welludr vs TrimRx",
   title: "welludr vs TrimRx: GLP-1 Prices and Reviews (2026)",
   subtitle: "welludr and TrimRx compared on verified prices, plan terms, Trustpilot feedback, services and medical support.",
-  description: "welludr vs TrimRx: welludr starts at $49/mo semaglutide with a weight-loss warranty and 4.6 stars; TrimRx charges a flat $149/mo with no long-term contract.",
-  intro: "welludr is the better value: semaglutide from $49/month and tirzepatide from $89/month, against TrimRx's $149 and $259, with the same price at every dose. Those are the lowest compounded prices in our ranking, and welludr adds board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty and brand-name Ozempic and Zepbound. TrimRx is built around custom dosing with unlimited provider check-ins, a flat $149/month semaglutide price at every dose, and no long-term commitment. Both treat patients online. Here is how welludr and TrimRx compare for weight loss.",
-  verdict: "welludr wins this comparison. On verified pricing it is the clear value choice, at $49/month for semaglutide and $89/month for tirzepatide against TrimRx's $149 and $259, a gap that holds at every dose. welludr also backs its program with a weight-loss warranty and has the stronger public record: 4.6 across 2,188 Trustpilot reviews, with customers describing quick approvals and flexible, human support. TrimRx is the better fit if custom dosing with unlimited provider check-ins, a free consultation and tracked delivery that often arrives the next day matter more to you than price; its care is genuinely hands-on and there is no long-term commitment. Keep in mind that welludr's $49 rate is tied to a 12-month plan, and its 3-5 business-day delivery is slower than TrimRx's.",
+  description: "welludr vs TrimRx: welludr starts at $41/mo semaglutide with a weight-loss warranty and 4.6 stars; TrimRx charges a flat $149/mo with no long-term contract.",
+  intro: "welludr is the better value: semaglutide from $41/month and tirzepatide from $71/month in its Pre-Black Friday sale, against TrimRx's $149 and $259. Those are the lowest compounded prices in our ranking, and welludr adds board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty and brand-name Ozempic and Zepbound. TrimRx is built around custom dosing with unlimited provider check-ins, a flat $149/month semaglutide price at every dose, and no long-term commitment. Both treat patients online. Here is how welludr and TrimRx compare for weight loss.",
+  verdict: "welludr wins this comparison. On verified pricing it is the clear value choice, from $41/month for semaglutide and $71/month for tirzepatide against TrimRx's $149 and $259. welludr also backs its program with a weight-loss warranty and has the stronger public record: 4.6 across 2,188 Trustpilot reviews, with customers describing quick approvals and flexible, human support. TrimRx is the better fit if custom dosing with unlimited provider check-ins, a free consultation and tracked delivery that often arrives the next day matter more to you than price; its care is genuinely hands-on and there is no long-term commitment. Keep in mind that welludr's $41 rate is a Pre-Black Friday sale price (from October 28, 2026), so check the plan terms at checkout, and its 3-5 business-day delivery is slower than TrimRx's.",
   verdictWinnerPoints: [
-    "Lower verified prices: semaglutide from $49/mo, tirzepatide from $89/mo, the same at every dose",
+    "Lower verified prices: semaglutide from $41/mo, tirzepatide from $71/mo in the Pre-Black Friday sale",
     "Weight-loss warranty, board-certified specialists and a Medical Weight-Care Coach",
     "4.6 stars across 2,188 Trustpilot reviews, praised for quick approvals and flexible support",
   ],
@@ -1062,10 +1154,10 @@ const trimrxwellmedrBattle: BattleData = {
     {
       name: "Price and Value",
       winner: "provider1",
-      explanation: "welludr has the lowest compounded prices in our ranking: semaglutide from $49/month and tirzepatide from $89/month, shipped every 4 weeks at the same price whatever your dose, plus a standing $200-off offer. TrimRx charges $149/month for semaglutide (after a $140 discount, and the same at every dose) and $259/month for tirzepatide, with consultation, delivery and check-ins included. The caveat for welludr: the $49 headline rate requires a 12-month plan.",
+      explanation: "welludr has the lowest compounded prices in our ranking: semaglutide from $41/month and tirzepatide from $71/month in its Pre-Black Friday sale (from October 28, 2026), plus a standing $200-off offer. TrimRx charges $149/month for semaglutide (after a $140 discount, and the same at every dose) and $259/month for tirzepatide, with consultation, delivery and check-ins included. The caveat for welludr: the plan terms behind its sale prices are not published up front, so check them at checkout.",
       supportingPoints: [
-        "welludr: from $49 semaglutide, $89 tirzepatide",
-        "Both: same price at every dose",
+        "welludr: from $41 semaglutide, $71 tirzepatide",
+        "TrimRx: same price at every dose",
         "TrimRx: $149 semaglutide, $259 tirzepatide, all-inclusive",
         "Both: no insurance needed",
       ],
@@ -1073,7 +1165,7 @@ const trimrxwellmedrBattle: BattleData = {
     {
       name: "Plan Flexibility",
       winner: "provider2",
-      explanation: "TrimRx is easier to start and stop, with a flat monthly price and no long-term commitment. welludr lets you message your provider anytime and adjust your plan, but its best rate rewards a 12-month commitment, so TrimRx has the edge if you want to keep your options open.",
+      explanation: "TrimRx is easier to start and stop, with a flat monthly price and no long-term commitment. welludr lets you message your provider anytime and adjust your plan, but check the plan terms behind its sale prices at checkout, so TrimRx has the edge if you want to keep your options open.",
       supportingPoints: [
         "TrimRx: no long-term commitment",
         "TrimRx: custom dosing set by your provider",
@@ -1116,11 +1208,11 @@ const trimrxwellmedrBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Entry Price", provider1Value: "$49/mo semaglutide · $89/mo tirzepatide", provider2Value: "$149/mo semaglutide · $259/mo tirzepatide", highlight: "provider1" },
+    { feature: "Entry Price", provider1Value: "From $41/mo semaglutide · from $71/mo tirzepatide", provider2Value: "$149/mo semaglutide · $259/mo tirzepatide", highlight: "provider1" },
     { feature: "Consultation", provider1Value: "Fully online", provider2Value: "Fully online", highlight: "both" },
     { feature: "Medication Menu", provider1Value: "Compounded GLP-1/GIP, NAD+/B12 microdose, brand-name Ozempic and Zepbound", provider2Value: "Compounded semaglutide and tirzepatide", highlight: "provider1" },
     { feature: "Trustpilot", provider1Value: "4.6 across 2,188 reviews", provider2Value: "3.8 across 5,392 reviews", highlight: "provider1" },
-    { feature: "Commitment", provider1Value: "Best rate requires a 12-month plan", provider2Value: "No long-term commitment", highlight: "provider2" },
+    { feature: "Commitment", provider1Value: "Check sale plan terms at checkout", provider2Value: "No long-term commitment", highlight: "provider2" },
     { feature: "Delivery", provider1Value: "3-5 business days", provider2Value: "Tracked, often next day", highlight: "provider2" },
     { feature: "Other Services", provider1Value: "NAD+ and longevity care", provider2Value: "Weight loss only", highlight: "provider1" },
   ],
@@ -1134,17 +1226,17 @@ const rowellmedrBattle: BattleData = {
   title: "ro vs welludr: GLP-1 Medications and Pricing (2026)",
   matchupLabel: "ro vs welludr",
   subtitle: "ro and welludr compared on medications, entry pricing, services, pharmacy and brand trust.",
-  description: "ro vs welludr: ro offers an in-house pharmacy and 3.9 stars on 7,105 Trustpilot reviews; welludr starts at $49/mo semaglutide with a weight-loss warranty.",
-  intro: "ro is the more complete and trusted platform for most people, while welludr is the cheaper option on cash price. ro is a large, long-established telehealth brand with an integrated in-house pharmacy and licensed providers who review every plan. welludr keeps compounded pricing low, with semaglutide from $49/month and tirzepatide from $89, and adds board-certified specialists, a Medical Weight-Care Coach and a weight-loss warranty. Both treat patients online and deliver to your home. Here is how ro and welludr compare.",
-  verdict: "ro wins overall, though welludr has a clear case on price and range. welludr offers semaglutide from $49/month and tirzepatide from $89/month at the same price at every dose, plus board-certified specialists and a wider wellness catalog. ro, however, is a large, established telehealth brand with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With 3.9 stars across 7,105 Trustpilot reviews, ro is the more complete and more trusted choice for most people. Choose welludr if the lowest cash price and the widest range of treatments matter most.",
+  description: "ro vs welludr: ro offers an in-house pharmacy and 3.9 stars on 7,105 Trustpilot reviews; welludr starts at $41/mo semaglutide with a weight-loss warranty.",
+  intro: "ro is the more complete and trusted platform for most people, while welludr is the cheaper option on cash price. ro is a large, long-established telehealth brand with an integrated in-house pharmacy and licensed providers who review every plan. welludr keeps compounded pricing low, with semaglutide from $41/month and tirzepatide from $71 in its Pre-Black Friday sale, and adds board-certified specialists, a Medical Weight-Care Coach and a weight-loss warranty. Both treat patients online and deliver to your home. Here is how ro and welludr compare.",
+  verdict: "ro wins overall, though welludr has a clear case on price and range. welludr offers semaglutide from $41/month and tirzepatide from $71/month in its Pre-Black Friday sale, plus board-certified specialists and a wider wellness catalog. ro, however, is a large, established telehealth brand with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With 3.9 stars across 7,105 Trustpilot reviews, ro is the more complete and more trusted choice for most people. Choose welludr if the lowest cash price and the widest range of treatments matter most.",
   verdictWinnerPoints: [
     "Large, established telehealth brand with its own in-house pharmacy",
     "Licensed providers review every plan; FDA-approved Wegovy and Zepbound with insurance",
     "3.9 stars across 7,105 Trustpilot reviews, with responsive support",
   ],
   verdictLoserPoints: [
-    "Lower cash price: semaglutide from $49/mo, tirzepatide from $89/mo",
-    "Same price at every dose, plus a semaglutide + NAD+/B12 microdose",
+    "Lower cash price: semaglutide from $41/mo, tirzepatide from $71/mo",
+    "Pre-Black Friday sale pricing, plus a semaglutide + NAD+/B12 microdose",
     "Board-certified specialists and a wide wellness catalog",
   ],
   winnerId: "ro",
@@ -1152,23 +1244,23 @@ const rowellmedrBattle: BattleData = {
     {
       name: "Medications and Formulations",
       winner: "provider1",
-      explanation: "welludr has the more distinctive lineup: compounded GLP-1/GIP tirzepatide plus an Energy & Focus+ microdose that combines semaglutide with NAD+ and vitamin B12. ro offers solid standard options, compounded semaglutide and brand-name GLP-1s, reviewed by licensed providers. For a broader toolkit, welludr is ahead.",
+      explanation: "welludr has the more distinctive lineup: compounded GLP-1/GIP tirzepatide plus an Energy & Focus+ microdose that combines semaglutide with NAD+ and vitamin B12. ro offers solid standard options, brand-name GLP-1s only (the Wegovy pill, Wegovy pen and Zepbound KwikPen), reviewed by licensed providers. For a broader toolkit, welludr is ahead.",
       supportingPoints: [
         "welludr: tirzepatide GLP-1/GIP treatment",
         "welludr: semaglutide + NAD+/B12 microdose",
-        "ro: compounded semaglutide plus brand-name GLP-1",
+        "ro: brand-name GLP-1s (Wegovy, Zepbound)",
         "Both: licensed provider review",
       ],
     },
     {
       name: "Entry Pricing",
       winner: "provider1",
-      explanation: "welludr publishes lower, clearer prices: compounded semaglutide from $49/month and tirzepatide from $89, the same at every dose, with the $49 rate tied to a 12-month plan. ro's prices are competitive, but the total depends on the medication and plan you choose.",
+      explanation: "welludr publishes lower, clearer prices: compounded semaglutide from $41/month and tirzepatide from $71 in its Pre-Black Friday sale (from October 28, 2026); check the plan terms at checkout. ro's prices are competitive, but the total depends on the medication and plan you choose.",
       supportingPoints: [
-        "welludr: from $49 semaglutide, $89 tirzepatide",
+        "welludr: from $41 semaglutide, $71 tirzepatide",
         "ro: cost depends on medication and plan",
         "Both: no insurance required to start",
-        "welludr: same price at every dose",
+        "welludr: Pre-Black Friday sale from October 28, 2026",
       ],
     },
     {
@@ -1207,11 +1299,23 @@ const rowellmedrBattle: BattleData = {
   ],
   features: [
     { feature: "GLP-1 Options", provider1Value: "Tirzepatide (GLP-1/GIP) plus semaglutide/NAD+/B12 microdose", provider2Value: "Compounded semaglutide plus brand-name GLP-1", highlight: "provider1" },
-    { feature: "Entry Price", provider1Value: "$49/mo semaglutide · $89/mo tirzepatide", provider2Value: "Depends on medication and plan", highlight: "provider1" },
+    { feature: "Entry Price", provider1Value: "From $41/mo semaglutide · from $71/mo tirzepatide", provider2Value: "Depends on medication and plan", highlight: "provider1" },
     { feature: "Other Services", provider1Value: "NAD+ and longevity care", provider2Value: "Focused weight-loss program", highlight: "provider1" },
     { feature: "Brand and Pharmacy", provider1Value: "US state-licensed compounding pharmacies", provider2Value: "Established brand, integrated in-house pharmacy", highlight: "provider2" },
     { feature: "Consultation", provider1Value: "Fully online, message your provider anytime", provider2Value: "Fully online, licensed provider review", highlight: "both" },
     { feature: "Delivery", provider1Value: "Standard 3-5 business days, discreet packaging", provider2Value: "In-house pharmacy fulfillment", highlight: "provider2" },
+  ],
+  faqs: [
+    {
+      question: "Which is better, welludr or ro?",
+      answer:
+        "ro wins our comparison for most people because it sells FDA-approved Wegovy and Zepbound through its own pharmacy and can bill the medication to insurance. welludr (formerly wellmedr) costs far less if you pay cash: compounded semaglutide from $41/month and tirzepatide from $71 in its Pre-Black Friday sale, with a 4.6 Trustpilot rating across 2,188 reviews against ro's 3.9 across 7,105. Choose ro if insurance may cover a brand-name GLP-1, and welludr if you are paying out of pocket and want the lowest price.",
+    },
+    {
+      question: "Does insurance work with welludr or ro?",
+      answer:
+        "ro is the one that works with insurance: its concierge checks your coverage and handles prior authorization, which ro says usually takes about 1-2 weeks, for the Wegovy pen, the Zepbound pen and Ozempic. Insurance does not pay for ro's membership, which costs $39 the first month and then $74-$149 a month. welludr is self-pay for compounded medication, so insurance does not change its price. If you have coverage for a GLP-1, start with ro; if you do not, welludr costs far less.",
+    },
   ],
 };
 
@@ -1252,9 +1356,21 @@ export const battles: BattleData[] = [
           { feature: "Online Consultation", provider1Value: "Included", provider2Value: "Included" },
           { feature: "Personalized Plans", provider1Value: "Customized protocols", provider2Value: "Provider-guided adjustments" },
           { feature: "Ongoing Care", provider1Value: "Continuous monitoring", provider2Value: "Regular check-ins" },
-          { feature: "Delivery", provider1Value: "Fast nationwide delivery", provider2Value: "In-house pharmacy fulfillment" },
+          { feature: "Delivery", provider1Value: "Free nationwide shipping in 5-7 days", provider2Value: "In-house pharmacy fulfillment" },
           { feature: "Payment Terms", provider1Value: "No long-term contracts", provider2Value: "Monthly plans, FSA/HSA eligible" },
           { feature: "Best For", provider1Value: "Personalized care, more options", provider2Value: "Full-service, brand-backed care" },
+        ],
+        faqs: [
+          {
+            question: "Which is better, altRx or ro?",
+            answer:
+              "ro wins our comparison for most people: it is an established telehealth company with its own in-house pharmacy, sells FDA-approved Wegovy and Zepbound, can bill the medication to insurance and has 3.9 stars across 7,105 Trustpilot reviews. altRx is the better choice if you pay cash and want compounded medication, at $89/month for semaglutide and $149 for tirzepatide with no membership. Choose ro if insurance may cover a brand-name GLP-1, and altRx if the lowest cash price matters most.",
+          },
+          {
+            question: "How much does altRx cost over a year compared with ro?",
+            answer:
+              "Paying cash, a year of compounded semaglutide at altRx comes to $1,068 ($89 a month, a promotional rate against a regular $199). At ro, a cash year on the Wegovy pill with the 12-month prepaid membership is about $4,200, and on the Zepbound KwikPen about $6,100. If you want brand-name Wegovy without insurance, ro still costs less than altRx's $1,579 a month even with the membership, and if insurance covers the drug, ro can drop to about $1,200 a year at a $25 copay.",
+          },
         ],
       },
       embodywellmedrBattle,

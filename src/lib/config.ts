@@ -251,6 +251,9 @@ export interface BattleData {
   winnerId: string;
   categories: BattleCategory[];
   features: BattleFeatureRow[];
+  // Optional reader questions answered on the page (rendered in the FAQ
+  // section and the FAQPage schema), e.g. "Is embody or welludr better?".
+  faqs?: { question: string; answer: string }[];
   updatedAt?: string;
   // Set only when the real creation date is known; older battles fall back
   // to the template's long-standing default.
@@ -449,7 +452,7 @@ export const WEIGHT_LOSS_HERO_TEXT = {
   h1: "Top Online GLP-1 Weight Loss Programs, Ranked for 2026",
   h2: "13 online programs, compared on real prices",
   description:
-    "Compounded semaglutide starts at $49/mo and tirzepatide at $89/mo. Every price below was checked on the provider's own site.",
+    "Compounded semaglutide starts at $41/mo and tirzepatide at $71/mo. Every price below was checked on the provider's own site.",
 };
 
 export const defaultConfig: SiteConfig = {

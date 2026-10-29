@@ -14,8 +14,9 @@ export function LandingEditorial({ sections }: LandingEditorialProps) {
           <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
             {section.heading}
           </h2>
-          <p
-            className="mb-4 [&_a]:font-semibold [&_a]:text-[#0C4B75] hover:[&_a]:underline"
+          {/* div, not p: bodies can hold block HTML (paragraphs, tables, lists). */}
+          <div
+            className="mb-4 [&_a]:font-semibold [&_a]:text-[#0C4B75] hover:[&_a]:underline [&_p]:mb-3 [&_table]:my-4 [&_table]:block [&_table]:max-w-full [&_table]:overflow-x-auto [&_table]:text-[14px] [&_th]:border-b [&_th]:border-gray-200 [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_td]:border-b [&_td]:border-gray-100 [&_td]:px-3 [&_td]:py-2 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6"
             dangerouslySetInnerHTML={{ __html: section.body }}
           />
           {section.bullets && section.bullets.length > 0 && (

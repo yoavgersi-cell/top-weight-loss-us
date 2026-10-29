@@ -16,7 +16,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.topweightloss.us/ozempic-alternatives";
 const TITLE = "Ozempic Alternatives 2026: Wegovy & Mounjaro Options";
 const DESCRIPTION =
-  "Ozempic, Wegovy and Mounjaro alternatives with the same active ingredients: compounded semaglutide and tirzepatide from $49/month through licensed online providers.";
+  "Ozempic, Wegovy and Mounjaro alternatives with the same active ingredients: compounded semaglutide and tirzepatide from $41/month through licensed online providers.";
 
 export const metadata: Metadata = withSeo("/ozempic-alternatives", {
   title: TITLE,
@@ -54,7 +54,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What is a cheaper alternative to Mounjaro?",
     answer:
-      "The most common cheaper alternative to Mounjaro is compounded tirzepatide prescribed online by a telehealth provider. It is the same dual GLP-1/GIP molecule that Mounjaro contains, usually priced well under the brand list price. Without insurance, brand Mounjaro and Zepbound can cost more than $1,000 a month, while telehealth providers often advertise compounded tirzepatide for $89-$299 a month, depending on provider and dose.",
+      "The most common cheaper alternative to Mounjaro is compounded tirzepatide prescribed online by a telehealth provider. It is the same dual GLP-1/GIP molecule that Mounjaro contains, usually priced well under the brand list price. Without insurance, brand Mounjaro and Zepbound can cost more than $1,000 a month, while telehealth providers often advertise compounded tirzepatide for $71-$299 a month, depending on provider and dose.",
   },
   {
     question: "Can I get an Ozempic alternative without insurance?",
@@ -189,7 +189,7 @@ export default async function OzempicAlternativesPage() {
           </div>
           <p className="mb-4">
             Compounded versions typically cost{" "}
-            <strong className="text-[#191919]">around $49-$299 a month</strong>, compared with{" "}
+            <strong className="text-[#191919]">around $41-$299 a month</strong>, compared with{" "}
             <strong className="text-[#191919]">more than $1,000 a month at list price</strong> for
             brand-name Ozempic, Wegovy, Mounjaro or Zepbound without insurance. Insurance coverage for
             weight loss is patchy. Licensed telehealth providers partner with compounding pharmacies to

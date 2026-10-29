@@ -26,7 +26,7 @@ import { PRICE_INDEX_VERIFIED } from "@/lib/price-index";
 // labels as summarised on MedlinePlus and the NIDDK's prescription-medication
 // page, linked inline, with their typical results kept as the hedged ranges
 // this page already carried; provider prices are the verified price index or
-// Ro's published figures; manufacturer prices are reported from dated sources
+// ro's published figures; manufacturer prices are reported from dated sources
 // and labelled as not verified. Nothing is estimated.
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -38,7 +38,7 @@ export const revalidate = 60;
 
 const CANONICAL = "https://www.topweightloss.us/weight-loss-pills";
 const PAGE_PUBLISHED = "2026-08-01";
-const PAGE_UPDATED = "2026-10-22";
+const PAGE_UPDATED = "2026-10-29";
 const HERO_COLOR = "#EEF4F1";
 const READ_TIME = "17 min read";
 
@@ -85,17 +85,20 @@ const SRC = {
   sciam: "https://www.scientificamerican.com/article/how-eli-lillys-new-glp-1-pill-stacks-up-against-wegovy-and-other-weight-loss/",
   noom: "https://www.noom.com/blog/weight-management/wegovy-pill-cost-with-and-without-insurance/",
   bridge: "https://www.stlpr.org/npr/2026-05-06/a-new-medicare-option-for-weight-loss-drugs-is-coming-heres-what-to-know",
+  foundayoLabel: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ac446c5-feba-474f-a103-23facb9b5c62",
+  foundayoDoses: "https://www.goodrx.com/foundayo/dosages",
+  wegovyPillDosing: "https://ro.co/weight-loss/oral-semaglutide-dosing/",
 };
 
 const PRICE_DATE = fmt(PRICE_INDEX_VERIFIED);
 
 const QUICK_ANSWER =
-  "The most effective weight loss pills in 2026 are the two GLP-1 tablets the FDA has approved for weight management. The Wegovy pill (oral semaglutide 25 mg, approved December 2025) averaged 13.6% weight loss in its trial, and Foundayo (orforglipron, approved April 1, 2026) averaged 11.2%. The older prescription pills, Qsymia, Contrave, phentermine and orlistat, typically land around 3-10%, and over-the-counter products have little evidence at all. On cost: Ro charges $149 for the first Wegovy pill month, then $299 plus membership (verified); self-pay prices of $149-$349 a month are reported for the two pills, with $25 on commercial coverage and $50 through Medicare's pilot. Compounded oral semaglutide from telehealth programs is a separate product and is not FDA-approved.";
+  "The most effective weight loss pills in 2026 are the two GLP-1 tablets the FDA has approved for weight management. The Wegovy pill (oral semaglutide 25 mg, approved December 2025) averaged 13.6% weight loss in its trial, and Foundayo (orforglipron, approved April 1, 2026) averaged 11.2%. The older prescription pills, Qsymia, Contrave, phentermine and orlistat, typically land around 3-10%, and over-the-counter products have little evidence at all. On cost: ro charges $149 for the first Wegovy pill month, then $299 plus membership (verified); self-pay prices of $149-$349 a month are reported for the two pills, with $25 on commercial coverage and $50 through Medicare's pilot. Compounded oral semaglutide from telehealth programs is a separate product and is not FDA-approved.";
 
 const KEY_TAKEAWAYS = [
   "The FDA has approved two GLP-1 pills for chronic weight management. The Wegovy pill averaged 13.6% weight loss over 64 weeks (OASIS 4) and Foundayo averaged 11.2% over 72 weeks (ATTAIN-1). Rybelsus is oral semaglutide at diabetes doses and carries no weight-loss approval.",
   "The pre-GLP-1 prescription pills remain useful for the right patient: Qsymia (phentermine/topiramate) and Contrave (naltrexone/bupropion) for long-term treatment, phentermine for a short course, and orlistat, which stops part of dietary fat from being absorbed. Each one has clear exclusions.",
-  "What you pay depends on how you buy. Verified: Ro sells the Wegovy pill at $149 for month one, then $299 plus membership. Reported: Foundayo at $149-$349 self-pay, $25 a month for either pill with commercial coverage, and $50 a month on Medicare's GLP-1 Bridge through December 2027.",
+  "What you pay depends on how you buy. Verified: ro sells the Wegovy pill at $149 for month one, then $299 plus membership. Reported: Foundayo at $149-$349 self-pay, $25 a month for either pill with commercial coverage, and $50 a month on Medicare's GLP-1 Bridge through December 2027.",
   "A compounded oral semaglutide or tirzepatide product is not the Wegovy pill. It is a legal pharmacy-made preparation with no trials of its own and no FDA approval. Over-the-counter diet pills are a bigger risk: the FDA has found hidden, banned drugs in them.",
 ];
 
@@ -118,12 +121,12 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "How much do the FDA-approved GLP-1 pills cost?",
     answer:
-      "Ro, the telehealth route we have verified, charges $149 for the first month of the Wegovy pill and $299 a month after that, plus a membership of $39 the first month and then $74-149. Novo Nordisk's direct self-pay prices are reported at $149-$299 by dose, and Foundayo is listed at $149-$349 a month through LillyDirect. Each manufacturer offers a $25-a-month savings card for people with commercial coverage, and Medicare's GLP-1 Bridge pilot covers both pills at $50 a month through December 2027.",
+      "ro, the telehealth route we have verified, charges $149 for the first month of the Wegovy pill and $299 a month after that, plus a membership of $39 the first month and then $74-149. Novo Nordisk's direct self-pay prices are reported at $149-$299 by dose, and Foundayo is listed at $149-$349 a month through LillyDirect. Each manufacturer offers a $25-a-month savings card for people with commercial coverage, and Medicare's GLP-1 Bridge pilot covers both pills at $50 a month through December 2027.",
   },
   {
     question: "Can you get weight loss pills online?",
     answer:
-      "Yes. A licensed telehealth clinician can assess you online and prescribe an oral weight loss medication if it is appropriate. Ro offers the FDA-approved Wegovy pill, and several providers we review sell compounded oral semaglutide or tirzepatide, which are not FDA-approved. The clinician decides whether a pill or an injection suits your health profile.",
+      "Yes. A licensed telehealth clinician can assess you online and prescribe an oral weight loss medication if it is appropriate. ro offers the FDA-approved Wegovy pill, and several providers we review sell compounded oral semaglutide or tirzepatide, which are not FDA-approved. The clinician decides whether a pill or an injection suits your health profile.",
   },
   {
     question: "Are compounded weight loss pills the same as the Wegovy pill or Foundayo?",
@@ -169,16 +172,16 @@ const SECTIONS: Section[] = [
   },
   {
     heading: "Wegovy pill vs Foundayo vs Rybelsus: the GLP-1 tablets",
-    body: `<p><strong>The GLP-1 tablets contain the same class of medicine as the weekly injections, taken by mouth instead.</strong> Trial figures in the table are the published New England Journal of Medicine results, which count every randomized participant. The manufacturers also cite higher on-treatment figures (16.6% for the Wegovy pill, 12.4% for Foundayo) that only include people who kept taking the pill as directed. Ro's prices are its own published figures, verified by us; manufacturer prices are as reported by the sources linked in the cost section.</p>
+    body: `<p><strong>The GLP-1 tablets contain the same class of medicine as the weekly injections, taken by mouth instead.</strong> Trial figures in the table are the published New England Journal of Medicine results, which count every randomized participant. The manufacturers also cite higher on-treatment figures (16.6% for the Wegovy pill, 12.4% for Foundayo) that only include people who kept taking the pill as directed. ro's prices are its own published figures, verified by us; manufacturer prices are as reported by the sources linked in the cost section.</p>
 <table><thead><tr><th>Pill</th><th>Approval and dosing routine</th><th>Trial result</th><th>Published price</th></tr></thead><tbody>
-<tr><td><strong>Wegovy pill</strong> (oral semaglutide 25 mg), Novo Nordisk</td><td>Approved December 2025 for chronic weight management. One tablet a day on an empty stomach with a sip of water, then 30 minutes before any food</td><td>${ext(SRC.oasis4, "OASIS 4")} (64 weeks): 13.6% average weight loss vs 2.2% with placebo; 30% of participants lost 20% or more</td><td>Ro: $149 for month one, then $299, plus membership (verified). NovoCare self-pay reported at $149-$299 depending on dose; $25 with commercial coverage (reported)</td></tr>
-<tr><td><strong>Foundayo</strong> (orforglipron), Eli Lilly</td><td>Approved April 1, 2026. A small-molecule GLP-1 taken once a day at any time, with no food or water rules; 6, 12 and 36 mg tablets</td><td>${ext(SRC.attain1, "ATTAIN-1")} (72 weeks): 11.2% average weight loss at 36 mg vs 2.1% with placebo; 19% of participants lost 20% or more</td><td>LillyDirect self-pay $149-$349 a month depending on dose; $25 a month with commercial coverage (Lilly, as reported)</td></tr>
+<tr><td><strong>Wegovy pill</strong> (oral semaglutide 25 mg), Novo Nordisk</td><td>Approved December 2025 for chronic weight management. One tablet a day on an empty stomach with a sip of water, then 30 minutes before any food</td><td>${ext(SRC.oasis4, "OASIS 4")} (64 weeks): 13.6% average weight loss vs 2.2% with placebo; 30% of participants lost 20% or more</td><td>ro: $149 for month one, then $299, plus membership (verified). NovoCare self-pay reported at $149-$299 depending on dose; $25 with commercial coverage (reported)</td></tr>
+<tr><td><strong>Foundayo</strong> (orforglipron), Eli Lilly</td><td>Approved April 1, 2026. A small-molecule GLP-1 taken once a day at any time, with no food or water rules; starts at 0.8 mg and steps up at least every 30 days through 2.5, 5.5, 9 and 14.5 mg to a 17.2 mg maximum (${ext(SRC.foundayoLabel, "FDA label")})</td><td>${ext(SRC.attain1, "ATTAIN-1")} (72 weeks): 11.2% average weight loss at the highest dose (reported in the trial as 36 mg) vs 2.1% with placebo; 19% of participants lost 20% or more</td><td>LillyDirect self-pay $149-$349 a month depending on dose; $25 a month with commercial coverage (Lilly, as reported)</td></tr>
 <tr><td><strong>Rybelsus</strong> (oral semaglutide 7-14 mg), Novo Nordisk</td><td>Approved for type 2 diabetes only, not weight management. Follows the same empty-stomach rule as the Wegovy pill</td><td>Some weight loss at diabetes doses, clearly less than the 25 mg Wegovy pill</td><td>Prescribed on its diabetes label; using it for weight loss is off-label and not covered for that purpose</td></tr>
 </tbody></table>
 <h3>How the Wegovy pill works and how you take it</h3>
-<p>The Wegovy pill delivers semaglutide, a peptide, and the gut absorbs peptides poorly. That explains two things: the tablet holds 25 mg of semaglutide compared with 2.4 mg a week in the injection, and it comes with a strict routine. You swallow it on an empty stomach with a small sip of water and then wait about 30 minutes before eating, drinking or taking other medicines; skipping the wait reduces how much drug gets absorbed. Treatment starts at a 1.5 mg tablet and steps up over several months to the 25 mg maintenance dose tested in the trial. The approval covers reducing and keeping off excess weight in adults with obesity, or with overweight plus a weight-related condition, and lowering cardiovascular risk in the same group. For every way to buy it, see <a href="/articles/wegovy-pill-price-online">Wegovy pill price online</a>.</p>
+<p>The Wegovy pill delivers semaglutide, a peptide, and the gut absorbs peptides poorly. That explains two things: the tablet holds 25 mg of semaglutide compared with 2.4 mg a week in the injection, and it comes with a strict routine. You swallow it on an empty stomach with a small sip of water and then wait about 30 minutes before eating, drinking or taking other medicines; skipping the wait reduces how much drug gets absorbed. Treatment starts at a 1.5 mg tablet and steps up monthly to 4 mg, then 9 mg, then the 25 mg maintenance dose tested in the trial (${ext(SRC.wegovyPillDosing, "ro's dosing guide")}). The approval covers reducing and keeping off excess weight in adults with obesity, or with overweight plus a weight-related condition, and lowering cardiovascular risk in the same group. For every way to buy it, see <a href="/articles/wegovy-pill-price-online">Wegovy pill price online</a>.</p>
 <h3>Why Foundayo has no timing rules</h3>
-<p>Foundayo's active ingredient, orforglipron, is a small molecule rather than a peptide, so it is absorbed like most everyday tablets. As a result you can take it at any hour, with or without food or water, moving up through 6 mg, 12 mg and 36 mg tablets. Its average result is lower than the Wegovy pill's, but the two drugs were studied in separate trials of different lengths and have never been compared directly. Foundayo's strongest selling point is convenience for people who take other morning medicines, want coffee as soon as they wake, or will not stick to a timed routine. Our <a href="/articles/foundayo-vs-wegovy-pill">Foundayo vs Wegovy pill</a> comparison goes through the differences in detail.</p>
+<p>Foundayo's active ingredient, orforglipron, is a small molecule rather than a peptide, so it is absorbed like most everyday tablets. As a result you can take it at any hour, with or without food or water. Per the ${ext(SRC.foundayoLabel, "FDA label")}, treatment starts at 0.8 mg once daily, moves to 2.5 mg after at least 30 days and to 5.5 mg after at least another 30 days; if more is needed, the dose can rise to 9 mg, 14.5 mg and a maximum of 17.2 mg at 30-day intervals (${ext(SRC.foundayoDoses, "GoodRx dosage guide")}). The ATTAIN-1 trial reported its doses as 6, 12 and 36 mg, which is why those numbers appear in trial coverage. The label also advises people using oral hormonal birth control to switch to a non-oral method, or add a barrier method, for 30 days after starting Foundayo and for 30 days after each dose increase. Its average result is lower than the Wegovy pill's, but the two drugs were studied in separate trials of different lengths and have never been compared directly. Foundayo's strongest selling point is convenience for people who take other morning medicines, want coffee as soon as they wake, or will not stick to a timed routine. Our <a href="/articles/foundayo-vs-wegovy-pill">Foundayo vs Wegovy pill</a> comparison goes through the differences in detail.</p>
 <h3>Why Rybelsus is not a weight loss pill</h3>
 <p>Rybelsus contains the same semaglutide as the Wegovy pill, but at 7 mg and 14 mg, and it is approved for type 2 diabetes. Weight does come down on it, yet the doses are far lower than the 25 mg weight-management tablet, the empty-stomach rule still applies, and insurers will not cover it for weight loss because that use is not on its label. Being offered Rybelsus "for weight loss" means being offered an off-label diabetes medicine when an approved weight-loss version of the same molecule is available.</p>`,
   },
@@ -188,7 +191,7 @@ const SECTIONS: Section[] = [
 <table><thead><tr><th>Factor</th><th>GLP-1 pills</th><th>GLP-1 injections</th></tr></thead><tbody>
 <tr><td>Average trial weight loss</td><td>13.6% (Wegovy pill, OASIS 4) and 11.2% (Foundayo, ATTAIN-1) at the highest doses</td><td>14.9% (semaglutide, ${ext(SRC.step1, "STEP 1")}) up to 20.9% (tirzepatide 15 mg, ${ext(SRC.surmount1, "SURMOUNT-1")})</td></tr>
 <tr><td>How it is taken</td><td>One tablet a day, no needles</td><td>One injection a week, from a pen or a compounded vial</td></tr>
-<tr><td>Published price</td><td>From $149 a month at the starting dose; $299 (Wegovy pill) to $349 (Foundayo) at the top dose, as reported; $25 with commercial coverage</td><td>Brand pens $1,149-$1,799 a month cash at the providers we track; compounded from $49 (semaglutide) and $89 (tirzepatide)</td></tr>
+<tr><td>Published price</td><td>From $149 a month at the starting dose; $299 (Wegovy pill) to $349 (Foundayo) at the top dose, as reported; $25 with commercial coverage</td><td>Brand pens $1,149-$1,799 a month cash at the providers we track; compounded from $41 (semaglutide) and $71 (tirzepatide)</td></tr>
 <tr><td>Daily routine</td><td>Wegovy pill and Rybelsus require empty-stomach timing; Foundayo has no rules</td><td>A single weekly dose and nothing in between</td></tr>
 <tr><td>Best suited to</td><td>People who avoid needles, prefer a daily habit or, with Foundayo, want no rules at all</td><td>People who want the highest average weight loss, or the lowest cash price through compounding</td></tr>
 </tbody></table>
@@ -217,15 +220,15 @@ const SECTIONS: Section[] = [
   },
   {
     heading: "How much do weight loss pills cost?",
-    body: `<p><strong>GLP-1 pills cost $149-$349 a month self-pay as reported, $25 with commercial coverage and $50 on Medicare's pilot; the older pills are mostly cheap generics.</strong> The GLP-1 tablets are new brand-name drugs with brand-name pricing, and savings cards or Medicare's pilot can change what you pay completely. We do not list prices for the older generic pills because they vary by pharmacy and plan; a pharmacist can quote you the cash price quickly. Ro's figures below are its own published prices, verified by us in August 2026. Manufacturer prices come from the dated sources linked and have not been verified by us.</p>
+    body: `<p><strong>GLP-1 pills cost $149-$349 a month self-pay as reported, $25 with commercial coverage and $50 on Medicare's pilot; the older pills are mostly cheap generics.</strong> The GLP-1 tablets are new brand-name drugs with brand-name pricing, and savings cards or Medicare's pilot can change what you pay completely. We do not list prices for the older generic pills because they vary by pharmacy and plan; a pharmacist can quote you the cash price quickly. ro's figures below are its own published prices, verified by us in August 2026. Manufacturer prices come from the dated sources linked and have not been verified by us.</p>
 <table><thead><tr><th>Route</th><th>Wegovy pill</th><th>Foundayo</th></tr></thead><tbody>
-<tr><td>Telehealth (verified)</td><td><a href="/reviews/ro">Ro</a>: <strong>$149</strong> for month one, then <strong>$299</strong>, plus membership ($39 first month, then $74-$149)</td><td>Sold through LillyDirect and telehealth providers according to Lilly; no provider we track has published a price we could verify</td></tr>
+<tr><td>Telehealth (verified)</td><td><a href="/reviews/ro">ro</a>: <strong>$149</strong> for month one, then <strong>$299</strong>, plus membership ($39 first month, then $74-$149)</td><td>Sold through LillyDirect and telehealth providers according to Lilly; no provider we track has published a price we could verify</td></tr>
 <tr><td>Direct from the manufacturer, self-pay (reported)</td><td><strong>$149-$299</strong> a month depending on dose through NovoCare Pharmacy, according to ${ext(SRC.noom, "third-party trackers")}; not verified by us</td><td><strong>$149-$349</strong> a month depending on dose through LillyDirect, as reported by ${ext(SRC.sciam, "Scientific American")} from Lilly material</td></tr>
 <tr><td>Commercial insurance that covers the drug (reported)</td><td><strong>as low as $25</strong> with Novo Nordisk's savings offer, limited to $100 of savings per 30-day supply</td><td><strong>$25</strong> with Lilly's savings card, according to its ${ext(SRC.lillyRelease, "April 9, 2026 release")}</td></tr>
 <tr><td>Medicare GLP-1 Bridge</td><td><strong>$50</strong> flat copay</td><td><strong>$50</strong> flat copay</td></tr>
 </tbody></table>
 <p>The Medicare GLP-1 Bridge is a CMS pilot that runs from ${ext(SRC.bridge, "July 1, 2026 through December 31, 2027")}. It covers the Wegovy pill and injection, the Zepbound KwikPen and Foundayo at $50 a month at any dose, with eligibility and approval handled by your Part D plan. Neither manufacturer savings card can be used with Medicare or Medicaid.</p>
-<p>For comparison, at the providers we track, compounded semaglutide injections cost $49-$199 a month and compounded tirzepatide $89-$299, verified on each provider's site on ${PRICE_DATE}. If you are paying cash and dislike needles, read <a href="/articles/what-100-to-200-a-month-gets-you-glp1">what $100-$200 a month gets you</a> before deciding a pill is worth the extra cost. To check your formulary first, use <a href="/articles/glp1-with-insurance">our insurance guide</a>, and for Medicare questions see <a href="/articles/glp1-after-65-medicare">GLP-1s after 65</a>.</p>`,
+<p>For comparison, at the providers we track, compounded semaglutide injections cost $41-$199 a month and compounded tirzepatide $71-$299, verified on each provider's site on ${PRICE_DATE}. If you are paying cash and dislike needles, read <a href="/articles/what-100-to-200-a-month-gets-you-glp1">what $100-$200 a month gets you</a> before deciding a pill is worth the extra cost. To check your formulary first, use <a href="/articles/glp1-with-insurance">our insurance guide</a>, and for Medicare questions see <a href="/articles/glp1-after-65-medicare">GLP-1s after 65</a>.</p>`,
   },
   {
     heading: "Is compounded oral semaglutide the same as the Wegovy pill?",
@@ -261,9 +264,9 @@ const SECTIONS: Section[] = [
     body: `<p><strong>The right pill depends on your coverage, budget and health history.</strong> Most readers match one of these situations:</p>
 <p><strong>Your insurance covers a GLP-1 and you want the strongest pill.</strong> Pick the Wegovy pill or Foundayo, whichever your plan covers, at a reported $25 a month with the savings card. The Wegovy pill has the bigger trial result; Foundayo has no timing rules.</p>
 <p><strong>You have Medicare.</strong> Ask your Part D plan about the GLP-1 Bridge, which covers both pills at a flat $50 that does not rise with the dose. Decide on routine and results rather than price.</p>
-<p><strong>You want a GLP-1 pill and will pay cash.</strong> Ro is the telehealth route for the Wegovy pill we have verified, at $149 and then $299 plus membership. For Foundayo, the reference is LillyDirect's reported $149-$349. Plan around the maintenance-dose price rather than month one, and do not accept a compounded "pill" in place of an approved one.</p>
+<p><strong>You want a GLP-1 pill and will pay cash.</strong> ro is the telehealth route for the Wegovy pill we have verified, at $149 and then $299 plus membership. For Foundayo, the reference is LillyDirect's reported $149-$349. Plan around the maintenance-dose price rather than month one, and do not accept a compounded "pill" in place of an approved one.</p>
 <p><strong>You cannot take a GLP-1, or you need less weight loss.</strong> Qsymia is the strongest older pill and Contrave suits eating driven by cravings. Both are long-term options with specific exclusions, and a clinician who knows your history picks between them.</p>
-<p><strong>You want the lowest cost with evidence behind it.</strong> Consider generic phentermine for a short start, or orlistat; both are inexpensive at a pharmacy. If a weekly injection is acceptable, compounded semaglutide starts at $49 a month and produces much more weight loss than any older pill. <a href="/">Our provider comparison</a> lists every verified compounded price.</p>
+<p><strong>You want the lowest cost with evidence behind it.</strong> Consider generic phentermine for a short start, or orlistat; both are inexpensive at a pharmacy. If a weekly injection is acceptable, compounded semaglutide starts at $41 a month and produces much more weight loss than any older pill. <a href="/">Our provider comparison</a> lists every verified compounded price.</p>
 <p><strong>You were about to buy an over-the-counter product.</strong> Read the FDA section above first. Alli is the only one with an approval; with the rest you are gambling on what is inside as well as on results.</p>
 <p>In every case, the prescriber decides based on your history rather than a table, and may decline to prescribe any of these.</p>`,
   },
@@ -276,7 +279,7 @@ const SECTIONS: Section[] = [
 <li>If appropriate, you receive a prescription, filled by the provider's partner pharmacy and shipped to you, or sent to a pharmacy you choose when insurance applies.</li>
 <li>Follow-up continues as the dose increases, or at the 12-week check the older pills' labels require.</li>
 </ol>
-<p>For the FDA-approved Wegovy pill, <a href="/reviews/ro">Ro</a> is the provider we have verified. For compounded oral or injectable semaglutide and tirzepatide, every provider below and on our <a href="/">comparison</a> requires a clinician review before prescribing. Our <a href="/articles/glp1-weight-loss-online-complete-guide">complete guide to GLP-1 weight loss online</a> covers each step, including how to check the pharmacy and the refund terms if you are not approved.</p>
+<p>For the FDA-approved Wegovy pill, <a href="/reviews/ro">ro</a> is the provider we have verified. For compounded oral or injectable semaglutide and tirzepatide, every provider below and on our <a href="/">comparison</a> requires a clinician review before prescribing. Our <a href="/articles/glp1-weight-loss-online-complete-guide">complete guide to GLP-1 weight loss online</a> covers each step, including how to check the pharmacy and the refund terms if you are not approved.</p>
 <p><em>This guide offers general information and is not medical advice. Prescription weight loss medicines need assessment and supervision by a licensed healthcare provider, who decides whether any of them suits you.</em></p>`,
   },
 ];
@@ -404,6 +407,10 @@ export default async function WeightLossPillsPage() {
               pills, compounded oral products and over-the-counter diet pills: how each works, its
               trial evidence, its price and who should avoid it.
             </p>
+            <p className="mt-2 max-w-[640px] text-[13.5px] leading-[1.5] text-gray-500">
+              Comparing pills with injections on price, or paying through Medicare? See our{" "}
+              <Link href="/articles/glp1-cost-2026-how-to-pay-less" className="font-semibold text-[#0C4B75] underline underline-offset-2">2026 GLP-1 cost guide</Link>.
+            </p>
             <p className="mt-2 text-[12px] text-gray-400">Updated {fmt(PAGE_UPDATED)}</p>
             <MedicalReviewBar path="/weight-loss-pills" className="mt-3 max-w-[760px]" />
           </div>
@@ -415,7 +422,7 @@ export default async function WeightLossPillsPage() {
               <strong>Short answer</strong>
               {QUICK_ANSWER}
               <span className="mt-2 block text-[13px] text-gray-500">
-                Trial numbers are the published treatment-policy results linked in the guide. Ro&rsquo;s price
+                Trial numbers are the published treatment-policy results linked in the guide. ro&rsquo;s price
                 is its own published figure, which we verified in August 2026; manufacturer prices come from
                 dated reports and have not been verified by us.
               </span>
@@ -524,10 +531,11 @@ export default async function WeightLossPillsPage() {
               Sources: FDA approvals: the Wegovy pill (oral semaglutide 25 mg), approval announced December 22,
               2025 (Healio), and Foundayo (orforglipron), approved April 1, 2026 (FDA). Trials: OASIS 4 and
               ATTAIN-1, published in the New England Journal of Medicine in September 2025 and summarized by the
-              American College of Cardiology, plus STEP 1 and SURMOUNT-1 for the injections. Older pills: label
+              American College of Cardiology, plus STEP 1 and SURMOUNT-1 for the injections. Dosing: the Foundayo
+              FDA label (DailyMed) and GoodRx&rsquo;s Foundayo dosage guide; ro&rsquo;s Wegovy pill dosing guide. Older pills: label
               information as summarized by MedlinePlus (phentermine/topiramate, naltrexone/bupropion) and the
               NIDDK&rsquo;s overview of prescription medicines for overweight and obesity; typical results are
-              approximate ranges from their registration trials. Prices: Ro&rsquo;s published pricing, verified
+              approximate ranges from their registration trials. Prices: ro&rsquo;s published pricing, verified
               August 2026; compounded prices verified {PRICE_DATE}; Foundayo and NovoCare prices and savings
               cards as reported by Scientific American, Lilly&rsquo;s April 9, 2026 release and third-party
               trackers, not verified by us. Weight-loss figures are trial averages and individual results

@@ -92,6 +92,9 @@ export default async function PriceChangesPage() {
             the provider&rsquo;s own website, with the date, our previous listing and our current listing. Nothing is added
             until it has been checked.
           </p>
+          <p className="mt-2 max-w-[720px] text-[14px] leading-relaxed text-gray-500">
+            For brand-name prices, the Medicare GLP-1 Bridge and insurance, see our <Link href="/articles/glp1-cost-2026-how-to-pay-less" className="font-semibold text-[#0C4B75] underline underline-offset-2">2026 GLP-1 cost guide</Link>.
+          </p>
           <LastUpdated date={latest} className="mt-4" />
           <MedicalReviewBar path="/glp1-price-changes" className="mt-4 max-w-[760px]" />
           <TrustDisclosure disclaimerHref="/disclaimer" />
@@ -107,7 +110,7 @@ export default async function PriceChangesPage() {
               Mostly down. We have logged <strong className="text-[#191919]">{entries.length} verified changes</strong> from{" "}
               {providersChanged} providers since {monthLabel(earliest)}, including {thisMonth} in {monthLabel(PRICE_INDEX_VERIFIED)}.
               Prices have either dropped or promotions have been extended: welludr lowered its 12-month rates to $49 for semaglutide
-              and $89 for tirzepatide, TrimRx switched semaglutide to a flat $149 at every dose, and altRx extended its $89 / $149
+              and $89 for tirzepatide and then to from $41 and $71 in its October 28 Pre-Black Friday sale, TrimRx switched semaglutide to a flat $149 at every dose, and altRx extended its $89 / $149
               promotion twice. See today&rsquo;s full price ranking, with every condition, in the{" "}
               <Link href="/cheapest-glp1" className={ext}>cheapest GLP-1 comparison</Link>. The index was last checked on{" "}
               {longDate(PRICE_INDEX_VERIFIED)}.

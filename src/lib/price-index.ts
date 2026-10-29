@@ -27,9 +27,9 @@ export type PriceIndexRow = {
 export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "wellmedr",
-    edge: "Lowest ongoing price in this index, with one price at every dose",
-    semaglutide: { price: "$49", note: "12-month plan; locked for life" },
-    tirzepatide: { price: "$89", note: "shipped every 4 weeks" },
+    edge: "Lowest price in this index during its Pre-Black Friday sale",
+    semaglutide: { price: "from $41", note: "Pre-Black Friday sale, from Oct 28, 2026" },
+    tirzepatide: { price: "from $71", note: "Pre-Black Friday sale, from Oct 28, 2026" },
     shipping: "Ships in 3-5 business days",
     commitment: "12-month plan for the lowest rate; cancel or change anytime",
     trustpilot: { rating: "4.6", count: "2,188" },
@@ -118,6 +118,12 @@ export const PRICE_INDEX_VERIFIED = "2026-10-16";
 // an entry when the underlying row actually changed after verification - this
 // log is published on the statistics page as the citable record.
 export const PRICE_CHANGELOG: { date: string; providerId: string; change: string }[] = [
+  {
+    date: "2026-10-28",
+    providerId: "wellmedr",
+    change:
+      "welludr launched a Pre-Black Friday sale: compounded semaglutide from $41/month (was $49 on the 12-month plan) and compounded tirzepatide from $71/month (was $89), effective October 28, 2026, per welludr's partner pricing notice.",
+  },
   {
     date: "2026-09-21",
     providerId: "altrx",

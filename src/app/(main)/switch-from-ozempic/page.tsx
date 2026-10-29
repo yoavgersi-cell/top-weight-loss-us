@@ -19,7 +19,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.topweightloss.us/switch-from-ozempic";
 const TITLE = "Switch From Ozempic to Compounded Semaglutide";
 const DESCRIPTION =
-  "Spending $1,000+/month on Ozempic or Wegovy? Compounded semaglutide, the same GLP-1 molecule, costs $49-$199/month online. Here is how the switch works in 2026.";
+  "Spending $1,000+/month on Ozempic or Wegovy? Compounded semaglutide, the same GLP-1 molecule, costs $41-$199/month online. Here is how the switch works in 2026.";
 
 export const metadata: Metadata = withSeo("/switch-from-ozempic", {
   title: { absolute: `${TITLE} | Top Weight Loss` },
@@ -65,7 +65,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "How much cheaper is compounded semaglutide than Ozempic?",
     answer:
-      "A lot cheaper. Our providers list brand Ozempic at $1,149-$1,399/month and Wegovy at $1,579/month, while compounded semaglutide costs $49-$199/month depending on provider and plan. Even comparing against the priciest compounded option, you save about $950 a month, or more than $11,000 a year.",
+      "A lot cheaper. Our providers list brand Ozempic at $1,149-$1,399/month and Wegovy at $1,579/month, while compounded semaglutide costs $41-$199/month depending on provider and plan. Even comparing against the priciest compounded option, you save about $950 a month, or more than $11,000 a year.",
   },
   {
     question: "Will I stay on the same dose after switching from Ozempic?",
@@ -75,7 +75,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "Can I switch from Zepbound or Mounjaro to compounded tirzepatide?",
     answer:
-      "Yes. The process is the same, but the molecule is tirzepatide, the active ingredient in Zepbound and Mounjaro. Compounded tirzepatide costs from $89/month (welludr) to $299/month (SHED), compared with $1,249-$1,599/month for brand Zepbound. Report your current dose in the intake just as you would for semaglutide.",
+      "Yes. The process is the same, but the molecule is tirzepatide, the active ingredient in Zepbound and Mounjaro. Compounded tirzepatide costs from $71/month (welludr) to $299/month (SHED), compared with $1,249-$1,599/month for brand Zepbound. Report your current dose in the intake just as you would for semaglutide.",
   },
   {
     question: "Is it safe to switch to compounded semaglutide?",
@@ -134,7 +134,7 @@ export default async function SwitchFromOzempicPage() {
           </h1>
           <p className="mt-3 max-w-[680px] text-[15.5px] leading-relaxed text-gray-500">
             Already on a brand-name GLP-1 injection? You can move to the same active ingredient for
-            $49-$299/month. This guide walks through each step of the switch, what the new clinician
+            $41-$299/month. This guide walks through each step of the switch, what the new clinician
             decides and what to check before you commit.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
@@ -151,7 +151,7 @@ export default async function SwitchFromOzempicPage() {
           </p>
           <p className="text-[15.5px] leading-[1.85] text-gray-800">
             Yes. Licensed telehealth providers prescribe compounded versions of the same molecules for{" "}
-            <strong className="text-[#191919]">$49-$299/month</strong>, compared with
+            <strong className="text-[#191919]">$41-$299/month</strong>, compared with
             $1,149-$1,599/month for the brands at list price. Ozempic and Wegovy contain{" "}
             <strong className="text-[#191919]">semaglutide</strong>, and Zepbound and Mounjaro contain{" "}
             <strong className="text-[#191919]">tirzepatide</strong>. To switch, you complete the new
@@ -191,7 +191,7 @@ export default async function SwitchFromOzempicPage() {
                       <p className="mt-0.5 text-[11.5px] text-gray-400">{row.soldAt}</p>
                     </td>
                     <td className="px-4 py-4 text-[14.5px] font-extrabold text-emerald-700 [font-variant-numeric:tabular-nums]">
-                      {row.ingredient === "Tirzepatide" ? "$89/mo" : "$49/mo"}
+                      {row.ingredient === "Tirzepatide" ? "$71/mo" : "$41/mo"}
                     </td>
                   </tr>
                 ))}
@@ -199,7 +199,7 @@ export default async function SwitchFromOzempicPage() {
             </table>
           </div>
           <p className="mt-3 text-[13px] text-gray-400">
-            The biggest gap, Wegovy at $1,579 versus welludr&rsquo;s $49 semaglutide plan, adds up to
+            The biggest gap, Wegovy at $1,579 versus welludr&rsquo;s $41 semaglutide sale price, adds up to
             more than $18,000 a year. Compounded products are not FDA-approved, so quality depends on
             the pharmacy; use the checklist below to vet it.
           </p>
