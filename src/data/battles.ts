@@ -1152,11 +1152,11 @@ const rowellmedrBattle: BattleData = {
     {
       name: "Medications and Formulations",
       winner: "provider1",
-      explanation: "welludr has the more distinctive lineup: compounded GLP-1/GIP tirzepatide plus an Energy & Focus+ microdose that combines semaglutide with NAD+ and vitamin B12. ro offers solid standard options, compounded semaglutide and brand-name GLP-1s, reviewed by licensed providers. For a broader toolkit, welludr is ahead.",
+      explanation: "welludr has the more distinctive lineup: compounded GLP-1/GIP tirzepatide plus an Energy & Focus+ microdose that combines semaglutide with NAD+ and vitamin B12. ro offers solid standard options, brand-name GLP-1s only (the Wegovy pill, Wegovy pen and Zepbound KwikPen), reviewed by licensed providers. For a broader toolkit, welludr is ahead.",
       supportingPoints: [
         "welludr: tirzepatide GLP-1/GIP treatment",
         "welludr: semaglutide + NAD+/B12 microdose",
-        "ro: compounded semaglutide plus brand-name GLP-1",
+        "ro: brand-name GLP-1s (Wegovy, Zepbound)",
         "Both: licensed provider review",
       ],
     },

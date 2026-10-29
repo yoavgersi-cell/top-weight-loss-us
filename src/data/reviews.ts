@@ -199,10 +199,9 @@ Two caveats before you decide. First, delivery is slower than at 1-2 day provide
       "Ongoing care and dose adjustments",
       "Easy online sign-up"
     ],
-    pricingSummary: "ro's monthly price covers provider consultations and medication. You do not need insurance, and some plans may qualify for FSA/HSA payment.",
+    pricingSummary: "ro bills a membership for provider care, and the medication is billed separately: brand-name GLP-1s at ro's cash prices, or through your insurance if your plan covers them. Some plans may qualify for FSA/HSA payment.",
     treatmentOptions: [
-      "Compounded semaglutide",
-      "Brand-name GLP-1 medication",
+      "Brand-name GLP-1 medication (Wegovy pill, Wegovy pen, Zepbound KwikPen)",
       "Metabolic support supplements",
       "Dose changes guided by your provider"
     ],
