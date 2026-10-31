@@ -1,6 +1,7 @@
 // Page-level meta titles and descriptions for topweightloss.us, written for
 // this domain. Applied over each template's generated metadata.
 export const SEO_META: Record<string, { title: string; description: string }> = {
+  "/articles/new-weight-loss-drugs-2026-2027": { title: "New Weight Loss Drugs 2026-2027: What's Coming and When", description: "Retatrutide averaged 25-28% weight loss in Phase 3, CagriSema awaits an FDA decision, MariTide and amycretin are next. Timelines, side effects, costs, waiting." },
   "/articles/glp1-cost-2026-how-to-pay-less": { title: "GLP-1 Cost 2026: Wegovy, Zepbound Prices and Medicare $50", description: "Wegovy from $199, Zepbound from $299, Medicare's $50 GLP-1 Bridge, employer coverage at 18% and compounded from $41: every way to pay less for a GLP-1 in 2026." },
   "/articles/glp1-side-effects-risks-2026": { title: "GLP-1 Side Effects in 2026: Rare Risks, Real Odds, Evidence", description: "From nausea (44% on Wegovy) to gallstones, pancreatitis and NAION vision loss: every GLP-1 side effect with real odds from FDA labels, EMA and trials." },
   "/compare": { title: "GLP-1 Provider Comparisons 2026: Every Head-to-Head", description: "Every online GLP-1 matchup in one table: our pick for each pair, semaglutide prices side by side from $41/mo, and links to 37 full comparisons." },

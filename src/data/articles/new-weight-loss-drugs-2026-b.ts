@@ -376,6 +376,146 @@ export const pipelineSectionsB: Article["sections"] = [
 <h3>Important notes</h3>
 <p>Retatrutide, CagriSema, amycretin, MariTide, survodutide and the other investigational drugs in this guide are not FDA-approved and cannot be legally prescribed outside a clinical trial. Compounded GLP-1s are not FDA-approved and are not generic drugs.</p>
 <p>Top Weight Loss is an independent comparison site. We earn fees from some of the providers listed on our site, which does not change the facts reported here. Our guide is educational and is not medical advice. Talk to a licensed clinician before starting, stopping or switching any medication.</p>
-<!--SOURCES-->`,
+<h3>Every source cited in this guide (138)</h3>
+<ul>
+<li><a href="https://www.Drugs.com/news/new-competitor-wegovy-retatrutide-shows-promise-clinical-trials-113448.html" target="_blank" rel="noopener">Drugs.com</a>: Phase 2 trial published in NEJM in June 2023</li>
+<li><a href="https://www.acc.org/latest-in-cardiology/clinical-trials/2023/11/09/15/04/select" target="_blank" rel="noopener">acc.org</a>: SELECT</li>
+<li><a href="https://www.acc.org/latest-in-cardiology/journal-scans/2025/12/09/16/51/surmount-4" target="_blank" rel="noopener">acc.org</a>: SURMOUNT-4</li>
+<li><a href="https://www.ad-hoc-news.de/boerse/news/corporate-news/novo-nordisk-stock-enters-november-with-obesity-data-catalyst/70438435" target="_blank" rel="noopener">ad-hoc-news.de</a>: market report</li>
+<li><a href="https://www.aha.org/news/headline/2026-04-22-cms-delays-part-d-portion-balance-model-expansion-glp-1-access" target="_blank" rel="noopener">aha.org</a>: AHA News</li>
+<li><a href="https://americanmedspa.org/news/fda-approves-first-glp-1-generic-for-weight-loss" target="_blank" rel="noopener">americanmedspa.org</a>: AmSpa</li>
+<li><a href="https://www.amgen.com/newsroom/press-releases/2025/06/results-from-amgens-phase-2-obesity-study-of-monthly-maritide-presented-at-the-american-diabetes-association-85th-scientific-sessions" target="_blank" rel="noopener">amgen.com</a>: Amgen reported</li>
+<li><a href="https://assets.roche.com/f/176343/x/20033a15c4/ada-ir-event_08-june-2026_final.pdf" target="_blank" rel="noopener">assets.roche.com</a>: Roche</li>
+<li><a href="https://www.biopharmadive.com/news/viking-oral-obesity-drug-results-study-discontinuationsdata-dropout/758019/" target="_blank" rel="noopener">biopharmadive.com</a>: BioPharma Dive</li>
+<li><a href="https://www.biopharmadive.com/news/medicare-price-negotiation-wegovy-ozempic-trelegy-2027/806526/" target="_blank" rel="noopener">biopharmadive.com</a>: BioPharma Dive</li>
+<li><a href="https://www.biospace.com/press-releases/novo-nordisk-a-s-cagrisema-2-4-mg-2-4-mg-demonstrated-22-7-mean-weight-reduction-in-adults-with-overweight-or-obesity-in-redefine-1-published-in-new-england-journal-of-medicine" target="_blank" rel="noopener">biospace.com</a>: Novo</li>
+<li><a href="https://www.biospace.com/novo-nordisk-receives-fda-approval-for-wegovy-to-treat-adults-with-obesity-based-on-unprecedented-efficacy-for-a-prescription-medicine-in-clinical-trials" target="_blank" rel="noopener">biospace.com</a>: Wegovy was approved on June 4, 2021</li>
+<li><a href="https://www.biospace.com/fda-approves-new-drug-treatment-for-chronic-weight-management-first-since-2014" target="_blank" rel="noopener">biospace.com</a>: 2014, when Saxenda was approved</li>
+<li><a href="https://www.biospace.com/press-releases/lillys-retatrutide-delivered-greater-a1c-reduction-and-more-than-double-the-weight-loss-of-ozempics-highest-approved-dose-in-head-to-head-trial" target="_blank" rel="noopener">biospace.com</a>: Lilly's release</li>
+<li><a href="https://www.biospace.com/fda/lilly-fda-retatrutide-biologic-dispute-comes-to-a-head-as-submission-nears" target="_blank" rel="noopener">biospace.com</a>: "continuing to collect some manufacturing-related data"</li>
+<li><a href="https://www.biospace.com/press-releases/lillys-triple-agonist-retatrutide-successful-in-two-additional-phase-3-obesity-trials-delivering-significant-improvements-in-weight-and-a1c" target="_blank" rel="noopener">biospace.com</a>: Lilly via BioSpace</li>
+<li><a href="https://biotechbreakdowns.substack.com/p/cagrisemas-25-in-women-a-real-number" target="_blank" rel="noopener">biotechbreakdowns.substack.com</a>: this analysis</li>
+<li><a href="https://www.boehringer-ingelheim.com/us/human-health/metabolic-diseases/results-phase-iii-synchronize-1-obesity-trial" target="_blank" rel="noopener">boehringer-ingelheim.com</a>: Boehringer</li>
+<li><a href="https://www.boehringer-ingelheim.com/us/human-health/metabolic-diseases/positive-data-two-phase-iii-synchronize-obesity-trials" target="_blank" rel="noopener">boehringer-ingelheim.com</a>: SYNCHRONIZE-MASLD results</li>
+<li><a href="https://www.businessgrouphealth.org/newsroom/news-and-press-releases/press-releases/2027-employer-healthcare-strategy-survey" target="_blank" rel="noopener">businessgrouphealth.org</a>: BGH</li>
+<li><a href="https://clinicaltrials.gov/study/NCT06383390" target="_blank" rel="noopener">clinicaltrials.gov</a>: TRIUMPH-Outcomes trial</li>
+<li><a href="https://clinicaltrials.gov/study/NCT06632444" target="_blank" rel="noopener">clinicaltrials.gov</a>: ClinicalTrials.gov</li>
+<li><a href="https://www.clinicaltrialsarena.com/news/novo-nordisks-cagrisema-bested-by-lillys-zepbound-in-head-to-head-trial/" target="_blank" rel="noopener">clinicaltrialsarena.com</a>: Clinical Trials Arena</li>
+<li><a href="https://www.clinicaltrialsarena.com/news/jpm26-amgen-maritide-obesity-t2d-phase-ii/" target="_blank" rel="noopener">clinicaltrialsarena.com</a>: Clinical Trials Arena</li>
+<li><a href="https://cm.healio.com/news/endocrinology/20220604/weekly-tirzepatide-confers-substantial-weight-loss-in-obesity-without-diabetes-surmount1" target="_blank" rel="noopener">cm.healio.com</a>: Healio</li>
+<li><a href="https://www.cms.gov/files/document/glp-1-prescribers-c-1.pdf" target="_blank" rel="noopener">cms.gov</a>: CMS prescriber guidance</li>
+<li><a href="https://www.cms.gov/medicare/coverage/prescription-drug-coverage/medicare-glp-1-bridge" target="_blank" rel="noopener">cms.gov</a>: CMS</li>
+<li><a href="https://www.cms.gov/medicare/coverage/prescription-drug-coverage/medicare-glp-1-bridge/information-part-d-plans" target="_blank" rel="noopener">cms.gov</a>: CMS</li>
+<li><a href="https://www.cnbc.com/2026/04/01/eli-lilly-glp-1-pill-foundayo-approved-for-obesity.html" target="_blank" rel="noopener">cnbc.com</a>: Lilly's Foundayo (orforglipron) pill was approved on April 1, 2026</li>
+<li><a href="https://www.cnbc.com/2026/08/12/lilly-lawsuits-obesity-drug-retatrutide.html" target="_blank" rel="noopener">cnbc.com</a>: sued six US businesses on August 12, 2026</li>
+<li><a href="https://www.cnbc.com/2026/10/29/eli-lilly-lly-earnings-q3-2026.html" target="_blank" rel="noopener">cnbc.com</a>: CNBC</li>
+<li><a href="https://www.cnbc.com/2025/11/06/trump-eli-lilly-novo-nordisk-deal-obesity-drug-prices.html" target="_blank" rel="noopener">cnbc.com</a>: CNBC</li>
+<li><a href="https://www.cnbc.com/2026/04/01/eli-lilly-opposes-trump-mfn-drug-pricing-law-ceo-ricks-says.html" target="_blank" rel="noopener">cnbc.com</a>: CNBC</li>
+<li><a href="https://www.cnn.com/2026/01/06/health/wegovy-pill-weight-loss-explained" target="_blank" rel="noopener">cnn.com</a>: CNN</li>
+<li><a href="https://content.govdelivery.com/accounts/USFDA/bulletins/3f14120" target="_blank" rel="noopener">content.govdelivery.com</a>: FDA bulletin</li>
+<li><a href="https://discovery.ucl.ac.uk/10127569/1/nejmoa2032183.pdf" target="_blank" rel="noopener">discovery.ucl.ac.uk</a>: NEJM</li>
+<li><a href="https://discovery.ucl.ac.uk/id/eprint/10149199/" target="_blank" rel="noopener">discovery.ucl.ac.uk</a>: STEP 1 extension</li>
+<li><a href="https://doi.org/10.1001/jamanetworkopen.2026.38929" target="_blank" rel="noopener">doi.org</a>: JAMA Network Open</li>
+<li><a href="https://www.drugdiscoverytrends.com/lillys-retatrutide-shows-28-3-weight-loss-but-increased-side-effects/" target="_blank" rel="noopener">drugdiscoverytrends.com</a>: has not been established</li>
+<li><a href="https://www.drugtopics.com/view/cagrisema-did-not-meet-primary-end-point-of-noninferiority-to-tirzepatide" target="_blank" rel="noopener">drugtopics.com</a>: REDEFINE 4</li>
+<li><a href="https://endpoints.news/novo-nordisk-plans-phase-3-trials-of-oral-injectable-amycretin/" target="_blank" rel="noopener">endpoints.news</a>: Endpoints</li>
+<li><a href="https://www.engineering.upenn.edu/stories/penn-engineers-use-ai-reddit-to-identify-potential-side-effects-of-unapproved-new-glp-1/" target="_blank" rel="noopener">engineering.upenn.edu</a>: Penn Engineering</li>
+<li><a href="https://www.eurekalert.org/news-releases/1118938" target="_blank" rel="noopener">eurekalert.org</a>: EurekAlert</li>
+<li><a href="https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/asn-labs-09092025" target="_blank" rel="noopener">fda.gov</a>: cannot lawfully be compounded</li>
+<li><a href="https://www.fda.gov/news-events/press-announcements/fda-warns-30-telehealth-companies-against-illegal-marketing-compounded-glp-1s" target="_blank" rel="noopener">fda.gov</a>: FDA</li>
+<li><a href="https://www.fda.gov/news-events/press-announcements/fda-proposes-exclude-semaglutide-tirzepatide-and-liraglutide-503b-bulks-list" target="_blank" rel="noopener">fda.gov</a>: FDA</li>
+<li><a href="https://www.fiercebiotech.com/biotech/lillys-triple-g-drug-hits-226-weight-loss-cardio-risk-impact-disappoints" target="_blank" rel="noopener">fiercebiotech.com</a>: Fierce</li>
+<li><a href="https://www.fiercebiotech.com/biotech/eli-lillys-obesity-triple-threat-smashes-efficacy-expectations-phase-3-proves-intolerable" target="_blank" rel="noopener">fiercebiotech.com</a>: Fierce</li>
+<li><a href="https://www.fiercebiotech.com/biotech/pfizer-axes-oral-glp-1-asset-over-liver-injury-blowing-hole-obesity-plan" target="_blank" rel="noopener">fiercebiotech.com</a>: Fierce Biotech</li>
+<li><a href="https://finance.yahoo.com/healthcare/articles/eli-lilly-delays-retatrutide-weight-110921112.html" target="_blank" rel="noopener">finance.yahoo.com</a>: stated July 23, 2026</li>
+<li><a href="https://foundayo.lilly.com/hcp/savings-coverage" target="_blank" rel="noopener">foundayo.lilly.com</a>: Lilly</li>
+<li><a href="https://www.frierlevitt.com/articles/lilly-retatrutide-lawsuits-ruo-peptide-sellers/" target="_blank" rel="noopener">frierlevitt.com</a>: Frier Levitt</li>
+<li><a href="https://www.globenewswire.com/news-release/2025/06/20/3102977/0/en/novo-nordisk-s-subcutaneous-and-oral-amycretin-data-published-in-the-lancet-and-presented-at-ada-2025.html" target="_blank" rel="noopener">globenewswire.com</a>: GlobeNewswire</li>
+<li><a href="https://www.globenewswire.com/news-release/2025/11/25/3194155/0/en/Novo-Nordisk-phase-2-trial-with-amycretin-reports-significant-weight-loss-and-HbA1c-reduction-in-type-2-diabetes.html" target="_blank" rel="noopener">globenewswire.com</a>: Novo's November 2025 release</li>
+<li><a href="https://www.globenewswire.com/news-release/2026/09/29/3371443/0/en/zealand-pharma-to-present-additional-data-from-phase-2-zupreme-1-trial-for-petrelintide-at-easd-2026-and-announces-publication-of-trial-results-in-the-lancet-diabetes-endocrinology.html" target="_blank" rel="noopener">globenewswire.com</a>: Zealand petrelintide</li>
+<li><a href="https://www.globenewswire.com/news-release/2026/10/01/3372564/0/en/boehringer-ingelheim-s-survodutide-achieves-up-to-13-1-weight-loss-in-new-phase-iii-trial-alongside-significant-improvements-in-glycemic-control-in-people-with-obesity-and-type-2-d.html" target="_blank" rel="noopener">globenewswire.com</a>: October 1, 2026 release</li>
+<li><a href="https://www.globenewswire.com/news-release/2026/10/28/3390282/0/en/retatrutide-leads-obesity-pipeline-recall-amid-limited-physician-awareness-of-other-treatment-news-spherix-global-insights-finds.html" target="_blank" rel="noopener">globenewswire.com</a>: Spherix Global Insights via GlobeNewswire</li>
+<li><a href="https://www.hcplive.com/view/fda-approves-tirzepatide-zepbound-chronic-weight-management" target="_blank" rel="noopener">hcplive.com</a>: Zepbound followed on November 8, 2023</li>
+<li><a href="https://www.hcplive.com/view/cagrisema-achieves-22-7-weight-loss-in-phase-3-redefine-1-trial" target="_blank" rel="noopener">hcplive.com</a>: REDEFINE 1 safety data</li>
+<li><a href="https://www.hcplive.com/view/believe-bimagrumab-semaglutide-combo-yields-substantial-fat-mass-weight-loss-preserves-lean-mass" target="_blank" rel="noopener">hcplive.com</a>: BELIEVE trial</li>
+<li><a href="https://www.hcplive.com/view/cagrisema-yields-nearly-16-weight-loss-in-phase-3-redefine-2-trial" target="_blank" rel="noopener">hcplive.com</a>: HCPLive</li>
+<li><a href="https://www.hcplive.com/view/byu-study-details-concerning-10-year-weight-gain-average-among-us-adults" target="_blank" rel="noopener">hcplive.com</a>: BYU weight-gain analysis</li>
+<li><a href="https://www.healio.com/news/endocrinology/20251223/fda-approves-wegovy-pill-the-first-oral-glp1-to-treat-obesity" target="_blank" rel="noopener">healio.com</a>: Wegovy pill was approved on December 22, 2025</li>
+<li><a href="https://www.healio.com/news/endocrinology/20250623/combination-bimagrumab-plus-semaglutide-confers-weight-loss-while-preserving-lean-mass" target="_blank" rel="noopener">healio.com</a>: Healio</li>
+<li><a href="https://www.healio.com/news/endocrinology/20260319/fda-approves-highdose-wegovy-72-mg-for-adults-with-obesity" target="_blank" rel="noopener">healio.com</a>: Healio's approval report</li>
+<li><a href="https://www.healio.com/news/endocrinology/20261028/retatrutide-confers-greater-decreases-in-hba1c-weight-vs-ozempic-in-type-2-diabetes" target="_blank" rel="noopener">healio.com</a>: Healio</li>
+<li><a href="https://www.healio.com/news/endocrinology/20241016/tirzepatide-cuts-risk-for-progression-to-type-2-diabetes-for-adults-with-prediabetes" target="_blank" rel="noopener">healio.com</a>: SURMOUNT-1 prediabetes analysis</li>
+<li><a href="https://www.healthline.com/health-news/eli-lilly-new-drug-retatrutide-shows-greater-weight-loss-results" target="_blank" rel="noopener">healthline.com</a>: Healthline's report</li>
+<li><a href="https://www.healthsystemtracker.org/brief/how-trumprx-brand-name-drug-prices-compare-to-other-countries/" target="_blank" rel="noopener">healthsystemtracker.org</a>: Peterson-KFF</li>
+<li><a href="https://www.healthyoneapp.com/blog/foundayo-review-2026" target="_blank" rel="noopener">healthyoneapp.com</a>: 17.2 mg</li>
+<li><a href="https://investor.lilly.com/news-releases/news-release-details/lillys-triple-agonist-retatrutide-delivered-powerful-weight-loss" target="_blank" rel="noopener">investor.lilly.com</a>: Lilly</li>
+<li><a href="https://investor.lilly.com/news-releases/news-release-details/lillys-triple-agonist-retatrutide-delivered-weight-loss-average" target="_blank" rel="noopener">investor.lilly.com</a>: Lilly</li>
+<li><a href="https://investor.lilly.com/news-releases/news-release-details/lillys-triple-agonist-retatrutide-successful-two-additional" target="_blank" rel="noopener">investor.lilly.com</a>: Lilly</li>
+<li><a href="https://investor.lilly.com/news-releases/news-release-details/lillys-triple-agonist-retatrutide-demonstrated-significant" target="_blank" rel="noopener">investor.lilly.com</a>: Lilly</li>
+<li><a href="https://investor.lilly.com/news-releases/news-release-details/lillys-oral-glp-1-foundayo-orforglipron-delivered-superior-a1c" target="_blank" rel="noopener">investor.lilly.com</a>: Lilly</li>
+<li><a href="https://investor.lilly.com/news-releases/news-release-details/lillys-orforglipron-helped-people-maintain-weight-loss-after" target="_blank" rel="noopener">investor.lilly.com</a>: Lilly</li>
+<li><a href="https://investor.lilly.com/news-releases/news-release-details/lilly-reports-third-quarter-2026-financial-results-raises-full" target="_blank" rel="noopener">investor.lilly.com</a>: Lilly</li>
+<li><a href="https://ir.structuretx.com/news-releases/news-release-details/structure-therapeutics-reports-positive-topline-data-access" target="_blank" rel="noopener">ir.structuretx.com</a>: Structure</li>
+<li><a href="https://ir.structuretx.com/news-releases/news-release-details/structure-therapeutics-announces-publication-nature-medicine" target="_blank" rel="noopener">ir.structuretx.com</a>: Nature Medicine announcement</li>
+<li><a href="https://ir.verupharma.com/news-events/press-releases/detail/225/veru-announces-positive-topline-data-from-phase-2b-quality" target="_blank" rel="noopener">ir.verupharma.com</a>: its release</li>
+<li><a href="https://ir.vikingtherapeutics.com/2025-08-19-Viking-Therapeutics-Announces-Positive-Top-Line-Results-from-Phase-2-VENTURE-Oral-Dosing-Trial-of-VK2735-Tablet-Formulation-in-Patients-with-Obesity" target="_blank" rel="noopener">ir.vikingtherapeutics.com</a>: Viking</li>
+<li><a href="https://ir.vikingtherapeutics.com/2026-07-29-Viking-Therapeutics-Reports-Second-Quarter-2026-Financial-Results-and-Provides-Corporate-Update" target="_blank" rel="noopener">ir.vikingtherapeutics.com</a>: Viking</li>
+<li><a href="https://ir.vikingtherapeutics.com/2026-09-22-Viking-Therapeutics-Announces-Positive-Topline-Results-from-Maintenance-Study-of-GLP-1-GIP-Agonist-VK2735-Demonstrating-the-Promise-of-Multiple-Maintenance-Dosing-Regimens" target="_blank" rel="noopener">ir.vikingtherapeutics.com</a>: Viking maintenance study</li>
+<li><a href="https://ir.vikingtherapeutics.com/2026-03-26-Viking-Therapeutics-Announces-Completion-of-Enrollment-in-Phase-3-VANQUISH-2-Trial-of-VK2735" target="_blank" rel="noopener">ir.vikingtherapeutics.com</a>: VANQUISH-2 enrollment</li>
+<li><a href="https://www.kff.org/quick-insights/cms-extends-medicares-short-term-bridge-program-for-glp-1-obesity-drug-coverage/" target="_blank" rel="noopener">kff.org</a>: KFF</li>
+<li><a href="https://www.kff.org/medicare/nearly-four-million-medicare-beneficiaries-met-the-eligibility-criteria-in-2023-for-the-medicare-glp-1-bridge/" target="_blank" rel="noopener">kff.org</a>: KFF</li>
+<li><a href="https://www.kff.org/health-costs/2026-employer-health-benefits-survey/" target="_blank" rel="noopener">kff.org</a>: KFF</li>
+<li><a href="https://www.kff.org/medicaid/medicaid-coverage-of-and-spending-on-glp-1s/" target="_blank" rel="noopener">kff.org</a>: KFF</li>
+<li><a href="https://www.lilly.com/news/stories/what-to-know-about-retatrutide" target="_blank" rel="noopener">lilly.com</a>: "has not been reviewed or approved by the FDA or any regulatory agency in the world, and no one can legally sell it for human use."</li>
+<li><a href="https://www.lilly.com/lillydirect/zepbound" target="_blank" rel="noopener">lilly.com</a>: LillyDirect</li>
+<li><a href="https://www.lilly.com/lillydirect/foundayo" target="_blank" rel="noopener">lilly.com</a>: LillyDirect</li>
+<li><a href="https://lilly.mediaroom.com/2025-11-06-Lillys-selective-amylin-agonist,-eloralintide,-demonstrated-meaningful-weight-loss-and-favorable-tolerability-in-a-Phase-2-study-of-adults-with-obesity-or-overweight" target="_blank" rel="noopener">lilly.mediaroom.com</a>: Lilly</li>
+<li><a href="https://www.managedhealthcareexecutive.com/view/cvs-caremark-to-put-zepbound-back-on-formulary-and-add-foundayo" target="_blank" rel="noopener">managedhealthcareexecutive.com</a>: Managed Healthcare Executive</li>
+<li><a href="https://www.manilatimes.net/2026/10/28/tmt-newswire/globenewswire/retatrutide-leads-obesity-pipeline-recall-amid-limited-physician-awareness-of-other-treatment-news-spherix-global-insights-finds/2456278" target="_blank" rel="noopener">manilatimes.net</a>: Spherix release</li>
+<li><a href="https://mediacenteratypon.nejmgroup-production.org/NEJMoa2511774.pdf" target="_blank" rel="noopener">mediacenteratypon.nejmgroup-production.org</a>: NEJM</li>
+<li><a href="https://www.medicaldaily.com/reddit-analysis-online-retatrutide-side-effects-480537" target="_blank" rel="noopener">medicaldaily.com</a>: Medical Daily</li>
+<li><a href="https://www.medicare.gov/publications/12234-medicare-glp-1-bridge-glp-1-drugs-for-50-a-month.pdf" target="_blank" rel="noopener">medicare.gov</a>: Medicare.gov</li>
+<li><a href="https://www.medicare.gov/coverage/weight-loss-drugs" target="_blank" rel="noopener">medicare.gov</a>: Medicare.gov</li>
+<li><a href="https://www.medscape.com/viewarticle/fda-okays-oral-semaglutide-25-mg-weight-management-2025a100104g" target="_blank" rel="noopener">medscape.com</a>: Medscape</li>
+<li><a href="https://www.medscape.com/viewarticle/retatrutide-data-show-dramatic-weight-loss-other-benefits-2026a1000iz0" target="_blank" rel="noopener">medscape.com</a>: Medscape</li>
+<li><a href="https://www.mercer.com/en-us/about/newsroom/employers-are-shifting-healthcare-costs-to-employees/" target="_blank" rel="noopener">mercer.com</a>: Mercer</li>
+<li><a href="https://www.nasdaq.com/press-release/novo-nordisks-subcutaneous-and-oral-amycretin-data-published-lancet-and-presented-ada" target="_blank" rel="noopener">nasdaq.com</a>: Novo</li>
+<li><a href="https://www.nejm.org/doi/abs/10.1056/NEJMoa2604169" target="_blank" rel="noopener">nejm.org</a>: NEJM</li>
+<li><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2504214" target="_blank" rel="noopener">nejm.org</a>: NEJM</li>
+<li><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2611477" target="_blank" rel="noopener">nejm.org</a>: separate NEJM paper</li>
+<li><a href="https://www.novocare.com/content/dam/novonordisk/novocare/redesign/pdf/Wegovy_Price_Guide.pdf" target="_blank" rel="noopener">novocare.com</a>: NovoCare</li>
+<li><a href="https://www.novocare.com/patient/medicines/wegovy/savings-offer.html" target="_blank" rel="noopener">novocare.com</a>: NovoCare</li>
+<li><a href="https://www.novonordisk-us.com/media/press-releases/fda-approves-wegovy-hd-7-2mg-injection.html" target="_blank" rel="noopener">novonordisk-us.com</a>: Wegovy HD (semaglutide 7.2 mg) was approved on March 19, 2026</li>
+<li><a href="https://www.novonordisk-us.com/media/press-releases/novo-nordisk-cagrisema-fda-nda-submission.html" target="_blank" rel="noopener">novonordisk-us.com</a>: New Drug Application</li>
+<li><a href="https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=915082" target="_blank" rel="noopener">novonordisk.com</a>: Novo's announcement</li>
+<li><a href="https://www.novonordisk.com/content/dam/nncorp/global/en/investors/pdfs/financial-results/2026/Q2-2026-Full%20presentation.pdf" target="_blank" rel="noopener">novonordisk.com</a>: Novo Q2 2026 presentation</li>
+<li><a href="https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=916472" target="_blank" rel="noopener">novonordisk.com</a>: Novo</li>
+<li><a href="https://www.peptideknow.com/blog/fda-warning-letter-gram-peptides-retatrutide-tirzepatide" target="_blank" rel="noopener">peptideknow.com</a>: summary of FDA letter</li>
+<li><a href="https://www.pfizer.com/news/press-release/press-release-detail/pfizer-completes-acquisition-metsera" target="_blank" rel="noopener">pfizer.com</a>: Pfizer</li>
+<li><a href="https://pharmacytimes.com/view/fda-approves-generic-version-of-liraglutide-injection-a-glp-1-for-weight-loss" target="_blank" rel="noopener">pharmacytimes.com</a>: Pharmacy Times</li>
+<li><a href="https://www.pharmacytimes.com/view/retatrutide-delivers-bariatric-level-weight-loss-pivotal-phase-3-triumph-1-trial" target="_blank" rel="noopener">pharmacytimes.com</a>: Pharmacy Times</li>
+<li><a href="https://www.pharmacytimes.com/view/eli-lilly-novo-nordisk-strike-mfn-deals-with-trump-administration-to-lower-glp-1-prices" target="_blank" rel="noopener">pharmacytimes.com</a>: Pharmacy Times</li>
+<li><a href="https://www.pharmexec.com/view/novo-nordisk-cagrisema-falls-short-25-weight-loss-target-patients-obesity-overweight" target="_blank" rel="noopener">pharmexec.com</a>: PharmExec</li>
+<li><a href="https://www.prnewswire.com/news-releases/amgen-announces-robust-weight-loss-with-maritide-in-people-living-with-obesity-or-overweight-at-52-weeks-in-a-phase-2-study-302316464.html" target="_blank" rel="noopener">prnewswire.com</a>: Amgen's November 2024 topline</li>
+<li><a href="https://www.prnewswire.com/news-releases/fda-approves-lillys-foundayo-orforglipron-the-only-glp-1-pill-for-weight-loss-that-can-be-taken-any-time-of-day-without-food-or-water-restrictions-302731485.html" target="_blank" rel="noopener">prnewswire.com</a>: Lilly</li>
+<li><a href="https://www.prnewswire.com/news-releases/novo-nordisk-announces-significant-reduction-in-us-list-price-for-wegovy-ozempic-and-rybelsus-semaglutide-medicines-building-on-continued-efforts-to-expand-access-302695705.html" target="_blank" rel="noopener">prnewswire.com</a>: Novo Nordisk</li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/42253238/" target="_blank" rel="noopener">pubmed.ncbi.nlm.nih.gov</a>: PubMed</li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/42119587/" target="_blank" rel="noopener">pubmed.ncbi.nlm.nih.gov</a>: PubMed</li>
+<li><a href="https://www.roche.com/media/releases/med-cor-2026-01-27" target="_blank" rel="noopener">roche.com</a>: Roche</li>
+<li><a href="https://www.roche.com/media/releases/med-cor-2026-03-05" target="_blank" rel="noopener">roche.com</a>: Roche</li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000353278/000035327826000023/caq22026.htm" target="_blank" rel="noopener">sec.gov</a>: Novo Q2 2026</li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/353278/000035327826000018/caq12026.htm" target="_blank" rel="noopener">sec.gov</a>: Q1 2026 filing</li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000353278/000035327826000018/caq12026.htm" target="_blank" rel="noopener">sec.gov</a>: "zenagamtide AMAZE programme"</li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/353278/000117184326000996/f6k_022326.htm" target="_blank" rel="noopener">sec.gov</a>: February 2026 filing</li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000318154/000031815426000124/amgn-20260630earningsrelea.htm" target="_blank" rel="noopener">sec.gov</a>: Amgen's Q2 2026 report</li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/318154/000031815425000070/amgn-20250930earningsrelea.htm" target="_blank" rel="noopener">sec.gov</a>: Amgen Q3 2025</li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000059478/000005947826000104/q326lillysalesandearningsp.htm" target="_blank" rel="noopener">sec.gov</a>: Lilly 8-K</li>
+<li><a href="https://www.spakinect.com/news/fda-warning-letters-peptide-glp1-products" target="_blank" rel="noopener">spakinect.com</a>: tracker of FDA letters</li>
+<li><a href="https://www.statnews.com/2026/10/28/retatrutide-vs-ozempic-lilly-diabetes-study/" target="_blank" rel="noopener">statnews.com</a>: STAT</li>
+<li><a href="https://www.thecrawizard.com/p/retatrutide-part-two-what-triumph" target="_blank" rel="noopener">thecrawizard.com</a>: TRIUMPH-3 commentary</li>
+<li><a href="https://thehill.com/policy/healthcare/5792140-novo-nordisk-wegovy-dosage/" target="_blank" rel="noopener">thehill.com</a>: The Hill's reporting on the label</li>
+<li><a href="https://www.thelancet.com/journals/landia/article/PIIS2213-8587(25)00226-8/abstract" target="_blank" rel="noopener">thelancet.com</a>: Lancet D&amp;E</li>
+<li><a href="https://www.thelancet.com/article/S0140-6736(26)00656-2/abstract" target="_blank" rel="noopener">thelancet.com</a>: The Lancet</li>
+</ul>`,
   },
 ];
