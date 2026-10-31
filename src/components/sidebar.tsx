@@ -60,7 +60,7 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
         const webp = sidebarWebp(imgSrc);
         const dims = SIDEBAR_IMAGE_DIMS[imgSrc];
         return (
-          <a key="featuredImage" href={href} className="block overflow-hidden rounded-xl border border-[#EAEAEA]">
+          <a key="featuredImage" href={href} target="_blank" rel="sponsored noopener noreferrer nofollow" className="block overflow-hidden rounded-xl border border-[#EAEAEA]">
             <picture>
               {webp && <source srcSet={webp} type="image/webp" />}
               <img

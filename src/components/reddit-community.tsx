@@ -503,7 +503,7 @@ function ThreadCard({
             </a>
           )}
           <Link href={reviewHref} className="font-semibold text-[#0C4B75] hover:underline">
-            All threads in our review
+            More {providerName} Reddit threads
           </Link>
         </span>
       </div>

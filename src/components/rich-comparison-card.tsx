@@ -218,7 +218,7 @@ export function RichComparisonCard({
                 href={reviewHref}
                 className="text-center text-[12.5px] font-semibold text-[#0C4B75] hover:underline"
               >
-                Read full review
+                Read our {product.name} review
               </Link>
               {product.trustpilotRating && (
                 <div className="mt-0.5 flex items-center justify-center gap-1.5 border-t border-gray-200 pt-2 text-[11.5px] text-gray-500">
