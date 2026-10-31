@@ -17,7 +17,7 @@ import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { FeaturedReviews, ReviewInsights } from "@/components/review-insights";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
-import { pageReviewSchema } from "@/data/reviewers";
+import { reviewedPageNode } from "@/data/reviewers";
 import { LastUpdated } from "@/components/last-updated";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
@@ -541,7 +541,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     headline: `${provider.name} Review 2026: Cost, Pros, Cons & Our Verdict`,
     description: review.shortSummary,
     dateModified: reviewUpdatedAt,
-    ...pageReviewSchema(`${ctx.prefix}/reviews/${slug}`),
     // The research team is a group, so it is an Organization, not a Person.
     author: {
       "@type": "Organization",
@@ -559,7 +558,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       name: provider.name,
       ...(FORMER_NAMES[provider.id] && { alternateName: FORMER_NAMES[provider.id] }),
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl(ctx, `/reviews/${slug}`) },
+    mainEntityOfPage: reviewedPageNode(`${ctx.prefix}/reviews/${slug}`, canonicalUrl(ctx, `/reviews/${slug}`)),
   };
 
   // Our own editorial review of the provider: the score shown in the hero, the

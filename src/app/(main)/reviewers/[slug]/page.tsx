@@ -11,7 +11,28 @@ import {
   reviewerDisplayName,
   reviewerPersonSchema,
   reviewerUrl,
+  reviewsBy,
 } from "@/data/reviewers";
+import { SEO_META } from "@/data/seo-meta";
+
+// Visible labels for logged pages: the page's own SEO title where it has one.
+const STATIC_LABELS: Record<string, string> = {
+  "/": "Top Weight Loss home: online GLP-1 provider ranking",
+  "/reviews": "All GLP-1 provider reviews",
+  "/articles": "All weight loss guides",
+  "/compare": "All GLP-1 provider comparisons",
+};
+const pageLabel = (path: string) => STATIC_LABELS[path] ?? SEO_META[path]?.title ?? path;
+const pageGroup = (path: string) =>
+  path.startsWith("/articles/")
+    ? "Guides and articles"
+    : path.startsWith("/reviews/")
+      ? "Provider reviews"
+      : path.startsWith("/compare/")
+        ? "Provider comparisons"
+        : "Guides and hub pages";
+const fmtDate = (d: string) =>
+  new Date(`${d}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
 
 export const dynamicParams = false;
 
@@ -56,6 +77,12 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
   if (!r) notFound();
 
   const person = reviewerPersonSchema(r);
+  const reviewed = reviewsBy(r.slug);
+  const latestReview = reviewed[0]?.reviewedAt;
+  const latestBatch = reviewed.filter((x) => x.reviewedAt === latestReview);
+  const groups = ["Guides and articles", "Guides and hub pages", "Provider reviews", "Provider comparisons"]
+    .map((g) => ({ name: g, items: reviewed.filter((x) => pageGroup(x.path) === g) }))
+    .filter((g) => g.items.length > 0);
   const profileSchema = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
@@ -63,6 +90,7 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
     url: reviewerUrl(r),
     name: `${reviewerDisplayName(r)} - ${r.jobTitle}`,
     dateCreated: `${r.since}-01`,
+    ...(latestReview && { dateModified: latestReview }),
     mainEntity: person,
     isPartOf: { "@type": "WebSite", name: "Top Weight Loss", url: HUB_ORIGIN },
   };
@@ -152,6 +180,44 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
             <Link href="/medical-review-policy" className={ext}>medical review policy</Link>.
           </p>
         </section>
+
+        {/* Review record: every logged review, dated. */}
+        {reviewed.length > 0 && (
+          <section className="mb-10" id="pages-reviewed">
+            <h2 className="mb-2 text-[24px] font-bold text-[#191919]">Which pages has {r.name.split(" ")[0]} reviewed?</h2>
+            <p className="text-[15px] leading-[1.75] text-gray-600">
+              {r.name} has reviewed the medical and scientific statements on {reviewed.length} pages of Top Weight Loss.
+              Her most recent review was on <time dateTime={latestReview}>{fmtDate(latestReview!)}</time>
+              {latestBatch.length > 1 ? `, covering ${latestBatch.length} pages` : ""}. Each page shows the date she reviewed it.
+            </p>
+            <h3 className="mb-2 mt-5 text-[16px] font-bold text-[#191919]">Most recent reviews</h3>
+            <ul className="space-y-1.5">
+              {latestBatch.map((x) => (
+                <li key={x.path} className="text-[14.5px] leading-snug">
+                  <Link href={x.path} className={ext}>{pageLabel(x.path)}</Link>
+                  <span className="text-gray-400"> · <time dateTime={x.reviewedAt}>{fmtDate(x.reviewedAt)}</time></span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-5 space-y-2">
+              {groups.map((g) => (
+                <details key={g.name} className="rounded-xl border border-gray-200 bg-white p-4">
+                  <summary className="cursor-pointer text-[15px] font-bold text-[#191919]">
+                    {g.name} ({g.items.length})
+                  </summary>
+                  <ul className="mt-3 space-y-1.5">
+                    {g.items.map((x) => (
+                      <li key={x.path} className="text-[14px] leading-snug">
+                        <Link href={x.path} className={ext}>{pageLabel(x.path)}</Link>
+                        <span className="text-gray-400"> · <time dateTime={x.reviewedAt}>{fmtDate(x.reviewedAt)}</time></span>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Bio */}
         <section className="mb-10">

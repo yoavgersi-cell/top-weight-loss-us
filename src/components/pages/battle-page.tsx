@@ -1,4 +1,4 @@
-import { pageReviewSchema } from "@/data/reviewers";
+import { pageReviewSchema, reviewedPageNode } from "@/data/reviewers";
 import { fixBrandCase } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Fragment } from "react";
@@ -692,7 +692,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    ...pageReviewSchema(`${ctx.prefix}/compare/${battle.slug}`),
     headline: battle.title,
     description: battle.description,
     datePublished: battle.publishedAt ?? "2026-06-01",
@@ -709,7 +708,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       url: ctx.origin,
       logo: { "@type": "ImageObject", url: `${ctx.origin}/logo.png` },
     },
-    mainEntityOfPage: canonicalUrl(ctx, `/compare/${battle.slug}`),
+    mainEntityOfPage: reviewedPageNode(`${ctx.prefix}/compare/${battle.slug}`, canonicalUrl(ctx, `/compare/${battle.slug}`)),
   };
 
   const battleBreadcrumbSchema = {

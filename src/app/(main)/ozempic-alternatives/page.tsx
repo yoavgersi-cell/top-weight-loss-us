@@ -1,6 +1,6 @@
 import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
-import { pageReviewSchema } from "@/data/reviewers";
+import { reviewedPageNode } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
@@ -87,10 +87,9 @@ export default async function OzempicAlternativesPage() {
     description: DESCRIPTION,
     datePublished: "2026-08-11",
     dateModified: CONTENT_LAST_UPDATED,
-    ...pageReviewSchema("/ozempic-alternatives"),
     author: { "@type": "Organization", name: "Top Weight Loss Team", url: "https://www.topweightloss.us" },
     publisher: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
-    mainEntityOfPage: CANONICAL,
+    mainEntityOfPage: reviewedPageNode("/ozempic-alternatives", CANONICAL, "MedicalWebPage"),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",

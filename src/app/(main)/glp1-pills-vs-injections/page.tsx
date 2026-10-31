@@ -1,6 +1,6 @@
 import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
-import { pageReviewSchema } from "@/data/reviewers";
+import { reviewedPageNode } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -286,10 +286,9 @@ export default async function Glp1PillsVsInjectionsPage() {
     datePublished: PAGE_PUBLISHED,
     dateModified: PAGE_UPDATED,
     wordCount,
-    ...pageReviewSchema("/glp1-pills-vs-injections"),
     author: { "@type": "Organization", name: "Top Weight Loss Research Team", url: "https://www.topweightloss.us" },
     publisher: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
-    mainEntityOfPage: CANONICAL,
+    mainEntityOfPage: reviewedPageNode("/glp1-pills-vs-injections", CANONICAL, "MedicalWebPage"),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
