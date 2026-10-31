@@ -1,6 +1,6 @@
 import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
-import { pageReviewSchema } from "@/data/reviewers";
+import { reviewedPageNode } from "@/data/reviewers";
 import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
@@ -376,10 +376,9 @@ export default async function HowToChooseGlp1ProviderPage() {
     description: DESCRIPTION,
     datePublished: PUBLISHED,
     dateModified: UPDATED,
-    ...pageReviewSchema("/how-to-choose-a-glp1-provider"),
     author: { "@type": "Organization", name: "Top Weight Loss Team", url: "https://www.topweightloss.us" },
     publisher: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
-    mainEntityOfPage: CANONICAL,
+    mainEntityOfPage: reviewedPageNode("/how-to-choose-a-glp1-provider", CANONICAL, "WebPage"),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",

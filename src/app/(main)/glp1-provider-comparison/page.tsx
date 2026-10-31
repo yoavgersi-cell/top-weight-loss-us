@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowRight, Check, X, ExternalLink } from "lucide-react";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
-import { pageReviewSchema } from "@/data/reviewers";
+import { reviewedPageNode } from "@/data/reviewers";
 import { GuideCluster } from "@/components/guide-cluster";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
@@ -559,10 +559,9 @@ export default async function Glp1ProviderComparisonPage() {
     description: DESCRIPTION,
     datePublished: PUBLISHED,
     dateModified: UPDATED,
-    ...pageReviewSchema("/glp1-provider-comparison"),
     author: { "@type": "Organization", name: "Top Weight Loss Team", url: "https://www.topweightloss.us" },
     publisher: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
-    mainEntityOfPage: CANONICAL,
+    mainEntityOfPage: reviewedPageNode("/glp1-provider-comparison", CANONICAL, "WebPage"),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",

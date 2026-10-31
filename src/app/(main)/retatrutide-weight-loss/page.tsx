@@ -1,6 +1,6 @@
 import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
-import { pageReviewSchema } from "@/data/reviewers";
+import { reviewedPageNode } from "@/data/reviewers";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
@@ -111,10 +111,9 @@ export default async function RetatrutidePage() {
     description: metadata.description,
     datePublished: "2026-08-09",
     dateModified: "2026-10-29",
-    ...pageReviewSchema("/retatrutide-weight-loss"),
     author: { "@type": "Organization", name: "Top Weight Loss Team", url: "https://www.topweightloss.us" },
     publisher: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
-    mainEntityOfPage: CANONICAL,
+    mainEntityOfPage: reviewedPageNode("/retatrutide-weight-loss", CANONICAL, "MedicalWebPage"),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",

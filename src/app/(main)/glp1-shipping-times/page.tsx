@@ -9,7 +9,7 @@ import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { TrustDisclosure } from "@/components/medical-sources";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotWordmark, tpStarColor } from "@/components/trustpilot-rating";
-import { pageReviewSchema } from "@/data/reviewers";
+import { reviewedPageNode } from "@/data/reviewers";
 import { getConfig } from "@/lib/config-store";
 import { PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
 import type { Provider, TrustpilotReview } from "@/lib/config";
@@ -117,10 +117,9 @@ export default async function ShippingTimesPage() {
     headline: title,
     datePublished: PUBLISHED,
     dateModified: UPDATED,
-    ...pageReviewSchema("/glp1-shipping-times"),
     author: { "@type": "Organization", name: "Top Weight Loss Team", url: "https://www.topweightloss.us" },
     publisher: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
-    mainEntityOfPage: CANONICAL,
+    mainEntityOfPage: reviewedPageNode("/glp1-shipping-times", CANONICAL, "WebPage"),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",

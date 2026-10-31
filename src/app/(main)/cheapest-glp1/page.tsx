@@ -1,6 +1,6 @@
 import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
-import { pageReviewSchema } from "@/data/reviewers";
+import { reviewedPageNode } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
@@ -77,10 +77,9 @@ export default async function CheapestGlp1Page() {
     description: DESCRIPTION,
     datePublished: "2026-08-23",
     dateModified: CONTENT_LAST_UPDATED,
-    ...pageReviewSchema("/cheapest-glp1"),
     author: { "@type": "Organization", name: "Top Weight Loss Team", url: "https://www.topweightloss.us" },
     publisher: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
-    mainEntityOfPage: CANONICAL,
+    mainEntityOfPage: reviewedPageNode("/cheapest-glp1", CANONICAL, "WebPage"),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
