@@ -68,6 +68,7 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
       "zepbound-vs-wegovy",
       "zepbound-vs-wegovy-vs-ozempic",
       "foundayo-vs-wegovy-pill",
+      "new-weight-loss-drugs-2026-2027",
       "how-long-for-semaglutide-to-work",
       "weight-loss-medication-that-works-fast",
       "compounded-semaglutide-vs-brand-name",

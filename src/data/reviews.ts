@@ -788,12 +788,12 @@ Sprout averages 4.1 from 188 Trustpilot reviews. That is a small sample compared
     slug: "eden",
     providerId: "eden",
     updatedAt: "2026-10-13",
-    shortSummary: "Eden charges one flat price at every dose: compounded semaglutide $99/month and tirzepatide $129/month, with no annual plan, doctor-guided care and 24/7 human support. Trustpilot: 4.5 from 4,917 reviews.",
+    shortSummary: "Eden charges one flat price at every dose: compounded semaglutide $99/month and tirzepatide $129/month, with no annual plan, doctor-guided care and 24/7 human support. Trustpilot: 4.5 from 5,044 reviews.",
     reviewIntro: `Eden sells compounded GLP-1 medication at a price that does not move: $99/month for semaglutide and $129/month for tirzepatide, in month one and every month after, at every dose. Eden's pricing page sums it up as 'the price you start with is the price you keep'.
 
 There is no membership, no annual plan and no long-term commitment. Care is doctor-guided with 24/7 human support, and Eden says its medication is made in the US under strict quality oversight. Signing up starts with a free assessment of about three minutes, and insurance is not required.
 
-Eden holds a 4.5 average from 4,917 Trustpilot reviews on a profile it claimed in June 2024. The newest reviews read like a list of support staff: 'Ann was a great help', 'MELANIE was fantastic!!', 'Sandra was super helpful!', 'Joanne with customer support was great'. Every one of the latest reviews we captured names the person who helped. A reviewer who moved over after a previous provider raised prices wrote that Eden's 'high ratings for fair pricing, customer service, and support of the doctors was the deciding factor for me, and they were spot on.'
+Eden holds a 4.5 average from 5,044 Trustpilot reviews on a profile it claimed in June 2024. The newest reviews read like a list of support staff: 'Ann was a great help', 'MELANIE was fantastic!!', 'Sandra was super helpful!', 'Joanne with customer support was great'. Every one of the latest reviews we captured names the person who helped. A reviewer who moved over after a previous provider raised prices wrote that Eden's 'high ratings for fair pricing, customer service, and support of the doctors was the deciding factor for me, and they were spot on.'
 
 One thing you should know: in June 2026 the FDA sent Eden a warning letter about compounded GLP-1 marketing claims on its website. It was one of 25 letters sent to telehealth companies that month, and altRx received the same type of letter in that batch. The letter concerns marketing language, not a finding about the medication or patient safety. We mention it so you have the full picture, and as a reminder that no compounded GLP-1 from any provider is FDA-approved.`,
     keyFeatures: [
@@ -813,7 +813,7 @@ One thing you should know: in June 2026 the FDA sent Eden a warning letter about
     pros: [
       "No introductory-price trick: $99 semaglutide and $129 tirzepatide every month, at every dose",
       "No membership, annual plan or long-term commitment",
-      "Trustpilot: 4.5 from 4,917 reviews, with recent reviewers naming the staff who helped them",
+      "Trustpilot: 4.5 from 5,044 reviews, with recent reviewers naming the staff who helped them",
       "24/7 human support and doctor-guided care included",
       "Low flat tirzepatide price without a commitment"
     ],
@@ -828,7 +828,7 @@ One thing you should know: in June 2026 the FDA sent Eden a warning letter about
       "People who value reaching a real person for support",
       "Tirzepatide patients looking for a flat, no-commitment price"
     ],
-    finalVerdict: "Eden's appeal is predictability: $99 for semaglutide and $129 for tirzepatide, unchanged each month and at every dose, with no membership and no plan to sign. Its 4.5 average from 4,917 Trustpilot reviews comes with recent reviewers naming the people who helped them. If the absolute lowest sticker price is all you care about, welludr's $41 sale price and embody's $69 month-to-month price beat Eden on semaglutide. If you want a stable price you can budget around, support that responds, and tirzepatide without a premium, Eden is one of the strongest no-commitment providers we track. Weigh the FDA note above as you would for any compounded provider, and check shipping times at checkout.",
+    finalVerdict: "Eden's appeal is predictability: $99 for semaglutide and $129 for tirzepatide, unchanged each month and at every dose, with no membership and no plan to sign. Its 4.5 average from 5,044 Trustpilot reviews comes with recent reviewers naming the people who helped them. If the absolute lowest sticker price is all you care about, welludr's $41 sale price and embody's $69 month-to-month price beat Eden on semaglutide. If you want a stable price you can budget around, support that responds, and tirzepatide without a premium, Eden is one of the strongest no-commitment providers we track. Weigh the FDA note above as you would for any compounded provider, and check shipping times at checkout.",
     trustBadges: [
       "One price at every dose",
       "No membership or long-term plan",

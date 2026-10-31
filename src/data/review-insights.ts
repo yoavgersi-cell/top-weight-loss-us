@@ -273,20 +273,28 @@ export const REVIEW_INSIGHTS: Record<string, ProviderReviewInsight> = {
   },
   eden: {
     summary:
-      "All of the Eden reviews we quote are five stars, and nearly all are about support: named agents who replied quickly, explained the issue and resolved it in writing, which one reviewer found better than waiting on the phone. The one longer review explains the switch: the reviewer's previous provider raised its prices, and Eden's ratings for fair pricing, customer service and doctor support were the deciding factor. None of the quoted reviews raises a complaint.",
+      "All of the Eden reviews we quote are five stars, and nearly all are about support: named agents who replied quickly, followed up by email or chat and resolved problems, including one a reviewer had been dealing with for a long time. A two-year customer describes pausing a shipment through chat with a real person and being told restarting is just as easy. The one longer review on price explains the switch: the reviewer's previous provider raised its prices, and Eden's ratings for fair pricing, customer service and doctor support were the deciding factor. None of the quoted reviews raises a complaint.",
     pros: [
-      { text: "Fast, polite support agents, often named", refs: [0, 1, 2, 3, 4, 5, 7] },
-      { text: "Written replies that resolve the issue, no phone wait", refs: [0, 3, 5] },
+      {
+        text: "Fast, polite support agents, often named",
+        refs: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+      },
+      { text: "Agents who follow up and resolve the issue", refs: [0, 3, 5, 10, 13, 17, 18, 20, 25, 26, 27] },
       { text: "Fair pricing and doctor support, cited as the reason to switch", refs: [6] },
     ],
     cons: [],
     featured: [
       { i: 6, topic: "Pricing & billing" },
+      { i: 18, topic: "Customer service" },
       { i: 5, topic: "Customer service" },
-      { i: 3, topic: "Customer service" },
-      { i: 0, topic: "Customer service" },
+      { i: 10, topic: "Customer service" },
+      { i: 19, topic: "Sign-up" },
     ],
-    tags: ["S", "S", "S", "S", "S", "S", "PSC", "S"],
+    tags: [
+      "S", "S", "S", "S", "S", "S", "PSC", "S",
+      "S", "S", "S", "S", "S", "S", "S", "S", "S", "S",
+      "S", "SU", "S", "S", "S", "S", "S", "S", "S", "S",
+    ],
   },
   bmimd: {
     summary:
