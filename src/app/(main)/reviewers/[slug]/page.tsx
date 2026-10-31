@@ -14,6 +14,7 @@ import {
   reviewsBy,
 } from "@/data/reviewers";
 import { SEO_META } from "@/data/seo-meta";
+import { siteSitemap } from "@/lib/sitemaps";
 
 // Visible labels for logged pages: the page's own SEO title where it has one.
 const STATIC_LABELS: Record<string, string> = {
@@ -77,7 +78,12 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
   if (!r) notFound();
 
   const person = reviewerPersonSchema(r);
-  const reviewed = reviewsBy(r.slug);
+  // Only pages that are live and indexable: the log also holds launch-era
+  // entries for pages since retired or redirected, which must not be linked.
+  const live = new Set(
+    (await siteSitemap()).map((e) => new URL(e.url).pathname.replace(/\/$/, "") || "/"),
+  );
+  const reviewed = reviewsBy(r.slug).filter((x) => live.has(x.path));
   const latestReview = reviewed[0]?.reviewedAt;
   const latestBatch = reviewed.filter((x) => x.reviewedAt === latestReview);
   const groups = ["Guides and articles", "Guides and hub pages", "Provider reviews", "Provider comparisons"]

@@ -226,7 +226,11 @@ export default async function RetatrutidePage() {
             <Ext href={SRC.triumph23}>Lilly</Ext>; <Ext href={SRC.filingBiopharma}>BioPharma Dive</Ext>). We
             found no later change to that plan as of October 29, 2026. Lilly has not given an expected
             approval or launch date, and the FDA&rsquo;s review only starts after the filing, so treat any
-            specific approval date you see online as speculation.
+            specific approval date you see online as speculation. Retatrutide is one of several
+            candidates in our guide to{" "}
+            <Link href="/articles/new-weight-loss-drugs-2026-2027" className="font-semibold text-[#0C4B75] hover:underline">
+              the obesity drug pipeline
+            </Link>.
           </p>
         </section>
 

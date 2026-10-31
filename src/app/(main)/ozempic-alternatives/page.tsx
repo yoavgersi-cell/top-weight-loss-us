@@ -227,7 +227,12 @@ export default async function OzempicAlternativesPage() {
             <Link href="/reviews/embody" className="font-semibold text-[#0C4B75] hover:underline">embody</Link>,{" "}
             <Link href="/reviews/altrx" className="font-semibold text-[#0C4B75] hover:underline">altRx</Link>, and{" "}
             <Link href="/reviews/trimrx" className="font-semibold text-[#0C4B75] hover:underline">TrimRx</Link>.
-            The best match for you depends on your goals and your budget.
+            The best match for you depends on your goals and your budget. If you would rather stay on
+            brand Ozempic, see{" "}
+            <Link href="/articles/how-to-get-ozempic-online" className="font-semibold text-[#0C4B75] hover:underline">
+              getting Ozempic through telehealth
+            </Link>
+            .
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link href="/" className="inline-flex h-[46px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">
@@ -251,7 +256,11 @@ export default async function OzempicAlternativesPage() {
             <Link href="/retatrutide-weight-loss" className="font-semibold text-[#0C4B75] hover:underline">
               retatrutide weight loss guide
             </Link>{" "}
-            covers its current status and possible timing.
+            covers its current status and possible timing. Other candidates, including{" "}
+            <Link href="/articles/new-weight-loss-drugs-2026-2027" className="font-semibold text-[#0C4B75] hover:underline">
+              CagriSema, amycretin and MariTide
+            </Link>
+            , are covered in our pipeline guide.
           </p>
         </section>
 
