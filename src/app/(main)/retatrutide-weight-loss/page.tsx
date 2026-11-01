@@ -1,6 +1,6 @@
 import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
-import { pageReviewSchema } from "@/data/reviewers";
+import { reviewedPageNode } from "@/data/reviewers";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
@@ -111,10 +111,9 @@ export default async function RetatrutidePage() {
     description: metadata.description,
     datePublished: "2026-08-09",
     dateModified: "2026-10-29",
-    ...pageReviewSchema("/retatrutide-weight-loss"),
     author: { "@type": "Organization", name: "Top Weight Loss Team", url: "https://www.topweightloss.us" },
     publisher: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
-    mainEntityOfPage: CANONICAL,
+    mainEntityOfPage: reviewedPageNode("/retatrutide-weight-loss", CANONICAL, "MedicalWebPage"),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -227,7 +226,11 @@ export default async function RetatrutidePage() {
             <Ext href={SRC.triumph23}>Lilly</Ext>; <Ext href={SRC.filingBiopharma}>BioPharma Dive</Ext>). We
             found no later change to that plan as of October 29, 2026. Lilly has not given an expected
             approval or launch date, and the FDA&rsquo;s review only starts after the filing, so treat any
-            specific approval date you see online as speculation.
+            specific approval date you see online as speculation. Retatrutide is one of several
+            candidates in our guide to{" "}
+            <Link href="/articles/new-weight-loss-drugs-2026-2027" className="font-semibold text-[#0C4B75] hover:underline">
+              the obesity drug pipeline
+            </Link>.
           </p>
         </section>
 

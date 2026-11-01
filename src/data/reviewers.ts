@@ -205,13 +205,30 @@ const LAUNCH_REVIEW_DATE = "2026-10-22";
 // the launch review (Oct 29, 2026 depth pass). They carry no "reviewed" claim
 // until the reviewer signs the new version off; remove a path from this set
 // when she does, and log the new date.
-const REVIEW_PENDING_PATHS = new Set([
+const REVIEW_PENDING_PATHS = new Set<string>([]);
+
+// Oct 31, 2026: Francheska Capistrano reviewed the Oct 29 rewrites and the new
+// pipeline guide (operator-confirmed). Newest entry wins over the launch entry.
+const OCT31_REVIEW_DATE = "2026-10-31";
+const OCT31_REVIEWED_PATHS = [
   "/best-weight-loss-injections",
   "/cheapest-weight-loss-medication",
   "/retatrutide-weight-loss",
   "/weight-loss-pills",
   "/glp1-pills-vs-injections",
-]);
+  "/articles/how-to-get-ozempic-online",
+  "/articles/can-you-get-ozempic-without-doctor",
+  "/articles/weight-loss-medication-without-insurance",
+  "/articles/stopping-glp1-medication-what-happens",
+  "/articles/what-to-eat-on-glp1-medication",
+  "/articles/how-long-for-semaglutide-to-work",
+  "/articles/is-ro-legit",
+  "/articles/ro-cost",
+  "/articles/is-medvi-legit",
+  "/articles/medvi-cost",
+  "/articles/medvi-tirzepatide-cost",
+  "/articles/new-weight-loss-drugs-2026-2027",
+];
 
 const LAUNCH_STATIC_PATHS = [
   "/",
@@ -247,9 +264,10 @@ const LAUNCH_REVIEWED_PATHS = [
     .map((a) => `/articles/${a.slug}`),
 ].filter((p) => !REVIEW_PENDING_PATHS.has(p));
 
-export const REVIEW_LOG: Record<string, PageReview> = Object.fromEntries(
-  LAUNCH_REVIEWED_PATHS.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: LAUNCH_REVIEW_DATE }]),
-);
+export const REVIEW_LOG: Record<string, PageReview> = Object.fromEntries([
+  ...LAUNCH_REVIEWED_PATHS.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: LAUNCH_REVIEW_DATE }]),
+  ...OCT31_REVIEWED_PATHS.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: OCT31_REVIEW_DATE }]),
+]);
 
 export function getReviewer(slug: string = SITE_REVIEWER_SLUG): Reviewer | undefined {
   return REVIEWERS.find((r) => r.slug === slug);
@@ -292,7 +310,14 @@ export function reviewerPersonSchema(r: Reviewer) {
     jobTitle: r.jobTitle,
     description: r.shortBio,
     url: reviewerUrl(r),
-    image: `${HUB_ORIGIN}${r.image.src}`,
+    image: {
+      "@type": "ImageObject",
+      url: `${HUB_ORIGIN}${r.image.src}`,
+      width: r.image.width,
+      height: r.image.height,
+      caption: `${r.name}, ${r.jobTitle}`,
+    },
+    hasOccupation: r.licensure.map((c) => ({ "@type": "Occupation", name: c.title })),
     worksFor: { "@type": "Organization", name: "Top Weight Loss", url: HUB_ORIGIN },
     knowsAbout: r.specialties,
     alumniOf: r.education.map((e) => ({ "@type": "CollegeOrUniversity", name: e.school })),
@@ -314,6 +339,16 @@ export function reviewerPersonSchema(r: Reviewer) {
   if (r.fullName && r.fullName !== r.name) schema.alternateName = r.fullName;
   if (r.sameAs.length) schema.sameAs = r.sameAs;
   return schema;
+}
+
+/**
+ * The page node that carries the review signal. `reviewedBy` and
+ * `lastReviewed` are WebPage properties in schema.org, so templates whose main
+ * node is an Article put this under `mainEntityOfPage` instead of spreading
+ * the review onto the Article (where the properties are not valid).
+ */
+export function reviewedPageNode(path: string, url: string, type: "WebPage" | "MedicalWebPage" = "WebPage") {
+  return { "@type": type, "@id": url, url, ...pageReviewSchema(path) };
 }
 
 /**
@@ -340,4 +375,12 @@ export function pageReviewSchema(path: string): Record<string, unknown> {
     },
     lastReviewed: review.reviewedAt,
   };
+}
+
+/** Every logged review for a reviewer, newest first. */
+export function reviewsBy(slug: string): { path: string; reviewedAt: string }[] {
+  return Object.entries(REVIEW_LOG)
+    .filter(([, v]) => v.reviewer === slug)
+    .map(([path, v]) => ({ path, reviewedAt: v.reviewedAt }))
+    .sort((a, b) => b.reviewedAt.localeCompare(a.reviewedAt) || a.path.localeCompare(b.path));
 }

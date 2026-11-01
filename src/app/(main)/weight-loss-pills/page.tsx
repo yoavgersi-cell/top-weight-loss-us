@@ -1,6 +1,6 @@
 import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
-import { pageReviewSchema } from "@/data/reviewers";
+import { reviewedPageNode } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -299,10 +299,9 @@ export default async function WeightLossPillsPage() {
     datePublished: PAGE_PUBLISHED,
     dateModified: PAGE_UPDATED,
     wordCount,
-    ...pageReviewSchema("/weight-loss-pills"),
     author: { "@type": "Organization", name: "Top Weight Loss Research Team", url: "https://www.topweightloss.us" },
     publisher: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
-    mainEntityOfPage: CANONICAL,
+    mainEntityOfPage: reviewedPageNode("/weight-loss-pills", CANONICAL, "MedicalWebPage"),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",

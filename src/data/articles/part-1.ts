@@ -39,7 +39,7 @@ export const articlesPart1: Article[] = [
       },
       {
         heading: "How much weight do people lose on GLP-1 medication?",
-        body: `In large trials, people lost an average of about 15% of body weight on semaglutide (<a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">STEP trials</a>) and up to ~22.5% on tirzepatide (<a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">SURMOUNT trials</a>) over 68-72 weeks. Individual results vary a lot.<ul><li><strong>Weeks 1-2:</strong> most people notice appetite changes.</li><li><strong>Weeks 4-8:</strong> weight loss usually becomes visible.</li><li><strong>Dosing:</strong> one injection a week, with the dose raised step by step over several months to limit side effects.</li></ul>For a week-by-week view of the start of treatment, see <a href="/articles/first-month-weight-loss-medication">your first month on weight loss medication</a>.`,
+        body: `In large trials, people lost an average of about 15% of body weight on semaglutide (<a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">STEP trials</a>) and up to ~22.5% on tirzepatide (<a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">SURMOUNT trials</a>) over 68-72 weeks. Individual results vary a lot.<ul><li><strong>Weeks 1-2:</strong> most people notice appetite changes.</li><li><strong>Weeks 4-8:</strong> weight loss usually becomes visible.</li><li><strong>Dosing:</strong> one injection a week, with the dose raised step by step over several months to limit side effects.</li></ul>For a week-by-week view of the start of treatment, see <a href="/articles/first-month-weight-loss-medication">your first month on weight loss medication</a>. For a side-by-side of every shot and its price, see <a href="/best-weight-loss-injections">weight loss injections compared</a>.`,
       },
       {
         heading: "What side effects do GLP-1 medications cause?",
@@ -426,7 +426,7 @@ export const articlesPart1: Article[] = [
       },
       {
         heading: "How do the dosing schedules compare?",
-        body: `Both are once-weekly injections that start low and climb gradually:<ul><li><strong>Semaglutide (Wegovy):</strong> <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">0.25 mg up to a 2.4 mg weekly maximum</a>, over about 16 weeks.</li><li><strong>Tirzepatide (Mounjaro/Zepbound):</strong> <a href="https://medlineplus.gov/druginfo/meds/a622044.html" target="_blank" rel="noopener">2.5 mg up to as much as 15 mg weekly</a>.</li></ul>Tirzepatide's wider dose range gives providers more room to find the right dose for each patient. Our <a href="/articles/first-month-weight-loss-medication">first month guide</a> covers how the start of treatment feels.`,
+        body: `Both are once-weekly injections that start low and climb gradually:<ul><li><strong>Semaglutide (Wegovy):</strong> <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">0.25 mg up to a 2.4 mg weekly maximum</a>, over about 16 weeks.</li><li><strong>Tirzepatide (Mounjaro/Zepbound):</strong> <a href="https://medlineplus.gov/druginfo/meds/a622044.html" target="_blank" rel="noopener">2.5 mg up to as much as 15 mg weekly</a>.</li></ul>Tirzepatide's wider dose range gives providers more room to find the right dose for each patient. Our <a href="/articles/first-month-weight-loss-medication">first month guide</a> covers how the start of treatment feels. Our overview of <a href="/best-weight-loss-injections">the weekly GLP-1 injections available</a> puts them side by side.`,
       },
       {
         heading: "Can you switch from semaglutide to tirzepatide?",
@@ -868,7 +868,7 @@ export const articlesPart1: Article[] = [
       },
       {
         heading: "Should you choose compounded or brand-name semaglutide?",
-        body: `If your insurance covers Wegovy or Ozempic, the brand-name drug may be the simpler route. If you pay out of pocket, as most weight loss patients do, compounded semaglutide from a reputable provider gives you the same active ingredient for a fraction of the price.<br><br><a href="/">Compare providers</a> that offer compounded options, or <a href="/find-your-match">take our quiz</a> to match your budget.`,
+        body: `If your insurance covers Wegovy or Ozempic, the brand-name drug may be the simpler route, and our guide to <a href="/articles/how-to-get-ozempic-online">getting a brand Ozempic prescription online</a> covers the steps. If you pay out of pocket, as most weight loss patients do, compounded semaglutide from a reputable provider gives you the same active ingredient for a fraction of the price.<br><br><a href="/">Compare providers</a> that offer compounded options, or <a href="/find-your-match">take our quiz</a> to match your budget.`,
       },
       {
         heading: "How are compounding pharmacies regulated?",

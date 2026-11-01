@@ -239,34 +239,34 @@ const embodywellmedrBattle: BattleData = {
 // affordability-first, flexible-plan model with multi-month discounts.
 const altrxTrimrxBattle: BattleData = {
   slug: "altrx-vs-trimrx",
-  updatedAt: "2026-09-02",
+  updatedAt: "2026-10-31",
   provider1Id: "altrx",
   provider2Id: "trimrx",
   title: "altRx vs TrimRx: GLP-1 Value and Flexibility (2026)",
   subtitle: "How altRx and TrimRx stack up on cost, medication range, clinical support, plan flexibility and what customers report.",
-  description: "altRx vs TrimRx: altRx starts at $89/mo and stocks brand-name Zepbound and Wegovy; TrimRx offers multi-month discounts and no long-term commitment.",
-  intro: "TrimRx is the better value of the two, built around affordable GLP-1 access with multi-month discounts, bundled provider consultations and no long-term commitment. altRx, which describes itself as \"the #1 most affordable GLP-1 program\", starts at $89/month and carries the broadest menu here: compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. Both providers work entirely online, skip insurance and ship prescriptions to your home. The sections below compare altRx and TrimRx on price, medication options, medical support, flexibility and customer experience.",
-  verdict: "TrimRx takes this one on value. altRx and TrimRx are both legitimate online GLP-1 providers that do not require insurance, but TrimRx's plans are designed around affordability: competitive monthly pricing, discounts for multi-month plans, and provider consultations with ongoing support included, all without a long-term commitment. altRx is the better choice if you want the largest medication selection, including brand-name Zepbound or Wegovy, or want to pay with Buy Now, Pay Later.",
+  description: "altRx vs TrimRx: altRx wins at $89/mo semaglutide and $149 tirzepatide with brand-name Zepbound and Wegovy; TrimRx costs $149/$259 with more provider contact.",
+  intro: "altRx wins this comparison: it is the cheaper of the two on both medications and has the broader menu. altRx charges $89/month for compounded semaglutide and $149 for tirzepatide, the same at every dose, against TrimRx's $149 and $259, and it also sells brand-name Zepbound and Wegovy and accepts Buy Now, Pay Later. TrimRx's strengths are more provider contact, with unlimited check-ins and custom dosing, fast tracked delivery and a large public review record of 3.8 stars across 5,392 Trustpilot reviews. Both work entirely online, need no insurance and ship to your home. The sections below compare them on price, medications, clinical support, flexibility and customer experience.",
+  verdict: "altRx is our pick. It costs $60 a month less than TrimRx for compounded semaglutide ($89 vs $149) and $110 less for tirzepatide ($149 vs $259), which adds up to $720 and $1,320 a year at current prices, and the price does not rise with your dose. It also lets you move to brand-name Zepbound or Wegovy without changing providers, and you can pause or cancel at any time. Choose TrimRx instead if you want more hands-on care: unlimited provider check-ins, custom dosing, fast tracked delivery and a longer public Trustpilot record. altRx's prices are promotional against regular rates of $199 and $299, so check the price at checkout.",
   verdictWinnerPoints: [
-    "Designed for affordability, with multi-month discounts",
-    "Flexible plans and no long-term commitment",
-    "Provider consultations and ongoing clinical guidance included",
+    "Lower price: $89 semaglutide and $149 tirzepatide, the same at every dose",
+    "Broadest menu, including brand-name Zepbound and Wegovy",
+    "Buy Now, Pay Later at checkout; pause or cancel anytime",
   ],
   verdictLoserPoints: [
-    "Broadest menu, including brand-name Zepbound and Wegovy",
-    "Buy Now, Pay Later at checkout",
-    "Licensed clinicians guide your care",
+    "Unlimited provider check-ins and custom dosing",
+    "Fast tracked delivery, often next-day",
+    "3.8 stars across 5,392 Trustpilot reviews",
   ],
-  winnerId: "trimrx",
+  winnerId: "altrx",
   categories: [
     {
       name: "Cost and Value",
-      winner: "provider2",
-      explanation: "TrimRx is the lower-cost route to GLP-1 treatment. Its plans combine competitive monthly pricing with discounts for multi-month commitments, and consultations and ongoing support are part of the price. altRx is also transparent, at $89/month for compounded GLP-1 and $149 for GLP-1 + GIP, and accepts Buy Now, Pay Later.",
+      winner: "provider1",
+      explanation: "altRx is the cheaper of the two on both medications: $89/month for compounded semaglutide and $149 for tirzepatide, against $149 and $259 at TrimRx, and altRx charges the same at every dose. altRx's prices are promotional against regular rates of $199 and $299; TrimRx discounts multi-month plans. On current prices, a year of semaglutide is $1,068 at altRx and $1,788 at TrimRx.",
       supportingPoints: [
-        "TrimRx: competitive pricing plus multi-month discounts",
-        "TrimRx: consultations and support included",
-        "altRx: $89/mo GLP-1, $149/mo GLP-1 + GIP",
+        "altRx: $89/mo semaglutide, $149/mo tirzepatide",
+        "TrimRx: $149/mo semaglutide, $259/mo tirzepatide",
+        "altRx: Buy Now, Pay Later",
         "Both: no insurance needed",
       ],
     },
@@ -316,7 +316,7 @@ const altrxTrimrxBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Entry Price", provider1Value: "$89/mo GLP-1 · $149/mo GLP-1 + GIP", provider2Value: "Value-focused · multi-month discounts", highlight: "provider2" },
+    { feature: "Entry Price", provider1Value: "$89/mo semaglutide · $149/mo tirzepatide", provider2Value: "$149/mo semaglutide · $259/mo tirzepatide", highlight: "provider1" },
     { feature: "Consultation", provider1Value: "Fully online", provider2Value: "Fully online", highlight: "both" },
     { feature: "Medication Menu", provider1Value: "Compounded plus brand-name Zepbound and Wegovy", provider2Value: "Compounded semaglutide and tirzepatide", highlight: "provider1" },
     { feature: "Who Treats You", provider1Value: "Licensed clinicians", provider2Value: "Provider consultations plus ongoing guidance", highlight: "both" },
@@ -327,7 +327,7 @@ const altrxTrimrxBattle: BattleData = {
     {
       question: "Which is better, altRx or TrimRx?",
       answer:
-        "TrimRx wins our comparison for most people because of how its plans work: month to month with no long-term commitment, custom dosing, unlimited check-ins with a provider and free tracked delivery that often arrives the next day, backed by 3.8 stars across 5,392 Trustpilot reviews. altRx is cheaper on the sticker, at $89/month for compounded semaglutide and $149 for tirzepatide against TrimRx's $149 and $259, and it also sells brand-name Zepbound and Wegovy. Choose altRx if the lowest monthly price or brand-name medication matters most, and TrimRx if you want more provider contact and faster delivery.",
+        "altRx wins our comparison for most people: $89/month for compounded semaglutide and $149 for tirzepatide against TrimRx's $149 and $259, one price at every dose, and brand-name Zepbound and Wegovy on the same platform. TrimRx is the better choice if you want more provider contact, with unlimited check-ins, custom dosing and fast tracked delivery, backed by 3.8 stars across 5,392 Trustpilot reviews. Choose altRx to spend less and keep brand-name options open, and TrimRx for more hands-on care.",
     },
     {
       question: "How much do altRx and TrimRx cost over a year?",

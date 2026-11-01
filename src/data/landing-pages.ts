@@ -161,7 +161,7 @@ export const landingPages: LandingPageData[] = [
           },
           {
             heading: "Who qualifies for Ozempic for weight loss?",
-            body: 'You typically qualify with a BMI of 30 or higher, or a BMI of 27 or higher plus a weight-related health condition. Providers also review your medical history and current medications. See our <a href="/articles/who-qualifies-for-glp1-weight-loss">full eligibility guide</a> for the detailed criteria.',
+            body: 'You typically qualify with a BMI of 30 or higher, or a BMI of 27 or higher plus a weight-related health condition. Providers also review your medical history and current medications. See our <a href="/articles/who-qualifies-for-glp1-weight-loss">full eligibility guide</a> for the detailed criteria, and our guide to <a href="/articles/how-to-get-ozempic-online">how an online Ozempic prescription works</a>.',
           },
           {
             heading: "What side effects does Ozempic cause?",

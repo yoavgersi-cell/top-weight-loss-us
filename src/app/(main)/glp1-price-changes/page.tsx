@@ -8,7 +8,7 @@ import { GuideCluster } from "@/components/guide-cluster";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { TrustDisclosure } from "@/components/medical-sources";
 import { ProviderCta } from "@/components/provider-cta";
-import { pageReviewSchema } from "@/data/reviewers";
+import { reviewedPageNode } from "@/data/reviewers";
 import { getConfig } from "@/lib/config-store";
 import { PRICE_INDEX, PRICE_INDEX_VERIFIED, PRICE_CHANGELOG } from "@/lib/price-index";
 
@@ -50,10 +50,9 @@ export default async function PriceChangesPage() {
     headline: title,
     datePublished: PUBLISHED,
     dateModified: latest > PRICE_INDEX_VERIFIED ? latest : PRICE_INDEX_VERIFIED,
-    ...pageReviewSchema("/glp1-price-changes"),
     author: { "@type": "Organization", name: "Top Weight Loss Team", url: "https://www.topweightloss.us" },
     publisher: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
-    mainEntityOfPage: CANONICAL,
+    mainEntityOfPage: reviewedPageNode("/glp1-price-changes", CANONICAL, "WebPage"),
     hasPart: {
       "@type": "ItemList",
       itemListOrder: "https://schema.org/ItemListOrderDescending",

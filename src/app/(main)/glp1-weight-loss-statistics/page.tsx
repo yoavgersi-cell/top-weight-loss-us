@@ -1,7 +1,8 @@
 import { withSeo } from "@/lib/seo";
-import { pageReviewSchema } from "@/data/reviewers";
+import { reviewedPageNode } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { GuideCluster } from "@/components/guide-cluster";
 import { TopTwoPicks } from "@/components/top-providers-block";
 import { getConfig } from "@/lib/config-store";
@@ -83,10 +84,9 @@ export default async function StatisticsPage() {
     description: DESCRIPTION,
     datePublished: "2026-08-01",
     dateModified: PRICE_INDEX_VERIFIED,
-    ...pageReviewSchema("/glp1-weight-loss-statistics"),
     author: { "@type": "Organization", name: "Top Weight Loss Research Team", url: "https://www.topweightloss.us/about" },
     publisher: { "@type": "Organization", name: "Top Weight Loss", url: "https://www.topweightloss.us" },
-    mainEntityOfPage: { "@type": "WebPage", "@id": CANONICAL },
+    mainEntityOfPage: reviewedPageNode("/glp1-weight-loss-statistics", CANONICAL, "MedicalWebPage"),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -122,6 +122,7 @@ export default async function StatisticsPage() {
             Last price check {longDate(PRICE_INDEX_VERIFIED)} · {PRICE_CHANGELOG.length} changes recorded since{" "}
             {longDate(PRICE_CHANGELOG[PRICE_CHANGELOG.length - 1]?.date ?? PRICE_INDEX_VERIFIED)}
           </p>
+          <MedicalReviewBar path="/glp1-weight-loss-statistics" className="mt-4 max-w-[760px]" />
         </div>
       </div>
 

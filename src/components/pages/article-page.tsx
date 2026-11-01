@@ -480,7 +480,6 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     dateModified: latestUpdate(article.updatedAt),
     wordCount,
     articleSection: article.category,
-    ...pageReviewSchema(`${ctx.prefix}/articles/${slug}`),
     // The research team is a group, so it is an Organization, not a Person.
     author: {
       "@type": "Organization",
@@ -501,7 +500,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     // expects it on; provider-business articles (Advice: legit, cost,
     // alternatives) stay plain WebPage.
     mainEntityOfPage: {
-      "@type": ["Science", "Guide", "Wellness"].includes(article.category) ? "MedicalWebPage" : "WebPage",
+      "@type": ["Science", "Guide", "Wellness", "Safety"].includes(article.category) ? "MedicalWebPage" : "WebPage",
       "@id": canonicalUrl(ctx, `/articles/${slug}`),
       ...pageReviewSchema(`${ctx.prefix}/articles/${slug}`),
     },

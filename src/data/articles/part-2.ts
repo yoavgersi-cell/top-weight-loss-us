@@ -297,7 +297,7 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
     sections: [
       {
         heading: "Why do people look for an alternative to ro?",
-        body: `The main reason is price. <a href="/reviews/ro">ro</a> is a long-established US telehealth platform with licensed providers and its own pharmacy, but its weight loss program is built on brand-name drugs. At verified published prices, <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/218316Orig1s000lbl.pdf" target="_blank" rel="noopener">ro lists the Wegovy pill</a> at $149 for the first month (then $299, plus a separate membership) and Zepbound KwikPens from $299 for the first month (then $399-449). Compounded semaglutide and tirzepatide, the same active ingredients, cost much less through licensed telehealth providers. Other common reasons to switch:<ul><li>A wider choice of medications.</li><li>A plan with no commitment.</li><li>More hands-on support.</li></ul>Every provider below has a licensed clinician review your case before anything is prescribed.`,
+        body: `The main reason is price. <a href="/reviews/ro">ro</a> is a long-established US telehealth platform with licensed providers and its own pharmacy, but its weight loss program is built on brand-name drugs. At verified published prices, <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/218316Orig1s000lbl.pdf" target="_blank" rel="noopener">ro lists the Wegovy pill</a> at $149 for the first month (then $299, plus a separate membership) and Zepbound KwikPens from $299 for the first month (then $399-449). Compounded semaglutide and tirzepatide, the same active ingredients, cost much less through licensed telehealth providers. Other common reasons to switch:<ul><li>A wider choice of medications.</li><li>A plan with no commitment.</li><li>More hands-on support.</li></ul>Every provider below has a licensed clinician review your case before anything is prescribed. If your question is <a href="/articles/is-ro-legit">whether ro is legitimate</a> rather than whether it is the best value, we cover that separately.`,
       },
       {
         heading: "What is the best overall alternative to ro?",
@@ -393,7 +393,7 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
     sections: [
       {
         heading: "How much is brand-name semaglutide without insurance?",
-        body: `Without insurance, Ozempic costs about $900-$1,000/month at retail and Wegovy about $1,300-$1,400/month. These are the <a href="https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/medications-containing-semaglutide-marketed-type-2-diabetes-or-weight-loss" target="_blank" rel="noopener">two FDA-approved brand forms</a> of semaglutide (see <a href="/articles/ozempic-vs-wegovy-differences">how Ozempic and Wegovy differ</a>). With insurance, copays range from $25 to $500 depending on the plan.`,
+        body: `Without insurance, Ozempic costs about $900-$1,000/month at retail and Wegovy about $1,300-$1,400/month. These are the <a href="https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/medications-containing-semaglutide-marketed-type-2-diabetes-or-weight-loss" target="_blank" rel="noopener">two FDA-approved brand forms</a> of semaglutide (see <a href="/articles/ozempic-vs-wegovy-differences">how Ozempic and Wegovy differ</a>). With insurance, copays range from $25 to $500 depending on the plan. For cash prices across every GLP-1, see <a href="/articles/weight-loss-medication-without-insurance">GLP-1 prices without insurance</a>.`,
       },
       {
         heading: "How much is compounded semaglutide per month?",
@@ -546,7 +546,7 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
     sections: [
       {
         heading: "What is the best GLP-1 for weight loss?",
-        body: `Tirzepatide produces the most weight loss, semaglutide is the most established, and liraglutide is a gentler fallback. Those three, sold as Mounjaro/Zepbound, Ozempic/Wegovy and Saxenda, account for most GLP-1 weight loss prescriptions. They differ in how they work, how much weight people lose and what they cost. For background, see <a href="/articles/how-glp1-medications-work">how GLP-1 medications work</a>.`,
+        body: `Tirzepatide produces the most weight loss, semaglutide is the most established, and liraglutide is a gentler fallback. Those three, sold as Mounjaro/Zepbound, Ozempic/Wegovy and Saxenda, account for most GLP-1 weight loss prescriptions. They differ in how they work, how much weight people lose and what they cost. For background, see <a href="/articles/how-glp1-medications-work">how GLP-1 medications work</a>. If you are deciding <a href="/articles/new-weight-loss-drugs-2026-2027">whether to wait for a newer drug</a>, our pipeline guide covers that question.`,
       },
       {
         heading: "Does tirzepatide cause the most weight loss?",
