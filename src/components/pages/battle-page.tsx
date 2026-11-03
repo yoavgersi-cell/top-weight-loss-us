@@ -1224,8 +1224,8 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               Where each provider leads according to its quoted Trustpilot
               reviews, computed from src/data/review-insights.ts. */}
           <ReviewExperienceComparison
-            a={{ id: p1.id, name: p1.name, reviews: p1.trustpilotReviews ?? [], rating: p1.trustpilotRating, reviewCount: p1.trustpilotReviewCount }}
-            b={{ id: p2.id, name: p2.name, reviews: p2.trustpilotReviews ?? [], rating: p2.trustpilotRating, reviewCount: p2.trustpilotReviewCount }}
+            a={{ id: cardOrder[0].id, name: cardOrder[0].name, reviews: cardOrder[0].trustpilotReviews ?? [], rating: cardOrder[0].trustpilotRating, reviewCount: cardOrder[0].trustpilotReviewCount }}
+            b={{ id: cardOrder[1].id, name: cardOrder[1].name, reviews: cardOrder[1].trustpilotReviews ?? [], rating: cardOrder[1].trustpilotRating, reviewCount: cardOrder[1].trustpilotReviewCount }}
           />
 
           {/* ───── 12-MONTH COST MATH ─────
