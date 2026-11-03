@@ -53,6 +53,7 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
       "glp1-and-mental-health",
       "stopping-glp1-medication-what-happens",
       "first-month-weight-loss-medication",
+      "glp1-microdosing-2026",
     ],
     pages: [{ href: "/retatrutide-weight-loss", label: "Retatrutide: trial results and gray-market risks" }],
   },

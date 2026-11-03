@@ -116,6 +116,7 @@ export const sideEffectsSectionsA: Article["sections"] = [
 <p>None of these steps is a guarantee, and none replaces advice from your own prescriber. They are practical habits that work with the way these drugs slow digestion, rather than against it.</p>
 <h3>1. Respect the titration schedule</h3>
 <p>The <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/215256s015lbl.pdf" target="_blank" rel="noopener">Wegovy</a> and <a href="https://pi.lilly.com/us/zepbound-uspi.pdf" target="_blank" rel="noopener">Zepbound</a> labels both use step-by-step dose increases because GI effects are most common during escalation. Skipping ahead to a higher dose to speed up weight loss is one of the most reliable ways to make yourself sick. If you are not tolerating a dose, your clinician may keep you there longer before moving up. That is a normal, label-consistent adjustment, not a failure.</p>
+<p>Staying on a lower step with your clinician is not the same as the self-directed "microdosing" promoted online, which no randomized trial has tested. <a href="/articles/glp1-microdosing-2026">Our GLP-1 microdosing evidence review</a> explains what lower-dose trials do and do not show.</p>
 <h3>2. Eat smaller meals, more slowly</h3>
 <p>Because food leaves your stomach more slowly, a portion that felt normal before treatment can now feel like too much. Smaller plates, eating slowly and pausing partway through a meal give your fullness signals time to register.</p>
 <h3>3. Stop eating when you feel full</h3>

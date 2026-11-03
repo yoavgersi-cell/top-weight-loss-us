@@ -202,34 +202,34 @@ export const embodyMedviBattle: BattleData = {
 
 export const altrxwellmedrBattle: BattleData = {
   slug: "altrx-vs-wellmedr",
-  updatedAt: "2026-09-14",
+  updatedAt: "2026-11-02",
   provider1Id: "altrx",
   provider2Id: "wellmedr",
   title: "altRx vs welludr: Which GLP-1 Provider Wins in 2026?",
   subtitle: "Flat-priced GLP-1 plus brand-name pens vs the lowest headline rates and a wider wellness menu: price, medications and payment compared.",
-  description: "altRx vs welludr: altRx charges a flat $89/mo with brand-name Zepbound and Wegovy; welludr lists $41/mo semaglutide, 1M+ patients and a weight-loss warranty.",
-  intro: "altRx is our pick for weight-loss value and choice: compounded semaglutide from $89 per month and tirzepatide from $149, the same at every dose, plus brand-name Zepbound and Wegovy and a Buy Now, Pay Later option. welludr advertises lower headline prices, with semaglutide from $41 per month and tirzepatide from $71 in its Pre-Black Friday sale, and pairs them with board-certified specialists, a Medical Weight-Care Coach and a weight-loss warranty. Both prescribe compounded GLP-1 online. Here is the full comparison.",
-  verdict: "altRx wins for people focused on weight loss, thanks to flat $89/$149 pricing at every dose, the option of brand-name Zepbound or Wegovy, and Buy Now, Pay Later. welludr makes more sense if you want its enhanced formulation (semaglutide with NAD+/B12) or a wider wellness and longevity platform that goes beyond weight loss.",
+  description: "altRx vs welludr: welludr wins with semaglutide from $41/mo, a 4.6 Trustpilot rating and a weight-loss warranty; altRx charges a flat $89/mo with brand-name pens.",
+  intro: "welludr is our pick for most people: compounded semaglutide from $41 per month and tirzepatide from $71 in its Pre-Black Friday sale (from October 28, 2026), board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty and a 4.6 rating from 2,188 Trustpilot reviews. altRx charges from $89 for semaglutide and $149 for tirzepatide, the same at every dose, and adds brand-name Zepbound and Wegovy plus Buy Now, Pay Later. Both prescribe compounded GLP-1 online. Here is the full comparison.",
+  verdict: "welludr wins for most people: the lowest compounded prices we track (from $41/$71 a month in its sale), a strong 4.6 Trustpilot rating from 2,188 reviews, faster 3-5 business-day delivery, a Medical Weight-Care Coach and a weight-loss warranty. Check the plan terms behind the sale price at checkout. Choose altRx instead if you want one flat price at every dose with no plan to read through, brand-name Wegovy on the same menu, or Buy Now, Pay Later.",
   verdictWinnerPoints: [
+    "Semaglutide from $41/mo; tirzepatide (GLP-1/GIP) from $71/mo in its sale",
+    "4.6 on Trustpilot from 2,188 reviews",
+    "Medical Weight-Care Coach and a weight-loss warranty",
+  ],
+  verdictLoserPoints: [
     "Compounded GLP-1 from $89/mo, one price at every dose",
     "Brand-name Zepbound and Wegovy on offer",
     "No insurance needed; Buy Now, Pay Later available",
   ],
-  verdictLoserPoints: [
-    "Semaglutide from $41/mo; tirzepatide (GLP-1/GIP) from $71/mo",
-    "A distinctive semaglutide + NAD+/B12 microdose",
-    "Wider wellness and longevity menu, including NAD+",
-  ],
-  winnerId: "altrx",
+  winnerId: "wellmedr",
   categories: [
     {
       name: "How do altRx and welludr prices compare?",
-      winner: "provider1",
-      explanation: "welludr's headline is lower, but altRx is simpler. altRx charges from $89 per month for compounded semaglutide and from $149 for tirzepatide, and the price holds at every dose. welludr lists semaglutide from $41 per month and tirzepatide from $71 in its Pre-Black Friday sale (from October 28, 2026); check the plan terms at checkout. altRx keeps one flat price and adds brand-name Zepbound and Wegovy, while welludr comes in lower on headline price.",
+      winner: "provider2",
+      explanation: "welludr is cheaper. It lists compounded semaglutide from $41 per month and tirzepatide from $71 in its Pre-Black Friday sale (from October 28, 2026), the lowest prices in our index; check the plan terms at checkout. altRx charges from $89 per month for semaglutide and from $149 for tirzepatide, and that price holds at every dose, which makes altRx the more predictable of the two.",
       supportingPoints: [
-        "altRx: from $89/mo, flat at every dose",
-        "altRx: predictable pricing month after month",
         "welludr: semaglutide from $41/mo, tirzepatide from $71/mo",
+        "welludr: lowest compounded prices we track",
+        "altRx: from $89/mo, flat at every dose",
         "Both: no insurance needed",
       ],
     },
@@ -268,8 +268,8 @@ export const altrxwellmedrBattle: BattleData = {
     },
     {
       name: "Who oversees your treatment?",
-      winner: "tie",
-      explanation: "Qualified clinicians run care at both. At altRx, a physician, PA or nurse practitioner guides treatment. At welludr, board-certified specialists tailor the plan and you can message your provider at any time.",
+      winner: "provider2",
+      explanation: "Qualified clinicians run care at both, but welludr adds more support around them. At welludr, board-certified specialists tailor the plan, a Medical Weight-Care Coach supports you throughout, you can message your provider at any time and the program is backed by a weight-loss warranty. At altRx, a physician, PA or nurse practitioner guides treatment.",
       supportingPoints: [
         "altRx: guided by a physician, PA or NP",
         "altRx: pause or adjust with your provider",
@@ -290,12 +290,12 @@ export const altrxwellmedrBattle: BattleData = {
     {
       question: "Which is better, welludr or altRx?",
       answer:
-        "altRx wins our comparison for people focused on weight loss: one flat price at every dose ($89/month for compounded semaglutide, $149 for tirzepatide), brand-name Zepbound and Wegovy on the same menu, and Buy Now, Pay Later. welludr (formerly wellmedr) has the lower headline price, from $41 and $71 a month in its Pre-Black Friday sale, and a 4.6 rating across 2,188 Trustpilot reviews, while altRx shows no overall Trustpilot score. Choose welludr if its sale price and plan terms suit you or you want its NAD+ and longevity services, and altRx for flat pricing and brand-name options.",
+        "welludr wins our comparison for most people: compounded semaglutide from $41 and tirzepatide from $71 a month in its Pre-Black Friday sale, a 4.6 rating across 2,188 Trustpilot reviews (altRx shows no overall Trustpilot score), 3-5 business-day delivery, a Medical Weight-Care Coach and a weight-loss warranty. Check the plan terms behind the sale price at checkout. Choose altRx instead if you want one flat price at every dose ($89/month for semaglutide, $149 for tirzepatide), brand-name Wegovy alongside Zepbound, or Buy Now, Pay Later.",
     },
     {
       question: "Which ships faster, welludr or altRx?",
       answer:
-        "welludr's standard delivery takes about 3-5 business days, with refills every 4 weeks in plain, unbranded packaging. altRx ships free in about 5-7 days. If you are timing your first dose or a switch from another provider, welludr is the quicker of the two, while altRx makes up for the wait with flat pricing and its brand-name shelf.",
+        "welludr's standard delivery takes about 3-5 business days, with refills every 4 weeks in plain, unbranded packaging. altRx ships free in about 5-7 days. If you are timing your first dose or a switch from another provider, welludr is the quicker of the two.",
     },
   ],
 };

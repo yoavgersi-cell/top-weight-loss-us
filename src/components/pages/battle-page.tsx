@@ -561,10 +561,16 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // covers providers that don't have a review entry yet.
   const p1Review = (config.reviews ?? []).find((r) => r.providerId === p1.id);
   const p2Review = (config.reviews ?? []).find((r) => r.providerId === p2.id);
+  // Provider cards, deep dives, Reddit threads and bottom CTAs list the
+  // comparison winner first (operator rule). Tables keep provider1/provider2
+  // column order because their data is keyed that way.
+  const winnerIsP2 = battle.winnerId === p2.id;
+  const cardOrder = winnerIsP2 ? [p2, p1] : [p1, p2];
   const deepDives = [
     { provider: p1, review: p1Review, bestForFallback: p1VerdictPoints },
     { provider: p2, review: p2Review, bestForFallback: p2VerdictPoints },
   ];
+  if (winnerIsP2) deepDives.reverse();
 
   // Mobile promo popup - the highest-priority featured provider that has a
   // creative (registry + priority in @/lib/promo-popups). Each popup's link and
@@ -825,7 +831,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
           {/* ───── REDDIT COMMUNITY CAROUSEL (verified threads only) ───── */}
           <RedditThreadCarousel
-            providers={[p1, p2]}
+            providers={cardOrder}
             reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
           />
 
@@ -839,7 +845,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   What Reddit users keep saying
                 </p>
                 <div className="space-y-3 text-[14px] leading-[1.7] text-gray-600">
-                  {[p1, p2].map((p) =>
+                  {cardOrder.map((p) =>
                     REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes ? (
                       <p key={p.id}>
                         <span className="font-bold text-[#191919]">{p.name}:</span>{" "}
@@ -901,7 +907,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </div>
             </div>
 
-            {[p1, p2].map((provider, idx) => {
+            {cardOrder.map((provider, idx) => {
               return (
               <Fragment key={provider.id}>
                 {/* VS badge - mobile: sits in the gap BETWEEN the two stacked cards */}
@@ -1218,8 +1224,8 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               Where each provider leads according to its quoted Trustpilot
               reviews, computed from src/data/review-insights.ts. */}
           <ReviewExperienceComparison
-            a={{ id: p1.id, name: p1.name, reviews: p1.trustpilotReviews ?? [], rating: p1.trustpilotRating, reviewCount: p1.trustpilotReviewCount }}
-            b={{ id: p2.id, name: p2.name, reviews: p2.trustpilotReviews ?? [], rating: p2.trustpilotRating, reviewCount: p2.trustpilotReviewCount }}
+            a={{ id: cardOrder[0].id, name: cardOrder[0].name, reviews: cardOrder[0].trustpilotReviews ?? [], rating: cardOrder[0].trustpilotRating, reviewCount: cardOrder[0].trustpilotReviewCount }}
+            b={{ id: cardOrder[1].id, name: cardOrder[1].name, reviews: cardOrder[1].trustpilotReviews ?? [], rating: cardOrder[1].trustpilotRating, reviewCount: cardOrder[1].trustpilotReviewCount }}
           />
 
           {/* ───── 12-MONTH COST MATH ─────
@@ -1412,8 +1418,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {/* ───── BOTTOM CTAs ───── */}
           <div className="mb-6 grid grid-cols-2 gap-4">
             {[
-              { provider: p1, color: "from-gray-50 to-gray-50/50", hoverColor: "hover:border-[#0C4B75]/30", textColor: "text-[#191919]" },
-              { provider: p2, color: "from-gray-50 to-gray-50/50", hoverColor: "hover:border-[#0C4B75]/30", textColor: "text-[#191919]" },
+              ...cardOrder.map((provider) => ({ provider, color: "from-gray-50 to-gray-50/50", hoverColor: "hover:border-[#0C4B75]/30", textColor: "text-[#191919]" })),
             ].map(({ provider, color, hoverColor, textColor }) => (
               <ProviderCta
                 key={provider.id}

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seo:audit": "node scripts/seo-audit.mjs"
+    "seo:audit": "python3 -I .claude/skills/topweightloss-seo/scripts/site_check.py --base http://localhost:3123"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

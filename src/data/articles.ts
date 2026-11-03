@@ -4,6 +4,7 @@ import { articlesPart3 } from "./articles/part-3";
 import { glp1SideEffects2026 } from "./articles/glp1-side-effects-2026";
 import { glp1Cost2026 } from "./articles/glp1-cost-2026";
 import { newWeightLossDrugs2026 } from "./articles/new-weight-loss-drugs-2026";
+import { glp1Microdosing2026 } from "./articles/glp1-microdosing-2026";
 import { brandClusterArticles } from "./brand-cluster-articles";
 import { pillarGlp1Online } from "./pillar-glp1-online";
 
@@ -33,6 +34,7 @@ export const articles: Article[] = [
   glp1SideEffects2026,
   glp1Cost2026,
   newWeightLossDrugs2026,
+  glp1Microdosing2026,
   ...brandClusterArticles,
   pillarGlp1Online,
 ];
