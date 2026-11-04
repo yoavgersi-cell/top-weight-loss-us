@@ -236,7 +236,7 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
         {/* Credentials and education */}
         <section className="mb-10">
           <h2 className="mb-4 text-[24px] font-bold text-[#191919]">Licensure and education</h2>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {r.licensure.map((c) => (
               <div key={c.title} className="rounded-xl border border-gray-200 bg-white p-4">
                 <p className="mb-1 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.05em] text-emerald-700">

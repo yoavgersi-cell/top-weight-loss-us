@@ -829,7 +829,7 @@ export default async function Glp1ProviderComparisonPage() {
                     {s.cancellation} <span className="text-[13px] text-gray-500">Terms reviewed {TERMS_REVIEWED}.</span>
                   </p>
 
-                  <div className="mt-6 grid gap-5 sm:grid-cols-2">
+                  <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
                     <div>
                       <p className="mb-2 text-[13px] font-bold uppercase tracking-[0.05em] text-emerald-700">Pros</p>
                       <ul className="space-y-1.5">

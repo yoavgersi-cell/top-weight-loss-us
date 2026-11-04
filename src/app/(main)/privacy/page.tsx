@@ -12,7 +12,7 @@ export const metadata: Metadata = withSeo("/privacy", {
   alternates: { canonical: CANONICAL },
 });
 
-const ext = "font-semibold text-[#0C4B75] hover:underline";
+const ext = "font-semibold text-[#0C4B75] hover:underline [overflow-wrap:anywhere]";
 
 export default function PrivacyPage() {
   return (

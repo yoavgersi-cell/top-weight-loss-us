@@ -40,7 +40,7 @@ export function ProviderAudit({
           leave it out rather than guess.
         </p>
 
-        <dl className="grid gap-x-10 gap-y-3.5 sm:grid-cols-2">
+        <dl className="grid grid-cols-1 gap-x-10 gap-y-3.5 sm:grid-cols-2">
           {audit.rows.map((row, i) => (
             <div key={i} className="flex flex-col gap-0.5 border-l-2 border-gray-100 pl-3.5">
               <dt className="text-[11.5px] font-bold uppercase tracking-[0.05em] text-gray-400">

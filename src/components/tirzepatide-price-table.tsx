@@ -69,7 +69,7 @@ function VerificationStrip({ byId, linkPrefix }: { byId: Map<string, Provider>; 
         On {verifiedLabel(VERIFIED_SCREENSHOTS_DATE)}
         {" "}we compared our top three against each provider&rsquo;s pricing page. The screenshots below show exactly what those pages listed on that date. Offers and prices move, so treat the provider&rsquo;s own site as the current source.
       </p>
-      <div className="mt-4 grid gap-4 sm:grid-cols-3">
+      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
         {tiles.map((t) => (
           <figure key={t.id} className="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-[#F7F8FA]">
             <a
@@ -135,7 +135,7 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
 
   if (rows.length === 0) return null;
 
-  const cta = "inline-flex h-[36px] items-center justify-center gap-1 whitespace-nowrap rounded-lg bg-[#0C4B75] px-3.5 text-[12.5px] font-bold text-white transition-colors hover:bg-[#093d61]";
+  const cta = "inline-flex min-h-[36px] max-w-full items-center justify-center gap-1 rounded-lg bg-[#0C4B75] px-3 py-1.5 text-center text-[12.5px] leading-tight sm:whitespace-nowrap font-bold text-white transition-colors hover:bg-[#093d61]";
 
   return (
     <div className="not-prose my-6">

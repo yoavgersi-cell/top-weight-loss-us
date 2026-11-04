@@ -19,7 +19,7 @@ export function ExpertTeam({ experts }: { experts: Expert[] }) {
         reviews. Every ranking and review is produced and checked by this team.
       </p>
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         {experts.map((expert) => (
           <article key={expert.id} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-[0_1px_3px_rgba(16,32,54,0.04)]">
             <div className="flex items-center gap-4">

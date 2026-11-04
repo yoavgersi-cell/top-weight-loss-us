@@ -54,7 +54,7 @@ export function BattleStickyCta({
 
         <div className="px-3 pt-2.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
           {/* Reassurance strip - evergreen, always-positive, provider-agnostic */}
-          <div className="mb-2.5 flex items-center justify-center gap-1.5 text-[11px] font-medium text-gray-500">
+          <div className="mb-2.5 flex flex-wrap items-center justify-center gap-x-1.5 gap-y-0.5 text-[11px] font-medium text-gray-500">
             <Check className="h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
             <span>100% online</span>
             <span className="text-gray-400">·</span>

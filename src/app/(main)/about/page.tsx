@@ -199,7 +199,7 @@ export default async function AboutPage() {
         </section>
 
         {/* ───── Why ───── */}
-        <section className="mb-14 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-12">
+        <section className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-12">
           <h2 className="text-[26px] font-extrabold leading-tight tracking-[-0.01em] text-[#191919] sm:text-[30px]">
             Why does Top Weight Loss exist?
           </h2>
@@ -226,7 +226,7 @@ export default async function AboutPage() {
             </h2>
             <p className="mt-2 max-w-[640px] text-[15px] text-gray-500">Every provider page goes through these four checks, in this order.</p>
           </div>
-          <ol className="grid gap-4 sm:grid-cols-2">
+          <ol className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {steps.map(({ icon: Icon, title, desc }, i) => (
               <li key={title} className="relative rounded-2xl border border-gray-200 bg-white p-5 sm:p-6">
                 <div className="flex items-center gap-3">
@@ -267,7 +267,7 @@ export default async function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="mt-5 grid gap-4 sm:grid-cols-3">
+          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
             {CAPTURES.map((c) => (
               <figure key={c.provider} className="overflow-hidden rounded-xl border border-gray-200 bg-[#F7F8FA]">
                 <a href={c.image} target="_blank" rel="noopener noreferrer" className="flex h-[150px] items-center justify-center bg-white p-2" title="View the full-size capture">
@@ -337,7 +337,7 @@ export default async function AboutPage() {
         </section>
 
         {/* ───── Who writes ───── */}
-        <section className="mb-14 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-12">
+        <section className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-12">
           <h2 className="text-[26px] font-extrabold leading-tight tracking-[-0.01em] text-[#191919] sm:text-[30px]">
             Who researches and writes the content?
           </h2>
@@ -365,7 +365,7 @@ export default async function AboutPage() {
             this site and signs up. Every page with those links discloses this before the first link appears. The site
             does not cover every provider in the market.
           </p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6">
               <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-gray-400">Commissions can influence</p>
               <ul className="mt-3 space-y-2 text-[15px] text-gray-700">
@@ -405,7 +405,7 @@ export default async function AboutPage() {
           <h2 className="text-[26px] font-extrabold leading-tight tracking-[-0.01em] text-[#191919] sm:text-[30px]">
             Where to start on Top Weight Loss
           </h2>
-          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {VERTICAL_LINKS.map((v) => (
               <Link
                 key={v.href}
@@ -423,7 +423,7 @@ export default async function AboutPage() {
         </section>
 
         {/* ───── Current, corrections, disclaimer ───── */}
-        <section className="mb-14 grid gap-4 sm:grid-cols-3">
+        <section className="mb-14 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {([
             {
               icon: RefreshCw,

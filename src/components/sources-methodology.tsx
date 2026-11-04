@@ -67,7 +67,7 @@ export function SourcesMethodology({
           claims about itself are not accepted until we confirm them.
         </p>
 
-        <div className="grid gap-x-10 gap-y-7 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-10 gap-y-7 sm:grid-cols-2">
           {/* Provider-published data - links to our own detailed breakdowns */}
           <div>
             <GroupLabel icon={FileText}>Provider data</GroupLabel>
@@ -120,7 +120,7 @@ export function SourcesMethodology({
           {medicalSources.length > 0 && (
             <div className="sm:col-span-2">
               <GroupLabel icon={Stethoscope}>Clinical &amp; regulatory sources</GroupLabel>
-              <ol className="grid gap-x-8 gap-y-2 sm:grid-cols-2">
+              <ol className="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2">
                 {medicalSources.map((s, i) => (
                   <li key={i} className="flex gap-2 text-[13px] leading-relaxed">
                     <span className="shrink-0 font-semibold text-gray-400">{i + 1}.</span>
