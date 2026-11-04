@@ -913,6 +913,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               profile={TRUSTPILOT_PROFILES[provider.id]}
             />
             <TrustpilotCarousel
+              headingLevel="h2"
               providerName={provider.name}
               providerLogo={provider.logo}
               reviews={provider.trustpilotReviews!}
@@ -955,7 +956,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               {review.pricingPlans.map((plan) => (
                 <div key={plan.name} className="rounded-xl border border-gray-200 bg-gray-50/60 p-5">
                   <div className="flex items-center justify-between gap-2">
-                    <h4 className="text-[15px] font-bold text-[#191919]">{plan.name}</h4>
+                    <h3 className="text-[15px] font-bold text-[#191919]">{plan.name}</h3>
                     {plan.cadence && (
                       <span className="rounded-full bg-[#0C4B75]/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[#0C4B75]">
                         {plan.cadence}
@@ -1397,7 +1398,7 @@ function Section({
 }) {
   return (
     <div className="mb-6 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-      <h3 className="mb-4 text-[17px] font-bold text-[#191919]">{title}</h3>
+      <h2 className="mb-4 text-[17px] font-bold text-[#191919]">{title}</h2>
       {children}
     </div>
   );

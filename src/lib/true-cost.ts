@@ -136,7 +136,7 @@ export function budgetList(drug: "semaglutide" | "tirzepatide"): string {
     .filter((b) => b.rows.length > 0)
     .map(
       (b) =>
-        `<h4>${b.label}</h4><ul>${b.rows
+        `<h3>${b.label}</h3><ul>${b.rows
           .map((r) => {
             const p = r.prepaidTotal !== null ? `${money(r.month1 / 12)} per month averaged, ${money(r.prepaidTotal)} paid up front` : money(r.maintenance ?? r.month1);
             const tag = r.entryOnly ? " (starting price; ongoing price not published)" : r.regular !== null ? ` (promotional; regular ${money(r.regular)})` : "";

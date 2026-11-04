@@ -5,7 +5,7 @@ Usage:
   npx next start -p 3123 &
   python3 -I .claude/skills/topweightloss-seo/scripts/site_check.py --base http://localhost:3123 [--watch /path ...]
 
-Checks: HTTP status, exactly one <h1>, valid JSON-LD, reviewedBy only on page
+Checks: HTTP status, exactly one <h1>, no skipped heading levels (h2 -> h4), valid JSON-LD, reviewedBy only on page
 nodes (WebPage / MedicalWebPage / CollectionPage / ProfilePage), visible review
 byline <-> reviewedBy schema agreement, internal links to non-sitemap pages,
 affiliate links without rel sponsored/nofollow, em/en dashes in visible text.
@@ -85,6 +85,13 @@ def main():
             continue
         if page.count("<h1") != 1:
             problems["h1 count != 1"].append(f"{page.count('<h1')} {path}")
+        body = re.sub(r"<script\b.*?</script>", "", page, flags=re.S)
+        prev = 0
+        for lv in (int(x) for x in re.findall(r"<h([1-6])\b", body)):
+            if prev and lv > prev + 1:
+                problems["heading level skip"].append(f"h{prev}->h{lv} {path}")
+                break
+            prev = lv
 
         has_review_schema = False
         for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.S):
