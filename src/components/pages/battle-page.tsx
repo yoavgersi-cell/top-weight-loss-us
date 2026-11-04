@@ -23,8 +23,6 @@ import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { ReviewExperienceComparison } from "@/components/review-insights";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { LicensedTelehealthBadge } from "@/components/licensed-badge";
-import { PromoPopup } from "@/components/promo-popup";
-import { resolvePromoPopup } from "@/lib/promo-popups";
 import { TrustDisclosure } from "@/components/medical-sources";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { SourcesMethodology } from "@/components/sources-methodology";
@@ -573,13 +571,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   ];
   if (winnerIsP2) deepDives.reverse();
 
-  // Mobile promo popup - the highest-priority featured provider that has a
-  // creative (registry + priority in @/lib/promo-popups). Each popup's link and
-  // offer come from that provider's own real affiliate data.
-  // Comparisons where a provider's promo popup is switched off (operator
-  // request): the popup would push the losing provider on the winner's page.
-  const POPUP_EXCLUDED: Record<string, string[]> = { "eden-vs-embody": ["embody"] };
-  const promoPopup = resolvePromoPopup([p1, p2].filter((p) => !(POPUP_EXCLUDED[slug] ?? []).includes(p.id)));
 
   // CRO layer (rolled out to all battles after the embody-vs-ro prototype):
   // quick answer, fit finder, Reddit synthesis, read-more accordions (content
@@ -1577,16 +1568,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
         recommendedId={verdictWinner?.id}
       />
 
-      {/* Mobile-only promo popup - the highest-priority featured provider that
-          has a creative (e.g. Embody outranks TrimRx on an Embody-vs-TrimRx
-          page, so TrimRx shows on all its other comparisons but not that one) */}
-      {promoPopup && (
-        <PromoPopup
-          spec={promoPopup}
-          href={(promoPopup.providerId === p1.id ? p1 : p2).affiliateUrl}
-          position={promoPopup.providerId === p1.id ? 1 : 2}
-        />
-      )}
     </>
   );
 }
