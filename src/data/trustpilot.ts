@@ -2,17 +2,54 @@ import type { TrustpilotReview } from "@/lib/config";
 
 // Verbatim Trustpilot reviews and aggregate ratings, transcribed from the
 // providers' public Trustpilot profiles. Quotes are never edited.
-// Public Trustpilot profile for each provider we quote, linked from the review
-// block (rel nofollow: we cite, we do not endorse). Same URLs as the provider
-// comparison page's "Checked" notes. altRx has no overall score, so no link.
-export const TRUSTPILOT_PROFILE_URLS: Record<string, string> = {
-  wellmedr: "https://www.trustpilot.com/review/wellmedr.com",
-  embody: "https://www.trustpilot.com/review/joinem.co",
-  eden: "https://www.trustpilot.com/review/tryeden.com",
-  directmeds: "https://www.trustpilot.com/review/directmeds.com",
-  medvi: "https://www.trustpilot.com/review/medvi.org",
-  trimrx: "https://www.trustpilot.com/review/trimrx.com",
-  ro: "https://www.trustpilot.com/review/ro.co",
+// Public Trustpilot profile facts per provider, shown in the review block.
+// `url` is linked rel nofollow (we cite, we do not endorse). `breakdown` is
+// Trustpilot's own star distribution across ALL reviews (percent, 5 to 1
+// stars), copied from an operator-supplied screenshot dated `checked`; only
+// add it from a screenshot, never estimate it. altRx has no overall score.
+export type Pct = number | "<1";
+
+export interface TrustpilotProfile {
+  url: string;
+  // Percent per star, 5 to 1. Trustpilot shows "<1%" for tiny shares: store "<1".
+  breakdown?: { pct: [Pct, Pct, Pct, Pct, Pct]; checked: string; last12Months?: string };
+  claimed?: string;
+  paidSubscription?: boolean;
+}
+
+export const TRUSTPILOT_PROFILES: Record<string, TrustpilotProfile> = {
+  wellmedr: {
+    url: "https://www.trustpilot.com/review/wellmedr.com",
+    breakdown: { pct: [86, 5, 2, "<1", 6], checked: "Nov 4, 2026", last12Months: "3,145" },
+    claimed: "Feb 2026",
+    paidSubscription: true,
+  },
+  embody: {
+    url: "https://www.trustpilot.com/review/joinem.co",
+    breakdown: { pct: [64, 5, 4, 4, 23], checked: "Nov 4, 2026", last12Months: "11,457" },
+    claimed: "Feb 2026",
+    paidSubscription: true,
+  },
+  eden: { url: "https://www.trustpilot.com/review/tryeden.com" },
+  directmeds: { url: "https://www.trustpilot.com/review/directmeds.com" },
+  medvi: {
+    url: "https://www.trustpilot.com/review/medvi.org",
+    breakdown: { pct: [79, 5, 2, 2, 12], checked: "Nov 4, 2026", last12Months: "7,971" },
+    claimed: "Jan 2025",
+    paidSubscription: true,
+  },
+  trimrx: {
+    url: "https://www.trustpilot.com/review/trimrx.com",
+    breakdown: { pct: [55, 3, 2, 5, 35], checked: "Nov 4, 2026", last12Months: "4,464" },
+    claimed: "Aug 2024",
+    paidSubscription: true,
+  },
+  ro: {
+    url: "https://www.trustpilot.com/review/ro.co",
+    breakdown: { pct: [65, 6, 4, 4, 21], checked: "Nov 4, 2026", last12Months: "5,146" },
+    claimed: "Nov 2021",
+    paidSubscription: true,
+  },
 };
 
 export const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; reviews: TrustpilotReview[] }> = {
@@ -74,11 +111,11 @@ export const seedTrustpilot: Record<string, { rating?: string; reviewCount?: str
     ],
   },
   wellmedr: {
-    // Aggregate re-verified Oct 12, 2026 from welludr's claimed Trustpilot
-    // profile (operator-supplied screenshot): 4.6 across 2,188 reviews (was 2,091 on Oct 5, 1,919 on Sep 24),
-    // Wellness Program category, claimed Feb 2026. (Was 4.7 / 1,205.)
-    rating: "4.6",
-    reviewCount: "2,188",
+    // Aggregate re-verified Nov 4, 2026 from welludr's claimed Trustpilot
+    // profile (operator-supplied screenshots): 4.7 across 3,173 reviews (was
+    // 4.6 / 2,188 on Oct 12), Wellness Program category, claimed Feb 2026.
+    rating: "4.7",
+    reviewCount: "3,173",
     reviews: [
       // Oct 5, 2026 batch (operator-supplied screenshots of the profile's
       // newest reviews, Sep 25 - Oct 4 2026): six 5-star, one 4-star.
@@ -484,11 +521,11 @@ export const seedTrustpilot: Record<string, { rating?: string; reviewCount?: str
     ],
   },
   ro: {
-    // Aggregate re-verified Oct 12, 2026 from Ro's claimed Trustpilot profile
-    // (operator-supplied screenshot): 3.9 across 7,105 reviews (was 6,690 on Sep 24), Online
+    // Aggregate re-verified Nov 4, 2026 from Ro's claimed Trustpilot profile
+    // (operator-supplied screenshots): 3.9 across 7,572 reviews (was 7,105 on Oct 12), Online
     // Pharmacy category, claimed Nov 2021. (Was 4.0 / 6,428 earlier in Sep.)
     rating: "3.9",
-    reviewCount: "7,105",
+    reviewCount: "7,572",
     reviews: [
       // Sep 24, 2026 batch (operator-supplied screenshots of the profile's
       // newest reviews, Sep 16-24 2026). Transcribed faithfully; reviewer
@@ -676,11 +713,12 @@ export const seedTrustpilot: Record<string, { rating?: string; reviewCount?: str
     ],
   },
   trimrx: {
-    // Aggregate re-verified Oct 12, 2026 from TrimRx's claimed Trustpilot
-    // profile (operator-supplied screenshot): 3.8 across 5,392 reviews (was 3.7 / 5,670 on Sep 24),
-    // Weight Loss Service category, claimed Aug 2024. (Was 3.6 / 5,497.)
-    rating: "3.8",
-    reviewCount: "5,392",
+    // Aggregate re-verified Nov 4, 2026 from TrimRx's claimed Trustpilot
+    // profile (operator-supplied screenshots): 3.4 across 4,894 reviews (was
+    // 3.8 / 5,392 on Oct 12; Trustpilot's total fell between checks),
+    // Weight Loss Service category, claimed Aug 2024.
+    rating: "3.4",
+    reviewCount: "4,894",
     reviews: [
       // Sep 24, 2026 batch (operator-supplied screenshots of the profile's
       // newest reviews, Sep 23-24 2026, all marked Verified). Transcribed
@@ -872,11 +910,11 @@ export const seedTrustpilot: Record<string, { rating?: string; reviewCount?: str
     ],
   },
   medvi: {
-    // Aggregate re-verified Oct 12, 2026 from MEDVi's claimed Trustpilot
-    // profile (operator-supplied screenshot): 4.3 across 14,987 reviews (was 14,836 on Sep 25),
-    // Weight Loss Service category, claimed Jan 2025. (Was 4.4 / 14,372.)
+    // Aggregate re-verified Nov 4, 2026 from MEDVi's claimed Trustpilot
+    // profile (operator-supplied screenshots): 4.3 across 15,202 reviews (was
+    // 14,987 on Oct 12), Weight Loss Service category, claimed Jan 2025.
     rating: "4.3",
-    reviewCount: "14,987",
+    reviewCount: "15,202",
     reviews: [
       // Sep 25, 2026 batch (operator-supplied screenshots, newest reviews
       // Aug 30 - Sep 25 2026): six 5-star, five 4-star. Same transcription
@@ -1834,10 +1872,10 @@ export const seedTrustpilot: Record<string, { rating?: string; reviewCount?: str
     ],
   },
   embody: {
-    // Aggregate re-verified Oct 12, 2026 (operator-supplied screenshot of the
-    // claimed profile): 3.8 across 9,604 reviews (was 8,398 on Sep 24).
-    rating: "3.8",
-    reviewCount: "9,604",
+    // Aggregate re-verified Nov 4, 2026 (operator-supplied screenshots of the
+    // claimed profile): 3.9 across 11,494 reviews (was 3.8 / 9,604 on Oct 12).
+    rating: "3.9",
+    reviewCount: "11,494",
     reviews: [
       // Sep 24, 2026 batch (operator-supplied screenshots of the profile's
       // newest reviews, all dated Sep 16-23 2026). Transcribed faithfully,

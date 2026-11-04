@@ -212,7 +212,7 @@ const embodywellmedrBattle: BattleData = {
     {
       question: "Is embody or welludr better?",
       answer:
-        "embody is the better choice for most people in our comparison, and welludr is the better choice if the lowest monthly price is what you want. embody charges a flat $69/month for compounded semaglutide and $119 for tirzepatide, month to month, and ships free in 1-2 days, while welludr's Pre-Black Friday sale starts at $41 and $71 a month with standard delivery of about 3-5 business days. welludr has the higher Trustpilot rating, 4.6 across 2,188 reviews against embody's 3.8 across 9,604. Pick embody for no commitment and the fastest delivery, and pick welludr if the sale price and its plan terms at checkout suit you.",
+        "embody is the better choice for most people in our comparison, and welludr is the better choice if the lowest monthly price is what you want. embody charges a flat $69/month for compounded semaglutide and $119 for tirzepatide, month to month, and ships free in 1-2 days, while welludr's Pre-Black Friday sale starts at $41 and $71 a month with standard delivery of about 3-5 business days. welludr has the higher Trustpilot rating, 4.7 across 3,173 reviews against embody's 3.9 across 11,494. Pick embody for no commitment and the fastest delivery, and pick welludr if the sale price and its plan terms at checkout suit you.",
     },
     {
       question: "Is welludr the same company as wellmedr?",
@@ -245,7 +245,7 @@ const altrxTrimrxBattle: BattleData = {
   title: "altRx vs TrimRx: GLP-1 Value and Flexibility (2026)",
   subtitle: "How altRx and TrimRx stack up on cost, medication range, clinical support, plan flexibility and what customers report.",
   description: "altRx vs TrimRx: altRx wins at $89/mo semaglutide and $149 tirzepatide with brand-name Zepbound and Wegovy; TrimRx costs $149/$259 with more provider contact.",
-  intro: "altRx wins this comparison: it is the cheaper of the two on both medications and has the broader menu. altRx charges $89/month for compounded semaglutide and $149 for tirzepatide, the same at every dose, against TrimRx's $149 and $259, and it also sells brand-name Zepbound and Wegovy and accepts Buy Now, Pay Later. TrimRx's strengths are more provider contact, with unlimited check-ins and custom dosing, fast tracked delivery and a large public review record of 3.8 stars across 5,392 Trustpilot reviews. Both work entirely online, need no insurance and ship to your home. The sections below compare them on price, medications, clinical support, flexibility and customer experience.",
+  intro: "altRx wins this comparison: it is the cheaper of the two on both medications and has the broader menu. altRx charges $89/month for compounded semaglutide and $149 for tirzepatide, the same at every dose, against TrimRx's $149 and $259, and it also sells brand-name Zepbound and Wegovy and accepts Buy Now, Pay Later. TrimRx's strengths are more provider contact, with unlimited check-ins and custom dosing, fast tracked delivery and a large public review record of 3.4 stars across 4,894 Trustpilot reviews. Both work entirely online, need no insurance and ship to your home. The sections below compare them on price, medications, clinical support, flexibility and customer experience.",
   verdict: "altRx is our pick. It costs $60 a month less than TrimRx for compounded semaglutide ($89 vs $149) and $110 less for tirzepatide ($149 vs $259), which adds up to $720 and $1,320 a year at current prices, and the price does not rise with your dose. It also lets you move to brand-name Zepbound or Wegovy without changing providers, and you can pause or cancel at any time. Choose TrimRx instead if you want more hands-on care: unlimited provider check-ins, custom dosing, fast tracked delivery and a longer public Trustpilot record. altRx's prices are promotional against regular rates of $199 and $299, so check the price at checkout.",
   verdictWinnerPoints: [
     "Lower price: $89 semaglutide and $149 tirzepatide, the same at every dose",
@@ -255,7 +255,7 @@ const altrxTrimrxBattle: BattleData = {
   verdictLoserPoints: [
     "Unlimited provider check-ins and custom dosing",
     "Fast tracked delivery, often next-day",
-    "3.8 stars across 5,392 Trustpilot reviews",
+    "3.4 stars across 4,894 Trustpilot reviews",
   ],
   winnerId: "altrx",
   categories: [
@@ -327,7 +327,7 @@ const altrxTrimrxBattle: BattleData = {
     {
       question: "Which is better, altRx or TrimRx?",
       answer:
-        "altRx wins our comparison for most people: $89/month for compounded semaglutide and $149 for tirzepatide against TrimRx's $149 and $259, one price at every dose, and brand-name Zepbound and Wegovy on the same platform. TrimRx is the better choice if you want more provider contact, with unlimited check-ins, custom dosing and fast tracked delivery, backed by 3.8 stars across 5,392 Trustpilot reviews. Choose altRx to spend less and keep brand-name options open, and TrimRx for more hands-on care.",
+        "altRx wins our comparison for most people: $89/month for compounded semaglutide and $149 for tirzepatide against TrimRx's $149 and $259, one price at every dose, and brand-name Zepbound and Wegovy on the same platform. TrimRx is the better choice if you want more provider contact, with unlimited check-ins, custom dosing and fast tracked delivery, backed by 3.4 stars across 4,894 Trustpilot reviews. Choose altRx to spend less and keep brand-name options open, and TrimRx for more hands-on care.",
     },
     {
       question: "How much do altRx and TrimRx cost over a year?",
@@ -528,13 +528,13 @@ const medviRoBattle: BattleData = {
   title: "ro vs Medvi: GLP-1 Telehealth Compared (2026)",
   matchupLabel: "ro vs Medvi",
   subtitle: "ro and Medvi compared on personal support, pricing, follow-up care, pharmacy setup and track record.",
-  description: "ro vs Medvi: ro offers an in-house pharmacy, brand-name GLP-1s with insurance and 3.9 stars on 7,105 Trustpilot reviews; Medvi bundles care into one price.",
+  description: "ro vs Medvi: ro offers an in-house pharmacy, brand-name GLP-1s with insurance and 3.9 stars on 7,572 Trustpilot reviews; Medvi bundles care into one price.",
   intro: "ro is the more complete platform for most people: it is one of the largest US telehealth companies, runs its own in-house pharmacy, has licensed providers review every plan, and can prescribe FDA-approved Wegovy and Zepbound when insurance covers them. Medvi takes a simpler approach to medical weight loss, combining prescription GLP-1 treatment with attentive providers, regular monitoring and all-inclusive pricing. Both are online providers with home delivery. Here is how ro and Medvi compare.",
-  verdict: "ro wins overall, though Medvi makes a real case. Medvi is the pick for attentive service and bundled value: customers praise its personal support, and consultations and monitoring are folded into one transparent price. ro, however, is one of the biggest and most established telehealth companies in the US, with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With 3.9 stars across 7,105 Trustpilot reviews, ro is the more complete and more trusted choice for most people. Choose Medvi if hands-on coaching and all-inclusive pricing matter most to you.",
+  verdict: "ro wins overall, though Medvi makes a real case. Medvi is the pick for attentive service and bundled value: customers praise its personal support, and consultations and monitoring are folded into one transparent price. ro, however, is one of the biggest and most established telehealth companies in the US, with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With 3.9 stars across 7,572 Trustpilot reviews, ro is the more complete and more trusted choice for most people. Choose Medvi if hands-on coaching and all-inclusive pricing matter most to you.",
   verdictWinnerPoints: [
     "One of the largest established US telehealth brands, with its own pharmacy",
     "Licensed providers review every plan; FDA-approved Wegovy and Zepbound with insurance",
-    "3.9 stars across 7,105 Trustpilot reviews, with responsive support",
+    "3.9 stars across 7,572 Trustpilot reviews, with responsive support",
   ],
   verdictLoserPoints: [
     "Personal, attentive service that reviewers single out",
@@ -579,7 +579,7 @@ const medviRoBattle: BattleData = {
     {
       name: "Brand and Track Record",
       winner: "provider2",
-      explanation: "ro has the longer track record. It is a large, widely recognized telehealth brand with an integrated in-house pharmacy that simplifies fulfillment. Medvi is the younger company, but its public record is larger: 4.3 stars across 14,987 Trustpilot reviews, against ro's 3.9 across 7,105.",
+      explanation: "ro has the longer track record. It is a large, widely recognized telehealth brand with an integrated in-house pharmacy that simplifies fulfillment. Medvi is the younger company, but its public record is larger: 4.3 stars across 15,202 Trustpilot reviews, against ro's 3.9 across 7,572.",
       supportingPoints: [
         "ro: large, widely known telehealth brand",
         "ro: integrated in-house pharmacy",
@@ -611,7 +611,7 @@ const medviRoBattle: BattleData = {
     {
       question: "Which is better, ro or Medvi?",
       answer:
-        "ro wins our comparison for most people: an established telehealth company with an in-house pharmacy that sells FDA-approved Wegovy and Zepbound and can bill them to insurance. Medvi is the better choice if you pay cash, because its all-inclusive $99/month for compounded semaglutide covers visits, medication, a dietician and coaching, and it rates 4.3 across 14,987 Trustpilot reviews against ro's 3.9 across 7,105. Choose ro if insurance may cover a brand-name GLP-1, and Medvi if you want hands-on support at one cash price.",
+        "ro wins our comparison for most people: an established telehealth company with an in-house pharmacy that sells FDA-approved Wegovy and Zepbound and can bill them to insurance. Medvi is the better choice if you pay cash, because its all-inclusive $99/month for compounded semaglutide covers visits, medication, a dietician and coaching, and it rates 4.3 across 15,202 Trustpilot reviews against ro's 3.9 across 7,572. Choose ro if insurance may cover a brand-name GLP-1, and Medvi if you want hands-on support at one cash price.",
     },
     {
       question: "How much do ro and Medvi cost over a year without insurance?",
@@ -724,7 +724,7 @@ const embodyRoBattle: BattleData = {
   subtitle: "embody and ro compared on yearly cost, delivery speed, certifications, pharmacy setup and clinical care.",
   description: "embody vs ro: embody costs a flat $69/mo for semaglutide ($828 a year) with free 1-2 day shipping; ro offers brand-name Wegovy and Zepbound with insurance.",
   intro: "For cash-pay patients, embody is the better deal: compounded semaglutide costs a flat $69/month and tirzepatide $119/month, with free 1-2 day shipping and LegitScript-certified 503A pharmacies. ro is a large, long-established telehealth brand with an integrated in-house pharmacy and licensed providers who review every plan, and it can prescribe FDA-approved Wegovy and Zepbound when insurance covers them. Both treat patients fully online and deliver to your home. Here is how embody and ro compare.",
-  verdict: "embody wins overall, though the right pick depends on how you pay. embody charges a flat $69/month for compounded semaglutide and $119 for tirzepatide, with the doctor review, supplies and shipping included, free tracked and insured delivery in 1-2 days, LegitScript certification with US-based 503A pharmacies, a full refund if you are not approved, and no contract. A year of semaglutide comes to $828 cash-pay at embody, against roughly $2,676 or more at ro once the membership and brand-name medication are added. ro is the bigger, more established brand, with an in-house pharmacy and, uniquely in this matchup, FDA-approved brand-name Wegovy and Zepbound when insurance covers them, which a compounded-only provider cannot offer. Trustpilot ratings are close: ro has 3.9 across 7,105 reviews and embody 3.8 across 9,604. Choose embody if you pay cash and want the lowest, steadiest monthly bill; choose ro if your insurance covers a brand-name GLP-1 and you want the branded pen from a well-known platform.",
+  verdict: "embody wins overall, though the right pick depends on how you pay. embody charges a flat $69/month for compounded semaglutide and $119 for tirzepatide, with the doctor review, supplies and shipping included, free tracked and insured delivery in 1-2 days, LegitScript certification with US-based 503A pharmacies, a full refund if you are not approved, and no contract. A year of semaglutide comes to $828 cash-pay at embody, against roughly $2,676 or more at ro once the membership and brand-name medication are added. ro is the bigger, more established brand, with an in-house pharmacy and, uniquely in this matchup, FDA-approved brand-name Wegovy and Zepbound when insurance covers them, which a compounded-only provider cannot offer. Trustpilot ratings are level: both average 3.9, ro across 7,572 reviews and embody across 11,494. Choose embody if you pay cash and want the lowest, steadiest monthly bill; choose ro if your insurance covers a brand-name GLP-1 and you want the branded pen from a well-known platform.",
   verdictWinnerPoints: [
     "Flat $69/mo semaglutide, $119/mo tirzepatide, with doctor review, supplies and shipping included",
     "Free 1-2 day tracked, insured delivery; LegitScript-certified, US-based 503A pharmacies",
@@ -733,7 +733,7 @@ const embodyRoBattle: BattleData = {
   verdictLoserPoints: [
     "Large, established telehealth brand with its own in-house pharmacy",
     "Licensed providers review every plan; FDA-approved Wegovy and Zepbound when insurance covers them",
-    "3.9 stars across 7,105 Trustpilot reviews",
+    "3.9 stars across 7,572 Trustpilot reviews",
   ],
   winnerId: "embody",
   categories: [
@@ -832,7 +832,7 @@ const edenEmbodyBattle: BattleData = {
   title: "Eden vs embody: Flat-Price GLP-1 Providers (2026)",
   subtitle: "Two compounded GLP-1 providers with no commitment, compared on price, shipping, human support and Trustpilot record.",
   description: "Eden vs embody: Eden wins with 24/7 human support and 4.5 Trustpilot stars at a flat $99/$129; embody is cheaper at $69/$119 with 1-2 day shipping.",
-  intro: "Eden wins this comparison: it pairs doctor-guided care and 24/7 human support with the stronger customer record, 4.5 stars across 5,044 Trustpilot reviews against embody's 3.8 across 9,604. Both sell compounded semaglutide and tirzepatide month to month, with no membership, no long-term plan and a single price at every dose. Eden charges $99/month for semaglutide and $129 for tirzepatide as standard rates with no promotion to expire; embody charges less, $69 and $119 on promotion (regularly $79 and $129), and ships free in 1-2 days. For most people starting a GLP-1, being able to reach a person at any hour and a provider with consistently happy customers is worth the difference; if the lowest monthly price is what matters most, embody is the cheaper option.",
+  intro: "Eden wins this comparison: it pairs doctor-guided care and 24/7 human support with the stronger customer record, 4.5 stars across 5,044 Trustpilot reviews against embody's 3.9 across 11,494. Both sell compounded semaglutide and tirzepatide month to month, with no membership, no long-term plan and a single price at every dose. Eden charges $99/month for semaglutide and $129 for tirzepatide as standard rates with no promotion to expire; embody charges less, $69 and $119 on promotion (regularly $79 and $129), and ships free in 1-2 days. For most people starting a GLP-1, being able to reach a person at any hour and a provider with consistently happy customers is worth the difference; if the lowest monthly price is what matters most, embody is the cheaper option.",
   verdict: "Eden is our pick. It wins on the parts of care that are hardest to fix later: 24/7 human support, doctor-guided treatment and a 4.5 Trustpilot average across 5,044 reviews, where recent reviewers name the agents who solved their problems. Its $99 semaglutide and $129 tirzepatide are standard prices, the same every month and at every dose, with no membership and no long-term plan. Choose embody instead if the lowest price is your priority: it costs $30 a month less on semaglutide ($69 vs $99) and $10 less on tirzepatide ($119 vs $129) on its current promotion, ships free in 1-2 days and refunds you if you are not approved.",
   verdictWinnerPoints: [
     "$99 semaglutide and $129 tirzepatide, the same every month at every dose",
@@ -875,8 +875,8 @@ const edenEmbodyBattle: BattleData = {
     {
       name: "Trustpilot Record",
       winner: "provider1",
-      explanation: "Eden has the higher rating: 4.5 across 5,044 Trustpilot reviews, against embody's 3.8 across 9,604. embody has more reviews, but its average is more mixed, with shipping delays and support as the recurring complaints.",
-      supportingPoints: ["Eden: 4.5 across 5,044 reviews", "embody: 3.8 across 9,604 reviews", "Both profiles claimed with paid Trustpilot subscriptions"],
+      explanation: "Eden has the higher rating: 4.5 across 5,044 Trustpilot reviews, against embody's 3.9 across 11,494. embody has more reviews, but its average is more mixed, with shipping delays and support as the recurring complaints.",
+      supportingPoints: ["Eden: 4.5 across 5,044 reviews", "embody: 3.9 across 11,494 reviews", "Both profiles claimed with paid Trustpilot subscriptions"],
     },
   ],
   features: [
@@ -886,14 +886,14 @@ const edenEmbodyBattle: BattleData = {
     { feature: "Commitment", provider1Value: "None, no annual or long-term plans", provider2Value: "None, month to month", highlight: "both" },
     { feature: "Delivery", provider1Value: "Home delivery; timing not listed on the pricing page", provider2Value: "Free 1-2 day cold-chain", highlight: "provider2" },
     { feature: "Support", provider1Value: "Doctor-guided care, 24/7 human support", provider2Value: "Nursing team by message, video appointments", highlight: "provider1" },
-    { feature: "Trustpilot", provider1Value: "4.5 across 5,044 (Oct 29, 2026)", provider2Value: "3.8 across 9,604 (Oct 12, 2026)", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.5 across 5,044 (Oct 29, 2026)", provider2Value: "3.9 across 11,494 (Nov 4, 2026)", highlight: "provider1" },
     { feature: "Brand-name medication", provider1Value: "No", provider2Value: "No", highlight: "none" },
   ],
   faqs: [
     {
       question: "Which is better, Eden or embody?",
       answer:
-        "Eden wins this comparison: 24/7 human support, doctor-guided care and a 4.5 Trustpilot rating across 5,044 reviews, against embody's 3.8 across 9,604, at a flat $99 a month for semaglutide and $129 for tirzepatide. embody is the better choice if price comes first: $69 and $119 a month on its current promotion, with free 1-2 day delivery. Both are month to month with no membership, so choose Eden for support and consistency and embody to spend less."
+        "Eden wins this comparison: 24/7 human support, doctor-guided care and a 4.5 Trustpilot rating across 5,044 reviews, against embody's 3.9 across 11,494, at a flat $99 a month for semaglutide and $129 for tirzepatide. embody is the better choice if price comes first: $69 and $119 a month on its current promotion, with free 1-2 day delivery. Both are month to month with no membership, so choose Eden for support and consistency and embody to spend less."
     },
     {
       question: "Will Eden or embody prices change over time?",
@@ -980,8 +980,8 @@ const edenRoBattle: BattleData = {
   title: "Eden vs ro: Compounded or Brand-Name GLP-1? (2026)",
   subtitle: "A flat-price compounded provider against a brand-name provider that charges a membership plus the medication.",
   description: "Eden vs ro: Eden wins with a flat $99/mo semaglutide, no membership and 24/7 support; ro bills a $39-then-$74-149 membership plus brand-name drugs.",
-  intro: "Eden wins this comparison: one flat price with no membership, 24/7 human support and the stronger Trustpilot record. ro is the alternative only if your insurance covers a brand-name GLP-1. Eden sells compounded semaglutide at $99/month and tirzepatide at $129/month, flat every month at every dose, with no membership. ro sells FDA-approved medication, including the Wegovy pill and pen and the Zepbound KwikPen, billed separately from a Body membership that costs $39 the first month and $74-$149 after; that split is what lets insurance pay for the drug. On cash price the two are far apart, but with coverage ro can be the cheaper route. Support and reputation also differ: Eden offers 24/7 human support and has 4.5 stars across 5,044 Trustpilot reviews, while ro follows up by message and has 3.9 across 7,105.",
-  verdict: "Eden is our pick. It charges one flat price, $99 for semaglutide or $129 for tirzepatide, with no membership, while ro bills a membership of $39 the first month and $74-$149 after on top of the medication. Eden also offers 24/7 human support and rates 4.5 across 5,044 Trustpilot reviews against ro's 3.9 across 7,105. Consider ro only if your insurance covers Wegovy or Zepbound: it sells FDA-approved brand-name medication, and with coverage its membership plus a copay can cost less.",
+  intro: "Eden wins this comparison: one flat price with no membership, 24/7 human support and the stronger Trustpilot record. ro is the alternative only if your insurance covers a brand-name GLP-1. Eden sells compounded semaglutide at $99/month and tirzepatide at $129/month, flat every month at every dose, with no membership. ro sells FDA-approved medication, including the Wegovy pill and pen and the Zepbound KwikPen, billed separately from a Body membership that costs $39 the first month and $74-$149 after; that split is what lets insurance pay for the drug. On cash price the two are far apart, but with coverage ro can be the cheaper route. Support and reputation also differ: Eden offers 24/7 human support and has 4.5 stars across 5,044 Trustpilot reviews, while ro follows up by message and has 3.9 across 7,572.",
+  verdict: "Eden is our pick. It charges one flat price, $99 for semaglutide or $129 for tirzepatide, with no membership, while ro bills a membership of $39 the first month and $74-$149 after on top of the medication. Eden also offers 24/7 human support and rates 4.5 across 5,044 Trustpilot reviews against ro's 3.9 across 7,572. Consider ro only if your insurance covers Wegovy or Zepbound: it sells FDA-approved brand-name medication, and with coverage its membership plus a copay can cost less.",
   verdictWinnerPoints: [
     "$99 semaglutide and $129 tirzepatide, flat every month, no membership",
     "24/7 human support and doctor-guided care",
@@ -1023,8 +1023,8 @@ const edenRoBattle: BattleData = {
     {
       name: "Trustpilot Record",
       winner: "provider1",
-      explanation: "Eden rates 4.5 across 5,044 Trustpilot reviews, and ro rates 3.9 across 7,105 on a profile claimed in 2021. ro's review base is bigger and older, but Eden's average is higher and its recent reviews are more consistently positive about support.",
-      supportingPoints: ["Eden: 4.5 across 5,044", "ro: 3.9 across 7,105", "Both: claimed profiles with paid subscriptions"],
+      explanation: "Eden rates 4.5 across 5,044 Trustpilot reviews, and ro rates 3.9 across 7,572 on a profile claimed in 2021. ro's review base is bigger and older, but Eden's average is higher and its recent reviews are more consistently positive about support.",
+      supportingPoints: ["Eden: 4.5 across 5,044", "ro: 3.9 across 7,572", "Both: claimed profiles with paid subscriptions"],
     },
   ],
   features: [
@@ -1034,7 +1034,7 @@ const edenRoBattle: BattleData = {
     { feature: "FDA-approved medication", provider1Value: "No (compounded)", provider2Value: "Yes", highlight: "provider2" },
     { feature: "Insurance", provider1Value: "Not needed, cash-pay", provider2Value: "Can apply to the medication", highlight: "provider2" },
     { feature: "Support", provider1Value: "Doctor-guided care, 24/7 human support", provider2Value: "Licensed providers, by message", highlight: "provider1" },
-    { feature: "Trustpilot", provider1Value: "4.5 across 5,044 (Oct 29, 2026)", provider2Value: "3.9 across 7,105 (Oct 12, 2026)", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.5 across 5,044 (Oct 29, 2026)", provider2Value: "3.9 across 7,572 (Oct 12, 2026)", highlight: "provider1" },
     { feature: "Cancellation", provider1Value: "No long-term plan to cancel", provider2Value: "48 hours before renewal; fees non-refundable", highlight: "provider1" },
   ],
 };
@@ -1047,13 +1047,13 @@ const trimrxRoBattle: BattleData = {
   title: "ro vs TrimRx: GLP-1 Provider Comparison (2026)",
   matchupLabel: "ro vs TrimRx",
   subtitle: "ro and TrimRx compared on cost, plan flexibility, customer feedback, pharmacy setup and medical support.",
-  description: "ro vs TrimRx: ro has an in-house pharmacy, brand-name GLP-1s with insurance and 3.9 stars on 7,105 reviews; TrimRx offers flexible, no-commitment plans.",
+  description: "ro vs TrimRx: ro has an in-house pharmacy, brand-name GLP-1s with insurance and 3.9 stars on 7,572 reviews; TrimRx offers flexible, no-commitment plans.",
   intro: "ro is the more complete GLP-1 platform for most people: a large, long-established telehealth brand with an integrated in-house pharmacy, licensed providers who review every plan, and access to FDA-approved Wegovy and Zepbound when insurance covers them. TrimRx is built around affordable GLP-1 access, with competitive pricing, multi-month discounts and flexible plans that carry no long-term commitment. Both treat patients online and deliver to your home. Here is how ro and TrimRx compare.",
-  verdict: "ro wins overall, while TrimRx wins on value and flexibility. TrimRx offers competitive pricing, multi-month discounts and no long-term commitment. ro, however, is a large, established telehealth brand with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With 3.9 stars across 7,105 Trustpilot reviews, ro is the more complete and more trusted platform for most people. Choose TrimRx if flexible, low-commitment pricing is what you care about most.",
+  verdict: "ro wins overall, while TrimRx wins on value and flexibility. TrimRx offers competitive pricing, multi-month discounts and no long-term commitment. ro, however, is a large, established telehealth brand with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With 3.9 stars across 7,572 Trustpilot reviews, ro is the more complete and more trusted platform for most people. Choose TrimRx if flexible, low-commitment pricing is what you care about most.",
   verdictWinnerPoints: [
     "Large, established telehealth brand with its own in-house pharmacy",
     "Licensed providers review every plan; FDA-approved Wegovy and Zepbound with insurance",
-    "3.9 stars across 7,105 Trustpilot reviews, with responsive support",
+    "3.9 stars across 7,572 Trustpilot reviews, with responsive support",
   ],
   verdictLoserPoints: [
     "Value-focused pricing with multi-month discounts",
@@ -1138,11 +1138,11 @@ const trimrxwellmedrBattle: BattleData = {
   subtitle: "welludr and TrimRx compared on verified prices, plan terms, Trustpilot feedback, services and medical support.",
   description: "welludr vs TrimRx: welludr starts at $41/mo semaglutide with a weight-loss warranty and 4.6 stars; TrimRx charges a flat $149/mo with no long-term contract.",
   intro: "welludr is the better value: semaglutide from $41/month and tirzepatide from $71/month in its Pre-Black Friday sale, against TrimRx's $149 and $259. Those are the lowest compounded prices in our ranking, and welludr adds board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty and brand-name Ozempic and Zepbound. TrimRx is built around custom dosing with unlimited provider check-ins, a flat $149/month semaglutide price at every dose, and no long-term commitment. Both treat patients online. Here is how welludr and TrimRx compare for weight loss.",
-  verdict: "welludr wins this comparison. On verified pricing it is the clear value choice, from $41/month for semaglutide and $71/month for tirzepatide against TrimRx's $149 and $259. welludr also backs its program with a weight-loss warranty and has the stronger public record: 4.6 across 2,188 Trustpilot reviews, with customers describing quick approvals and flexible, human support. TrimRx is the better fit if custom dosing with unlimited provider check-ins, a free consultation and tracked delivery that often arrives the next day matter more to you than price; its care is genuinely hands-on and there is no long-term commitment. Keep in mind that welludr's $41 rate is a Pre-Black Friday sale price (from October 28, 2026), so check the plan terms at checkout, and its 3-5 business-day delivery is slower than TrimRx's.",
+  verdict: "welludr wins this comparison. On verified pricing it is the clear value choice, from $41/month for semaglutide and $71/month for tirzepatide against TrimRx's $149 and $259. welludr also backs its program with a weight-loss warranty and has the stronger public record: 4.7 across 3,173 Trustpilot reviews, with customers describing quick approvals and flexible, human support. TrimRx is the better fit if custom dosing with unlimited provider check-ins, a free consultation and tracked delivery that often arrives the next day matter more to you than price; its care is genuinely hands-on and there is no long-term commitment. Keep in mind that welludr's $41 rate is a Pre-Black Friday sale price (from October 28, 2026), so check the plan terms at checkout, and its 3-5 business-day delivery is slower than TrimRx's.",
   verdictWinnerPoints: [
     "Lower verified prices: semaglutide from $41/mo, tirzepatide from $71/mo in the Pre-Black Friday sale",
     "Weight-loss warranty, board-certified specialists and a Medical Weight-Care Coach",
-    "4.6 stars across 2,188 Trustpilot reviews, praised for quick approvals and flexible support",
+    "4.7 stars across 3,173 Trustpilot reviews, praised for quick approvals and flexible support",
   ],
   verdictLoserPoints: [
     "Custom dosing with unlimited provider check-ins included",
@@ -1176,11 +1176,11 @@ const trimrxwellmedrBattle: BattleData = {
     {
       name: "Trustpilot Feedback",
       winner: "provider1",
-      explanation: "welludr rates 4.6 across 2,188 Trustpilot reviews, and its recent reviews read like a log of support done well, with fast approvals and a team willing to rework a plan when money is tight. TrimRx rates 3.8 across 5,392 reviews: some success stories are striking, but a meaningful minority report problems, so read both the best and worst reviews before signing up.",
+      explanation: "welludr rates 4.7 across 3,173 Trustpilot reviews, and its recent reviews read like a log of support done well, with fast approvals and a team willing to rework a plan when money is tight. TrimRx rates 3.4 across 4,894 reviews: some success stories are striking, but a meaningful minority report problems, so read both the best and worst reviews before signing up.",
       supportingPoints: [
-        "welludr: 4.6 across 2,188 Trustpilot reviews",
+        "welludr: 4.7 across 3,173 Trustpilot reviews",
         "welludr: reviews praise fast approvals and flexible support",
-        "TrimRx: 3.8 across 5,392 reviews, a mixed record",
+        "TrimRx: 3.4 across 4,894 reviews, a mixed record",
         "TrimRx: some vivid success stories",
       ],
     },
@@ -1211,7 +1211,7 @@ const trimrxwellmedrBattle: BattleData = {
     { feature: "Entry Price", provider1Value: "From $41/mo semaglutide · from $71/mo tirzepatide", provider2Value: "$149/mo semaglutide · $259/mo tirzepatide", highlight: "provider1" },
     { feature: "Consultation", provider1Value: "Fully online", provider2Value: "Fully online", highlight: "both" },
     { feature: "Medication Menu", provider1Value: "Compounded GLP-1/GIP, NAD+/B12 microdose, brand-name Ozempic and Zepbound", provider2Value: "Compounded semaglutide and tirzepatide", highlight: "provider1" },
-    { feature: "Trustpilot", provider1Value: "4.6 across 2,188 reviews", provider2Value: "3.8 across 5,392 reviews", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.7 across 3,173 reviews", provider2Value: "3.4 across 4,894 reviews", highlight: "provider1" },
     { feature: "Commitment", provider1Value: "Check sale plan terms at checkout", provider2Value: "No long-term commitment", highlight: "provider2" },
     { feature: "Delivery", provider1Value: "3-5 business days", provider2Value: "Tracked, often next day", highlight: "provider2" },
     { feature: "Other Services", provider1Value: "NAD+ and longevity care", provider2Value: "Weight loss only", highlight: "provider1" },
@@ -1226,13 +1226,13 @@ const rowellmedrBattle: BattleData = {
   title: "ro vs welludr: GLP-1 Medications and Pricing (2026)",
   matchupLabel: "ro vs welludr",
   subtitle: "ro and welludr compared on medications, entry pricing, services, pharmacy and brand trust.",
-  description: "ro vs welludr: ro offers an in-house pharmacy and 3.9 stars on 7,105 Trustpilot reviews; welludr starts at $41/mo semaglutide with a weight-loss warranty.",
+  description: "ro vs welludr: ro offers an in-house pharmacy and 3.9 stars on 7,572 Trustpilot reviews; welludr starts at $41/mo semaglutide with a weight-loss warranty.",
   intro: "ro is the more complete and trusted platform for most people, while welludr is the cheaper option on cash price. ro is a large, long-established telehealth brand with an integrated in-house pharmacy and licensed providers who review every plan. welludr keeps compounded pricing low, with semaglutide from $41/month and tirzepatide from $71 in its Pre-Black Friday sale, and adds board-certified specialists, a Medical Weight-Care Coach and a weight-loss warranty. Both treat patients online and deliver to your home. Here is how ro and welludr compare.",
-  verdict: "ro wins overall, though welludr has a clear case on price and range. welludr offers semaglutide from $41/month and tirzepatide from $71/month in its Pre-Black Friday sale, plus board-certified specialists and a wider wellness catalog. ro, however, is a large, established telehealth brand with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With 3.9 stars across 7,105 Trustpilot reviews, ro is the more complete and more trusted choice for most people. Choose welludr if the lowest cash price and the widest range of treatments matter most.",
+  verdict: "ro wins overall, though welludr has a clear case on price and range. welludr offers semaglutide from $41/month and tirzepatide from $71/month in its Pre-Black Friday sale, plus board-certified specialists and a wider wellness catalog. ro, however, is a large, established telehealth brand with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With 3.9 stars across 7,572 Trustpilot reviews, ro is the more complete and more trusted choice for most people. Choose welludr if the lowest cash price and the widest range of treatments matter most.",
   verdictWinnerPoints: [
     "Large, established telehealth brand with its own in-house pharmacy",
     "Licensed providers review every plan; FDA-approved Wegovy and Zepbound with insurance",
-    "3.9 stars across 7,105 Trustpilot reviews, with responsive support",
+    "3.9 stars across 7,572 Trustpilot reviews, with responsive support",
   ],
   verdictLoserPoints: [
     "Lower cash price: semaglutide from $41/mo, tirzepatide from $71/mo",
@@ -1309,7 +1309,7 @@ const rowellmedrBattle: BattleData = {
     {
       question: "Which is better, welludr or ro?",
       answer:
-        "ro wins our comparison for most people because it sells FDA-approved Wegovy and Zepbound through its own pharmacy and can bill the medication to insurance. welludr (formerly wellmedr) costs far less if you pay cash: compounded semaglutide from $41/month and tirzepatide from $71 in its Pre-Black Friday sale, with a 4.6 Trustpilot rating across 2,188 reviews against ro's 3.9 across 7,105. Choose ro if insurance may cover a brand-name GLP-1, and welludr if you are paying out of pocket and want the lowest price.",
+        "ro wins our comparison for most people because it sells FDA-approved Wegovy and Zepbound through its own pharmacy and can bill the medication to insurance. welludr (formerly wellmedr) costs far less if you pay cash: compounded semaglutide from $41/month and tirzepatide from $71 in its Pre-Black Friday sale, with a 4.7 Trustpilot rating across 3,173 reviews against ro's 3.9 across 7,572. Choose ro if insurance may cover a brand-name GLP-1, and welludr if you are paying out of pocket and want the lowest price.",
     },
     {
       question: "Does insurance work with welludr or ro?",
@@ -1330,13 +1330,13 @@ export const battles: BattleData[] = [
         title: "altRx vs ro: GLP-1 Provider Comparison (2026)",
         matchupLabel: "altRx vs ro",
         subtitle: "altRx and ro compared on pricing, medication options, medical support, convenience and customer experience.",
-        description: "altRx vs ro: altRx offers all-inclusive pricing and personalized plans; ro has an in-house pharmacy and 3.9 stars across 7,105 Trustpilot reviews.",
+        description: "altRx vs ro: altRx offers all-inclusive pricing and personalized plans; ro has an in-house pharmacy and 3.9 stars across 7,572 Trustpilot reviews.",
         intro: "ro is the more complete choice for most people, while altRx is stronger on price clarity and personalization. Both are popular telehealth weight-loss providers that prescribe GLP-1 medication: each connects you with licensed providers and ships prescriptions to your home. They differ in how they price treatment, how personalized the plans are, which medications they offer and what the overall experience is like. Here is how altRx and ro compare category by category.",
-        verdict: "ro wins overall, though altRx has a real case. altRx is the pick for value and personalization, with transparent, all-inclusive pricing, a broad GLP-1 selection and highly customized protocols that suit people focused on budgeting and tailored care. ro, however, is one of the largest, most established telehealth brands in the US, with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With 3.9 stars across 7,105 Trustpilot reviews, ro is the more complete and more trusted platform for most people. Choose altRx for the lowest all-inclusive price and the most personalized plan; choose ro for a full-service, brand-backed experience.",
+        verdict: "ro wins overall, though altRx has a real case. altRx is the pick for value and personalization, with transparent, all-inclusive pricing, a broad GLP-1 selection and highly customized protocols that suit people focused on budgeting and tailored care. ro, however, is one of the largest, most established telehealth brands in the US, with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With 3.9 stars across 7,572 Trustpilot reviews, ro is the more complete and more trusted platform for most people. Choose altRx for the lowest all-inclusive price and the most personalized plan; choose ro for a full-service, brand-backed experience.",
         verdictWinnerPoints: [
           "Large, established telehealth brand with its own in-house pharmacy",
           "Licensed providers review every plan; FDA-approved Wegovy and Zepbound with insurance",
-          "3.9 stars across 7,105 Trustpilot reviews, with responsive support",
+          "3.9 stars across 7,572 Trustpilot reviews, with responsive support",
         ],
         verdictLoserPoints: [
           "Transparent, all-inclusive pricing",
@@ -1349,7 +1349,7 @@ export const battles: BattleData[] = [
           { name: "Medical Support", winner: "provider2", explanation: "ro has the deeper infrastructure: one of the most established telehealth operations in the US, an integrated in-house pharmacy, and providers who review every plan. Licensed providers guide treatment from start to finish at both, and altRx leans toward more personalized care.", supportingPoints: ["ro: established telehealth infrastructure", "ro: in-house pharmacy, providers review every plan", "altRx: personalized medical oversight"] },
           { name: "Medication Options", winner: "tie", explanation: "Both offer wide GLP-1 access. altRx promotes a broad selection that includes brand-name options, and ro provides GLP-1 treatment plus FDA-approved brand-name Wegovy and Zepbound when insurance covers them.", supportingPoints: ["Both: wide GLP-1 access", "Both: brand-name options", "ro: FDA-approved Wegovy and Zepbound with insurance"] },
           { name: "Convenience", winner: "provider2", explanation: "ro's in-house pharmacy handles fulfillment from end to end, which gives it the edge. Both are fully telehealth with home delivery, and altRx ships nationwide with no contracts required.", supportingPoints: ["ro: in-house pharmacy fulfillment", "Both: no in-person visits", "altRx: nationwide delivery, no contracts"] },
-          { name: "Customer Experience", winner: "provider2", explanation: "ro benefits from strong brand trust and a polished, well-reviewed experience, with 3.9 stars across 7,105 Trustpilot reviews. altRx customers regularly praise its responsive support and highly customized treatment plans.", supportingPoints: ["ro: 3.9 across 7,105 Trustpilot reviews", "ro: trusted brand, polished platform", "altRx: responsive support, personalized plans"] },
+          { name: "Customer Experience", winner: "provider2", explanation: "ro benefits from strong brand trust and a polished, well-reviewed experience, with 3.9 stars across 7,572 Trustpilot reviews. altRx customers regularly praise its responsive support and highly customized treatment plans.", supportingPoints: ["ro: 3.9 across 7,572 Trustpilot reviews", "ro: trusted brand, polished platform", "altRx: responsive support, personalized plans"] },
         ],
         features: [
           { feature: "GLP-1 Access", provider1Value: "Wide GLP-1 selection", provider2Value: "GLP-1 treatment options" },
@@ -1364,7 +1364,7 @@ export const battles: BattleData[] = [
           {
             question: "Which is better, altRx or ro?",
             answer:
-              "ro wins our comparison for most people: it is an established telehealth company with its own in-house pharmacy, sells FDA-approved Wegovy and Zepbound, can bill the medication to insurance and has 3.9 stars across 7,105 Trustpilot reviews. altRx is the better choice if you pay cash and want compounded medication, at $89/month for semaglutide and $149 for tirzepatide with no membership. Choose ro if insurance may cover a brand-name GLP-1, and altRx if the lowest cash price matters most.",
+              "ro wins our comparison for most people: it is an established telehealth company with its own in-house pharmacy, sells FDA-approved Wegovy and Zepbound, can bill the medication to insurance and has 3.9 stars across 7,572 Trustpilot reviews. altRx is the better choice if you pay cash and want compounded medication, at $89/month for semaglutide and $149 for tirzepatide with no membership. Choose ro if insurance may cover a brand-name GLP-1, and altRx if the lowest cash price matters most.",
           },
           {
             question: "How much does altRx cost over a year compared with ro?",

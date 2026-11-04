@@ -96,7 +96,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "What does the Trustpilot record show, including the review count?",
     check: "A star average says little until you know how many reviews sit behind it. The repeated themes in low-star reviews tell you more than the headline score.",
-    verify: "We list the rating and review count for each provider whose profile we have verified. Medvi at 4.3 from 14,987 reviews and embody at 3.8 from 9,604 are both substantial records, and they describe different experiences.",
+    verify: "We list the rating and review count for each provider whose profile we have verified. Medvi at 4.3 from 15,202 reviews and embody at 3.9 from 11,494 are both substantial records, and they describe different experiences.",
     redFlag: "A perfect 5.0 from a handful of reviews, or no public review profile. Neither one proves a problem, but both give you less to go on.",
   },
   {
@@ -167,7 +167,7 @@ const ROWS: Row[] = [
     pharmacy: "Compounded medication only; pharmacy not identified in our research",
     dosePricing: "One price at every dose; no long-term contract; optional discounts for multi-month plans",
     likes: "TrimRx's 5-star Trustpilot reviews from the same week praise careful screening, an easy intake, transparent pricing, quick support responses and clearly stated 2-3 day shipping.",
-    complaints: "TrimRx's 2-star reviews from the same week concern fulfillment and billing rather than the clinical side: a box that arrived three days late with warm cold packs; a prepaid 6-month plan whose second shipment was 30 days overdue while chat and phone went unanswered; a cancelled prescription that Affirm continued trying to bill; and a first order that showed another person's prescription in the portal. At 3.8 from 5,392 reviews, TrimRx has the lowest aggregate in our table. Its $149 is above the budget tier for the same molecule and comes with no guarantee.",
+    complaints: "TrimRx's 2-star reviews from the same week concern fulfillment and billing rather than the clinical side: a box that arrived three days late with warm cold packs; a prepaid 6-month plan whose second shipment was 30 days overdue while chat and phone went unanswered; a cancelled prescription that Affirm continued trying to bill; and a first order that showed another person's prescription in the portal. At 3.4 from 4,894 reviews, TrimRx has the lowest aggregate in our table. Its $149 is above the budget tier for the same molecule and comes with no guarantee.",
   },
   {
     id: "shed",
@@ -193,7 +193,7 @@ const ROWS: Row[] = [
     visit: "Video visits with providers, scheduled monitoring, a dietician and care coaching",
     pharmacy: "Compounded; pharmacy not identified in our research",
     dosePricing: "All-inclusive pricing with no increase by dose; HSA/FSA accepted",
-    likes: "Medvi's 5-star Trustpilot reviews from the same week center on the video visits and nurse practitioners: thorough calls, complete answers, and a provider who \"took her time\". Two Reddit write-ups covering a full year report losses of 40 pounds and just under 15% of body weight, with dose adjustments when progress slowed. Medvi's 4.3 from 14,987 reviews is one of the two largest verified review bases in our table.",
+    likes: "Medvi's 5-star Trustpilot reviews from the same week center on the video visits and nurse practitioners: thorough calls, complete answers, and a provider who \"took her time\". Two Reddit write-ups covering a full year report losses of 40 pounds and just under 15% of body weight, with dose adjustments when progress slowed. Medvi's 4.3 from 15,202 reviews is one of the two largest verified review bases in our table.",
     complaints: "Medvi's 1-star Trustpilot reviews from September are serious and detailed. A prepaid annual plan renewed after 11 shipments with no notice and was refunded only after complaints to the BBB, the FTC and a state attorney general. Another customer was charged before any clinician contact, then received the wrong dose and was refused a refund. A transferring patient kept receiving the starter dose, and another reviewer says communication stopped after five months. One reviewer claims tirzepatide is capped at 11.125 mg; we have not verified that. The 4-star reviews are gentler: cancelling took effort, and one reviewer wanted an every-other-month option because plans are monthly only. The $99 rate is a promotion against a regular $199, and Reddit users flag the ongoing monthly cost as the main caveat.",
   },
   {
@@ -245,7 +245,7 @@ const PATTERNS: { title: string; body: string }[] = [
   },
   {
     title: "A large review count steadies a score but does not make experiences uniform",
-    body: "Medvi's 4.3 from 14,987 reviews coexists with serious 1-star accounts about renewals and refunds. DirectMeds, welludr and SHED all average 4.6, from 16,390, 2,188 and 1,134 reviews respectively. Sprout's 4.1 rests on 188 reviews, while TrimRx and embody (both 3.8) have large, mixed records. For every provider, the repeated complaints are operational (shipping, billing, reaching support) rather than about the clinical review.",
+    body: "Medvi's 4.3 from 15,202 reviews coexists with serious 1-star accounts about renewals and refunds. welludr averages 4.7 from 3,173 reviews, and DirectMeds and SHED average 4.6, from 16,390 and 1,134 reviews respectively. Sprout's 4.1 rests on 188 reviews, while TrimRx (3.4) and embody (3.9) have large, mixed records. For every provider, the repeated complaints are operational (shipping, billing, reaching support) rather than about the clinical review.",
   },
 ];
 
@@ -263,11 +263,11 @@ const EXPLORE: Record<string, { useCase: string; reason: string }> = {
   },
   medvi: {
     useCase: "Live clinician visits and a large review base",
-    reason: "Medvi offers video visits with providers, scheduled monitoring and a dietician, and holds 4.3 from 14,987 Trustpilot reviews. The $99 rate is a promotion against a regular $199.",
+    reason: "Medvi offers video visits with providers, scheduled monitoring and a dietician, and holds 4.3 from 15,202 Trustpilot reviews. The $99 rate is a promotion against a regular $199.",
   },
   wellmedr: {
     useCase: "Lowest verified semaglutide price, with a 12-month plan",
-    reason: "welludr's semaglutide costs from $41 a month in its Pre-Black Friday sale (from October 28, 2026); check the plan terms at checkout. Every plan includes a weight-care coach, and welludr holds 4.6 from 2,188 Trustpilot reviews.",
+    reason: "welludr's semaglutide costs from $41 a month in its Pre-Black Friday sale (from October 28, 2026); check the plan terms at checkout. Every plan includes a weight-care coach, and welludr holds 4.7 from 3,173 Trustpilot reviews.",
   },
 };
 

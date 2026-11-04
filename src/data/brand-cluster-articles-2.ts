@@ -94,7 +94,7 @@ export const brandClusterPart2: Article[] = [
     author: "Top Weight Loss Staff",
     keyTakeaways: [
       "SHED packages medication, coaching and a money-back guarantee together, so every alternative drops one of those. Decide first whether you want to keep the support (Medvi, welludr's coach) or keep the cash (the $41-$99 tier).",
-      "Medvi is the closest match in spirit: $99/$166 promotional pricing, all-inclusive and HSA/FSA eligible, with video visits, a dietician and a 4.3 Trustpilot rating across 14,987 reviews. At the promo rate it saves $100/month versus SHED.",
+      "Medvi is the closest match in spirit: $99/$166 promotional pricing, all-inclusive and HSA/FSA eligible, with video visits, a dietician and a 4.3 Trustpilot rating across 15,202 reviews. At the promo rate it saves $100/month versus SHED.",
       "If you mainly want the medication: embody at $69 flat, HealthRx at $99 on a 12-month prepay, DirectMeds at $147 flat with needle-free drops, or altRx at $89 with the cheapest brand-name shelf. Yearly savings run $624-$1,560.",
       "SHED's results guarantee, welludr's weight-loss warranty and embody's refund-if-not-approved protect against different things. Pick the one that matches what actually worries you.",
     ],
@@ -105,7 +105,7 @@ export const brandClusterPart2: Article[] = [
       },
       {
         heading: "Which SHED alternatives still include coaching and support?",
-        body: `<p><a href="/reviews/medvi">Medvi</a> is the nearest substitute. It is currently $99/$166 on promotional pricing, all-inclusive and HSA/FSA eligible, with video visits, a dietician and care coaching. Medvi has no formal guarantee, but it has a public record SHED cannot match: <strong>4.3 on Trustpilot across 14,987 reviews</strong>, many of them praising exactly that support. At the promo rate you save $100/month and swap the guarantee for a proven track record.</p><p><a href="/reviews/wellmedr">welludr</a> ($41/$71) is the budget take on the same idea. Every plan includes a Medical Weight-Care Coach, and welludr offers its own weight-loss warranty, the only other results-linked promise in our ranking. It costs about 20% of SHED's price at its Pre-Black Friday sale rate; check the plan terms at checkout.</p>`,
+        body: `<p><a href="/reviews/medvi">Medvi</a> is the nearest substitute. It is currently $99/$166 on promotional pricing, all-inclusive and HSA/FSA eligible, with video visits, a dietician and care coaching. Medvi has no formal guarantee, but it has a public record SHED cannot match: <strong>4.3 on Trustpilot across 15,202 reviews</strong>, many of them praising exactly that support. At the promo rate you save $100/month and swap the guarantee for a proven track record.</p><p><a href="/reviews/wellmedr">welludr</a> ($41/$71) is the budget take on the same idea. Every plan includes a Medical Weight-Care Coach, and welludr offers its own weight-loss warranty, the only other results-linked promise in our ranking. It costs about 20% of SHED's price at its Pre-Black Friday sale rate; check the plan terms at checkout.</p>`,
       },
       {
         heading: "Which SHED alternatives cost the least?",
@@ -275,7 +275,7 @@ export const brandClusterPart2: Article[] = [
       },
       {
         heading: "What is the main risk of prepaying HealthRx for a year?",
-        body: `<p>The main risk is <em>fit</em>, not fraud; the certifications above cover the fraud question. You pay for twelve months before you know how your body handles the medication.</p><ul><li><a href="https://www.health.harvard.edu/healthy-aging-and-longevity/harvard-and-cdc-study-serious-side-effects-from-semaglutide-are-uncommon" target="_blank" rel="noopener">Most people tolerate GLP-1s well</a>, but dose changes, side effects and life events still happen (see our <a href="/articles/semaglutide-side-effects-guide">semaglutide side-effects guide</a>).</li><li>As a newer brand, HealthRx has a thin public review record, unlike Medvi with 14,987 Trustpilot reviews.</li></ul><p>Two things reduce the risk: the clinician can decline you before any charge, and the free assessment costs nothing to try. But no certificate changes the basic imbalance of paying a year upfront. Go in knowing that.</p>`,
+        body: `<p>The main risk is <em>fit</em>, not fraud; the certifications above cover the fraud question. You pay for twelve months before you know how your body handles the medication.</p><ul><li><a href="https://www.health.harvard.edu/healthy-aging-and-longevity/harvard-and-cdc-study-serious-side-effects-from-semaglutide-are-uncommon" target="_blank" rel="noopener">Most people tolerate GLP-1s well</a>, but dose changes, side effects and life events still happen (see our <a href="/articles/semaglutide-side-effects-guide">semaglutide side-effects guide</a>).</li><li>As a newer brand, HealthRx has a thin public review record, unlike Medvi with 15,202 Trustpilot reviews.</li></ul><p>Two things reduce the risk: the clinician can decline you before any charge, and the free assessment costs nothing to try. But no certificate changes the basic imbalance of paying a year upfront. Go in knowing that.</p>`,
       },
       {
         heading: "Who should choose HealthRx?",
@@ -323,7 +323,7 @@ export const brandClusterPart2: Article[] = [
     slug: "healthrx-alternatives",
     title: "HealthRx Alternatives 2026: 6 Options Without the Prepay",
     description:
-      "Not ready to prepay $1,188 for HealthRx? Compare six alternatives, from embody's $69 no-commitment plan to Medvi's program with 14,987 Trustpilot reviews.",
+      "Not ready to prepay $1,188 for HealthRx? Compare six alternatives, from embody's $69 no-commitment plan to Medvi's program with 15,202 Trustpilot reviews.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-21",
@@ -333,7 +333,7 @@ export const brandClusterPart2: Article[] = [
     keyTakeaways: [
       "People skip HealthRx for one of three reasons: $1,188 at checkout is too much at once, the brand is too new to have a track record, or its tirzepatide (from $179) can be found cheaper.",
       "If you won't prepay: embody costs $69/month flat, cancel anytime, with a refund if you are not approved ($828 for a full year vs $1,188). altRx ($89, pause anytime) adds Buy Now, Pay Later.",
-      "If you want a track record: welludr pairs from $41/month (Pre-Black Friday sale) with over one million patients and a weight-loss warranty, and Medvi ($99 promo) has 4.3 on Trustpilot across 14,987 reviews plus video visits and a dietician.",
+      "If you want a track record: welludr pairs from $41/month (Pre-Black Friday sale) with over one million patients and a weight-loss warranty, and Medvi ($99 promo) has 4.3 on Trustpilot across 15,202 reviews plus video visits and a dietician.",
       "For tirzepatide: welludr from $71, embody $119, DirectMeds $147 flat and Medvi $166 promo all cost less than HealthRx's $179, saving $156-$1,296 a year.",
     ],
     sections: [
@@ -347,7 +347,7 @@ export const brandClusterPart2: Article[] = [
       },
       {
         heading: "Best HealthRx alternative for a proven track record: welludr or Medvi",
-        body: `<p>If HealthRx feels too new, two providers offer more proof.</p><ul><li><a href="/reviews/wellmedr">welludr</a> combines budget pricing, <strong>from $41/month</strong> in its Pre-Black Friday sale, billed monthly with no lump sum, with scale: over one million patients and a weight-loss warranty.</li><li><a href="/reviews/medvi">Medvi</a>, currently $99/month promotional and all-inclusive, has the kind of evidence that is hard to fake: <strong>4.3 on Trustpilot across 14,987 reviews</strong>, plus video visits and a dietician on every plan.</li></ul><p>Either lets a skeptical buyer pay for proof instead of promises. We compare the two directly in <a href="/compare/healthrx-vs-medvi">HealthRx vs Medvi</a>.</p>`,
+        body: `<p>If HealthRx feels too new, two providers offer more proof.</p><ul><li><a href="/reviews/wellmedr">welludr</a> combines budget pricing, <strong>from $41/month</strong> in its Pre-Black Friday sale, billed monthly with no lump sum, with scale: over one million patients and a weight-loss warranty.</li><li><a href="/reviews/medvi">Medvi</a>, currently $99/month promotional and all-inclusive, has the kind of evidence that is hard to fake: <strong>4.3 on Trustpilot across 15,202 reviews</strong>, plus video visits and a dietician on every plan.</li></ul><p>Either lets a skeptical buyer pay for proof instead of promises. We compare the two directly in <a href="/compare/healthrx-vs-medvi">HealthRx vs Medvi</a>.</p>`,
       },
       {
         heading: "Where can you get tirzepatide for less than HealthRx's $179?",
@@ -380,7 +380,7 @@ export const brandClusterPart2: Article[] = [
       },
       {
         heading: "What do Sprout customers say on Trustpilot?",
-        body: `<p>Sprout holds a 4.1 average across 188 Trustpilot reviews, and the recent ones agree on one point: support answers quickly and by name.</p><ul><li>"Everyone of my questions or concerns have been immediately answered by a LIVE CS rep. No bots," one customer writes.</li><li>Another: "I am very happy with the customer service representative, Frank. I've had a few problems with getting my order on time and reached out to CSR, Frank. He was respectful, polite, and made everything right in a timely manner."</li><li>A customer close to a year in: "Several months into my subscription I had to adjust my plan and the team provided prompt response."</li></ul><p>The negative reviews are specific, which makes them useful:</p><ul><li>A 3-star reviewer received tracking for only two of "8 plus shipments" and says the account was suspended without notice.</li><li>A 4-star reviewer says that missing a monthly check-in meant "they just don't ship anything and charge you anyway."</li><li>Another 4-star customer lost the weight but had to find injection instructions on their own.</li><li>A 1-star reviewer reports heavy hair loss while on Sprout's compounded tirzepatide.</li></ul><p>Sprout responds publicly to its negative reviews. The gap is the amount of evidence, not its quality: 188 reviews is a small fraction of the record at <a href="/reviews/wellmedr">welludr</a> (4.6 across 2,188) or Medvi (4.3 across 14,987), so Sprout's experience is harder to confirm at scale.</p>`,
+        body: `<p>Sprout holds a 4.1 average across 188 Trustpilot reviews, and the recent ones agree on one point: support answers quickly and by name.</p><ul><li>"Everyone of my questions or concerns have been immediately answered by a LIVE CS rep. No bots," one customer writes.</li><li>Another: "I am very happy with the customer service representative, Frank. I've had a few problems with getting my order on time and reached out to CSR, Frank. He was respectful, polite, and made everything right in a timely manner."</li><li>A customer close to a year in: "Several months into my subscription I had to adjust my plan and the team provided prompt response."</li></ul><p>The negative reviews are specific, which makes them useful:</p><ul><li>A 3-star reviewer received tracking for only two of "8 plus shipments" and says the account was suspended without notice.</li><li>A 4-star reviewer says that missing a monthly check-in meant "they just don't ship anything and charge you anyway."</li><li>Another 4-star customer lost the weight but had to find injection instructions on their own.</li><li>A 1-star reviewer reports heavy hair loss while on Sprout's compounded tirzepatide.</li></ul><p>Sprout responds publicly to its negative reviews. The gap is the amount of evidence, not its quality: 188 reviews is a small fraction of the record at <a href="/reviews/wellmedr">welludr</a> (4.7 across 3,173) or Medvi (4.3 across 15,202), so Sprout's experience is harder to confirm at scale.</p>`,
       },
       {
         heading: "Are Sprout's advertised prices what you actually pay?",
@@ -441,7 +441,7 @@ export const brandClusterPart2: Article[] = [
     author: "Top Weight Loss Staff",
     keyTakeaways: [
       "People leave Sprout over price (its $149 semaglutide is $50-$100/month above the value tier), evidence (a 4.1 Trustpilot average from only 188 reviews), or wanting more brand-name choices.",
-      "welludr sells the same compounded semaglutide from $41/month in its Pre-Black Friday sale, with a warranty and a 4.6 Trustpilot rating across 2,188 reviews, saving $1,296 a year. Sprout's advantage is shipping in 2 days vs 3-5.",
+      "welludr sells the same compounded semaglutide from $41/month in its Pre-Black Friday sale, with a warranty and a 4.7 Trustpilot rating across 3,173 reviews, saving $1,296 a year. Sprout's advantage is shipping in 2 days vs 3-5.",
       "altRx is the only other ranked provider with brand-name medication, and it offers more for less: Ozempic $1,149, Zepbound $1,249 and Wegovy $1,579, plus $89 compounded semaglutide with BNPL.",
       "Other options: embody at $69 flat with 1-2 day cold-chain shipping, Medvi at $99 promo with coaching and a 14k-review record, HealthRx at $99 on a $1,188 prepaid plan, and DirectMeds at $147 with needle-free drops.",
     ],
@@ -452,7 +452,7 @@ export const brandClusterPart2: Article[] = [
       },
       {
         heading: "How do the top Sprout alternatives compare?",
-        body: `<table><tr><th>Alternative</th><th>Semaglutide</th><th>Where it beats Sprout</th><th>What you lose</th></tr><tr><td><a href="/reviews/wellmedr">welludr</a></td><td>from $41/mo</td><td>Price, a 4.6 rating across 2,188 reviews, and a warranty</td><td>2-day shipping; Wegovy option</td></tr><tr><td><a href="/reviews/embody">embody</a></td><td>$69/mo</td><td>Price, 1-2 day cold-chain shipping, LegitScript</td><td>Brand-name option</td></tr><tr><td><a href="/reviews/altrx">altRx</a></td><td>$89/mo</td><td>Price and a 3-brand shelf with cheaper Wegovy</td><td>Speed (5-7 day shipping)</td></tr><tr><td><a href="/reviews/medvi">Medvi</a></td><td>$99/mo promo</td><td>Price, coaching and a 14k-review record</td><td>Brand-name option</td></tr><tr><td><a href="/reviews/healthrx">HealthRx</a></td><td>$99/mo*</td><td>Overnight delivery, LegitScript</td><td>$1,188 prepaid commitment</td></tr><tr><td><a href="/reviews/directmeds">DirectMeds</a></td><td>$147/mo</td><td>Needle-free drops, flat $147 tirzepatide</td><td>Brand-name option</td></tr></table><p>*On a 12-month prepaid plan. Every provider listed requires a licensed-provider review before treatment. That never changes, and it should not.</p>`,
+        body: `<table><tr><th>Alternative</th><th>Semaglutide</th><th>Where it beats Sprout</th><th>What you lose</th></tr><tr><td><a href="/reviews/wellmedr">welludr</a></td><td>from $41/mo</td><td>Price, a 4.7 rating across 3,173 reviews, and a warranty</td><td>2-day shipping; Wegovy option</td></tr><tr><td><a href="/reviews/embody">embody</a></td><td>$69/mo</td><td>Price, 1-2 day cold-chain shipping, LegitScript</td><td>Brand-name option</td></tr><tr><td><a href="/reviews/altrx">altRx</a></td><td>$89/mo</td><td>Price and a 3-brand shelf with cheaper Wegovy</td><td>Speed (5-7 day shipping)</td></tr><tr><td><a href="/reviews/medvi">Medvi</a></td><td>$99/mo promo</td><td>Price, coaching and a 14k-review record</td><td>Brand-name option</td></tr><tr><td><a href="/reviews/healthrx">HealthRx</a></td><td>$99/mo*</td><td>Overnight delivery, LegitScript</td><td>$1,188 prepaid commitment</td></tr><tr><td><a href="/reviews/directmeds">DirectMeds</a></td><td>$147/mo</td><td>Needle-free drops, flat $147 tirzepatide</td><td>Brand-name option</td></tr></table><p>*On a 12-month prepaid plan. Every provider listed requires a licensed-provider review before treatment. That never changes, and it should not.</p>`,
       },
       {
         heading: "Is welludr a better deal than Sprout?",

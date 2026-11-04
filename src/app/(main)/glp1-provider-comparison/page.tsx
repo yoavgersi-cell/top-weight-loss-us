@@ -1,4 +1,5 @@
 import { withSeo } from "@/lib/seo";
+import { TRUSTPILOT_PROFILES } from "@/data/trustpilot";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
@@ -71,7 +72,7 @@ const ROWS: Row[] = [
     membership: "None",
     shipping: "3-5 business days",
     support: "Board-certified specialists and a weight-care coach",
-    trustpilot: { rating: "4.6", count: "2,188", checked: TRUSTPILOT_CHECKED, url: "https://www.trustpilot.com/review/wellmedr.com" },
+    trustpilot: { rating: "4.7", count: "3,173", checked: "November 4, 2026", url: "https://www.trustpilot.com/review/wellmedr.com" },
     advantage: "Lowest ongoing price we track; weight-loss warranty",
     limitation: "Sale plan terms are not published up front; shipping is slower",
     cta: "See welludr's sale pricing",
@@ -86,7 +87,7 @@ const ROWS: Row[] = [
     membership: "None",
     shipping: "Free cold-chain, 1-2 days",
     support: "Nursing team, 1:1 messaging and video appointments",
-    trustpilot: { rating: "3.8", count: "9,604", checked: TRUSTPILOT_CHECKED, url: "https://www.trustpilot.com/review/joinem.co" },
+    trustpilot: { rating: "3.9", count: "11,494", checked: "November 4, 2026", url: "https://www.trustpilot.com/review/joinem.co" },
     advantage: "Lowest no-commitment price; quickest shipping",
     limitation: "Mostly self-serve; support reviews are mixed",
     cta: "View embody's month-to-month prices",
@@ -131,7 +132,7 @@ const ROWS: Row[] = [
     membership: "None",
     shipping: "Free",
     support: "Video visits with a provider or NP, a dietician and care coaching",
-    trustpilot: { rating: "4.3", count: "14,987", checked: TRUSTPILOT_CHECKED, url: "https://www.trustpilot.com/review/medvi.org" },
+    trustpilot: { rating: "4.3", count: "15,202", checked: "November 4, 2026", url: "https://www.trustpilot.com/review/medvi.org" },
     advantage: "Care bundled into one price; second-largest review base",
     limitation: "Promotional pricing; repeated cancellation and billing complaints",
     cta: "View Medvi's current prices",
@@ -146,7 +147,7 @@ const ROWS: Row[] = [
     membership: "None",
     shipping: "Free and tracked; often next-day (TrimRx's claim)",
     support: "Custom dosing and unlimited provider check-ins",
-    trustpilot: { rating: "3.8", count: "5,392", checked: TRUSTPILOT_CHECKED, url: "https://www.trustpilot.com/review/trimrx.com" },
+    trustpilot: { rating: "3.4", count: "4,894", checked: "November 4, 2026", url: "https://www.trustpilot.com/review/trimrx.com" },
     advantage: "No long-term contract; custom dosing; results guarantee (conditions apply)",
     limitation: "Complaints about payment practices recur",
     cta: "See TrimRx's current plans",
@@ -176,7 +177,7 @@ const ROWS: Row[] = [
     membership: "Yes",
     shipping: "Filled by ro's in-house pharmacy",
     support: "Licensed providers; follow-up by message",
-    trustpilot: { rating: "3.9", count: "7,105", checked: TRUSTPILOT_CHECKED, url: "https://www.trustpilot.com/review/ro.co" },
+    trustpilot: { rating: "3.9", count: "7,572", checked: "November 4, 2026", url: "https://www.trustpilot.com/review/ro.co" },
     advantage: "The only route here built on FDA-approved products; insurance may cover the medication",
     limitation: "Two monthly bills; users on both platforms find the cost confusing",
     cta: "See ro's membership and medication prices",
@@ -220,10 +221,10 @@ const SECTIONS: Section[] = [
     ),
     support:
       "welludr's intake is reviewed by board-certified specialists, and every plan includes a Medical Weight-Care Coach. Reviewers mention support agents by name again and again, which is rare in this market and points to a staffed, human support team. On Reddit, users say welludr uses a Florida compounding pharmacy, and one names Logos, a 503A pharmacy. welludr has not confirmed its pharmacy to us.",
-    trustpilotHeading: "welludr on Trustpilot: 4.6 from 2,188 reviews",
+    trustpilotHeading: "welludr on Trustpilot: 4.7 from 3,173 reviews",
     trustpilot: (
       <>
-        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/wellmedr.com">welludr Trustpilot profile</Ext>; claimed, on a paid Trustpilot subscription). The recent good reviews are about staff: &ldquo;Malcom was great&rdquo;, &ldquo;Zara responded quickly&rdquo;, &ldquo;I talked to a person within minutes&rdquo;, plus a switcher who said the move went smoothly. The bad reviews are about timing: one customer waited a week for an order, another reported &ldquo;over 24 hours no contact&rdquo;, a third said prescriptions arrive late even when questions get answered, and a three-star reviewer says the company &ldquo;charges you every 21 days&rdquo;. <strong className="text-[#191919]">welludr earns its 4.6 mainly through service; the complaints concern speed.</strong>
+        Checked November 4, 2026 (<Ext href="https://www.trustpilot.com/review/wellmedr.com">welludr Trustpilot profile</Ext>; claimed, on a paid Trustpilot subscription). The recent good reviews are about staff: &ldquo;Malcom was great&rdquo;, &ldquo;Zara responded quickly&rdquo;, &ldquo;I talked to a person within minutes&rdquo;, plus a switcher who said the move went smoothly. The bad reviews are about timing: one customer waited a week for an order, another reported &ldquo;over 24 hours no contact&rdquo;, a third said prescriptions arrive late even when questions get answered, and a three-star reviewer says the company &ldquo;charges you every 21 days&rdquo;. <strong className="text-[#191919]">welludr earns its 4.7 mainly through service; the complaints concern speed.</strong>
       </>
     ),
     reddit: (
@@ -256,10 +257,10 @@ const SECTIONS: Section[] = [
     ),
     support:
       "At embody, a licensed provider writes the prescription, usually within a day. A nursing team handles check-ins by message, and reviewers also mention video appointments. The model is intentionally self-serve. Reddit users say dose increases were approved without resistance at the monthly check-in, and one user describes a nurse phoning after the first dose to ask about side effects.",
-    trustpilotHeading: "embody on Trustpilot: 3.8 from 9,604 reviews",
+    trustpilotHeading: "embody on Trustpilot: 3.9 from 11,494 reviews",
     trustpilot: (
       <>
-        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/joinem.co">embody Trustpilot profile</Ext>; claimed, on a paid Trustpilot subscription). Good reviews center on clinicians: &ldquo;The doctor listened to me today&rdquo;, &ldquo;provider above and beyond&rdquo;, &ldquo;My appointment went great&rdquo;. Bad reviews center on shipping and support: a three-star review headed &ldquo;Shipping delays kill score&rdquo;, a two-star &ldquo;Dismal customer support with errors&rdquo;, and a three-star account of a doctor missing three video appointments. A 3.8 average across nearly ten thousand reviews is a truly mixed record, and the theme is consistent: <strong className="text-[#191919]">smooth when everything works, thin when something breaks</strong>.
+        Checked November 4, 2026 (<Ext href="https://www.trustpilot.com/review/joinem.co">embody Trustpilot profile</Ext>; claimed, on a paid Trustpilot subscription). Good reviews center on clinicians: &ldquo;The doctor listened to me today&rdquo;, &ldquo;provider above and beyond&rdquo;, &ldquo;My appointment went great&rdquo;. Bad reviews center on shipping and support: a three-star review headed &ldquo;Shipping delays kill score&rdquo;, a two-star &ldquo;Dismal customer support with errors&rdquo;, and a three-star account of a doctor missing three video appointments. A 3.8 average across nearly ten thousand reviews is a truly mixed record, and the theme is consistent: <strong className="text-[#191919]">smooth when everything works, thin when something breaks</strong>.
       </>
     ),
     reddit: (
@@ -368,10 +369,10 @@ const SECTIONS: Section[] = [
     ),
     support:
       "Medvi routes clinical evaluations and prescriptions through a network of licensed providers. Patients interact through video visits and secure messaging, with a dietician and coaching included. This care is the most consistent source of praise in Medvi's reviews. The website does not name the pharmacy.",
-    trustpilotHeading: "Medvi on Trustpilot: 4.3 from 14,987 reviews",
+    trustpilotHeading: "Medvi on Trustpilot: 4.3 from 15,202 reviews",
     trustpilot: (
       <>
-        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/medvi.org">Medvi Trustpilot profile</Ext>; claimed, on a paid Trustpilot subscription). The good reviews are about clinicians: &ldquo;Nurse was very informative and pleasant&rdquo;, &ldquo;Great check-in appointment&rdquo;, &ldquo;The RN was very helpful with my medical history&rdquo;, &ldquo;that you meet with a real provider... via video call&rdquo;. The bad reviews concentrate on billing and cancelling: &ldquo;At first had a hard time canceling my monthly subscription&rdquo; (four stars, later resolved), followed by a series of one-star reviews titled &ldquo;Caution is advised&rdquo;, &ldquo;Lots of confusion and delays&rdquo;, &ldquo;Started great, ended poorly&rdquo; and &ldquo;Medvi shady practices&rdquo;. Medvi responds to almost every negative review. In short: <strong className="text-[#191919]">reviewers rate Medvi&rsquo;s clinical care highly, and the subscription mechanics cause the complaints</strong>.
+        Checked November 4, 2026 (<Ext href="https://www.trustpilot.com/review/medvi.org">Medvi Trustpilot profile</Ext>; claimed, on a paid Trustpilot subscription). The good reviews are about clinicians: &ldquo;Nurse was very informative and pleasant&rdquo;, &ldquo;Great check-in appointment&rdquo;, &ldquo;The RN was very helpful with my medical history&rdquo;, &ldquo;that you meet with a real provider... via video call&rdquo;. The bad reviews concentrate on billing and cancelling: &ldquo;At first had a hard time canceling my monthly subscription&rdquo; (four stars, later resolved), followed by a series of one-star reviews titled &ldquo;Caution is advised&rdquo;, &ldquo;Lots of confusion and delays&rdquo;, &ldquo;Started great, ended poorly&rdquo; and &ldquo;Medvi shady practices&rdquo;. Medvi responds to almost every negative review. In short: <strong className="text-[#191919]">reviewers rate Medvi&rsquo;s clinical care highly, and the subscription mechanics cause the complaints</strong>.
       </>
     ),
     reddit: (
@@ -404,10 +405,10 @@ const SECTIONS: Section[] = [
     ),
     support:
       "TrimRx starts with a free two-minute assessment and review by a licensed clinician, followed by custom dosing with unlimited check-ins included. Reviewers call the screening thorough and the intake clear. The website does not name the compounding pharmacy. TrimRx's advertised three-month results guarantee requires you to follow the plan and complete monthly check-ins.",
-    trustpilotHeading: "TrimRx on Trustpilot: 3.8 from 5,392 reviews",
+    trustpilotHeading: "TrimRx on Trustpilot: 3.4 from 4,894 reviews",
     trustpilot: (
       <>
-        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/trimrx.com">TrimRx Trustpilot profile</Ext>; claimed, on a paid Trustpilot subscription). The five-star reviews focus on clarity and cost: &ldquo;Clear pricing&rdquo;, &ldquo;Priced fairly and easy to use&rdquo;, &ldquo;Screening was more thorough than I expected&rdquo;, &ldquo;My old provider was charging me close to double&rdquo;, &ldquo;Shipping runs two or three days&rdquo;. The low-star reviews focus on money and delivery: a first order charged at twice the quoted price with no response, &ldquo;Unreliable! Potentially crooks!&rdquo;, a tracking date that changed twice, and a refund still not issued a month after the customer cancelled within an hour of ordering. Trustpilot&rsquo;s own profile summary flags significant dissatisfaction with payment practices. Both things hold: <strong className="text-[#191919]">many TrimRx customers find the pricing clear, and a persistent minority report charges they did not expect</strong>.
+        Checked November 4, 2026 (<Ext href="https://www.trustpilot.com/review/trimrx.com">TrimRx Trustpilot profile</Ext>; claimed, on a paid Trustpilot subscription). The five-star reviews focus on clarity and cost: &ldquo;Clear pricing&rdquo;, &ldquo;Priced fairly and easy to use&rdquo;, &ldquo;Screening was more thorough than I expected&rdquo;, &ldquo;My old provider was charging me close to double&rdquo;, &ldquo;Shipping runs two or three days&rdquo;. The low-star reviews focus on money and delivery: a first order charged at twice the quoted price with no response, &ldquo;Unreliable! Potentially crooks!&rdquo;, a tracking date that changed twice, and a refund still not issued a month after the customer cancelled within an hour of ordering. Trustpilot&rsquo;s own profile summary flags significant dissatisfaction with payment practices. Both things hold: <strong className="text-[#191919]">many TrimRx customers find the pricing clear, and a persistent minority report charges they did not expect</strong>.
       </>
     ),
     reddit: (
@@ -478,10 +479,10 @@ const SECTIONS: Section[] = [
     ),
     support:
       "Licensed providers review every ro case, and follow-up happens by message. A phone line is the most common request in recent reviews. ro dispenses through its in-house pharmacy, the clearest pharmacy answer on this page. ro was reported as not among the thirty telehealth companies that received FDA marketing warning letters in March 2026.",
-    trustpilotHeading: "ro on Trustpilot: 3.9 from 7,105 reviews",
+    trustpilotHeading: "ro on Trustpilot: 3.9 from 7,572 reviews",
     trustpilot: (
       <>
-        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/ro.co">ro Trustpilot profile</Ext>; claimed, on a paid Trustpilot subscription). Good reviews describe a simple application, nurse-practitioner appointments that ran on time and questions that got answered. The negative themes are specific and repeated: &ldquo;I wish you had a phone # for better service&rdquo;, &ldquo;Needed to contact Ro by phone&rdquo;, &ldquo;My delivery was delayed for 4 days&rdquo;, &ldquo;I didn&rsquo;t understand that $39 initial&rdquo; was not the ongoing price, &ldquo;Would be nice to know the possible fee&rdquo; before signing up, and one reviewer who was given the lowest dose without a conversation. Both platforms tell the same story: <strong className="text-[#191919]">people praise ro&rsquo;s results and easy start, and struggle with its price structure and reachability</strong>.
+        Checked November 4, 2026 (<Ext href="https://www.trustpilot.com/review/ro.co">ro Trustpilot profile</Ext>; claimed, on a paid Trustpilot subscription). Good reviews describe a simple application, nurse-practitioner appointments that ran on time and questions that got answered. The negative themes are specific and repeated: &ldquo;I wish you had a phone # for better service&rdquo;, &ldquo;Needed to contact Ro by phone&rdquo;, &ldquo;My delivery was delayed for 4 days&rdquo;, &ldquo;I didn&rsquo;t understand that $39 initial&rdquo; was not the ongoing price, &ldquo;Would be nice to know the possible fee&rdquo; before signing up, and one reviewer who was given the lowest dose without a conversation. Both platforms tell the same story: <strong className="text-[#191919]">people praise ro&rsquo;s results and easy start, and struggle with its price structure and reachability</strong>.
       </>
     ),
     reddit: (
@@ -807,7 +808,7 @@ export default async function Glp1ProviderComparisonPage() {
                         reviews={p.trustpilotReviews!}
                         rating={r.trustpilot?.rating}
                         reviewCount={r.trustpilot?.count}
-                        profileUrl={r.trustpilot?.url}
+                        profile={TRUSTPILOT_PROFILES[p.id]}
                       />
                     </div>
                   )}
