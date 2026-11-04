@@ -247,6 +247,7 @@ export function TrustpilotCarousel({
   rating,
   reviewCount,
   profile,
+  headingLevel = "h3",
 }: {
   providerName: string;
   providerLogo?: string;
@@ -256,8 +257,12 @@ export function TrustpilotCarousel({
   /** Trustpilot profile facts: nofollow link, and when verified from a
    *  screenshot, Trustpilot's own star breakdown across all reviews. */
   profile?: TrustpilotProfile;
+  /** Heading level for the block title: h2 where it starts a page section
+   *  (review pages), h3 where it sits under another h2 (comparisons). */
+  headingLevel?: "h2" | "h3";
 }) {
   const total = reviews.length;
+  const Heading = headingLevel;
   // Reader-controlled order. Default is highest rated first (newest within a
   // band, undated last) - and the lowest-rated reviews are one click away, so
   // the full captured set, including every 1-star, is always reachable. The
@@ -288,9 +293,9 @@ export function TrustpilotCarousel({
               <img src={providerLogo} alt={`${providerName} logo`} className="max-h-full max-w-full object-contain" />
             </div>
           )}
-          <h3 className="text-[16px] font-bold text-[#191919]">
+          <Heading className="text-[16px] font-bold text-[#191919]">
             {providerName} <span className="font-medium text-gray-400">customer reviews on</span>
-          </h3>
+          </Heading>
           <TrustpilotWordmark />
         </div>
         {rating && numericRating !== null && !isNaN(numericRating) ? (
