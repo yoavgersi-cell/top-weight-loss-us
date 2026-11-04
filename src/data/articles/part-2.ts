@@ -335,21 +335,34 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
     description:
       "Online vs in-person weight loss care for GLP-1s: cost, convenience, exams and insurance compared, plus 3 signs a clinic is the better fit for you.",
     category: "Advice",
-    readTime: "5 min read",
+    readTime: "7 min read",
     publishedAt: "2026-07-19",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-11-04",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
     keyTakeaways: [
       "Online care is usually cheaper, quicker and easier: you are evaluated at home, medication arrives by mail, follow-ups happen by video or message, and compounded GLP-1s cost a fraction of clinic prices.",
       "Clinics offer physical exams, labs done on site, in-person accountability and, in some cases, an easier path to insurance-covered brand-name drugs.",
       "A clinic makes more sense if you have complex conditions that need a hands-on exam or insurance that specifically pays for clinic visits; for most others, online works well.",
-      "You get the same medication either way. What changes is how care is delivered.",
+      "FDA-approved brand-name drugs such as Wegovy and Zepbound are the same wherever they are prescribed, but many online providers prescribe compounded semaglutide or tirzepatide instead, which are not FDA-approved. Ask which one you are getting.",
     ],
     sections: [
       {
         heading: "Is online weight loss care as good as a clinic?",
         body: `For most people, yes: the medication is identical, and the main differences are cost, convenience and how much face time you get. <a href="https://www.niddk.nih.gov/health-information/weight-management/choosing-a-safe-successful-weight-loss-program" target="_blank" rel="noopener">Telehealth weight loss programs</a> have grown quickly because they make <a href="/semaglutide">semaglutide</a> and <a href="/tirzepatide">tirzepatide</a> available without office visits. Researchers have also asked whether online care is <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11405989/" target="_blank" rel="noopener">as effective as in-person treatment</a>. Below is a fair look at both.`,
+      },
+      {
+        heading: "Should you get a weight loss prescription online or from a clinic?",
+        body: `<p>Get your weight loss prescription online if you want the lowest price, a quick start and home delivery, and you do not need a physical exam. Choose an in-person clinic if you need hands-on care for other health conditions, want your insurance to cover a brand-name GLP-1 through a doctor you already see, or prefer face-to-face visits. Either way, a licensed clinician must review your health history before prescribing semaglutide or tirzepatide.</p>
+<table><thead><tr><th>What matters to you</th><th>Online prescription</th><th>In-clinic prescription</th></tr></thead><tbody>
+<tr><td>Getting started</td><td>Health questionnaire from home, then a message or video review by a licensed clinician</td><td>Office appointment, often with a physical exam and labs on site</td></tr>
+<tr><td>Price you can see up front</td><td>Compounded semaglutide from $41 a month (welludr sale price, October 2026) and many plans priced flat per month; see <a href="/cheapest-glp1">current verified prices</a></td><td>Varies by clinic: visit fees, labs and medication are often billed separately, so ask for the total</td></tr>
+<tr><td>Brand-name drugs and insurance</td><td>Some online providers, such as <a href="/reviews/ro">ro</a>, can bill brand-name medication to insurance; many sell compounded drugs for cash only</td><td>Often the easier route when your plan needs prior authorization from a doctor who knows your history</td></tr>
+<tr><td>Getting the medication</td><td>Shipped to your door, from 1-2 days at embody to 3-5 business days at welludr and 5-7 days at altRx</td><td>Filled at a pharmacy or, at some clinics, given in the office</td></tr>
+<tr><td>Follow-ups</td><td>Secure messages or video visits</td><td>Scheduled office visits, with weigh-ins in person</td></tr>
+<tr><td>Best for</td><td>Healthy adults who pay cash and want convenience</td><td>People with complex conditions, those using insurance, and anyone who wants hands-on monitoring</td></tr>
+</tbody></table>
+<p>Two warning signs apply to both routes. The <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">FDA warns</a> against GLP-1s sold without a prescription and notes that compounded versions are not FDA-approved, so never buy from a seller that skips the clinician review, and ask whether your medication is brand-name or compounded. Our checklist for <a href="/how-to-choose-a-glp1-provider">choosing a GLP-1 provider</a> covers what to verify before you pay.</p>`,
       },
       {
         heading: "What are the benefits of an online weight loss program?",
