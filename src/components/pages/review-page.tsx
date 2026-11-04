@@ -1,3 +1,4 @@
+import { TRUSTPILOT_PROFILE_URLS } from "@/data/trustpilot";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, X, ArrowRight, ArrowUpRight, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle, ShieldCheck, UserRound, Users, Stethoscope, type LucideIcon } from "lucide-react";
@@ -920,6 +921,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               reviews={provider.trustpilotReviews!}
               rating={provider.trustpilotRating}
               reviewCount={provider.trustpilotReviewCount}
+              profileUrl={TRUSTPILOT_PROFILE_URLS[provider.id]}
             />
           </div>
         )}

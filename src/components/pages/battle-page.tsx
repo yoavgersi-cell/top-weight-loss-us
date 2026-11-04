@@ -1,3 +1,4 @@
+import { TRUSTPILOT_PROFILE_URLS } from "@/data/trustpilot";
 import { pageReviewSchema, reviewedPageNode } from "@/data/reviewers";
 import { fixBrandCase } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -1197,6 +1198,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                             reviews={provider.trustpilotReviews!}
                             rating={provider.trustpilotRating}
                             reviewCount={provider.trustpilotReviewCount}
+                            profileUrl={TRUSTPILOT_PROFILE_URLS[provider.id]}
                           />
                         </div>
                       )}
