@@ -977,7 +977,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   ? "This guide is the overview. Each of these goes deeper on one question."
                   : "Related guides from the same topic, starting with the overview."}
               </p>
-              <ul className="grid gap-2.5 sm:grid-cols-2">
+              <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                 {topicLinks.map((l) => (
                   <li key={l.href}>
                     <Link
@@ -997,7 +997,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           {subjectProvider && providerLinks.length > 1 && (
             <div className="mt-10">
               <h2 className="mb-4 text-[18px] font-bold text-[#191919]">More on {subjectProvider.name}</h2>
-              <ul className="grid gap-2.5 sm:grid-cols-2">
+              <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                 {providerLinks.map((l) => (
                   <li key={l.href}>
                     <Link
@@ -1019,7 +1019,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               <h2 className="mb-5 text-[18px] font-bold text-[#191919]">
                 You Might Also Like
               </h2>
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 {relatedArticles.map((ra) => (
                   <Link
                     key={ra.slug}
@@ -1044,7 +1044,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           )}
 
           {/* Prev / Next navigation */}
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {prevArticle ? (
               <Link
                 href={hubLink(ctx, `/articles/${prevArticle.slug}`)}
@@ -1090,7 +1090,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               <p className="mb-4 text-[13.5px] text-gray-500">
                 Side-by-side comparisons with checked prices, the ones readers rely on most when choosing.
               </p>
-              <div className="grid gap-2.5 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                 {[
                   { href: "/compare/embody-vs-wellmedr", label: "embody vs welludr: $69 or $41" },
                   { href: "/compare/altrx-vs-embody", label: "altRx vs embody: $89 or $69" },

@@ -49,7 +49,7 @@ function dateLabel(iso: string): string {
 }
 
 const ctaClass =
-  "inline-flex h-[46px] items-center justify-center gap-1.5 whitespace-nowrap rounded-xl bg-[#0C4B75] px-6 text-[14.5px] font-bold text-white transition-colors hover:bg-[#093d61]";
+  "inline-flex min-h-[46px] max-w-full items-center justify-center gap-1.5 rounded-xl bg-[#0C4B75] px-6 py-2 text-center text-[14.5px] leading-tight sm:whitespace-nowrap font-bold text-white transition-colors hover:bg-[#093d61]";
 
 export function LegitChecklist({ data, provider, linkPrefix = "" }: { data: LegitPageData; provider: Provider; linkPrefix?: string }) {
   return (

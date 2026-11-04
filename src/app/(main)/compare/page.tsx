@@ -180,7 +180,7 @@ export default async function CompareHubPage() {
 
         <section className="mt-12">
           <h2 className="text-[22px] font-bold text-[#191919] sm:text-[26px]">Three-way comparisons</h2>
-          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {THREE_WAY_COMPARISONS.map((t) => (
               <Link
                 key={t.slug}

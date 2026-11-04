@@ -849,7 +849,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <p className="mb-4 text-[15px] leading-[1.75] text-gray-600">
                 {legit.verdict}
               </p>
-              <ul className="grid gap-2.5 sm:grid-cols-2">
+              <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                 {legit.signals.map((signal) => (
                   <li key={signal} className="flex items-start gap-2.5 text-[14px] text-gray-800">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2} />
@@ -925,7 +925,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         )}
 
         {/* Key Features + Pricing side by side on desktop */}
-        <div className="mb-6 grid gap-6 sm:grid-cols-2">
+        <div className="mb-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
           <Section title={`What ${provider.name} includes`}>
             <ul className="space-y-2.5">
               {review.keyFeatures.map((feature) => (
@@ -952,7 +952,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {/* Pricing */}
         <Section title={`How much does ${provider.name} cost?`}>
           {review.pricingPlans && review.pricingPlans.length > 0 && (
-            <div className="mb-5 grid gap-4 sm:grid-cols-2">
+            <div className="mb-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {review.pricingPlans.map((plan) => (
                 <div key={plan.name} className="rounded-xl border border-gray-200 bg-gray-50/60 p-5">
                   <div className="flex items-center justify-between gap-2">
@@ -1035,7 +1035,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
         {/* Pros & Cons */}
         <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
-          <div className="grid sm:grid-cols-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2">
             <div className="p-6 sm:border-r sm:border-gray-100">
               <h3 className="mb-4 flex items-center gap-2 text-[15px] font-bold text-emerald-700">
                 <div className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100">
@@ -1284,7 +1284,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             {relatedBattles.length > 0 && (
               <>
                 <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-gray-400">Side-by-side matchups</p>
-                <div className="mb-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mb-5 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
                   {relatedBattles.map((battle) => {
                     const otherProvider = config.providers.find(
                       (p) => p.id === (battle.provider1Id === provider.id ? battle.provider2Id : battle.provider1Id)
@@ -1306,7 +1306,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             {relatedTrios.length > 0 && (
               <>
                 <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-gray-400">Three-way comparisons</p>
-                <div className="mb-5 grid gap-2 sm:grid-cols-2">
+                <div className="mb-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {relatedTrios.map((t) => (
                     <Link
                       key={t.slug}
@@ -1358,7 +1358,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <p className="mb-4 text-[13.5px] text-gray-500">
               In-depth answers to what people check before they sign up.
             </p>
-            <div className="grid gap-2.5 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
               {clusterSlugs.map((c) => (
                 <Link
                   key={c.slug}

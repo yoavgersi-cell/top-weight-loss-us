@@ -209,7 +209,7 @@ export default async function HowWeRankPage() {
             Inside the six weighted factors, these specific signals reliably push a provider&rsquo;s
             score up or down:
           </p>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-emerald-200 bg-emerald-50/40 p-5">
               <p className="mb-3 flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.06em] text-emerald-700">
                 <Check className="h-4 w-4" strokeWidth={2.5} /> Adds points
@@ -260,7 +260,7 @@ export default async function HowWeRankPage() {
             Every provider evaluation draws on the same four sources. A score is only as good
             as the information behind it:
           </p>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {SOURCES.map(({ icon: Icon, title, desc }) => (
               <div key={title} className="rounded-xl border border-gray-200 bg-white p-5">
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#0C4B75]/5">

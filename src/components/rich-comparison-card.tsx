@@ -73,7 +73,7 @@ export function RichComparisonCard({
       <div className="p-4 sm:p-7">
         {/* ── Header: rank + logo, score box ── */}
         <div className="flex flex-row items-center justify-between gap-3 sm:gap-4">
-          <div className="flex items-center gap-2.5 sm:gap-3.5">
+          <div className="flex min-w-0 items-center gap-2.5 sm:gap-3.5">
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#191919] text-[12px] font-extrabold text-white sm:h-8 sm:w-8 sm:text-[13px]">
               {product.rank}
             </span>
@@ -90,7 +90,9 @@ export function RichComparisonCard({
           </div>
 
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-            <div className="text-right">
+            {/* Stars + label hide on the narrowest phones (<360px) so the
+                header never pushes past the screen; the score box stays. */}
+            <div className="hidden text-right min-[360px]:block">
               <div className="flex justify-end gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star
@@ -104,7 +106,7 @@ export function RichComparisonCard({
             </div>
             <div className="flex flex-col items-center justify-center rounded-lg bg-[#0C4B75] px-2.5 py-1 text-white sm:rounded-xl sm:px-3 sm:py-1.5">
               <span className="text-[20px] font-extrabold leading-none sm:text-[24px]">{product.rating.toFixed(1)}</span>
-              <span className="mt-0.5 text-[8px] font-semibold uppercase tracking-wide text-white/70 sm:text-[9px]">out of 10</span>
+              <span className="mt-0.5 text-[9px] font-semibold uppercase tracking-wide text-white/70 sm:text-[10px]">out of 10</span>
             </div>
           </div>
         </div>
@@ -176,7 +178,7 @@ export function RichComparisonCard({
 
             {/* Key facts grid */}
             {facts.length > 0 && (
-              <ul className="grid gap-x-5 gap-y-1.5 sm:grid-cols-2 sm:gap-y-2">
+              <ul className="grid grid-cols-1 gap-x-5 gap-y-1.5 sm:grid-cols-2 sm:gap-y-2">
                 {facts.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-[12.5px] leading-snug text-gray-800 sm:text-[13px]">
                     <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />

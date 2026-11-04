@@ -70,7 +70,7 @@ export function ReviewInsights({
       </p>
       <p className="mt-3 text-[15.5px] leading-[1.75] text-gray-800">{insight.summary}</p>
 
-      <div className="mt-5 grid gap-4 sm:grid-cols-2">
+      <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="rounded-xl border border-emerald-100 bg-emerald-50/40 p-4">
           <h3 className="mb-3 text-[15px] font-bold text-emerald-800">What reviewers praise</h3>
           <ul className="space-y-3">
@@ -140,7 +140,7 @@ export function FeaturedReviews({
         Quoted word for word from Trustpilot, chosen to cover each topic reviewers raise most, praise and complaints
         alike.
       </p>
-      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+      <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
         {insight.featured.map(({ i, topic }) => {
           const r = reviews[i];
           return (

@@ -176,7 +176,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
         </Link>
 
         {/* Grid of remaining articles */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {articles.slice(1).map((article, i) => (
             <Link
               key={article.slug}
@@ -241,7 +241,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
               </p>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {guides.map((g) => (
                 <Link
                   key={g.href}
@@ -282,7 +282,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
               </p>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {comparisons.map(({ battle, p1, p2, winner }) => (
                 <Link
                   key={battle.slug}

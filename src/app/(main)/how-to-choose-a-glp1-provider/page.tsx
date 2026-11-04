@@ -472,7 +472,7 @@ export default async function HowToChooseGlp1ProviderPage() {
             vial. Verify each one.
           </p>
           <p className="mb-3 text-[14px] font-bold text-[#191919]">Five questions to ask about clinician involvement:</p>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {[
               ["Who reads my medical intake?", "The how-it-works page should name the role (physician, physician associate or nurse practitioner), and the intake should ask about thyroid cancer or MEN 2 history, pancreatitis, pregnancy plans and current medications."],
               ["Is the clinician licensed where I live?", "The prescriber should be licensed in your state. HealthRx says an independent US-licensed clinician in your state reviews you; other providers describe licensed providers without mentioning the state, so ask."],
@@ -506,7 +506,7 @@ export default async function HowToChooseGlp1ProviderPage() {
                   <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0C4B75] text-[13px] font-bold text-white">{i + 1}</span>
                   <h3 className="text-[17px] font-bold leading-snug text-[#191919]">{c.title}</h3>
                 </div>
-                <div className="grid gap-3 pl-10 text-[14px] leading-relaxed sm:grid-cols-3">
+                <div className="grid grid-cols-1 gap-3 pl-10 text-[14px] leading-relaxed sm:grid-cols-3">
                   <p className="text-gray-700"><span className="font-bold text-[#191919]">What to look at: </span>{c.check}</p>
                   <p className="text-gray-700"><span className="font-bold text-[#191919]">How to confirm it: </span>{c.verify}</p>
                   <p className="text-gray-700"><span className="mr-1.5 inline-flex items-center gap-1 font-bold text-red-700"><AlertTriangle className="h-3.5 w-3.5" strokeWidth={2.5} />Red flag:</span>{c.redFlag}</p>
@@ -620,7 +620,7 @@ export default async function HowToChooseGlp1ProviderPage() {
             star mix of the individual reviews we captured, good and bad. Trustpilot measures customer experience, not
             the medical quality of care. Each provider&rsquo;s review page carries the full set of captured reviews.
           </p>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {rows.map((r) => {
               const p = r.provider!;
               const reviews = p.trustpilotReviews ?? [];
@@ -735,7 +735,7 @@ export default async function HowToChooseGlp1ProviderPage() {
             is not a ranking; the full ranked comparison is linked below. We may earn a commission when you sign up
             through a provider link, and that does not affect what the table shows.
           </p>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {explore.map(({ product, provider }) => {
               const meta = EXPLORE[provider.id];
               const row = rowById.get(provider.id);
@@ -750,7 +750,7 @@ export default async function HowToChooseGlp1ProviderPage() {
                   </div>
                   <p className="mb-1 text-[12px] font-bold uppercase tracking-wide text-[#0C4B75]">{meta.useCase}</p>
                   <p className="mb-4 text-[14px] leading-relaxed text-gray-700">{meta.reason}</p>
-                  <dl className="mb-4 grid gap-x-4 gap-y-2 text-[13px] sm:grid-cols-2">
+                  <dl className="mb-4 grid grid-cols-1 gap-x-4 gap-y-2 text-[13px] sm:grid-cols-2">
                     <div>
                       <dt className="font-semibold text-gray-500">Verified semaglutide price</dt>
                       <dd className="text-[#191919]">

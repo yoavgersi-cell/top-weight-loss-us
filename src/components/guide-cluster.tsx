@@ -151,7 +151,7 @@ export function GuideCluster({
           </span>
         ))}
       </p>
-      <ul className="grid gap-2.5 sm:grid-cols-2">
+      <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
         {guides.map((g) => (
           <li key={g.slug}>
             <Link

@@ -222,7 +222,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
           <div className="mb-4">
             <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">Compare them in pairs</h2>
             <p className="mb-4 text-[14px] text-gray-500">One-on-one matchups between each pair of these three providers.</p>
-            <div className="grid gap-2.5 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
               {relatedBattles.map((b) => (
                 <Link
                   key={b.slug}
@@ -241,7 +241,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
         <div className="mb-4 mt-8">
           <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">Read each full review</h2>
           <p className="mb-4 text-[14px] text-gray-500">Pricing, Trustpilot reviews and our verdict for each provider in this comparison.</p>
-          <div className="grid gap-2.5 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
             {trio.providerIds.map((id) => {
               const p = config.providers.find((x) => x.id === id);
               if (!p) return null;
@@ -269,7 +269,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
             </Link>
             .
           </p>
-          <div className="grid gap-2.5 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
             {THREE_WAY_COMPARISONS.filter((t) => t.slug !== trio.slug)
               .map((t) => ({ t, shared: t.providerIds.filter((id) => trio.providerIds.includes(id)).length }))
               .sort((a, b) => b.shared - a.shared)

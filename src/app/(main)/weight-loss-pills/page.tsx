@@ -321,7 +321,7 @@ export default async function WeightLossPillsPage() {
   const providerCards = pillProviders.length > 0 && (
     <div className="mt-8">
       <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-gray-400">Providers offering compounded oral options</p>
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {pillProviders.map((p) => (
           <div key={p.id} className="flex flex-col rounded-xl border border-gray-200 bg-white p-5">
             <div className="mb-4 flex h-[34px] w-[120px] items-center">

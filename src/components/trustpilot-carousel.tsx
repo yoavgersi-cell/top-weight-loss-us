@@ -127,7 +127,7 @@ function ReviewPager({ cards }: { cards: { key: string; node: React.ReactNode }[
   return (
     <>
       <div className="hidden sm:block">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {desktopVisible.map((c) => (
             <div key={c.key}>{c.node}</div>
           ))}

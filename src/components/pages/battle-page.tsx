@@ -854,7 +854,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               delivery - answered before any scrolling, from real feature data. */}
           {quickRows.length > 0 && (
             <div className="mb-12 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
-              <table className="w-full table-fixed border-collapse text-left">
+              <table className="w-full table-fixed border-collapse text-left [overflow-wrap:anywhere]">
                 <thead>
                   <tr className="border-b-2 border-gray-200 bg-gray-50/80">
                     <th className="w-[26%] py-3 pl-4 pr-2 text-[11px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:w-[22%] sm:py-3.5 sm:text-[12px]">
@@ -1051,7 +1051,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       )}
 
                       {/* What you get + Who it's best for */}
-                      <div className="mb-8 grid gap-6 sm:grid-cols-2">
+                      <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
                         <div>
                           <h4 className="mb-3 flex items-center gap-2 text-[15px] font-bold text-[#191919]">
                             <Check className="h-4 w-4 text-emerald-500" strokeWidth={2.5} />
@@ -1099,7 +1099,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                               />
                             </div>
                           )}
-                          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                             {plans.map((plan, i) => (
                               <div key={i} className="rounded-xl border border-gray-200 bg-gray-50/60 p-4">
                                 <p className="text-[13px] font-bold text-[#191919]">{plan.name}</p>
@@ -1143,7 +1143,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
                       {/* Pros / cons */}
                       {(pros.length > 0 || cons.length > 0) && (
-                        <div className="mb-8 grid gap-4 sm:grid-cols-2">
+                        <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
                           {pros.length > 0 && (
                             <div className="rounded-xl border border-emerald-100 bg-emerald-50/40 p-5">
                               <p className="mb-3 text-[14px] font-bold text-emerald-800">
@@ -1283,7 +1283,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 A feature-by-feature table. Rows where the two providers match are grayed out, so the real differences stand out.
               </p>
 
-              <table className="w-full table-fixed border-collapse text-left">
+              <table className="w-full table-fixed border-collapse text-left [overflow-wrap:anywhere]">
                 <thead>
                   <tr className="border-b border-gray-300">
                     <th className="w-[32%] py-3 pr-2 align-bottom" />
@@ -1373,7 +1373,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
                 Summary by priority
               </p>
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div>
                   <p className="mb-2 text-[14px] font-bold text-[#191919]">Pick {verdictWinner.name} for</p>
                   <ul className="space-y-2">
@@ -1463,7 +1463,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <div className="mb-10">
             <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">Read next</h2>
             <p className="mb-4 text-[14px] text-gray-500">Where readers of this comparison usually go after this page.</p>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {[
                 { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight checked compounded tirzepatide prices starting at $71, plus each brand-name Zepbound option." },
                 { href: "/reviews/altrx", title: "altRx review", blurb: "Semaglutide at $89, tirzepatide at $149, and brand-name drugs sold alongside compounded plans." },
@@ -1516,7 +1516,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   ))}
                 </div>
               )}
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {relatedBattles.map(({ slug: relSlug, bp1, bp2 }) => (
                   <Link
                     key={relSlug}

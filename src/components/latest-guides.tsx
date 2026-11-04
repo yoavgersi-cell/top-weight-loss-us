@@ -67,7 +67,7 @@ export function LatestGuides({
     <>
       <h2 className="text-[26px] font-bold tracking-[-0.015em] text-[#191919] sm:text-[32px]">{title}</h2>
       {subtitle && <p className="mt-2 max-w-[560px] text-[15px] leading-relaxed text-gray-500">{subtitle}</p>}
-      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {items.map(({ vertical, article: a }) => {
           const updated = dateLabel(a.updatedAt);
           const chip = showVertical ? (NAME_BY_VERTICAL.get(vertical) ?? vertical) : a.category || "Guide";
