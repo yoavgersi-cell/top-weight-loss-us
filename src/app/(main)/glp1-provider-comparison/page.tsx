@@ -807,6 +807,7 @@ export default async function Glp1ProviderComparisonPage() {
                         reviews={p.trustpilotReviews!}
                         rating={r.trustpilot?.rating}
                         reviewCount={r.trustpilot?.count}
+                        profileUrl={r.trustpilot?.url}
                       />
                     </div>
                   )}

@@ -1,5 +1,4 @@
 import type { TrustpilotReview } from "@/lib/config";
-import { tpStarColor } from "@/components/trustpilot-rating";
 
 // ───── Trustpilot summary (citeable text) ─────
 // A plain-prose, fully computed summary of the reviews we captured for a
@@ -62,19 +61,6 @@ export function TrustpilotSummary({
         )}
         . They break down as {distText}, so {pct(positive)}% give 4 or 5 stars and {pct(critical)}% give 1 or 2 stars. All of them appear below, the lowest-rated included, with reviewer names shortened.
       </p>
-      <div className="mt-3 space-y-1">
-        {dist.map((d) => (
-          <div key={d.star} className="flex items-center gap-2 text-[12px] text-gray-500">
-            <span className="w-[42px] shrink-0 font-semibold text-gray-700">{d.star} star</span>
-            <div className="h-2 flex-1 overflow-hidden rounded-full bg-gray-100">
-              <div className="h-full rounded-full" style={{ width: `${pct(d.count)}%`, backgroundColor: tpStarColor(d.star) }} />
-            </div>
-            <span className="w-[56px] shrink-0 text-right [font-variant-numeric:tabular-nums]">
-              {d.count} ({pct(d.count)}%)
-            </span>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }

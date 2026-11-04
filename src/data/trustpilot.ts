@@ -2,6 +2,19 @@ import type { TrustpilotReview } from "@/lib/config";
 
 // Verbatim Trustpilot reviews and aggregate ratings, transcribed from the
 // providers' public Trustpilot profiles. Quotes are never edited.
+// Public Trustpilot profile for each provider we quote, linked from the review
+// block (rel nofollow: we cite, we do not endorse). Same URLs as the provider
+// comparison page's "Checked" notes. altRx has no overall score, so no link.
+export const TRUSTPILOT_PROFILE_URLS: Record<string, string> = {
+  wellmedr: "https://www.trustpilot.com/review/wellmedr.com",
+  embody: "https://www.trustpilot.com/review/joinem.co",
+  eden: "https://www.trustpilot.com/review/tryeden.com",
+  directmeds: "https://www.trustpilot.com/review/directmeds.com",
+  medvi: "https://www.trustpilot.com/review/medvi.org",
+  trimrx: "https://www.trustpilot.com/review/trimrx.com",
+  ro: "https://www.trustpilot.com/review/ro.co",
+};
+
 export const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; reviews: TrustpilotReview[] }> = {
   bmimd: {
     // Verified from the operator's Trustpilot screenshots (claimed profile,

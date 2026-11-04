@@ -1,3 +1,4 @@
+import { TRUSTPILOT_PROFILE_URLS } from "@/data/trustpilot";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -863,6 +864,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                       reviews={subjectTrustpilot.trustpilotReviews!}
                       rating={subjectTrustpilot.trustpilotRating}
                       reviewCount={subjectTrustpilot.trustpilotReviewCount}
+                      profileUrl={TRUSTPILOT_PROFILE_URLS[subjectTrustpilot.id]}
                     />
                   </div>
                 )}

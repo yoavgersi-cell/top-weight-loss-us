@@ -245,12 +245,15 @@ export function TrustpilotCarousel({
   reviews,
   rating,
   reviewCount,
+  profileUrl,
 }: {
   providerName: string;
   providerLogo?: string;
   reviews: TrustpilotReview[];
   rating?: string;
   reviewCount?: string;
+  /** Public Trustpilot profile; rendered as a nofollow "read all" link. */
+  profileUrl?: string;
 }) {
   const total = reviews.length;
   // Reader-controlled order. Default is highest rated first (newest within a
@@ -258,10 +261,15 @@ export function TrustpilotCarousel({
   // the full captured set, including every 1-star, is always reachable. The
   // rule is printed under the control so nothing about the order is hidden.
   const [sort, setSort] = useState<ReviewSort>("highest");
+  // Clicking a histogram bar shows only reviews with that star rating.
+  const [starFilter, setStarFilter] = useState<number | null>(null);
   if (total === 0) return null;
   const numericRating = rating ? parseFloat(rating) : null;
-  const sorted = sortReviews(reviews, sort);
   const lowest = Math.min(...reviews.map((r) => r.rating));
+  const dist = [5, 4, 3, 2, 1].map((star) => ({ star, count: reviews.filter((r) => r.rating === star).length }));
+  const pct = (c: number) => Math.round((c / total) * 100);
+  const visible = starFilter === null ? reviews : reviews.filter((r) => r.rating === starFilter);
+  const sorted = sortReviews(visible, sort);
 
   return (
     <div className="rounded-2xl border border-gray-200 bg-gray-50/50 p-5 sm:p-6">
@@ -280,7 +288,11 @@ export function TrustpilotCarousel({
           <TrustpilotWordmark />
         </div>
         {rating && numericRating !== null && !isNaN(numericRating) ? (
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span className="text-[20px] font-extrabold leading-none text-[#191919] [font-variant-numeric:tabular-nums]">
+              {rating}
+              <span className="text-[13px] font-semibold text-gray-400"> / 5</span>
+            </span>
             <TrustpilotStars rating={numericRating} boxClass="h-[20px] w-[20px]" />
             {reviewCount && (
               <span className="text-[12px] text-gray-400">({reviewCount} reviews)</span>
@@ -291,9 +303,60 @@ export function TrustpilotCarousel({
         )}
       </div>
 
+      {/* Star histogram of the reviews we saved (not Trustpilot's full
+          distribution, which we do not hold). Each bar filters the list. */}
+      <div className="mb-4 rounded-xl border border-gray-200 bg-white p-3.5 sm:p-4">
+        <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+          <p className="text-[12.5px] font-semibold text-gray-700">
+            Star ratings in the {total} reviews we saved
+          </p>
+          {starFilter !== null && (
+            <button
+              type="button"
+              onClick={() => setStarFilter(null)}
+              className="rounded-full border border-gray-200 px-2.5 py-1 text-[12px] font-semibold text-[#0C4B75] hover:border-[#0C4B75]/40"
+            >
+              Clear filter
+            </button>
+          )}
+        </div>
+        <div className="space-y-0.5" role="group" aria-label="Filter reviews by star rating">
+          {dist.map((d) => {
+            const active = starFilter === d.star;
+            return (
+              <button
+                key={d.star}
+                type="button"
+                disabled={d.count === 0}
+                aria-pressed={active}
+                onClick={() => setStarFilter(active ? null : d.star)}
+                className={`flex min-h-[32px] w-full items-center gap-2.5 rounded-md px-1.5 text-left text-[12.5px] transition-colors disabled:cursor-default disabled:opacity-50 ${
+                  active ? "bg-[#0C4B75]/[0.06]" : "enabled:hover:bg-gray-50"
+                } ${starFilter !== null && !active ? "opacity-60" : ""}`}
+              >
+                <span className={`w-[48px] shrink-0 font-semibold ${active ? "text-[#0C4B75]" : "text-gray-700"}`}>
+                  {d.star} {d.star === 1 ? "star" : "stars"}
+                </span>
+                <span className="h-2.5 flex-1 overflow-hidden rounded-full bg-gray-100">
+                  <span
+                    className="block h-full rounded-full"
+                    style={{ width: `${pct(d.count)}%`, backgroundColor: tpStarColor(d.star) }}
+                  />
+                </span>
+                <span className="w-[70px] shrink-0 text-right text-gray-500 [font-variant-numeric:tabular-nums]">
+                  {pct(d.count)}% ({d.count})
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-        <p className="text-[12.5px] text-gray-500">
-          Showing all {total} reviews we saved, every {lowest}-star review included.
+        <p className="text-[12.5px] text-gray-500" aria-live="polite">
+          {starFilter === null
+            ? <>Showing all {total} reviews we saved, every {lowest}-star review included.</>
+            : <>Showing {visible.length} {starFilter}-star {visible.length === 1 ? "review" : "reviews"} of the {total} we saved.</>}
         </p>
         <div className="flex items-center gap-1.5" role="group" aria-label="Sort reviews">
           <span className="text-[11.5px] font-semibold uppercase tracking-wide text-gray-400">Sort</span>
@@ -315,7 +378,19 @@ export function TrustpilotCarousel({
         </div>
       </div>
 
-      <ReviewPager key={sort} cards={sorted.map((r, i) => ({ key: `${sort}-${i}`, node: <ReviewCard r={r} /> }))} />
+      <ReviewPager key={`${sort}-${starFilter ?? "all"}`} cards={sorted.map((r, i) => ({ key: `${sort}-${i}`, node: <ReviewCard r={r} /> }))} />
+      {profileUrl && (
+        <p className="mt-4 text-center">
+          <a
+            href={profileUrl}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#0C4B75] hover:underline"
+          >
+            Read all {reviewCount ? `${reviewCount} ` : ""}{providerName} reviews on Trustpilot
+          </a>
+        </p>
+      )}
       <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Each review is quoted word for word from a public Trustpilot page, with the reviewer&rsquo;s name shortened. It reflects one customer&rsquo;s experience: a weight-loss result someone mentions is personal, not typical, and your results may differ. Trustpilot is a trademark of Trustpilot A/S, which has no affiliation with Top Weight Loss.</p>
     </div>
   );
