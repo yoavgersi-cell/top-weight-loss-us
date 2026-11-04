@@ -1,4 +1,4 @@
-import { TRUSTPILOT_PROFILE_URLS } from "@/data/trustpilot";
+import { TRUSTPILOT_PROFILES } from "@/data/trustpilot";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, X, ArrowRight, ArrowUpRight, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle, ShieldCheck, UserRound, Users, Stethoscope, type LucideIcon } from "lucide-react";
@@ -292,7 +292,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "What do welludr reviews say?",
       answer:
-        "welludr averages 4.6 across 2,188 Trustpilot reviews, and the reviews we quote are dominated by its support team: reviewers name agents who answered quickly, paused or slowed refills, lowered a plan price or passed a problem to the operations manager. Shipping is the recurring complaint, with several reviewers describing late prescriptions or orders that sat at the pharmacy, and a smaller group says messages and calls went unanswered. Taken together, the reviews describe a real company with helpful staff and uneven shipping, so order refills early.",
+        "welludr averages 4.7 across 3,173 Trustpilot reviews, and the reviews we quote are dominated by its support team: reviewers name agents who answered quickly, paused or slowed refills, lowered a plan price or passed a problem to the operations manager. Shipping is the recurring complaint, with several reviewers describing late prescriptions or orders that sat at the pharmacy, and a smaller group says messages and calls went unanswered. Taken together, the reviews describe a real company with helpful staff and uneven shipping, so order refills early.",
     },
     {
       question: "What do Reddit users say about welludr?",
@@ -302,7 +302,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Is welludr the same as wellmedr?",
       answer:
-        "Yes. wellmedr changed its name to welludr in October 2026, and the company, its plans and this review are the same, which is why the page address still says wellmedr. Its compounded semaglutide starts at $41/month and tirzepatide at $71/month in the Pre-Black Friday sale from October 28, 2026, and it holds 4.6 across 2,188 Trustpilot reviews.",
+        "Yes. wellmedr changed its name to welludr in October 2026, and the company, its plans and this review are the same, which is why the page address still says wellmedr. Its compounded semaglutide starts at $41/month and tirzepatide at $71/month in the Pre-Black Friday sale from October 28, 2026, and it holds 4.7 across 3,173 Trustpilot reviews.",
     },
   ],
   medvi: [
@@ -914,6 +914,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               reviews={provider.trustpilotReviews!}
               rating={provider.trustpilotRating}
               reviewCount={provider.trustpilotReviewCount}
+              profile={TRUSTPILOT_PROFILES[provider.id]}
             />
             <TrustpilotCarousel
               providerName={provider.name}
@@ -921,7 +922,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               reviews={provider.trustpilotReviews!}
               rating={provider.trustpilotRating}
               reviewCount={provider.trustpilotReviewCount}
-              profileUrl={TRUSTPILOT_PROFILE_URLS[provider.id]}
+              profile={TRUSTPILOT_PROFILES[provider.id]}
             />
           </div>
         )}

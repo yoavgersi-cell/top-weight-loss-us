@@ -1,4 +1,4 @@
-import { TRUSTPILOT_PROFILE_URLS } from "@/data/trustpilot";
+import { TRUSTPILOT_PROFILES } from "@/data/trustpilot";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -45,7 +45,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "is-wellmedr-legit": {
     title: "Is welludr Legit or a Scam? Complaints & Prices (2026)",
     description:
-      "Is welludr a scam? It holds a verified 4.6 on Trustpilot from 2,188 reviews. We cover what complaints say, how the $41-$71 pricing really works, and our verdict.",
+      "Is welludr a scam? It holds a verified 4.7 on Trustpilot from 3,173 reviews. We cover what complaints say, how the $41-$71 pricing really works, and our verdict.",
   },
   "is-altrx-legit": {
     // Keeps the keyword-rich SERP snippet (prices, flat-dose) even though the
@@ -130,7 +130,7 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "glp1-after-65-medicare":
     "Since July 1, 2026, eligible Medicare beneficiaries can use the GLP-1 Bridge pilot to get the Wegovy pill and injection, the Zepbound KwikPen and Foundayo for a flat $50 monthly copay that stays the same as the dose rises, through December 31, 2027. Eligibility depends on clinical criteria plus an approval step through your Part D plan. Medicare never covers compounded GLP-1s. If you do not qualify, you can pay cash for brand-name drugs ($149-$349 a month for Foundayo, $1,149+ for injections) or for compounded versions ($41-$299).",
   "is-wellmedr-legit":
-    "Yes. welludr passes every check we can verify: a licensed provider reviews you before prescribing, medication comes from a regulated US pharmacy, it offers a weight loss warranty, and it holds a verified 4.6 on Trustpilot from 2,188 reviews (tied for the highest score among the providers we track). The caveats: the advertised $41 and $71 prices are Pre-Black Friday sale prices (from October 28, 2026) whose plan terms you should check at checkout, the complaints that do exist focus on shipping delays and slow support replies, and individual results vary no matter how good the service is.",
+    "Yes. welludr passes every check we can verify: a licensed provider reviews you before prescribing, medication comes from a regulated US pharmacy, it offers a weight loss warranty, and it holds a verified 4.7 on Trustpilot from 3,173 reviews (the highest score among the providers we track). The caveats: the advertised $41 and $71 prices are Pre-Black Friday sale prices (from October 28, 2026) whose plan terms you should check at checkout, the complaints that do exist focus on shipping delays and slow support replies, and individual results vary no matter how good the service is.",
   // Oct 9, 2026 oral GLP-1 pair. Ro figures are its verified published
   // prices; manufacturer figures are as reported by sources dated inside the
   // articles, so these two carry their own stamp (QUICK_ANSWER_STAMPS).
@@ -857,6 +857,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                       reviews={subjectTrustpilot.trustpilotReviews!}
                       rating={subjectTrustpilot.trustpilotRating}
                       reviewCount={subjectTrustpilot.trustpilotReviewCount}
+                      profile={TRUSTPILOT_PROFILES[subjectTrustpilot.id]}
                     />
                     <TrustpilotCarousel
                       providerName={subjectTrustpilot.name}
@@ -864,7 +865,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                       reviews={subjectTrustpilot.trustpilotReviews!}
                       rating={subjectTrustpilot.trustpilotRating}
                       reviewCount={subjectTrustpilot.trustpilotReviewCount}
-                      profileUrl={TRUSTPILOT_PROFILE_URLS[subjectTrustpilot.id]}
+                      profile={TRUSTPILOT_PROFILES[subjectTrustpilot.id]}
                     />
                   </div>
                 )}

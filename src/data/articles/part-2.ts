@@ -305,7 +305,7 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
       },
       {
         heading: "Which ro alternative is cheapest?",
-        body: `<a href="/reviews/wellmedr">welludr</a> has the lowest verified price we track: compounded semaglutide from <strong>$41/month</strong> and tirzepatide from <strong>$71/month</strong> in its Pre-Black Friday sale (from October 28, 2026). The plan includes a Medical Weight-Care Coach and a weight-loss warranty, and welludr is rated 4.6 on Trustpilot from 2,188 reviews. The catch: check the plan terms behind the sale prices at checkout. Compare directly: <a href="/compare/ro-vs-wellmedr">ro vs welludr</a>.`,
+        body: `<a href="/reviews/wellmedr">welludr</a> has the lowest verified price we track: compounded semaglutide from <strong>$41/month</strong> and tirzepatide from <strong>$71/month</strong> in its Pre-Black Friday sale (from October 28, 2026). The plan includes a Medical Weight-Care Coach and a weight-loss warranty, and welludr is rated 4.7 on Trustpilot from 3,173 reviews. The catch: check the plan terms behind the sale prices at checkout. Compare directly: <a href="/compare/ro-vs-wellmedr">ro vs welludr</a>.`,
       },
       {
         heading: "Which ro alternative has no commitment?",
@@ -313,7 +313,7 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
       },
       {
         heading: "Which ro alternative gives you the most support?",
-        body: `There are two strong choices.<ul><li><a href="/reviews/medvi">Medvi</a> puts provider video visits, ongoing monitoring, a dietician and care coaching into one all-inclusive price: <strong>$99/month</strong> for semaglutide (promo, reg. $199) or <strong>$166/month</strong> for tirzepatide (reg. $299). It is rated 4.3 on Trustpilot from 14,987 reviews. Compare: <a href="/compare/medvi-vs-ro">Medvi vs ro</a>.</li><li><a href="/reviews/shed">SHED</a> leans hardest on accountability: <strong>$199/month</strong> for semaglutide or $299 for tirzepatide (20% off the first month), health coaching on every plan, and the strongest promise we have seen: lose 5% of your body weight in 120 days or get your money back.</li></ul>`,
+        body: `There are two strong choices.<ul><li><a href="/reviews/medvi">Medvi</a> puts provider video visits, ongoing monitoring, a dietician and care coaching into one all-inclusive price: <strong>$99/month</strong> for semaglutide (promo, reg. $199) or <strong>$166/month</strong> for tirzepatide (reg. $299). It is rated 4.3 on Trustpilot from 15,202 reviews. Compare: <a href="/compare/medvi-vs-ro">Medvi vs ro</a>.</li><li><a href="/reviews/shed">SHED</a> leans hardest on accountability: <strong>$199/month</strong> for semaglutide or $299 for tirzepatide (20% off the first month), health coaching on every plan, and the strongest promise we have seen: lose 5% of your body weight in 120 days or get your money back.</li></ul>`,
       },
       {
         heading: "Is Noom a good alternative to ro?",
@@ -796,11 +796,11 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
       },
       {
         heading: "What is the cheapest alternative to Noom?",
-        body: `<p><a href="/reviews/wellmedr">welludr</a> has the lowest verified price we track: compounded semaglutide from <strong>$41/month</strong> and tirzepatide from <strong>$71/month</strong> in its Pre-Black Friday sale (from October 28, 2026); check the plan terms at checkout. A Medical Weight-Care Coach and a weight-loss warranty are included, and it is rated 4.6 on Trustpilot from 2,188 reviews.</p><p><a href="/reviews/embody">embody</a> is the cheapest option with no commitment: a flat <strong>$69/month</strong> for semaglutide or $119 for tirzepatide, cancel anytime, free 1-2 day shipping, LegitScript certification, and a full refund if a provider does not approve you.</p>`,
+        body: `<p><a href="/reviews/wellmedr">welludr</a> has the lowest verified price we track: compounded semaglutide from <strong>$41/month</strong> and tirzepatide from <strong>$71/month</strong> in its Pre-Black Friday sale (from October 28, 2026); check the plan terms at checkout. A Medical Weight-Care Coach and a weight-loss warranty are included, and it is rated 4.7 on Trustpilot from 3,173 reviews.</p><p><a href="/reviews/embody">embody</a> is the cheapest option with no commitment: a flat <strong>$69/month</strong> for semaglutide or $119 for tirzepatide, cancel anytime, free 1-2 day shipping, LegitScript certification, and a full refund if a provider does not approve you.</p>`,
       },
       {
         heading: "Which Noom alternative still includes coaching?",
-        body: `If you like Noom's coaching but not the lessons, two providers keep the human support without the app homework.<ul><li><a href="/reviews/medvi">Medvi</a> combines video visits, regular monitoring, a dietician and care coaching in one all-inclusive price: <strong>$99/month</strong> for semaglutide (promo, reg. $199) or $166 for tirzepatide (reg. $299). It is HSA/FSA approved and rated 4.3 on Trustpilot from 14,987 reviews.</li><li><a href="/reviews/shed">SHED</a> includes health coaching on every plan at <strong>$199/month</strong> for semaglutide or $299 for tirzepatide (20% off the first month), and makes the strongest promise we have seen: lose 5% of your body weight in 120 days or get your money back.</li></ul>`,
+        body: `If you like Noom's coaching but not the lessons, two providers keep the human support without the app homework.<ul><li><a href="/reviews/medvi">Medvi</a> combines video visits, regular monitoring, a dietician and care coaching in one all-inclusive price: <strong>$99/month</strong> for semaglutide (promo, reg. $199) or $166 for tirzepatide (reg. $299). It is HSA/FSA approved and rated 4.3 on Trustpilot from 15,202 reviews.</li><li><a href="/reviews/shed">SHED</a> includes health coaching on every plan at <strong>$199/month</strong> for semaglutide or $299 for tirzepatide (20% off the first month), and makes the strongest promise we have seen: lose 5% of your body weight in 120 days or get your money back.</li></ul>`,
       },
       {
         heading: "Is TrimRx a good Noom alternative?",

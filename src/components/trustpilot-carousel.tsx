@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { TrustpilotReview } from "@/lib/config";
 import { tpStarColor } from "@/components/trustpilot-rating";
+import type { TrustpilotProfile } from "@/data/trustpilot";
 
 const TP_GREEN = "#00B67A";
 
@@ -245,15 +246,16 @@ export function TrustpilotCarousel({
   reviews,
   rating,
   reviewCount,
-  profileUrl,
+  profile,
 }: {
   providerName: string;
   providerLogo?: string;
   reviews: TrustpilotReview[];
   rating?: string;
   reviewCount?: string;
-  /** Public Trustpilot profile; rendered as a nofollow "read all" link. */
-  profileUrl?: string;
+  /** Trustpilot profile facts: nofollow link, and when verified from a
+   *  screenshot, Trustpilot's own star breakdown across all reviews. */
+  profile?: TrustpilotProfile;
 }) {
   const total = reviews.length;
   // Reader-controlled order. Default is highest rated first (newest within a
@@ -268,6 +270,10 @@ export function TrustpilotCarousel({
   const lowest = Math.min(...reviews.map((r) => r.rating));
   const dist = [5, 4, 3, 2, 1].map((star) => ({ star, count: reviews.filter((r) => r.rating === star).length }));
   const pct = (c: number) => Math.round((c / total) * 100);
+  const profileUrl = profile?.url;
+  // Trustpilot's own breakdown across every review, when we hold it; the
+  // bars then show that, and each row still filters the reviews we quote.
+  const overall = profile?.breakdown;
   const visible = starFilter === null ? reviews : reviews.filter((r) => r.rating === starFilter);
   const sorted = sortReviews(visible, sort);
 
@@ -303,13 +309,26 @@ export function TrustpilotCarousel({
         )}
       </div>
 
-      {/* Star histogram of the reviews we saved (not Trustpilot's full
-          distribution, which we do not hold). Each bar filters the list. */}
+      {/* Star histogram. With a verified Trustpilot breakdown the bars show
+          Trustpilot's distribution across ALL reviews; otherwise they show the
+          reviews we saved. Either way each row filters the quoted reviews. */}
       <div className="mb-4 rounded-xl border border-gray-200 bg-white p-3.5 sm:p-4">
-        <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-          <p className="text-[12.5px] font-semibold text-gray-700">
-            Star ratings in the {total} reviews we saved
-          </p>
+        <div className="mb-2 flex flex-wrap items-start justify-between gap-2">
+          <div>
+            <p className="text-[12.5px] font-semibold text-gray-700">
+              {overall
+                ? <>Trustpilot star breakdown{reviewCount ? `, all ${reviewCount} reviews` : ""}</>
+                : <>Star ratings in the {total} reviews we saved</>}
+            </p>
+            {overall && (
+              <p className="mt-0.5 text-[11.5px] text-gray-400">
+                Checked {overall.checked}
+                {overall.last12Months ? ` · ${overall.last12Months} posted in the last 12 months` : ""}
+                {profile?.claimed ? ` · Claimed profile since ${profile.claimed}` : ""}
+                {profile?.paidSubscription ? " · Paid Trustpilot subscription" : ""}
+              </p>
+            )}
+          </div>
           {starFilter !== null && (
             <button
               type="button"
@@ -321,8 +340,11 @@ export function TrustpilotCarousel({
           )}
         </div>
         <div className="space-y-0.5" role="group" aria-label="Filter reviews by star rating">
-          {dist.map((d) => {
+          {dist.map((d, i) => {
             const active = starFilter === d.star;
+            const o = overall?.pct[i];
+            const barPct = o === undefined ? pct(d.count) : o === "<1" ? 0.5 : o;
+            const pctLabel = o === undefined ? `${pct(d.count)}%` : `${o}%`;
             return (
               <button
                 key={d.star}
@@ -330,7 +352,7 @@ export function TrustpilotCarousel({
                 disabled={d.count === 0}
                 aria-pressed={active}
                 onClick={() => setStarFilter(active ? null : d.star)}
-                className={`flex min-h-[32px] w-full items-center gap-2.5 rounded-md px-1.5 text-left text-[12.5px] transition-colors disabled:cursor-default disabled:opacity-50 ${
+                className={`flex min-h-[32px] w-full items-center gap-2.5 rounded-md px-1.5 text-left text-[12.5px] transition-colors disabled:cursor-default ${
                   active ? "bg-[#0C4B75]/[0.06]" : "enabled:hover:bg-gray-50"
                 } ${starFilter !== null && !active ? "opacity-60" : ""}`}
               >
@@ -340,16 +362,28 @@ export function TrustpilotCarousel({
                 <span className="h-2.5 flex-1 overflow-hidden rounded-full bg-gray-100">
                   <span
                     className="block h-full rounded-full"
-                    style={{ width: `${pct(d.count)}%`, backgroundColor: tpStarColor(d.star) }}
+                    style={{ width: `${barPct}%`, backgroundColor: tpStarColor(d.star) }}
                   />
                 </span>
-                <span className="w-[70px] shrink-0 text-right text-gray-500 [font-variant-numeric:tabular-nums]">
-                  {pct(d.count)}% ({d.count})
-                </span>
+                {overall ? (
+                  <span className="flex w-[104px] shrink-0 items-center justify-end gap-2 [font-variant-numeric:tabular-nums]">
+                    <span className="font-semibold text-gray-700">{pctLabel}</span>
+                    <span className={`text-[11.5px] ${d.count ? "text-[#0C4B75]" : "text-gray-300"}`}>{d.count} quoted</span>
+                  </span>
+                ) : (
+                  <span className={`w-[70px] shrink-0 text-right text-gray-500 [font-variant-numeric:tabular-nums] ${d.count === 0 ? "opacity-50" : ""}`}>
+                    {pct(d.count)}% ({d.count})
+                  </span>
+                )}
               </button>
             );
           })}
         </div>
+        <p className="mt-2 text-[11.5px] text-gray-400">
+          {overall
+            ? <>Select a star level to read the reviews we quote with that rating ({total} saved word for word).</>
+            : <>Select a star level to show only those reviews.</>}
+        </p>
       </div>
 
       <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">

@@ -220,7 +220,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     themes:
       "These Medvi threads are full-year accounts rather than first impressions: steady results (just under 15% of body weight in one case, 40 pounds in another), a dose adjustment when progress stalled, and support that responded. The drawback the posters name themselves is the ongoing monthly cost.",
     intro:
-      "What do Medvi patients say on Reddit after a full year? Alongside Medvi's 14,987 Trustpilot reviews, its most-upvoted recent Reddit threads are year-long write-ups, not first-week reactions. Excerpts from the actual posts:",
+      "What do Medvi patients say on Reddit after a full year? Alongside Medvi's 15,202 Trustpilot reviews, its most-upvoted recent Reddit threads are year-long write-ups, not first-week reactions. Excerpts from the actual posts:",
     threads: [
       {
         subreddit: "r/telehealth",

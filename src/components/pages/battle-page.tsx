@@ -1,4 +1,4 @@
-import { TRUSTPILOT_PROFILE_URLS } from "@/data/trustpilot";
+import { TRUSTPILOT_PROFILES } from "@/data/trustpilot";
 import { pageReviewSchema, reviewedPageNode } from "@/data/reviewers";
 import { fixBrandCase } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -157,7 +157,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "sprout-vs-wellmedr": {
     title: "Sprout vs welludr (2026): $149 vs $41 GLP-1 Price Gap",
     description:
-      "welludr charges from $41/mo, holds 4.6 on Trustpilot, reports 1M+ patients and offers a warranty. Sprout costs $149/mo with 2-day fulfillment and brand-name Wegovy.",
+      "welludr charges from $41/mo, holds 4.7 on Trustpilot, reports 1M+ patients and offers a warranty. Sprout costs $149/mo with 2-day fulfillment and brand-name Wegovy.",
   },
   "embody-vs-wellmedr": {
     title: "embody vs welludr (2026): $69 vs $41 Semaglutide Compared",
@@ -230,7 +230,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // Oct 15, 2026: welludr leads (named winner, shown first on the page).
     title: "welludr vs TrimRx (2026): $41 vs $149 Semaglutide Compared",
     description:
-      "welludr: from $41/mo semaglutide, a weight loss warranty and 4.6 on Trustpilot. TrimRx: $149/mo flat, custom dosing and no contract. Price, flexibility, support.",
+      "welludr: from $41/mo semaglutide, a weight loss warranty and 4.7 on Trustpilot. TrimRx: $149/mo flat, custom dosing and no contract. Price, flexibility, support.",
   },
   "trimrx-vs-ro": {
     title: "TrimRx vs ro (2026): Which GLP-1 Provider Suits You?",
@@ -1198,7 +1198,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                             reviews={provider.trustpilotReviews!}
                             rating={provider.trustpilotRating}
                             reviewCount={provider.trustpilotReviewCount}
-                            profileUrl={TRUSTPILOT_PROFILE_URLS[provider.id]}
+                            profile={TRUSTPILOT_PROFILES[provider.id]}
                           />
                         </div>
                       )}

@@ -28,7 +28,7 @@ export const LEGIT_PAGES: Record<string, LegitPageData> = {
       { ok: true, text: "Every medical intake goes to a licensed provider before anything is prescribed, so approval is never automatic" },
       { ok: true, text: "A valid prescription is mandatory: welludr offers no way to buy medication without one" },
       { ok: true, text: "Medication comes from a regulated US pharmacy (separate Reddit users identify it as a Florida pharmacy)" },
-      { ok: true, text: "Rated 4.6 on Trustpilot from 2,188 reviews, checked again on October 5, 2026" },
+      { ok: true, text: "Rated 4.7 on Trustpilot from 3,173 reviews, checked again on November 4, 2026" },
       { ok: true, text: "Offers a weight loss warranty, and the conditions are posted on welludr's website" },
       { ok: false, text: "The $41 and $71 prices are part of a Pre-Black Friday sale (from October 28, 2026), so check the plan terms at checkout, and standard shipping takes 3-5 business days" },
     ],

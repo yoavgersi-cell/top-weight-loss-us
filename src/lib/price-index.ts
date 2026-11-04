@@ -32,7 +32,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "from $71", note: "Pre-Black Friday sale, from Oct 28, 2026" },
     shipping: "Ships in 3-5 business days",
     commitment: "12-month plan for the lowest rate; cancel or change anytime",
-    trustpilot: { rating: "4.6", count: "2,188" },
+    trustpilot: { rating: "4.7", count: "3,173" },
   },
   {
     providerId: "embody",
@@ -41,7 +41,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$119", note: "reg. $129; month-to-month" },
     shipping: "Ships in 1-2 days, cold-chain",
     commitment: "None - month to month, cancel anytime",
-    trustpilot: { rating: "3.8", count: "9,604" },
+    trustpilot: { rating: "3.9", count: "11,494" },
   },
   {
     providerId: "altrx",
@@ -59,7 +59,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$166", note: "promo; reg. $299" },
     shipping: "Free shipping",
     commitment: "None - no membership or hidden fees; HSA/FSA",
-    trustpilot: { rating: "4.3", count: "14,987" },
+    trustpilot: { rating: "4.3", count: "15,202" },
   },
   {
     providerId: "healthrx",
@@ -95,7 +95,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$259", note: "per month" },
     shipping: "Free tracked delivery, often next-day",
     commitment: "None - month to month",
-    trustpilot: { rating: "3.8", count: "5,392" },
+    trustpilot: { rating: "3.4", count: "4,894" },
   },
   {
     providerId: "shed",

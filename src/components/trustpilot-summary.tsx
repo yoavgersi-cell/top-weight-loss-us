@@ -1,4 +1,5 @@
 import type { TrustpilotReview } from "@/lib/config";
+import type { TrustpilotProfile } from "@/data/trustpilot";
 
 // ───── Trustpilot summary (citeable text) ─────
 // A plain-prose, fully computed summary of the reviews we captured for a
@@ -20,12 +21,14 @@ export function TrustpilotSummary({
   reviews,
   rating,
   reviewCount,
+  profile,
   className = "",
 }: {
   providerName: string;
   reviews: TrustpilotReview[];
   rating?: string;
   reviewCount?: string;
+  profile?: TrustpilotProfile;
   className?: string;
 }) {
   const n = reviews.length;
@@ -53,6 +56,12 @@ export function TrustpilotSummary({
             {providerName} is rated <strong>{rating} out of 5</strong> on its public Trustpilot page.{" "}
           </>
         ) : null}
+        {profile?.breakdown && (
+          <>
+            Across all of them, <strong>{profile.breakdown.pct[0]}% are 5-star and {profile.breakdown.pct[4]}% are 1-star</strong>{" "}
+            (Trustpilot, checked {profile.breakdown.checked}).{" "}
+          </>
+        )}
         We saved <strong>{n} of those reviews word for word</strong>
         {range && (
           <>
