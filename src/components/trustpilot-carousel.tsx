@@ -283,20 +283,24 @@ export function TrustpilotCarousel({
   const sorted = sortReviews(visible, sort);
 
   return (
-    <div className="rounded-2xl border border-gray-200 bg-gray-50/50 p-5 sm:p-6">
+    <div className="rounded-2xl border border-gray-200 bg-gray-50/50 p-4 sm:p-6">
       {/* Header */}
       <div className="mb-5 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <div className="flex items-center gap-x-3">
+          {/* Logo only from sm up: on phones the page is already about this
+              provider, and the logo pushed the header to four rows. */}
           {providerLogo && (
-            <div className="flex h-[28px] w-[90px] items-center">
+            <div className="hidden h-[28px] w-[90px] items-center sm:flex">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={providerLogo} alt={`${providerName} logo`} className="max-h-full max-w-full object-contain" />
             </div>
           )}
-          <Heading className="text-[16px] font-bold text-[#191919]">
-            {providerName} <span className="font-medium text-gray-400">customer reviews on</span>
+          <Heading className="flex flex-wrap items-center gap-x-1.5 text-[15px] font-bold text-[#191919] sm:text-[16px]">
+            <span>
+              {providerName} <span className="font-medium text-gray-400">reviews on</span>
+            </span>
+            <TrustpilotWordmark starClass="h-[18px] w-[18px]" textClass="text-[16px]" />
           </Heading>
-          <TrustpilotWordmark />
         </div>
         {rating && numericRating !== null && !isNaN(numericRating) ? (
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
@@ -317,7 +321,7 @@ export function TrustpilotCarousel({
       {/* Star histogram. With a verified Trustpilot breakdown the bars show
           Trustpilot's distribution across ALL reviews; otherwise they show the
           reviews we saved. Either way each row filters the quoted reviews. */}
-      <div className="mb-4 rounded-xl border border-gray-200 bg-white p-3.5 sm:p-4">
+      <div className="mb-4 rounded-xl border border-gray-200 bg-white p-3 sm:p-4">
         <div className="mb-2 flex flex-wrap items-start justify-between gap-2">
           <div>
             <p className="text-[12.5px] font-semibold text-gray-700">
@@ -328,9 +332,9 @@ export function TrustpilotCarousel({
             {overall && (
               <p className="mt-0.5 text-[11.5px] text-gray-400">
                 Checked {overall.checked}
-                {overall.last12Months ? ` · ${overall.last12Months} posted in the last 12 months` : ""}
-                {profile?.claimed ? ` · Claimed profile since ${profile.claimed}` : ""}
-                {profile?.paidSubscription ? " · Paid Trustpilot subscription" : ""}
+                {overall.last12Months ? ` · ${overall.last12Months} in the past year` : ""}
+                {profile?.claimed ? ` · Claimed ${profile.claimed}` : ""}
+                {profile?.paidSubscription ? " · Paid Trustpilot plan" : ""}
               </p>
             )}
           </div>
