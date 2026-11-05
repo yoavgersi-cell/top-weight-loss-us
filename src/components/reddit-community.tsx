@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowBigUp, MessageSquare } from "lucide-react";
+import { ExpandableQuote } from "@/components/expandable-quote";
 
 // ───── Verified Reddit community feedback ─────
 // Single source of truth for real Reddit material, shared by the review pages
@@ -426,6 +427,10 @@ export function RedditMark({ className }: { className?: string }) {
 // keep to the first two excerpt paragraphs - the full threads live on each
 // provider's review page, which the section links to.
 
+function quoteLength(t: RedditThread): number {
+  return t.body.slice(0, 2).join(" ").length + (t.replies?.[0]?.body.length ?? 0);
+}
+
 function ThreadCard({
   thread,
   providerName,
@@ -467,20 +472,24 @@ function ThreadCard({
         <p className="mb-1.5 text-[14px] font-bold leading-snug text-[#191919]">{thread.title}</p>
       )}
 
-      <div className="space-y-2">
-        {thread.body.slice(0, 2).map((p, i) => (
-          <p key={i} className="text-[13px] leading-relaxed text-gray-800">
-            {p}
-          </p>
-        ))}
-      </div>
-
-      {thread.replies && thread.replies.length > 0 && (
-        <div className="mt-3 border-l-2 border-gray-200 pl-3">
-          <p className="text-[11.5px] font-semibold text-gray-500">u/{thread.replies[0].author}</p>
-          <p className="mt-0.5 text-[12.5px] leading-relaxed text-gray-700">{thread.replies[0].body}</p>
+      {/* Long posts collapse to ~7 lines with "Read more" so one long thread
+          doesn't stretch every card in the row (full text stays in the HTML). */}
+      <ExpandableQuote collapsible={quoteLength(thread) > 320}>
+        <div className="space-y-2">
+          {thread.body.slice(0, 2).map((p, i) => (
+            <p key={i} className="text-[13px] leading-relaxed text-gray-800">
+              {p}
+            </p>
+          ))}
         </div>
-      )}
+
+        {thread.replies && thread.replies.length > 0 && (
+          <div className="mt-3 border-l-2 border-gray-200 pl-3">
+            <p className="text-[11.5px] font-semibold text-gray-500">u/{thread.replies[0].author}</p>
+            <p className="mt-0.5 text-[12.5px] leading-relaxed text-gray-700">{thread.replies[0].body}</p>
+          </div>
+        )}
+      </ExpandableQuote>
 
       {/* Footer - counts only when the screenshot captured them */}
       <div className="mt-auto flex items-center gap-4 pt-3 text-[12px] font-semibold text-gray-500">
@@ -555,7 +564,7 @@ export function RedditThreadCarousel({
         </p>
       )}
 
-      <div className="-mx-1 flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-2 [scrollbar-width:thin]">
+      <div className="-mx-1 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto px-1 pb-2 [scrollbar-width:thin]">
         {cards.map(({ provider, thread }, i) => (
           <ThreadCard
             key={i}
