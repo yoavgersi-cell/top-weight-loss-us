@@ -264,10 +264,18 @@ const LAUNCH_REVIEWED_PATHS = [
     .map((a) => `/articles/${a.slug}`),
 ].filter((p) => !REVIEW_PENDING_PATHS.has(p));
 
-export const REVIEW_LOG: Record<string, PageReview> = Object.fromEntries([
-  ...LAUNCH_REVIEWED_PATHS.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: LAUNCH_REVIEW_DATE }]),
-  ...OCT31_REVIEWED_PATHS.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: OCT31_REVIEW_DATE }]),
-]);
+// An article materially updated after its review date drops out of the log
+// (no byline, no reviewedBy) until the reviewer signs off the new version.
+const ARTICLE_UPDATED_AT = new Map(launchArticles.map((a) => [`/articles/${a.slug}`, a.updatedAt]));
+const stillCurrent = ([path, review]: [string, PageReview]) =>
+  !(ARTICLE_UPDATED_AT.get(path) ?? "") || (ARTICLE_UPDATED_AT.get(path) ?? "") <= review.reviewedAt;
+
+export const REVIEW_LOG: Record<string, PageReview> = Object.fromEntries(
+  ([
+    ...LAUNCH_REVIEWED_PATHS.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: LAUNCH_REVIEW_DATE }]),
+    ...OCT31_REVIEWED_PATHS.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: OCT31_REVIEW_DATE }]),
+  ] as [string, PageReview][]).filter(stillCurrent),
+);
 
 export function getReviewer(slug: string = SITE_REVIEWER_SLUG): Reviewer | undefined {
   return REVIEWERS.find((r) => r.slug === slug);

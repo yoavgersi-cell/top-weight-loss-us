@@ -127,18 +127,19 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
     description:
       "Semaglutide often curbs appetite within 1-2 weeks, while weight loss builds as the dose rises. A week-by-week timeline of what to expect, with trial data.",
     category: "Guide",
-    readTime: "11 min read",
+    readTime: "14 min read",
     publishedAt: "2026-07-15",
-    updatedAt: "2026-10-29",
+    updatedAt: "2026-11-05",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     keyTakeaways: [
       "On the starting dose, appetite and cravings usually ease within the first 1-2 weeks, while weight loss in month one is usually modest because the starting dose is low.",
       "Months 2-3, when the dose steps up, tend to bring the largest monthly drops; in the STEP 4 trial, people averaged 10.6% weight loss by the end of the 20-week dose-escalation period.",
-      "In trials, average loss was 15% of body weight at 68 weeks, and most people hit their peak somewhere between months 9 and 15 before moving to maintenance.",
+      "In the STEP 1 trial, average loss on semaglutide 2.4 mg was 14.9% of body weight at 68 weeks (about 16 months), versus 2.4% on placebo; for a 220-pound person that is about 33 pounds.",
+      "Tirzepatide (Zepbound) follows a similar slow start: 2.5 mg for 4 weeks, then 2.5 mg steps at least 4 weeks apart. In SURMOUNT-1, average loss at 72 weeks was 15.0% on 5 mg and 20.9% on 15 mg.",
       "Slow progress at month 3 usually means the dose is not yet optimal or eating habits are working against the drug, so talk to your provider before concluding it failed.",
       "Wegovy's label steps the dose up every 4 weeks, from 0.25 mg to the 2.4 mg maintenance dose at week 17, so month one is spent on roughly one-tenth of the full dose.",
-      "In the STEP 4 trial, people lost 10.6% of body weight on average during the first 20 weeks of semaglutide; in STEP 1, 86.4% had lost at least 5% by week 68.",
+      "In STEP 1, 86.4% of people on semaglutide had lost at least 5% by week 68 and about half had lost 15% or more, so results vary widely around the average.",
     ],
     sections: [
       {
@@ -183,7 +184,7 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
       },
       {
         heading: "When does semaglutide reach full results?",
-        body: `<a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">In clinical trials, results peaked at 68 weeks</a> (roughly 16 months), with participants losing 15% of body weight on average. In practice, most patients reach their best results between months 9 and 15. Once you hit your goal, work out a maintenance plan with your provider. Some people move to a lower dose instead of stopping completely. See <a href="/articles/stopping-glp1-medication-what-happens">what happens when you stop</a>.`,
+        body: `In the <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">STEP 1 trial</a>, results were measured at 68 weeks (roughly 16 months), when participants had lost 14.9% of body weight on average. Weight loss slows as people approach a plateau, and individual timing varies, so there is no single month when everyone reaches full results. Once you hit your goal, work out a maintenance plan with your provider. Some people move to a lower dose instead of stopping completely. See <a href="/articles/stopping-glp1-medication-what-happens">what happens when you stop</a>.`,
       },
       {
         heading: "How much weight do people lose on semaglutide at 3, 6 and 12 months?",
@@ -200,10 +201,37 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
 <p>For a 220-pound person, 10.6% is about 23 pounds and 14.9% is about 33 pounds. Real-world results can be lower when people stay on a lower dose, miss doses or stop early. For context, tirzepatide 15 mg produced 20.9% average loss at 72 weeks in <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038" target="_blank" rel="noopener">SURMOUNT-1</a>; see <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide</a>.</p>`,
       },
       {
+        heading: "How much weight could you lose on semaglutide or tirzepatide by starting weight?",
+        body: `<p>On average, people in the main trials lost about 15% of their body weight on semaglutide 2.4 mg after 68 weeks and 15% to 21% on tirzepatide after 72 weeks, depending on the dose. The table turns those trial averages into pounds for common starting weights. These are averages, not predictions: in STEP 1 about half of the people on semaglutide lost more than 15% and roughly 1 in 7 lost less than 5%.</p>
+<table><thead><tr><th>Starting weight</th><th>Semaglutide 2.4 mg, 68 weeks (14.9%)</th><th>Tirzepatide 5 mg, 72 weeks (15.0%)</th><th>Tirzepatide 15 mg, 72 weeks (20.9%)</th></tr></thead><tbody>
+<tr><td>180 lb</td><td>about 27 lb</td><td>about 27 lb</td><td>about 38 lb</td></tr>
+<tr><td>200 lb</td><td>about 30 lb</td><td>about 30 lb</td><td>about 42 lb</td></tr>
+<tr><td>220 lb</td><td>about 33 lb</td><td>about 33 lb</td><td>about 46 lb</td></tr>
+<tr><td>250 lb</td><td>about 37 lb</td><td>about 38 lb</td><td>about 52 lb</td></tr>
+<tr><td>300 lb</td><td>about 45 lb</td><td>about 45 lb</td><td>about 63 lb</td></tr>
+</tbody></table>
+<p>Sources: semaglutide figures from <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183" target="_blank" rel="noopener">STEP 1</a> (14.9% vs 2.4% on placebo, treatment-policy estimand); tirzepatide figures from <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038" target="_blank" rel="noopener">SURMOUNT-1</a> (15.0% on 5 mg, 19.5% on 10 mg and 20.9% on 15 mg vs 3.1% on placebo, treatment-regimen estimand). Both trials enrolled adults with obesity or overweight without diabetes and added lifestyle counseling. They are separate trials with different lengths, so read the columns side by side, not as a head-to-head result.</p>
+<p>Three things move your own number: the dose you reach and stay on, whether you take every weekly dose, and your eating and activity habits. People with type 2 diabetes usually lose less: in <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00213-0/abstract" target="_blank" rel="noopener">STEP 2</a>, adults with type 2 diabetes on semaglutide 2.4 mg lost 9.6% at 68 weeks, versus 3.4% on placebo. If you stop, weight tends to return: in the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9542252/" target="_blank" rel="noopener">STEP 1 extension</a>, people regained about two-thirds of their loss within a year of stopping semaglutide.</p>`,
+      },
+      {
+        heading: "How long does tirzepatide take to work compared with semaglutide?",
+        body: `<p>Tirzepatide (Zepbound, Mounjaro) works on a similar timeline to semaglutide: appetite often changes in the first weeks on the 2.5 mg starting dose, and most weight loss comes after the dose has been raised. The <a href="https://uspl.lilly.com/zepbound/zepbound.html" target="_blank" rel="noopener">Zepbound label</a> starts at 2.5 mg once a week for 4 weeks, which is for starting treatment only and is not a maintenance dose, then raises the dose in 2.5 mg steps after at least 4 weeks on each one.</p>
+<table><thead><tr><th>Weeks (earliest)</th><th>Weekly Zepbound dose</th><th>What it is for</th></tr></thead><tbody>
+<tr><td>1-4</td><td>2.5 mg</td><td>Starting dose, not a maintenance dose</td></tr>
+<tr><td>5-8</td><td>5 mg</td><td>Lowest maintenance dose</td></tr>
+<tr><td>9-12</td><td>7.5 mg</td><td>Escalation, if needed</td></tr>
+<tr><td>13-16</td><td>10 mg</td><td>Maintenance dose option</td></tr>
+<tr><td>17-20</td><td>12.5 mg</td><td>Escalation, if needed</td></tr>
+<tr><td>21 onward</td><td>15 mg</td><td>Highest maintenance dose</td></tr>
+</tbody></table>
+<p>Your prescriber chooses the maintenance dose (5, 10 or 15 mg) by response and tolerability, so many people never go all the way up. For a mid-course checkpoint, the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12559773/" target="_blank" rel="noopener">SURMOUNT-4 trial</a> gave everyone tirzepatide for a 36-week lead-in (about 8 months) on their maximum tolerated dose of 10 or 15 mg, and they had lost 20.9% of body weight on average by week 36. People who kept taking it then lost a further 5.5% by week 88, while those switched to placebo regained 14.0%.</p>
+<p>Side effects follow the dose steps too. In the <a href="https://investor.lilly.com/node/47141" target="_blank" rel="noopener">SURMOUNT-1 results</a>, nausea was reported by 24.6% on 5 mg, 33.3% on 10 mg and 31.0% on 15 mg, versus 9.5% on placebo. For how the two drugs compare overall, see <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide</a>.</p>`,
+      },
+      {
         heading: "How long does compounded semaglutide take to work?",
         body: `<p>Compounded semaglutide should follow a similar timeline to Wegovy if it contains the right ingredient at the prescribed dose and you follow the same monthly step-up: appetite changes in the first couple of weeks and most weight loss after the dose has been raised. There are no clinical trials of compounded semaglutide itself, so the trial numbers above describe the FDA-approved drug.</p>
 <p>Compounded semaglutide is not FDA-approved, and the FDA does not review it for safety, effectiveness or quality. Two practical issues can change how it works for you:</p>
-<ul><li><strong>Dosing mistakes.</strong> The FDA has reported people taking 5 to 20 times the intended dose after confusing milligrams, milliliters and syringe "units," per its <a href="https://www.fda.gov/drugs/human-drug-compounding/fda-alerts-health-care-providers-compounders-and-patients-dosing-errors-associated-compounded" target="_blank" rel="noopener">dosing error alert</a>. Too much can cause severe vomiting and dehydration; too little can look like "it isn't working."</li><li><strong>Ingredient form.</strong> The FDA has warned that salt forms such as semaglutide sodium or acetate are <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">different active ingredients</a> from the one in approved products. Ask your provider which pharmacy makes your medication.</li></ul>
+<ul><li><strong>Dosing mistakes.</strong> The FDA has reported overdoses after people confused milligrams, milliliters and syringe "units": in its examples, one patient injected 50 units instead of 5 (ten times the dose) and another received five times the intended dose, per its <a href="https://www.fda.gov/drugs/human-drug-compounding/fda-alerts-health-care-providers-compounders-and-patients-dosing-errors-associated-compounded" target="_blank" rel="noopener">dosing error alert</a>. Too much can cause severe vomiting and dehydration; too little can look like "it isn't working."</li><li><strong>Ingredient form.</strong> The FDA has warned that salt forms such as semaglutide sodium or acetate are <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">different active ingredients</a> from the one in approved products. Ask your provider which pharmacy makes your medication.</li></ul>
 <p>Our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> covers the differences in more detail.</p>`,
       },
       {
