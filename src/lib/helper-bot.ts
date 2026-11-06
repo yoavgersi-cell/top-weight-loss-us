@@ -1,4 +1,4 @@
-// ───── Remy, the guided match helper ─────
+// ───── Lily, the guided match helper ─────
 // A button-driven helper (no free text, no AI): a few questions, then a
 // matched partner with verified facts. Shared by the server mount (which
 // builds partner cards from verified site data) and the client panel.
@@ -6,7 +6,7 @@
 // weight loss exists today.
 
 /** The helper's display name. Change it here and it changes everywhere. */
-export const HELPER_NAME = "Remy";
+export const HELPER_NAME = "Lily";
 
 export type Experience = "first" | "returning" | "switching";
 export type Med = "sema" | "tirz" | "unsure";
