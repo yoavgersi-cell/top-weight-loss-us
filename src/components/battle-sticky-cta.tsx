@@ -33,6 +33,11 @@ export function BattleStickyCta({
   recommendedId?: string;
 }) {
   const [show, setShow] = useState(false);
+  // Tell the floating helper bubble the bar is up, so it moves above it.
+  useEffect(() => {
+    document.documentElement.toggleAttribute("data-sticky-cta", show);
+    return () => document.documentElement.removeAttribute("data-sticky-cta");
+  }, [show]);
 
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > 600);
