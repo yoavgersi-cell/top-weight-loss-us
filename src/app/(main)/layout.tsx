@@ -1,6 +1,7 @@
 import { DisclosureBar } from "@/components/disclosure-bar";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { HelperBotMount } from "@/components/helper-bot/helper-bot-mount";
 
 // US-region chrome. Wraps every route in the (main) group (the whole existing
 // site - URLs are unchanged by the route group). The UK region has its own
@@ -12,6 +13,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
+      <HelperBotMount />
     </>
   );
 }
