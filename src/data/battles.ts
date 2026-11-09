@@ -716,10 +716,10 @@ const medviwellmedrBattle: BattleData = {
 
 const embodyRoBattle: BattleData = {
   slug: "embody-vs-ro",
-  updatedAt: "2026-10-05",
+  updatedAt: "2026-11-09",
   provider1Id: "embody",
   provider2Id: "ro",
-  title: "embody vs ro: GLP-1 Cost and Shipping Compared (2026)",
+  title: "embody vs ro Weight Loss (2026): Cost, Meds and Insurance Compared",
   matchupLabel: "embody vs ro",
   subtitle: "embody and ro compared on yearly cost, delivery speed, certifications, pharmacy setup and clinical care.",
   description: "embody vs ro: embody costs a flat $69/mo for semaglutide ($828 a year) with free 1-2 day shipping; ro offers brand-name Wegovy and Zepbound with insurance.",
@@ -802,6 +802,26 @@ const embodyRoBattle: BattleData = {
     { feature: "Ways to Pay", provider1Value: "Cash-pay, no insurance needed", provider2Value: "Monthly plans, FSA/HSA eligible", highlight: "provider2" },
   ],
   faqs: [
+    {
+      question: "Is embody weight loss legit and safe?",
+      answer:
+        "Yes, by our checks embody is a legitimate telehealth provider: licensed clinicians prescribe, US-based 503A compounding pharmacies fill orders, it is LegitScript-certified, and it gives a full refund if you are not approved. Its compounded semaglutide and tirzepatide are not FDA-approved, so the FDA has not reviewed them for safety, effectiveness or quality; weigh that with the prescribing clinician. embody holds 3.9 stars from 11,494 Trustpilot reviews (checked November 4, 2026).",
+    },
+    {
+      question: "What is the cheapest online weight loss injection provider in the US?",
+      answer:
+        "In our October 2026 price check, the lowest compounded semaglutide price was welludr's Pre-Black Friday sale price from $41 a month (check the plan terms at checkout), and embody had the lowest month-to-month price with no contract at $69. For FDA-approved brand-name injections, the lowest self-pay prices are the Wegovy pen's $199 for the first two fills (then $349 a month) and Zepbound's $299 at the 2.5 mg starting dose.",
+    },
+    {
+      question: "Does ro cover the cost of Wegovy if insurance denies it?",
+      answer:
+        "No. ro does not pay for your medication. If your insurer denies coverage, you can pay ro's cash price for the Wegovy pen ($199 for each of the first two fills, then $349 a month) or the Wegovy pill ($149 to $299 by dose), plus the ro membership, or ask your insurer about an appeal. ro's insurance concierge helps with coverage checks and prior authorization, but the membership is never covered by insurance.",
+    },
+    {
+      question: "Can you switch from brand Wegovy to compounded semaglutide online?",
+      answer:
+        "Yes, a licensed clinician at an online provider such as embody can prescribe compounded semaglutide if they judge it appropriate, but compounded semaglutide is not FDA-approved and is not the same product as Wegovy. Compounded doses are written in milligrams and drawn in syringe units, so tell the new clinician your current Wegovy dose and confirm the units with them before your first injection; the FDA has reported overdoses from unit mix-ups.",
+    },
     {
       question: "Is ro or embody better?",
       answer:
