@@ -292,6 +292,9 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // CTAs the comparison page uses, high on the page. Gated to specific slugs so
   // it never leaks onto informational articles.
   const TOP_PROVIDERS_CRO_SLUGS = new Set(["best-tirzepatide-online"]);
+  // Slugs with a configured top-3 block (TOP3_BLOCKS below) skip the generic
+  // top-two picks so the page never shows two provider blocks.
+  const TOP3_SLUGS = new Set(["tirzepatide-cost-2026"]);
   const showTopProvidersCro = TOP_PROVIDERS_CRO_SLUGS.has(slug);
 
   // The tirzepatide buyer guide is tuned as a topic page (Oct 2026 CRO pass):
@@ -336,6 +339,29 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     return `Tirzepatide ${cell.price}/mo${reg ? ` (reg. ${reg[1]})` : ""}`;
   };
   const TIRZ_TOP_IDS = ["embody", "altrx", "wellmedr"];
+
+  // Top-3 partner block on long-form buyer guides, configured per slug:
+  // the ranked comparison cards with the medication's verified price printed
+  // on each card, placed after a given section. Eden is not in the compounded
+  // price index; its flat price is verified in src/data/reviews.ts.
+  const EXTRA_TIRZ_NOTES: Record<string, string> = { eden: "Tirzepatide $129/mo, same price at every dose" };
+  const TOP3_BLOCKS: Record<string, { afterSection: number; providerIds: string[]; title: string; subtitle: string }> = {
+    "tirzepatide-cost-2026": {
+      afterSection: 1,
+      providerIds: ["embody", "eden", "wellmedr"],
+      title: "Top 3 providers for lower-cost tirzepatide",
+      subtitle:
+        "Our partners with a tirzepatide price we have checked, shown with the same cards as our full ranking. Compounded tirzepatide is not FDA-approved; each card's tirzepatide price is printed under the starting price.",
+    },
+  };
+  const top3Block = TOP3_BLOCKS[slug];
+  const top3PriceNotes = top3Block
+    ? Object.fromEntries(
+        top3Block.providerIds
+          .map((id) => [id, tirzNote(id) ?? EXTRA_TIRZ_NOTES[id]])
+          .filter((e): e is [string, string] => typeof e[1] === "string"),
+      )
+    : {};
   const tirzPriceNotes = Object.fromEntries(
     TIRZ_TOP_IDS.map((id) => [id, tirzNote(id)]).filter((e): e is [string, string] => typeof e[1] === "string"),
   );
@@ -378,7 +404,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // ranking two other providers made no sense on a page about what one
   // provider costs.
   const showTopTwo =
-    !showTopProvidersCro && !showPartnerCro && !/^is-.+-legit$/.test(slug) && !/-cost$/.test(slug);
+    !showTopProvidersCro && !showPartnerCro && !/^is-.+-legit$/.test(slug) && !/-cost$/.test(slug) && !TOP3_SLUGS.has(slug);
 
   // Byline author: match the article's author to a team member, else the lead
   const author = experts.find((e) => e.name === article.author) ?? experts[0];
@@ -831,6 +857,19 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 )}
 
                 {i === 0 && showTopTwo && <TopTwoPicks config={config} linkPrefix={ctx.prefix} />}
+
+                {top3Block && i === top3Block.afterSection && (
+                  <TopProvidersBlock
+                    config={config}
+                    linkPrefix={ctx.prefix}
+                    limit={3}
+                    providerIds={top3Block.providerIds}
+                    priceNotes={top3PriceNotes}
+                    introMode="short"
+                    title={top3Block.title}
+                    subtitle={top3Block.subtitle}
+                  />
+                )}
 
                 {/* Provider-"alternatives" guides: CRO block of our three GLP-1
                     partners with the comparison-page cards (see showPartnerCro). */}
