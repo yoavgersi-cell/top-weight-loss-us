@@ -454,7 +454,7 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
       },
       {
         heading: "Is semaglutide cheaper than tirzepatide?",
-        body: `Usually, yes: compounded semaglutide runs a verified $41-$199/month, while compounded tirzepatide runs $71-$299/month. Tirzepatide, however, produced more average weight loss in trials (up to 22.5% vs about 15%), so the cost per pound lost may end up similar. Read our <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide comparison</a> and the <a href="/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic guide</a>.`,
+        body: `Usually, yes: compounded semaglutide runs a verified $41-$199/month, while compounded tirzepatide runs $71-$299/month. Tirzepatide, however, produced more average weight loss in trials (up to 22.5% vs about 15%), so the cost per pound lost may end up similar. Read our <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide comparison</a> and the <a href="/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic guide</a>. For every way to pay for tirzepatide, from Zepbound self-pay by dose to insurance and compounded prices, see our <a href="/articles/tirzepatide-cost-2026">tirzepatide cost guide</a>.`,
       },
       {
         heading: "Where can you find the cheapest semaglutide?",

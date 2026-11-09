@@ -105,8 +105,34 @@ function maybeSplitPlainBody(html: string): string {
   return chunks.map((c) => `<p>${c}</p>`).join("");
 }
 
+// Tables with 4+ columns cannot fit a phone screen. Tag them "stack-sm" and
+// give every data cell a data-label with its column header, so CSS can show
+// each row as a small card ("Header: value") below 640px. Desktop and the
+// HTML crawlers read are unchanged: it is still a normal table.
+function stackWideTables(html: string): string {
+  return html.replace(/<table([^>]*)>([\s\S]*?)<\/table>/gi, (whole, attrs: string, inner: string) => {
+    const headerRow = inner.match(/<tr[^>]*>((?:(?!<\/tr>)[\s\S])*?<th[\s\S]*?)<\/tr>/i);
+    if (!headerRow) return whole;
+    const headers = [...headerRow[1].matchAll(/<th[^>]*>([\s\S]*?)<\/th>/gi)].map((m) =>
+      m[1].replace(/<[^>]+>/g, "").replace(/"/g, "&quot;").trim(),
+    );
+    if (headers.length < 4) return whole;
+    const body = inner.replace(/<tr([^>]*)>([\s\S]*?)<\/tr>/gi, (row: string, rowAttrs: string, cells: string) => {
+      if (/<th\b/i.test(cells)) return row;
+      let i = 0;
+      const labelled = cells.replace(/<td(\s[^>]*)?>/gi, (_m: string, tdAttrs?: string) => {
+        const label = headers[i++] ?? "";
+        return `<td${tdAttrs ?? ""} data-label="${label}">`;
+      });
+      return `<tr${rowAttrs}>${labelled}</tr>`;
+    });
+    const cls = /class="/.test(attrs) ? attrs.replace(/class="/, 'class="stack-sm ') : `${attrs} class="stack-sm"`;
+    return `<table${cls}>${body}</table>`;
+  });
+}
+
 export function enhanceArticleHtml(html: string): string {
-  const parts = maybeSplitPlainBody(html).split(/(<[^>]+>)/g);
+  const parts = stackWideTables(maybeSplitPlainBody(html)).split(/(<[^>]+>)/g);
   const SKIP_OPEN = /^<(a|strong|b|h[1-6])\b/i;
   const SKIP_CLOSE = /^<\/(a|strong|b|h[1-6])>/i;
   let skipDepth = 0;

@@ -204,11 +204,63 @@ html[data-legacy] .legacy-name {
   font-weight: 600;
   color: #191919;
 }
+/* Phones: let cells wrap so every column (prices included) is visible
+   without swiping; a sideways scroll remains only as a fallback for tables
+   too wide to fit even when wrapped. */
 @media (max-width: 640px) {
   .article-body table {
     display: block;
     overflow-x: auto;
-    white-space: nowrap;
+    font-size: 13.5px;
+  }
+  .article-body table th,
+  .article-body table td {
+    padding: 8px 10px;
+    min-width: 92px;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+}
+/* Phones: 4+ column tables (tagged stack-sm by enhanceArticleHtml) become a
+   stack of row cards, each cell shown as "Header: value". */
+@media (max-width: 640px) {
+  .article-body table.stack-sm {
+    display: block;
+    overflow: visible;
+    border: none;
+    background: transparent;
+  }
+  .article-body table.stack-sm thead,
+  .article-body table.stack-sm tr:has(> th) {
+    display: none;
+  }
+  .article-body table.stack-sm tbody {
+    display: block;
+  }
+  .article-body table.stack-sm tr {
+    display: block;
+    margin: 0 0 10px;
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+  }
+  .article-body table.stack-sm td {
+    display: block;
+    min-width: 0;
+    padding: 3px 0;
+    border: none;
+  }
+  .article-body table.stack-sm td:first-child {
+    font-size: 14.5px;
+    padding-bottom: 5px;
+    margin-bottom: 3px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .article-body table.stack-sm td:not(:first-child)[data-label]::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: #191919;
   }
 }
 .article-body .qa {
