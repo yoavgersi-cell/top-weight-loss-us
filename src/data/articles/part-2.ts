@@ -317,10 +317,11 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
     keyTakeaways: [
-      "ro is built around brand-name drugs: the Wegovy pill at $149 for month one (then $299 plus a separate membership) and Zepbound KwikPens from $299, so most rivals compete with lower compounded GLP-1 prices.",
-      "Best overall alternative is altRx: compounded semaglutide $89 and tirzepatide $149 at every dose, the cheapest brand shelf we track (Ozempic $1,149, Zepbound $1,249, Wegovy $1,579), and Buy Now, Pay Later.",
-      "Lowest price is welludr, from $41/month for semaglutide and from $71 for tirzepatide in its Pre-Black Friday sale (check plan terms at checkout); embody ($69/$119 flat) is the pick if you want no commitment.",
-      "For more support, Medvi includes video visits and a dietician at a $99/month promo, and SHED ($199, 20% off month one) adds coaching and a money-back promise if you do not lose 5% in 120 days.",
+      "Why look beyond ro: ro sells brand-name drugs (the Wegovy pill at $149 for month one, then $299, and Zepbound KwikPens from $299) plus a separate membership, so most rivals compete on lower compounded prices.",
+      "Best overall: altRx, with compounded semaglutide at $89 and tirzepatide at $149 at every dose, the cheapest brand shelf we track (Ozempic $1,149, Zepbound $1,249, Wegovy $1,579) and Buy Now, Pay Later.",
+      "Lowest price: welludr, from $41 a month for semaglutide and $71 for tirzepatide in its Pre-Black Friday sale; check plan terms at checkout.",
+      "No commitment: embody at $69 for semaglutide and $119 for tirzepatide, month to month.",
+      "More support: Medvi includes video visits and a dietician at a $99 promo, and SHED ($199, 20% off month one) adds coaching and a money-back promise if you do not lose 5% in 120 days.",
     ],
     sections: [
       {
@@ -369,10 +370,10 @@ For a deeper breakdown, read our <a href="/articles/glp1-cost-2026-how-to-pay-le
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
     keyTakeaways: [
-      "Online care is usually cheaper, quicker and easier: you are evaluated at home, medication arrives by mail, follow-ups happen by video or message, and compounded GLP-1s cost a fraction of clinic prices.",
-      "Clinics offer physical exams, labs done on site, in-person accountability and, in some cases, an easier path to insurance-covered brand-name drugs.",
-      "A clinic makes more sense if you have complex conditions that need a hands-on exam or insurance that specifically pays for clinic visits; for most others, online works well.",
-      "FDA-approved brand-name drugs such as Wegovy and Zepbound are the same wherever they are prescribed, but many online providers prescribe compounded semaglutide or tirzepatide instead, which are not FDA-approved. Ask which one you are getting.",
+      "Online: usually cheaper, quicker and easier, with a home evaluation, medication by mail, follow-ups by video or message, and compounded GLP-1s at a fraction of clinic prices.",
+      "In-person clinic: physical exams, labs on site, face-to-face accountability and, in some cases, an easier path to insurance-covered brand-name drugs.",
+      "Choose a clinic if: you have complex conditions that need a hands-on exam, or insurance that specifically pays for clinic visits; for most others, online works well.",
+      "Same drug, different source: FDA-approved Wegovy and Zepbound are identical wherever they are prescribed, but many online providers prescribe compounded semaglutide or tirzepatide, which are not FDA-approved, so ask which you are getting.",
     ],
     sections: [
       {

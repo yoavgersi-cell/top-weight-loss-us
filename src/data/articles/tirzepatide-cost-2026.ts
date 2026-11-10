@@ -20,10 +20,12 @@ export const tirzepatideCost2026: Article = {
   heroColor: "#EEF4FA",
   author: "Top Weight Loss Research Team",
   keyTakeaways: [
-    "Paying yourself, Zepbound (tirzepatide) costs $299 for 2.5 mg, $399 for 5 mg and $449 for 7.5 mg to 15 mg per 4-week supply through LillyDirect, TrumpRx or a pharmacy with Lilly's self-pay card, as of November 2026; the $449 price requires refilling within 45 days.",
-    "A year of weekly tirzepatide takes 13 four-week fills, so a full year at the $449 maintenance price is $5,837 before insurance or savings cards.",
-    "Mounjaro is the same molecule but costs $499 a month self-pay; with commercial coverage the Zepbound or Mounjaro savings card can bring a fill to as little as $25, and Medicare's GLP-1 Bridge covers the Zepbound KwikPen for a $50 copay for eligible beneficiaries.",
-    "Compounded tirzepatide from online clinics costs from $71 to $299 a month in our price check, but it is not FDA-approved, and no generic tirzepatide has been approved.",
+    "Self-pay Zepbound: $299 (2.5 mg), $399 (5 mg) or $449 (7.5 mg to 15 mg) per 4-week supply through LillyDirect, TrumpRx or Lilly's pharmacy card; the $449 price requires refilling within 45 days.",
+    "Full year: 13 four-week fills, so $5,837 at the $449 price before insurance or savings cards.",
+    "Mounjaro: the same molecule at $499 a month self-pay.",
+    "With insurance or Medicare: as little as $25 a fill with a savings card and commercial coverage, or a $50 copay for the Zepbound KwikPen through Medicare's GLP-1 Bridge if you are eligible.",
+    "Compounded: $71 to $299 a month in our price check, but not FDA-approved; no generic tirzepatide has been approved.",
   ],
+  takeawaysLead: "Tirzepatide costs depend on how you pay (as of November 2026):",
   sections: [...tirzCostSectionsA, ...tirzCostSectionsB],
 };

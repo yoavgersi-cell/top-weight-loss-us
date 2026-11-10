@@ -24,7 +24,12 @@ export interface Article {
   imageAlt?: string;
   author?: string;
   // Optional 3-4 verified takeaway bullets rendered in a box above the body.
+  // Write them as "Label: short fact" (label up to 5 words): the label is
+  // shown in bold, a format AI answers can lift almost word for word.
   keyTakeaways?: string[];
+  // Optional one-line lead shown above the takeaways (e.g. "Tirzepatide
+  // costs depend on how you pay:").
+  takeawaysLead?: string;
   sections: { heading: string; body: string }[];
 }
 

@@ -713,14 +713,29 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               (featured snippets / AI overviews lift lists like this whole). */}
           {article.keyTakeaways && article.keyTakeaways.length > 0 && (
             <div className="mb-8 rounded-xl border border-[#0C4B75]/15 bg-[#F4F8FB] p-5 sm:p-6">
-              <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">Key points</p>
+              <h2 className="mb-3 text-[18px] font-bold text-[#0C4B75]">Key takeaways</h2>
+              {article.takeawaysLead && <p className="mb-3 text-[15px] leading-relaxed text-gray-800">{article.takeawaysLead}</p>}
               <ul className="space-y-2">
-                {article.keyTakeaways.map((t) => (
-                  <li key={t} className="flex items-start gap-2.5 text-[15px] leading-relaxed text-gray-800">
-                    <Check className="mt-1 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} />
-                    <span>{t}</span>
-                  </li>
-                ))}
+                {article.keyTakeaways.map((t) => {
+                  // "Label: fact" bullets (label up to 5 words before the
+                  // first colon) render the label in bold.
+                  const m = t.match(/^([^:$]{2,48}):\s+(.+)$/);
+                  const label = m && m[1].trim().split(/\s+/).length <= 5 ? m[1].trim() : null;
+                  return (
+                    <li key={t} className="flex items-start gap-2.5 text-[15px] leading-relaxed text-gray-800">
+                      <Check className="mt-1 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} />
+                      <span>
+                        {label ? (
+                          <>
+                            <strong className="text-[#191919]">{label}:</strong> {m![2]}
+                          </>
+                        ) : (
+                          t
+                        )}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           )}
