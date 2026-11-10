@@ -6,7 +6,8 @@ import { Fragment } from "react";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_WL_BATTLE_SLUGS, DEFAULT_ROBOTS } from "@/lib/config";
-import { splitSentences, BoldKeyFacts, ReadableProse } from "@/components/prose";
+import { splitSentences, BoldKeyFacts, ReadableProse, enhanceArticleHtml } from "@/components/prose";
+import { BATTLE_DEEP_DIVES } from "@/data/battle-deep-dives";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
@@ -666,6 +667,8 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     if (n.includes("transparen") || n.includes("certif")) return `Is ${p1.name} or ${p2.name} clearer about what you will pay?`;
     return `${p1.name} or ${p2.name}: which wins on ${name.toLowerCase()}?`;
   };
+
+  const deepDive = BATTLE_DEEP_DIVES[slug];
 
   const battleFaqs = [
     // A hand-written "which is better" FAQ replaces the generic one.
@@ -1364,6 +1367,13 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <ReadableProse text={battle.intro} paragraphClassName="text-[16px] leading-[1.85] text-gray-600" />
           </div>
 
+          {/* Medical/affiliate note for pages with an in-depth section. */}
+          {deepDive && (
+            <p className="mb-10 max-w-[760px] rounded-xl border border-amber-200 bg-amber-50/60 px-4 py-3 text-[13px] leading-relaxed text-gray-700">
+              <strong className="text-[#191919]">Medical disclaimer:</strong> {deepDive.disclaimer}
+            </p>
+          )}
+
           {/* ───── EARLY QUICK ANSWER ─────
               Answers the search intent immediately, built from each battle's
               own verdict points - no new copy to maintain per page. Renders
@@ -1405,6 +1415,23 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   The prices and customer feedback on this page explain why, and when {verdictRunnerUp.name} comes out ahead.
                 </span>
               </p>
+            </div>
+          )}
+
+          {/* ───── IN-DEPTH SECTIONS (selected matchups) ─────
+              Long-form, sourced sections from src/data/battle-deep-dives.ts,
+              rendered with the article typography (tables stack on phones). */}
+          {deepDive && (
+            <div className="mb-14 max-w-[820px]">
+              {deepDive.sections.map((sec) => (
+                <section key={sec.heading} className="mb-10">
+                  <h2 className="mb-3 text-[22px] font-bold leading-snug text-[#191919]">{sec.heading}</h2>
+                  <div
+                    className="article-body text-[16px] leading-[1.75] text-gray-800 [&_a]:font-medium [&_a]:text-[#0C4B75] [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#093d61]"
+                    dangerouslySetInnerHTML={{ __html: enhanceArticleHtml(sec.body) }}
+                  />
+                </section>
+              ))}
             </div>
           )}
 

@@ -107,10 +107,10 @@ export const articlesPart1: Article[] = [
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Content Team",
     keyTakeaways: [
-      "Must-have: a licensed physician, NP or PA prescribes and supervises your care, and you can reach them for dose changes after the first consult.",
-      "Add up the full monthly cost (medication, consultations, shipping) and look for enrollment fees, cancellation fees or minimum terms.",
-      "Verified compounded pricing: semaglutide $41-$199/month and tirzepatide $71-$299/month. The strongest providers roll everything into one fee.",
-      "Walk away from promised weight-loss numbers, prescriptions without a medical evaluation, pressure to sign long contracts, or a refusal to name the compounding pharmacy.",
+      "Must-have: a licensed physician, NP or PA who prescribes, supervises your care and is reachable for dose changes after the first consult.",
+      "True monthly cost: add medication, consultations and shipping, and look for enrollment fees, cancellation fees or minimum terms.",
+      "Verified prices: compounded semaglutide $41 to $199 a month and tirzepatide $71 to $299; the strongest providers roll everything into one fee.",
+      "Red flags: promised weight-loss numbers, prescriptions without a medical evaluation, pressure to sign long contracts, or a refusal to name the compounding pharmacy.",
     ],
     sections: [
       {
@@ -768,10 +768,10 @@ export const articlesPart1: Article[] = [
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     keyTakeaways: [
-      "You can get semaglutide online: licensed telehealth providers handle the evaluation, prescription and home delivery with no office visit. Buying Ozempic without a valid prescription is not legal.",
+      "Legal online route: licensed telehealth providers handle the evaluation, prescription and home delivery with no office visit; buying Ozempic without a valid prescription is not legal.",
       "The steps: pick a provider, complete a health questionnaire (reviewed in 1-3 days), get a prescription at a starting dose, and receive medication in 3-7 days.",
-      "Ozempic is FDA-approved for type 2 diabetes. For weight loss, the FDA-approved semaglutide is Wegovy; Ozempic for weight loss is off-label. There is no generic Ozempic in the US.",
-      "As of October 2026, brand Ozempic self-pay through NovoCare is $199/month for the first two starter fills, then $349 (up to 1 mg) or $499 (2 mg). Compounded semaglutide through telehealth runs a verified $41-$199/month, but compounded drugs are not FDA-approved.",
+      "Ozempic or Wegovy: Ozempic is FDA-approved for type 2 diabetes, while the FDA-approved semaglutide for weight loss is Wegovy, so Ozempic for weight loss is off-label; there is no generic Ozempic in the US.",
+      "Price (October 2026): brand Ozempic self-pay through NovoCare is $199 a month for the first two starter fills, then $349 (up to 1 mg) or $499 (2 mg); compounded semaglutide runs a verified $41 to $199 but is not FDA-approved.",
     ],
     sections: [
       {
@@ -840,10 +840,10 @@ export const articlesPart1: Article[] = [
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
     keyTakeaways: [
-      "Compounded semaglutide contains the same active ingredient as Ozempic and Wegovy and is made by licensed compounding pharmacies under FDA regulation, but the compounded product is not individually FDA-approved.",
-      "Before ordering, ask: \"Do you compound semaglutide base?\" The FDA has warned against salt forms (semaglutide sodium/acetate) and \"research use\" vials sold without a prescription.",
-      "Safety depends on the pharmacy: 503B facilities follow cGMP standards, and trustworthy providers name their compounding source. Skip any that will not.",
-      "The price gap is huge: Wegovy $1,300-$1,400 and Ozempic $900-$1,000 at retail vs a verified $41-$199/month compounded. Compounded tirzepatide runs $71-$299.",
+      "What it is: the same active ingredient as Ozempic and Wegovy, made by licensed compounding pharmacies under FDA regulation, but the compounded product is not FDA-approved.",
+      "Ask first: \"Do you compound semaglutide base?\" The FDA has warned against salt forms (semaglutide sodium or acetate) and \"research use\" vials sold without a prescription.",
+      "Pharmacy quality: 503B facilities follow cGMP standards, and trustworthy providers name their compounding source; skip any that will not.",
+      "Price gap: Wegovy $1,300 to $1,400 and Ozempic $900 to $1,000 at retail, versus a verified $41 to $199 a month for compounded semaglutide; compounded tirzepatide runs $71 to $299.",
     ],
     sections: [
       {

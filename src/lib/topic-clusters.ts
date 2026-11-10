@@ -26,6 +26,7 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
     hub: { href: "/articles/glp1-cost-2026-how-to-pay-less", label: "GLP-1 costs in 2026: every way to pay less" },
     articles: [
       "semaglutide-cost-per-month",
+      "tirzepatide-cost-2026",
       "weight-loss-medication-without-insurance",
       "glp1-with-insurance",
       "glp1-after-65-medicare",

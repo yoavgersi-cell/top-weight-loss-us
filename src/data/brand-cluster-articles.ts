@@ -72,11 +72,11 @@ export const brandClusterArticles: Article[] = [
     heroColor: "#EEF4FB",
     author: "Top Weight Loss Staff",
     keyTakeaways: [
-      "ro is legitimate. It is an established US telehealth company, licensed providers review every intake (reviewers mention a video call with an MD), and ro's own pharmacy fills the prescriptions.",
-      "ro's weight-loss program is built on brand-name medication: the Wegovy pill and pen and Zepbound. The medication is billed apart from a Body membership that costs $39 the first month and then $74-$149/month. Insurance can cover the drug.",
-      "Trustpilot shows 3.9 from 7,572 reviews. September 2026 praise centers on speed and thorough providers; complaints center on the $39 fee covering the consultation, a second subscription charge, message-only support with 2-3 day replies, and a late delivery with melted ice packs.",
-      "Reddit threads we verified show real results (22 to 60 pounds) and one recurring problem, cost: a highly upvoted member left over price despite a good experience.",
-      "ro is safe in the ways a provider controls: licensed clinicians screen you and the medications are FDA-approved brands. Against embody, a cash year on the Wegovy pill with ro's prepaid membership is about $4,226 versus $828 for embody's compounded semaglutide, which is not FDA-approved and is not billed to insurance.",
+      "Verdict: ro is legitimate, an established US telehealth company where licensed providers review every intake and ro's own pharmacy fills the prescriptions.",
+      "What you get: FDA-approved brand-name Wegovy (pill and pen) and Zepbound, billed separately from a Body membership that costs $39 the first month, then $74 to $149 a month; insurance can cover the drug.",
+      "Trustpilot: 3.9 from 7,572 reviews, with praise for speed and thorough providers and complaints about the $39 fee, a second subscription charge, message-only support and a late delivery.",
+      "Reddit: threads we verified show results of 22 to 60 pounds, and the recurring complaint is cost.",
+      "Versus embody: a cash year on the Wegovy pill with ro's prepaid membership is about $4,226, versus $828 for embody's compounded semaglutide, which is not FDA-approved and is not billed to insurance.",
     ],
     sections: [
       {
@@ -133,12 +133,14 @@ export const brandClusterArticles: Article[] = [
     heroColor: "#F0FAF5",
     author: "Top Weight Loss Staff",
     keyTakeaways: [
-      "ro weight loss involves two separate charges: the Body membership ($39 for month one, then $74 to $149 a month, with $74 the 12-month prepaid rate) and the medication itself.",
-      "ro's published cash medication prices, as of October 2026: Wegovy pill $149 at 1.5 mg, $199 at 4 mg and $299 at 9 mg and 25 mg; Wegovy pen $199 for the first two starter fills, then $349; Zepbound KwikPen $299 at 2.5 mg, $399 at 5 mg and $449 at 7.5 mg and up.",
-      "A cash-pay first year on the Wegovy pill comes to about $4,200 with a prepaid membership, about $4,800 on the Wegovy pen and about $6,100 on Zepbound at 7.5 mg or higher. When insurance covers the drug, you pay the membership plus copays, which can make ro the cheapest route on this site.",
-      "For cash payers, all-inclusive compounded semaglutide at welludr ($41), embody ($69) or altRx ($89) costs far less. ro's value lies in brand-name medication and the insurance route.",
-      "ro's published weight-loss pricing covers brand-name medication only. If you want compounded semaglutide or tirzepatide, you need a different provider.",
+      "Membership: $39 for month one, then $74 to $149 a month ($74 on the 12-month prepaid plan).",
+      "Wegovy pill: $149 at 1.5 mg, $199 at 4 mg and $299 at 9 mg and 25 mg (cash prices, October 2026).",
+      "Wegovy pen: $199 for each of the first two starter fills, then $349.",
+      "Zepbound KwikPen: $299 at 2.5 mg, $399 at 5 mg and $449 at 7.5 mg and up.",
+      "First-year cash total: about $4,200 on the Wegovy pill, $4,800 on the Wegovy pen or $6,100 on Zepbound at 7.5 mg or higher, with a prepaid membership.",
+      "With insurance: you pay the membership plus copays, which can make ro the cheapest route on this site; ro's published pricing covers brand-name medication only, so compounded semaglutide at welludr ($41), embody ($69) or altRx ($89) costs far less for cash payers.",
     ],
+    takeawaysLead: "ro weight loss is billed in two parts, a membership and the medication:",
     sections: [
       {
         heading: "What are ro's two weight-loss charges?",
@@ -416,10 +418,11 @@ export const brandClusterArticles: Article[] = [
     heroColor: "#F3EEFB",
     author: "Top Weight Loss Staff",
     keyTakeaways: [
-      "welludr charges from $41/month for compounded semaglutide and from $71/month for compounded tirzepatide in its Pre-Black Friday sale (from October 28, 2026); check the plan terms at checkout. A coach plus provider oversight are included.",
-      "Twelve months of semaglutide at $41 costs $492, the lowest in our ranking, compared with $828 at embody, $1,068 at altRx and $1,188 at HealthRx or Medvi.",
-      "welludr bills monthly, not as one payment; check the sale plan terms at checkout. If you are still testing the medication, embody's $69 no-commitment plan lets you walk away for $28/month more.",
-      "welludr also stocks brand-name Ozempic (from $1,399) and Zepbound (from $1,599), but altRx's brand prices start $250/month lower.",
+      "Price: from $41 a month for compounded semaglutide and $71 for compounded tirzepatide in welludr's Pre-Black Friday sale (from October 28, 2026); check the plan terms at checkout.",
+      "Included: a coach and provider oversight.",
+      "Year at the sale price: 12 x $41 = $492 if the price holds, the lowest in our ranking, versus $828 at embody, $1,068 at altRx and $1,188 at HealthRx or Medvi.",
+      "Billing: monthly, not one payment; if you are still testing the medication, embody's $69 no-commitment plan lets you walk away for $28 a month more.",
+      "Brand-name options: Ozempic from $1,399 and Zepbound from $1,599, though altRx's brand prices start $250 a month lower.",
     ],
     sections: [
       {

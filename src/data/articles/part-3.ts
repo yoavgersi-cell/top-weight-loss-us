@@ -806,10 +806,11 @@ export const articlesPart3: Article[] = [
     heroColor: "#EDF2F8",
     author: "TopWeightLoss Team",
     keyTakeaways: [
-      "The Wegovy pill (oral semaglutide 25 mg) received FDA approval in December 2025 as the first oral GLP-1 for chronic weight management. It needs a prescription, and its price depends on the route: telehealth, the manufacturer's direct-pay pharmacy, insurance or Medicare.",
-      "Verified telehealth price: ro charges $149 for the first month of the Wegovy pill, then $299 a month, plus its Body membership ($39 the first month, then $74-$149 a month). ro bills the medication separately, so insurance can pay where your plan covers Wegovy.",
-      "Third-party trackers report Novo Nordisk's direct-pay tiers at $149 a month for the starting dose, rising to $299 at the maintenance dose. We have not verified these ourselves; confirm with NovoCare before budgeting.",
-      "With commercial insurance that covers Wegovy, the manufacturer's savings offer reportedly brings the pill as low as $25 a month. On Medicare, the GLP-1 Bridge pilot charges a flat $50 copay through December 2027. Compounded semaglutide, a different product that is not FDA-approved, costs $41-$199 a month at verified prices.",
+      "What it is: oral semaglutide 25 mg, FDA-approved in December 2025 as the first oral GLP-1 for chronic weight management; it needs a prescription, and the price depends on the route.",
+      "Through ro: $149 for the first month, then $299 a month, plus the Body membership ($39 the first month, then $74 to $149 a month); insurance can pay for the drug where your plan covers Wegovy.",
+      "Direct from Novo Nordisk: third-party trackers report $149 a month for the starting dose rising to $299 at maintenance; confirm with NovoCare before budgeting.",
+      "With insurance or Medicare: commercial coverage plus the savings offer reportedly brings the pill as low as $25 a month, and Medicare's GLP-1 Bridge charges a flat $50 copay through December 2027.",
+      "Compounded semaglutide: a different product that is not FDA-approved, at $41 to $199 a month at verified prices.",
     ],
     sections: [
       {
