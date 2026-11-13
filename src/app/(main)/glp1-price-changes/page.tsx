@@ -1,3 +1,4 @@
+import { DEFAULT_SCHEMA_IMAGE } from "@/lib/schema-image";
 import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -47,6 +48,7 @@ export default async function PriceChangesPage() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: DEFAULT_SCHEMA_IMAGE,
     headline: title,
     datePublished: PUBLISHED,
     dateModified: latest > PRICE_INDEX_VERIFIED ? latest : PRICE_INDEX_VERIFIED,

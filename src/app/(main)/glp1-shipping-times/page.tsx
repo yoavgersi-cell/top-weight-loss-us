@@ -1,3 +1,4 @@
+import { DEFAULT_SCHEMA_IMAGE } from "@/lib/schema-image";
 import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -114,6 +115,7 @@ export default async function ShippingTimesPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: DEFAULT_SCHEMA_IMAGE,
     headline: title,
     datePublished: PUBLISHED,
     dateModified: UPDATED,

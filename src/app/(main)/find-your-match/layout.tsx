@@ -1,3 +1,4 @@
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 
@@ -20,6 +21,7 @@ export default function QuizLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       <h1 className="sr-only">GLP-1 Provider Match Quiz</h1>
+      <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "GLP-1 provider match quiz", path: "/find-your-match" }]} />
       {children}
     </>
   );

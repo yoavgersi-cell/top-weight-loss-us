@@ -58,6 +58,10 @@ npx next build
 npx next start -p 3123 &   # then:
 python3 -I .claude/skills/topweightloss-seo/scripts/site_check.py --base http://localhost:3123
 python3 -I .claude/skills/topweightloss-seo/scripts/meta_check.py
+# monthly, or after template changes: the full SEO/GEO/AEO audit
+python3 -I .claude/skills/topweightloss-seo/scripts/full_audit.py --base http://localhost:3123 --out audit.md
 ```
+
+`full_audit.py` adds: canonical/robots/OG/Twitter tags, title and description uniqueness, internal links to redirects, BreadcrumbList / Article / Organization schema completeness, no AggregateRating, visible dates and bylines, outbound citations, key takeaways, robots.txt AI-crawler access and llms.txt coverage. Baseline Nov 13, 2026: 0 errors, 4 warnings.
 
 `site_check.py` crawls every sitemap URL and reports: non-200s, H1 count != 1, invalid JSON-LD, `reviewedBy` on a non-WebPage node, visible "Reviewed for medical accuracy" byline without schema (or the reverse), internal links to non-sitemap pages, unmarked affiliate links, em/en dashes in visible text, and in-prose inbound link counts for any URLs you pass with `--watch`. Fix everything it flags before the PR.

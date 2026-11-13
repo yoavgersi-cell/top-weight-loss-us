@@ -1,3 +1,4 @@
+import { DEFAULT_SCHEMA_IMAGE } from "@/lib/schema-image";
 import { withSeo } from "@/lib/seo";
 import { reviewedPageNode } from "@/data/reviewers";
 import type { Metadata } from "next";
@@ -80,6 +81,7 @@ export default async function StatisticsPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: DEFAULT_SCHEMA_IMAGE,
     headline: TITLE,
     description: DESCRIPTION,
     datePublished: "2026-08-01",

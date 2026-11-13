@@ -1,3 +1,4 @@
+import { DEFAULT_SCHEMA_IMAGE } from "@/lib/schema-image";
 import { withSeo } from "@/lib/seo";
 import { TRUSTPILOT_PROFILES } from "@/data/trustpilot";
 import type { Metadata } from "next";
@@ -556,6 +557,7 @@ export default async function Glp1ProviderComparisonPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: DEFAULT_SCHEMA_IMAGE,
     headline: "GLP-1 Telehealth Providers Compared for 2026: Prices, Month-Two Costs and Customer Reviews",
     description: DESCRIPTION,
     datePublished: PUBLISHED,
