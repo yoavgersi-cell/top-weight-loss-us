@@ -1,3 +1,4 @@
+import { DEFAULT_SCHEMA_IMAGE } from "@/lib/schema-image";
 import { TRUSTPILOT_PROFILES } from "@/data/trustpilot";
 import { pageReviewSchema, reviewedPageNode } from "@/data/reviewers";
 import { fixBrandCase } from "@/lib/utils";
@@ -693,6 +694,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: DEFAULT_SCHEMA_IMAGE,
     headline: battle.title,
     description: battle.description,
     datePublished: battle.publishedAt ?? "2026-06-01",

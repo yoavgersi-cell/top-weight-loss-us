@@ -1,3 +1,4 @@
+import { DEFAULT_SCHEMA_IMAGE } from "@/lib/schema-image";
 import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { reviewedPageNode } from "@/data/reviewers";
@@ -107,6 +108,7 @@ export default async function RetatrutidePage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: DEFAULT_SCHEMA_IMAGE,
     headline: "Retatrutide 2026: Phase 3 Results, FDA Status and Cost",
     description: metadata.description,
     datePublished: "2026-08-09",

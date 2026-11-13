@@ -1,3 +1,4 @@
+import { DEFAULT_SCHEMA_IMAGE } from "@/lib/schema-image";
 import { TRUSTPILOT_PROFILES } from "@/data/trustpilot";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -502,7 +503,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     // Only a real image: the un-hashed /opengraph-image path is not a served
     // route (Next hashes the file-convention URL), so pointing schema at it
     // emitted a 404 image on every article.
-    ...(article.image && { image: `${ctx.origin}${article.image}` }),
+    image: article.image ? `${ctx.origin}${article.image}` : DEFAULT_SCHEMA_IMAGE,
     datePublished: article.publishedAt,
     dateModified: latestUpdate(article.updatedAt),
     wordCount,

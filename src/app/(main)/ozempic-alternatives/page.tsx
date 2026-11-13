@@ -1,3 +1,4 @@
+import { DEFAULT_SCHEMA_IMAGE } from "@/lib/schema-image";
 import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { reviewedPageNode } from "@/data/reviewers";
@@ -83,6 +84,7 @@ export default async function OzempicAlternativesPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: DEFAULT_SCHEMA_IMAGE,
     headline: TITLE,
     description: DESCRIPTION,
     datePublished: "2026-08-11",
