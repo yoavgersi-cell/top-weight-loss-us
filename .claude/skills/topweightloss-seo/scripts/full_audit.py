@@ -34,6 +34,8 @@ from urllib.parse import urlparse
 HOST = "www.topweightloss.us"
 ORIGIN = f"https://{HOST}"
 PAGE_TYPES = {"WebPage", "MedicalWebPage", "CollectionPage", "ProfilePage", "AboutPage", "FAQPage", "ItemPage"}
+# Every article published on or after this date must ship with its own hero image.
+IMAGE_RULE_FROM = "2026-11-15"
 AI_BOTS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "PerplexityBot", "Google-Extended", "Bingbot", "CCBot", "Applebot-Extended"]
 
 
@@ -246,6 +248,11 @@ def main():
                 for f in ("headline", "datePublished", "dateModified", "author", "publisher", "image"):
                     if not d.get(f):
                         add("WARN", f"Article schema missing {f}", path)
+            if ty & {"Article"} and path.startswith("/articles/"):
+                img = d.get("image")
+                img_url = img.get("url") if isinstance(img, dict) else img
+                if str(d.get("datePublished", "")) >= IMAGE_RULE_FROM and (not img_url or "og-default" in str(img_url)):
+                    add("ERROR", "new article published without its own hero image", path)
             if "AggregateRating" in ty or d.get("aggregateRating"):
                 add("ERROR", "AggregateRating in schema (third-party ratings are not allowed)", path)
             if "reviewedBy" in d and not ty & PAGE_TYPES:

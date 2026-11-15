@@ -210,6 +210,9 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
       description: override?.description ?? article.description,
       url,
       type: "article",
+      ...(article.image && {
+        images: [{ url: `${ctx.origin}${article.image}`, width: 1600, height: 900, alt: article.imageAlt || article.title }],
+      }),
       publishedTime: article.publishedAt,
       modifiedTime: latestUpdate(article.updatedAt),
       // Older articles store the pre-migration team name; brand it for the hub.
@@ -709,6 +712,21 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           )}
           {legitData && legitProvider && (
             <LegitChecklist data={legitData} provider={legitProvider} linkPrefix={ctx.prefix} />
+          )}
+          {/* Article hero image (hand-set or generated), with descriptive alt
+              text for Google/Bing Images and screen readers. */}
+          {article.image && (
+            <figure className="mb-8 overflow-hidden rounded-xl border border-gray-200 bg-white">
+              <Image
+                src={article.image}
+                alt={article.imageAlt || article.title}
+                width={1600}
+                height={900}
+                sizes="(min-width: 1024px) 720px, 100vw"
+                fetchPriority="high"
+                className="h-auto w-full"
+              />
+            </figure>
           )}
           {/* Key takeaways - 3-4 verified bullets, scannable and quotable
               (featured snippets / AI overviews lift lists like this whole). */}
