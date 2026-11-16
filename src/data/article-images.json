@@ -1,1 +1,37 @@
-{}
+{
+  "best-ro-alternatives": {
+    "image": "/article-images/best-ro-alternatives.webp",
+    "imageAlt": "Laptop on a home desk showing two blurred provider pages side by side, for comparing ro alternatives",
+    "model": "gpt-image-2",
+    "generatedAt": "2026-11-16",
+    "prompt": "A tidy home office desk with a laptop showing two blurred windows side by side, each displaying abstract shapes and colors, symbolizing comparison of online GLP-1 weight loss providers. Soft natural daylight filters through a nearby window, casting gentle shadows. A plain white ceramic mug and a small notepad lie beside the laptop, with subtle navy blue and soft light blue accents in the background. The scene is centered with generous margins, in a landscape 3:2 format, cropped to a wide 16:9 strip, conveying a calm and thoughtful mood for careful comparison of weight loss options."
+  },
+  "in-person-vs-online-weight-loss": {
+    "image": "/article-images/in-person-vs-online-weight-loss.webp",
+    "imageAlt": "Home desk with a laptop showing a blurred video call and a smartphone, for comparing online and in-person weight loss care",
+    "model": "gpt-image-2",
+    "generatedAt": "2026-11-16",
+    "prompt": "A neatly organized home desk with a laptop showing a blurred video call screen, a smartphone lying nearby, and a few medical documents slightly out of focus. Soft natural daylight filters through a nearby window casting gentle shadows. Subtle navy blue and soft light blue accents appear in a coffee mug and a small desk plant pot. The scene is centered with generous margins, cropped to a wide 16:9 strip, evoking a calm and hopeful mood about choosing between online and in-person weight loss care."
+  },
+  "is-ro-legit": {
+    "image": "/article-images/is-ro-legit.webp",
+    "imageAlt": "Hand holding a magnifying glass over a laptop screen while checking whether ro is a legitimate telehealth provider",
+    "model": "gpt-image-2",
+    "generatedAt": "2026-11-16",
+    "prompt": "A close-up of a person's hands holding a magnifying glass over an open laptop displaying an abstract blurred web page with subtle navy blue and soft light blue accents, soft natural daylight illuminating the scene on a clean, modern desk, the laptop centered with generous margins, calm and hopeful mood, editorial style photography, landscape 3:2 crop that is suitable for wide strip 16:9 format."
+  },
+  "tirzepatide-cost-2026": {
+    "image": "/article-images/tirzepatide-cost-2026.webp",
+    "imageAlt": "Hands using a calculator beside a blank envelope and a payment card, for working out the monthly cost of tirzepatide",
+    "model": "gpt-image-2",
+    "generatedAt": "2026-11-16",
+    "prompt": "A person's hands using a calculator next to a blank white envelope and a credit card on a clean wooden desk, soft natural daylight streaming in from the side, subtle navy blue and light blue accents visible in the background decor. The scene is calm and orderly, suggesting careful budgeting and cost comparison related to weight loss medication expenses. The image is centered with generous margins, framed in a landscape 3:2 format and suitable for cropping to a wide 16:9 strip."
+  },
+  "wellmedr-cost": {
+    "image": "/article-images/wellmedr-cost.webp",
+    "imageAlt": "Hands using a calculator and holding a blank envelope at a desk, for working out what welludr costs each month",
+    "model": "gpt-image-2",
+    "generatedAt": "2026-11-16",
+    "prompt": "A person's hands using a calculator and holding a blank envelope on a tidy desk with soft natural daylight filtering in. The desk has subtle navy blue and light blue accents, suggesting a calm financial planning scene. The calculator screen shows abstract blurred shapes, avoiding any text or numbers. The composition is landscape 3:2 with the hands centered and generous margins, cropped to a wide 16:9 strip, conveying thoughtful consideration of monthly cost and payment planning for weight loss options."
+  }
+}

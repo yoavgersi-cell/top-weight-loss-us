@@ -47,9 +47,11 @@ PRIORITY = [
 
 BRIEF_RULES = """You art-direct hero images for Top Weight Loss, an independent US site comparing online GLP-1 weight loss providers (a health topic, so images must be trustworthy and calm).
 Return JSON: {"prompt": "...", "alt": "..."}.
-prompt (for an image model, 60-110 words): one clear editorial scene, realistic photography style, soft natural daylight, clean modern home or kitchen or desk setting, calm and hopeful mood, subtle accents of navy blue and soft light blue, landscape 3:2 with the main subject centered and generous margins (it will be cropped to 16:9 and to a wide strip).
-Hard rules for the prompt: NO text, letters, numbers, labels, logos or brand names anywhere; injection pens, vials or pill bottles must be plain, generic and unbranded (never Ozempic, Wegovy, Zepbound, Mounjaro packaging); no needles piercing skin; no before/after bodies, no bodies emphasized for weight, no bathroom scales showing numbers; no doctors, nurses or white coats; no recognizable real people or places; if people appear, adults of varied ages and backgrounds shown naturally (hands, desk, kitchen), faces optional; no money piles; nothing alarming or clinical.
-alt (90-125 characters): literally describe what the image shows, mention the article's topic naturally once, plain US English, no "image of" or "photo of", no em or en dashes, no brand names unless the article is about that provider (then only the provider name, never drug brand names), no claims."""
+prompt (for an image model, 60-110 words): ONE concrete scene that is specific to this article's subject, realistic editorial photography, soft natural daylight, calm and hopeful mood, subtle navy blue and soft light blue accents, landscape 3:2, main subject centered with generous margins (it is cropped to 16:9 and to a wide strip).
+Pick the scene from the article's actual topic, for example: costs or insurance -> a person's hands with a calculator and a blank envelope at a desk; checking if a company is legit -> a magnifying glass over a laptop showing an abstract blurred web page; comparing providers -> two blurred laptop windows side by side or two neatly arranged plain boxes; online vs in-person care -> a phone or laptop on a home desk with a blurred video call of a person in casual clothes; food and diet -> a balanced plate, vegetables and protein; exercise -> walking shoes, resistance band, a person walking outdoors; side effects -> a glass of water, ginger tea, crackers; delivery or shipping -> a plain cardboard box at a front door; pills -> a plain unlabeled pill bottle. Use a plain injection pen ONLY when the article is about injections themselves, and never default to a pen, water glass and notebook still life.
+Never write a provider name, company name, drug name, the article title or any words that could be drawn as text into the prompt; describe objects only.
+Hard rules: NO text, letters, numbers, handwriting, labels, logos or brand names anywhere, including on screens, notebooks and packaging (screens show only abstract shapes or blurred color); no medication packaging; pens, vials and pill bottles plain and unbranded; no needles piercing skin; no before/after bodies, no bodies emphasized for weight, no scales; no doctors, nurses, scrubs, white coats or stethoscopes, including on screens; no recognizable real people or places; people, if shown, are adults of varied ages and backgrounds in everyday clothes; no money; nothing alarming or clinical.
+alt (80-125 characters, never longer): describe ONLY what is visible, then say what the image is for in a few words that include the article's main search term, e.g. "Hand holding a magnifying glass over a laptop while checking whether ro is a legitimate telehealth provider". The provider name (if the article is about one) and generic drug names (semaglutide, tirzepatide) are allowed in the alt; never drug brand names. No mood words; no "image of" or "photo of"; no em or en dashes."""
 
 
 def call(path, payload, timeout=300):
@@ -91,18 +93,48 @@ def articles():
 
 
 def brief(a):
-    user = f"Article title: {a['title']}\nDescription: {a['description']}\nKey points: " + " | ".join(a["takeaways"])
+    kind = (
+        "This article checks whether a company is legitimate: use a verification scene (a magnifying glass over a laptop with an abstract screen, "
+        "or a phone showing a plain shield shape, or a blank checklist), not a calculator or envelope. "
+        if a["slug"].endswith("-legit") else ""
+    )
+    user = kind + f"Article title: {a['title']}\nDescription: {a['description']}\nKey points: " + " | ".join(a["takeaways"])
     r = call("chat/completions", {
         "model": TEXT_MODEL, "response_format": {"type": "json_object"}, "temperature": 0.7,
         "messages": [{"role": "system", "content": BRIEF_RULES}, {"role": "user", "content": user}],
     })
     out = json.loads(r["choices"][0]["message"]["content"])
     alt = re.sub(r"\s*[–—]\s*", ", ", out["alt"]).strip()
+    alt = alt[:1].upper() + alt[1:]
     return out["prompt"].strip(), alt
 
 
+IMAGE_SUFFIX = (
+    " Strict requirements: absolutely no text, letters, words, numbers, handwriting, logos, signs, posters with words,"
+    " book titles or labels anywhere in the image; every screen, page, notebook, envelope, box and label is completely blank"
+    " or shows only soft abstract color; no doctors, nurses, white coats, scrubs or stethoscopes, including on screens;"
+    " no brand packaging. Photorealistic editorial photo."
+)
+
+QA_RULES = """You check a hero image for a health website. Return JSON {"ok": true|false, "problems": ["..."]}.
+Set ok to false if you see ANY of: legible or pseudo text, letters, numbers, handwriting, logos or brand names (on screens, paper, mugs, books, signs, packaging, calculators showing digits are allowed only if blurred); a doctor, nurse, white coat, scrubs or stethoscope (including on a screen); medication packaging with labels; needles in skin; before/after bodies or scales; anything distorted or alarming."""
+
+
+def qa(raw):
+    b64 = base64.b64encode(raw).decode()
+    r = call("chat/completions", {
+        "model": TEXT_MODEL, "response_format": {"type": "json_object"}, "temperature": 0,
+        "messages": [{"role": "system", "content": QA_RULES}, {"role": "user", "content": [
+            {"type": "text", "text": "Check this image."},
+            {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{b64}", "detail": "high"}},
+        ]}],
+    })
+    out = json.loads(r["choices"][0]["message"]["content"])
+    return bool(out.get("ok")), out.get("problems", [])
+
+
 def draw(prompt):
-    r = call("images/generations", {"model": IMAGE_MODEL, "prompt": prompt, "size": "1536x1024", "quality": "medium", "n": 1}, timeout=600)
+    r = call("images/generations", {"model": IMAGE_MODEL, "prompt": prompt + IMAGE_SUFFIX, "size": "1536x1024", "quality": "medium", "n": 1}, timeout=600)
     item = r["data"][0]
     if item.get("b64_json"):
         return base64.b64decode(item["b64_json"])
@@ -153,8 +185,16 @@ def main():
 
     done = []
     for a in todo:
-        prompt, alt = brief(a)
-        raw = draw(prompt)
+        for attempt in range(1, 4):
+            prompt, alt = brief(a)
+            raw = draw(prompt)
+            ok, problems = qa(raw)
+            if ok:
+                break
+            print(f"   retry {a['slug']} (attempt {attempt}): {'; '.join(problems)[:200]}")
+        else:
+            print(f"SKIP {a['slug']}: failed the image check 3 times")
+            continue
         rel, size = save_webp(raw, a["slug"])
         registry[a["slug"]] = {
             "image": rel, "imageAlt": alt, "model": IMAGE_MODEL,
