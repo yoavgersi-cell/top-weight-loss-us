@@ -1,0 +1,64 @@
+name: Article images
+
+# Every day: generate hero images + alt text for the next 5 articles without
+# one (OpenAI), then open a pull request to review and merge. Needs the
+# repository secret OPENAI_API_KEY. Run manually with a slug to make the image
+# for a single (e.g. brand-new) article.
+on:
+  schedule:
+    - cron: "17 13 * * *" # 13:17 UTC daily
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many articles"
+        default: "5"
+      slug:
+        description: "Single article slug (optional)"
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Generate images
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -n "${{ github.event.inputs.slug }}" ]; then
+            python3 scripts/article-images.py --slug "${{ github.event.inputs.slug }}"
+          else
+            python3 scripts/article-images.py --count "${{ github.event.inputs.count || '5' }}"
+          fi
+      - name: Open pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard public/article-images)" ]; then
+            echo "Nothing new"; exit 0
+          fi
+          branch="article-images/$(date -u +%Y-%m-%d-%H%M)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add public/article-images src/data/article-images.json
+          git commit -m "Article hero images: $(git diff --cached --name-only public/article-images | xargs -n1 basename | sed 's/.webp//' | paste -sd, -)"
+          git push -u origin "$branch"
+          body=$(BRANCH="$branch" REPO="${{ github.repository }}" python3 - <<'PY'
+          import json, os, subprocess
+          reg = json.load(open("src/data/article-images.json"))
+          new = [l.split("/")[-1][:-5] for l in subprocess.check_output(["git", "diff", "--name-only", "HEAD~1", "--", "public/article-images"]).decode().split()]
+          rows = [f"### /articles/{s}\n![{reg[s]['imageAlt']}](https://raw.githubusercontent.com/{os.environ['REPO']}/{os.environ['BRANCH']}/public{reg[s]['image']})\n**Alt:** {reg[s]['imageAlt']}\n" for s in new if s in reg]
+          print("New article hero images generated with OpenAI. Review each image and its alt text, then merge.\n\n" + "\n".join(rows))
+          PY
+          )
+          gh pr create --title "Article hero images ($(date -u +%Y-%m-%d))" --body "$body" --base main --head "$branch"

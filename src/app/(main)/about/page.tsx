@@ -1,3 +1,4 @@
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { withSeo } from "@/lib/seo";
 import { REVIEWERS, REVIEW_LOG, reviewerDisplayName, reviewerPath, reviewerPersonSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
@@ -137,6 +138,7 @@ export default async function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "About Top Weight Loss", path: "/about" }]} />
 
       {/* ───── Hero ───── */}
       <section className="border-b border-gray-200 bg-gradient-to-b from-[#E8F3FB] via-[#F3F9FD] to-white">

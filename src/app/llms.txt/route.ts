@@ -3,6 +3,8 @@ import { getConfig } from "@/lib/config-store";
 import { AFFILIATE_PROVIDER_IDS, type SiteConfig } from "@/lib/config";
 import { WEIGHT_LOSS_GUIDES } from "@/components/guide-cluster";
 import { getReviewer, reviewerDisplayName, reviewerPath } from "@/data/reviewers";
+import { TOPIC_CLUSTERS } from "@/lib/topic-clusters";
+import { siteSitemap } from "@/lib/sitemaps";
 
 // llms.txt (llmstxt.org): a curated, human-readable index of the site's most
 // useful pages, written for AI answer engines (ChatGPT Search, Perplexity,
@@ -80,7 +82,44 @@ export async function GET() {
     "",
   ];
 
-  parts.push(weightLossSection(await getConfig()));
+  const config = await getConfig();
+  parts.push(weightLossSection(config));
+
+  // Guides grouped by topic cluster (hub first), limited to pages that are
+  // live in the sitemap, so AI engines can find the article that answers a
+  // specific question. Added Nov 2026: the file previously listed no articles.
+  const live = new Set((await siteSitemap()).map((e) => e.url.replace(HUB, "").replace(/\/$/, "") || "/"));
+  const articleBy = new Map((config.articles ?? []).map((a) => [a.slug, a]));
+  const listed = new Set<string>(parts.join("\n").match(/\(https:\/\/www\.topweightloss\.us([^)]*)\)/g)?.map((m) => m.slice(1, -1).replace(HUB, "") || "/") ?? []);
+  parts.push("## Guides by topic", "");
+  for (const cluster of TOPIC_CLUSTERS) {
+    const items: string[] = [];
+    const hubSlug = cluster.hub.href.startsWith("/articles/") ? cluster.hub.href.slice("/articles/".length) : null;
+    for (const slug of [...(hubSlug ? [hubSlug] : []), ...cluster.articles]) {
+      const a = articleBy.get(slug);
+      const path = `/articles/${slug}`;
+      if (!a || !live.has(path) || listed.has(path)) continue;
+      items.push(line(a.title, path, a.description));
+      listed.add(path);
+    }
+    if (items.length) parts.push(`### ${cluster.name}`, ...items, "");
+  }
+
+  // Everything else that is live (remaining reviews, comparisons, articles
+  // outside a cluster), under llms.txt's "Optional" section.
+  const rest = [...live].filter((p) => !listed.has(p) && /^\/(articles|reviews|compare)\//.test(p)).sort();
+  if (rest.length) {
+    parts.push("## Optional", "");
+    for (const p of rest) {
+      const slug = p.split("/").pop() ?? "";
+      const a = p.startsWith("/articles/") ? articleBy.get(slug) : undefined;
+      const r = p.startsWith("/reviews/") ? (config.reviews ?? []).find((x) => x.slug === slug) : undefined;
+      const b = p.startsWith("/compare/") ? (config.battles ?? []).find((x) => x.slug === slug) : undefined;
+      const title = a?.title ?? (r ? `${config.providers.find((x) => x.id === r.providerId)?.name ?? slug} review` : b ? (b.matchupLabel ?? b.title.split(":")[0]) : slug.replace(/-/g, " "));
+      parts.push(line(title, p, a?.description ?? r?.shortSummary ?? b?.description));
+    }
+    parts.push("");
+  }
 
   const reviewer = getReviewer();
   parts.push("## About");

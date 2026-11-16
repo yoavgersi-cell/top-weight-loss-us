@@ -1,3 +1,4 @@
+import { DEFAULT_SCHEMA_IMAGE } from "@/lib/schema-image";
 import { withSeo } from "@/lib/seo";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { reviewedPageNode } from "@/data/reviewers";
@@ -281,6 +282,7 @@ export default async function Glp1PillsVsInjectionsPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: DEFAULT_SCHEMA_IMAGE,
     headline: "GLP-1 Pills vs Injections in 2026: Weight Loss Results, Price by Route and Daily Routine Compared",
     description: metadata.description,
     datePublished: PAGE_PUBLISHED,

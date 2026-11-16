@@ -1,3 +1,4 @@
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { withSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -35,6 +36,7 @@ export default function MedicalReviewPolicyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Medical review policy", path: "/medical-review-policy" }]} />
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[900px] px-4 py-12 sm:px-6 sm:py-16">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Medical review policy" }]} />

@@ -1,3 +1,4 @@
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { pageReviewSchema } from "@/data/reviewers";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import type { Metadata } from "next";
@@ -111,6 +112,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Guides", path: "/articles" }]} />
       <div className="mx-auto max-w-[1100px] px-4 py-12 sm:px-6">
         {/* Page header */}
         <div className="mb-10">

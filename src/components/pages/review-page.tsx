@@ -1,3 +1,4 @@
+import { DEFAULT_SCHEMA_IMAGE } from "@/lib/schema-image";
 import { TRUSTPILOT_PROFILES } from "@/data/trustpilot";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -535,8 +536,12 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const reviewArticleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: DEFAULT_SCHEMA_IMAGE,
     headline: `${provider.name} Review 2026: Cost, Pros, Cons & Our Verdict`,
     description: review.shortSummary,
+    // No separate first-published date is stored for reviews; the Review
+    // node below uses the same date.
+    datePublished: reviewUpdatedAt,
     dateModified: reviewUpdatedAt,
     // The research team is a group, so it is an Organization, not a Person.
     author: {

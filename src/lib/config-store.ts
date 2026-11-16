@@ -1,3 +1,5 @@
+import ARTICLE_IMAGES_JSON from "@/data/article-images.json";
+const ARTICLE_IMAGES = ARTICLE_IMAGES_JSON as Record<string, { image: string; imageAlt: string; generatedAt?: string; model?: string }>;
 import { type SiteConfig, type Expert, defaultConfig, WEIGHT_LOSS_HERO_TEXT } from "./config";
 import productsJson from "@/data/products.json";
 import faqsJson from "@/data/faqs.json";
@@ -131,6 +133,9 @@ function normalizeBrandCasing(rawConfig: SiteConfig): SiteConfig {
     })),
     articles: config.articles.map((a) => ({
       ...a,
+      // Generated hero images (src/data/article-images.json, written by
+      // scripts/article-images.py) fill in where an article has none set.
+      ...(!a.image && ARTICLE_IMAGES[a.slug] ? { image: ARTICLE_IMAGES[a.slug].image, imageAlt: ARTICLE_IMAGES[a.slug].imageAlt } : {}),
       title: fixBrandText(a.title),
       description: fixBrandText(a.description),
       keyTakeaways: a.keyTakeaways ? fixBrandArr(a.keyTakeaways) : a.keyTakeaways,

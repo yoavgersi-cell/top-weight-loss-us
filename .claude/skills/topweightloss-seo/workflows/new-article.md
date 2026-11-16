@@ -30,3 +30,10 @@ Proven on `/articles/glp1-cost-2026-how-to-pay-less` and `/articles/new-weight-l
 
 ## 6. Ship
 - Build, run `site_check.py` and `meta_check.py`, commit, PR. New articles get NO reviewer byline until the medical reviewer signs them off (`medical-review.md`). Tell the owner to request indexing after merge.
+
+
+## Hero image (required from Nov 15, 2026)
+Every new article goes live with its own hero image and alt text.
+1. After the article is registered, run `python3 scripts/article-images.py --slug <slug>` (uses the OpenAI key; in this environment the proxy injects it, so set `OPENAI_API_KEY=proxy-injected`). Or run the GitHub workflow "Article images" with the slug.
+2. Look at `public/article-images/<slug>.webp` and the alt text in `src/data/article-images.json`. Regenerate if the image has text, logos, branded packaging, before/after bodies, clinicians, or anything off-topic.
+3. `full_audit.py` fails (ERROR) for any article published on or after 2026-11-15 whose schema image is still the default share card.
